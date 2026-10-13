@@ -6,29 +6,29 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 ## Now
 
-- **P2** Design research, asset inventory, original identity, two mockup directions, then implementation of the chosen one. Spec: [0002](specs/0002-design-system.md). Status: blocked on owner. Spec 0002 drafted, two mockup directions on a pull request, waiting for the pick. Owner: agent.
+- **P2** Design system: the chosen mix of mockups A and B built into the site. Spec: [0002](specs/0002-design-system.md). Status: in progress on branch `spec/0002-design-system`, pull request 3. Owner: agent.
+- **P2a** Sprite system: images policy, source list, sprite field, validator checks. Decision [0005](docs/decisions/0005-identification-sprites.md), rules in [docs/policies/images.md](docs/policies/images.md). Status: in progress. Rules and checks done, sprites not yet shown on pages. Owner: agent.
 - **P1** GitHub repository, labels, branch protection, then Vercel hosting with previews and the real domain. Spec: [0001](specs/0001-github-and-vercel.md). Status: done 2026-10-13. Live at https://classicmaple.wiki with previews on every pull request. Owner: agent, with owner for logins and DNS.
 
 ## Next
 
-- **P3** Ecosystem pages: `/about` with Sirux credit, `/support` with donations, footer credit, disclaimer on every page. Spec: 0003, not yet written. Status: todo. Owner: agent.
+- **P3** Ecosystem pages: `/about` with Sirux credit, `/support` with donations, footer credit, disclaimer on every page, a credits list for sprite sources, a takedown contact, and plain text links to the official game site (decision 0005). Spec: not yet written. Status: todo. Owner: agent.
+- **P2b** First sprites: add sprites for the monsters and items that exist, from allowed sources, following the images policy. Spec: none needed, the policy is the process. Status: todo. Owner: agent or contributors.
+- **P2c** Direction C, the Maple storybook look named in decision 0005, as a refinement of the built design. Spec: 0002 addendum, not yet written. Status: todo, after the owner sees the current build. Owner: agent.
 
 ## Later
 
-- **P4a** Spec only: contribution-scale, from ten contributors to a thousand. Spec: 0004, not yet written. Status: todo. Owner: agent.
-- **P4b** Spec only: ai-assist, AI drafts and humans approve, with running cost per option. Spec: 0005, not yet written. Status: todo. Owner: agent.
-- **P4c** Spec only: community-platform, accounts, submissions, profiles, and the trigger for a database. Spec: 0006, not yet written. Status: todo. Owner: agent.
+- **P4a** Spec only: contribution-scale, from ten contributors to a thousand. Spec: not yet written. Status: todo. Owner: agent.
+- **P4b** Spec only: ai-assist, AI drafts and humans approve, with running cost per option. Spec: not yet written. Status: todo. Owner: agent.
+- **P4c** Spec only: community-platform, accounts, submissions, profiles, and the trigger for a database. Spec: not yet written. Status: todo. Owner: agent.
+- **P2d** Read the Fandom and Hidden Street terms in a browser and record them in `data/sprite-sources.yaml`. Both are `ask-first` because automated checks were blocked. Status: todo. Owner: owner.
 
 ## Owner questions
 
 Answers unblock the items above. Record the answer in the related spec.
 
-- **Q1** Answered. Repository is `classicmaple-wiki/classicmaple-wiki`.
-- **Q4** Answered. CI check only for now.
-- **Q5** Answered. App installed, DNS set by the owner.
-- **Q6** Answered. Bought at Name.com with Vercel nameservers.
-- **Q7** Add a ruleset bypass for the repository Admin role so the owner's machine can push documentation commits to `main`. Owner does this in GitHub settings.
 - **Q2** Donation platforms for `/support`. Blocks P3.
 - **Q3** Credit the owner by name, or only as Sirux. Blocks P3.
-- **Q8** Answered 2026-10-13. All ten asset defaults accepted.
-- **Q9** Answered 2026-10-13. Moods dawn, morning, midday, dusk, night, cave. Hubs Maple Island, Henesys, Ellinia, Perion, Kerning City, Sleepywood, plus a neutral default.
+- **Q10** A takedown contact for the site: an email address, or GitHub issues with a `takedown` label only. Blocks P3.
+- **Q11** Confirm the first source statuses in `data/sprite-sources.yaml`: maplestory.io allowed, maplestorywiki.net and NiaMeowDB allowed with credit, Fandom and Hidden Street ask first, private servers blocked.
+- Answered: Q1 repository address, Q4 CI only protection, Q5 Vercel app and DNS, Q6 domain at Name.com, Q7 admin bypass, Q8 asset defaults, Q9 moods and hubs, Vercel spend cap of $50 a month set 2026-10-13.

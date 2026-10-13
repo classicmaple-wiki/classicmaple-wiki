@@ -1,5 +1,5 @@
 import { z } from 'astro/zod';
-import { entityBase, identifier, mood, positiveInteger, sceneIdentifier, verification } from './shared';
+import { entityBase, identifier, mood, positiveInteger, sceneIdentifier, sprite, verification } from './shared';
 
 /*
    One schema per data type. Numeric fields are optional on purpose: an
@@ -28,6 +28,24 @@ export const monster = entityBase.extend({
 	weak_to: z.array(element).default([]),
 	strong_to: z.array(element).default([]),
 	immune_to: z.array(element).default([]),
+	sprite: sprite.optional(),
+});
+
+/*
+   One site we may take plain identification sprites from, or one of the
+   two built in sources: "original" (drawn by us) and "own-screenshot".
+   Only the owner changes a status. The rules for each status are in
+   docs/policies/images.md.
+*/
+export const spriteSource = z.strictObject({
+	id: identifier,
+	name: z.string().min(1),
+	url: z.url().optional(),
+	status: z.enum(['allowed', 'allowed-with-credit', 'ask-first', 'blocked']),
+	terms_url: z.url().optional(),
+	credit: z.string().optional(),
+	checked: z.coerce.date(),
+	reason: z.string().min(1),
 });
 
 export const map = entityBase.extend({
@@ -41,6 +59,7 @@ export const item = entityBase.extend({
 	required_level: positiveInteger.optional(),
 	stats: z.record(z.string(), z.number()).default({}),
 	crafted_by: identifier.optional(),
+	sprite: sprite.optional(),
 });
 
 export const skill = z.strictObject({

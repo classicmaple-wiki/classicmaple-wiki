@@ -16,5 +16,5 @@ The Cloudflare workflow and the Cloudflare steps in `README.md` are removed.
 
 - No deploy secrets in GitHub. No deploy workflow to maintain. CI only validates and builds.
 - Contributors see a preview link on every pull request.
-- Cost is covered by the owner's Pro plan. A spend limit must be set in Vercel before launch day.
+- Cost is covered by the owner's Pro plan. Spend Management is on, capped at $50 a month, set 2026-10-13.
 - The site is still plain static files, so moving hosts later is a one-day job.

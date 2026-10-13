@@ -4,7 +4,9 @@ Date: 2026-10-13. Phase 2, deliverable 2.
 
 This document lists every asset type the wiki might use, who owns it, what its terms say, and what we do with it. It quotes what Nexon publishes about fan use, game images, and money, with a link to each source. It flags the one question that must be answered before the support page ships: whether donations are clearly allowed.
 
-Standing rules:
+Update 2026-10-13: decision 0005 now allows small plain identification sprites from fan sites whose terms allow it. Where this inventory says "do not use" for sprites taken from other wikis, 0005 and `docs/policies/images.md` now govern instead. Map art, logos, music, and client extraction stay out.
+
+Standing rules at the time of this research:
 
 - No bulk download of game art, sprites, or sounds.
 - No extraction from the game client.

@@ -99,6 +99,17 @@ The site builds its [What changed](https://classicmaple.wiki/changes/) page from
 
 Use `differs_from_original` for a one or two sentence note on what is different from original MapleStory. This is separate from `changes`, which tracks movement between Classic World builds.
 
+## Pictures
+
+A monster, NPC, or item can show one small sprite next to its name. The full rules are in [docs/policies/images.md](docs/policies/images.md). The short version:
+
+- Take the plain sprite, one file, from a site marked `allowed` in `data/sprite-sources.yaml`. Or draw your own. Or crop your own screenshot.
+- Save it as `public/sprites/<collection>/<id>.png`, at most 128 by 128 pixels and 40 KB.
+- Add a `sprite` block to the entry with the file, the source id, the exact link, and the date.
+- `npm run validate` checks all of it.
+
+No map art, logos, music, or anything a fan site made itself.
+
 ## Patch notes
 
 One file per patch in `data/patches/`, named `YYYY-MM-DD-short-name.yaml`.
@@ -153,6 +164,7 @@ Put `<RouteSummary />` at the top of the page (copy the import from an existing 
 ## What not to submit
 
 - Game client files or raw extracted assets. Screenshots you took yourself are fine.
+- Pictures from a site that is not marked allowed in `data/sprite-sources.yaml`
 - Text copied from other wikis, guides, or videos
 - Private server data
 - Exploits, botting, or real money trading content

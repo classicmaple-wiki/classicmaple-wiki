@@ -55,6 +55,27 @@ export const sceneIdentifier = z.enum([
 
 export const mood = z.enum(['dawn', 'morning', 'midday', 'dusk', 'night', 'cave']);
 
+/*
+   A small identification picture for one entry (decision 0005 and
+   docs/policies/images.md). The file lives at public/sprites/<file>, the
+   source names an entry in data/sprite-sources.yaml, and the validation
+   script checks that the source is allowed, the file exists, and it is
+   small. "original" and "own-screenshot" are sources too, so every
+   picture says where it came from.
+*/
+export const sprite = z
+	.strictObject({
+		file: z
+			.string()
+			.regex(/^[a-z]+\/[a-z0-9]+(-[a-z0-9]+)*\.png$/, 'Use "collection/id.png", for example "monsters/orange-mushroom.png"'),
+		source: identifier,
+		source_url: z.url().optional(),
+		retrieved: z.coerce.date(),
+	})
+	.refine((record) => record.source === 'original' || record.source_url !== undefined, {
+		message: 'A source_url is required unless the source is "original"',
+	});
+
 export const entityBase = z.strictObject({
 	id: identifier,
 	name: z.string().min(1),
@@ -72,3 +93,4 @@ export type Verification = z.infer<typeof verification>;
 export type Change = z.infer<typeof change>;
 export type SceneIdentifier = z.infer<typeof sceneIdentifier>;
 export type Mood = z.infer<typeof mood>;
+export type Sprite = z.infer<typeof sprite>;
