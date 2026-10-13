@@ -14,11 +14,11 @@ Phase 1 is done. The site is live at https://classicmaple.wiki, deployed by Verc
 
 ## In progress
 
-Nothing. Phase 2 has not started and has no spec.
+Phase 2, item P2. The owner's brief is recorded in the Phase 2 questions sent 2026-10-13. Order of work: `docs/research/ui.md`, `docs/research/assets.md`, stop for review, then spec 0002, then two mockup directions, then stop for the owner to pick one.
 
 ## Next step
 
-Owner review of Phase 1. Then move P2 into Now and write spec 0002 for design research and the design system. The spec comes first and waits for approval.
+Wait for the owner's answers to the five Phase 2 questions, then write the two research documents.
 
 ## Blockers and questions for the owner
 
