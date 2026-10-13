@@ -30,5 +30,5 @@ Answers unblock the items above. Record the answer in the related spec.
 - **Q7** Add a ruleset bypass for the repository Admin role so the owner's machine can push documentation commits to `main`. Owner does this in GitHub settings.
 - **Q2** Donation platforms for `/support`. Blocks P3.
 - **Q3** Credit the owner by name, or only as Sirux. Blocks P3.
-- **Q8** The ten asset decisions at the end of `docs/research/assets.md`. Blocks spec 0002.
-- **Q9** Moment vocabulary and launch hubs at the end of `docs/research/ui.md`. Blocks spec 0002.
+- **Q8** Answered 2026-10-13. All ten asset defaults accepted.
+- **Q9** Answered 2026-10-13. Moods dawn, morning, midday, dusk, night, cave. Hubs Maple Island, Henesys, Ellinia, Perion, Kerning City, Sleepywood, plus a neutral default.

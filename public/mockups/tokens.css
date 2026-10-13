@@ -1,0 +1,96 @@
+/*
+   Shared design tokens for the spec 0002 mockups. Both directions read
+   these values, so the two mockups differ in style and balance, never in
+   color or contrast. Light values sit on :root. Dark values apply when the
+   page sets data-theme="dark", which the mockup toggle and the #dark URL
+   hash both do. Moods set the scene colors and one rule color through a
+   data-mood attribute on the html element.
+*/
+:root {
+	--color-paper: #F7F1E3;
+	--color-panel: #FFFCF4;
+	--color-ink: #2A1F17;
+	--color-ink-muted: #5C4B3C;
+	--color-line: #E3D6BC;
+	--color-accent: #9A3D08;
+	--color-accent-fill: #E8711C;
+	--color-chip: #F3E3C7;
+	--color-titlebar: #F4D9B0;
+	--color-focus: #1F6FB2;
+
+	--badge-official-bg: #E2F0DA;
+	--badge-official-fg: #2F5E1F;
+	--badge-ingame-bg: #DCEBF7;
+	--badge-ingame-fg: #1F4E79;
+	--badge-unverified-bg: #FBE6C8;
+	--badge-unverified-fg: #7A4306;
+
+	--font-body: 'Nunito', system-ui, sans-serif;
+	--font-display: 'Pixelify Sans', 'Nunito', system-ui, sans-serif;
+
+	--text-xs: 0.8125rem;
+	--text-sm: 0.875rem;
+	--text-base: 1rem;
+	--text-md: 1.0625rem;
+	--text-lg: 1.25rem;
+	--text-xl: 1.5rem;
+	--text-2xl: 1.875rem;
+	--text-3xl: 2.25rem;
+	--text-4xl: 3rem;
+
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 24px;
+	--space-6: 32px;
+	--space-7: 48px;
+	--space-8: 64px;
+
+	--radius-chrome: 2px;
+	--shadow-panel: 0 1px 0 var(--color-line), 0 8px 24px rgb(42 31 23 / 0.08);
+	--shadow-window: inset 0 1px 0 #ffffff, 0 2px 0 rgb(42 31 23 / 0.18);
+
+	--scene-sky-top: #BFE3F2;
+	--scene-sky-bottom: #EAF6F4;
+	--scene-ground: #8CC37A;
+	--scene-light: #FFE7A3;
+	--mood-rule: #2F7D4F;
+}
+
+:root[data-theme='dark'] {
+	--color-paper: #14100D;
+	--color-panel: #1F1914;
+	--color-ink: #F4EBDA;
+	--color-ink-muted: #C7B7A0;
+	--color-line: #3D3229;
+	--color-accent: #F4A04E;
+	--color-accent-fill: #C25E12;
+	--color-chip: #2E241C;
+	--color-titlebar: #3A2A1C;
+	--color-focus: #7FB8F0;
+
+	--badge-official-bg: #21351A;
+	--badge-official-fg: #B7E39E;
+	--badge-ingame-bg: #16283A;
+	--badge-ingame-fg: #A9CFF2;
+	--badge-unverified-bg: #3A2810;
+	--badge-unverified-fg: #F6C98A;
+
+	--shadow-panel: 0 0 0 1px var(--color-line);
+	--shadow-window: inset 0 1px 0 rgb(255 255 255 / 0.06), 0 2px 0 rgb(0 0 0 / 0.5);
+}
+
+:root[data-mood='dawn'] { --scene-sky-top: #F6C9B8; --scene-sky-bottom: #FBE6D2; --scene-ground: #C98E7A; --scene-light: #FFF1D6; --mood-rule: #C2410C; }
+:root[data-mood='morning'] { --scene-sky-top: #BFE3F2; --scene-sky-bottom: #EAF6F4; --scene-ground: #8CC37A; --scene-light: #FFE7A3; --mood-rule: #2F7D4F; }
+:root[data-mood='midday'] { --scene-sky-top: #9ED3F0; --scene-sky-bottom: #E6F4FB; --scene-ground: #6FB25B; --scene-light: #FFF6C8; --mood-rule: #B45309; }
+:root[data-mood='dusk'] { --scene-sky-top: #F2A65A; --scene-sky-bottom: #F8D9A8; --scene-ground: #9C5B3B; --scene-light: #FFE2A8; --mood-rule: #B4410F; }
+:root[data-mood='night'] { --scene-sky-top: #1F2747; --scene-sky-bottom: #3A3F6B; --scene-ground: #232A3F; --scene-light: #F4C06A; --mood-rule: #3B4BA8; }
+:root[data-mood='cave'] { --scene-sky-top: #3E4A3F; --scene-sky-bottom: #5E6B55; --scene-ground: #2F372E; --scene-light: #E8D58A; --mood-rule: #3F6B4E; }
+
+:root[data-theme='dark'][data-mood='dawn'] { --scene-sky-top: #2B2240; --scene-sky-bottom: #4A3550; --scene-ground: #241B26; --mood-rule: #FDBA8C; }
+:root[data-theme='dark'][data-mood='morning'] { --scene-sky-top: #16233A; --scene-sky-bottom: #24384A; --scene-ground: #15241C; --mood-rule: #8FD5A6; }
+:root[data-theme='dark'][data-mood='midday'] { --scene-sky-top: #141E36; --scene-sky-bottom: #22334F; --scene-ground: #14241A; --mood-rule: #FCD34D; }
+:root[data-theme='dark'][data-mood='dusk'] { --scene-sky-top: #2A1B2E; --scene-sky-bottom: #4A2B30; --scene-ground: #22161A; --mood-rule: #F59E6B; }
+:root[data-theme='dark'][data-mood='night'] { --scene-sky-top: #0E1226; --scene-sky-bottom: #1C2142; --scene-ground: #0B0E1A; --mood-rule: #A5B4FC; }
+:root[data-theme='dark'][data-mood='cave'] { --scene-sky-top: #141A16; --scene-sky-bottom: #222B24; --scene-ground: #0E120F; --mood-rule: #9AD1A8; }

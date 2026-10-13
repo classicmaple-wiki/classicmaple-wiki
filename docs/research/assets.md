@@ -201,6 +201,9 @@ What this means for the support page:
 
 ## Decisions the owner must make
 
+Answered 2026-10-13: the owner accepted every recommended default below. They are now standing decisions.
+
+
 1. Screenshots. Allow your own in game screenshots, small and attributed, under a fair use claim with a per file label and a takedown contact, or allow none. Recommended default: none at launch. Revisit after launch with a written request to Nexon.
 2. Donations. Proceed with the wording in the monetization section, or wait for a Nexon answer. Recommended default: proceed.
 3. Site name. Keep MapleStory in the tagline and description as plain text with the not affiliated line, or avoid the word in the site name. Recommended default: keep it in the description, never in the wordmark.
