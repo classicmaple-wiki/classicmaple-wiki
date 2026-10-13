@@ -145,6 +145,7 @@ Put `<RouteSummary />` at the top of the page (copy the import from an existing 
 ## Review
 
 - CI validates the data and builds the site on every pull request.
+- Every pull request gets a preview link from Vercel, posted as a comment, so you can see your change live before it merges.
 - Data and guide changes need one maintainer approval. Schema and site changes need two.
 - Disputed numbers stay `unverified` until a second player confirms them.
 - Small, sourced pull requests get merged fastest.
