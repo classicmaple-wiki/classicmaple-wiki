@@ -6,7 +6,7 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 ## Now
 
-- **P1** GitHub repository, labels, branch protection, then Vercel hosting with previews and the real domain. Spec: [0001](specs/0001-github-and-vercel.md). Status: todo, spec awaiting approval. Owner: agent, with owner for logins and DNS.
+- **P1** GitHub repository, labels, branch protection, then Vercel hosting with previews and the real domain. Spec: [0001](specs/0001-github-and-vercel.md). Status: in progress. Repository live, labels done. Next: branch protection, then Vercel. Owner: agent, with owner for logins and DNS.
 
 ## Next
 
@@ -23,6 +23,7 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 Answers unblock the items above. Record the answer in the related spec.
 
-- **Q1** GitHub username and repository name. Blocks P1.
+- **Q1** Answered. Repository is `classicmaple-wiki/classicmaple-wiki`.
+- **Q4** Should `main` require one review as well as the CI check. Blocks P1 branch protection.
 - **Q2** Donation platforms for `/support`. Blocks P3.
 - **Q3** Credit the owner by name, or only as Sirux. Blocks P3.

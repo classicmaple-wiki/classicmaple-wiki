@@ -4,34 +4,34 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-Phase 0 is done. The repository has its workflow files: `AGENTS.md`, `BACKLOG.md`, this file, `specs/`, and `docs/decisions/`. Git is initialized on `main` with one commit. There is no remote yet. The site validates and builds. Content is a seeded skeleton, nearly all unverified.
+Phase 1 is in progress. The repository is live at https://github.com/classicmaple-wiki/classicmaple-wiki with `main` pushed. The four labels exist. The site validates and builds. Hosting is still not set up.
 
 ## Just done
 
-- Wrote `AGENTS.md`, `CLAUDE.md` pointer, `specs/README.md`, `specs/_template.md`.
-- Wrote decision records 0001 (stack) and 0002 (hosting on Vercel).
-- Drafted spec 0001 for Phase 1. It is not yet approved.
-- Added `spec:` and `docs:` commit prefixes to `CONTRIBUTING.md` and the pull request template.
-- Added a pointer to `AGENTS.md` in `README.md`.
+- Pointed `repositoryUrl` in `site.config.mjs`, the clone command in `CONTRIBUTING.md`, and the README note at the new repository.
+- Added `origin` and pushed `main`.
+- Created labels `data`, `guide`, `patch`, and `ai-drafted`.
+- Updated spec 0001 to in progress with the GitHub tasks checked off.
 
 ## In progress
 
-Nothing.
+Spec `specs/0001-github-and-vercel.md`. Remaining tasks: protect `main`, remove the Cloudflare workflow and README steps, connect Vercel, confirm a preview, add the domain, verify production.
 
 ## Next step
 
-Phase 1, item P1 in `BACKLOG.md`. Get spec `specs/0001-github-and-vercel.md` approved, then follow its Tasks in order. GitHub first, Vercel second.
+Protect `main` once the owner answers Q4. Then ask for approval to delete `.github/workflows/deploy.yml` and move to the Vercel tasks. The Vercel Git integration needs the owner logged in.
 
 ## Blockers and questions for the owner
 
-- Approve spec 0001.
-- Q1: GitHub username and repository name. The `gh` account is `sirasitxp`.
-- Spec 0001 asks whether `main` should also require one review.
-- Deleting `.github/workflows/deploy.yml` needs approval when Phase 1 reaches it.
+- Q4: should `main` require one review as well as the passing CI check.
+- Approval to delete `.github/workflows/deploy.yml`.
+- Vercel login, when the Vercel tasks start.
 
 ## Verify
 
 ```bash
 npm run validate
 npm run build
+git remote -v
+gh label list -R classicmaple-wiki/classicmaple-wiki
 ```

@@ -1,6 +1,6 @@
 # 0001: GitHub repository and Vercel hosting
 
-Status: draft
+Status: in progress
 
 ## Problem
 
@@ -22,9 +22,9 @@ Non-goals:
 
 ## Requirements
 
-- [ ] `gh auth status` succeeds for the owner's account.
-- [ ] A public repository exists at the owner-chosen address. `repositoryUrl` in `site.config.mjs` and the clone command in `CONTRIBUTING.md` match it.
-- [ ] `main` has the first commit pushed. Labels `data`, `guide`, `patch`, and `ai-drafted` exist.
+- [x] `gh auth status` succeeds for the owner's account.
+- [x] A public repository exists at the owner-chosen address. `repositoryUrl` in `site.config.mjs` and the clone command in `CONTRIBUTING.md` match it.
+- [x] `main` has the first commit pushed. Labels `data`, `guide`, `patch`, and `ai-drafted` exist.
 - [ ] `main` is protected: pull requests required, the CI check must pass.
 - [ ] `docs/decisions/0002-hosting.md` records the move to Vercel. `.github/workflows/deploy.yml` and the Cloudflare steps in `README.md` are removed.
 - [ ] The Vercel project is linked through the Git integration with framework Astro, build `npm run build`, output `dist`.
@@ -44,9 +44,9 @@ Removing `deploy.yml` is a file deletion and needs owner approval before it happ
 
 ## Tasks
 
-- [ ] Ask the owner for the GitHub username and repository name.
-- [ ] Create the repository, update the two addresses, first commit, push.
-- [ ] Create the four labels.
+- [x] Ask the owner for the GitHub username and repository name.
+- [x] Owner created the repository by hand. Addresses updated, first commits pushed.
+- [x] Create the four labels.
 - [ ] Protect `main`.
 - [ ] Write decision record 0002. Remove the Cloudflare workflow and README steps.
 - [ ] Connect Vercel. Confirm a preview on a test pull request. Update `CONTRIBUTING.md`.
@@ -57,6 +57,5 @@ Removing `deploy.yml` is a file deletion and needs owner approval before it happ
 
 ## Open questions
 
-- GitHub username. The authenticated `gh` account is `sirasitxp`. Confirm.
-- Repository name. For example `classicmaple-wiki`.
+- GitHub address. Answered: the owner created `classicmaple-wiki/classicmaple-wiki` under an organization, with `sirasitxp` as admin.
 - Should branch protection also require one review, as the current README says, or only the CI check?
