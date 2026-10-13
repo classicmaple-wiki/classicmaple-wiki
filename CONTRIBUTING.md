@@ -39,8 +39,8 @@ Every page has an **Edit page** link at the bottom. Click it, make your change, 
 Requires Node 22.12 or newer.
 
 ```bash
-git clone https://github.com/classicmaple/wiki.git
-cd wiki
+git clone https://github.com/classicmaple-wiki/classicmaple-wiki.git
+cd classicmaple-wiki
 npm install
 npm run dev        # local site with live reload
 npm run validate   # checks every data file against its schema

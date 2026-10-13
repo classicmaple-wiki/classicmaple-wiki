@@ -11,7 +11,7 @@ export const siteDescription =
 
 export const siteUrl = 'https://classicmaple.wiki';
 
-export const repositoryUrl = 'https://github.com/classicmaple/wiki';
+export const repositoryUrl = 'https://github.com/classicmaple-wiki/classicmaple-wiki';
 
 export const defaultBranch = 'main';
 
