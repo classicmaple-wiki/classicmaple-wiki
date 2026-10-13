@@ -4,28 +4,28 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-Phase 1 is done. The site is live at https://classicmaple.wiki. Phase 2 (item P2) is in progress. The two research documents are written and waiting for owner review. No spec 0002 yet. No design code yet.
+Phase 1 is done. The site is live at https://classicmaple.wiki. Phase 2 (item P2) is waiting for the owner. Spec `specs/0002-design-system.md` is a draft. Decision 0004, keep Starlight, is proposed. Two mockup directions are on branch `spec/0002-design-system` with an open pull request and a Vercel preview.
 
 ## Just done
 
-- `docs/research/ui.md`: eleven reference sites, the six Slow Snails principles applied to a wiki page, and the library of places developed into rules.
-- `docs/research/assets.md`: a 53 row asset inventory, verified Nexon quotes on fan sites, images, and money, enforcement history, and ten owner decisions with defaults.
-- `docs/decisions/0003-original-art-only.md`: original art only, kept minimal.
-- The research ran as a multi agent workflow. It hit a usage limit before its writers ran, so the documents were written from the saved findings. Quotes for the "other fan wikis" topic were never verified and are not shown.
+- Research documents, decision 0003, and the owner's answers to all asset and scene questions.
+- Spec 0002 with checked contrast numbers for every token pair.
+- Mockups in `public/mockups/`: direction A "Morning Shelf" and B "Old Window", each with home, Thief, and Crimson Balrog. Built, reviewed with screenshots, and fixed by a multi agent workflow, then checked by hand.
+- Display font changed from Pixelify Sans to Silkscreen, because Pixelify's C reads as O.
 
 ## In progress
 
-Nothing open in code.
+Pull request for `spec/0002-design-system`. Do not merge until the owner picks a direction. `public/mockups/` must be deleted before merge.
 
 ## Next step
 
-Owner reviews both research documents and answers Q8 and Q9 in `BACKLOG.md`. Then write `specs/0002-design-system.md` from `specs/_template.md`. It must cover tokens, type, the window frame, the scene band and mood system, the schema fields for scene and mood (needs owner approval), and two mockup directions of home, Thief, and a monster page.
+Owner picks A, B, or a mix, approves spec 0002, decision 0004, and the schema change. Then run Phase B of the spec's Tasks on the same branch.
 
 ## Blockers and questions for the owner
 
-- Q8: the ten asset decisions in `docs/research/assets.md`.
-- Q9: moment vocabulary and launch hubs in `docs/research/ui.md`.
-- Donations are unclear under Nexon policy. Flagged before Phase 3.
+- Pick a direction.
+- Approve spec 0002, decision 0004, and the `scene`, `mood`, `subtitle` schema fields.
+- Confirm Silkscreen as the display font.
 - Set a Vercel spend limit before 2026-10-21.
 
 ## Verify
@@ -33,4 +33,5 @@ Owner reviews both research documents and answers Q8 and Q9 in `BACKLOG.md`. The
 ```bash
 npm run validate
 npm run build
+open public/mockups/index.html
 ```

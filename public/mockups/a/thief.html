@@ -1,0 +1,101 @@
+<!doctype html>
+<!--
+Thief class page, direction A. The Kerning City scene in the night mood: rooftops with rounded parapets and arched roofs, sagging power lines, antennas, two warm sign glows, and a water tower. The tower and the densest lit windows sit near the middle of the band so phones still see them above the title panel.
+The title panel overlaps the band by 48 px and holds the breadcrumb, the factual title, the place and moment subtitle, the class emblem, the status badge, and the build picker. The emblem is a pixel glyph on a 24 grid, one per entity type, standing in for the Pixelarticons set.
+Three windows follow: Job path, Skills that changed, and Where to train. Every value the repository does not have says Unknown with a link to add it.
+Notes and History close the page on plain panels. Sidebar and On this page list appear at 1024 px and up.
+-->
+<html lang="en" data-theme="light" data-mood="night">
+<head>
+<script>document.documentElement.dataset.theme=location.hash==='#dark'||matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thief | Classic Maple Wiki</title>
+<meta name="description" content="Thief class page. Mockup for spec 0002, direction A.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400..800;1,400..800&amp;family=Silkscreen:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="mock-note"><span>Mockup for spec 0002, direction A. Not the live site.</span> <nav aria-label="Mockup pages"><ul><li><a href="index.html">Home</a></li><li><a href="crimson-balrog.html">Crimson Balrog</a></li><li><a href="../index.html">All mockups</a></li></ul></nav></div>
+<header class="site-header">
+<div class="hdr">
+<a class="icon-btn menu-btn" href="#site-nav"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="vh">Menu</span></a>
+<a class="wordmark" href="index.html"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(-24 12 12)"><path class="leaf-stem" d="M12 20v3"/><path class="leaf-body" d="M12 2.5C17 5.5 19.5 9.5 19.5 13.5 19.5 17.6 16.2 20.5 12 20.5S4.5 17.6 4.5 13.5C4.5 9.5 7 5.5 12 2.5Z"/><path class="leaf-vein" d="M12 19V7.5M12 15.8l-3-2.4M12 15.8l3-2.4"/></g></svg><span>Classic Maple Wiki</span></a>
+<form class="search" role="search" action="#">
+<label class="vh" for="q">Search the wiki</label>
+<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+<input id="q" type="search" placeholder="Search the wiki" autocomplete="off">
+</form>
+<button class="icon-btn theme-toggle" type="button" aria-pressed="false"><span class="moon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></span><span class="sun"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></span><span class="vh">Dark mode</span></button>
+</div>
+</header>
+<div class="band" aria-hidden="true"><svg class="scene" width="1440" height="220" viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"><defs><linearGradient id="sky-band" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky-a"/><stop offset="1" class="sky-b"/></linearGradient><radialGradient id="sky-band-g"><stop offset="0" class="glow-a"/><stop offset="1" class="glow-b"/></radialGradient></defs><rect width="1440" height="220" fill="url(#sky-band)"/><g class="stars"><circle cx="120" cy="30" r="1.4"/><circle cx="260" cy="58" r="1.1"/><circle cx="420" cy="26" r="1.5"/><circle cx="640" cy="40" r="1.2"/><circle cx="760" cy="18" r="1.1"/><circle cx="880" cy="44" r="1.3"/><circle cx="1000" cy="30" r="1.5"/><circle cx="1120" cy="56" r="1.1"/><circle cx="1280" cy="24" r="1.4"/><circle cx="1380" cy="70" r="1.2"/><circle cx="340" cy="64" r="1"/></g><circle fill="url(#sky-band-g)" cx="520" cy="40" r="56"/><circle class="lit" cx="520" cy="40" r="15"/><path class="far" d="M0 220V126Q0 120 6 120H74Q80 120 80 126V102Q80 96 86 96H174Q180 96 180 102V116Q180 110 186 110H254Q260 110 260 116V90Q260 84 266 84H354Q360 84 360 90V110Q360 104 366 104H434Q440 104 440 110V86Q440 80 446 80H534Q540 80 540 86V92Q580 64 620 92V80Q620 74 626 74H694Q700 74 700 80V104Q700 98 706 98H794Q800 98 800 104V72Q800 66 806 66H894Q900 66 900 72V88Q950 56 1000 88V82Q1000 76 1006 76H1094Q1100 76 1100 82V104Q1100 98 1106 98H1194Q1200 98 1200 104V82Q1250 50 1300 82V110Q1300 104 1306 104H1434Q1440 104 1440 110V220Z"/><path class="deep" d="M0 220V156Q0 150 6 150H104Q110 150 110 156V140Q140 112 170 140V166Q170 160 176 160H234Q240 160 240 166V144Q240 138 246 138H324Q330 138 330 144V166Q330 160 336 160H414Q420 160 420 166V124Q470 88 520 124V156Q520 150 526 150H554Q560 150 560 156V110Q560 104 566 104H654Q660 104 660 110V130Q660 124 666 124H774Q780 124 780 130V98Q830 62 880 98V142Q880 136 886 136H954Q960 136 960 142V118Q960 112 966 112H1054Q1060 112 1060 118V156Q1060 150 1066 150H1134Q1140 150 1140 156V128Q1190 92 1240 128V152Q1240 146 1246 146H1324Q1330 146 1330 152V136Q1330 130 1336 130H1434Q1440 130 1440 136V220Z"/><path class="ant" d="M600 104V80M592 88H608M1030 112V90M1024 96H1036M286 138V118M830 80V62"/><path class="rope" d="M330 146Q375 164 420 128M520 130Q540 140 560 112M880 108Q920 132 960 116M1060 120Q1100 144 1140 132M110 144Q140 156 170 146"/><g class="deep"><rect x="700" y="64" width="44" height="30" rx="8"/><path d="M694 68Q722 34 750 68Z"/><rect x="704" y="92" width="4" height="34"/><rect x="736" y="92" width="4" height="34"/><path d="M706 104L740 116V112L706 100ZM740 104L706 116V112L740 100Z"/></g><circle fill="url(#sky-band-g)" cx="660" cy="122" r="26"/><circle fill="url(#sky-band-g)" cx="1000" cy="124" r="24"/><g class="lit"><rect x="654" y="108" width="12" height="26" rx="5"/><rect x="984" y="119" width="32" height="10" rx="5"/><rect x="572" y="116" width="7" height="9" rx="1"/><rect x="588" y="116" width="7" height="9" rx="1"/><rect x="620" y="116" width="7" height="9" rx="1"/><rect x="636" y="116" width="7" height="9" rx="1"/><rect x="572" y="132" width="7" height="9" rx="1"/><rect x="604" y="132" width="7" height="9" rx="1"/><rect x="636" y="132" width="7" height="9" rx="1"/><rect x="588" y="146" width="7" height="9" rx="1"/><rect x="620" y="146" width="7" height="9" rx="1"/><rect x="796" y="110" width="7" height="9" rx="1"/><rect x="812" y="110" width="7" height="9" rx="1"/><rect x="846" y="110" width="7" height="9" rx="1"/><rect x="862" y="110" width="7" height="9" rx="1"/><rect x="796" y="124" width="7" height="9" rx="1"/><rect x="830" y="124" width="7" height="9" rx="1"/><rect x="862" y="124" width="7" height="9" rx="1"/><rect x="812" y="138" width="7" height="9" rx="1"/><rect x="846" y="138" width="7" height="9" rx="1"/><rect x="672" y="136" width="7" height="9" rx="1"/><rect x="690" y="136" width="7" height="9" rx="1"/><rect x="756" y="136" width="7" height="9" rx="1"/><rect x="756" y="150" width="7" height="9" rx="1"/><rect x="690" y="150" width="7" height="9" rx="1"/><rect x="440" y="140" width="7" height="9" rx="1"/><rect x="458" y="140" width="7" height="9" rx="1"/><rect x="490" y="140" width="7" height="9" rx="1"/><rect x="458" y="156" width="7" height="9" rx="1"/><rect x="130" y="162" width="7" height="9" rx="1"/><rect x="250" y="152" width="7" height="9" rx="1"/><rect x="270" y="152" width="7" height="9" rx="1"/><rect x="290" y="166" width="7" height="9" rx="1"/><rect x="980" y="128" width="7" height="9" rx="1"/><rect x="1030" y="128" width="7" height="9" rx="1"/><rect x="1030" y="144" width="7" height="9" rx="1"/><rect x="898" y="150" width="7" height="9" rx="1"/><rect x="1160" y="142" width="7" height="9" rx="1"/><rect x="1200" y="142" width="7" height="9" rx="1"/><rect x="1180" y="158" width="7" height="9" rx="1"/><rect x="1260" y="160" width="7" height="9" rx="1"/><rect x="1360" y="146" width="7" height="9" rx="1"/><rect x="1380" y="162" width="7" height="9" rx="1"/><rect x="20" y="166" width="7" height="9" rx="1"/></g><rect class="gnd" x="0" y="198" width="1440" height="22"/></svg></div>
+<div class="layout">
+<main id="main" class="main">
+<div class="title-panel panel">
+<div class="title-head">
+<nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="#">Classes</a></li></ol></nav>
+<h1>Thief</h1>
+<p class="subtitle">Kerning City, after dark.</p>
+<span class="emblem" title="Class"><svg width="24" height="24" viewBox="0 0 24 24" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M4 2H20V14H18V16H16V18H14V20H10V18H8V16H6V14H4ZM6 4V12H8V14H10V16H14V14H16V12H18V4ZM11 6H13V8H15V10H13V13H11V10H9V8H11Z"/></svg></span>
+</div>
+<div class="meta"><a class="badge badge--unverified" href="index.html#how-to-read"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.8 6a2.2 2.2 0 1 1 3.2 2c-.7.4-1 .9-1 1.6M8 12.3v.01"/></svg>Unverified<span class="vh">, what this means</span></a><label class="build-pick" for="build">Build
+<select id="build">
+<option value="cot2">Closed Online Test 2</option>
+<option value="founders-2026-10-06" selected>Founder's Access</option>
+<option value="launch-2026-10-21">Grand Launch</option>
+</select></label></div>
+</div>
+<details class="toc-mobile panel"><summary>On this page</summary><ol><li><a href="#job-path">Job path</a></li><li><a href="#skills">Skills that changed</a></li><li><a href="#where-to-train">Where to train</a></li><li><a href="#notes">Notes</a></li><li><a href="#history">History</a></li></ol></details>
+<section class="window" id="job-path" aria-labelledby="job-path-t">
+<div class="window__bar"><h2 class="window__title" id="job-path-t">Job path</h2><span class="chip">Founder's Access</span></div>
+<div class="window__body">
+<dl class="rows"><div class="row"><dt>First job level</dt><dd><span class="unknown">Unknown</span><a class="add-it" href="https://github.com/classicmaple-wiki/classicmaple-wiki">Add it<span class="vh"> (first job level)</span></a></dd></div><div class="row"><dt>Job instructor</dt><dd><span class="unknown">Unknown</span><a class="add-it" href="https://github.com/classicmaple-wiki/classicmaple-wiki">Add it<span class="vh"> (job instructor)</span></a></dd></div><div class="row"><dt>Where</dt><dd><span class="unknown">Unknown</span><a class="add-it" href="https://github.com/classicmaple-wiki/classicmaple-wiki">Add it<span class="vh"> (where)</span></a></dd></div><div class="row"><dt>Requirements</dt><dd><span class="unknown">Unknown</span><a class="add-it" href="https://github.com/classicmaple-wiki/classicmaple-wiki">Add it<span class="vh"> (requirements)</span></a></dd></div></dl>
+</div>
+</section>
+<section class="window" id="skills" aria-labelledby="skills-t">
+<div class="window__bar"><h2 class="window__title" id="skills-t">Skills that changed</h2><span class="chip">Founder's Access</span></div>
+<div class="window__body">
+<div class="empty"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg><p>No skills recorded yet. Add them to <code>data/classes/thief.yaml</code>. <a class="add-it" href="https://github.com/classicmaple-wiki/classicmaple-wiki">Add skills<span class="vh"> on GitHub</span></a></p></div>
+</div>
+</section>
+<section class="window" id="where-to-train" aria-labelledby="where-to-train-t">
+<div class="window__bar"><h2 class="window__title" id="where-to-train-t">Where to train</h2></div>
+<div class="window__body">
+<dl class="rows"><div class="row"><dt>Route</dt><dd><a class="route-link" href="#">Level 1 to 30 party route</a></dd></div><div class="row"><dt>Status</dt><dd><span class="chip">Untested draft</span></dd></div><div class="row"><dt>Levels</dt><dd><span class="num">1</span> to <span class="num">30</span></dd></div><div class="row"><dt>Party size</dt><dd class="num">4</dd></div><div class="row"><dt>Classes</dt><dd>Warrior, Magician, Bowman, Thief</dd></div></dl>
+</div>
+</section>
+<section class="section" id="notes" aria-labelledby="notes-t">
+<h2 class="section-head" id="notes-t">Notes</h2>
+<div class="panel"><p>Nothing here yet. Tested builds, stat advice, and party tips are welcome.</p><p><a href="https://github.com/classicmaple-wiki/classicmaple-wiki">Add a note on GitHub</a></p></div>
+</section>
+<section class="section" id="history" aria-labelledby="history-t">
+<h2 class="section-head" id="history-t">History</h2>
+<div class="panel"><p class="muted">No changes recorded yet.</p></div>
+</section>
+<div class="page-foot"><a href="https://github.com/classicmaple-wiki/classicmaple-wiki">Edit this page</a><span>Source: <code>data/classes/thief.yaml</code></span></div>
+</main>
+<nav class="sidebar panel" id="site-nav" aria-labelledby="nav-title">
+<h2 class="sidebar__title" id="nav-title">Site sections</h2>
+<div class="nav-group"><h3>Start here</h3><ul><li><a href="index.html">Home</a></li><li><a href="index.html#how-to-read">How to read this wiki</a></li></ul></div>
+<div class="nav-group"><h3>Classes</h3><ul><li><a href="thief.html" aria-current="page">Thief</a></li></ul></div>
+<div class="nav-group"><h3>Leveling</h3><ul><li><a href="#">Where to train</a></li><li><a href="#">Level 1 to 30 party route</a></li></ul></div>
+<div class="nav-group"><h3>Economy and systems</h3><ul><li><a href="#">Crafting</a></li><li><a href="#">What changed</a></li></ul></div>
+<div class="nav-group"><h3>Database</h3><ul><li><a href="#">Monsters</a></li><li><a href="crimson-balrog.html">Crimson Balrog</a></li></ul></div>
+</nav>
+<aside class="toc" aria-labelledby="toc-title"><h2 id="toc-title">On this page</h2><ul><li><a href="#job-path" aria-current="true">Job path</a></li><li><a href="#skills">Skills that changed</a></li><li><a href="#where-to-train">Where to train</a></li><li><a href="#notes">Notes</a></li><li><a href="#history">History</a></li></ul></aside>
+</div>
+<footer class="site-footer">
+<div class="site-footer__inner">
+<p>Unofficial fan site. Not affiliated with or endorsed by Nexon. MapleStory and related names are trademarks of their respective owners.</p>
+<p>Open source. <a href="https://github.com/classicmaple-wiki/classicmaple-wiki">Read and edit it on GitHub</a>.</p>
+<p class="credit">Designed and built by <a href="https://sirux.dev">Sirux</a></p>
+</div>
+</footer>
+<script>(function(){var d=document.documentElement,b=document.querySelector('.theme-toggle');function s(){b.setAttribute('aria-pressed',d.dataset.theme==='dark'?'true':'false')}s();b.addEventListener('click',function(){d.dataset.theme=d.dataset.theme==='dark'?'light':'dark';s()})})()</script>
+</body>
+</html>

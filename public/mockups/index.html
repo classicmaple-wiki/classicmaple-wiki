@@ -1,0 +1,111 @@
+<!doctype html>
+<!--
+   Entry point for the spec 0002 mockups. It lists both directions and
+   their three pages so the owner can compare them from one preview link,
+   on a phone or a desktop. It uses only the shared tokens, so it looks
+   neutral and favors neither direction. This folder is removed before the
+   spec branch merges.
+-->
+<html lang="en" data-theme="light" data-mood="morning">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex" />
+		<title>Mockups for spec 0002</title>
+		<script>
+			if (location.hash === '#dark' || (location.hash !== '#light' && matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.dataset.theme = 'dark';
+			}
+		</script>
+		<link rel="stylesheet" href="tokens.css" />
+		<style>
+			body {
+				margin: 0;
+				background: var(--color-paper);
+				color: var(--color-ink);
+				font: 400 1.0625rem/1.6 system-ui, sans-serif;
+			}
+			main {
+				max-width: 46rem;
+				margin: 0 auto;
+				padding: var(--space-6) var(--space-4) var(--space-8);
+			}
+			h1 {
+				font-size: var(--text-2xl);
+				line-height: 1.2;
+				margin: 0 0 var(--space-3);
+			}
+			p {
+				color: var(--color-ink-muted);
+				margin: 0 0 var(--space-5);
+			}
+			.direction {
+				background: var(--color-panel);
+				border: 1px solid var(--color-line);
+				border-radius: 10px;
+				padding: var(--space-5);
+				margin-bottom: var(--space-5);
+			}
+			.direction h2 {
+				font-size: var(--text-xl);
+				margin: 0 0 var(--space-2);
+			}
+			.direction p {
+				margin-bottom: var(--space-4);
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				flex-wrap: wrap;
+				gap: var(--space-2);
+			}
+			a {
+				display: inline-block;
+				padding: var(--space-2) var(--space-4);
+				border-radius: 999px;
+				background: var(--color-chip);
+				color: var(--color-accent);
+				font-weight: 700;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			a:focus-visible {
+				outline: 3px solid var(--color-focus);
+				outline-offset: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Two directions for the new look</h1>
+			<p>
+				Both use the same colors, scenes, and data. They differ in how much of the old game window comes through. Add
+				#dark to any address to see the night version. Pick one, or name the parts of each you want.
+			</p>
+
+			<section class="direction">
+				<h2>A. Morning Shelf</h2>
+				<p>About 70 percent modern. Clean type, soft panels, smooth scenes. The old window shows up in stat blocks only.</p>
+				<ul>
+					<li><a href="a/index.html">Home</a></li>
+					<li><a href="a/thief.html">Thief</a></li>
+					<li><a href="a/crimson-balrog.html">Crimson Balrog</a></li>
+				</ul>
+			</section>
+
+			<section class="direction">
+				<h2>B. Old Window</h2>
+				<p>About 55 percent vintage. Pixel headings, every panel a window, scenes on a pixel grid. Body text stays modern.</p>
+				<ul>
+					<li><a href="b/index.html">Home</a></li>
+					<li><a href="b/thief.html">Thief</a></li>
+					<li><a href="b/crimson-balrog.html">Crimson Balrog</a></li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>

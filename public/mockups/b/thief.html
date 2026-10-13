@@ -1,0 +1,112 @@
+<!doctype html>
+<!--
+Direction B, Old Window. Mockup for spec 0002, not the live site.
+The page follows the Starlight frame the real site keeps: a header with the wordmark, search, and theme toggle, then a left sidebar, the content column, and an On this page list from 1024 pixels up. Phones get a menu button that opens the same sidebar as a drawer.
+The scene band runs full width right under the header and holds no text. Its bottom 16 units are plain ground, so the windows that overlap it by 48 pixels never hide a motif. Every block below is a window with a title bar.
+Data comes only from the repository. Unknown values say Unknown in muted italic. When a whole window is unknown, one invitation with one Add the first value link opens the window instead of a link on every row.
+The status chip appears once, in the title window. A window repeats it only when its own status differs.
+The inline script in the head sets data-theme before paint: dark for the #dark hash, else the system setting. The scripts at the end run the theme toggle and the menu drawer.
+This page: the Thief class, scene kerning-city, mood night.
+-->
+<html lang="en" data-theme="light" data-mood="night">
+<head>
+<meta charset="utf-8">
+<script>(function(){var r=document.documentElement,d=location.hash==='#dark'||(location.hash!=='#light'&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches);r.setAttribute('data-theme',d?'dark':'light');})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thief</title>
+<meta name="description" content="The Thief class in MapleStory Classic World. Job path, skills, and where to train.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400..800;1,400..800&amp;family=Silkscreen:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+<div class="head-row">
+<a class="wordmark" href="index.html"><svg class="leaf" width="22" height="22" viewBox="0 0 11 11" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><path class="lf" d="M6 0h4v1h-4zM4 1h7v1h-7zM3 2h5v1h-5zM9 2h2v1h-2zM2 3h5v1h-5zM8 3h3v1h-3zM1 4h5v1h-5zM7 4h4v1h-4zM1 5h4v1h-4zM6 5h4v1h-4zM1 6h3v1h-3zM5 6h4v1h-4zM1 7h2v1h-2zM4 7h4v1h-4zM3 8h4v1h-4z"/><path class="lv" d="M8 2h1v1h-1zM7 3h1v1h-1zM6 4h1v1h-1zM5 5h1v1h-1zM4 6h1v1h-1zM3 7h1v1h-1zM2 8h1v1h-1zM1 9h1v1h-1zM0 10h1v1h-1z"/></svg><span>Classic Maple Wiki</span></a>
+<button class="btn btn-menu" type="button" aria-expanded="false" aria-controls="sidebar"><svg class="px" width="18" height="18" viewBox="0 0 9 9" aria-hidden="true" focusable="false"><path d="M0 1h9v2h-9zM0 4h9v2h-9zM0 7h9v2h-9z"/></svg><span class="sr-only">Menu</span></button>
+<form class="search" role="search" action="#">
+<label class="sr-only" for="q">Search the wiki</label>
+<svg class="px" width="16" height="16" viewBox="0 0 9 9" aria-hidden="true" focusable="false"><path d="M1 0h4v1h-4zM0 1h1v4h-1zM5 1h1v4h-1zM1 5h4v1h-4zM5 6h2v1h-2zM6 7h2v1h-2zM7 8h2v1h-2z"/></svg>
+<input id="q" type="search" name="q" placeholder="Search the wiki" autocomplete="off">
+</form>
+<button class="btn theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Night mode"><svg class="px" width="18" height="18" viewBox="0 0 9 9" aria-hidden="true" focusable="false"><path d="M2 0h4v1h-4zM1 1h3v1h-3zM0 2h3v4h-3zM1 6h3v1h-3zM2 7h4v1h-4z"/></svg><span class="label">Night</span></button>
+</div>
+</header>
+<div class="band"><svg class="sc" width="1280" height="220" viewBox="0 0 320 55" preserveAspectRatio="xMidYMax slice" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><path class="s1" d="M0 0h320v12h-320z"/><path class="s2" d="M0 12h320v10h-320z"/><path class="s3" d="M0 22h320v8h-320z"/><path class="s4" d="M0 30h320v25h-320z"/><path class="lt" d="M107 4h2v1h-2zM105 5h3v1h-3zM105 6h2v1h-2zM104 7h3v2h-3zM104 9h4v1h-4zM105 10h4v1h-4zM105 11h7v1h-7zM107 12h3v1h-3z"/><path class="s1" d="M109 4h3v1h-3zM108 5h5v1h-5zM107 6h7v3h-7zM108 9h5v1h-5zM109 10h3v1h-3z"/><path class="st" d="M32 2h1v1h-1zM155 5h1v1h-1zM97 6h1v1h-1zM314 6h1v1h-1zM18 7h1v1h-1zM48 15h1v1h-1zM202 15h1v1h-1zM238 15h1v1h-1zM262 16h1v1h-1zM7 17h1v1h-1zM46 18h1v1h-1zM231 18h1v1h-1zM260 19h1v1h-1zM21 20h1v1h-1zM80 20h1v1h-1zM123 20h1v1h-1zM315 21h1v1h-1zM15 25h1v1h-1z"/><path class="k1" d="M46 13h1v4h-1zM242 13h1v4h-1zM95 14h1v4h-1zM264 14h1v4h-1zM42 17h9v7h-9zM198 17h11v9h-11zM239 17h7v6h-7zM90 18h11v1h-11zM153 18h11v5h-11zM247 18h13v21h-13zM261 18h7v21h-7zM282 18h7v7h-7zM296 18h1v4h-1zM316 18h4v2h-4zM11 19h10v2h-10zM77 19h24v2h-24zM112 19h7v2h-7zM173 19h10v5h-10zM218 19h8v7h-8zM190 20h7v4h-7zM303 20h17v2h-17zM11 21h17v1h-17zM35 21h1v4h-1zM77 21h42v1h-42zM0 22h28v17h-28zM66 22h53v17h-53zM213 22h1v4h-1zM290 22h30v17h-30zM133 23h31v1h-31zM227 23h19v16h-19zM42 24h23v15h-23zM120 24h44v2h-44zM173 24h24v2h-24zM29 25h12v14h-12zM269 25h20v14h-20zM120 26h77v13h-77zM198 26h28v13h-28z"/><path class="lt" d="M244 22h1v1h-1zM254 23h1v1h-1zM325 23h1v1h-1zM69 24h1v1h-1zM180 24h1v1h-1zM22 26h1v1h-1zM252 26h1v1h-1zM323 26h1v1h-1zM312 28h1v1h-1zM24 29h1v1h-1zM106 29h1v1h-1zM266 29h1v1h-1zM7 30h1v1h-1zM285 32h1v1h-1zM317 32h1v1h-1zM12 33h1v1h-1zM117 33h1v1h-1zM210 34h1v1h-1zM7 36h1v1h-1z"/><path class="k2" d="M26 23h2v1h-2zM216 23h2v3h-2zM280 23h3v1h-3zM24 24h6v1h-6zM43 24h4v1h-4zM242 24h4v1h-4zM278 24h7v1h-7zM317 24h2v3h-2zM22 25h10v1h-10zM41 25h8v1h-8zM240 25h8v1h-8zM257 25h1v5h-1zM276 25h11v1h-11zM20 26h14v1h-14zM39 26h12v1h-12zM97 26h3v1h-3zM190 26h4v1h-4zM203 26h19v1h-19zM238 26h12v1h-12zM274 26h15v1h-15zM12 27h2v3h-2zM18 27h18v3h-18zM37 27h16v5h-16zM95 27h7v1h-7zM111 27h2v1h-2zM188 27h8v1h-8zM204 27h17v12h-17zM226 27h5v1h-5zM236 27h16v12h-16zM272 27h19v12h-19zM306 27h14v1h-14zM93 28h11v1h-11zM109 28h6v3h-6zM155 28h2v3h-2zM170 28h4v1h-4zM186 28h12v1h-12zM224 28h9v1h-9zM307 28h13v11h-13zM67 29h2v3h-2zM83 29h2v3h-2zM91 29h15v1h-15zM168 29h8v1h-8zM184 29h16v1h-16zM222 29h13v10h-13zM298 29h2v1h-2zM0 30h36v1h-36zM89 30h19v2h-19zM166 30h12v1h-12zM182 30h20v9h-20zM253 30h18v1h-18zM296 30h6v1h-6zM0 31h17v8h-17zM18 31h18v8h-18zM109 31h52v1h-52zM164 31h16v8h-16zM254 31h16v8h-16zM294 31h10v1h-10zM37 32h71v1h-71zM109 32h6v7h-6zM116 32h44v7h-44zM292 32h14v7h-14zM37 33h16v6h-16zM54 33h18v6h-18zM73 33h15v6h-15zM89 33h19v6h-19z"/><path class="k3" d="M138 4h2v4h-2zM137 8h4v1h-4zM135 9h8v1h-8zM133 10h12v1h-12zM131 11h16v1h-16zM128 12h22v1h-22zM129 13h20v11h-20zM131 24h1v2h-1zM136 24h1v7h-1zM141 24h1v2h-1zM146 24h1v7h-1zM131 26h2v1h-2zM140 26h2v1h-2zM144 26h1v1h-1zM131 27h1v4h-1zM141 27h1v1h-1zM134 28h1v1h-1zM138 28h1v1h-1zM141 28h2v1h-2zM141 29h1v2h-1z"/><path class="k3" d="M205 29h3v1h-3zM207 30h1v3h-1zM223 32h3v1h-3zM90 33h3v1h-3zM205 33h3v1h-3zM223 33h1v3h-1zM255 33h3v1h-3zM90 34h1v3h-1zM205 34h1v3h-1zM255 34h1v3h-1zM55 35h3v1h-3zM74 35h3v1h-3zM293 35h3v1h-3zM55 36h1v3h-1zM74 36h1v3h-1zM223 36h3v1h-3zM293 36h1v3h-1zM225 37h1v3h-1z"/><path class="lt" d="M213 29h2v1h-2zM27 30h2v1h-2zM46 30h2v1h-2zM241 30h2v1h-2zM285 30h2v1h-2zM312 30h2v1h-2zM209 32h2v1h-2zM217 32h2v1h-2zM3 33h2v1h-2zM23 33h2v1h-2zM102 33h2v1h-2zM191 33h2v1h-2zM245 33h2v1h-2zM249 33h2v1h-2zM129 34h2v1h-2zM153 34h2v1h-2zM169 34h2v1h-2zM63 35h2v1h-2zM82 35h2v1h-2zM3 36h2v1h-2zM98 36h2v1h-2zM241 36h2v1h-2zM245 36h2v1h-2zM267 36h2v1h-2zM281 36h2v1h-2zM285 36h2v1h-2zM312 36h2v1h-2zM133 37h2v1h-2zM177 37h2v1h-2z"/><path class="ltn" d="M31 30h2v1h-2zM50 30h2v1h-2zM42 33h2v1h-2zM46 33h2v1h-2zM241 33h2v1h-2zM263 33h2v1h-2zM316 33h2v1h-2zM301 35h2v1h-2zM42 36h2v1h-2zM187 36h2v1h-2zM191 36h2v1h-2zM263 36h2v1h-2zM149 37h2v1h-2zM169 37h2v1h-2z"/><path class="rim" d="M138 4h2v1h-2zM137 8h1v1h-1zM140 8h1v1h-1zM135 9h2v1h-2zM141 9h2v1h-2zM133 10h2v1h-2zM143 10h2v1h-2zM131 11h2v1h-2zM145 11h2v1h-2zM128 12h3v1h-3zM147 12h3v1h-3zM129 13h1v4h-1zM129 17h20v1h-20zM129 18h1v3h-1zM129 21h20v1h-20zM129 22h1v2h-1zM26 23h2v1h-2zM216 23h2v1h-2zM280 23h3v1h-3zM24 24h2v1h-2zM28 24h2v1h-2zM43 24h4v1h-4zM242 24h4v1h-4zM278 24h2v1h-2zM283 24h2v1h-2zM317 24h2v1h-2zM22 25h2v1h-2zM30 25h2v1h-2zM41 25h2v1h-2zM47 25h2v1h-2zM240 25h2v1h-2zM246 25h2v1h-2zM257 25h1v1h-1zM276 25h2v1h-2zM285 25h2v1h-2zM20 26h2v1h-2zM32 26h2v1h-2zM39 26h2v1h-2zM49 26h2v1h-2zM97 26h3v1h-3zM132 26h1v1h-1zM140 26h1v1h-1zM144 26h1v1h-1zM190 26h4v1h-4zM203 26h13v1h-13zM218 26h4v1h-4zM238 26h2v1h-2zM248 26h2v1h-2zM274 26h2v1h-2zM287 26h2v1h-2zM12 27h2v1h-2zM18 27h2v1h-2zM34 27h2v1h-2zM37 27h2v1h-2zM51 27h2v1h-2zM95 27h2v1h-2zM100 27h2v1h-2zM111 27h2v1h-2zM188 27h2v1h-2zM194 27h2v1h-2zM226 27h5v1h-5zM236 27h2v1h-2zM250 27h2v1h-2zM272 27h2v1h-2zM289 27h2v1h-2zM306 27h11v1h-11zM319 27h1v1h-1zM93 28h2v1h-2zM102 28h2v1h-2zM109 28h2v1h-2zM113 28h2v1h-2zM134 28h1v1h-1zM138 28h1v1h-1zM142 28h1v1h-1zM155 28h2v1h-2zM170 28h4v1h-4zM186 28h2v1h-2zM196 28h2v1h-2zM224 28h2v1h-2zM231 28h2v1h-2zM67 29h2v1h-2zM83 29h2v1h-2zM91 29h2v1h-2zM104 29h2v1h-2zM168 29h2v1h-2zM174 29h2v1h-2zM184 29h2v1h-2zM198 29h2v1h-2zM222 29h2v1h-2zM233 29h2v1h-2zM298 29h2v1h-2zM0 30h12v1h-12zM14 30h4v1h-4zM89 30h2v1h-2zM106 30h2v1h-2zM166 30h2v1h-2zM176 30h2v1h-2zM182 30h2v1h-2zM200 30h2v1h-2zM253 30h4v1h-4zM258 30h13v1h-13zM296 30h2v1h-2zM300 30h2v1h-2zM115 31h16v1h-16zM132 31h4v1h-4zM137 31h4v1h-4zM142 31h4v1h-4zM147 31h8v1h-8zM157 31h4v1h-4zM164 31h2v1h-2zM178 31h2v1h-2zM294 31h2v1h-2zM302 31h2v1h-2zM53 32h14v1h-14zM69 32h14v1h-14zM85 32h4v1h-4zM292 32h2v1h-2zM304 32h2v1h-2z"/><path class="g2" d="M0 39h320v16h-320z"/><path class="lt" d="M138 3h1v1h-1z"/></svg></div>
+<div class="frame">
+<nav class="sidebar win" id="sidebar" aria-labelledby="nav-title">
+<div class="win-bar"><h2 class="win-title" id="nav-title">Contents</h2><span class="grip" aria-hidden="true"></span></div>
+<div class="win-body">
+<ul class="nav-list">
+<li class="nav-group"><span class="nav-label">Start here</span><ul class="nav-sub"><li><a href="index.html">Home</a></li><li><a href="index.html#read">How to read this wiki</a></li></ul></li>
+<li class="nav-group"><span class="nav-label">Classes</span><ul class="nav-sub"><li><a href="thief.html" aria-current="page">Thief</a></li></ul></li>
+<li class="nav-group"><span class="nav-label">Leveling</span><ul class="nav-sub"><li><a href="#">Level 1 to 30 party route</a></li></ul></li>
+<li class="nav-group"><span class="nav-label">Economy and systems</span><ul class="nav-sub"><li><a href="#">Crafting</a></li></ul></li>
+<li class="nav-group"><span class="nav-label">Database</span><ul class="nav-sub"><li><a href="#">Monsters</a></li><li><a href="crimson-balrog.html">Crimson Balrog</a></li></ul></li>
+</ul>
+</div>
+</nav>
+<main class="main" id="main">
+<div class="content">
+<section class="win title-win" id="top" aria-labelledby="page-title">
+<div class="win-bar">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="#">Classes</a></li><li><span aria-current="page">Thief</span></li></ol></nav>
+<span class="emblem"><svg class="px" width="20" height="18" viewBox="0 0 10 9" aria-hidden="true" focusable="false"><path d="M0 0h10v1h-10zM0 1h1v4h-1zM9 1h1v4h-1zM2 2h6v3h-6zM1 5h1v1h-1zM3 5h4v1h-4zM8 5h1v1h-1zM2 6h1v1h-1zM4 6h2v1h-2zM7 6h1v1h-1zM3 7h1v1h-1zM6 7h1v1h-1zM4 8h2v1h-2z"/></svg></span>
+</div>
+<div class="win-body">
+<h1 class="page-title" id="page-title">Thief</h1>
+<p class="subtitle">Kerning City, after dark.</p>
+<p>Nothing here yet. Tested builds, stat advice, and party tips are welcome.</p>
+<div class="meta"><span>Status</span> <span class="tag b-unverified"><svg class="px" width="9" height="9" viewBox="0 0 7 7" aria-hidden="true" focusable="false"><path d="M2 0h3v1h-3zM1 1h1v1h-1zM5 1h1v2h-1zM4 3h1v1h-1zM3 4h1v1h-1zM3 6h1v1h-1z"/></svg>Unverified</span> <span>Class id <code>thief</code></span></div>
+</div>
+</section>
+<div class="stack">
+<section class="win " aria-labelledby="job-path">
+<div class="win-bar"><h2 class="win-title" id="job-path">Job path</h2><span class="grip" aria-hidden="true"></span></div>
+<div class="win-body"><div class="empty invite"><svg class="px" width="18" height="18" viewBox="0 0 7 7" aria-hidden="true" focusable="false"><path d="M2 0h3v1h-3zM1 1h1v1h-1zM5 1h1v2h-1zM4 3h1v1h-1zM3 4h1v1h-1zM3 6h1v1h-1z"/></svg><div><p>Nobody has recorded the Thief job path yet. Seen it in game? Bring a screenshot.</p><a class="btn btn-add" href="https://github.com/classicmaple-wiki/classicmaple-wiki">Add the first value</a></div></div><dl class="rows"><div class="row"><dt>First job level</dt><dd><span class="unk">Unknown</span></dd></div><div class="row"><dt>Job instructor</dt><dd><span class="unk">Unknown</span></dd></div><div class="row"><dt>Where</dt><dd><span class="unk">Unknown</span></dd></div><div class="row"><dt>Requirements</dt><dd><span class="unk">Unknown</span></dd></div></dl></div>
+</section>
+<section class="win " aria-labelledby="skills">
+<div class="win-bar"><h2 class="win-title" id="skills">Skills that changed</h2><span class="grip" aria-hidden="true"></span></div>
+<div class="win-body"><div class="empty"><svg class="px" width="18" height="16" viewBox="0 0 9 8" aria-hidden="true" focusable="false"><path d="M0 0h9v1h-9zM0 1h1v2h-1zM8 1h1v2h-1zM0 3h9v1h-9zM0 4h1v3h-1zM8 4h1v3h-1zM0 7h9v1h-9z"/></svg><p>No skills recorded yet. Add them to <code>data/classes/thief.yaml</code>. <a href="https://github.com/classicmaple-wiki/classicmaple-wiki">Open the repository</a></p></div></div>
+</section>
+<section class="win " aria-labelledby="train">
+<div class="win-bar"><h2 class="win-title" id="train">Where to train</h2><span class="grip" aria-hidden="true"></span></div>
+<div class="win-body"><a class="route" href="#">
+<span class="route-name">Level 1 to 30 party route</span>
+<span class="tags"><span class="tag">Untested draft</span></span>
+<dl class="rows">
+<div class="row"><dt>Levels</dt><dd><span class="num">1</span> to <span class="num">30</span></dd></div>
+<div class="row"><dt>Party size</dt><dd class="num">4</dd></div>
+<div class="row"><dt>Classes</dt><dd>Warrior, Magician, Bowman, Thief</dd></div>
+</dl>
+</a></div>
+</section>
+<section class="win " aria-labelledby="history">
+<div class="win-bar"><h2 class="win-title" id="history">History</h2><span class="grip" aria-hidden="true"></span></div>
+<div class="win-body"><p>No changes recorded yet.</p><p class="hint">Every change to this page is listed here with the build it applies to.</p></div>
+</section>
+</div>
+</div>
+</main>
+<nav class="toc win" aria-labelledby="toc-title">
+<div class="win-bar"><h2 class="win-title" id="toc-title">On this page</h2></div>
+<div class="win-body"><ol><li><a href="#top" aria-current="true">Overview</a></li><li><a href="#job-path">Job path</a></li><li><a href="#skills">Skills that changed</a></li><li><a href="#train">Where to train</a></li><li><a href="#history">History</a></li></ol></div>
+</nav>
+</div>
+<footer class="site-foot">
+<div class="foot-inner">
+<p class="disclaimer">Unofficial fan site. Not affiliated with or endorsed by Nexon. MapleStory and related names are trademarks of their respective owners.</p>
+<p class="credit">Designed and built by <a href="https://sirux.dev">Sirux</a></p>
+</div>
+</footer>
+<aside class="mock-note" aria-label="Mockup note">
+<p>Mockup for spec 0002, direction B. Not the live site. <span class="links"><a href="index.html">Home</a><a href="thief.html">Thief</a><a href="crimson-balrog.html">Crimson Balrog</a><a href="../index.html">All mockups</a></span></p>
+</aside>
+<script>(function(){var b=document.getElementById('theme-toggle'),r=document.documentElement;function s(){b.setAttribute('aria-pressed',r.getAttribute('data-theme')==='dark'?'true':'false');}s();b.addEventListener('click',function(){r.setAttribute('data-theme',r.getAttribute('data-theme')==='dark'?'light':'dark');s();});})();
+(function(){var m=document.querySelector('.btn-menu'),r=document.documentElement;function o(v){m.setAttribute('aria-expanded',v?'true':'false');r.classList.toggle('nav-open',v);}m.addEventListener('click',function(){o(m.getAttribute('aria-expanded')!=='true');});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&r.classList.contains('nav-open')){o(false);m.focus();}});})();</script>
+</body>
+</html>

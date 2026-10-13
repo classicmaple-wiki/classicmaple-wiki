@@ -93,8 +93,8 @@ In dark mode every scene darkens toward its night version: sky values move towar
 Type.
 
 - Body and interface: Nunito, variable, weights 400 to 800. Rounded and friendly, built for screens. 17 pixel base on phones, 18 on desktop, line height 1.6, measure at most 70 characters.
-- Display: Pixelify Sans, variable, weights 400 to 700. The wordmark, window titles, and in direction B the page titles. Never below 16 pixels. Never for paragraphs.
-- Chips and tiny labels: Pixelify Sans at 13 pixels uppercase with letter spacing, not a third family. This keeps the site at two families.
+- Display: Silkscreen, weights 400 and 700. The wordmark, window titles, chips, and in direction B the page titles. Never for paragraphs. Pixelify Sans was the first choice and was dropped during the mockups: its capital C reads as an O at small sizes, so "Classic" read as "Olassic".
+- Chips and tiny labels: Silkscreen at 13 pixels with letter spacing, not a third family. This keeps the site at two families. On phones the wordmark drops to 15 pixels so the header stays on one row.
 - Numbers in stat blocks use Nunito with tabular figures so columns line up.
 - Both fonts are OFL 1.1 and self hosted as subset woff2 files in `public/fonts/`. No npm dependency and no third party request.
 
@@ -110,7 +110,7 @@ Shadow: one soft panel shadow `0 1px 0 line, 0 8px 24px` at 8 percent ink in lig
 
 The signature component. Used for stat blocks, quest boxes, reward lists, and the "where to train" table.
 
-- A slim title bar in the title bar color with a 3 pixel mood colored stripe on the left, the window title in Pixelify Sans, and a build chip on the right.
+- A slim title bar in the title bar color with a 3 pixel mood colored stripe on the left, the window title in Silkscreen, and a build chip on the right.
 - A 1 pixel outer border in ink at 20 percent and a 1 pixel inner highlight in panel white.
 - A cream body with labeled rows: label in muted Nunito, value in ink Nunito with tabular figures. Unknown values say Unknown in muted italic, with a small "Add it" link.
 - Pure CSS. No images, no nine slice frames, no copy of the client skin.
@@ -170,9 +170,9 @@ Crimson Balrog page. The monster has no map yet, so it inherits the default scen
 
 Both are modern plus vintage, at different balances. Both use the same tokens, the same scenes, and the same data.
 
-Direction A, "Morning Shelf". About 70 percent modern. Nunito for every title. Pixelify Sans only in the wordmark, window titles, and chips. Panels with 10 pixel radius and a soft shadow. Scenes as smooth vector silhouettes. The window frame is light: title bar, stripe, thin border. Feels like a calm modern product that remembers the game.
+Direction A, "Morning Shelf". About 70 percent modern. Nunito for every title. Silkscreen only in the wordmark, window titles, and chips. Panels with 10 pixel radius and a soft shadow. Scenes as smooth vector silhouettes. The window frame is light: title bar, stripe, thin border. Feels like a calm modern product that remembers the game.
 
-Direction B, "Old Window". About 45 percent modern. Pixelify Sans for page titles and section headings, Nunito for body. Every panel is a window with a title bar. 4 pixel radius, a 2 pixel offset shadow, a 1 pixel highlight. Scenes drawn on a pixel grid with crisp stepped edges. Dotted dividers. Feels like opening the old client in a new monitor.
+Direction B, "Old Window". About 45 percent modern. Silkscreen for page titles and section headings, Nunito for body. Every panel is a window with a title bar. 4 pixel radius, a 2 pixel offset shadow, a 1 pixel highlight. Scenes drawn on a pixel grid with crisp stepped edges. Dotted dividers. Feels like opening the old client in a new monitor.
 
 Mockups live in `public/mockups/a/` and `public/mockups/b/` on a pull request branch, so the Vercel preview link shows them on a phone. They are deleted before the branch merges.
 
@@ -186,10 +186,10 @@ Phase A, before the pick:
 
 - [x] Research in `docs/research/ui.md` and `docs/research/assets.md`.
 - [x] Decision 0003, original art only.
-- [ ] Decision 0004, keep Starlight with a custom theme. Status proposed.
-- [ ] This spec. Status draft.
-- [ ] Mockups for directions A and B, three pages each, on a pull request with a preview link.
-- [ ] Contrast and layout check of both mockups at 360 and 1280 pixels.
+- [x] Decision 0004, keep Starlight with a custom theme. Status proposed.
+- [x] This spec. Status draft.
+- [x] Mockups for directions A and B, three pages each, on a pull request with a preview link. They load fonts from Google Fonts for now. The real site self hosts them.
+- [x] Contrast and layout check of both mockups at 360 and 1280 pixels, light and dark.
 - [ ] Stop. The owner approves this spec, decision 0004, the schema change, and picks a direction.
 
 Phase B, after the pick:

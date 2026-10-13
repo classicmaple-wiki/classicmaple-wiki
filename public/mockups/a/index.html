@@ -1,0 +1,128 @@
+<!doctype html>
+<!--
+Home page, direction A. A splash page with no sidebars, as Starlight draws a splash.
+A tall Henesys scene in the midday mood sits under the header. The mushroom cottage sits right of center and high enough that the hero panel never covers it, and the strip phones see keeps the whole cottage. The hero panel overlaps the bottom of the scene, so the wordmark, tagline, the one search field on the page, and the build line sit on a solid panel.
+Then six task cards, two to a row on phones so the shelf comes sooner, the shelf of places in the order a player meets them, the legend for the three status badges and the builds, and a plain list of site sections for readers who scan.
+Each shelf card shows its own place in its own default mood, set by a mood class on the card. The card names the place once and the subtitle names only the moment.
+-->
+<html lang="en" data-theme="light" data-mood="midday">
+<head>
+<script>document.documentElement.dataset.theme=location.hash==='#dark'||matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classic Maple Wiki</title>
+<meta name="description" content="The player-built guide to MapleStory Classic World. Mockup for spec 0002, direction A.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400..800;1,400..800&amp;family=Silkscreen:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="is-home">
+<a class="skip" href="#main">Skip to content</a>
+<div class="mock-note"><span>Mockup for spec 0002, direction A. Not the live site.</span> <nav aria-label="Mockup pages"><ul><li><a href="thief.html">Thief</a></li><li><a href="crimson-balrog.html">Crimson Balrog</a></li><li><a href="../index.html">All mockups</a></li></ul></nav></div>
+<header class="site-header">
+<div class="hdr">
+<a class="icon-btn menu-btn" href="#site-nav"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="vh">Menu</span></a>
+<a class="wordmark" href="index.html" aria-current="page"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(-24 12 12)"><path class="leaf-stem" d="M12 20v3"/><path class="leaf-body" d="M12 2.5C17 5.5 19.5 9.5 19.5 13.5 19.5 17.6 16.2 20.5 12 20.5S4.5 17.6 4.5 13.5C4.5 9.5 7 5.5 12 2.5Z"/><path class="leaf-vein" d="M12 19V7.5M12 15.8l-3-2.4M12 15.8l3-2.4"/></g></svg><span>Classic Maple Wiki</span></a>
+<form class="search" role="search" action="#">
+<label class="vh" for="q">Search the wiki</label>
+<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+<input id="q" type="search" placeholder="Search the wiki" autocomplete="off">
+</form>
+<button class="icon-btn theme-toggle" type="button" aria-pressed="false"><span class="moon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></span><span class="sun"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></span><span class="vh">Dark mode</span></button>
+</div>
+</header>
+<div class="band band--tall" aria-hidden="true"><svg class="scene" width="1440" height="340" viewBox="0 0 1440 340" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"><defs><linearGradient id="sky-band" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky-a"/><stop offset="1" class="sky-b"/></linearGradient><radialGradient id="sky-band-g"><stop offset="0" class="glow-a"/><stop offset="1" class="glow-b"/></radialGradient></defs><rect width="1440" height="340" fill="url(#sky-band)"/><g class="stars"><circle cx="140" cy="60" r="1.6"/><circle cx="300" cy="120" r="1.2"/><circle cx="520" cy="40" r="1.5"/><circle cx="760" cy="96" r="1.2"/><circle cx="1040" cy="40" r="1.6"/><circle cx="1220" cy="120" r="1.3"/><circle cx="1360" cy="54" r="1.5"/><circle cx="640" cy="150" r="1.1"/></g><circle fill="url(#sky-band-g)" cx="610" cy="88" r="110"/><circle class="lit" cx="610" cy="88" r="34"/><g class="cloud"><ellipse cx="380" cy="96" rx="70" ry="18"/><ellipse cx="420" cy="84" rx="44" ry="18"/><ellipse cx="1140" cy="70" rx="80" ry="16"/><ellipse cx="1180" cy="60" rx="40" ry="16"/><ellipse cx="780" cy="54" rx="52" ry="12"/></g><path class="far" d="M0 250C180 196 320 204 480 228C620 250 760 196 920 204C1080 212 1220 184 1440 222V340H0Z"/><g class="mid"><circle cx="560" cy="278" r="26"/><circle cx="590" cy="284" r="20"/><circle cx="846" cy="270" r="24"/><circle cx="872" cy="278" r="18"/><circle cx="210" cy="262" r="30"/><circle cx="1250" cy="250" r="34"/></g><path class="gnd" d="M0 292C200 254 380 262 560 282C720 300 860 252 1040 262C1200 272 1320 292 1440 282V340H0Z"/><g transform="translate(200 -40)"><path class="field" d="M690 294h20l34 86h-88z"/><rect class="wall" x="650" y="228" width="100" height="66" rx="8"/><rect class="wood" x="689" y="254" width="22" height="40" rx="11"/><circle fill="url(#sky-band-g)" cx="668" cy="252" r="18"/><circle fill="url(#sky-band-g)" cx="732" cy="252" r="18"/><circle class="lit" cx="668" cy="252" r="7"/><circle class="lit" cx="732" cy="252" r="7"/><path class="roof" d="M624 236C624 182 664 154 700 154C736 154 776 182 776 236C748 246 652 246 624 236Z"/><g class="spot"><circle cx="674" cy="186" r="9"/><circle cx="712" cy="173" r="7"/><circle cx="745" cy="206" r="8"/><circle cx="652" cy="218" r="6"/><circle cx="702" cy="212" r="5"/></g></g><g transform="translate(-560 -6)"><rect class="wall" x="959" y="262" width="13" height="18" rx="4"/><path class="roof" d="M944 266C944 250 954 242 966 242C978 242 988 250 988 266Z"/><g class="spot"><circle cx="958" cy="253" r="3"/><circle cx="974" cy="250" r="2.5"/></g></g></svg></div>
+<main id="main" class="home">
+<section class="hero panel" aria-labelledby="home-title">
+<h1 id="home-title"><svg width="48" height="48" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="rotate(-24 12 12)"><path class="leaf-stem" d="M12 20v3"/><path class="leaf-body" d="M12 2.5C17 5.5 19.5 9.5 19.5 13.5 19.5 17.6 16.2 20.5 12 20.5S4.5 17.6 4.5 13.5C4.5 9.5 7 5.5 12 2.5Z"/><path class="leaf-vein" d="M12 19V7.5M12 15.8l-3-2.4M12 15.8l3-2.4"/></g></svg><span>Classic Maple Wiki</span></h1>
+<p class="tagline">The player-built guide to MapleStory Classic World. Every number is tagged with the build it was seen in.</p>
+<form class="search" role="search" action="#">
+<label class="vh" for="q-hero">Search the wiki</label>
+<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+<input id="q-hero" type="search" placeholder="Search the wiki" autocomplete="off">
+</form>
+<div class="build-line"><span class="chip">Build</span><p>Tracking Founder's Access. Grand Launch is <time datetime="2026-10-21">2026-10-21</time>.</p></div>
+</section>
+
+<section class="block" aria-labelledby="tasks-title">
+<div class="block__head"><h2 id="tasks-title">What are you looking for?</h2></div>
+<ul class="tasks">
+<li><a class="task" href="#"><span class="task__icon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6-5.6-6-10.2a6 6 0 0 1 12 0C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.8" r="2.2"/></svg></span><span><span class="task__title">Where to train</span><span class="task__desc">Routes by level range and party size.</span></span></a></li>
+<li><a class="task" href="#"><span class="task__icon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 19h5v-5h5V9h5"/><path d="M15 5h4v4"/></svg></span><span><span class="task__title">Job advancement</span><span class="task__desc">The job path for each class.</span></span></a></li>
+<li><a class="task" href="#"><span class="task__icon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 4h10a3 3 0 0 1 3 3v13H9a3 3 0 0 1-3-3z"/><path d="M12.5 8.5v4.5M12.5 16v.01"/></svg></span><span><span class="task__title">Quests</span><span class="task__desc">Steps, requirements, and rewards.</span></span></a></li>
+<li><a class="task" href="#"><span class="task__icon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 11a5.5 5.5 0 0 1 11 0v3a5.5 5.5 0 0 1-11 0z"/><path d="M7.5 7L5 3.5M16.5 7L19 3.5M10 12.5v.01M14 12.5v.01"/></svg></span><span><span class="task__title">Monsters</span><span class="task__desc">Stats, weaknesses, and where they live.</span></span></a></li>
+<li><a class="task" href="#"><span class="task__icon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 6.5l4.5 4.5"/><path d="M11.5 8l-7 7a1.6 1.6 0 0 0 2.3 2.3l7-7"/><path d="M12 5l3-2 6 6-2 3z"/></svg></span><span><span class="task__title">Crafting</span><span class="task__desc">Recipes and what they need.</span></span></a></li>
+<li><a class="task" href="#"><span class="task__icon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10a7.5 7.5 0 0 1 13.2-3.6L20 8.5M20 4v4.5h-4.5"/><path d="M19.5 14a7.5 7.5 0 0 1-13.2 3.6L4 15.5M4 20v-4.5h4.5"/></svg></span><span><span class="task__title">What changed</span><span class="task__desc">Differences between builds.</span></span></a></li>
+</ul>
+</section>
+
+<section class="block" aria-labelledby="shelf-title">
+<div class="block__head"><h2 id="shelf-title">Places</h2><p>In the order a new player meets them.</p></div>
+<ul class="shelf">
+<li><a class="place place--morning" href="#"><svg class="scene" width="320" height="140" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="sky-mi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky-a"/><stop offset="1" class="sky-b"/></linearGradient><radialGradient id="sky-mi-g"><stop offset="0" class="glow-a"/><stop offset="1" class="glow-b"/></radialGradient></defs><rect width="320" height="140" fill="url(#sky-mi)"/><g class="stars"><circle cx="40" cy="20" r="1.1"/><circle cx="110" cy="36" r="0.9"/><circle cx="200" cy="16" r="1"/><circle cx="290" cy="40" r="1.1"/><circle cx="250" cy="60" r="0.8"/></g><circle fill="url(#sky-mi-g)" cx="236" cy="34" r="34"/><circle class="lit" cx="236" cy="34" r="12"/><path class="far" d="M150 98C180 80 230 74 320 86V100H150Z"/><rect class="sea" x="0" y="96" width="320" height="44"/><path class="gnd" d="M180 104C210 80 262 76 320 90V140H196C190 124 184 112 180 104Z"/><g class="wood"><rect x="122" y="104" width="70" height="5" rx="1"/><rect x="128" y="108" width="3" height="13"/><rect x="150" y="108" width="3" height="13"/><rect x="172" y="108" width="3" height="13"/><path d="M58 108H108L100 119H66Z"/><rect x="82" y="66" width="2.5" height="43"/></g><path class="wall" d="M86 68L86 104L112 104Z"/><g class="cloud"><ellipse cx="70" cy="40" rx="26" ry="7"/><ellipse cx="84" cy="34" rx="14" ry="7"/></g></svg><span class="place__label"><span class="place__name">Maple Island</span><span class="place__sub">First light.</span></span></a></li>
+<li><a class="place place--midday" href="#"><svg class="scene" width="320" height="140" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="sky-he" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky-a"/><stop offset="1" class="sky-b"/></linearGradient><radialGradient id="sky-he-g"><stop offset="0" class="glow-a"/><stop offset="1" class="glow-b"/></radialGradient></defs><rect width="320" height="140" fill="url(#sky-he)"/><g class="stars"><circle cx="40" cy="20" r="1.1"/><circle cx="110" cy="36" r="0.9"/><circle cx="200" cy="16" r="1"/><circle cx="290" cy="40" r="1.1"/><circle cx="250" cy="60" r="0.8"/></g><circle fill="url(#sky-he-g)" cx="246" cy="32" r="34"/><circle class="lit" cx="246" cy="32" r="12"/><g class="cloud"><ellipse cx="80" cy="34" rx="28" ry="7"/><ellipse cx="94" cy="28" rx="14" ry="7"/></g><path class="far" d="M0 96C60 76 120 82 170 92C220 100 270 78 320 86V140H0Z"/><path class="gnd" d="M0 116C70 100 140 106 200 114C250 120 290 108 320 112V140H0Z"/><rect class="wall" x="130" y="86" width="44" height="30" rx="4"/><rect class="wood" x="146" y="99" width="11" height="17" rx="5.5"/><circle class="lit" cx="138" cy="99" r="3"/><circle class="lit" cx="166" cy="99" r="3"/><path class="roof" d="M118 90C118 66 136 56 152 56C168 56 186 66 186 90C174 95 130 95 118 90Z"/><g class="spot"><circle cx="140" cy="70" r="4"/><circle cx="160" cy="65" r="3"/><circle cx="174" cy="80" r="3.5"/><circle cx="128" cy="83" r="2.5"/></g></svg><span class="place__label"><span class="place__name">Henesys</span><span class="place__sub">A slow afternoon.</span></span></a></li>
+<li><a class="place place--dawn" href="#"><svg class="scene" width="320" height="140" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="sky-el" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky-a"/><stop offset="1" class="sky-b"/></linearGradient><radialGradient id="sky-el-g"><stop offset="0" class="glow-a"/><stop offset="1" class="glow-b"/></radialGradient></defs><rect width="320" height="140" fill="url(#sky-el)"/><g class="stars"><circle cx="40" cy="20" r="1.1"/><circle cx="110" cy="36" r="0.9"/><circle cx="200" cy="16" r="1"/><circle cx="290" cy="40" r="1.1"/><circle cx="250" cy="60" r="0.8"/></g><circle fill="url(#sky-el-g)" cx="160" cy="64" r="70"/><g class="wood"><rect x="62" y="10" width="20" height="134" rx="7"/><rect x="128" y="10" width="14" height="134" rx="6"/><rect x="200" y="10" width="22" height="134" rx="8"/><rect x="258" y="10" width="16" height="134" rx="6"/></g><g class="canopy"><circle cx="72" cy="12" r="38"/><circle cx="34" cy="2" r="30"/><circle cx="135" cy="6" r="34"/><circle cx="211" cy="14" r="40"/><circle cx="170" cy="-4" r="30"/><circle cx="266" cy="10" r="36"/><circle cx="306" cy="0" r="30"/></g><path class="gnd" d="M0 122C80 112 200 116 320 120V140H0Z"/><path class="rope" d="M100 22V54M172 26V68M238 20V50"/><circle fill="url(#sky-el-g)" cx="100" cy="62" r="20"/><circle fill="url(#sky-el-g)" cx="172" cy="76" r="20"/><circle fill="url(#sky-el-g)" cx="238" cy="58" r="20"/><g class="lantern"><rect x="94" y="54" width="12" height="15" rx="4"/><rect x="166" y="68" width="12" height="15" rx="4"/><rect x="232" y="50" width="12" height="15" rx="4"/></g></svg><span class="place__label"><span class="place__name">Ellinia</span><span class="place__sub">At dawn.</span></span></a></li>
+<li><a class="place place--dusk" href="#"><svg class="scene" width="320" height="140" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="sky-pe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky-a"/><stop offset="1" class="sky-b"/></linearGradient><radialGradient id="sky-pe-g"><stop offset="0" class="glow-a"/><stop offset="1" class="glow-b"/></radialGradient></defs><rect width="320" height="140" fill="url(#sky-pe)"/><g class="stars"><circle cx="40" cy="20" r="1.1"/><circle cx="110" cy="36" r="0.9"/><circle cx="200" cy="16" r="1"/><circle cx="290" cy="40" r="1.1"/><circle cx="250" cy="60" r="0.8"/></g><circle fill="url(#sky-pe-g)" cx="164" cy="92" r="60"/><circle class="lit" cx="164" cy="92" r="20"/><path class="far" d="M86 104L98 86H176L188 104Z"/><path class="rock" d="M0 98H44L56 72H112L126 98H140V140H0Z"/><path class="rock" d="M184 102L200 58H262L278 102H320V140H184Z"/><path class="gnd" d="M0 118C100 110 220 114 320 112V140H0Z"/><g class="wood"><rect x="146" y="72" width="16" height="48" rx="2"/><rect x="136" y="74" width="36" height="6" rx="1"/><rect x="142" y="90" width="24" height="4" rx="1"/></g><g class="deep"><rect x="150" y="83" width="8" height="4"/><rect x="150" y="100" width="8" height="4"/></g></svg><span class="place__label"><span class="place__name">Perion</span><span class="place__sub">Dusk on the rocks.</span></span></a></li>
+<li><a class="place place--night" href="#"><svg class="scene" width="320" height="140" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="sky-ke" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky-a"/><stop offset="1" class="sky-b"/></linearGradient><radialGradient id="sky-ke-g"><stop offset="0" class="glow-a"/><stop offset="1" class="glow-b"/></radialGradient></defs><rect width="320" height="140" fill="url(#sky-ke)"/><g class="stars"><circle cx="40" cy="20" r="1.1"/><circle cx="110" cy="36" r="0.9"/><circle cx="200" cy="16" r="1"/><circle cx="290" cy="40" r="1.1"/><circle cx="250" cy="60" r="0.8"/></g><circle fill="url(#sky-ke-g)" cx="244" cy="30" r="28"/><circle class="lit" cx="244" cy="30" r="9"/><path class="far" d="M0 96H30V76H64V90H96V64H124V84H170V70H210V88H250V62H286V82H320V140H0Z"/><path class="deep" d="M0 112H40V94L58 84L76 94V112H104V90H150V106H176V80H226V108H262V92L280 82L298 92V112H320V140H0Z"/><g class="deep"><rect x="186" y="44" width="26" height="22" rx="3"/><path d="M182 46L199 34L216 46Z"/><rect x="189" y="64" width="3" height="18"/><rect x="206" y="64" width="3" height="18"/></g><g class="lit"><rect x="52" y="98" width="5" height="6"/><rect x="62" y="98" width="5" height="6"/><rect x="116" y="96" width="5" height="6"/><rect x="186" y="88" width="5" height="6"/><rect x="200" y="88" width="5" height="6"/><rect x="186" y="98" width="5" height="6"/><rect x="276" y="98" width="5" height="6"/><rect x="136" y="114" width="5" height="6"/></g><rect class="gnd" x="0" y="124" width="320" height="16"/></svg><span class="place__label"><span class="place__name">Kerning City</span><span class="place__sub">After dark.</span></span></a></li>
+<li><a class="place place--cave" href="#"><svg class="scene" width="320" height="140" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="sky-sl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="sky-a"/><stop offset="1" class="sky-b"/></linearGradient><radialGradient id="sky-sl-g"><stop offset="0" class="glow-a"/><stop offset="1" class="glow-b"/></radialGradient></defs><rect width="320" height="140" fill="url(#sky-sl)"/><g class="stars"><circle cx="40" cy="20" r="1.1"/><circle cx="110" cy="36" r="0.9"/><circle cx="200" cy="16" r="1"/><circle cx="290" cy="40" r="1.1"/><circle cx="250" cy="60" r="0.8"/></g><path class="root" stroke-width="7" d="M40-4C54 26 30 46 48 78M110-4C100 20 124 34 112 58M214-4C226 24 204 40 222 70M284-4C272 18 296 36 280 54"/><path class="root" stroke-width="3" d="M48 40C64 46 70 58 84 60M222 36C206 44 200 54 188 56"/><circle fill="url(#sky-sl-g)" cx="160" cy="72" r="46"/><rect class="wood" x="158" y="80" width="4" height="34"/><rect class="lit" x="150" y="62" width="20" height="19" rx="5"/><path class="deep" d="M0 140V112C40 100 70 118 110 106C150 96 190 116 230 104C270 96 300 110 320 104V140Z"/><g class="mist"><ellipse cx="90" cy="106" rx="80" ry="10"/><ellipse cx="240" cy="114" rx="90" ry="12"/></g></svg><span class="place__label"><span class="place__name">Sleepywood</span><span class="place__sub">Below the roots.</span></span></a></li>
+</ul>
+</section>
+
+<section class="block" id="how-to-read" aria-labelledby="read-title">
+<div class="block__head"><h2 id="read-title">How to read this wiki</h2><p>Every value carries a status and the build it was seen in.</p></div>
+<div class="legend">
+<section class="window" aria-labelledby="w-status">
+<div class="window__bar"><h3 class="window__title" id="w-status">Status badges</h3></div>
+<div class="window__body">
+<ul class="badge-list">
+<li><span class="badge badge--official"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8.5l3 3 6-7"/></svg>Official</span><p>Taken from official patch notes or posts.</p></li>
+<li><span class="badge badge--ingame"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M1.5 8S4 3.5 8 3.5 14.5 8 14.5 8 12 12.5 8 12.5 1.5 8 1.5 8z"/><circle cx="8" cy="8" r="2"/></svg>Confirmed in game</span><p>Seen in the live game by a player, with a screenshot.</p></li>
+<li><span class="badge badge--unverified"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.8 6a2.2 2.2 0 1 1 3.2 2c-.7.4-1 .9-1 1.6M8 12.3v.01"/></svg>Unverified</span><p>Reported but not yet confirmed. Treat it as a lead, not a fact.</p></li>
+</ul>
+</div>
+</section>
+<section class="window" aria-labelledby="w-builds">
+<div class="window__bar"><h3 class="window__title" id="w-builds">Builds</h3><span class="chip">3 tracked</span></div>
+<div class="window__body">
+<div class="table-wrap">
+<table class="builds">
+<thead><tr><th scope="col">Build</th><th scope="col">Date</th></tr></thead>
+<tbody>
+<tr><th scope="row">Closed Online Test 2<span class="note">Pre-launch test. Values may differ.</span></th><td><time datetime="2026-08-04">2026-08-04</time></td></tr>
+<tr><th scope="row">Founder's Access<span class="note">Tracking now.</span></th><td><time datetime="2026-10-06">2026-10-06</time></td></tr>
+<tr><th scope="row">Grand Launch</th><td><time datetime="2026-10-21">2026-10-21</time></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</div>
+<div class="on-purpose panel">
+<p>Most pages are marked unverified right now. That is on purpose.</p>
+<a class="btn" href="https://github.com/classicmaple-wiki/classicmaple-wiki">Add what you know</a>
+</div>
+</section>
+
+<nav class="site-index panel" id="site-nav" aria-labelledby="index-title">
+<h2 id="index-title">All sections</h2>
+<div class="site-index__groups">
+<div class="nav-group"><h3>Start here</h3><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="index.html#how-to-read">How to read this wiki</a></li></ul></div>
+<div class="nav-group"><h3>Classes</h3><ul><li><a href="thief.html">Thief</a></li></ul></div>
+<div class="nav-group"><h3>Leveling</h3><ul><li><a href="#">Where to train</a></li><li><a href="#">Level 1 to 30 party route</a></li></ul></div>
+<div class="nav-group"><h3>Economy and systems</h3><ul><li><a href="#">Crafting</a></li><li><a href="#">What changed</a></li></ul></div>
+<div class="nav-group"><h3>Database</h3><ul><li><a href="#">Monsters</a></li><li><a href="crimson-balrog.html">Crimson Balrog</a></li></ul></div>
+</div>
+</nav>
+</main>
+<footer class="site-footer">
+<div class="site-footer__inner">
+<p>Unofficial fan site. Not affiliated with or endorsed by Nexon. MapleStory and related names are trademarks of their respective owners.</p>
+<p>Open source. <a href="https://github.com/classicmaple-wiki/classicmaple-wiki">Read and edit it on GitHub</a>.</p>
+<p class="credit">Designed and built by <a href="https://sirux.dev">Sirux</a></p>
+</div>
+</footer>
+<script>(function(){var d=document.documentElement,b=document.querySelector('.theme-toggle');function s(){b.setAttribute('aria-pressed',d.dataset.theme==='dark'?'true':'false')}s();b.addEventListener('click',function(){d.dataset.theme=d.dataset.theme==='dark'?'light':'dark';s()})})()</script>
+</body>
+</html>

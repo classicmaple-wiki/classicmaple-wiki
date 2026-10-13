@@ -6,7 +6,7 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 ## Now
 
-- **P2** Design research, asset inventory, original identity, two mockup directions, then implementation of the chosen one. Spec: 0002, not yet written. Status: in progress. Research done: `docs/research/ui.md` and `docs/research/assets.md`, awaiting owner review. Next: spec 0002. Owner: agent.
+- **P2** Design research, asset inventory, original identity, two mockup directions, then implementation of the chosen one. Spec: 0002, not yet written. Status: blocked on owner. Spec 0002 drafted, two mockup directions on a pull request, waiting for the pick. Owner: agent.
 - **P1** GitHub repository, labels, branch protection, then Vercel hosting with previews and the real domain. Spec: [0001](specs/0001-github-and-vercel.md). Status: done 2026-10-13. Live at https://classicmaple.wiki with previews on every pull request. Owner: agent, with owner for logins and DNS.
 
 ## Next
