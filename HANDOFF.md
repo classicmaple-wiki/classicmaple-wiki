@@ -4,35 +4,33 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-Phase 1 is blocked on the domain only. The site is live at https://classicmaple-wiki.vercel.app, deployed by Vercel from GitHub. robots.txt and the sitemap already show https://classicmaple.wiki. Both domains are attached in Vercel with `www` redirecting to the apex. The .wiki registry has no record of `classicmaple.wiki`, so DNS cannot resolve yet.
+Phase 1 is done. The site is live at https://classicmaple.wiki, deployed by Vercel from GitHub on every push to `main`. Every pull request gets a preview link. `main` is protected by a ruleset: pull request required, `validate-and-build` check required. Vercel hosts the DNS for the domain. `www` redirects to the apex.
 
 ## Just done
 
-- Owner merged pull request 1 and installed the Vercel GitHub app on the organization.
-- Ran `vercel git connect`. Connected.
-- First production deployment from the command line. Home page returns 200.
-- Checked DNS from two resolvers and the registry. Nothing resolves. RDAP returns 404 for the domain.
+- Verified over https: home page 200, `www` 308 to the apex, robots.txt and the sitemap show the real domain, monsters page 200.
+- Confirmed a Vercel preview and bot comment on pull request 2.
+- Closed spec 0001. Marked P1 done.
 
 ## In progress
 
-Spec `specs/0001-github-and-vercel.md`. Remaining: domain resolves over https, test pull request gets a preview, `CONTRIBUTING.md` promises the preview link.
+Nothing. Phase 2 has not started and has no spec.
 
 ## Next step
 
-Once the owner confirms the domain is registered and delegated, rerun the DNS check in Verify. Then open a test pull request, confirm the Vercel preview comment, add the preview promise to `CONTRIBUTING.md`, and close spec 0001.
+Owner review of Phase 1. Then move P2 into Now and write spec 0002 for design research and the design system. The spec comes first and waits for approval.
 
 ## Blockers and questions for the owner
 
-- Q6: where was `classicmaple.wiki` bought, and did the purchase complete?
-- The ruleset blocks direct pushes to `main`, so every agent change needs a pull request the owner merges. Consider a bypass for the repository admin role.
-- Set a Vercel spend limit before launch day.
+- Q7: add a ruleset bypass for the repository Admin role in GitHub settings. The agent's harness refused to change the ruleset itself.
+- Set a Vercel spend limit before 2026-10-21.
+- Q2 and Q3 in `BACKLOG.md` are still open for Phase 3.
 
 ## Verify
 
 ```bash
 npm run validate
 npm run build
-dig +short NS classicmaple.wiki @1.1.1.1
 curl -sI https://classicmaple.wiki/ | head -1
-vercel domains inspect classicmaple.wiki
+curl -s https://classicmaple.wiki/robots.txt
 ```
