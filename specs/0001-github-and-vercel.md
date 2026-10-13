@@ -27,7 +27,7 @@ Non-goals:
 - [x] `main` has the first commit pushed. Labels `data`, `guide`, `patch`, and `ai-drafted` exist.
 - [x] `main` is protected: pull requests required, the CI check must pass.
 - [x] `docs/decisions/0002-hosting.md` records the move to Vercel. `.github/workflows/deploy.yml` and the Cloudflare steps in `README.md` are removed.
-- [ ] The Vercel project is linked through the Git integration with framework Astro, build `npm run build`, output `dist`.
+- [x] The Vercel project is linked through the Git integration with framework Astro, build `npm run build`, output `dist`.
 - [ ] A test pull request gets a preview deployment, and `CONTRIBUTING.md` promises the preview link.
 - [ ] The production URL loads over https. `robots.txt` and the sitemap show the real domain. `www` redirects to the apex.
 - [ ] The owner has the exact DNS records and a reminder to set a Vercel spend limit before launch day.
@@ -49,13 +49,16 @@ Removing `deploy.yml` is a file deletion and needs owner approval before it happ
 - [x] Create the four labels.
 - [x] Protect `main`. Ruleset: pull request required, `validate-and-build` check required, no review count. Add a review count to the same ruleset when a second reviewer or CodeRabbit arrives.
 - [x] Write decision record 0002. Remove the Cloudflare workflow and README steps.
-- [ ] Connect Vercel. Project `classicmaple-wiki` exists on team `hisnameispums-projects` with `vercel.json` pinning the settings. Git connection blocked until the owner installs the Vercel GitHub app on the `classicmaple-wiki` organization. Then confirm a preview on a test pull request and update `CONTRIBUTING.md`.
+- [x] Connect Vercel. Done 2026-10-13 after the owner installed the GitHub app. First production deployment made from the command line and verified at classicmaple-wiki.vercel.app.
+- [ ] Confirm a preview on a test pull request and update `CONTRIBUTING.md`.
 - [x] Add the domain and the `www` redirect. DNS records handed to the owner on 2026-10-13: `A @ 76.76.21.21` and `CNAME www cname.vercel-dns.com`.
 - [ ] Verify production, `robots.txt`, and the sitemap.
 - [ ] Run `npm run validate` and `npm run build`.
 - [ ] Update `BACKLOG.md` and rewrite `HANDOFF.md`.
 
 ## Open questions
+
+- Domain registration. On 2026-10-13 the .wiki registry RDAP returned 404 for `classicmaple.wiki` and published no nameservers. The owner reports having set DNS records. Where was the domain bought, and did the purchase complete?
 
 - GitHub address. Answered: the owner created `classicmaple-wiki/classicmaple-wiki` under an organization, with `sirasitxp` as admin.
 - Branch protection. Answered: CI check only for now. Must be easy to add a review rule later.
