@@ -46,10 +46,9 @@ Each data collection is published as JSON at `/data/<collection>.json`, for exam
 ## First-time setup (maintainers)
 
 1. **Repository address.** If the repository is not `classicmaple-wiki/classicmaple-wiki`, update `repositoryUrl` in `site.config.mjs` and the clone command in `CONTRIBUTING.md`.
-2. **Labels.** Create the labels `data`, `guide`, and `patch` so the issue forms can apply them.
-3. **Cloudflare Pages.** Create a Pages project named `classicmaple` using Direct Upload, then attach the `classicmaple.wiki` domain to it.
-4. **Secrets.** Add `CLOUDFLARE_API_TOKEN` (with the Cloudflare Pages Edit permission) and `CLOUDFLARE_ACCOUNT_ID` as repository secrets. Every push to `main` then builds and deploys.
-5. **Branch protection.** Require the CI check and one review on `main`.
+2. **Labels.** Create the labels `data`, `guide`, `patch`, and `ai-drafted` so the issue forms can apply them.
+3. **Hosting.** The site is deployed by Vercel through its Git integration. Framework Astro, build `npm run build`, output `dist`. Every push to `main` goes to production. Every pull request gets a preview. See `docs/decisions/0002-hosting.md`.
+4. **Branch protection.** A ruleset on `main` requires a pull request and the passing `validate-and-build` check.
 
 ## License
 

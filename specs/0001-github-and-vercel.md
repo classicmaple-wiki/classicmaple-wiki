@@ -25,8 +25,8 @@ Non-goals:
 - [x] `gh auth status` succeeds for the owner's account.
 - [x] A public repository exists at the owner-chosen address. `repositoryUrl` in `site.config.mjs` and the clone command in `CONTRIBUTING.md` match it.
 - [x] `main` has the first commit pushed. Labels `data`, `guide`, `patch`, and `ai-drafted` exist.
-- [ ] `main` is protected: pull requests required, the CI check must pass.
-- [ ] `docs/decisions/0002-hosting.md` records the move to Vercel. `.github/workflows/deploy.yml` and the Cloudflare steps in `README.md` are removed.
+- [x] `main` is protected: pull requests required, the CI check must pass.
+- [x] `docs/decisions/0002-hosting.md` records the move to Vercel. `.github/workflows/deploy.yml` and the Cloudflare steps in `README.md` are removed.
 - [ ] The Vercel project is linked through the Git integration with framework Astro, build `npm run build`, output `dist`.
 - [ ] A test pull request gets a preview deployment, and `CONTRIBUTING.md` promises the preview link.
 - [ ] The production URL loads over https. `robots.txt` and the sitemap show the real domain. `www` redirects to the apex.
@@ -47,10 +47,10 @@ Removing `deploy.yml` is a file deletion and needs owner approval before it happ
 - [x] Ask the owner for the GitHub username and repository name.
 - [x] Owner created the repository by hand. Addresses updated, first commits pushed.
 - [x] Create the four labels.
-- [ ] Protect `main`.
-- [ ] Write decision record 0002. Remove the Cloudflare workflow and README steps.
-- [ ] Connect Vercel. Confirm a preview on a test pull request. Update `CONTRIBUTING.md`.
-- [ ] Add the domain and the `www` redirect. Hand the owner the DNS records.
+- [x] Protect `main`. Ruleset: pull request required, `validate-and-build` check required, no review count. Add a review count to the same ruleset when a second reviewer or CodeRabbit arrives.
+- [x] Write decision record 0002. Remove the Cloudflare workflow and README steps.
+- [ ] Connect Vercel. Project `classicmaple-wiki` exists on team `hisnameispums-projects` with `vercel.json` pinning the settings. Git connection blocked until the owner installs the Vercel GitHub app on the `classicmaple-wiki` organization. Then confirm a preview on a test pull request and update `CONTRIBUTING.md`.
+- [x] Add the domain and the `www` redirect. DNS records handed to the owner on 2026-10-13: `A @ 76.76.21.21` and `CNAME www cname.vercel-dns.com`.
 - [ ] Verify production, `robots.txt`, and the sitemap.
 - [ ] Run `npm run validate` and `npm run build`.
 - [ ] Update `BACKLOG.md` and rewrite `HANDOFF.md`.
@@ -58,4 +58,4 @@ Removing `deploy.yml` is a file deletion and needs owner approval before it happ
 ## Open questions
 
 - GitHub address. Answered: the owner created `classicmaple-wiki/classicmaple-wiki` under an organization, with `sirasitxp` as admin.
-- Should branch protection also require one review, as the current README says, or only the CI check?
+- Branch protection. Answered: CI check only for now. Must be easy to add a review rule later.
