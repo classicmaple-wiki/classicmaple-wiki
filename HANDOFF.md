@@ -4,33 +4,33 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-Phase 1 is done. The site is live at https://classicmaple.wiki, deployed by Vercel from GitHub on every push to `main`. Every pull request gets a preview link. `main` is protected by a ruleset: pull request required, `validate-and-build` check required. Vercel hosts the DNS for the domain. `www` redirects to the apex.
+Phase 1 is done. The site is live at https://classicmaple.wiki. Phase 2 (item P2) is in progress. The two research documents are written and waiting for owner review. No spec 0002 yet. No design code yet.
 
 ## Just done
 
-- Verified over https: home page 200, `www` 308 to the apex, robots.txt and the sitemap show the real domain, monsters page 200.
-- Confirmed a Vercel preview and bot comment on pull request 2.
-- Closed spec 0001. Marked P1 done.
+- `docs/research/ui.md`: eleven reference sites, the six Slow Snails principles applied to a wiki page, and the library of places developed into rules.
+- `docs/research/assets.md`: a 53 row asset inventory, verified Nexon quotes on fan sites, images, and money, enforcement history, and ten owner decisions with defaults.
+- `docs/decisions/0003-original-art-only.md`: original art only, kept minimal.
+- The research ran as a multi agent workflow. It hit a usage limit before its writers ran, so the documents were written from the saved findings. Quotes for the "other fan wikis" topic were never verified and are not shown.
 
 ## In progress
 
-Phase 2, item P2. The owner's brief is recorded in the Phase 2 questions sent 2026-10-13. Order of work: `docs/research/ui.md`, `docs/research/assets.md`, stop for review, then spec 0002, then two mockup directions, then stop for the owner to pick one.
+Nothing open in code.
 
 ## Next step
 
-Wait for the owner's answers to the five Phase 2 questions, then write the two research documents.
+Owner reviews both research documents and answers Q8 and Q9 in `BACKLOG.md`. Then write `specs/0002-design-system.md` from `specs/_template.md`. It must cover tokens, type, the window frame, the scene band and mood system, the schema fields for scene and mood (needs owner approval), and two mockup directions of home, Thief, and a monster page.
 
 ## Blockers and questions for the owner
 
-- Q7: add a ruleset bypass for the repository Admin role in GitHub settings. The agent's harness refused to change the ruleset itself.
+- Q8: the ten asset decisions in `docs/research/assets.md`.
+- Q9: moment vocabulary and launch hubs in `docs/research/ui.md`.
+- Donations are unclear under Nexon policy. Flagged before Phase 3.
 - Set a Vercel spend limit before 2026-10-21.
-- Q2 and Q3 in `BACKLOG.md` are still open for Phase 3.
 
 ## Verify
 
 ```bash
 npm run validate
 npm run build
-curl -sI https://classicmaple.wiki/ | head -1
-curl -s https://classicmaple.wiki/robots.txt
 ```

@@ -6,7 +6,7 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 ## Now
 
-- **P2** Design research, asset inventory, original identity, two mockup directions, then implementation of the chosen one. Spec: 0002, not yet written. Status: in progress, questions sent to the owner 2026-10-13. Owner: agent.
+- **P2** Design research, asset inventory, original identity, two mockup directions, then implementation of the chosen one. Spec: 0002, not yet written. Status: in progress. Research done: `docs/research/ui.md` and `docs/research/assets.md`, awaiting owner review. Next: spec 0002. Owner: agent.
 - **P1** GitHub repository, labels, branch protection, then Vercel hosting with previews and the real domain. Spec: [0001](specs/0001-github-and-vercel.md). Status: done 2026-10-13. Live at https://classicmaple.wiki with previews on every pull request. Owner: agent, with owner for logins and DNS.
 
 ## Next
@@ -30,3 +30,5 @@ Answers unblock the items above. Record the answer in the related spec.
 - **Q7** Add a ruleset bypass for the repository Admin role so the owner's machine can push documentation commits to `main`. Owner does this in GitHub settings.
 - **Q2** Donation platforms for `/support`. Blocks P3.
 - **Q3** Credit the owner by name, or only as Sirux. Blocks P3.
+- **Q8** The ten asset decisions at the end of `docs/research/assets.md`. Blocks spec 0002.
+- **Q9** Moment vocabulary and launch hubs at the end of `docs/research/ui.md`. Blocks spec 0002.
