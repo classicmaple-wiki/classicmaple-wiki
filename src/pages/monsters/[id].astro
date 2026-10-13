@@ -1,0 +1,64 @@
+---
+/*
+   One page per monster, generated from data/monsters/. The edit link
+   points at the YAML file, so fixing a number is one click away.
+*/
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getCollection } from 'astro:content';
+import { editBaseUrl } from '../../../site.config.mjs';
+import ChangeLog from '../../components/ChangeLog.astro';
+import VerifiedBadge from '../../components/VerifiedBadge.astro';
+import { formatList, formatStatistic } from '../../lib/data';
+
+export async function getStaticPaths() {
+	const monsterEntries = await getCollection('monsters');
+	return monsterEntries.map((monsterEntry) => ({
+		params: { id: monsterEntry.data.id },
+		props: { monster: monsterEntry.data },
+	}));
+}
+
+const { monster } = Astro.props;
+
+const mapsWithMonster = (await getCollection('maps'))
+	.map((mapEntry) => mapEntry.data)
+	.filter((map) => map.monsters.includes(monster.id));
+---
+
+<StarlightPage
+	frontmatter={{
+		title: monster.name,
+		description: `${monster.name} in MapleStory Classic World: level, HP, EXP, weaknesses, and changes between builds.`,
+		editUrl: `${editBaseUrl}data/monsters/${monster.id}.yaml`,
+	}}
+	headings={[
+		{ depth: 2, slug: 'stats', text: 'Stats' },
+		{ depth: 2, slug: 'history', text: 'History' },
+	]}
+>
+	<p><VerifiedBadge verified={monster.verified} /></p>
+
+	{monster.differs_from_original && <p>{monster.differs_from_original}</p>}
+
+	<h2 id="stats">Stats</h2>
+	<table>
+		<tbody>
+			<tr><th scope="row">Level</th><td>{formatStatistic(monster.level)}</td></tr>
+			<tr><th scope="row">HP</th><td>{formatStatistic(monster.hp)}</td></tr>
+			<tr><th scope="row">MP</th><td>{formatStatistic(monster.mp)}</td></tr>
+			<tr><th scope="row">EXP</th><td>{formatStatistic(monster.exp)}</td></tr>
+			<tr><th scope="row">Weak to</th><td>{formatList(monster.weak_to)}</td></tr>
+			<tr><th scope="row">Strong to</th><td>{formatList(monster.strong_to)}</td></tr>
+			<tr><th scope="row">Immune to</th><td>{formatList(monster.immune_to)}</td></tr>
+			<tr>
+				<th scope="row">Found in</th>
+				<td>{formatList(mapsWithMonster.map((map) => map.name))}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	{monster.notes && <p>{monster.notes}</p>}
+
+	<h2 id="history">History</h2>
+	<ChangeLog collectionName="monsters" entityIdentifier={monster.id} />
+</StarlightPage>

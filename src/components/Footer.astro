@@ -1,0 +1,23 @@
+---
+/*
+   Wraps the default Starlight footer and adds the fan site disclaimer, so
+   it appears on every page without anyone having to remember it.
+*/
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<Default><slot /></Default>
+
+<p class="disclaimer">
+	Unofficial fan site. Not affiliated with or endorsed by Nexon. MapleStory and related names are trademarks of their
+	respective owners.
+</p>
+
+<style>
+	.disclaimer {
+		margin-top: 2rem;
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+		text-align: center;
+	}
+</style>

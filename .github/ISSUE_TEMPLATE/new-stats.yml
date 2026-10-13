@@ -1,0 +1,51 @@
+name: New item or monster stats
+description: Add an item, monster, or map that is not on the site yet.
+title: "data: "
+labels: [data]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is it?
+      options:
+        - Monster
+        - Item
+        - Map
+        - Skill
+        - Crafting recipe or profession detail
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name, exactly as shown in game
+    validations:
+      required: true
+  - type: textarea
+    id: stats
+    attributes:
+      label: Stats
+      description: Only what you can see. Leave out anything you are not sure of.
+      placeholder: |
+        Level: 
+        HP: 
+        EXP: 
+        Weak to: 
+    validations:
+      required: true
+  - type: dropdown
+    id: build
+    attributes:
+      label: Build you saw it in
+      options:
+        - Grand Launch (launch-2026-10-21)
+        - Founder's Access (founders-2026-10-06)
+        - Closed Online Test 2 (cot2)
+        - Newer build, not listed
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Screenshot or source
+      description: Drag in a screenshot. Without one, the entry goes in as unverified.

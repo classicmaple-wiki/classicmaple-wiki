@@ -1,0 +1,38 @@
+---
+/*
+   Every crafting profession in one table, read straight from
+   data/professions/.
+*/
+import { getCollection } from 'astro:content';
+import { formatStatistic } from '../lib/data';
+import VerifiedBadge from './VerifiedBadge.astro';
+
+const professions = (await getCollection('professions'))
+	.map((professionEntry) => professionEntry.data)
+	.sort((first, second) => first.name.localeCompare(second.name));
+---
+
+<table>
+	<thead>
+		<tr>
+			<th>Profession</th>
+			<th>Unlocks at level</th>
+			<th>What it makes</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		{
+			professions.map((profession) => (
+				<tr>
+					<td>{profession.name}</td>
+					<td>{formatStatistic(profession.required_level)}</td>
+					<td>{profession.summary ?? 'Needs details'}</td>
+					<td>
+						<VerifiedBadge verified={profession.verified} />
+					</td>
+				</tr>
+			))
+		}
+	</tbody>
+</table>

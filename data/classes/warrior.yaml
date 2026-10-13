@@ -1,0 +1,13 @@
+id: warrior
+name: Warrior
+verified:
+  status: unverified
+skills:
+  - id: rush
+    name: Rush
+    job: 2
+    differs_from_original: >-
+      Reported to be available at 2nd job. In original MapleStory, Rush was
+      a 4th job skill.
+    verified:
+      status: unverified

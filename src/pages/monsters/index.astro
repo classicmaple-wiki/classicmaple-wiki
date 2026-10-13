@@ -1,0 +1,20 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import MonsterTable from '../../components/MonsterTable.astro';
+---
+
+<StarlightPage
+	frontmatter={{
+		title: 'Monsters',
+		description: 'Level, HP, EXP, and elemental weaknesses for monsters in MapleStory Classic World.',
+	}}
+>
+	<p>
+		Every number here is tagged with the build it was seen in. A value shows as Unknown until someone confirms it in
+		game.
+	</p>
+	<MonsterTable />
+	<p>
+		Want the raw data? Download <a href="/data/monsters.json">monsters.json</a>.
+	</p>
+</StarlightPage>

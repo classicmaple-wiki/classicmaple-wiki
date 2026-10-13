@@ -1,0 +1,52 @@
+---
+/*
+   Lists the recorded skills for one class, grouped by nothing fancier than
+   job order, with the Classic World difference front and center since that
+   is what returning players come looking for.
+*/
+import { getEntry } from 'astro:content';
+import VerifiedBadge from './VerifiedBadge.astro';
+
+interface Props {
+	classId: string;
+}
+
+const { classId } = Astro.props;
+const classEntry = await getEntry('classes', classId);
+if (!classEntry) throw new Error(`SkillList: no class "${classId}" in data/classes/`);
+
+const skills = [...classEntry.data.skills].sort(
+	(first, second) => first.job - second.job || first.name.localeCompare(second.name)
+);
+---
+
+{
+	skills.length === 0 ? (
+		<p>
+			No skills recorded yet. Add them to <code>data/classes/{classId}.yaml</code>.
+		</p>
+	) : (
+		<table>
+			<thead>
+				<tr>
+					<th>Skill</th>
+					<th>Job</th>
+					<th>Different in Classic World</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				{skills.map((skill) => (
+					<tr>
+						<td>{skill.name}</td>
+						<td>{skill.job}</td>
+						<td>{skill.differs_from_original ?? skill.summary ?? 'No change recorded'}</td>
+						<td>
+							<VerifiedBadge verified={skill.verified} />
+						</td>
+					</tr>
+				))}
+			</tbody>
+		</table>
+	)
+}

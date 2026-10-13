@@ -1,0 +1,39 @@
+---
+/*
+   Shows how much a reader can trust a number: official, confirmed in game,
+   or unverified, plus the build it was seen in. When the entry has a
+   source, the badge links to it.
+*/
+import { Badge } from '@astrojs/starlight/components';
+import type { Verification } from '../../schemas/shared';
+
+interface Props {
+	verified: Verification;
+}
+
+const { verified } = Astro.props;
+
+const labels = {
+	official: 'Official',
+	'in-game': 'Confirmed in game',
+	unverified: 'Unverified',
+} as const;
+
+const variants = {
+	official: 'success',
+	'in-game': 'note',
+	unverified: 'caution',
+} as const;
+
+const text = verified.build ? `${labels[verified.status]} · ${verified.build}` : labels[verified.status];
+---
+
+{
+	verified.source ? (
+		<a href={verified.source} rel="noopener">
+			<Badge text={text} variant={variants[verified.status]} />
+		</a>
+	) : (
+		<Badge text={text} variant={variants[verified.status]} />
+	)
+}

@@ -1,0 +1,43 @@
+---
+title: Classic Maple Wiki
+description: Unofficial, version-aware knowledge base for MapleStory Classic World. Class changes, leveling routes, crafting, and monster data, all tagged by build.
+template: splash
+hero:
+  tagline: The player-built guide to MapleStory Classic World. Every number is tagged with the build it was seen in.
+  actions:
+    - text: Level 1 to 30 route
+      link: /leveling/level-1-30-party-route/
+      icon: right-arrow
+    - text: Add what you know
+      link: /contributing/
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<CardGrid>
+	<LinkCard title="Classes" description="What changed for each class, skill by skill." href="/classes/warrior/" />
+	<LinkCard title="Leveling" description="Party routes, tested and labeled by build." href="/leveling/" />
+	<LinkCard title="Crafting and Citizenship" description="The new systems, explained." href="/economy/crafting/" />
+	<LinkCard title="Monsters" description="HP, EXP, and weaknesses in one table." href="/monsters/" />
+</CardGrid>
+
+## How to read this wiki
+
+<CardGrid>
+	<Card title="Official" icon="approve-check">
+		Taken from official patch notes or posts. The badge links to the source.
+	</Card>
+	<Card title="Confirmed in game" icon="seti:image">
+		Seen in the live game by a player, with a screenshot.
+	</Card>
+	<Card title="Unverified" icon="warning">
+		Reported but not yet confirmed. Treat it as a lead, not a fact.
+	</Card>
+	<Card title="What changed" icon="list-format">
+		When a value moves between builds, the old one is kept. See [What changed](/changes/).
+	</Card>
+</CardGrid>
+
+Most pages are marked unverified right now. That is on purpose. If you are playing, you can fix that in a few
+minutes: see [How to contribute](/contributing/).

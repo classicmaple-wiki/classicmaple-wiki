@@ -1,0 +1,14 @@
+id: magician
+name: Magician
+verified:
+  status: unverified
+skills:
+  - id: holy-symbol
+    name: Holy Symbol
+    job: 3
+    differs_from_original: >-
+      Reported to work as a revive for the Priest. In original MapleStory,
+      Holy Symbol increased EXP gained by the party. 3rd job is not in the
+      launch build, so this comes from pre-launch testing.
+    verified:
+      status: unverified

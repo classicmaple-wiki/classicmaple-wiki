@@ -1,0 +1,17 @@
+/* Warm maple accent in place of the default Starlight blue. */
+:root {
+	--sl-color-accent-low: #3d1f06;
+	--sl-color-accent: #c2570c;
+	--sl-color-accent-high: #fcd9b6;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #fde8d2;
+	--sl-color-accent: #b0480a;
+	--sl-color-accent-high: #5a2705;
+}
+
+/* Keep status badges on one line inside tables. */
+td .sl-badge {
+	white-space: nowrap;
+}

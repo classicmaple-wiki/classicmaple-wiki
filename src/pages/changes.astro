@@ -1,0 +1,71 @@
+---
+/*
+   The version-aware heart of the site: official patch notes at the top,
+   then every recorded value change, newest build first.
+*/
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getCollection } from 'astro:content';
+import ChangeLog from '../components/ChangeLog.astro';
+import { getBuildsNewestFirst } from '../lib/data';
+
+const builds = await getBuildsNewestFirst();
+const patches = (await getCollection('patches'))
+	.map((patchEntry) => patchEntry.data)
+	.sort((first, second) => second.date.getTime() - first.date.getTime());
+
+const dateFormatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
+---
+
+<StarlightPage
+	frontmatter={{
+		title: 'What changed',
+		description: 'Patch notes and value changes between builds of MapleStory Classic World.',
+	}}
+	headings={[
+		{ depth: 2, slug: 'builds', text: 'Builds' },
+		{ depth: 2, slug: 'patch-notes', text: 'Patch notes' },
+		{ depth: 2, slug: 'value-changes', text: 'Value changes' },
+	]}
+>
+	<h2 id="builds">Builds</h2>
+	<table>
+		<thead>
+			<tr><th>Build</th><th>Id</th><th>Date</th></tr>
+		</thead>
+		<tbody>
+			{
+				builds.map((build) => (
+					<tr>
+						<td>{build.name}</td>
+						<td>
+							<code>{build.id}</code>
+						</td>
+						<td>{dateFormatter.format(build.date)}</td>
+					</tr>
+				))
+			}
+		</tbody>
+	</table>
+
+	<h2 id="patch-notes">Patch notes</h2>
+	{
+		patches.length === 0 ? (
+			<p>No patch notes recorded yet.</p>
+		) : (
+			<ul>
+				{patches.map((patch) => (
+					<li>
+						<a href={patch.source} rel="noopener">
+							{patch.name}
+						</a>
+						, {dateFormatter.format(patch.date)}
+						{patch.summary && <p>{patch.summary}</p>}
+					</li>
+				))}
+			</ul>
+		)
+	}
+
+	<h2 id="value-changes">Value changes</h2>
+	<ChangeLog />
+</StarlightPage>

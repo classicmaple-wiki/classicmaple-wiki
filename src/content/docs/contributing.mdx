@@ -1,0 +1,39 @@
+---
+title: How to contribute
+description: Three ways to add patch notes, item and monster stats, and leveling routes to Classic Maple Wiki. No coding required.
+---
+
+import { repositoryUrl } from '../../../site.config.mjs';
+
+This wiki is built by players. You do not need to know how to code.
+
+## The one rule
+
+Every fact needs a **source** and a **build**.
+
+- **Source:** official patch notes, an official post, or your own in-game screenshot.
+- **Build:** the game version you saw it in. See the build list on [What changed](/changes/).
+
+Not sure about a number? Submit it and mark it `unverified`.
+
+## Three ways to help
+
+1. **Report it.** <a href={`${repositoryUrl}/issues/new/choose`}>Open an issue on GitHub</a>, pick a form, fill in the
+   blanks, attach a screenshot.
+2. **Edit in the browser.** Use the **Edit page** link at the bottom of any page.
+3. **Work locally.** Clone the repository, run `npm install`, then `npm run dev`.
+
+The full guide, with the data format and the review process, is in <a href={`${repositoryUrl}/blob/main/CONTRIBUTING.md`}>CONTRIBUTING.md</a>.
+
+## Open data
+
+All data is free to reuse under CC BY-SA 4.0. Download it as JSON:
+
+- [monsters.json](/data/monsters.json)
+- [maps.json](/data/maps.json)
+- [items.json](/data/items.json)
+- [classes.json](/data/classes.json)
+- [professions.json](/data/professions.json)
+- [systems.json](/data/systems.json)
+- [patches.json](/data/patches.json)
+- [builds.json](/data/builds.json)

@@ -1,0 +1,15 @@
+# Game builds. Every data entry points at one of these ids.
+# Add a new build here before using its id anywhere else.
+# "date" is the day the build went live. The site sorts builds by it.
+- id: cot2
+  name: Closed Online Test 2
+  date: 2026-08-04
+  notes: Pre-launch test. Values may differ from the live game.
+
+- id: founders-2026-10-06
+  name: Founder's Access
+  date: 2026-10-06
+
+- id: launch-2026-10-21
+  name: Grand Launch
+  date: 2026-10-21

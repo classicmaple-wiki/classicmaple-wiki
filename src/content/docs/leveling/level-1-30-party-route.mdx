@@ -1,0 +1,41 @@
+---
+title: Level 1 to 30 party route
+description: A party leveling route from level 1 to 30 in MapleStory Classic World, built around the Kerning Party Quest.
+level_range: [1, 30]
+party_size: 4
+classes: [warrior, magician, bowman, thief]
+sidebar:
+  order: 1
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+import RouteSummary from '../../../components/RouteSummary.astro';
+
+<RouteSummary />
+
+<Aside type="caution" title="This is a skeleton">
+	The structure is here. The maps and level breakpoints are not. If you have run this in the live game, fill in a
+	step and add `tested_in` to the top of this file.
+</Aside>
+
+## The plan
+
+<Steps>
+
+1. **Level 1 to first job.** Map and quests needed.
+
+2. **First job to Kerning Party Quest.** Maps needed, with the level to move on and the reason.
+
+3. **Kerning Party Quest.** Entry level, party size, and stage notes needed. Confirm them in game before writing
+   them down. Do not assume they match original MapleStory.
+
+4. **After the party quest, up to 30.** Maps needed.
+
+</Steps>
+
+## What to record for each step
+
+- The map
+- The level to move on
+- Why: EXP per hour, safety, or party setup
+- What you tested yourself and what is theory

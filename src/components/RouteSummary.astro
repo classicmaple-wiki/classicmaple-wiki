@@ -1,0 +1,31 @@
+---
+/*
+   The fact line at the top of a leveling route. It reads the frontmatter
+   of the page it is placed on, so authors fill in the fields once. A route
+   without "tested_in" is labeled Untested automatically.
+*/
+import { Badge } from '@astrojs/starlight/components';
+
+const { level_range, party_size, classes, tested_in } = Astro.locals.starlightRoute.entry.data;
+---
+
+<p class="route-summary">
+	{level_range && <Badge text={`Level ${level_range[0]} to ${level_range[1]}`} variant="note" />}
+	{party_size && <Badge text={party_size === 1 ? 'Solo' : `Party of ${party_size}`} variant="note" />}
+	{classes && classes.length > 0 && <Badge text={classes.join(', ')} variant="default" />}
+	{
+		tested_in ? (
+			<Badge text={`Tested in ${tested_in}`} variant="success" />
+		) : (
+			<Badge text="Untested draft" variant="caution" />
+		)
+	}
+</p>
+
+<style>
+	.route-summary {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+</style>

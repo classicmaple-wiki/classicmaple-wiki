@@ -1,0 +1,46 @@
+name: Leveling route
+description: Share a route you have run, or improve one on the site.
+title: "guide: "
+labels: [guide]
+body:
+  - type: input
+    id: levels
+    attributes:
+      label: Level range
+      placeholder: 1 to 30
+    validations:
+      required: true
+  - type: input
+    id: party
+    attributes:
+      label: Party size and classes
+      placeholder: 4, any classes
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: For each step, give the map, the level to move on, and the reason.
+    validations:
+      required: true
+  - type: dropdown
+    id: tested
+    attributes:
+      label: Did you run this yourself?
+      options:
+        - Yes, all of it
+        - Part of it
+        - No, this is theory
+    validations:
+      required: true
+  - type: dropdown
+    id: build
+    attributes:
+      label: Build you tested in
+      options:
+        - Grand Launch (launch-2026-10-21)
+        - Founder's Access (founders-2026-10-06)
+        - Closed Online Test 2 (cot2)
+        - Newer build, not listed
+        - Not tested

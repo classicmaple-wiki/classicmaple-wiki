@@ -1,0 +1,35 @@
+---
+/*
+   A short fact box for one game system, read from data/systems/.
+*/
+import { getEntry } from 'astro:content';
+import { formatStatistic } from '../lib/data';
+import VerifiedBadge from './VerifiedBadge.astro';
+
+interface Props {
+	systemId: string;
+}
+
+const { systemId } = Astro.props;
+const systemEntry = await getEntry('systems', systemId);
+if (!systemEntry) throw new Error(`SystemSummary: no system "${systemId}" in data/systems/`);
+
+const system = systemEntry.data;
+---
+
+<table>
+	<tbody>
+		<tr>
+			<th scope="row">Unlocks at level</th>
+			<td>{formatStatistic(system.required_level)}</td>
+		</tr>
+		<tr>
+			<th scope="row">Summary</th>
+			<td>{system.summary ?? 'Needs details'}</td>
+		</tr>
+		<tr>
+			<th scope="row">Status</th>
+			<td><VerifiedBadge verified={system.verified} /></td>
+		</tr>
+	</tbody>
+</table>

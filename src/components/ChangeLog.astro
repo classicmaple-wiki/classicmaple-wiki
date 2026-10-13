@@ -1,0 +1,64 @@
+---
+/*
+   Renders build-to-build changes, newest build first. With no props it
+   shows every change on the site. Pass collectionName and entityIdentifier
+   to show the history of a single entity.
+*/
+import { collectChanges } from '../lib/data';
+
+interface Props {
+	collectionName?: string;
+	entityIdentifier?: string;
+}
+
+const { collectionName, entityIdentifier } = Astro.props;
+const showsSingleEntity = collectionName !== undefined && entityIdentifier !== undefined;
+
+const changes = (await collectChanges()).filter(
+	(change) =>
+		!showsSingleEntity || (change.collectionName === collectionName && change.entityIdentifier === entityIdentifier)
+);
+---
+
+{
+	changes.length === 0 ? (
+		<p>No changes recorded yet. When a value moves between builds, it shows up here.</p>
+	) : (
+		<table>
+			<thead>
+				<tr>
+					<th>Build</th>
+					{!showsSingleEntity && <th>What</th>}
+					<th>Field</th>
+					<th>Before</th>
+					<th>After</th>
+					<th>Source</th>
+				</tr>
+			</thead>
+			<tbody>
+				{changes.map((change) => (
+					<tr>
+						<td>{change.buildName}</td>
+						{!showsSingleEntity && (
+							<td>
+								{change.collectionName === 'monsters' ? (
+									<a href={`/monsters/${change.entityIdentifier}/`}>{change.entityName}</a>
+								) : (
+									change.entityName
+								)}
+							</td>
+						)}
+						<td>{change.field}</td>
+						<td>{change.from ?? ''}</td>
+						<td>{change.to ?? change.note ?? ''}</td>
+						<td>
+							<a href={change.source} rel="noopener">
+								Source
+							</a>
+						</td>
+					</tr>
+				))}
+			</tbody>
+		</table>
+	)
+}
