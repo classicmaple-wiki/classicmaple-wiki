@@ -37,11 +37,31 @@ export const change = z.strictObject({
 	source: z.url(),
 });
 
+/*
+   Presentation fields for the library of places (spec 0002). A page can
+   name the scene it sits in and the mood of its light. Both are design
+   choices, not game facts, so they need no source or build. When a page
+   leaves them out, src/lib/scenes.ts picks them from the page's category.
+*/
+export const sceneIdentifier = z.enum([
+	'maple-island',
+	'henesys',
+	'ellinia',
+	'perion',
+	'kerning-city',
+	'sleepywood',
+	'default',
+]);
+
+export const mood = z.enum(['dawn', 'morning', 'midday', 'dusk', 'night', 'cave']);
+
 export const entityBase = z.strictObject({
 	id: identifier,
 	name: z.string().min(1),
 	differs_from_original: z.string().optional(),
 	notes: z.string().optional(),
+	scene: sceneIdentifier.optional(),
+	mood: mood.optional(),
 	verified: verification,
 	changes: z.array(change).default([]),
 });
@@ -50,3 +70,5 @@ export const positiveInteger = z.int().positive();
 
 export type Verification = z.infer<typeof verification>;
 export type Change = z.infer<typeof change>;
+export type SceneIdentifier = z.infer<typeof sceneIdentifier>;
+export type Mood = z.infer<typeof mood>;

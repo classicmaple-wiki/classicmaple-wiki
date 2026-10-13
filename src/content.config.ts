@@ -2,13 +2,14 @@ import { defineCollection } from 'astro:content';
 import { file, glob } from 'astro/loaders';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
-import { build, dataSchemas, routeFrontmatter } from '../schemas';
+import { build, dataSchemas, pageFrontmatter } from '../schemas';
 
 /*
    Wires the repository layout into Astro content collections.
 
    Guides live in src/content/docs and use the Starlight schema, extended
-   with the optional leveling route fields. Game data lives in data/, one
+   with the optional leveling route fields and the scene, mood, and
+   subtitle fields from spec 0002. Game data lives in data/, one
    YAML file per entity, and every folder is checked against its schema at
    build time. Builds are the one exception: they are an ordered list, so
    they share a single file.
@@ -20,7 +21,7 @@ function dataFolder(folderName: string) {
 export const collections = {
 	docs: defineCollection({
 		loader: docsLoader(),
-		schema: docsSchema({ extend: routeFrontmatter }),
+		schema: docsSchema({ extend: pageFrontmatter }),
 	}),
 	builds: defineCollection({
 		loader: file('data/builds.yaml'),

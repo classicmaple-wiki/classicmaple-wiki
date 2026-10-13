@@ -1,5 +1,5 @@
 import { z } from 'astro/zod';
-import { entityBase, identifier, positiveInteger, verification } from './shared';
+import { entityBase, identifier, mood, positiveInteger, sceneIdentifier, verification } from './shared';
 
 /*
    One schema per data type. Numeric fields are optional on purpose: an
@@ -85,6 +85,17 @@ export const routeFrontmatter = z.object({
 	party_size: positiveInteger.optional(),
 	classes: z.array(identifier).optional(),
 	tested_in: identifier.optional(),
+});
+
+/*
+   Every guide page can also name its scene, mood, and a one line subtitle
+   that pairs the place with a moment, such as "Kerning City, after dark."
+   The H1, URL, and search keep the factual title.
+*/
+export const pageFrontmatter = routeFrontmatter.extend({
+	scene: sceneIdentifier.optional(),
+	mood: mood.optional(),
+	subtitle: z.string().optional(),
 });
 
 export const dataSchemas = {

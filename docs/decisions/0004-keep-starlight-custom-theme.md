@@ -1,6 +1,6 @@
 # 0004: Keep Starlight with a custom theme
 
-Date: 2026-10-13. Status: proposed. Waiting for owner approval.
+Date: 2026-10-13. Status: accepted by the owner 2026-10-13.
 
 ## Context
 

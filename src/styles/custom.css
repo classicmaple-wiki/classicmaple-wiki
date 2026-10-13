@@ -1,17 +1,85 @@
-/* Warm maple accent in place of the default Starlight blue. */
-:root {
-	--sl-color-accent-low: #3d1f06;
-	--sl-color-accent: #c2570c;
-	--sl-color-accent-high: #fcd9b6;
+/*
+   Maps Starlight's theme variables onto our tokens (src/styles/tokens.css),
+   so search, sidebar, table of contents, asides, and badges all follow the
+   same cream, ink, and orange palette in both modes. This file is
+   unlayered, so it wins over Starlight's layered defaults without needing
+   higher specificity.
+
+   Base typography also lives here: Nunito for everything a reader reads,
+   Silkscreen only for display chrome, a 70 character measure, and tabular
+   figures in tables so numbers line up.
+*/
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+	--sl-font: var(--font-body);
+
+	--sl-color-accent-low: var(--color-chip);
+	--sl-color-accent: var(--color-accent);
+	--sl-color-accent-high: var(--color-accent);
+
+	--sl-color-white: var(--color-ink);
+	--sl-color-gray-1: var(--color-ink);
+	--sl-color-gray-2: var(--color-ink);
+	--sl-color-gray-3: var(--color-ink-muted);
+	--sl-color-gray-4: var(--color-edge-strong);
+	--sl-color-gray-5: var(--color-line);
+	--sl-color-gray-6: var(--color-chip);
+	--sl-color-gray-7: var(--color-panel);
+	--sl-color-black: var(--color-paper);
+
+	--sl-color-text: var(--color-ink);
+	--sl-color-text-accent: var(--color-accent);
+	--sl-color-text-invert: var(--color-panel);
+	--sl-color-bg: var(--color-paper);
+	--sl-color-bg-nav: var(--color-panel);
+	--sl-color-bg-sidebar: var(--color-paper);
+	--sl-color-bg-inline-code: var(--color-chip);
+	--sl-color-bg-accent: var(--color-accent);
+	--sl-color-hairline-light: var(--color-line);
+	--sl-color-hairline: var(--color-line);
+	--sl-color-hairline-shade: var(--color-line);
+	--sl-color-backdrop-overlay: rgb(20 16 13 / 0.55);
+
+	--sl-text-body: var(--text-md);
+	--sl-line-height: 1.6;
 }
 
-:root[data-theme='light'] {
-	--sl-color-accent-low: #fde8d2;
-	--sl-color-accent: #b0480a;
-	--sl-color-accent-high: #5a2705;
+@media (min-width: 50em) {
+	:root {
+		--sl-text-body: 1.125rem;
+	}
 }
 
-/* Keep status badges on one line inside tables. */
+body {
+	background: var(--color-paper);
+	color: var(--color-ink);
+	font-feature-settings: 'kern';
+}
+
+.sl-markdown-content p,
+.sl-markdown-content li {
+	max-width: 70ch;
+}
+
+.sl-markdown-content :is(h2, h3) {
+	color: var(--color-ink);
+	font-weight: 800;
+}
+
+table {
+	font-variant-numeric: tabular-nums;
+}
+
+a {
+	text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+	outline: 3px solid var(--color-focus);
+	outline-offset: 2px;
+}
+
 td .sl-badge {
 	white-space: nowrap;
 }

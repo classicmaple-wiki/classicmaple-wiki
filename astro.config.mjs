@@ -17,9 +17,29 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: repositoryUrl }],
 			editLink: { baseUrl: editBaseUrl },
 			lastUpdated: true,
-			customCss: ['./src/styles/custom.css'],
+			customCss: [
+				'./src/styles/tokens.css',
+				'./src/styles/custom.css',
+				'./src/styles/scenes.css',
+				'./src/styles/window.css',
+				'./src/styles/pages.css',
+			],
+			head: [
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'preload',
+						href: '/fonts/nunito-latin.woff2',
+						as: 'font',
+						type: 'font/woff2',
+						crossorigin: '',
+					},
+				},
+			],
 			components: {
 				Footer: './src/components/Footer.astro',
+				PageTitle: './src/components/PageTitle.astro',
+				Hero: './src/components/Hero.astro',
 			},
 			sidebar: [
 				{

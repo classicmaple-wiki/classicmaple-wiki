@@ -1,6 +1,6 @@
 # 0002: Design system and the library of places
 
-Status: draft
+Status: in progress. Approved by the owner 2026-10-13.
 
 ## Problem
 
@@ -166,6 +166,15 @@ Thief page. Kerning City scene at night. Title "Thief", subtitle "Kerning City, 
 
 Crimson Balrog page. The monster has no map yet, so it inherits the default scene in the cave mood set on its data. A "Monster" window with level, HP, MP, EXP, weak to, strong to, found in, all Unknown, and the unverified badge. The `differs_from_original` note as a set apart lead. History at the bottom.
 
+### The pick: a mix
+
+Chosen 2026-10-13. The owner was open to both and asked for a mix. The build takes B's character and A's readability:
+
+- From B: the pixel grid scenes, the window frame on every boxed component, Silkscreen window titles and chips, dotted dividers inside windows only, and one invitation box plus muted Unknown rows when a window has no data yet.
+- From A: page titles in Nunito 800, so long titles stay readable on a phone, the calm centered home hero, and soft paper backgrounds outside windows.
+
+One change from the mockups, forced by Starlight's frame: the scene band sits at the top of the content column, not behind the fixed header. On phones the content column is full width, so the band is full bleed there. On desktop it reads as a wide window into the place, between the sidebar and the table of contents.
+
 ### Two directions
 
 Both are modern plus vintage, at different balances. Both use the same tokens, the same scenes, and the same data.
@@ -190,7 +199,7 @@ Phase A, before the pick:
 - [x] This spec. Status draft.
 - [x] Mockups for directions A and B, three pages each, on a pull request with a preview link. They load fonts from Google Fonts for now. The real site self hosts them.
 - [x] Contrast and layout check of both mockups at 360 and 1280 pixels, light and dark.
-- [ ] Stop. The owner approves this spec, decision 0004, the schema change, and picks a direction.
+- [x] Stop. The owner approves this spec, decision 0004, the schema change, and picks a direction.
 
 Phase B, after the pick:
 
@@ -208,8 +217,9 @@ Phase B, after the pick:
 
 ## Open questions
 
-- Which direction, A or B, or A with parts of B.
-- Approve decision 0004, keep Starlight.
-- Approve the schema change: `scene` and `mood` on entities, `scene`, `mood`, and `subtitle` on guides.
+- Answered 2026-10-13: a mix, defined under The pick.
+- Answered 2026-10-13: decision 0004 approved.
+- Answered 2026-10-13: schema change approved.
+- Answered 2026-10-13: Silkscreen confirmed as the display font.
 - Answered 2026-10-13: moods are dawn, morning, midday, dusk, night, cave. Launch scenes are Maple Island, Henesys, Ellinia, Perion, Kerning City, Sleepywood, and a default.
 - Answered 2026-10-13: all ten asset defaults in `docs/research/assets.md`.

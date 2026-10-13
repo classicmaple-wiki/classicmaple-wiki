@@ -2,7 +2,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import type { z } from 'astro/zod';
-import { build, dataSchemas, routeFrontmatter, type DataCollectionName } from '../schemas';
+import { build, dataSchemas, pageFrontmatter, type DataCollectionName } from '../schemas';
 
 /*
    Checks every file a contributor can touch before the site is built.
@@ -162,7 +162,7 @@ function validateLevelingRoutes(buildIdentifiers: Set<string>) {
 			report(filePath, 'Missing frontmatter block');
 			continue;
 		}
-		const frontmatter = checkAgainstSchema(filePath, routeFrontmatter, parseYaml(frontmatterMatch[1]));
+		const frontmatter = checkAgainstSchema(filePath, pageFrontmatter, parseYaml(frontmatterMatch[1]));
 		if (!frontmatter) continue;
 		for (const requiredField of ['level_range', 'party_size', 'classes'] as const) {
 			if (frontmatter[requiredField] === undefined) report(filePath, `Leveling routes need "${requiredField}"`);

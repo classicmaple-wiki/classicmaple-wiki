@@ -1,5 +1,7 @@
 id: thief
 name: Thief
+scene: kerning-city
+mood: night
 verified:
   status: unverified
 skills: []
