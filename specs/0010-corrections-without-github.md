@@ -1,6 +1,6 @@
 # 0010: Corrections without GitHub, and a short footer
 
-Status: built 2026-10-15. Waiting on one owner step: create the Tally form and paste its link into `site.config.mjs`.
+Status: built 2026-10-15. The owner created the Tally form, https://tally.so/r/GeveVj, and it is connected.
 
 ## Problem
 

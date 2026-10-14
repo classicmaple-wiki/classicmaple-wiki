@@ -30,4 +30,4 @@ export const builderUrl = 'https://sirux.io';
    links go to the How to contribute page instead. Each link passes the
    page it came from as ?page=, which the form keeps in a hidden field.
 */
-export const correctionFormUrl = '';
+export const correctionFormUrl = 'https://tally.so/r/GeveVj';
