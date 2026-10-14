@@ -1,6 +1,8 @@
 id: snail-hunting-ground-i
 name: Snail Hunting Ground I
 region: Maple Island
+town: Mushroom Town (Nina)
+kind: hunting-ground
 monsters:
   - snail
 source_page: https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_I

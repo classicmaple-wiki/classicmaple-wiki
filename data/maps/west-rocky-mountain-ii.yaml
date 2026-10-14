@@ -1,6 +1,8 @@
 id: west-rocky-mountain-ii
 name: West Rocky Mountain II
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - axe-stump
   - dark-stump

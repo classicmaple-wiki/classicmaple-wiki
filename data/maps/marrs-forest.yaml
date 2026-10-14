@@ -1,6 +1,8 @@
 id: marrs-forest
 name: Marr's Forest
 region: Victoria Island
+town: Ellinia
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Marr's_Forest
 verified:
   status: unverified

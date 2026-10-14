@@ -1,6 +1,7 @@
 id: 1st-accompaniment-bonus
 name: 1st Accompaniment (Bonus)
 region: Hidden Street
+kind: field
 monsters:
   - green-mushroom
   - horny-mushroom

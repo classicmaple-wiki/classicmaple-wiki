@@ -1,6 +1,8 @@
 id: east-rocky-mountain-i
 name: East Rocky Mountain I
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - blue-snail
   - dark-stump

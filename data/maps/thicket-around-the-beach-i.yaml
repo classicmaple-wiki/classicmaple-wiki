@@ -1,6 +1,8 @@
 id: thicket-around-the-beach-i
 name: Thicket Around the Beach I
 region: Victoria Island
+town: Lith Harbor
+kind: field
 monsters:
   - blue-snail
   - red-snail

@@ -1,6 +1,8 @@
 id: bowman-instructional-school
 name: Bowman Instructional School
 region: Victoria Island
+town: Henesys
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Bowman_Instructional_School
 verified:
   status: unverified

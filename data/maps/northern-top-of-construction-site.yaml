@@ -1,6 +1,8 @@
 id: northern-top-of-construction-site
 name: Northern Top of Construction Site
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - blue-mushroom
   - octopus

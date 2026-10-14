@@ -1,6 +1,8 @@
 id: monkey-forest-i
 name: Monkey Forest I
 region: Victoria Island
+town: Ellinia
+kind: field
 monsters:
   - green-mushroom
   - lupin

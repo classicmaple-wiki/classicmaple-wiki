@@ -1,6 +1,8 @@
 id: the-burnt-land-iv
 name: The Burnt Land IV
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - dark-axe-stump
   - fire-boar

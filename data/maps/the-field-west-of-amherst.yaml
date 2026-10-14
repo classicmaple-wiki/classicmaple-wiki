@@ -1,6 +1,8 @@
 id: the-field-west-of-amherst
 name: The Field West of Amherst
 region: Maple Island
+town: Amherst
+kind: hunting-ground
 monsters:
   - blue-snail
   - orange-mushroom

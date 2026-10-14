@@ -1,6 +1,7 @@
 id: white-map-with-mob
 name: White Map with Mob
 region: Hidden Street
+kind: field
 source_page: https://mapleclassic.wiki/wiki/White_Map_with_Mob
 verified:
   status: unverified

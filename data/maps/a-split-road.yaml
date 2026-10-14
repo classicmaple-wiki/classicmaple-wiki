@@ -1,6 +1,8 @@
 id: a-split-road
 name: A Split Road
 region: Maple Island
+town: Mushroom Town (Nina)
+kind: field
 monsters:
   - blue-snail
   - red-snail

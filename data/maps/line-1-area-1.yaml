@@ -1,6 +1,8 @@
 id: line-1-area-1
 name: Line 1 (Area 1)
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - bubbling
 source_page: https://mapleclassic.wiki/wiki/Line_1_(Area_1)

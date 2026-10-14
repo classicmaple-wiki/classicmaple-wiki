@@ -1,6 +1,8 @@
 id: right-around-lith-harbor
 name: Right Around Lith Harbor
 region: Victoria Island
+town: Lith Harbor
+kind: field
 monsters:
   - blue-snail
   - red-snail

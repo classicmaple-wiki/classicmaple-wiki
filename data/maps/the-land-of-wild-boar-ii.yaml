@@ -1,6 +1,8 @@
 id: the-land-of-wild-boar-ii
 name: The Land of Wild Boar II
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - axe-stump
   - dark-axe-stump

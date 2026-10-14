@@ -1,6 +1,7 @@
 id: 1st-accompaniment-exit
 name: 1st Accompaniment (Exit)
 region: Hidden Street
+kind: field
 source_page: https://mapleclassic.wiki/wiki/1st_Accompaniment_(Exit)
 verified:
   status: unverified

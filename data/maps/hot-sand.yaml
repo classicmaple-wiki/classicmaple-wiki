@@ -1,6 +1,8 @@
 id: hot-sand
 name: Hot Sand
 region: Victoria Island
+town: Florina Beach
+kind: field
 monsters:
   - clang
   - tortie

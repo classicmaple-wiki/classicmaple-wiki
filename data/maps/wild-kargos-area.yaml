@@ -1,6 +1,8 @@
 id: wild-kargos-area
 name: Wild Kargo's Area
 region: Victoria Island
+town: Sleepywood
+kind: field
 monsters:
   - cold-eye
   - wild-kargo

@@ -1,6 +1,8 @@
 id: mushroom-town-nina
 name: Mushroom Town (Nina)
 region: Maple Island
+town: Mushroom Town (Nina)
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Mushroom_Town_(Nina)
 verified:
   status: unverified

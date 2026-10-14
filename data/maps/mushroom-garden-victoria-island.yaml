@@ -1,6 +1,8 @@
 id: mushroom-garden-victoria-island
 name: Mushroom Garden (Victoria Island)
 region: Victoria Island
+town: Henesys
+kind: hunting-ground
 monsters:
   - orange-mushroom
   - red-snail

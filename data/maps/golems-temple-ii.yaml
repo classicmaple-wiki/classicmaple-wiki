@@ -1,6 +1,8 @@
 id: golems-temple-ii
 name: Golem's Temple II
 region: Victoria Island
+town: Henesys
+kind: field
 monsters:
   - blue-mushroom
   - fairy-4

@@ -1,6 +1,8 @@
 id: ant-tunnel-i
 name: Ant Tunnel I
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
 monsters:
   - horny-mushroom
   - zombie-mushroom

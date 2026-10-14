@@ -1,6 +1,8 @@
 id: the-burnt-land-iii
 name: The Burnt Land III
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - dark-axe-stump
   - fire-boar

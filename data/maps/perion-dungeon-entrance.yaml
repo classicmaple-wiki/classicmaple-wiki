@@ -1,6 +1,8 @@
 id: perion-dungeon-entrance
 name: Perion Dungeon Entrance
 region: Victoria Island
+town: Perion
+kind: dungeon
 monsters:
   - dark-axe-stump
   - dark-stump

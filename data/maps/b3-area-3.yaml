@@ -1,6 +1,8 @@
 id: b3-area-3
 name: B3 (Area 3)
 region: Victoria Island
+town: Kerning City
+kind: field
 source_page: https://mapleclassic.wiki/wiki/B3_(Area_3)
 verified:
   status: unverified

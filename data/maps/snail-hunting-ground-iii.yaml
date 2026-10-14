@@ -1,6 +1,8 @@
 id: snail-hunting-ground-iii
 name: Snail Hunting Ground III
 region: Maple Island
+town: Mushroom Town (Nina)
+kind: hunting-ground
 monsters:
   - blue-snail
   - red-snail

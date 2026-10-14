@@ -1,6 +1,7 @@
 id: 1st-accompaniment-last-stage
 name: 1st Accompaniment (Last Stage)
 region: Hidden Street
+kind: field
 monsters:
   - curse-eye
   - jr-necki

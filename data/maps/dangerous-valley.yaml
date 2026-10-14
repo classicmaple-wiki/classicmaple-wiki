@@ -1,6 +1,8 @@
 id: dangerous-valley
 name: Dangerous Valley
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - copper-drake
   - fire-boar

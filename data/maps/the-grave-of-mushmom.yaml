@@ -1,6 +1,7 @@
 id: the-grave-of-mushmom
 name: The Grave of Mushmom
 region: Victoria Island
+kind: dungeon
 monsters:
   - jr-boogie-2
   - zombie-mushmom

@@ -1,6 +1,8 @@
 id: rocky-road-ii
 name: Rocky Road II
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - axe-stump
   - dark-axe-stump

@@ -1,6 +1,8 @@
 id: southperry
 name: Southperry
 region: Maple Island
+town: Southperry
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Southperry
 verified:
   status: unverified

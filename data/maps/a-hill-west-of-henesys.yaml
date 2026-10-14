@@ -1,6 +1,8 @@
 id: a-hill-west-of-henesys
 name: A Hill West of Henesys
 region: Victoria Island
+town: Henesys
+kind: field
 monsters:
   - blue-snail
   - pig

@@ -1,6 +1,8 @@
 id: sleepy-dungeon-iv
 name: Sleepy Dungeon IV
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
 monsters:
   - curse-eye
   - dark-stone-golem

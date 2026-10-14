@@ -1,6 +1,8 @@
 id: warriors-sanctuary
 name: Warriors' Sanctuary
 region: Victoria Island
+town: Perion
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Warriors'_Sanctuary
 verified:
   status: unverified

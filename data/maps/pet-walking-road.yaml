@@ -1,6 +1,8 @@
 id: pet-walking-road
 name: Pet-Walking Road
 region: Victoria Island
+town: Henesys
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Pet-Walking_Road
 verified:
   status: unverified

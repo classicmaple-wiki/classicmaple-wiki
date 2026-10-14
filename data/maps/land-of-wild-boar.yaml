@@ -1,6 +1,8 @@
 id: land-of-wild-boar
 name: Land of Wild Boar
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - dark-axe-stump
   - jr-boogie-1

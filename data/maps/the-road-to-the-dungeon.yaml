@@ -1,6 +1,8 @@
 id: the-road-to-the-dungeon
 name: The Road to the Dungeon
 region: Victoria Island
+town: Henesys
+kind: dungeon
 monsters:
   - blue-mushroom
   - blue-snail

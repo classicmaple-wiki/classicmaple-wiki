@@ -1,6 +1,8 @@
 id: east-rocky-mountain-v
 name: East Rocky Mountain V
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - dark-axe-stump
   - dark-stump

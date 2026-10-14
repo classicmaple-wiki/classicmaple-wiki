@@ -1,6 +1,8 @@
 id: deep-valley-ii
 name: Deep Valley II
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - axe-stump
   - dark-axe-stump

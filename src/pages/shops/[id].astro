@@ -5,6 +5,8 @@
    map, and the region. The Stock window lists what it sells, each item
    linked to its own page. Prices are left out until a player confirms
    them. Notes, the history, and the source credit follow.
+
+   The History window appears only once the entry has a recorded change.
 */
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getCollection } from 'astro:content';
@@ -41,7 +43,7 @@ const headings = [
 	{ depth: 2, slug: 'stats', text: 'Shop' },
 	...(stock.length > 0 ? [{ depth: 2, slug: 'stock', text: 'Stock' }] : []),
 	...(shop.notes ? [{ depth: 2, slug: 'notes', text: 'Notes' }] : []),
-	{ depth: 2, slug: 'history', text: 'History' },
+	...(shop.changes.length > 0 ? [{ depth: 2, slug: 'history', text: 'History' }] : []),
 ];
 ---
 
@@ -83,7 +85,7 @@ const headings = [
 		)
 	}
 
-	<ChangeLog collectionName="shops" entityIdentifier={shop.id} />
+	{shop.changes.length > 0 && <ChangeLog collectionName="shops" entityIdentifier={shop.id} />}
 
 	<SourceCredit sources={[shop.source_page]} />
 </StarlightPage>

@@ -19,6 +19,8 @@ Two pull requests wait for the owner, to merge in order:
 1. #6, `data/mapleclassic-import`: 1,280 records from MapleClassic Wiki (spec 0005), NPC, quest, and shop pages, the library as the one way into every entry, and 594 sprites from maplestory.io (`scripts/fetch-sprites.ts`).
 2. #7, `site/field-guide-look`: the new look (spec 0006, decision 0009). Built on #6.
 
+3. #8, `site/launch-revision`: place pages, cross-links, the audit script, and `docs/launch-readiness.md` (spec 0007). Built on #7.
+
 ## Next step
 
 After both merge: run Lighthouse on the live site (previews need a Vercel login). Then P5 continues with level 1 to 30 routes.
@@ -27,7 +29,7 @@ Left for people: 104 entries without a sprite. Most have no exact name match on 
 
 ## Blockers and questions for the owner
 
-None.
+Where game numbers come from: MapleClassic Wiki (option 1), or only official posts and players. See `docs/launch-readiness.md`.
 
 ## Verify
 

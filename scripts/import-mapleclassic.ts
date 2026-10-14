@@ -309,7 +309,7 @@ function makeIdentifierAllocator(collection: string) {
 async function planImport(): Promise<PlannedRecord[]> {
 	const excludedTitles = await notAtLaunchTitles();
 	const [maps, spawns, monsters, drops, npcs, quests, prerequisiteRows, shops, shopItems, items] = [
-		await cargoQuery('maps', '_pageName=page,region'),
+		await cargoQuery('maps', '_pageName=page,region,nearest_town=town,map_type=kind'),
 		await cargoQuery('monster_spawns', 'monster_id=monster,map_id=map'),
 		await cargoQuery('monsters', '_pageName=page,primary_location=location,region,boss,released,variant'),
 		await cargoQuery(
@@ -446,6 +446,8 @@ async function planImport(): Promise<PlannedRecord[]> {
 				id: identifier,
 				name: page,
 				region: decodeEntities(row.region),
+				town: decodeEntities(row.town),
+				kind: toIdentifier(decodeEntities(row.kind)),
 				monsters: [...(monstersOnMap.get(page) ?? [])].sort(),
 				source_page: sourcePageUrl(page),
 				verified: importedVerification(page),

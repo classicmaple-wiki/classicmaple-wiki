@@ -1,6 +1,8 @@
 id: over-the-wall
 name: Over the Wall
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - axe-stump
   - dark-axe-stump

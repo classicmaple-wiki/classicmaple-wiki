@@ -1,6 +1,8 @@
 id: monkey-swamp-i
 name: Monkey Swamp I
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - jr-necki
   - lupin

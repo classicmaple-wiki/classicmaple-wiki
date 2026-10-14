@@ -1,6 +1,8 @@
 id: snail-hunting-ground-ii
 name: Snail Hunting Ground II
 region: Maple Island
+town: Mushroom Town (Nina)
+kind: hunting-ground
 monsters:
   - blue-snail
   - snail

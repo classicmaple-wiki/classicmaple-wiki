@@ -1,6 +1,8 @@
 id: east-rocky-mountain-ii
 name: East Rocky Mountain II
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - axe-stump
   - red-snail

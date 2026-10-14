@@ -1,6 +1,8 @@
 id: drake-hunting-ground
 name: Drake Hunting Ground
 region: Victoria Island
+town: Sleepywood
+kind: hunting-ground
 monsters:
   - drake
   - horny-mushroom

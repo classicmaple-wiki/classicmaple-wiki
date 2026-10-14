@@ -10,7 +10,7 @@ import type { Change } from '../../schemas/shared';
    build time from the "changes" list on every entity, then ordered by the
    date of the build each change landed in, newest first.
 */
-const entityCollectionNames = ['monsters', 'maps', 'items', 'classes', 'professions', 'systems'] as const;
+const entityCollectionNames = ['monsters', 'maps', 'items', 'npcs', 'quests', 'shops', 'classes', 'professions', 'systems'] as const;
 
 export interface RecordedChange extends Change {
 	collectionName: (typeof entityCollectionNames)[number];
@@ -56,4 +56,13 @@ export async function collectChanges(): Promise<RecordedChange[]> {
 	}
 
 	return recordedChanges.sort((first, second) => second.buildDate.getTime() - first.buildDate.getTime());
+}
+
+/*
+   A drop rate reads best as "about 1 in N" next to the percentage, the way
+   players talk about drops. Both come from the same observed share.
+*/
+export function formatDropChance(ratePercent: number): string {
+	if (ratePercent <= 0) return 'Not seen';
+	return `about 1 in ${Math.max(1, Math.round(100 / ratePercent))} (${ratePercent}%)`;
 }

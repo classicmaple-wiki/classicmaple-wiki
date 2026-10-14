@@ -1,6 +1,8 @@
 id: pig-park-ii
 name: Pig Park II
 region: Victoria Island
+town: Henesys
+kind: field
 monsters:
   - iron-hog
 source_page: https://mapleclassic.wiki/wiki/Pig_Park_II

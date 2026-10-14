@@ -1,6 +1,8 @@
 id: mushroom-town-townstreet
 name: Mushroom Town Townstreet
 region: Maple Island
+town: Mushroom Town (Nina)
+kind: town-interior
 source_page: https://mapleclassic.wiki/wiki/Mushroom_Town_Townstreet
 verified:
   status: unverified

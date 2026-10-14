@@ -1,6 +1,8 @@
 id: ant-tunnel-park
 name: Ant Tunnel Park
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
 monsters:
   - evil-eye
   - horny-mushroom

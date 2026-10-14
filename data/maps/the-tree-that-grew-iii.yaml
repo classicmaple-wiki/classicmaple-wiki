@@ -1,6 +1,8 @@
 id: the-tree-that-grew-iii
 name: The Tree That Grew III
 region: Victoria Island
+town: Ellinia
+kind: field
 monsters:
   - dark-stump
   - green-mushroom

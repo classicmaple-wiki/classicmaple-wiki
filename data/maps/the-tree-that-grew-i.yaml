@@ -1,6 +1,8 @@
 id: the-tree-that-grew-i
 name: The Tree That Grew I
 region: Victoria Island
+town: Ellinia
+kind: field
 monsters:
   - dark-stump
   - slime

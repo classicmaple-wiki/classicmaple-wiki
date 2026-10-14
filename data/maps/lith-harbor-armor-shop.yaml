@@ -1,6 +1,8 @@
 id: lith-harbor-armor-shop
 name: Lith Harbor Armor Shop
 region: Victoria Island
+town: Lith Harbor
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Lith_Harbor_Armor_Shop
 verified:
   status: unverified

@@ -1,6 +1,8 @@
 id: the-pig-beach
 name: The Pig Beach
 region: Victoria Island
+town: Lith Harbor
+kind: hidden-street
 monsters:
   - blue-snail
   - iron-hog

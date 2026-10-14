@@ -1,6 +1,8 @@
 id: sunset-sky
 name: Sunset Sky
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - blue-snail
   - dark-stump

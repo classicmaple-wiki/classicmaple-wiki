@@ -1,6 +1,8 @@
 id: beach-hunting-ground
 name: Beach Hunting Ground
 region: Victoria Island
+town: Lith Harbor
+kind: hunting-ground
 monsters:
   - blue-snail
   - orange-mushroom

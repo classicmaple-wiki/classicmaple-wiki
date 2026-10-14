@@ -1,6 +1,8 @@
 id: lorang-and-clang
 name: Lorang and Clang
 region: Victoria Island
+town: Florina Beach
+kind: field
 monsters:
   - clang
   - lorang

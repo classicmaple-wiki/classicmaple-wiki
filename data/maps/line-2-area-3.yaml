@@ -1,6 +1,8 @@
 id: line-2-area-3
 name: Line 2 (Area 3)
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - wraith
 source_page: https://mapleclassic.wiki/wiki/Line_2_(Area_3)

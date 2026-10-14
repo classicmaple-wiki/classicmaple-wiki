@@ -1,6 +1,8 @@
 id: drakes-meal-table
 name: Drake's Meal Table
 region: Victoria Island
+town: Sleepywood
+kind: field
 monsters:
   - cold-eye
   - drake

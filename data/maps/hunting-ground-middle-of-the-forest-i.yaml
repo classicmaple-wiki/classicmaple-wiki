@@ -1,6 +1,8 @@
 id: hunting-ground-middle-of-the-forest-i
 name: Hunting Ground Middle of the Forest I
 region: Maple Island
+town: Amherst
+kind: hunting-ground
 monsters:
   - blue-snail
   - red-snail

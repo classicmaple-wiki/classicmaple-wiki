@@ -1,6 +1,8 @@
 id: east-rocky-mountain-vii
 name: East Rocky Mountain VII
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - copper-drake
   - dark-axe-stump

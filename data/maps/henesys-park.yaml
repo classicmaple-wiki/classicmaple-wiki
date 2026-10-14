@@ -1,6 +1,8 @@
 id: henesys-park
 name: Henesys Park
 region: Victoria Island
+town: Henesys
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Henesys_Park
 verified:
   status: unverified
