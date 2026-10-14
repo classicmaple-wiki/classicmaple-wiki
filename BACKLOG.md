@@ -15,6 +15,7 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 ## Next
 
+- **P6** Seed the database from MapleClassic Wiki (CC BY-NC-SA 4.0) with a rerunnable importer, new NPC, quest, shop, and drop schemas, and attribution on every page. Spec: [0005](specs/0005-mapleclassic-import.md). Status: blocked on the owner: their data is largely from client files, which conflicts with the no datamined sources rule. Owner: agent.
 - **P5** Launch content: patch notes, level 1 to 30 routes, job advancement, monsters and maps for levels 1 to 30, what changed from the original, professions and citizenship. Brief: [docs/data-research.md](docs/data-research.md). Status: in progress. Founder's Access notes merged. Next: level 1 to 30 routes. Owner: research agent, reviewed by the owner.
 - **P3** Ecosystem pages: `/about` and a credits list for sprite sources. Footer credit, official game link, and disclaimer are done. Donations wait: Buy Me a Coffee or Patreon, once the owner can receive money. Spec: not yet written. Status: todo. Owner: agent.
 - **P2b** Sprites for every monster and item, from allowed sources, following the images policy. Spec: none needed, the policy is the process. Status: in progress. Crimson Balrog done from maplestory.io. Owner: agent or contributors.
