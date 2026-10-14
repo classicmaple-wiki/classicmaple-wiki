@@ -1,8 +1,10 @@
 ---
 /*
    Shows how much a reader can trust a number: official, confirmed in game,
-   or unverified, plus the build it was seen in. When the entry has a
-   source, the badge links to it.
+   or unverified, plus the build it was seen in. It never links out of the
+   wiki: sources live in one place on each page, the Sources notes or the
+   Source block at the bottom. A page may pass href to point the badge at
+   that block, such as "#source".
 
    Drawn as a small rounded pill (spec 0006) in the badge colors from the
    tokens, with a line icon before the word: a check for official, an eye
@@ -16,9 +18,10 @@ import Icon from './Icon.astro';
 
 interface Props {
 	verified: Verification;
+	href?: string;
 }
 
-const { verified } = Astro.props;
+const { verified, href } = Astro.props;
 
 const labels = {
 	official: 'Official',
@@ -40,11 +43,11 @@ const chipClass = `chip ${variants[verified.status]}`;
 ---
 
 {
-	verified.source ? (
-		<a class={`${chipClass} chip--link`} href={verified.source} rel="noopener">
+	href ? (
+		<a class={`${chipClass} chip--link`} href={href}>
 			<Icon name={icons[verified.status]} size={12} strokeWidth={2.6} class="chip__glyph" />
 			<span class="chip__text">{text}</span>
-			<span class="sr-only">, see the source</span>
+			<span class="sr-only">, see the sources</span>
 		</a>
 	) : (
 		<span class={chipClass}>

@@ -11,8 +11,6 @@ import SkillList from '../../../components/SkillList.astro';
 import StatRows from '../../../components/StatRows.astro';
 import Window from '../../../components/Window.astro';
 
-export const releaseNotes = 'https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes';
-export const classPage = 'https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman';
 
 <Window id="job-path" build="founders-2026-10-06">
 <Fragment slot="title">
@@ -23,24 +21,24 @@ export const classPage = 'https://www.nexon.com/maplestory/game/mscw/classes-and
 
 <StatRows
 	rows={[
-		{ label: 'First job level', value: 10, href: releaseNotes },
-		{ label: 'Job instructor', value: 'Athena Pierce', href: releaseNotes },
-		{ label: 'Where', value: 'Henesys', href: releaseNotes },
-		{ label: 'Requirements', value: 'Reach level 10', href: releaseNotes },
-		{ label: 'Second job level', value: 30, href: releaseNotes },
-		{ label: 'Second job paths', value: 'Hunter or Crossbowman', href: releaseNotes },
-		{ label: 'Main stat', value: 'DEX', href: classPage },
-		{ label: 'Secondary stat', value: 'STR', href: classPage },
+		{ label: 'First job level', value: 10 },
+		{ label: 'Job instructor', value: 'Athena Pierce', href: '/npcs/athena-pierce/' },
+		{ label: 'Where', value: 'Henesys', href: '/places/henesys/' },
+		{ label: 'Requirements', value: 'Reach level 10' },
+		{ label: 'Second job level', value: 30 },
+		{ label: 'Second job paths', value: 'Hunter or Crossbowman' },
+		{ label: 'Main stat', value: 'DEX' },
+		{ label: 'Secondary stat', value: 'STR' },
 	]}
 	editUrl={`${editBaseUrl}data/classes/bowman.yaml`}
 	subject="the Bowman job path"
 />
 
-At level 10, talk to [Athena Pierce](/npcs/athena-pierce/) in [Henesys](/places/henesys/) to become a Bowman ([release notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes)). At level 30, talk to Athena Pierce again and pick Hunter or Crossbowman ([release notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes)). Nexon's page calls the first job Archer ([Bowman page](https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman)).
+At level 10, talk to [Athena Pierce](/npcs/athena-pierce/) in [Henesys](/places/henesys/) to become a Bowman[^1]. At level 30, talk to Athena Pierce again and pick Hunter or Crossbowman[^1]. Nexon's page calls the first job Archer[^2].
 
 The official notes name no requirement other than the level. If the game asks for more, please add it with a screenshot.
 
-Founder's Access has first and second job only ([release notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes)). Third job was open for testing at level 70 in Closed Online Test 2, and Nexon said test content may change ([test 2 notes](https://www.nexon.com/maplestory/news/general/43432/closed-online-test-2-release-notes)). Nexon has not said when third job comes to the live game. Inkwell said content such as third job may arrive in stages ([interview](https://www.nexon.com/maplestory/news/general/45681)).
+Founder's Access has first and second job only[^1]. Third job was open for testing at level 70 in Closed Online Test 2, and Nexon said test content may change[^3]. Nexon has not said when third job comes to the live game. Inkwell said content such as third job may arrive in stages[^4].
 
 </Window>
 
@@ -51,9 +49,9 @@ Founder's Access has first and second job only ([release notes](https://www.nexo
 
 </Fragment>
 
-DEX is the Bowman's main stat. It raises Bowman damage and Accuracy. STR raises Bowman damage a little and raises Weapon Def ([Character Stats guide](https://www.nexon.com/maplestory/game/mscw/maple-guides/all/46103/character-stats)).
+DEX is the Bowman's main stat. It raises Bowman damage and Accuracy. STR raises Bowman damage a little and raises Weapon Def[^5].
 
-You get 5 AP each level. From level 10 you get 3 SP each level, plus 1 extra SP when you take first and second job ([Character Stats guide](https://www.nexon.com/maplestory/game/mscw/maple-guides/all/46103/character-stats)).
+You get 5 AP each level. From level 10 you get 3 SP each level, plus 1 extra SP when you take first and second job[^5].
 
 </Window>
 
@@ -64,7 +62,7 @@ You get 5 AP each level. From level 10 you get 3 SP each level, plus 1 extra SP 
 
 </Fragment>
 
-Nexon's [Bowman page](https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman) lists these skills. It also explains what each one does.
+Nexon's Bowman page[^2] lists these skills. It also explains what each one does.
 
 - **Archer (first job):** Critical Shot, The Eye of Amazon, Focus, Power Knockback, Arrow Blow, Double Shot.
 - **Hunter (second job):** Bow Mastery, Amazon's Judgement, Final Attack: Bow, Bow Booster, Soul Arrow: Bow, Arrow Bomb.
@@ -89,7 +87,7 @@ Skill levels, costs, and damage numbers are not in the official pages yet. If yo
 
 </Fragment>
 
-Nexon's notice for the October 15, 2026 maintenance fixes a bug where the game could disconnect when Arrow Bomb hit a monster ([October 15 notice](https://www.nexon.com/maplestory/news/maintenance/46523)).
+Nexon's notice for the October 15, 2026 maintenance fixes a bug where the game could disconnect when Arrow Bomb hit a monster[^6].
 
 Nexon has not announced other Bowman skill changes for Classic World.
 
@@ -125,13 +123,9 @@ Nothing here yet. Tested builds, stat advice, and party tips are welcome.
 </Fragment>
 </ChangeLog>
 
-## Sources
-
-All official Nexon pages. Read on 2026-10-14.
-
-- [Founder's Access Release Notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes)
-- [Bowman, Classic World Classes and Jobs](https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman)
-- [Character Stats guide](https://www.nexon.com/maplestory/game/mscw/maple-guides/all/46103/character-stats)
-- [Scheduled Minor Patch Maintenance, October 15, 2026](https://www.nexon.com/maplestory/news/maintenance/46523)
-- [Closed Online Test #2 Release Notes](https://www.nexon.com/maplestory/news/general/43432/closed-online-test-2-release-notes)
-- [Inkwell on the Future of Global MapleStory and Classic World](https://www.nexon.com/maplestory/news/general/45681)
+[^1]: [Founder's Access Release Notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes), read on 2026-10-14.
+[^2]: [Bowman, Classic World Classes and Jobs](https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman), read on 2026-10-14.
+[^3]: [Closed Online Test #2 Release Notes](https://www.nexon.com/maplestory/news/general/43432/closed-online-test-2-release-notes), read on 2026-10-14.
+[^4]: [Inkwell on the Future of Global MapleStory and Classic World](https://www.nexon.com/maplestory/news/general/45681), read on 2026-10-14.
+[^5]: [Character Stats guide](https://www.nexon.com/maplestory/game/mscw/maple-guides/all/46103/character-stats), read on 2026-10-14.
+[^6]: [Scheduled Minor Patch Maintenance, October 15, 2026](https://www.nexon.com/maplestory/news/maintenance/46523), read on 2026-10-14.

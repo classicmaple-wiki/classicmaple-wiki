@@ -7,9 +7,17 @@ import {
 	siteTitle,
 	siteUrl,
 } from './site.config.mjs';
+import { satteri } from '@astrojs/markdown-satteri';
+import { createEntityLinksPlugin } from './src/lib/entityLinks.mjs';
 
 export default defineConfig({
 	site: siteUrl,
+	markdown: {
+		processor: satteri({
+			mdastPlugins: [createEntityLinksPlugin()],
+			features: { gfm: { footnotes: { label: 'Sources', backLabel: 'Back to the text' } } },
+		}),
+	},
 	integrations: [
 		starlight({
 			title: siteTitle,

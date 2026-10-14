@@ -64,6 +64,20 @@
 	padding: var(--space-4);
 }
 
+.page-title__character {
+	position: absolute;
+	right: 4%;
+	bottom: 0;
+	z-index: 1;
+	height: 92%;
+	width: auto;
+	max-width: 45%;
+	object-fit: contain;
+	object-position: bottom;
+	filter: drop-shadow(0 6px 10px rgb(0 0 0 / 0.35));
+	pointer-events: none;
+}
+
 .page-title__resident {
 	flex: none;
 	max-height: 96px;
