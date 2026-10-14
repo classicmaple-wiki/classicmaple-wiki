@@ -9,6 +9,10 @@
    a soft glow from the scene's light, and the ground color along the
    bottom where the title panel and sprites sit. It is meant to look
    finished and quiet, not like missing art.
+
+   A page's own sprite stands on the picture's walkable ground strip,
+   which the art direction puts at 70 to 80 percent of the height, so it
+   sits 22 percent up from the bottom, just right of center.
 */
 .scene-art {
 	display: block;
@@ -71,7 +75,7 @@
 .scene-resident {
 	position: absolute;
 	left: 62%;
-	bottom: calc(var(--scene-overlap) + var(--space-2));
+	bottom: 22%;
 	transform: translateX(-50%);
 	image-rendering: pixelated;
 	pointer-events: none;

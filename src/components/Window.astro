@@ -1,10 +1,9 @@
 ---
 /*
    The window frame from spec 0002, the signature component. Every boxed
-   block on the site sits in one: a slim title bar in the title bar color
-   with a 3 pixel stripe in the page's mood rule, the title in Silkscreen,
-   a dotted grip filling the bar, and an optional build chip on the right.
-   The body is a cream panel. A footer strip appears only when the footer
+   block on the site sits in one: a wooden title bar (spec 0003) with a 3
+   pixel stripe in the page's mood rule, the title in heavy game text, and
+   an optional build chip on the right. The body is a parchment panel. A footer strip appears only when the footer
    slot is used.
 
    The title is always a real heading, so the outline and the table of
@@ -48,7 +47,6 @@ const hasFooter = Astro.slots.has('footer');
 <section class="window" aria-labelledby={headingIdentifier}>
 	<div class="window__title-bar">
 		{hasTitleSlot ? <Fragment set:html={slottedTitle} /> : <HeadingTag class="window__title" id={headingIdentifier}>{title}</HeadingTag>}
-		<span class="window__grip" aria-hidden="true"></span>
 		{build && <span class="chip window__build">{build}</span>}
 	</div>
 	<div class="window__body">

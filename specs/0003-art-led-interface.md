@@ -1,6 +1,6 @@
 # 0003: An interface that serves the art
 
-Status: draft
+Status: in progress. Approved by the owner 2026-10-13 with the recommended answers.
 
 ## Problem
 
@@ -64,7 +64,7 @@ Build it on the spec 0002 branch for the three pages that have art or matter mos
 
 ## Tasks
 
-- [ ] Owner approves this spec and answers the open questions.
+- [x] Owner approves this spec and answers the open questions.
 - [ ] Sample and record the token palette from the three reference pictures. Check every pair for AA.
 - [ ] Stage: home hero and inner page band with aspect ratio, reduced overlap.
 - [ ] Materials: wood title bars, parchment panels, night indigo dark mode, stone footer.
@@ -78,3 +78,5 @@ Build it on the spec 0002 branch for the three pages that have art or matter mos
 - Title font. Option one: a rounded display font with a soft outline, such as Fredoka or Baloo 2, both OFL licensed. That adds a third font file of about 30 KB. Option two: no new font, Nunito at its heaviest weight with a dark outline and drop shadow, like in-game text. Recommendation: try option two first, since it costs nothing; move to option one only if it looks weak.
 - Textures. Use small seamless textures from the prompt kit for wood and parchment, or pure CSS colors only. Recommendation: CSS only first, textures later if the panels feel flat.
 - Should the left sidebar stay on desktop, or become a top menu so the picture can run the full page width? Recommendation: keep it for now. Starlight's sidebar is how readers find pages.
+
+Answered 2026-10-13: Nunito heavy with an outline and shadow for titles, no new font. CSS colors only, no textures yet. Keep the sidebar on desktop. Graffiti and signs in pictures do not need to be perfect shapes; the art should not look too close to the original game anyway.

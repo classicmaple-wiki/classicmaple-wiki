@@ -9,6 +9,10 @@
    When any painted scene picture exists, a line discloses that scene art
    is made with AI image tools and edited by hand (decision 0006). The
    check runs at build time, so the line appears with the first picture.
+
+   The credits sit on a stone ledge under a wooden edge, the same ground
+   the painted pictures stand on (spec 0003). The block lines are faint
+   CSS gradients, not an image.
 */
 import Default from '@astrojs/starlight/components/Footer.astro';
 import { builderName, builderUrl, officialGameUrl } from '../../site.config.mjs';
@@ -40,8 +44,13 @@ const hasPaintedScenes = Object.keys(scenePictures).length > 0;
 <style>
 	.site-credits {
 		margin-top: var(--space-6);
-		padding-top: var(--space-4);
-		border-top: 1px solid var(--color-line);
+		padding: var(--space-4) var(--space-4) var(--space-5);
+		background:
+			repeating-linear-gradient(to right, transparent 0 46px, rgb(0 0 0 / 0.06) 46px 48px),
+			repeating-linear-gradient(to bottom, transparent 0 22px, rgb(0 0 0 / 0.06) 22px 24px),
+			var(--color-stone);
+		border-top: 3px solid var(--color-wood);
+		border-radius: 0 0 var(--radius-window) var(--radius-window);
 		text-align: center;
 	}
 

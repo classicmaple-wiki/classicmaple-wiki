@@ -4,13 +4,13 @@
    client button, data tables, and the filter input. All rules are global,
    so any page can reuse the classes without importing a component.
 
-   The frame comes from direction B, Old Window. A 1 pixel edge, a 4 pixel
-   radius, the shared window shadow, and a title bar in the title bar color
-   with a 3 pixel stripe in the page's mood rule on the left. Titles are
-   Silkscreen, at 18 pixels on small phones and 20 or larger above, never
-   for paragraphs. Under 480 pixels the title also drops its letter
-   spacing, so a title of about 22 characters stays on one line at 360 and
-   the bar keeps the same height before and after the font loads. A title
+   The frame comes from direction B, Old Window, dressed in the materials
+   of the painted art (spec 0003). A 1 pixel edge, a 4 pixel radius, the
+   shared window shadow, a parchment body, and a wooden title bar: the
+   wood color with faint plank lines and a soft top light, drawn in CSS
+   only, plus a 3 pixel stripe in the page's mood rule on the left. Titles
+   are friendly game text: Nunito at its heaviest weight in cream, with a
+   thin dark edge and a drop shadow, as signs read in the art. A title
    given as a markdown heading in the title slot, which Starlight wraps
    with an anchor link, gets exactly the same look. Everything a reader
    reads inside a window is Nunito, with tabular figures for numbers.
@@ -57,12 +57,16 @@
 	gap: var(--space-3);
 	min-height: 44px;
 	padding: 6px var(--space-3) 6px 14px;
-	background: var(--color-titlebar);
-	border-bottom: 1px solid var(--color-edge);
+	background:
+		repeating-linear-gradient(to bottom, transparent 0 10px, rgb(0 0 0 / 0.07) 10px 11px),
+		linear-gradient(to bottom, rgb(255 255 255 / 0.1), transparent 45%, rgb(0 0 0 / 0.14)),
+		var(--color-wood);
+	color: var(--color-wood-text);
+	border-bottom: 2px solid color-mix(in srgb, var(--color-wood) 70%, #000);
 	border-radius: 3px 3px 0 0;
 	box-shadow:
 		inset 3px 0 0 var(--mood-rule),
-		inset 0 1px 0 var(--window-highlight);
+		inset 0 1px 0 rgb(255 255 255 / 0.18);
 }
 
 .window .window__title,
@@ -70,13 +74,16 @@
 	flex: 0 1 auto;
 	min-width: 0;
 	margin: 0;
-	font-family: var(--font-display);
-	font-weight: 400;
-	font-synthesis: none;
+	font-family: var(--font-body);
+	font-weight: 800;
 	font-size: var(--text-lg);
 	line-height: 1.2;
-	letter-spacing: 0.02em;
-	color: var(--color-ink);
+	letter-spacing: 0.01em;
+	color: var(--color-wood-text);
+	text-shadow:
+		0 1px 0 rgb(0 0 0 / 0.45),
+		1px 0 0 rgb(0 0 0 / 0.2),
+		-1px 0 0 rgb(0 0 0 / 0.2);
 	overflow-wrap: anywhere;
 }
 
@@ -93,18 +100,12 @@
 }
 
 .window .window__title-bar .sl-anchor-link {
-	color: var(--color-ink-muted);
-}
-
-.window__grip {
-	flex: 1 1 auto;
-	min-width: 12px;
-	height: 9px;
-	background-image: repeating-linear-gradient(to bottom, var(--window-dot) 0 1px, transparent 1px 4px);
+	color: color-mix(in srgb, var(--color-wood-text) 75%, transparent);
 }
 
 .window__build {
 	flex: none;
+	margin-left: auto;
 }
 
 .window__body {
@@ -171,7 +172,7 @@
 @media (min-width: 768px) {
 	.window .window__title,
 	.window .window__title-bar :is(h2, h3) {
-		font-size: 1.375rem;
+		font-size: 1.25rem;
 	}
 	.window__body {
 		padding: var(--space-5);
@@ -188,7 +189,6 @@
 	.window .window__title,
 	.window .window__title-bar :is(h2, h3) {
 		font-size: 1.125rem;
-		letter-spacing: 0;
 	}
 }
 

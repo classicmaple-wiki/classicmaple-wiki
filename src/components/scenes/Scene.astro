@@ -1,26 +1,20 @@
 ---
 /*
-   One scene from the library of places, as a painted picture (decision
-   0006). The picture lives in src/assets/scenes/ under the scene's name,
-   with an optional "-night" twin for dark mode. Dropping a file there is
-   the whole change; this component finds it at build time.
+   One scene from the library of places, as a painted picture (decisions
+   0006 and 0007). src/lib/sceneArt.ts finds the picture and its night
+   twin and makes WebP files at a small and a large width. Both are set
+   as CSS custom properties and used as a cover background, so only the
+   size and theme the reader actually sees is downloaded. Without a night
+   picture, dark mode dims the day one. Without any picture, the scene is
+   a plain gradient in its mood, so a page never shows a broken scene.
 
-   The build turns each picture into WebP at a small and a large width.
-   Both are set as CSS custom properties and used as a cover background,
-   so only the size and theme the reader actually sees is downloaded.
-   Without a night picture, dark mode dims the day one. Without any
-   picture, the scene is a plain gradient in its mood, so a page never
-   shows a broken or half drawn scene.
-
-   The wrapper decides the height, so nothing shifts while the picture
+   The wrapper decides the size, so nothing shifts while the picture
    loads. The element is a span, so it is valid inside the shelf card
    links. The art is decoration, hidden from assistive technology, since
    the page title already says where the reader is.
 */
-import { getImage } from 'astro:assets';
 import type { SceneIdentifier } from '../../../schemas/shared';
-
-type SceneVariant = 'band' | 'home' | 'card';
+import { scenePictures, type SceneVariant } from '../../lib/sceneArt';
 
 interface Props {
 	scene: SceneIdentifier;
@@ -28,49 +22,14 @@ interface Props {
 }
 
 const { scene, variant } = Astro.props;
+const pictures = await scenePictures(scene, variant);
 
-const sceneFiles = import.meta.glob<{ default: ImageMetadata }>('../../assets/scenes/*.{png,jpg,jpeg,webp}', {
-	eager: true,
-});
-
-/*
-   Matches a picture by its file name without the extension, so
-   "kerning-city.png" and "kerning-city.webp" both count.
-*/
-function findPicture(name: string): ImageMetadata | undefined {
-	const match = Object.entries(sceneFiles).find(([filePath]) => {
-		const fileName = filePath.split('/').pop() ?? '';
-		return fileName.replace(/\.[a-z]+$/, '') === name;
-	});
-	return match?.[1].default;
-}
-
-const widths = variant === 'card' ? { small: 320, large: 560 } : { small: 720, large: 1440 };
-
-/*
-   Two WebP sizes per picture. A picture smaller than the target width is
-   never scaled up.
-*/
-async function pictureSources(picture: ImageMetadata) {
-	const [small, large] = await Promise.all(
-		[widths.small, widths.large].map((width) =>
-			getImage({ src: picture, width: Math.min(width, picture.width), format: 'webp', quality: 68 })
-		)
-	);
-	return { small: small.src, large: large.src };
-}
-
-const dayPicture = findPicture(scene);
-const nightPicture = findPicture(`${scene}-night`);
-const day = dayPicture && (await pictureSources(dayPicture));
-const night = nightPicture && (await pictureSources(nightPicture));
-
-const style = day
+const style = pictures
 	? [
-			`--scene-day-small: url('${day.small}')`,
-			`--scene-day-large: url('${day.large}')`,
-			night ? `--scene-night-small: url('${night.small}')` : '',
-			night ? `--scene-night-large: url('${night.large}')` : '',
+			`--scene-day-small: url('${pictures.day.small}')`,
+			`--scene-day-large: url('${pictures.day.large}')`,
+			pictures.night ? `--scene-night-small: url('${pictures.night.small}')` : '',
+			pictures.night ? `--scene-night-large: url('${pictures.night.large}')` : '',
 		]
 			.filter(Boolean)
 			.join('; ')
@@ -78,9 +37,9 @@ const style = day
 ---
 
 {
-	day ? (
+	pictures ? (
 		<span
-			class:list={['scene-art', { 'scene-art--dim-at-night': !night }]}
+			class:list={['scene-art', { 'scene-art--dim-at-night': !pictures.night }]}
 			style={style}
 			data-variant={variant}
 			aria-hidden="true"

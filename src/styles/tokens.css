@@ -1,6 +1,9 @@
 /*
-   Design tokens for Classic Maple Wiki (spec 0002). This is the one place
-   that defines color, type, spacing, radius, and shadow. custom.css maps
+   Design tokens for Classic Maple Wiki (specs 0002 and 0003). This is the
+   one place that defines color, type, spacing, radius, and shadow. Since
+   decision 0007 the colors come from the painted art: parchment panels,
+   wood for title bars and the wordmark sign, stone for the footer, and a
+   night indigo dark mode that matches the Henesys night picture. custom.css maps
    Starlight's own variables onto these, so the theme follows them.
 
    Light values sit on :root. Dark values apply under data-theme="dark",
@@ -47,8 +50,8 @@
 }
 
 :root {
-	--color-paper: #f7f1e3;
-	--color-panel: #fffcf4;
+	--color-paper: #f6efdf;
+	--color-panel: #fff9ec;
 	--color-ink: #2a1f17;
 	--color-ink-muted: #5c4b3c;
 	--color-line: #e3d6bc;
@@ -59,6 +62,11 @@
 	--color-chip: #f3e3c7;
 	--color-titlebar: #f4d9b0;
 	--color-focus: #1f6fb2;
+	--color-wood: #7a4a26;
+	--color-wood-text: #fff4dc;
+	--color-sign: #5a361d;
+	--color-sign-text: #ffb85c;
+	--color-stone: #e4d9c4;
 
 	--badge-official-background: #e2f0da;
 	--badge-official-foreground: #2f5e1f;
@@ -97,6 +105,9 @@
 
 	--scene-height: 190px;
 	--scene-height-home: 260px;
+	--scene-band-minimum: 180px;
+	--scene-band-maximum: 240px;
+	--scene-overlap-ledge: clamp(14px, 4%, 36px);
 	--scene-overlap: 48px;
 
 	--scene-sky-top: #bfe3f2;
@@ -110,20 +121,27 @@
 	:root {
 		--scene-height: 260px;
 		--scene-height-home: 380px;
+		--scene-band-minimum: 200px;
+		--scene-band-maximum: 340px;
 	}
 }
 
 :root[data-theme='dark'] {
-	--color-paper: #14100d;
-	--color-panel: #1f1914;
+	--color-paper: #0b1230;
+	--color-panel: #141c42;
 	--color-ink: #f4ebda;
-	--color-ink-muted: #c7b7a0;
-	--color-line: #3d3229;
-	--color-accent: #f4a04e;
-	--color-accent-fill: #c25e12;
-	--color-chip: #2e241c;
-	--color-titlebar: #3a2a1c;
+	--color-ink-muted: #c2c6de;
+	--color-line: #2a3468;
+	--color-accent: #f7c14b;
+	--color-accent-fill: #e8711c;
+	--color-chip: #1e2856;
+	--color-titlebar: #2a2350;
 	--color-focus: #7fb8f0;
+	--color-wood: #5a361d;
+	--color-wood-text: #fff4dc;
+	--color-sign: #3e2414;
+	--color-sign-text: #ffb85c;
+	--color-stone: #1b2350;
 
 	--badge-official-background: #21351a;
 	--badge-official-foreground: #b7e39e;

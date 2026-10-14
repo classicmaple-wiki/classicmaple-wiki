@@ -1,12 +1,14 @@
 /*
    Maps Starlight's theme variables onto our tokens (src/styles/tokens.css),
    so search, sidebar, table of contents, asides, and badges all follow the
-   same cream, ink, and orange palette in both modes. This file is
+   same parchment, ink, and orange palette in light mode and the night
+   indigo palette in dark mode (spec 0003). This file is
    unlayered, so it wins over Starlight's layered defaults without needing
    higher specificity.
 
    Base typography also lives here: Nunito for everything a reader reads,
-   Silkscreen only for display chrome, a 70 character measure, and tabular
+   Silkscreen only for tiny labels such as chips and captions, a 70
+   character measure, and tabular
    figures in tables so numbers line up. Prose headings step down clearly
    from the 30 to 44 pixel page title: H2 at 24 pixels on phones and 30 on
    desktop, H3 at 20.
@@ -62,6 +64,7 @@
 }
 
 body {
+	overflow-x: clip;
 	background: var(--color-paper);
 	color: var(--color-ink);
 	font-feature-settings: 'kern';

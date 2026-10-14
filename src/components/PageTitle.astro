@@ -33,6 +33,7 @@ import { getCollection, getEntry } from 'astro:content';
 import type { Verification } from '../../schemas/shared';
 import { emblemForSection, glyphPath, glyphs } from '../lib/glyphs';
 import { resolveClassScene, resolveGuideScene, type ResolvedScene } from '../lib/scenes';
+import { sceneAspectRatio } from '../lib/sceneArt';
 import Scene from './scenes/Scene.astro';
 import VerifiedBadge from './VerifiedBadge.astro';
 
@@ -144,11 +145,17 @@ const resolved = await resolvePageScene();
 const breadcrumb = await buildBreadcrumb();
 const entityStatus = await findEntityStatus();
 const resident = findResident(entityStatus?.spriteFile);
+const bandAspectRatio = sceneAspectRatio(resolved.scene);
 const emblemPath = glyphPath(glyphs[emblemForSection(pathSegments[0])]);
 ---
 
 <div class="page-title">
-	<div class="scene-band page-title__band" data-mood={resolved.mood} data-scene={resolved.scene}>
+	<div
+		class="scene-band page-title__band"
+		data-mood={resolved.mood}
+		data-scene={resolved.scene}
+		style={bandAspectRatio && `--scene-aspect: ${bandAspectRatio}`}
+	>
 		<Scene scene={resolved.scene} variant="band" />
 		{
 			resident && (

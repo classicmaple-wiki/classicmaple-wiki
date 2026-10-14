@@ -20,18 +20,18 @@
    that has started by that day, then the Grand Launch date, unless that
    newest build is Grand Launch itself. Both come
    from data/builds.yaml, so nothing here is typed by hand. Any hero
-   actions in the frontmatter render below as old client buttons. Both
-   fonts are preloaded from astro.config.mjs, so the wordmark does not
-   reflow when the font arrives. On
-   phones the last word of the name always starts its own line, so the
-   name breaks in the same place in Silkscreen and in the fallback font
-   and the panel keeps its height either way.
+   actions in the frontmatter render below as old client buttons. The
+   wordmark is a wooden sign with the name in Nunito 800 (spec 0003), and
+   Nunito is preloaded from astro.config.mjs, so the sign does not reflow
+   when the font arrives. The picture's aspect ratio comes from
+   src/lib/sceneArt.ts, so the hero takes the picture's own shape.
    Styles live in pages.css.
 */
 import { getCollection } from 'astro:content';
 import { Icon } from '@astrojs/starlight/components';
 import DraftContentNotice from '@astrojs/starlight/components/DraftContentNotice.astro';
 import Leaf from '../assets/leaf.svg';
+import { sceneAspectRatio } from '../lib/sceneArt';
 import Scene from './scenes/Scene.astro';
 
 const pageTitleIdentifier = '_top';
@@ -60,10 +60,16 @@ const isTrackingGrandLaunch = newestStartedBuild !== undefined && newestStartedB
 const trackingSentence = newestStartedBuild ? `Tracking ${newestStartedBuild.name}.` : undefined;
 const launchDay = grandLaunch && !isTrackingGrandLaunch ? calendarDay(grandLaunch.date) : undefined;
 const launchVerb = launchDay !== undefined && launchDay <= today ? 'was' : 'is';
+const heroAspectRatio = sceneAspectRatio('henesys');
 ---
 
 <div class="home-hero">
-	<div class="scene-band home-hero__band" data-mood="midday" data-scene="henesys">
+	<div
+		class="scene-band home-hero__band"
+		data-mood="midday"
+		data-scene="henesys"
+		style={heroAspectRatio && `--scene-aspect: ${heroAspectRatio}`}
+	>
 		<Scene scene="henesys" variant="home" />
 	</div>
 	<div class="home-hero__panel">

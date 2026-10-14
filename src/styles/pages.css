@@ -13,24 +13,24 @@
 */
 
 /*
-   Page title band. The scene band is a fixed height box with the ground
-   color behind it, so nothing shifts while the svg paints. On phones the
-   content column is the whole screen, so the band bleeds past the column
-   padding to both edges and up to the header. From 50em the column sits
-   between the sidebar and the table of contents, and the band becomes a
-   framed window into the place, with the window border and radius.
+   Page title band (spec 0003, the art leads). The band takes the shape of
+   its own painted picture through an aspect ratio set by PageTitle, kept
+   between a minimum and a maximum height, so a wide panorama is not
+   cropped like a 16:9 picture. The ground color sits behind it and the
+   size never depends on the picture loading, so nothing shifts. On phones
+   the content column is the whole screen, so the band bleeds past the
+   column padding to both edges and up to the header. From 50em the band
+   becomes a framed window into the place.
 
-   The title panel is a window: the window border and shadow, then a
-   title bar in the title bar color with the mood rule stripe on its left,
-   holding the breadcrumb and the emblem. The emblem is the section's
-   pixel glyph at 24 pixels in the mood rule color. Below the bar the
-   panel is solid cream with the H1 in Nunito 800, the subtitle, and on
-   entity pages a status line under a dotted divider, as inside every
-   window. The panel overlaps the band's bottom edge by the scene overlap
-   and is inset from the band's sides, so the band frames it. The scenes
-   keep their motifs above that overlap, so no motif hides behind the
-   panel. Starlight's hairline between the title and the body goes, since
-   the panel already ends the header.
+   The title panel is a signboard: a wooden top plank holding the
+   breadcrumb in cream and the section emblem in sign gold, then a
+   parchment body with the H1 in Nunito 800, the subtitle, and on entity
+   pages a status line under a dotted divider. The panel overlaps only the
+   picture's bottom ledge, about 4 percent of the band's width, which is
+   at most 12 percent of its height for pictures up to 3 to 1. The
+   walkable ground strip and the page's sprite stay in view. Starlight's
+   hairline between the title and the body goes, since the panel already
+   ends the header.
 */
 .page-title {
 	margin-top: -1.5rem;
@@ -39,14 +39,17 @@
 
 .page-title__band {
 	position: relative;
-	height: var(--scene-height);
+	aspect-ratio: var(--scene-aspect, 3 / 1);
+	min-height: var(--scene-band-minimum);
+	max-height: var(--scene-band-maximum);
+	width: 100%;
 	overflow: hidden;
 	background: var(--scene-ground);
 }
 
 .page-title__panel {
 	position: relative;
-	margin: calc(-1 * var(--scene-overlap)) var(--sl-content-pad-x) 0;
+	margin: calc(-1 * var(--scene-overlap-ledge)) var(--sl-content-pad-x) 0;
 	background: var(--color-panel);
 	color: var(--color-ink);
 	border: 1px solid var(--color-edge-strong);
@@ -60,12 +63,16 @@
 	gap: var(--space-3);
 	min-height: 40px;
 	padding: 6px var(--space-3) 6px calc(var(--space-4) + 3px);
-	background: var(--color-titlebar);
-	border-bottom: 1px solid var(--color-edge);
+	background:
+		repeating-linear-gradient(to bottom, transparent 0 10px, rgb(0 0 0 / 0.07) 10px 11px),
+		linear-gradient(to bottom, rgb(255 255 255 / 0.1), transparent 45%, rgb(0 0 0 / 0.14)),
+		var(--color-wood);
+	color: var(--color-wood-text);
+	border-bottom: 2px solid color-mix(in srgb, var(--color-wood) 70%, #000);
 	border-radius: 3px 3px 0 0;
 	box-shadow:
 		inset 3px 0 0 var(--mood-rule),
-		inset 0 1px 0 color-mix(in srgb, var(--color-panel) 65%, transparent);
+		inset 0 1px 0 rgb(255 255 255 / 0.18);
 }
 
 .page-title__emblem {
@@ -73,7 +80,7 @@
 	width: 24px;
 	height: 24px;
 	margin-left: auto;
-	fill: var(--mood-rule);
+	fill: var(--color-sign-text);
 }
 
 .page-title__body {
@@ -85,7 +92,7 @@
 	margin: 0;
 	font-size: var(--text-sm);
 	line-height: 1.4;
-	color: var(--color-ink-muted);
+	color: var(--color-wood-text);
 }
 
 .page-title__breadcrumb ol {
@@ -104,23 +111,24 @@
 .page-title__breadcrumb li + li::before {
 	content: '/';
 	margin-right: var(--space-2);
-	color: var(--color-ink-muted);
+	color: color-mix(in srgb, var(--color-wood-text) 70%, transparent);
 }
 
 .page-title__breadcrumb a {
-	color: var(--color-accent);
-	font-weight: 600;
+	color: var(--color-wood-text);
+	font-weight: 700;
 }
 
 .page-title__breadcrumb [aria-current='page'] {
-	color: var(--color-ink);
-	font-weight: 700;
+	color: var(--color-sign-text);
+	font-weight: 800;
 }
 
 .page-title__heading {
 	margin: 0;
 	font-family: var(--font-body);
 	font-weight: 800;
+	text-shadow: 0 2px 0 color-mix(in srgb, var(--color-accent-fill) 28%, transparent);
 	font-size: clamp(1.875rem, 1.4rem + 1.6vw, 2.75rem);
 	line-height: 1.15;
 	letter-spacing: -0.01em;
@@ -291,17 +299,17 @@ site-search button[data-open-modal]:hover {
 /*
    Header wordmark. Starlight's site title becomes the wordmark: the pixel
    leaf at its own 24 pixel size, so every grid pixel lands on a screen
-   pixel, then the name in Silkscreen. It drops from 18 to 15 pixels under
-   640 so the header stays on one row at 360.
+   pixel, then the name in Nunito 800, matching the wooden sign on the
+   home page (spec 0003). It drops from 20 to 17 pixels under 640 so the
+   header stays on one row at 360.
 */
 .site-title {
 	gap: var(--space-2);
-	font-family: var(--font-display);
-	font-weight: 400;
-	font-synthesis: none;
-	font-size: 1.125rem;
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: 1.25rem;
 	line-height: 1;
-	letter-spacing: 0.02em;
+	letter-spacing: 0;
 	color: var(--color-ink);
 }
 
@@ -319,23 +327,26 @@ site-search button[data-open-modal]:hover {
 @media (max-width: 639px) {
 	.site-title {
 		gap: 6px;
-		font-size: 0.9375rem;
-		letter-spacing: 0;
+		font-size: 1.0625rem;
 	}
 }
 
 /*
-   Home hero. The band follows the page title band: full bleed and up to
-   the header on phones, a framed window into the place from 50em. Its
-   fixed height and ground color keep the page still while the svg paints.
+   Home hero (spec 0003, the art leads). The painted picture is the first
+   and largest thing on the site: it runs the full width of the window,
+   edge to edge, up to the header, in its own aspect ratio, at least 320
+   pixels tall on phones and at most 70 percent of the screen height,
+   cropping from the center past that. Its size never waits on the
+   picture, so nothing shifts. The body clips horizontal overflow, so the
+   full width band never causes sideways scroll next to a scrollbar.
 
-   The panel is direction A's calm centered panel: soft radius, soft
-   shadow, everything centered. It overlaps the band by the scene overlap
-   and stays inset from its sides, so the scene frames it. The wordmark
-   stacks the leaf over the name under 560 pixels, where the name would
-   not fit on one line in Silkscreen, and puts its last word on a line of
-   its own, so the name never squeezes or reflows. The leaf shows at 48
-   pixels, twice its grid, to stay crisp.
+   The panel is direction A's calm centered panel on parchment. It sits
+   on the picture's bottom ledge only, about 4 percent of the screen
+   width. The wordmark hangs from the top of the panel as a wooden sign:
+   plank lines and a soft top light in CSS, sign gold game text in
+   Nunito 800 with a dark edge. Under 560 pixels the leaf sits above the
+   name and the name drops a size, so it stays on one line. The leaf
+   shows at 48 pixels, twice its grid, to stay crisp.
 
    The search button is drawn as a search field on paper, with a pixel
    magnifier, so it reads as the place to type.
@@ -347,15 +358,20 @@ site-search button[data-open-modal]:hover {
 
 .home-hero__band {
 	position: relative;
-	height: var(--scene-height-home);
+	width: 100vw;
+	margin-inline: calc(50% - 50vw);
+	aspect-ratio: var(--scene-aspect, 16 / 9);
+	min-height: 320px;
+	max-height: 70vh;
 	overflow: hidden;
 	background: var(--scene-ground);
+	box-shadow: 0 2px 0 color-mix(in srgb, var(--color-ink) 18%, transparent);
 }
 
 .home-hero__panel {
 	position: relative;
 	max-width: 47.5rem;
-	margin: calc(-1 * var(--scene-overlap)) var(--sl-content-pad-x) 0;
+	margin: calc(-1 * clamp(16px, 4vw, 56px)) var(--sl-content-pad-x) 0;
 	padding: var(--space-6) var(--space-4);
 	background: var(--color-panel);
 	color: var(--color-ink);
@@ -369,18 +385,33 @@ site-search button[data-open-modal]:hover {
 	margin: 0;
 }
 
-.home-hero__wordmark {
+.home-hero__panel .home-hero__wordmark {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	gap: var(--space-3);
-	font-family: var(--font-display);
-	font-weight: 400;
-	font-synthesis: none;
-	font-size: clamp(1.875rem, 1.3rem + 2.6vw, 3rem);
+	margin-top: calc(-1 * var(--space-7));
+	padding: var(--space-3) var(--space-5);
+	background:
+		repeating-linear-gradient(to bottom, transparent 0 12px, rgb(0 0 0 / 0.08) 12px 13px),
+		linear-gradient(to bottom, rgb(255 255 255 / 0.12), transparent 40%, rgb(0 0 0 / 0.18)),
+		var(--color-sign);
+	color: var(--color-sign-text);
+	border: 2px solid color-mix(in srgb, var(--color-sign) 60%, #000);
+	border-radius: 10px;
+	box-shadow:
+		inset 0 1px 0 rgb(255 255 255 / 0.2),
+		0 4px 0 color-mix(in srgb, var(--color-sign) 55%, #000),
+		0 10px 24px rgb(0 0 0 / 0.18);
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: clamp(1.75rem, 1.25rem + 2.2vw, 2.75rem);
 	line-height: 1.1;
-	letter-spacing: 0.01em;
-	color: var(--color-ink);
+	letter-spacing: 0;
+	text-shadow:
+		0 2px 0 rgb(0 0 0 / 0.5),
+		1px 0 0 rgb(0 0 0 / 0.3),
+		-1px 0 0 rgb(0 0 0 / 0.3);
 	text-wrap: balance;
 }
 
@@ -466,27 +497,17 @@ site-search button[data-open-modal]:hover {
 }
 
 @media (max-width: 559px) {
-	.home-hero__wordmark {
+	.home-hero__panel .home-hero__wordmark {
 		flex-direction: column;
-		gap: var(--space-2);
-		font-size: 1.875rem;
-	}
-
-	.home-hero__name-end {
-		display: block;
+		gap: var(--space-1);
+		padding: var(--space-3) var(--space-4);
+		font-size: 1.5rem;
 	}
 }
 
 @media (min-width: 50em) {
 	.home-hero {
-		margin-top: 0;
 		margin-inline: 0;
-	}
-
-	.home-hero__band {
-		border: 1px solid var(--color-edge-strong);
-		border-radius: var(--radius-window);
-		box-shadow: var(--shadow-window);
 	}
 
 	.home-hero__panel {
