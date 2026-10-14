@@ -4,33 +4,24 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then `docs/d
 
 ## Current state
 
-Everything from 2026-10-14 is merged and live on classicmaple.wiki:
+Live on classicmaple.wiki as of 2026-10-15, ready for Grand Launch on 2026-10-21:
 
-- **Import:** 1,280 records from MapleClassic Wiki (spec 0005) with core numbers (decision 0008, amendment), 594 sprites, and the importer and sprite scripts.
-- **Look:** the field guide look (spec 0006, decision 0009).
-- **Places and links:** place pages and links between entries (spec 0007), plus links inside the wiki and sources as footnotes (spec 0008).
-- **Guides:** drafts from official sources. Everything is `unverified`.
-- **Live Lighthouse mobile:** home 99, monster page 99, Henesys 100, library 92. Accessibility is 100 everywhere.
-
-## Latest
-
-Spec 0010: corrections without GitHub through a Tally form, a three item footer, and `/legal/`. The Tally form is live at https://tally.so/r/GeveVj. Corrections arrive by email to the owner; turn them into data pull requests with the right build.
-
-
-Pull request for spec 0009, easier navigation: map pictures from town scenes, map exits, cards for quest NPCs, shop stock, and NPC links, geographic breadcrumbs, and Places, Classes, and Economy index pages.
+- **Data:** 1,298 entries from MapleClassic Wiki with core numbers (specs 0005, decision 0008), sprites, minimaps (decision 0010), map exits, and complete quests with steps (spec 0012).
+- **Look and navigation:** the field guide look (spec 0006), places and cards everywhere (specs 0007, 0009), and links that stay inside the wiki (spec 0008).
+- **Guides:** class, leveling, crafting, and citizenship guides from official sources, with skill icons by branch (spec 0011).
+- **Contributions:** players send corrections through the Tally form at https://tally.so/r/GeveVj, linked from every page (spec 0010). Corrections arrive by email to the owner.
+- **Brand:** the owner's painted icon is the logo and favicon.
 
 ## Next step
 
-1. **Library speed:** it scores 92, under the 95 target. Page or lazy-render the grid; it has 18,000+ elements.
-2. **Class characters:** the owner is painting them. Drop PNGs into `src/assets/characters/` (prompts in `docs/art-direction.md`).
-3. **Owner review of the guide drafts:**
-   - The October 15 fixes come from a notice for maintenance that hasn't happened yet.
-   - The route's `party_size: 4` has no source.
-   - The old Warrior Rush and Magician Holy Symbol entries have no source.
-4. **Remaining gaps:** listed in `docs/launch-readiness.md`. Rerun `npx tsx scripts/audit-site.ts` before launch on 2026-10-21.
-5. **Branches:** the merged stacked branches can be deleted once the owner says so: `data/mapleclassic-import`, `site/field-guide-look`, `site/launch-revision`, `data/core-numbers`, `guides/official-drafts`, `release/launch-ready`.
+1. **Corrections:** turn incoming ones into data pull requests with the right build.
+2. **Sprites:** add sprites for the 19 Classic-only NPCs from owner or player screenshots (source `own-screenshot`), and skill icons for Precise Strikes, Amazon's Judgement, Critical Recovery, and Nimble Recovery.
+3. **Class characters:** paint them (prompts in `docs/art-direction.md`) and drop them into `src/assets/characters/`.
+4. **Library speed:** page the library. It scores 92 on mobile against a 95 target.
+5. **Remaining gaps:** fill those in `docs/launch-readiness.md` after launch. Rerun `npx tsx scripts/audit-site.ts`.
+6. **Branches:** delete the old merged branches when the owner says so.
 
-Open every pull request against `main`. Stacked pull requests merged into each other and missed `main` on 2026-10-14.
+Open every pull request against `main`.
 
 ## Blockers and questions for the owner
 
