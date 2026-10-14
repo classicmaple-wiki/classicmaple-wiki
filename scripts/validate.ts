@@ -125,6 +125,14 @@ function validateDataFiles(buildIdentifiers: Set<string>) {
 		{ collection: 'maps', field: 'monsters', target: 'monsters' },
 		{ collection: 'items', field: 'crafted_by', target: 'professions' },
 		{ collection: 'professions', field: 'related_professions', target: 'professions' },
+		{ collection: 'monsters', field: 'location', target: 'maps' },
+		{ collection: 'npcs', field: 'map', target: 'maps' },
+		{ collection: 'quests', field: 'giver', target: 'npcs' },
+		{ collection: 'quests', field: 'turn_in', target: 'npcs' },
+		{ collection: 'quests', field: 'prerequisites', target: 'quests' },
+		{ collection: 'shops', field: 'npc', target: 'npcs' },
+		{ collection: 'shops', field: 'map', target: 'maps' },
+		{ collection: 'shops', field: 'items', target: 'items' },
 	];
 
 	for (const [entityKey, { filePath, data }] of parsedEntities) {
@@ -134,6 +142,13 @@ function validateDataFiles(buildIdentifiers: Set<string>) {
 			for (const referencedIdentifier of [data[field]].flat() as string[]) {
 				if (!parsedEntities.has(`${target}/${referencedIdentifier}`)) {
 					report(filePath, `${field}: "${referencedIdentifier}" does not exist in data/${target}/`);
+				}
+			}
+		}
+		if (collectionName === 'monsters') {
+			for (const monsterDrop of (data.drops as { item: string; build: string }[] | undefined) ?? []) {
+				if (monsterDrop.item !== 'meso' && !parsedEntities.has(`items/${monsterDrop.item}`)) {
+					report(filePath, `drops: "${monsterDrop.item}" does not exist in data/items/`);
 				}
 			}
 		}
@@ -258,9 +273,46 @@ function validateSprites(
 	}
 }
 
+/*
+   Every record copied from MapleClassic Wiki must be traceable (spec
+   0005). Its source page, and the page behind each of its drops, must be
+   listed in data/imports/mapleclassic.yaml with the revision copied, and
+   the manifest must name the license and the date. Without that the site
+   could not show which version it used under which terms.
+*/
+function validateImportProvenance(parsedEntities: Map<string, { filePath: string; data: Record<string, unknown> }>) {
+	const manifestPath = path.join(dataDirectory, 'imports', 'mapleclassic.yaml');
+	const importedPages: { filePath: string; url: string }[] = [];
+	for (const { filePath, data } of parsedEntities.values()) {
+		const sourcePage = data.source_page;
+		if (typeof sourcePage === 'string' && sourcePage.startsWith('https://mapleclassic.wiki/')) {
+			importedPages.push({ filePath, url: sourcePage });
+		}
+		for (const monsterDrop of (data.drops as { source: string }[] | undefined) ?? []) {
+			if (monsterDrop.source.startsWith('https://mapleclassic.wiki/')) importedPages.push({ filePath, url: monsterDrop.source });
+		}
+	}
+	if (importedPages.length === 0) return;
+	if (!existsSync(manifestPath)) {
+		report(manifestPath, 'Missing. Records from MapleClassic Wiki exist, so the import manifest must too');
+		return;
+	}
+	const manifest = readYamlFile(manifestPath) as
+		| { license?: string; imported_on?: string; pages?: { url?: string; revision?: number }[] }
+		| undefined;
+	if (!manifest?.license || !manifest.imported_on) report(manifestPath, 'Needs license and imported_on');
+	const revisionByUrl = new Map((manifest?.pages ?? []).map((page) => [page.url, page.revision]));
+	for (const { filePath, url } of importedPages) {
+		if (typeof revisionByUrl.get(url) !== 'number') {
+			report(filePath, `${url} is not in the import manifest with a revision. Rerun the importer or remove the record`);
+		}
+	}
+}
+
 const buildIdentifiers = loadBuildIdentifiers();
 const parsedEntities = validateDataFiles(buildIdentifiers);
 const entityCount = parsedEntities.size;
+validateImportProvenance(parsedEntities);
 validateSprites(parsedEntities, loadSpriteSourceStatuses());
 const routeCount = validateLevelingRoutes(buildIdentifiers);
 

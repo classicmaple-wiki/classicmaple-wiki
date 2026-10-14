@@ -19,6 +19,24 @@ export const build = z.strictObject({
 	notes: z.string().optional(),
 });
 
+/*
+   One drop a player observed (spec 0005): which item, the share of kills
+   that dropped it, the stack size range when known, and the observation
+   behind the number, so a reader can judge how solid it is. "meso" stands
+   for the meso drop and needs no item file. Observer names are never
+   stored.
+*/
+export const drop = z.strictObject({
+	item: identifier,
+	rate_percent: z.number().min(0).max(100),
+	quantity: z.tuple([positiveInteger, positiveInteger]).optional(),
+	observed_on: z.coerce.date(),
+	sample_kills: positiveInteger,
+	sample_drops: z.int().nonnegative(),
+	build: identifier,
+	source: z.url(),
+});
+
 export const monster = entityBase.extend({
 	level: positiveInteger.optional(),
 	hp: positiveInteger.optional(),
@@ -28,6 +46,9 @@ export const monster = entityBase.extend({
 	weak_to: z.array(element).default([]),
 	strong_to: z.array(element).default([]),
 	immune_to: z.array(element).default([]),
+	location: identifier.optional(),
+	region: z.string().optional(),
+	drops: z.array(drop).default([]),
 	sprite: sprite.optional(),
 });
 
@@ -87,6 +108,33 @@ export const system = entityBase.extend({
 	summary: z.string().optional(),
 });
 
+/*
+   NPCs, quests, and shops (spec 0005). Each records only what a player can
+   see for themselves: where an NPC stands, who gives and takes a quest and
+   which quest comes first, and what a shop sells. Prices, rewards, and
+   requirements that come from game files are left for players to confirm,
+   and get their own fields only when a sourced value exists.
+*/
+export const npc = entityBase.extend({
+	role: z.string().optional(),
+	map: identifier.optional(),
+	region: z.string().optional(),
+});
+
+export const quest = entityBase.extend({
+	giver: identifier.optional(),
+	turn_in: identifier.optional(),
+	prerequisites: z.array(identifier).default([]),
+	region: z.string().optional(),
+});
+
+export const shop = entityBase.extend({
+	npc: identifier.optional(),
+	map: identifier.optional(),
+	region: z.string().optional(),
+	items: z.array(identifier).default([]),
+});
+
 export const patch = z.strictObject({
 	id: z.string().regex(/^\d{4}-\d{2}-\d{2}-[a-z0-9]+(-[a-z0-9]+)*$/, 'Use YYYY-MM-DD-short-name'),
 	name: z.string().min(1),
@@ -124,6 +172,9 @@ export const dataSchemas = {
 	classes: characterClass,
 	professions: profession,
 	systems: system,
+	npcs: npc,
+	quests: quest,
+	shops: shop,
 	patches: patch,
 } as const;
 

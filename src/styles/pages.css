@@ -1120,3 +1120,63 @@ site-search button[data-open-modal]:hover {
 		transform: none;
 	}
 }
+
+/*
+   Plain link lists inside a window, used for an NPC's quests and shop, a
+   quest's chain, and a shop's stock. The stock list splits into columns
+   on wider screens so a long shop does not scroll forever.
+*/
+.window .link-list {
+	margin: 0;
+	padding-left: var(--space-5);
+}
+
+.window .link-list li + li {
+	margin-top: var(--space-1);
+}
+
+@media (min-width: 640px) {
+	.window .link-list--columns {
+		columns: 2;
+		column-gap: var(--space-6);
+	}
+
+	.window .link-list--columns li {
+		break-inside: avoid;
+	}
+}
+
+/*
+   The source and license credit at the foot of an imported page (spec
+   0005). Small and muted so it never competes with the windows, but
+   always present and always linked.
+*/
+.source-credit {
+	margin-top: var(--space-6);
+	padding-top: var(--space-4);
+	border-top: 1px dashed var(--color-ink-muted);
+	font-size: var(--text-sm);
+	color: var(--color-ink-muted);
+}
+
+.source-credit p,
+.source-credit ul {
+	margin: 0;
+}
+
+.source-credit__title {
+	font-weight: 700;
+}
+
+.source-credit__list {
+	padding-left: var(--space-5);
+}
+
+.source-credit__changes {
+	margin-top: var(--space-2);
+}
+
+.source-credit a {
+	color: inherit;
+	text-decoration: underline;
+}

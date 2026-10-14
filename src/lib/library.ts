@@ -8,14 +8,14 @@
    a game database shows a level or a slot under the name. When the data
    has no value, the fact says the value is unknown. Nothing is guessed.
    Every card links to a page that exists: monsters, items, and maps to
-   their own pages, classes to their guide, professions and systems to
+   their own pages, NPCs, quests, and shops to theirs, classes to their guide, professions and systems to
    the guide that covers them.
 */
 import { getCollection } from 'astro:content';
 import type { Sprite, Verification } from '../../schemas/shared';
 import type { GlyphName } from './glyphs';
 
-export type LibraryType = 'monster' | 'item' | 'map' | 'class' | 'profession' | 'system';
+export type LibraryType = 'monster' | 'item' | 'map' | 'npc' | 'quest' | 'shop' | 'class' | 'profession' | 'system';
 
 /*
    One card: what it is, what it is called, the one fact it shows, where
@@ -40,6 +40,9 @@ export const libraryTypes: { type: LibraryType; label: string; pluralLabel: stri
 	{ type: 'monster', label: 'Monster', pluralLabel: 'Monsters', glyph: 'monster' },
 	{ type: 'item', label: 'Item', pluralLabel: 'Items', glyph: 'potion' },
 	{ type: 'map', label: 'Map', pluralLabel: 'Maps', glyph: 'flag' },
+	{ type: 'npc', label: 'NPC', pluralLabel: 'NPCs', glyph: 'person' },
+	{ type: 'quest', label: 'Quest', pluralLabel: 'Quests', glyph: 'scroll' },
+	{ type: 'shop', label: 'Shop', pluralLabel: 'Shops', glyph: 'bag' },
 	{ type: 'class', label: 'Class', pluralLabel: 'Classes', glyph: 'mask' },
 	{ type: 'profession', label: 'Profession', pluralLabel: 'Professions', glyph: 'hammer' },
 	{ type: 'system', label: 'System', pluralLabel: 'Systems', glyph: 'podium' },
@@ -100,6 +103,36 @@ export async function libraryCards(): Promise<LibraryCard[]> {
 			name: data.name,
 			fact: data.region ?? 'Region unknown',
 			href: `/maps/${data.id}/`,
+			verified: data.verified,
+		});
+	}
+	for (const { data } of await getCollection('npcs')) {
+		cards.push({
+			type: 'npc',
+			identifier: data.id,
+			name: data.name,
+			fact: data.region ?? 'Region unknown',
+			href: `/npcs/${data.id}/`,
+			verified: data.verified,
+		});
+	}
+	for (const { data } of await getCollection('quests')) {
+		cards.push({
+			type: 'quest',
+			identifier: data.id,
+			name: data.name,
+			fact: data.region ?? 'Region unknown',
+			href: `/quests/${data.id}/`,
+			verified: data.verified,
+		});
+	}
+	for (const { data } of await getCollection('shops')) {
+		cards.push({
+			type: 'shop',
+			identifier: data.id,
+			name: data.name,
+			fact: data.items.length === 0 ? 'Stock unknown' : `${data.items.length} ${data.items.length === 1 ? 'item' : 'items'} for sale`,
+			href: `/shops/${data.id}/`,
 			verified: data.verified,
 		});
 	}

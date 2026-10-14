@@ -1,0 +1,19 @@
+name: Removal or credit request
+description: You own something on the site, or wrote it on MapleClassic Wiki, and want it removed or credited differently.
+title: "removal: "
+labels: [takedown]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page or entry?
+      placeholder: https://classicmaple.wiki/monsters/...
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: What should change?
+      description: Remove it, change the credit, or something else. Say who you are in relation to it, such as the author or a maintainer.
+    validations:
+      required: true

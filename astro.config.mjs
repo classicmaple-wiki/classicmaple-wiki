@@ -58,6 +58,8 @@ export default defineConfig({
 					items: [
 						{ label: 'Welcome', link: '/' },
 						{ label: 'How to contribute', slug: 'contributing' },
+						{ label: 'Credits and license', slug: 'credits' },
+						{ label: 'Privacy', slug: 'privacy' },
 					],
 				},
 				{ label: 'Classes', items: [{ autogenerate: { directory: 'classes' } }] },

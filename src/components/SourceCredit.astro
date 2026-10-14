@@ -1,0 +1,45 @@
+---
+/*
+   The credit for a page built from MapleClassic Wiki data (spec 0005).
+   CC BY-NC-SA 4.0 asks for the source, the creators, the license, and
+   what was changed. This block gives all four, generated from the page's
+   stored source address, so no imported page can render without it.
+
+   The creators are the wiki's editors, named on each source page's
+   history, so the credit links there instead of copying usernames into
+   our data. "What changed" says plainly what was left out, which is more
+   honest than the word "modified" alone. A page that drew on several
+   source pages, such as a monster whose drops were recorded on its own
+   page, lists each source once.
+
+   A page with no imported data renders nothing.
+*/
+import { creditLines, type CreditLine } from '../lib/sourceCredit';
+
+interface Props {
+	sources: (string | undefined)[];
+}
+
+const lines: CreditLine[] = creditLines(Astro.props.sources);
+---
+
+{
+	lines.length > 0 && (
+		<aside class="source-credit" aria-label="Source and license">
+			<p class="source-credit__title">Source</p>
+			<ul class="source-credit__list">
+				{lines.map((line) => (
+					<li>
+						<a href={line.pageUrl} rel="noopener">{line.pageTitle}</a> on MapleClassic Wiki (
+						<a href={line.historyUrl} rel="noopener">contributors</a>),{' '}
+						<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license noopener">CC BY-NC-SA 4.0</a>, modified.
+					</li>
+				))}
+			</ul>
+			<p class="source-credit__changes">
+				Changed by Classic Maple Wiki: facts extracted and reformatted, stats, prices, rewards, game text, and images left
+				out. Not affiliated with or endorsed by MapleClassic Wiki or its editors. See <a href="/credits/">credits</a>.
+			</p>
+		</aside>
+	)
+}

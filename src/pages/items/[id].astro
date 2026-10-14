@@ -9,13 +9,15 @@
    one per row under their own names. Missing values read Unknown, and
    when every value is Unknown one invitation replaces the per row links.
    The crafting profession links to the crafting guide. Notes and the
-   history follow. Nothing here is typed by hand: every value comes from
+   history follow, then the source credit when the data came from
+   MapleClassic Wiki (spec 0005). Nothing here is typed by hand: every value comes from
    the item's data file.
 */
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getCollection, getEntry } from 'astro:content';
 import { editBaseUrl } from '../../../site.config.mjs';
 import ChangeLog from '../../components/ChangeLog.astro';
+import SourceCredit from '../../components/SourceCredit.astro';
 import StatRows from '../../components/StatRows.astro';
 import Window from '../../components/Window.astro';
 import { formatStatistic } from '../../lib/data';
@@ -73,4 +75,6 @@ const headings = [
 	}
 
 	<ChangeLog collectionName="items" entityIdentifier={item.id} />
+
+	<SourceCredit sources={[item.source_page]} />
 </StarlightPage>
