@@ -2,8 +2,11 @@
    Scene pictures (decision 0006). Scene.astro sets the picture's URLs as
    custom properties; this file decides which one shows. Phones get the
    small file, wider screens the large one. Dark mode uses the night
-   picture when there is one, and otherwise dims the day picture, so the
-   room reads as the same place at night.
+   picture when there is one. Otherwise it dims the day picture and lays a
+   night indigo multiply layer over it, so the room reads as the same
+   place at night rather than a muddy darker day. Placeholders are left
+   out of the dark picture rules, so they keep their mood gradient, which
+   has its own night colors.
 
    A scene with no picture yet is a calm gradient in its mood: sky above,
    a soft glow from the scene's light, and the ground color along the
@@ -32,18 +35,26 @@
 	}
 }
 
-:root[data-theme='dark'] .scene-art {
+:root[data-theme='dark'] .scene-art:not(.scene-art--placeholder) {
 	background-image: var(--scene-night-small, var(--scene-day-small));
 }
 
 @media (min-width: 50em) {
-	:root[data-theme='dark'] .scene-art {
+	:root[data-theme='dark'] .scene-art:not(.scene-art--placeholder) {
 		background-image: var(--scene-night-large, var(--scene-day-large));
 	}
 }
 
 :root[data-theme='dark'] .scene-art--dim-at-night {
-	filter: brightness(0.62) saturate(0.88);
+	filter: brightness(0.78) saturate(0.9);
+}
+
+:root[data-theme='dark'] .scene-art--dim-at-night::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: rgb(20 28 90 / 0.38);
+	mix-blend-mode: multiply;
 }
 
 .scene-art--placeholder {

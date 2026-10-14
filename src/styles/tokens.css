@@ -66,7 +66,10 @@
 	--color-wood-text: #fff4dc;
 	--color-sign: #5a361d;
 	--color-sign-text: #ffb85c;
-	--color-stone: #e4d9c4;
+	--color-stone: #4f4034;
+	--color-stone-text: #fff4dc;
+	--color-stone-link: #ffb85c;
+	--color-wood-highlight: #ffd59a;
 
 	--badge-official-background: #e2f0da;
 	--badge-official-foreground: #2f5e1f;
@@ -103,12 +106,9 @@
 	--shadow-panel: 0 1px 0 var(--color-line), 0 8px 24px rgb(42 31 23 / 0.08);
 	--shadow-window: inset 0 1px 0 #ffffff, 0 2px 0 rgb(42 31 23 / 0.18);
 
-	--scene-height: 190px;
-	--scene-height-home: 260px;
 	--scene-band-minimum: 180px;
 	--scene-band-maximum: 240px;
 	--scene-overlap-ledge: clamp(14px, 4%, 36px);
-	--scene-overlap: 48px;
 
 	--scene-sky-top: #bfe3f2;
 	--scene-sky-bottom: #eaf6f4;
@@ -119,8 +119,6 @@
 
 @media (min-width: 50em) {
 	:root {
-		--scene-height: 260px;
-		--scene-height-home: 380px;
 		--scene-band-minimum: 200px;
 		--scene-band-maximum: 340px;
 	}
@@ -141,7 +139,10 @@
 	--color-wood-text: #fff4dc;
 	--color-sign: #3e2414;
 	--color-sign-text: #ffb85c;
-	--color-stone: #1b2350;
+	--color-stone: #161c3c;
+	--color-stone-text: #f4ebda;
+	--color-stone-link: #f7c14b;
+	--color-wood-highlight: #ffb85c;
 
 	--badge-official-background: #21351a;
 	--badge-official-foreground: #b7e39e;

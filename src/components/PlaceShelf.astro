@@ -10,11 +10,16 @@
    one shape and the scene fills it exactly, so the whole picture shows
    and nothing shifts as the page loads.
 
-   A card is a link only when a page for that place exists. The others
-   say so in muted text instead of pointing nowhere. Styles live in
+   Only places with a painted picture get a card (decision 0007), so the
+   shelf never shows blank tiles next to painted ones. The rest are named
+   in one muted line under the shelf, in the same order, and get their
+   card the moment their picture lands. A card is a link only when a page
+   for that place exists. The others say so in muted text instead of
+   pointing nowhere. Styles live in
    pages.css. The list opts out of Starlight's markdown styles.
 */
 import type { SceneIdentifier } from '../../schemas/shared';
+import { sceneAspectRatio } from '../lib/sceneArt';
 import { placeOrder, scenes } from '../lib/scenes';
 import Scene from './scenes/Scene.astro';
 
@@ -26,12 +31,15 @@ const placePages: Partial<Record<SceneIdentifier, string>> = {
 const places = placeOrder.map((identifier) => ({
 	...scenes[identifier],
 	href: placePages[identifier],
+	isPainted: sceneAspectRatio(identifier) !== undefined,
 }));
+const paintedPlaces = places.filter((place) => place.isPainted);
+const unpaintedPlaces = places.filter((place) => !place.isPainted);
 ---
 
 <ol class="place-shelf not-content">
 	{
-		places.map((place) => {
+		paintedPlaces.map((place) => {
 			const CardTag = place.href ? 'a' : 'div';
 			return (
 				<li class="place-shelf__item">
@@ -54,3 +62,8 @@ const places = placeOrder.map((identifier) => ({
 		})
 	}
 </ol>
+{
+	unpaintedPlaces.length > 0 && (
+		<p class="place-shelf__waiting">Still being painted: {unpaintedPlaces.map((place) => place.label).join(', ')}.</p>
+	)
+}

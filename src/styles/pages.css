@@ -62,7 +62,7 @@
 	align-items: center;
 	gap: var(--space-3);
 	min-height: 40px;
-	padding: 6px var(--space-3) 6px calc(var(--space-4) + 3px);
+	padding: 6px var(--space-3) 6px var(--space-4);
 	background:
 		repeating-linear-gradient(to bottom, transparent 0 10px, rgb(0 0 0 / 0.07) 10px 11px),
 		linear-gradient(to bottom, rgb(255 255 255 / 0.1), transparent 45%, rgb(0 0 0 / 0.14)),
@@ -70,9 +70,7 @@
 	color: var(--color-wood-text);
 	border-bottom: 2px solid color-mix(in srgb, var(--color-wood) 70%, #000);
 	border-radius: 3px 3px 0 0;
-	box-shadow:
-		inset 3px 0 0 var(--mood-rule),
-		inset 0 1px 0 rgb(255 255 255 / 0.18);
+	box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18);
 }
 
 .page-title__emblem {
@@ -84,7 +82,7 @@
 }
 
 .page-title__body {
-	padding: var(--space-4) var(--space-4) var(--space-4) calc(var(--space-4) + 3px);
+	padding: var(--space-4);
 }
 
 .page-title__breadcrumb {
@@ -111,7 +109,7 @@
 .page-title__breadcrumb li + li::before {
 	content: '/';
 	margin-right: var(--space-2);
-	color: color-mix(in srgb, var(--color-wood-text) 70%, transparent);
+	color: var(--color-wood-text);
 }
 
 .page-title__breadcrumb a {
@@ -120,7 +118,7 @@
 }
 
 .page-title__breadcrumb [aria-current='page'] {
-	color: var(--color-sign-text);
+	color: var(--color-wood-highlight);
 	font-weight: 800;
 }
 
@@ -200,9 +198,9 @@
 /*
    Windows on a page. Every window gets the same breathing room from the
    text around it, and the first one under the title starts close to the
-   panel. A lead window is set apart from the facts: a dashed edge and an
-   amber title bar, the same colors as the Unverified chip, with the quote
-   on chip paper behind a solid amber rule. It holds a report that is not
+   panel. A lead window is set apart from the facts: a dashed amber edge,
+   the color of the Unverified chip, with the quote on chip paper behind a
+   solid amber rule. Its title bar stays wood like every window. It holds a report that is not
    yet a fact, so it must never look like a stat block.
 */
 .sl-markdown-content > * + :is(.window, .lead-window),
@@ -213,14 +211,6 @@
 .lead-window > .window {
 	border-style: dashed;
 	border-color: color-mix(in srgb, var(--badge-unverified-foreground) 60%, transparent);
-}
-
-.lead-window .window__title-bar {
-	background: var(--badge-unverified-background);
-}
-
-.lead-window .window__title {
-	color: var(--color-ink);
 }
 
 .lead-window blockquote {
@@ -277,14 +267,12 @@
 /* ===================== Home page and header ===================== */
 
 /*
-   Header rule and search. The header ends in a 2 pixel rule in the
-   page's mood color, so the header joins the place below it. tokens.css
-   lifts the mood onto the root from the scene band, so this needs no
-   script. The search button takes the window radius and the strong edge,
+   Header rule and search. The header ends in a 2 pixel wooden rule, the
+   same wood as every title bar. The search button takes the window radius and the strong edge,
    so it matches the search field in the home hero.
 */
 header.header {
-	border-bottom: 2px solid var(--mood-rule);
+	border-bottom: 2px solid var(--color-wood);
 }
 
 site-search button[data-open-modal] {
@@ -361,7 +349,7 @@ site-search button[data-open-modal]:hover {
 	width: 100vw;
 	margin-inline: calc(50% - 50vw);
 	aspect-ratio: var(--scene-aspect, 16 / 9);
-	min-height: 320px;
+	min-height: max(320px, 46svh);
 	max-height: 70vh;
 	overflow: hidden;
 	background: var(--scene-ground);
@@ -489,7 +477,12 @@ site-search button[data-open-modal]:hover {
 }
 
 .home-hero__action--primary {
-	background: var(--color-titlebar);
+	background: var(--color-accent-fill);
+	color: #2a1f17;
+	border-color: color-mix(in srgb, var(--color-accent-fill) 55%, #000);
+	box-shadow:
+		inset 0 1px 0 rgb(255 255 255 / 0.3),
+		0 2px 0 color-mix(in srgb, var(--color-accent-fill) 50%, #000);
 }
 
 .home-hero__action--minimal {
@@ -788,4 +781,16 @@ site-search button[data-open-modal]:hover {
 		align-items: baseline;
 		gap: var(--space-4);
 	}
+}
+
+/*
+   The line under the place shelf that names the places still waiting for
+   their painted picture. Muted, small, and centered, so it reads as a
+   note, not as missing content.
+*/
+.place-shelf__waiting {
+	margin: var(--space-4) 0 0;
+	color: var(--color-ink-muted);
+	font-size: var(--text-sm);
+	text-align: center;
 }

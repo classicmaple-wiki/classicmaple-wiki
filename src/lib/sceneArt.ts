@@ -1,6 +1,3 @@
-import { getImage } from 'astro:assets';
-import type { SceneIdentifier } from '../../schemas/shared';
-
 /*
    Finds the painted picture for a scene (decisions 0006 and 0007). A
    picture lives in src/assets/scenes/ under the scene's name, with an
@@ -12,13 +9,28 @@ import type { SceneIdentifier } from '../../schemas/shared';
    both in one module means the two can never disagree about which
    picture a scene has.
 */
+import { getImage } from 'astro:assets';
+import type { SceneIdentifier } from '../../schemas/shared';
+
+/*
+   Where a scene is shown: a page band, the home hero, or a shelf card.
+   Each gets its own target widths.
+*/
 export type SceneVariant = 'band' | 'home' | 'card';
 
+/*
+   The two WebP files made for one picture: small for phones, large for
+   wide screens.
+*/
 export interface SceneSources {
 	small: string;
 	large: string;
 }
 
+/*
+   Everything a scene needs: its day sources, its night sources when a
+   night picture exists, and the day picture's aspect ratio.
+*/
 export interface ScenePictures {
 	day: SceneSources;
 	night?: SceneSources;
@@ -70,6 +82,10 @@ async function pictureSources(picture: ImageMetadata, variant: SceneVariant): Pr
 	return { small: small.src, large: large.src };
 }
 
+/*
+   The day picture's sources, its night twin's when one exists, and its
+   aspect ratio, or undefined when the scene has no picture yet.
+*/
 export async function scenePictures(scene: SceneIdentifier, variant: SceneVariant): Promise<ScenePictures | undefined> {
 	const dayPicture = findPicture(scene);
 	if (!dayPicture) return undefined;

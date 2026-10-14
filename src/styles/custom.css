@@ -14,12 +14,18 @@
    desktop, H3 at 20.
 
    The Starlight pieces that sit around the windows are drawn in the same
-   family. The current sidebar link is chip paper with accent text and the
-   mood rule stripe, never a solid accent block, and group labels are
-   small muted capitals. Page links at the foot of a page are window cards
-   with a Silkscreen caption. Asides take the window edge and radius with
-   a status colored stripe, the caution aside uses the Unverified colors,
-   and step numbers are square chips instead of round bubbles.
+   family. The current sidebar link is chip paper with accent text and a
+   mushroom orange stripe, never a solid accent block, and group labels
+   are small muted capitals. Page links at the foot of a page are window
+   cards. Asides take the window edge and radius with a status colored
+   stripe, the caution aside uses the Unverified colors, and step numbers
+   are square chips instead of round bubbles. Their labels and titles are
+   Nunito, not the pixel font (spec 0003).
+
+   Focus rings are blue, except on wood, where blue on brown is too faint,
+   so they turn cream. Starlight's page wrapper clips sideways overflow,
+   so the full width home picture never adds a horizontal scroll next to
+   a desktop scrollbar.
 */
 :root,
 :root[data-theme='light'],
@@ -64,7 +70,6 @@
 }
 
 body {
-	overflow-x: clip;
 	background: var(--color-paper);
 	color: var(--color-ink);
 	font-feature-settings: 'kern';
@@ -113,7 +118,7 @@ body {
 	color: var(--color-accent);
 	font-weight: 800;
 	border-radius: var(--radius-chrome);
-	box-shadow: inset 3px 0 0 var(--mood-rule);
+	box-shadow: inset 3px 0 0 var(--color-accent-fill);
 }
 
 .sidebar-content summary .group-label .large {
@@ -137,10 +142,11 @@ body {
 }
 
 .pagination-links a > span {
-	font-family: var(--font-display);
-	font-size: var(--text-xs);
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
+	font-family: var(--font-body);
+	font-size: var(--text-sm);
+	font-weight: 700;
+	text-transform: none;
+	letter-spacing: 0;
 	color: var(--color-ink-muted);
 }
 
@@ -181,12 +187,11 @@ body {
 }
 
 .starlight-aside__title {
-	font-family: var(--font-display);
-	font-weight: 400;
-	font-synthesis: none;
-	font-size: var(--text-sm);
-	text-transform: uppercase;
-	letter-spacing: 0.06em;
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: var(--text-base);
+	text-transform: none;
+	letter-spacing: 0;
 }
 
 .starlight-aside__icon {
@@ -195,9 +200,8 @@ body {
 
 .sl-steps > li::before {
 	line-height: calc(var(--bullet-size) - 2px);
-	font-family: var(--font-display);
-	font-weight: 400;
-	font-synthesis: none;
+	font-family: var(--font-body);
+	font-weight: 800;
 	color: var(--color-ink);
 	background: var(--color-chip);
 	border: 1px solid var(--color-edge-strong);
@@ -216,6 +220,14 @@ a {
 :focus-visible {
 	outline: 3px solid var(--color-focus);
 	outline-offset: 2px;
+}
+
+.page {
+	overflow-x: clip;
+}
+
+:is(.page-title__bar, .window__title-bar, .home-hero__wordmark) :focus-visible {
+	outline-color: var(--color-wood-text);
 }
 
 td .sl-badge {

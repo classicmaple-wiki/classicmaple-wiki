@@ -8,9 +8,9 @@
    of the painted art (spec 0003). A 1 pixel edge, a 4 pixel radius, the
    shared window shadow, a parchment body, and a wooden title bar: the
    wood color with faint plank lines and a soft top light, drawn in CSS
-   only, plus a 3 pixel stripe in the page's mood rule on the left. Titles
-   are friendly game text: Nunito at its heaviest weight in cream, with a
-   thin dark edge and a drop shadow, as signs read in the art. A title
+   only. Titles are friendly game text: Nunito at its heaviest weight in
+   cream, with a dark outline painted under the letters and a drop shadow,
+   as signs read in the art. A title
    given as a markdown heading in the title slot, which Starlight wraps
    with an anchor link, gets exactly the same look. Everything a reader
    reads inside a window is Nunito, with tabular figures for numbers.
@@ -19,8 +19,9 @@
    squares with a gradient, so they stay crisp at any zoom. Unknown values
    are muted italic. A window with no data at all shows one invitation box;
    a secondary empty line, like a history with no changes or a filter
-   that hides every row, is a plain muted note. Chips are cut like old
-   item tags: a stepped left edge and a punched hole.
+   that hides every row, is a plain muted note. A window with no data at
+   all shows its invitation as a pinned note with an amber edge, the same
+   language as a lead quote. Chips are small item tags.
 
    Tables with more than four columns scroll sideways inside a focusable
    container with the first column pinned, so the page never scrolls
@@ -64,9 +65,7 @@
 	color: var(--color-wood-text);
 	border-bottom: 2px solid color-mix(in srgb, var(--color-wood) 70%, #000);
 	border-radius: 3px 3px 0 0;
-	box-shadow:
-		inset 3px 0 0 var(--mood-rule),
-		inset 0 1px 0 rgb(255 255 255 / 0.18);
+	box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18);
 }
 
 .window .window__title,
@@ -80,10 +79,9 @@
 	line-height: 1.2;
 	letter-spacing: 0.01em;
 	color: var(--color-wood-text);
-	text-shadow:
-		0 1px 0 rgb(0 0 0 / 0.45),
-		1px 0 0 rgb(0 0 0 / 0.2),
-		-1px 0 0 rgb(0 0 0 / 0.2);
+	-webkit-text-stroke: 3px rgb(0 0 0 / 0.4);
+	paint-order: stroke fill;
+	text-shadow: 0 2px 0 rgb(0 0 0 / 0.35);
 	overflow-wrap: anywhere;
 }
 
@@ -264,9 +262,10 @@
 	gap: var(--space-3);
 	align-items: flex-start;
 	padding: var(--space-4);
-	border: 2px dashed var(--color-edge-strong);
+	border: 1px solid var(--color-edge);
+	border-left: 4px solid var(--badge-unverified-foreground);
 	border-radius: var(--radius-window);
-	background: color-mix(in srgb, var(--color-chip) 45%, var(--color-panel));
+	background: var(--color-chip);
 }
 
 .invitation + .stat-rows {
@@ -338,7 +337,7 @@
 	gap: 6px;
 	max-width: 100%;
 	min-height: 26px;
-	padding: 4px 9px 4px 18px;
+	padding: 4px 9px 4px 12px;
 	background: var(--color-chip);
 	color: var(--color-ink);
 	border: 1px solid var(--color-edge-strong);
@@ -371,17 +370,6 @@
 	);
 }
 
-.chip::before {
-	content: '';
-	position: absolute;
-	left: 7px;
-	top: 50%;
-	width: 4px;
-	height: 4px;
-	margin-top: -2px;
-	background: var(--color-panel);
-	box-shadow: 0 0 0 1px currentColor;
-}
 
 .chip__glyph {
 	flex: none;
