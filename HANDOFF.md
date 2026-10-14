@@ -4,35 +4,30 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then `docs/d
 
 ## Current state
 
-Pull request 5 is merged and live. Founder's Access patch notes summary is in place. Launch content research (item P5) is in progress. Every research pull request is tagged with `ai-drafted` and enters as `unverified` for owner review.
+Everything from 2026-10-14 is merged and live on classicmaple.wiki:
 
-## Just done
-
-- Summarized official Founder's Access release notes into `data/patches/2026-10-06-founders-access.yaml` from Nexon notice 45621.
-- Validated schemas and static build cleanly with `npm run validate` and `npm run build`.
-- Merged pull request 5 (`patch: summarize founder's access release notes`).
-
-## In progress
-
-Two pull requests wait for the owner, to merge in order:
-
-1. #6, `data/mapleclassic-import`: 1,280 records from MapleClassic Wiki (spec 0005), NPC, quest, and shop pages, the library as the one way into every entry, and 594 sprites from maplestory.io (`scripts/fetch-sprites.ts`).
-2. #7, `site/field-guide-look`: the new look (spec 0006, decision 0009). Built on #6.
-
-3. #8, `site/launch-revision`: place pages, cross-links, the audit script, and `docs/launch-readiness.md` (spec 0007). Built on #7.
-
-4. #9, `data/core-numbers`: core numbers from MapleClassic Wiki (owner decision 2026-10-14), build names on chips, and empty Crafted by and Role rows hidden. Built on #8.
-5. A guide pull request from the research agent, built on #8, drafted from official sources.
+- **Import:** 1,280 records from MapleClassic Wiki (spec 0005) with core numbers (decision 0008, amendment), 594 sprites, and the importer and sprite scripts.
+- **Look:** the field guide look (spec 0006, decision 0009).
+- **Places and links:** place pages and links between entries (spec 0007), plus links inside the wiki and sources as footnotes (spec 0008).
+- **Guides:** drafts from official sources. Everything is `unverified`.
+- **Live Lighthouse mobile:** home 99, monster page 99, Henesys 100, library 92. Accessibility is 100 everywhere.
 
 ## Next step
 
-After both merge: run Lighthouse on the live site (previews need a Vercel login). Then P5 continues with level 1 to 30 routes.
+1. **Library speed:** it scores 92, under the 95 target. Page or lazy-render the grid; it has 18,000+ elements.
+2. **Class characters:** the owner is painting them. Drop PNGs into `src/assets/characters/` (prompts in `docs/art-direction.md`).
+3. **Owner review of the guide drafts:**
+   - The October 15 fixes come from a notice for maintenance that hasn't happened yet.
+   - The route's `party_size: 4` has no source.
+   - The old Warrior Rush and Magician Holy Symbol entries have no source.
+4. **Remaining gaps:** listed in `docs/launch-readiness.md`. Rerun `npx tsx scripts/audit-site.ts` before launch on 2026-10-21.
+5. **Branches:** the merged stacked branches can be deleted once the owner says so: `data/mapleclassic-import`, `site/field-guide-look`, `site/launch-revision`, `data/core-numbers`, `guides/official-drafts`, `release/launch-ready`.
 
-Left for people: 104 entries without a sprite. Most have no exact name match on maplestory.io. King Slime and one NPC are too large and need trimming. Rerun `npx tsx scripts/fetch-sprites.ts` (dry run) to list them.
+Open every pull request against `main`. Stacked pull requests merged into each other and missed `main` on 2026-10-14.
 
 ## Blockers and questions for the owner
 
-None. Decisions of 2026-10-14 are in `docs/launch-readiness.md`.
+None.
 
 ## Verify
 
