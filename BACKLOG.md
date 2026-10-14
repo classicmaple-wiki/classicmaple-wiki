@@ -15,7 +15,7 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 ## Next
 
-- **P5** Launch content: patch notes, level 1 to 30 routes, job advancement, monsters and maps for levels 1 to 30, what changed from the original, professions and citizenship. Brief: [docs/data-research.md](docs/data-research.md). Status: handed to Gemini or Antigravity 2026-10-14. Every pull request carries `ai-drafted`, every value enters `unverified`, the owner reviews. Owner: research agent, reviewed by the owner.
+- **P5** Launch content: patch notes, level 1 to 30 routes, job advancement, monsters and maps for levels 1 to 30, what changed from the original, professions and citizenship. Brief: [docs/data-research.md](docs/data-research.md). Status: in progress. PR opened for Founder's Access release notes summary. Owner: research agent, reviewed by the owner.
 - **P3** Ecosystem pages: `/about` and a credits list for sprite sources. Footer credit, official game link, and disclaimer are done. Donations wait: Buy Me a Coffee or Patreon, once the owner can receive money. Spec: not yet written. Status: todo. Owner: agent.
 - **P2b** Sprites for every monster and item, from allowed sources, following the images policy. Spec: none needed, the policy is the process. Status: in progress. Crimson Balrog done from maplestory.io. Owner: agent or contributors.
 - **P2c** Direction C, the storybook look from decision 0005. Status: replaced by P2f and spec 0003. Owner: agent.
