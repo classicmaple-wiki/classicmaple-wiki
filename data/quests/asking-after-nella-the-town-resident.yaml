@@ -2,6 +2,12 @@ id: asking-after-nella-the-town-resident
 name: Asking After Nella, the Town Resident
 giver: community-board-kerning-city
 turn_in: nella
+start_map: kerning-city
+steps:
+  - npc: community-board
+    map: kerning-city
+  - npc: nella
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Asking_After_Nella%2C_the_Town_Resident
 verified:

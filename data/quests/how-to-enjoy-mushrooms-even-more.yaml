@@ -2,8 +2,15 @@ id: how-to-enjoy-mushrooms-even-more
 name: How to Enjoy Mushrooms Even More
 giver: shane
 turn_in: shane
+start_map: ellinia
 prerequisites:
   - how-to-enjoy-mushrooms
+steps:
+  - npc: shane
+    map: ellinia
+  - monster: green-mushroom
+  - npc: shane
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/How_to_Enjoy_Mushrooms_Even_More
 verified:

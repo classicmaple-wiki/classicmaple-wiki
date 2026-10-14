@@ -2,8 +2,15 @@ id: memories-of-youth
 name: Memories of Youth
 giver: mrs-ming-ming
 turn_in: chief-stan
+start_map: henesys
 prerequisites:
   - chief-stans-hammer
+next: regained-vitality
+steps:
+  - npc: mrs-ming-ming
+    map: henesys
+  - npc: chief-stan
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Memories_of_Youth
 verified:

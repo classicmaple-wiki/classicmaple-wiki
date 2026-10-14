@@ -2,8 +2,15 @@ id: a-price-to-pay
 name: A Price to Pay
 giver: chrishrama
 turn_in: chrishrama
+start_map: sleepywood
 prerequisites:
   - a-name-on-a-note
+next: a-man-atoning
+steps:
+  - npc: chrishrama
+    map: sleepywood
+  - npc: chrishrama
+    map: sleepywood
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Price_to_Pay
 verified:

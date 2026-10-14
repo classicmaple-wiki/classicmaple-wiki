@@ -2,8 +2,14 @@ id: mothers-gold-watch
 name: Mother's Gold Watch
 giver: chief-stan
 turn_in: alex
+start_map: henesys
 prerequisites:
   - talking-to-stan
+steps:
+  - npc: chief-stan
+    map: henesys
+  - npc: alex
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Mother's_Gold_Watch
 verified:

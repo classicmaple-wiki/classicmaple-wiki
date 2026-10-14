@@ -1,7 +1,13 @@
 id: what-it-takes
 name: What It Takes
+giver: slade
+turn_in: slade
 prerequisites:
   - an-unbreakable-code
+next: the-weight-of-truth
+steps:
+  - npc: slade
+  - npc: slade
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/What_It_Takes
 verified:

@@ -2,8 +2,15 @@ id: bruces-cooking-ingredients
 name: Bruce's Cooking Ingredients
 giver: bruce
 turn_in: bruce
+start_map: henesys
 prerequisites:
   - mrs-ming-mings-advice
+next: a-fathers-love-for-his-daughter
+steps:
+  - npc: bruce
+    map: henesys
+  - npc: bruce
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Bruce's_Cooking_Ingredients
 verified:

@@ -2,6 +2,13 @@ id: the-stump-horror-story
 name: The Stump Horror Story
 giver: ayan
 turn_in: ayan
+start_map: perion
+steps:
+  - npc: ayan
+    map: perion
+  - monster: stump
+  - npc: ayan
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Stump_Horror_Story
 verified:

@@ -2,6 +2,12 @@ id: first-greeting-with-jane-doe-the-town-resident
 name: First Greeting with Jane Doe, the Town Resident
 giver: community-board-kerning-city
 turn_in: jane-doe
+start_map: kerning-city
+steps:
+  - npc: community-board
+    map: kerning-city
+  - npc: jane-doe
+    map: niora-hospital
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/First_Greeting_with_Jane_Doe%2C_the_Town_Resident
 verified:

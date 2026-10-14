@@ -2,6 +2,12 @@ id: first-greeting-with-bruce-the-town-resident
 name: First Greeting with Bruce, the Town Resident
 giver: community-board-henesys
 turn_in: bruce
+start_map: henesys
+steps:
+  - npc: community-board
+    map: henesys
+  - npc: bruce
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/First_Greeting_with_Bruce%2C_the_Town_Resident
 verified:

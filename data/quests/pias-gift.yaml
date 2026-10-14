@@ -2,8 +2,14 @@ id: pias-gift
 name: Pia's Gift
 giver: rina
 turn_in: pia
+start_map: henesys
 prerequisites:
   - what-pia-borrowed
+steps:
+  - npc: rina
+    map: henesys
+  - npc: pia
+    map: henesys-park
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Pia's_Gift
 verified:

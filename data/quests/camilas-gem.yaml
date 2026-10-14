@@ -2,6 +2,12 @@ id: camilas-gem
 name: Camila's Gem
 giver: camila
 turn_in: utah
+start_map: henesys
+steps:
+  - npc: camila
+    map: henesys
+  - npc: utah
+    map: utahs-pig-farm
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Camila's_Gem
 verified:

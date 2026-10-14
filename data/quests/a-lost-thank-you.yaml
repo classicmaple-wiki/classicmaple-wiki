@@ -2,6 +2,13 @@ id: a-lost-thank-you
 name: A Lost Thank-You
 giver: alex
 turn_in: alex
+start_map: kerning-city
+next: too-shy-to-say-it-himself
+steps:
+  - npc: alex
+    map: kerning-city
+  - npc: alex
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Lost_Thank-You
 verified:

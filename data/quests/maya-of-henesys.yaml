@@ -2,6 +2,13 @@ id: maya-of-henesys
 name: Maya of Henesys
 giver: maya
 turn_in: teo
+start_map: henesys-townstreet
+next: finding-sophia
+steps:
+  - npc: maya
+    map: henesys-townstreet
+  - npc: teo
+    map: lith-harbor
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Maya_of_Henesys
 verified:

@@ -2,8 +2,15 @@ id: andres-request
 name: Andre's Request
 giver: nella
 turn_in: nella
+start_map: kerning-city
 prerequisites:
   - shumis-request
+steps:
+  - npc: nella
+    map: kerning-city
+  - monster: octopus
+  - npc: nella
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Andre's_Request
 verified:

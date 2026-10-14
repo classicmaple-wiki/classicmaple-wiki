@@ -1,6 +1,7 @@
 id: the-first-mark
 name: The First Mark
 giver: jay
+start_map: henesys
 prerequisites:
   - the-marks-we-leave-behind
 region: Victoria Island

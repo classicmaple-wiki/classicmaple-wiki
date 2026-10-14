@@ -143,16 +143,26 @@ export async function libraryCards(): Promise<LibraryCard[]> {
 			verified: data.verified,
 		});
 	}
+	const npcSprites = new Map(
+		(await getCollection('npcs')).flatMap(({ data }) => (data.sprite ? [[data.id, (data.sprite as Sprite).file] as const] : []))
+	);
+	const mapNames = new Map((await getCollection('maps')).map(({ data }) => [data.id, data.name]));
 	for (const { data } of await getCollection('quests')) {
+		const pictureNpc = [data.giver, data.turn_in, ...data.steps.map((step) => step.npc)].find(
+			(npcId) => npcId && npcSprites.has(npcId)
+		);
+		const startMapName = data.start_map ? mapNames.get(data.start_map) : undefined;
 		cards.push({
 			type: 'quest',
 			identifier: data.id,
 			name: data.name,
-			fact: data.region ?? 'Region unknown',
+			fact: startMapName ? `Starts in ${startMapName}` : (data.region ?? 'Region unknown'),
 			href: `/quests/${data.id}/`,
+			spriteFile: pictureNpc ? npcSprites.get(pictureNpc) : undefined,
 			verified: data.verified,
 		});
 	}
+
 	for (const { data } of await getCollection('shops')) {
 		cards.push({
 			type: 'shop',

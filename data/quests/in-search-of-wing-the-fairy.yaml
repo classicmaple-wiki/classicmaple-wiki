@@ -2,8 +2,15 @@ id: in-search-of-wing-the-fairy
 name: In search of Wing the Fairy
 giver: icarus
 turn_in: wing-the-fairy
+start_map: kerning-city
 prerequisites:
   - icarus-and-the-balloon
+next: the-ingredients-for-the-flying-medicine
+steps:
+  - npc: icarus
+    map: kerning-city
+  - npc: wing-the-fairy
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/In_search_of_Wing_the_Fairy
 verified:

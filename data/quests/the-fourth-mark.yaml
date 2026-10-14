@@ -2,8 +2,14 @@ id: the-fourth-mark
 name: The Fourth Mark
 giver: jay
 turn_in: mong-from-kong
+start_map: henesys
 prerequisites:
   - the-third-mark
+steps:
+  - npc: jay
+    map: henesys
+  - npc: mong-from-kong
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Fourth_Mark
 verified:

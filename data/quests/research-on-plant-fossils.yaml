@@ -2,8 +2,15 @@ id: research-on-plant-fossils
 name: Research on Plant Fossils
 giver: betty
 turn_in: betty
+start_map: ellinia
 prerequisites:
   - delivering-a-box-of-fossils
+next: research-on-animal-fossils
+steps:
+  - npc: betty
+    map: ellinia
+  - npc: betty
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Research_on_Plant_Fossils
 verified:

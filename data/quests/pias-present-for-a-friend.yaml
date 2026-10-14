@@ -2,8 +2,15 @@ id: pias-present-for-a-friend
 name: Pia's Present For a Friend
 giver: pia
 turn_in: pia
+start_map: henesys-park
 prerequisites:
   - pia-and-the-blue-mushroom
+next: looking-for-the-red-cape
+steps:
+  - npc: pia
+    map: henesys-park
+  - npc: pia
+    map: henesys-park
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Pia's_Present_For_a_Friend
 verified:

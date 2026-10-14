@@ -2,8 +2,14 @@ id: shumis-lost-roll-of-cash
 name: Shumi's Lost Roll of Cash
 giver: shumi
 turn_in: shumi
+start_map: kerning-city
 prerequisites:
   - shumis-lost-coin
+steps:
+  - npc: shumi
+    map: kerning-city
+  - npc: shumi
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Shumi's_Lost_Roll_of_Cash
 verified:

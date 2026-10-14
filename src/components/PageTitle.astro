@@ -160,7 +160,17 @@ async function findEntityStatus(): Promise<EntityStatus | undefined> {
 	}
 	if (section === 'quests') {
 		const questEntry = await getEntry('quests', identifier);
-		return questEntry && { identifierLabel: 'Quest id', identifier, verified: questEntry.data.verified };
+		if (!questEntry) return undefined;
+		const quest = questEntry.data;
+		let spriteFile: string | undefined;
+		for (const npcId of [quest.giver, quest.turn_in, ...quest.steps.map((step) => step.npc)]) {
+			const npcSprite = npcId ? (await getEntry('npcs', npcId))?.data.sprite?.file : undefined;
+			if (npcSprite) {
+				spriteFile = npcSprite;
+				break;
+			}
+		}
+		return { identifierLabel: 'Quest id', identifier, verified: quest.verified, spriteFile };
 	}
 	if (section === 'shops') {
 		const shopEntry = await getEntry('shops', identifier);

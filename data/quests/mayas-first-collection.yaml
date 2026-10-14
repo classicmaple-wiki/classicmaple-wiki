@@ -2,8 +2,14 @@ id: mayas-first-collection
 name: Maya's First Collection
 giver: maya
 turn_in: maya
+start_map: henesys-townstreet
 prerequisites:
   - delivering-the-weird-medicine
+steps:
+  - npc: maya
+    map: henesys-townstreet
+  - npc: maya
+    map: henesys-townstreet
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Maya's_First_Collection
 verified:

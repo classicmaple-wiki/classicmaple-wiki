@@ -2,6 +2,7 @@ id: rains-maple-quiz
 name: Rain's Maple Quiz
 giver: rain
 turn_in: rain
+start_map: amherst
 region: Maple Island
 source_page: https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz
 verified:

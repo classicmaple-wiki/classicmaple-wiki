@@ -2,8 +2,15 @@ id: a-carpenter-in-my-own-right
 name: A Carpenter in My Own Right!
 giver: vicious
 turn_in: vicious
+start_map: henesys-market
 prerequisites:
   - vicious-in-need-of-an-apprentice
+steps:
+  - npc: vicious
+    map: henesys-market
+  - monster: dark-axe-stump
+  - npc: vicious
+    map: henesys-market
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Carpenter_in_My_Own_Right!
 verified:

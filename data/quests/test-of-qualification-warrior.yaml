@@ -2,8 +2,15 @@ id: test-of-qualification-warrior
 name: Test of Qualification (Warrior)
 giver: warrior-job-instructor
 turn_in: warrior-job-instructor
+start_map: west-rocky-mountain-iv
 prerequisites:
   - finding-the-instructor-warrior
+next: proof-of-qualification-warrior
+steps:
+  - npc: warrior-job-instructor
+    map: west-rocky-mountain-iv
+  - npc: warrior-job-instructor
+    map: west-rocky-mountain-iv
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Test_of_Qualification_(Warrior)
 verified:

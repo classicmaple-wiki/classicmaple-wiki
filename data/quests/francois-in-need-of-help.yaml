@@ -2,8 +2,15 @@ id: francois-in-need-of-help
 name: Francois in Need of Help
 giver: francois
 turn_in: francois
+start_map: ellinia
 prerequisites:
   - francois-in-need-of-an-apprentice
+steps:
+  - npc: francois
+    map: ellinia
+  - monster: green-mushroom
+  - npc: francois
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Francois_in_Need_of_Help
 verified:

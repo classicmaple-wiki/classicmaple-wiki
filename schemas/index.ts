@@ -139,7 +139,19 @@ export const npc = entityBase.extend({
 export const quest = entityBase.extend({
 	giver: identifier.optional(),
 	turn_in: identifier.optional(),
+	start_mode: z.enum(['quest-log', 'automatic']).optional(),
+	start_map: identifier.optional(),
 	prerequisites: z.array(identifier).default([]),
+	next: identifier.optional(),
+	steps: z
+		.array(
+			z.strictObject({
+				npc: identifier.optional(),
+				monster: identifier.optional(),
+				map: identifier.optional(),
+			})
+		)
+		.default([]),
 	region: z.string().optional(),
 });
 

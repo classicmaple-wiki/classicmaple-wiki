@@ -2,6 +2,13 @@ id: proof-of-companionship
 name: Proof of Companionship
 giver: lakelis
 turn_in: lakelis
+start_map: kerning-city
+steps:
+  - npc: lakelis
+    map: kerning-city
+  - monster: king-slime
+  - npc: lakelis
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Proof_of_Companionship
 verified:

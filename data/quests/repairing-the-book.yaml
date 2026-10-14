@@ -2,8 +2,15 @@ id: repairing-the-book
 name: Repairing the Book
 giver: manji
 turn_in: chrishrama
+start_map: perion
 prerequisites:
   - chief-stans-signature
+next: the-faded-ink
+steps:
+  - npc: manji
+    map: perion
+  - npc: chrishrama
+    map: sleepywood
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Repairing_the_Book
 verified:

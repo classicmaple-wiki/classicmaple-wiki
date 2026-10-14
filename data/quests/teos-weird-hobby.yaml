@@ -2,6 +2,14 @@ id: teos-weird-hobby
 name: Teo's Weird Hobby
 giver: teo
 turn_in: teo
+start_map: lith-harbor
+next: teos-even-weirder-hobby
+steps:
+  - npc: teo
+    map: lith-harbor
+  - monster: slime
+  - npc: teo
+    map: lith-harbor
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Teo's_Weird_Hobby
 verified:

@@ -2,8 +2,15 @@ id: a-name-she-couldnt-say
 name: A Name She Couldn't Say
 giver: roxy
 turn_in: jane-doe
+start_map: kerning-city-civic-center
 prerequisites:
   - another-lead
+next: an-old-grudge
+steps:
+  - npc: roxy
+    map: kerning-city-civic-center
+  - npc: jane-doe
+    map: niora-hospital
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Name_She_Couldn't_Say
 verified:

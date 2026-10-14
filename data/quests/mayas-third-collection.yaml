@@ -2,8 +2,14 @@ id: mayas-third-collection
 name: Maya's Third Collection
 giver: maya
 turn_in: maya
+start_map: henesys-townstreet
 prerequisites:
   - mayas-second-collection
+steps:
+  - npc: maya
+    map: henesys-townstreet
+  - npc: maya
+    map: henesys-townstreet
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Maya's_Third_Collection
 verified:

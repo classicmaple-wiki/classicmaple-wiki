@@ -2,6 +2,15 @@ id: olafs-first-training
 name: Olaf's First Training
 giver: olaf
 turn_in: olaf
+start_map: lith-harbor
+next: olafs-second-training
+steps:
+  - npc: olaf
+    map: lith-harbor
+  - monster: stump
+  - monster: slime
+  - npc: olaf
+    map: lith-harbor
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Olaf's_First_Training
 verified:

@@ -2,8 +2,15 @@ id: nellas-old-memory
 name: Nella's Old Memory
 giver: nella
 turn_in: alex
+start_map: kerning-city
 prerequisites:
   - too-shy-to-say-it-himself
+next: one-more-debt-to-repay
+steps:
+  - npc: nella
+    map: kerning-city
+  - npc: alex
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Nella's_Old_Memory
 verified:

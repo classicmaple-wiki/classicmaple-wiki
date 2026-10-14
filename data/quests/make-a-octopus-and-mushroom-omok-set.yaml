@@ -2,8 +2,14 @@ id: make-a-octopus-and-mushroom-omok-set
 name: Make a Octopus & Mushroom Omok Set
 giver: casey
 turn_in: casey
+start_map: henesys-park
 prerequisites:
   - make-a-pig-and-mushroom-omok-set
+steps:
+  - npc: casey
+    map: henesys-park
+  - npc: casey
+    map: henesys-park
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Make_a_Octopus_%26_Mushroom_Omok_Set
 verified:

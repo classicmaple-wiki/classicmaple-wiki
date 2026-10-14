@@ -2,8 +2,15 @@ id: a-man-atoning
 name: A Man Atoning
 giver: chrishrama
 turn_in: manji
+start_map: sleepywood
 prerequisites:
   - a-price-to-pay
+next: a-name-never-given
+steps:
+  - npc: chrishrama
+    map: sleepywood
+  - npc: manji
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Man_Atoning
 verified:

@@ -2,8 +2,14 @@ id: chriss-request
 name: Chris's Request
 giver: nella
 turn_in: nella
+start_map: kerning-city
 prerequisites:
   - dr-faymuss-request
+steps:
+  - npc: nella
+    map: kerning-city
+  - npc: nella
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Chris's_Request
 verified:

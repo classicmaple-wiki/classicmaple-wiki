@@ -2,8 +2,15 @@ id: delivering-a-box-of-fossils
 name: Delivering a Box of Fossils
 giver: winston
 turn_in: betty
+start_map: east-rocky-mountain-ii
 prerequisites:
   - searching-for-fossils
+next: research-on-plant-fossils
+steps:
+  - npc: winston
+    map: east-rocky-mountain-ii
+  - npc: betty
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Delivering_a_Box_of_Fossils
 verified:

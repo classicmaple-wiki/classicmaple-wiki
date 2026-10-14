@@ -2,6 +2,14 @@ id: don-hwangs-request
 name: Don Hwang's Request
 giver: nella
 turn_in: nella
+start_map: kerning-city
+steps:
+  - npc: nella
+    map: kerning-city
+  - monster: orange-mushroom
+  - monster: ribbon-pig
+  - npc: nella
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Don_Hwang's_Request
 verified:

@@ -2,6 +2,13 @@ id: i-need-to-find-my-daughter-1
 name: I Need to Find My Daughter 1
 giver: bruce
 turn_in: ayan
+start_map: henesys
+next: i-need-to-find-my-daughter-2
+steps:
+  - npc: bruce
+    map: henesys
+  - npc: ayan
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/I_Need_to_Find_My_Daughter_1
 verified:

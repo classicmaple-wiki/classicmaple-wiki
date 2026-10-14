@@ -2,8 +2,14 @@ id: proof-of-qualification-thief
 name: Proof of Qualification (Thief)
 giver: thief-job-instructor
 turn_in: dark-lord
+start_map: construction-site-north-of-kerning-city
 prerequisites:
   - test-of-qualification-thief
+steps:
+  - npc: thief-job-instructor
+    map: construction-site-north-of-kerning-city
+  - npc: dark-lord
+    map: thieves-hideout
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Thief)
 verified:

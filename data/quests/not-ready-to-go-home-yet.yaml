@@ -2,8 +2,14 @@ id: not-ready-to-go-home-yet
 name: Not Ready to Go Home Yet
 giver: jm-from-tha-streetz
 turn_in: alex
+start_map: kerning-city
 prerequisites:
   - one-more-debt-to-repay
+steps:
+  - npc: jm-from-tha-streetz
+    map: kerning-city
+  - npc: alex
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Not_Ready_to_Go_Home_Yet
 verified:

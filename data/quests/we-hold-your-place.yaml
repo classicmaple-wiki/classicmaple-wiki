@@ -1,8 +1,14 @@
 id: we-hold-your-place
 name: We Hold Your Place
 giver: grendel-the-really-old
+turn_in: lyn-the-librarian
+start_map: magic-library
 prerequisites:
   - the-dark-lords-signature
+steps:
+  - npc: grendel-the-really-old
+    map: magic-library
+  - npc: lyn-the-librarian
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/We_Hold_Your_Place
 verified:

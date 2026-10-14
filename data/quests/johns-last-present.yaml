@@ -2,8 +2,14 @@ id: johns-last-present
 name: John's Last Present
 giver: john
 turn_in: john
+start_map: lith-harbor
 prerequisites:
   - johns-present
+steps:
+  - npc: john
+    map: lith-harbor
+  - npc: john
+    map: lith-harbor
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/John's_Last_Present
 verified:

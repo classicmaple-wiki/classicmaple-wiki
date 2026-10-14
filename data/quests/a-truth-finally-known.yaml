@@ -2,8 +2,14 @@ id: a-truth-finally-known
 name: A Truth Finally Known
 giver: nella
 turn_in: jane-doe
+start_map: kerning-city
 prerequisites:
   - the-price-of-information
+steps:
+  - npc: nella
+    map: kerning-city
+  - npc: jane-doe
+    map: niora-hospital
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Truth_Finally_Known
 verified:

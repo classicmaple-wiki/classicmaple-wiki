@@ -2,8 +2,15 @@ id: collecting-50-cursed-dolls
 name: Collecting 50 Cursed Dolls
 giver: rowen-the-fairy
 turn_in: rowen-the-fairy
+start_map: ellinia
 prerequisites:
   - returned-secret-book
+steps:
+  - npc: rowen-the-fairy
+    map: ellinia
+  - monster: zombie-lupin
+  - npc: rowen-the-fairy
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Collecting_50_Cursed_Dolls
 verified:

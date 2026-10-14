@@ -2,8 +2,15 @@ id: a-torn-letter
 name: A Torn Letter
 giver: jane-doe
 turn_in: roxy
+start_map: niora-hospital
 prerequisites:
   - worn-bandages
+next: once-a-renowned-doctor
+steps:
+  - npc: jane-doe
+    map: niora-hospital
+  - npc: roxy
+    map: kerning-city-civic-center
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Torn_Letter
 verified:

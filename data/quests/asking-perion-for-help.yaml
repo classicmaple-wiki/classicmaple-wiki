@@ -2,8 +2,15 @@ id: asking-perion-for-help
 name: Asking Perion for Help
 giver: lewis
 turn_in: dances-with-balrog
+start_map: free-market-entrance
 prerequisites:
   - chief-stans-reply
+next: dances-with-balrogs-reply
+steps:
+  - npc: lewis
+    map: free-market-entrance
+  - npc: dances-with-balrog
+    map: warriors-sanctuary
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Asking_Perion_for_Help
 verified:

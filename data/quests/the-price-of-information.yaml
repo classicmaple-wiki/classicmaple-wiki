@@ -2,8 +2,15 @@ id: the-price-of-information
 name: The Price of Information
 giver: nella
 turn_in: nella
+start_map: kerning-city
 prerequisites:
   - once-a-renowned-doctor
+next: a-truth-finally-known
+steps:
+  - npc: nella
+    map: kerning-city
+  - npc: nella
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Price_of_Information
 verified:

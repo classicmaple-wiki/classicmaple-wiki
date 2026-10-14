@@ -3,7 +3,8 @@
    numbers), a Classic World wiki licensed CC BY-NC-SA 4.0.
 
    What it takes is deliberately narrow. Names, where things are, who gives
-   a quest and which quests come first, which maps connect through
+   a quest, how it starts, its steps (the NPC, monster, or map each step
+   names, never its text), which quests come first, which maps connect through
    portals, what a shop sells, and monster
    drops that players observed, with the date and the number of kills
    behind each rate. Since 2026-10-14 the owner also allows the core
@@ -326,7 +327,7 @@ function makeIdentifierAllocator(collection: string) {
 */
 async function planImport(): Promise<PlannedRecord[]> {
 	const excludedTitles = await notAtLaunchTitles();
-	const [maps, spawns, portals, monsters, drops, npcs, quests, prerequisiteRows, shops, shopItems, items] = [
+	const [maps, spawns, portals, monsters, drops, npcs, quests, prerequisiteRows, questSteps, shops, shopItems, items] = [
 		await cargoQuery('maps', '_pageName=page,region,nearest_town=town,map_type=kind,recommended_level_min=levelmin,recommended_level_max=levelmax'),
 		await cargoQuery('monster_spawns', 'monster_id=monster,map_id=map'),
 		await cargoQuery('portals', '_pageName=page,to_map=to,portal_type=kind,direction'),
@@ -336,8 +337,9 @@ async function planImport(): Promise<PlannedRecord[]> {
 			'monster_id=monster,item_id=item,drop_rate=rate,min_quantity=minimum,max_quantity=maximum,observed_on=observed,sample_kills=kills,sample_drops=dropped'
 		),
 		await cargoQuery('npcs', '_pageName=page,map,region'),
-		await cargoQuery('quests', '_pageName=page,giver,turn_in=turnin,region'),
+		await cargoQuery('quests', '_pageName=page,giver,turn_in=turnin,region,start_point=start,start_mode=mode,next_quest=next'),
 		await cargoQuery('quests', '_pageName=page,prerequisite__full=prerequisites'),
+		await cargoQuery('quest_steps', '_pageName=page,step_number=step,target_npc=npc,target_monster=monster,destination_map=map'),
 		await cargoQuery('shops', '_pageName=page,npc,map,region'),
 		await cargoQuery('shop_items', 'shop_id=shop,item_id=item'),
 		await cargoQuery('items', '_pageName=page,category,required_level=requiredlevel'),
@@ -571,9 +573,40 @@ async function planImport(): Promise<PlannedRecord[]> {
 		if (page && !isExcluded(page) && !npcPages.has(page)) npcPages.set(page, row);
 	}
 	for (const page of [...npcPages.keys()].sort()) npcIdentifier(page);
+
+	/*
+	   NPCs that quests name but that have no page of their own on the
+	   source, such as Slade. They become NPC records sourced to the first
+	   quest page that names them, so the quest can link to them. A name
+	   that is a monster's page is left to the monster.
+	*/
+	const npcStubs = new Map<string, string>();
+	const noteStub = (name: string | null | undefined, questPage: string | undefined) => {
+		const npcName = decodeEntities(name);
+		if (!npcName || !questPage || npcPages.has(npcName) || monsterPages.has(npcName) || isExcluded(npcName)) return;
+		if (!npcStubs.has(npcName)) npcStubs.set(npcName, questPage);
+	};
+	for (const row of quests) {
+		const questPage = decodeEntities(row.page);
+		noteStub(row.giver, questPage);
+		noteStub(row.turnin, questPage);
+	}
+	for (const row of questSteps) noteStub(row.npc, decodeEntities(row.page));
+	for (const npcName of [...npcStubs.keys()].sort()) npcIdentifier(npcName);
+	for (const [npcName, questPage] of [...npcStubs.entries()].sort(([first], [second]) => first.localeCompare(second))) {
+		const identifier = npcIdentifier(npcName)!;
+		planned.push({
+			pageName: questPage,
+			collection: 'npcs',
+			identifier,
+			record: compact({ id: identifier, name: npcName, source_page: sourcePageUrl(questPage), verified: importedVerification(questPage) }),
+		});
+	}
+
 	const resolveNpc = (name: string | null | undefined): string | undefined => {
 		const page = decodeEntities(name);
 		if (!page) return undefined;
+		if (npcStubs.has(page)) return npcIdentifier(page);
 		if (!npcPages.has(page)) {
 			countDroppedReference('NPC not imported');
 			return undefined;
@@ -615,8 +648,26 @@ async function planImport(): Promise<PlannedRecord[]> {
 		}
 		prerequisitesByQuest.set(page, identifiers);
 	}
+	const stepsByQuest = new Map<string, { step: number; record: DataRecord }[]>();
+	for (const row of questSteps) {
+		const page = decodeEntities(row.page);
+		if (!page || !questPages.has(page)) continue;
+		const monsterName = decodeEntities(row.monster);
+		const record = compact({
+			npc: resolveNpc(row.npc),
+			monster: monsterName && monsterPages.has(monsterName) ? monsterIdentifier(monsterName) : undefined,
+			map: resolveMap(row.map ?? undefined),
+		});
+		if (Object.keys(record).length === 0) continue;
+		const list = stepsByQuest.get(page) ?? [];
+		list.push({ step: Number(row.step) || list.length + 1, record });
+		stepsByQuest.set(page, list);
+	}
+	const startModes: Record<string, string> = { 'quest log': 'quest-log', automatic: 'automatic' };
+
 	for (const [page, row] of [...questPages.entries()].sort(([first], [second]) => first.localeCompare(second))) {
 		const identifier = questIdentifier(page)!;
+		const nextPage = decodeEntities(row.next);
 		planned.push({
 			pageName: page,
 			collection: 'quests',
@@ -626,7 +677,14 @@ async function planImport(): Promise<PlannedRecord[]> {
 				name: page,
 				giver: resolveNpc(row.giver),
 				turn_in: resolveNpc(row.turnin),
+				start_mode: startModes[decodeEntities(row.mode)?.toLowerCase() ?? ''],
+				start_map: resolveMap(row.start ?? undefined),
 				prerequisites: prerequisitesByQuest.get(page),
+				next: nextPage && questPages.has(nextPage) && nextPage !== page ? questIdentifier(nextPage) : undefined,
+				steps: stepsByQuest
+					.get(page)
+					?.sort((first, second) => first.step - second.step)
+					.map((step) => step.record),
 				region: decodeEntities(row.region),
 				source_page: sourcePageUrl(page),
 				verified: importedVerification(page),
@@ -670,7 +728,7 @@ async function planImport(): Promise<PlannedRecord[]> {
 		});
 	}
 
-	for (const entry of planned) entry.pageName = String(entry.record.name);
+	for (const entry of planned) entry.pageName ||= String(entry.record.name);
 	return planned;
 }
 

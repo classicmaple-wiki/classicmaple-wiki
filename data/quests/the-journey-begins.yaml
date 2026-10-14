@@ -2,6 +2,13 @@ id: the-journey-begins
 name: The Journey Begins
 giver: maple-administrator
 turn_in: maple-administrator
+start_mode: automatic
+start_map: henesys
+steps:
+  - npc: maple-administrator
+    map: henesys
+  - npc: maple-administrator
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Journey_Begins
 verified:

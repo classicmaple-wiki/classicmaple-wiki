@@ -2,8 +2,12 @@ id: lucas-reply
 name: Lucas' Reply
 giver: lucas
 turn_in: maria
+start_map: amherst
 prerequisites:
   - letter-for-lucas
+steps:
+  - npc: lucas
+  - npc: maria
 region: Maple Island
 source_page: https://mapleclassic.wiki/wiki/Lucas'_Reply
 verified:

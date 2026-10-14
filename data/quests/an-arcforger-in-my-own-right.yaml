@@ -2,8 +2,15 @@ id: an-arcforger-in-my-own-right
 name: An Arcforger in My Own Right!
 giver: chrishrama
 turn_in: chrishrama
+start_map: sleepywood
 prerequisites:
   - chrishrama-in-need-of-an-apprentice
+steps:
+  - npc: chrishrama
+    map: sleepywood
+  - monster: horny-mushroom
+  - npc: chrishrama
+    map: sleepywood
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/An_Arcforger_in_My_Own_Right!
 verified:

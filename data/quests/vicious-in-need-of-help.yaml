@@ -2,8 +2,15 @@ id: vicious-in-need-of-help
 name: Vicious in Need of Help
 giver: vicious
 turn_in: vicious
+start_map: henesys-market
 prerequisites:
   - vicious-in-need-of-an-apprentice
+steps:
+  - npc: vicious
+    map: henesys-market
+  - monster: axe-stump
+  - npc: vicious
+    map: henesys-market
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Vicious_in_Need_of_Help
 verified:

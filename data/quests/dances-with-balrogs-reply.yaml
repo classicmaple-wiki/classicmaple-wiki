@@ -2,8 +2,14 @@ id: dances-with-balrogs-reply
 name: Dances with Balrog's Reply
 giver: dances-with-balrog
 turn_in: lewis
+start_map: warriors-sanctuary
 prerequisites:
   - asking-perion-for-help
+steps:
+  - npc: dances-with-balrog
+    map: warriors-sanctuary
+  - npc: lewis
+    map: free-market-entrance
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Dances_with_Balrog's_Reply
 verified:

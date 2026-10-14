@@ -2,8 +2,14 @@ id: estelles-special-sauce-quest
 name: Estelle's Special Sauce (quest)
 giver: estelle
 turn_in: mrs-ming-ming
+start_map: the-field-south-of-ellinia
 prerequisites:
   - estelles-request
+steps:
+  - npc: estelle
+    map: the-field-south-of-ellinia
+  - npc: mrs-ming-ming
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Estelle's_Special_Sauce_(quest)
 verified:

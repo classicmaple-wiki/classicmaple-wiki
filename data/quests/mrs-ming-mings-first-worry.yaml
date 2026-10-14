@@ -2,6 +2,12 @@ id: mrs-ming-mings-first-worry
 name: Mrs. Ming Ming's First Worry
 giver: mrs-ming-ming
 turn_in: mrs-ming-ming
+start_map: henesys
+steps:
+  - npc: mrs-ming-ming
+    map: henesys
+  - npc: mrs-ming-ming
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Mrs._Ming_Ming's_First_Worry
 verified:

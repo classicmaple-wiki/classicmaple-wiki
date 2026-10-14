@@ -2,8 +2,15 @@ id: old-gladius-quest
 name: Old Gladius (quest)
 giver: manji
 turn_in: chrishrama
+start_map: perion
 prerequisites:
   - delivering-the-weird-medicine
+next: reawakening-the-gladius
+steps:
+  - npc: manji
+    map: perion
+  - npc: chrishrama
+    map: sleepywood
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Old_Gladius_(quest)
 verified:

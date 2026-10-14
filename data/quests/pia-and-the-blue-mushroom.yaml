@@ -2,6 +2,12 @@ id: pia-and-the-blue-mushroom
 name: Pia and the Blue Mushroom
 giver: pia
 turn_in: pia
+start_map: henesys-park
+steps:
+  - npc: pia
+    map: henesys-park
+  - npc: pia
+    map: henesys-park
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Pia_and_the_Blue_Mushroom
 verified:

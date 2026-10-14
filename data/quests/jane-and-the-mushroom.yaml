@@ -2,6 +2,14 @@ id: jane-and-the-mushroom
 name: Jane and the Mushroom
 giver: jane
 turn_in: jane
+start_map: lith-harbor
+steps:
+  - npc: jane
+    map: lith-harbor
+  - monster: blue-mushroom
+  - monster: horny-mushroom
+  - npc: jane
+    map: lith-harbor
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Jane_and_the_Mushroom
 verified:

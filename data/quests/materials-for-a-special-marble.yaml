@@ -2,8 +2,15 @@ id: materials-for-a-special-marble
 name: Materials for a Special Marble
 giver: camila
 turn_in: camila
+start_map: henesys
 prerequisites:
   - pias-mischievous-wish
+next: a-marble-made-with-care
+steps:
+  - npc: camila
+    map: henesys
+  - npc: camila
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Materials_for_a_Special_Marble
 verified:

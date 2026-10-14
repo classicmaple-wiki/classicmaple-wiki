@@ -2,8 +2,14 @@ id: mayas-second-collection
 name: Maya's Second Collection
 giver: maya
 turn_in: maya
+start_map: henesys-townstreet
 prerequisites:
   - mayas-first-collection
+steps:
+  - npc: maya
+    map: henesys-townstreet
+  - npc: maya
+    map: henesys-townstreet
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Maya's_Second_Collection
 verified:

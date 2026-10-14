@@ -2,8 +2,15 @@ id: taking-out-the-alligators-2
 name: Taking Out the Alligators 2
 giver: ayan
 turn_in: ayan
+start_map: perion
 prerequisites:
   - taking-out-the-alligators-1
+steps:
+  - npc: ayan
+    map: perion
+  - monster: croco
+  - npc: ayan
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Taking_Out_the_Alligators_2
 verified:

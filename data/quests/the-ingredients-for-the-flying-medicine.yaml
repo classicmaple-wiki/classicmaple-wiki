@@ -2,8 +2,14 @@ id: the-ingredients-for-the-flying-medicine
 name: The Ingredients for the Flying Medicine
 giver: wing-the-fairy
 turn_in: wing-the-fairy
+start_map: ellinia
 prerequisites:
   - in-search-of-wing-the-fairy
+steps:
+  - npc: wing-the-fairy
+    map: ellinia
+  - npc: wing-the-fairy
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Ingredients_for_the_Flying_Medicine
 verified:

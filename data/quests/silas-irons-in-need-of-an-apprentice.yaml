@@ -2,6 +2,14 @@ id: silas-irons-in-need-of-an-apprentice
 name: Silas Irons in Need of an Apprentice
 giver: silas-irons
 turn_in: silas-irons
+start_map: perion
+steps:
+  - npc: silas-irons
+    map: perion
+  - monster: stump
+  - monster: dark-stump
+  - npc: silas-irons
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Silas_Irons_in_Need_of_an_Apprentice
 verified:

@@ -2,6 +2,13 @@ id: an-unknown-savior
 name: An Unknown Savior
 giver: maya
 turn_in: maya
+start_map: henesys-townstreet
+next: a-name-on-a-note
+steps:
+  - npc: maya
+    map: henesys-townstreet
+  - npc: maya
+    map: henesys-townstreet
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/An_Unknown_Savior
 verified:

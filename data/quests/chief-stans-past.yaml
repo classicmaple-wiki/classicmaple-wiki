@@ -2,8 +2,15 @@ id: chief-stans-past
 name: Chief Stan's Past
 giver: jay
 turn_in: mrs-ming-ming
+start_map: henesys
 prerequisites:
   - mrs-ming-mings-concern
+next: chief-stans-hammer
+steps:
+  - npc: jay
+    map: henesys
+  - npc: mrs-ming-ming
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Chief_Stan's_Past
 verified:

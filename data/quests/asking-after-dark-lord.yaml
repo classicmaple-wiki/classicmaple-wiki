@@ -2,8 +2,14 @@ id: asking-after-dark-lord
 name: Asking After Dark Lord
 giver: community-board-kerning-city
 turn_in: dark-lord
+start_map: kerning-city
 prerequisites:
   - first-greeting-with-dark-lord
+steps:
+  - npc: community-board
+    map: kerning-city
+  - npc: dark-lord
+    map: thieves-hideout
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Asking_After_Dark_Lord
 verified:

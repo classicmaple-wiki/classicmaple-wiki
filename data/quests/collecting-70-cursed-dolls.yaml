@@ -2,8 +2,15 @@ id: collecting-70-cursed-dolls
 name: Collecting 70 Cursed Dolls
 giver: rowen-the-fairy
 turn_in: rowen-the-fairy
+start_map: ellinia
 prerequisites:
   - collecting-50-cursed-dolls
+steps:
+  - npc: rowen-the-fairy
+    map: ellinia
+  - monster: zombie-lupin
+  - npc: rowen-the-fairy
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Collecting_70_Cursed_Dolls
 verified:

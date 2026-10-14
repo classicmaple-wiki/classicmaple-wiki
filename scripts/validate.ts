@@ -133,6 +133,8 @@ function validateDataFiles(buildIdentifiers: Set<string>) {
 		{ collection: 'quests', field: 'giver', target: 'npcs' },
 		{ collection: 'quests', field: 'turn_in', target: 'npcs' },
 		{ collection: 'quests', field: 'prerequisites', target: 'quests' },
+		{ collection: 'quests', field: 'start_map', target: 'maps' },
+		{ collection: 'quests', field: 'next', target: 'quests' },
 		{ collection: 'shops', field: 'npc', target: 'npcs' },
 		{ collection: 'shops', field: 'map', target: 'maps' },
 		{ collection: 'shops', field: 'items', target: 'items' },
@@ -146,6 +148,13 @@ function validateDataFiles(buildIdentifiers: Set<string>) {
 				if (!parsedEntities.has(`${target}/${referencedIdentifier}`)) {
 					report(filePath, `${field}: "${referencedIdentifier}" does not exist in data/${target}/`);
 				}
+			}
+		}
+		if (collectionName === 'quests') {
+			for (const step of (data.steps as { npc?: string; monster?: string; map?: string }[] | undefined) ?? []) {
+				if (step.npc && !parsedEntities.has(`npcs/${step.npc}`)) report(filePath, `steps: NPC "${step.npc}" does not exist`);
+				if (step.monster && !parsedEntities.has(`monsters/${step.monster}`)) report(filePath, `steps: monster "${step.monster}" does not exist`);
+				if (step.map && !parsedEntities.has(`maps/${step.map}`)) report(filePath, `steps: map "${step.map}" does not exist`);
 			}
 		}
 		if (collectionName === 'maps') {

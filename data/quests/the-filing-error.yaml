@@ -1,6 +1,12 @@
 id: the-filing-error
 name: The Filing Error
+giver: lyn-the-librarian
 turn_in: chief-stan
+next: chief-stans-signature
+steps:
+  - npc: lyn-the-librarian
+  - npc: chief-stan
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Filing_Error
 verified:

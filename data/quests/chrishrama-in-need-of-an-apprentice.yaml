@@ -2,6 +2,13 @@ id: chrishrama-in-need-of-an-apprentice
 name: Chrishrama in Need of an Apprentice
 giver: chrishrama
 turn_in: chrishrama
+start_map: sleepywood
+steps:
+  - npc: chrishrama
+    map: sleepywood
+  - monster: dark-stump
+  - npc: chrishrama
+    map: sleepywood
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Chrishrama_in_Need_of_an_Apprentice
 verified:

@@ -2,6 +2,12 @@ id: first-greeting-with-chun-ji
 name: First Greeting with Chun Ji
 giver: community-board-kerning-city
 turn_in: chun-ji
+start_map: kerning-city
+steps:
+  - npc: community-board
+    map: kerning-city
+  - npc: chun-ji
+    map: kerning-city-construction-site
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/First_Greeting_with_Chun_Ji
 verified:

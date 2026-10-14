@@ -2,8 +2,15 @@ id: chief-stans-signature
 name: Chief Stan's Signature
 giver: chief-stan
 turn_in: manji
+start_map: henesys
 prerequisites:
   - the-filing-error
+next: repairing-the-book
+steps:
+  - npc: chief-stan
+    map: henesys
+  - npc: manji
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Chief_Stan's_Signature
 verified:

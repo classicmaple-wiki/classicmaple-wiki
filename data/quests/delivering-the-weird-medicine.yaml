@@ -2,8 +2,14 @@ id: delivering-the-weird-medicine
 name: Delivering the Weird Medicine
 giver: teo
 turn_in: maya
+start_map: lith-harbor
 prerequisites:
   - making-sparkling-rock
+steps:
+  - npc: teo
+    map: lith-harbor
+  - npc: maya
+    map: henesys-townstreet
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Delivering_the_Weird_Medicine
 verified:

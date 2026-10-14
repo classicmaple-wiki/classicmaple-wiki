@@ -2,6 +2,14 @@ id: fixing-blackbulls-house
 name: Fixing Blackbull's House
 giver: blackbull
 turn_in: blackbull
+start_map: perion
+steps:
+  - npc: blackbull
+    map: perion
+  - monster: stump
+  - monster: dark-stump
+  - npc: blackbull
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Fixing_Blackbull's_House
 verified:

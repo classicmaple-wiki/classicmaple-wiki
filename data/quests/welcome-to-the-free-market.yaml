@@ -2,6 +2,13 @@ id: welcome-to-the-free-market
 name: Welcome to the Free Market!
 giver: lewis
 turn_in: chief-stan
+start_map: free-market-entrance
+next: chief-stans-reply
+steps:
+  - npc: lewis
+    map: free-market-entrance
+  - npc: chief-stan
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Welcome_to_the_Free_Market!
 verified:

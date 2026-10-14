@@ -2,8 +2,14 @@ id: asking-after-chun-ji
 name: Asking After Chun Ji
 giver: community-board-kerning-city
 turn_in: chun-ji
+start_map: kerning-city
 prerequisites:
   - first-greeting-with-chun-ji
+steps:
+  - npc: community-board
+    map: kerning-city
+  - npc: chun-ji
+    map: kerning-city-construction-site
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Asking_After_Chun_Ji
 verified:

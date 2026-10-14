@@ -2,8 +2,14 @@ id: the-dark-lords-signature
 name: The Dark Lord's Signature
 giver: dark-lord
 turn_in: alex
+start_map: thieves-hideout
 prerequisites:
   - the-faded-ink
+steps:
+  - npc: dark-lord
+    map: thieves-hideout
+  - npc: alex
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Dark_Lord's_Signature
 verified:

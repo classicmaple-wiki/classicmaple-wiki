@@ -2,8 +2,16 @@ id: janes-final-challenge
 name: Jane's Final Challenge
 giver: jane
 turn_in: jane
+start_map: lith-harbor
 prerequisites:
   - janes-second-challenge
+steps:
+  - npc: jane
+    map: lith-harbor
+  - monster: dark-axe-stump
+  - monster: drake
+  - npc: jane
+    map: lith-harbor
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Jane's_Final_Challenge
 verified:
