@@ -14,11 +14,11 @@ Spec 0003, the interface that serves the art, is built on branch `spec/0002-desi
 
 ## In progress
 
-Pull request 3. `public/mockups/` goes before merge.
+Pull request 3, ready to merge. The old mockups are deleted.
 
 ## Next step
 
-Owner reviews the preview. Then delete `public/mockups/`, merge, and check production. The owner paints the remaining scenes with `docs/art-direction.md`; the agent installs each one.
+Owner merges pull request 3. Then check production and run Lighthouse there. The owner paints the remaining scenes with `docs/art-direction.md`; the agent installs each one.
 
 ## Blockers and questions for the owner
 

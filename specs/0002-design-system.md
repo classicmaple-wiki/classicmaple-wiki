@@ -214,7 +214,7 @@ Phase B, after the pick:
 - [x] `PageTitle` and `Hero` overrides.
 - [x] `Window` component. `MonsterTable` and `SkillList` moved into it, with phone reflow.
 - [x] Home, Thief, and Crimson Balrog pages in the chosen direction.
-- [ ] Remove `public/mockups/`.
+- [x] Remove `public/mockups/`.
 - [x] Contrast script run on the final tokens. Lighthouse mobile run on a local production build: home 99, Thief 98, Crimson Balrog 98, accessibility 100, layout shift 0. Not yet run on the Vercel preview.
 - [x] `npm run validate` and `npm run build`.
 - [ ] Update `BACKLOG.md` and rewrite `HANDOFF.md`.
