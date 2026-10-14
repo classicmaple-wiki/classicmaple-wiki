@@ -18,3 +18,8 @@ source_page: https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_II
+minimap:
+  file: minimaps/snail-hunting-ground-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/40001/minimap
+  retrieved: 2026-10-14

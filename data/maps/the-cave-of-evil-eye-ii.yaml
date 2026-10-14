@@ -19,3 +19,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Cave_of_Evil_Eye_II
   build: cot2
+minimap:
+  file: minimaps/the-cave-of-evil-eye-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/105070200/minimap
+  retrieved: 2026-10-14

@@ -24,3 +24,8 @@ source_page: https://mapleclassic.wiki/wiki/Henesys_Market
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Henesys_Market
+minimap:
+  file: minimaps/henesys-market.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100000100/minimap
+  retrieved: 2026-10-14

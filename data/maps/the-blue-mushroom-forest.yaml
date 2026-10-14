@@ -19,3 +19,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Blue_Mushroom_Forest
   build: cot2
+minimap:
+  file: minimaps/the-blue-mushroom-forest.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100030001/minimap
+  retrieved: 2026-10-14

@@ -10,3 +10,8 @@ source_page: https://mapleclassic.wiki/wiki/The_Resting_Spot%2C_Pig_Park
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Resting_Spot%2C_Pig_Park
+minimap:
+  file: minimaps/the-resting-spot-pig-park.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100000006/minimap
+  retrieved: 2026-10-14

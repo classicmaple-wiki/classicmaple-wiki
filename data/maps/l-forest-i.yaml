@@ -25,3 +25,8 @@ source_page: https://mapleclassic.wiki/wiki/L_Forest_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/L_Forest_I
+minimap:
+  file: minimaps/l-forest-i.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/103020000/minimap
+  retrieved: 2026-10-14

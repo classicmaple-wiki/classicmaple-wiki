@@ -22,6 +22,9 @@ const routesDirectory = path.resolve('src/content/docs/leveling');
 const spritesDirectory = path.resolve('public/sprites');
 const maximumSpriteSide = 192;
 const maximumSpriteBytes = 40 * 1024;
+const minimapsDirectory = path.resolve('public/minimaps');
+const maximumMinimapSide = 640;
+const maximumMinimapBytes = 80 * 1024;
 const problems: string[] = [];
 
 function report(filePath: string, message: string) {
@@ -231,51 +234,53 @@ function readPngSize(filePath: string): { width: number; height: number } | unde
 }
 
 /*
-   Every sprite block must point at an allowed source and an existing,
-   small PNG named after its entry. Every file in public/sprites must be
-   claimed by an entry, so nothing sits on the site without a record of
-   where it came from.
+   Every picture block must point at an allowed source and an existing,
+   small PNG named after its entry. Sprites live in public/sprites under
+   their collection, and map minimaps in public/minimaps (decision 0010).
+   Every file in those folders must be claimed by an entry, so nothing
+   sits on the site without a record of where it came from.
 */
-function validateSprites(
+function validatePictures(
 	parsedEntities: Map<string, { filePath: string; data: Record<string, unknown> }>,
-	sourceStatuses: Map<string, string>
+	sourceStatuses: Map<string, string>,
+	picture: { field: string; root: string; directory: string; filePrefix: (entityKey: string) => string; maximumSide: number; maximumBytes: number }
 ) {
 	const claimedFiles = new Set<string>();
 	for (const [entityKey, { filePath, data }] of parsedEntities) {
-		const spriteRecord = data.sprite as { file: string; source: string } | undefined;
-		if (!spriteRecord) continue;
-		const expectedFile = `${entityKey}.png`;
-		if (spriteRecord.file !== expectedFile) report(filePath, `sprite.file must be "${expectedFile}"`);
-		const status = sourceStatuses.get(spriteRecord.source);
+		const record = data[picture.field] as { file: string; source: string } | undefined;
+		if (!record) continue;
+		const expectedFile = `${picture.filePrefix(entityKey)}.png`;
+		if (record.file !== expectedFile) report(filePath, `${picture.field}.file must be "${expectedFile}"`);
+		const status = sourceStatuses.get(record.source);
 		if (status === undefined) {
-			report(filePath, `sprite.source "${spriteRecord.source}" is not in data/sprite-sources.yaml`);
+			report(filePath, `${picture.field}.source "${record.source}" is not in data/sprite-sources.yaml`);
 		} else if (status !== 'allowed' && status !== 'allowed-with-credit') {
-			report(filePath, `sprite.source "${spriteRecord.source}" is ${status}. See docs/policies/images.md`);
+			report(filePath, `${picture.field}.source "${record.source}" is ${status}. See docs/policies/images.md`);
 		}
-		const spritePath = path.join(spritesDirectory, spriteRecord.file);
-		claimedFiles.add(path.resolve(spritePath));
-		if (!existsSync(spritePath)) {
-			report(filePath, `sprite file public/sprites/${spriteRecord.file} does not exist`);
+		const picturePath = path.join(picture.root, record.file);
+		claimedFiles.add(path.resolve(picturePath));
+		if (!existsSync(picturePath)) {
+			report(filePath, `${picture.field} file ${path.relative(process.cwd(), picturePath)} does not exist`);
 			continue;
 		}
-		const size = readPngSize(spritePath);
-		if (!size) report(filePath, `public/sprites/${spriteRecord.file} is not a PNG`);
-		else if (size.width > maximumSpriteSide || size.height > maximumSpriteSide) {
-			report(filePath, `public/sprites/${spriteRecord.file} is ${size.width} by ${size.height}. Keep sprites at most ${maximumSpriteSide} by ${maximumSpriteSide}`);
+		const size = readPngSize(picturePath);
+		if (!size) report(filePath, `${path.relative(process.cwd(), picturePath)} is not a PNG`);
+		else if (size.width > picture.maximumSide || size.height > picture.maximumSide) {
+			report(filePath, `${path.relative(process.cwd(), picturePath)} is ${size.width} by ${size.height}. Keep it at most ${picture.maximumSide} by ${picture.maximumSide}`);
 		}
-		if (statSync(spritePath).size > maximumSpriteBytes) {
-			report(filePath, `public/sprites/${spriteRecord.file} is over ${maximumSpriteBytes / 1024} KB`);
-		}
-	}
-	if (!existsSync(spritesDirectory)) return;
-	for (const folderName of readdirSync(spritesDirectory)) {
-		const folderPath = path.join(spritesDirectory, folderName);
-		if (!statSync(folderPath).isDirectory()) continue;
-		for (const fileName of readdirSync(folderPath)) {
-			const filePath = path.resolve(folderPath, fileName);
-			if (!claimedFiles.has(filePath)) report(filePath, 'No data entry claims this sprite. Add a sprite block or delete the file');
+		if (statSync(picturePath).size > picture.maximumBytes) {
+			report(filePath, `${path.relative(process.cwd(), picturePath)} is over ${picture.maximumBytes / 1024} KB`);
 		}
 	}
+	if (!existsSync(picture.directory)) return;
+	const unclaimed = (directory: string) => {
+		for (const name of readdirSync(directory)) {
+			const fullPath = path.resolve(directory, name);
+			if (statSync(fullPath).isDirectory()) unclaimed(fullPath);
+			else if (!claimedFiles.has(fullPath)) report(fullPath, 'No data entry claims this picture. Add a picture block or delete the file');
+		}
+	};
+	unclaimed(picture.directory);
 }
 
 /*
@@ -318,7 +323,23 @@ const buildIdentifiers = loadBuildIdentifiers();
 const parsedEntities = validateDataFiles(buildIdentifiers);
 const entityCount = parsedEntities.size;
 validateImportProvenance(parsedEntities);
-validateSprites(parsedEntities, loadSpriteSourceStatuses());
+const spriteSourceStatuses = loadSpriteSourceStatuses();
+validatePictures(parsedEntities, spriteSourceStatuses, {
+	field: 'sprite',
+	root: spritesDirectory,
+	directory: spritesDirectory,
+	filePrefix: (entityKey) => entityKey,
+	maximumSide: maximumSpriteSide,
+	maximumBytes: maximumSpriteBytes,
+});
+validatePictures(parsedEntities, spriteSourceStatuses, {
+	field: 'minimap',
+	root: path.resolve('public'),
+	directory: minimapsDirectory,
+	filePrefix: (entityKey) => `minimaps/${entityKey.split('/')[1]}`,
+	maximumSide: maximumMinimapSide,
+	maximumBytes: maximumMinimapBytes,
+});
 const routeCount = validateLevelingRoutes(buildIdentifiers);
 
 if (problems.length > 0) {

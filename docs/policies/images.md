@@ -10,7 +10,8 @@ The rules for every picture on Classic Maple Wiki. Agents and contributors follo
 | Scenes, page headers, the shelf of places | Yes | Our own painted pictures, made with an image model or by hand, following `docs/art-direction.md` |
 | Wordmark, icons, interface glyphs | Yes | Our own art, or the open icon sets listed in `docs/research/assets.md` |
 | Your own in-game screenshot | Yes, small, in a guide, as evidence | You took it yourself |
-| Nexon map art, key art, wallpapers, backgrounds | No | Paint our own scene instead |
+| A map's minimap, the small overview the game shows in its corner | Yes, on that map's page only (decision 0010) | maplestory.io, fetched by `scripts/fetch-sprites.ts` |
+| Other Nexon map art, full map renders, key art, wallpapers, backgrounds | No | Paint our own scene instead |
 | Nexon or MapleStory logos and wordmarks | No | Name the game in plain text instead |
 | Music and sound | No | |
 | Anything a fan site made itself: renders, composites, custom icons, fan art | No | |

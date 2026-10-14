@@ -18,3 +18,8 @@ source_page: https://mapleclassic.wiki/wiki/Sleepywood
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sleepywood
+minimap:
+  file: minimaps/sleepywood.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/105040300/minimap
+  retrieved: 2026-10-14

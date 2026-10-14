@@ -16,3 +16,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Forest_Up_North_IX
   build: cot2
+minimap:
+  file: minimaps/tree-dungeon-forest-up-north-ix.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101020010/minimap
+  retrieved: 2026-10-14

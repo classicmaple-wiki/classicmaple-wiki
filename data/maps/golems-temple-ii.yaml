@@ -15,3 +15,8 @@ source_page: https://mapleclassic.wiki/wiki/Golem's_Temple_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Golem's_Temple_II
+minimap:
+  file: minimaps/golems-temple-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/106010104/minimap
+  retrieved: 2026-10-14

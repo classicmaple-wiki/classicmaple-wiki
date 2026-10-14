@@ -17,3 +17,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_II
   build: cot2
+minimap:
+  file: minimaps/dungeon-southern-forest-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100040002/minimap
+  retrieved: 2026-10-14

@@ -23,3 +23,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Lorang_and_Clang
   build: cot2
+minimap:
+  file: minimaps/lorang-and-clang.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/110030000/minimap
+  retrieved: 2026-10-14

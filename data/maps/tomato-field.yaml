@@ -19,3 +19,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tomato_Field
   build: cot2
+minimap:
+  file: minimaps/tomato-field.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/1020001/minimap
+  retrieved: 2026-10-14

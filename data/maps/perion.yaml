@@ -24,3 +24,8 @@ source_page: https://mapleclassic.wiki/wiki/Perion
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Perion
+minimap:
+  file: minimaps/perion.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/102000000/minimap
+  retrieved: 2026-10-14

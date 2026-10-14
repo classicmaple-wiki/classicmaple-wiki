@@ -1,24 +1,18 @@
 ---
 /*
-   The one call to action a window shows when it has no data at all. It
-   replaces a row of separate Add it links with a single dashed box: a
-   small question mark icon, one short message, and one rounded button. The button goes straight to the file to edit.
+   The note a window shows when it has nothing to show yet. Since
+   2026-10-15 it is a plain muted line with no button: contributing has
+   one dedicated place, the How to contribute page, linked at the foot of
+   every page. The action and href props are kept so existing callers
+   still compile, and are not shown.
 */
-import Icon from './Icon.astro';
-
 interface Props {
 	message: string;
-	href: string;
-	action: string;
+	href?: string;
+	action?: string;
 }
 
-const { message, href, action } = Astro.props;
+const { message } = Astro.props;
 ---
 
-<div class="invitation">
-	<Icon name="question" size={18} class="invitation__glyph" />
-	<div class="invitation__content">
-		<p class="invitation__message">{message}</p>
-		<a class="client-button invitation__action" href={href} rel="noopener">{action}</a>
-	</div>
-</div>
+<p class="window__note">{message}</p>

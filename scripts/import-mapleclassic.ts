@@ -686,7 +686,7 @@ function resolveAgainstDisk(entry: PlannedRecord): { action: 'create' | 'update'
 	if (!existing.source_page) return { action: 'keep-hand-written', record: existing };
 	const status = (existing.verified as { status?: string } | undefined)?.status;
 	if (status && status !== 'unverified') return { action: 'keep-verified', record: existing };
-	const humanFields = ['sprite', 'scene', 'mood', 'notes', 'differs_from_original', 'changes'];
+	const humanFields = ['sprite', 'minimap', 'scene', 'mood', 'notes', 'differs_from_original', 'changes'];
 	const kept = Object.fromEntries(humanFields.filter((field) => existing[field] !== undefined).map((field) => [field, existing[field]]));
 	return { action: 'update', record: { ...entry.record, ...kept } };
 }

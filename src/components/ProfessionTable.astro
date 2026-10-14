@@ -16,7 +16,6 @@ import { getCollection } from 'astro:content';
 import { defaultBranch, repositoryUrl } from '../../site.config.mjs';
 import { formatStatistic } from '../lib/data';
 import Invitation from './Invitation.astro';
-import VerifiedBadge from './VerifiedBadge.astro';
 import Window from './Window.astro';
 
 const professions = (await getCollection('professions'))
@@ -42,7 +41,6 @@ const professionFolderUrl = `${repositoryUrl}/tree/${defaultBranch}/data/profess
 						<th scope="col">Profession</th>
 						<th scope="col">Unlocks at level</th>
 						<th scope="col">What it makes</th>
-						<th scope="col">Status</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -57,9 +55,6 @@ const professionFolderUrl = `${repositoryUrl}/tree/${defaultBranch}/data/profess
 							</td>
 							<td data-label="What it makes" class:list={{ 'unknown-value': !profession.summary }}>
 								{profession.summary ?? 'Unknown'}
-							</td>
-							<td data-label="Status">
-								<VerifiedBadge verified={profession.verified} />
 							</td>
 						</tr>
 					))}

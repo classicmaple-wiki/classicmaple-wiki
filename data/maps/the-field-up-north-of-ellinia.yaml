@@ -18,3 +18,8 @@ source_page: https://mapleclassic.wiki/wiki/The_Field_Up_North_of_Ellinia
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Field_Up_North_of_Ellinia
+minimap:
+  file: minimaps/the-field-up-north-of-ellinia.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101010000/minimap
+  retrieved: 2026-10-14

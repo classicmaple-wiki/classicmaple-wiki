@@ -14,7 +14,6 @@ import { getCollection } from 'astro:content';
 import { repositoryUrl, defaultBranch } from '../../site.config.mjs';
 import { formatList, formatStatistic } from '../lib/data';
 import Invitation from './Invitation.astro';
-import VerifiedBadge from './VerifiedBadge.astro';
 import Window from './Window.astro';
 
 const monsters = (await getCollection('monsters'))
@@ -61,7 +60,6 @@ const monsterFolderUrl = `${repositoryUrl}/tree/${defaultBranch}/data/monsters`;
 								<th scope="col">HP</th>
 								<th scope="col">EXP</th>
 								<th scope="col">Weak to</th>
-								<th scope="col">Status</th>
 							</tr>
 						</thead>
 						<tbody data-monster-rows>
@@ -81,9 +79,6 @@ const monsterFolderUrl = `${repositoryUrl}/tree/${defaultBranch}/data/monsters`;
 									</td>
 									<td class:list={{ 'unknown-value': monster.weak_to.length === 0 }}>
 										{formatList(monster.weak_to)}
-									</td>
-									<td>
-										<VerifiedBadge verified={monster.verified} />
 									</td>
 								</tr>
 							))}

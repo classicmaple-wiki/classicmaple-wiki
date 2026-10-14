@@ -20,3 +20,8 @@ source_page: https://mapleclassic.wiki/wiki/West_Domain_of_Perion
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/West_Domain_of_Perion
+minimap:
+  file: minimaps/west-domain-of-perion.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/102030000/minimap
+  retrieved: 2026-10-14

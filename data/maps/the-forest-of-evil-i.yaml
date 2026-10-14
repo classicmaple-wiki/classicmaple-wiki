@@ -19,3 +19,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Forest_of_Evil_I
   build: cot2
+minimap:
+  file: minimaps/the-forest-of-evil-i.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100040105/minimap
+  retrieved: 2026-10-14

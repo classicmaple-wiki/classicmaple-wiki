@@ -22,3 +22,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_IV
   build: cot2
+minimap:
+  file: minimaps/sleepy-dungeon-iv.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/105040304/minimap
+  retrieved: 2026-10-14

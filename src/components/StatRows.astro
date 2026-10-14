@@ -5,12 +5,10 @@
    dotted line runs between rows. Under 480 pixels each label stacks above
    its value, so nothing is squeezed on a phone.
 
-   A missing, null, or empty value reads Unknown in muted italic. When
-   every row is Unknown and an edit link is given, one invitation opens the
-   block instead of a link on every row. When only some rows are Unknown,
-   each of those rows gets a small Add it link instead.
+   A missing, null, or empty value reads Unknown in muted italic, with no
+   link. Contributing has one dedicated place, linked at the foot of every
+   page. editUrl and subject are still accepted, so callers keep working.
 */
-import Invitation from './Invitation.astro';
 
 interface StatRow {
 	label: string;
@@ -24,7 +22,7 @@ interface Props {
 	subject?: string;
 }
 
-const { rows, editUrl, subject } = Astro.props;
+const { rows } = Astro.props;
 
 /*
    A value counts as known only when it has something to show. Zero is a
@@ -42,13 +40,7 @@ function formatValue(value: string | number): string {
 	return typeof value === 'number' ? value.toLocaleString('en-US') : value;
 }
 
-const everyRowUnknown = rows.length > 0 && rows.every((row) => !isKnown(row.value));
-const showsInvitation = everyRowUnknown && editUrl !== undefined;
-const showsRowLinks = !everyRowUnknown && editUrl !== undefined;
-const invitationMessage = `Nobody has recorded ${subject ?? 'these values'} yet. Seen it in game? Bring a screenshot.`;
 ---
-
-{showsInvitation && editUrl && <Invitation message={invitationMessage} href={editUrl} action="Add the first value" />}
 
 <dl class="stat-rows">
 	{
@@ -63,14 +55,7 @@ const invitationMessage = `Nobody has recorded ${subject ?? 'these values'} yet.
 							formatValue(row.value)
 						)
 					) : (
-						<>
-							<span class="unknown-value">Unknown</span>
-							{showsRowLinks && (
-								<a class="stat-rows__add" href={editUrl} rel="noopener">
-									Add it<span class="sr-only"> ({row.label})</span>
-								</a>
-							)}
-						</>
+						<span class="unknown-value">Unknown</span>
 					)}
 				</dd>
 			</div>

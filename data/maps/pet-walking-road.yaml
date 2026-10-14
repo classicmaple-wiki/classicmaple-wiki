@@ -10,3 +10,8 @@ source_page: https://mapleclassic.wiki/wiki/Pet-Walking_Road
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Pet-Walking_Road
+minimap:
+  file: minimaps/pet-walking-road.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100000202/minimap
+  retrieved: 2026-10-14

@@ -28,3 +28,8 @@ source_page: https://mapleclassic.wiki/wiki/The_Forest_East_of_Henesys
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Forest_East_of_Henesys
+minimap:
+  file: minimaps/the-forest-east-of-henesys.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100030000/minimap
+  retrieved: 2026-10-14

@@ -11,9 +11,8 @@
    Leveling overview shows the Beginner. A page without a picture yet
    simply shows none.
 
-   Under the banner, plain text on the page: the breadcrumb, then on an
-   entity page the verification chip and the entity's id, read from its
-   data file, which is found by the page's path. A parent section links
+   Under the banner, plain text on the page: the breadcrumb. Verification
+   status stays in the data and is not shown (owner, 2026-10-15). A parent section links
    only when a page for it exists. Entity sections point at the library
    filtered to that type.
 
@@ -36,7 +35,6 @@ import { placeOfEntry } from '../lib/places';
 import { resolveClassScene, resolveGuideScene, scenes, type ResolvedScene } from '../lib/scenes';
 import { sceneAspectRatio } from '../lib/sceneArt';
 import Scene from './scenes/Scene.astro';
-import VerifiedBadge from './VerifiedBadge.astro';
 
 const pageTitleIdentifier = '_top';
 const route = Astro.locals.starlightRoute;
@@ -283,19 +281,5 @@ const characterPicture = characterName
 				}
 			</ol>
 		</nav>
-		{
-			entityStatus && (
-				<p class="page-title__meta">
-					<VerifiedBadge
-						verified={entityStatus.verified}
-						href={entityStatus.verified.source?.startsWith('https://mapleclassic.wiki/') ? '#source' : undefined}
-					/>
-					<span class="page-title__meta-item">
-						<span class="page-title__meta-label">{entityStatus.identifierLabel}</span>
-						<code>{entityStatus.identifier}</code>
-					</span>
-				</p>
-			)
-		}
 	</div>
 </div>

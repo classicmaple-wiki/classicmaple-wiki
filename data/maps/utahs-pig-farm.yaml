@@ -12,3 +12,8 @@ source_page: https://mapleclassic.wiki/wiki/Utah's_Pig_Farm
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Utah's_Pig_Farm
+minimap:
+  file: minimaps/utahs-pig-farm.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/900000000/minimap
+  retrieved: 2026-10-14

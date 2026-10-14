@@ -14,3 +14,8 @@ source_page: https://mapleclassic.wiki/wiki/Pig_Park_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Pig_Park_II
+minimap:
+  file: minimaps/pig-park-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100000004/minimap
+  retrieved: 2026-10-14

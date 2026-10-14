@@ -22,3 +22,8 @@ source_page: https://mapleclassic.wiki/wiki/The_Entrance_of_Golem's_Temple
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Entrance_of_Golem's_Temple
+minimap:
+  file: minimaps/the-entrance-of-golems-temple.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/106010102/minimap
+  retrieved: 2026-10-14

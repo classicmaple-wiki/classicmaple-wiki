@@ -14,7 +14,6 @@
 import { getEntry } from 'astro:content';
 import { editBaseUrl } from '../../site.config.mjs';
 import StatRows from './StatRows.astro';
-import VerifiedBadge from './VerifiedBadge.astro';
 import Window from './Window.astro';
 
 interface Props {
@@ -39,8 +38,4 @@ const systemFileUrl = `${editBaseUrl}data/systems/${systemId}.yaml`;
 		editUrl={systemFileUrl}
 		subject="this system"
 	/>
-	<p class="window__status" slot="footer">
-		<span class="window__status-label">Status</span>
-		<VerifiedBadge verified={system.verified} />
-	</p>
 </Window>

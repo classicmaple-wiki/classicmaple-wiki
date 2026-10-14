@@ -18,3 +18,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Mushroom_Garden_(Victoria_Island)
   build: cot2
+minimap:
+  file: minimaps/mushroom-garden-victoria-island.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/104030001/minimap
+  retrieved: 2026-10-14

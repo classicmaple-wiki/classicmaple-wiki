@@ -16,7 +16,6 @@ hero:
 import Window from '../../components/Window.astro';
 import TaskGrid from '../../components/TaskGrid.astro';
 import PlaceShelf from '../../components/PlaceShelf.astro';
-import VerifiedBadge from '../../components/VerifiedBadge.astro';
 
 <Window title="Find something" id="find-something">
 	<TaskGrid />
@@ -30,16 +29,12 @@ import VerifiedBadge from '../../components/VerifiedBadge.astro';
 <Window title="How to read this wiki" id="how-to-read">
 	<ul class="status-key not-content">
 		<li class="status-key__row">
-			<span class="status-key__badge"><VerifiedBadge verified={{ status: 'official' }} /></span>
-			<span>Taken from official patch notes or posts. Each page lists its sources at the bottom.</span>
+			<span class="status-key__badge"><span class="chip">Build</span></span>
+			<span>Every number says which version of the game it was seen in. Numbers from the closed beta say so.</span>
 		</li>
 		<li class="status-key__row">
-			<span class="status-key__badge"><VerifiedBadge verified={{ status: 'in-game' }} /></span>
-			<span>Seen in the live game by a player, with a screenshot.</span>
-		</li>
-		<li class="status-key__row">
-			<span class="status-key__badge"><VerifiedBadge verified={{ status: 'unverified' }} /></span>
-			<span>Reported but not yet confirmed. Treat it as a lead, not a fact.</span>
+			<span class="status-key__badge"><span class="chip">Sources</span></span>
+			<span>Each page lists where its facts come from at the bottom.</span>
 		</li>
 		<li class="status-key__row">
 			<span class="status-key__badge"><span class="chip">What changed</span></span>
@@ -48,4 +43,4 @@ import VerifiedBadge from '../../components/VerifiedBadge.astro';
 	</ul>
 </Window>
 
-<p class="home-closing">Most pages are marked unverified right now. That is on purpose. If you are playing, you can fix that in a few minutes: see <a href="/contributing/">How to contribute</a>.</p>
+<p class="home-closing">This wiki is built by players. Seen something we are missing? See <a href="/contributing/">How to contribute</a>.</p>

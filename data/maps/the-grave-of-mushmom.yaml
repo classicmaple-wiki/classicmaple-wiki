@@ -17,3 +17,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Grave_of_Mushmom
   build: cot2
+minimap:
+  file: minimaps/the-grave-of-mushmom.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/105070002/minimap
+  retrieved: 2026-10-14

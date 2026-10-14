@@ -22,3 +22,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Deep_Ant_Tunnel_II
   build: cot2
+minimap:
+  file: minimaps/deep-ant-tunnel-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/105070000/minimap
+  retrieved: 2026-10-14

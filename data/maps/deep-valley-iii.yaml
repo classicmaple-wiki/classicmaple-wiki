@@ -22,3 +22,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Deep_Valley_III
   build: cot2
+minimap:
+  file: minimaps/deep-valley-iii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/106000200/minimap
+  retrieved: 2026-10-14

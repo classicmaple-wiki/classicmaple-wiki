@@ -18,3 +18,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hot_Sand
   build: cot2
+minimap:
+  file: minimaps/hot-sand.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/110040000/minimap
+  retrieved: 2026-10-14

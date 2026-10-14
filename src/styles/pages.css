@@ -1170,3 +1170,28 @@ site-search button[data-open-modal]:hover {
 	content-visibility: auto;
 	contain-intrinsic-size: auto 220px;
 }
+
+/*
+   A map's minimap at the top of its Map window (decision 0010), centered
+   on a dark plate like the game's own minimap frame, never wider than
+   the window.
+*/
+.window .map-minimap {
+	margin: 0 0 var(--space-4);
+	padding: var(--space-3);
+	background: #1b2134;
+	border-radius: 12px;
+	text-align: center;
+}
+
+.window .map-minimap img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+
+.window .map-minimap figcaption {
+	margin-top: var(--space-1);
+	color: #c9cee3;
+	font-size: var(--text-xs);
+}

@@ -9,3 +9,8 @@ source_page: https://mapleclassic.wiki/wiki/Magic_Library
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Magic_Library
+minimap:
+  file: minimaps/magic-library.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101000003/minimap
+  retrieved: 2026-10-14

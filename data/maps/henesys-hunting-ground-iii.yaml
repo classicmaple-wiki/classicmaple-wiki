@@ -21,3 +21,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_III
   build: cot2
+minimap:
+  file: minimaps/henesys-hunting-ground-iii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/104040002/minimap
+  retrieved: 2026-10-14

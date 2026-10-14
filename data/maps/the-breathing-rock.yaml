@@ -21,3 +21,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Breathing_Rock
   build: cot2
+minimap:
+  file: minimaps/the-breathing-rock.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/106010101/minimap
+  retrieved: 2026-10-14

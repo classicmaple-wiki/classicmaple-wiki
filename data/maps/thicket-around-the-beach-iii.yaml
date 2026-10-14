@@ -25,3 +25,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_III
   build: cot2
+minimap:
+  file: minimaps/thicket-around-the-beach-iii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/104000400/minimap
+  retrieved: 2026-10-14

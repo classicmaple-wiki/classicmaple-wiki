@@ -20,3 +20,8 @@ source_page: https://mapleclassic.wiki/wiki/Amherst
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Amherst
+minimap:
+  file: minimaps/amherst.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/1000000/minimap
+  retrieved: 2026-10-14

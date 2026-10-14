@@ -22,3 +22,8 @@ source_page: https://mapleclassic.wiki/wiki/Ellinia
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ellinia
+minimap:
+  file: minimaps/ellinia.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101000000/minimap
+  retrieved: 2026-10-14
