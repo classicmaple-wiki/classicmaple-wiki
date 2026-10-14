@@ -1,6 +1,8 @@
 id: lorang-lorang-lorang
 name: Lorang Lorang Lorang
 region: Victoria Island
+town: Florina Beach
+kind: field
 monsters:
   - lorang
   - tortie

@@ -1,6 +1,8 @@
 id: perion-weapon-store
 name: Perion Weapon Store
 region: Victoria Island
+town: Perion
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Perion_Weapon_Store
 verified:
   status: unverified

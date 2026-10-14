@@ -1,6 +1,8 @@
 id: the-swamp-of-despair-i
 name: The Swamp of Despair I
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - horny-mushroom
   - jr-necki

@@ -62,6 +62,17 @@ export default defineConfig({
 						{ label: 'Privacy', slug: 'privacy' },
 					],
 				},
+				{
+					label: 'Places',
+					items: [
+						{ label: 'Maple Island', link: '/places/maple-island/' },
+						{ label: 'Henesys', link: '/places/henesys/' },
+						{ label: 'Ellinia', link: '/places/ellinia/' },
+						{ label: 'Perion', link: '/places/perion/' },
+						{ label: 'Kerning City', link: '/places/kerning-city/' },
+						{ label: 'Sleepywood', link: '/places/sleepywood/' },
+					],
+				},
 				{ label: 'Classes', items: [{ autogenerate: { directory: 'classes' } }] },
 				{ label: 'Leveling', items: [{ autogenerate: { directory: 'leveling' } }] },
 				{ label: 'Economy and systems', items: [{ autogenerate: { directory: 'economy' } }] },

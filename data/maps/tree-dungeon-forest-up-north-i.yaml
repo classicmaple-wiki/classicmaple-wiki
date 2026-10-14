@@ -1,6 +1,8 @@
 id: tree-dungeon-forest-up-north-i
 name: Tree Dungeon, Forest Up North I
 region: Victoria Island
+town: Ellinia
+kind: dungeon
 monsters:
   - horny-mushroom
   - slime

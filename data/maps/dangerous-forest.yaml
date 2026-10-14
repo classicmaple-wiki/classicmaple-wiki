@@ -1,6 +1,8 @@
 id: dangerous-forest
 name: Dangerous Forest
 region: Maple Island
+town: Amherst
+kind: hunting-ground
 monsters:
   - blue-snail
   - orange-mushroom

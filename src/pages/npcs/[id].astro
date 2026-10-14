@@ -5,6 +5,8 @@
    stands on, and the region, then the quests the NPC gives or takes and
    the shop the NPC runs, each linked to its own page. Missing values read
    Unknown. Notes, the history, and the source credit follow.
+
+   The History window appears only once the entry has a recorded change.
 */
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getCollection } from 'astro:content';
@@ -13,6 +15,7 @@ import ChangeLog from '../../components/ChangeLog.astro';
 import SourceCredit from '../../components/SourceCredit.astro';
 import StatRows from '../../components/StatRows.astro';
 import Window from '../../components/Window.astro';
+import { placeForTown } from '../../lib/places';
 import { resolveMapScene } from '../../lib/scenes';
 
 export async function getStaticPaths() {
@@ -24,9 +27,11 @@ export async function getStaticPaths() {
 }
 
 const { npc } = Astro.props;
-const resolved = await resolveMapScene(npc);
 const editUrl = `${editBaseUrl}data/npcs/${npc.id}.yaml`;
 const standingMap = (await getCollection('maps')).find((mapEntry) => mapEntry.data.id === npc.map)?.data;
+const resolved = await resolveMapScene(standingMap ?? npc);
+const npcTown = standingMap?.town ?? (standingMap?.kind === 'town' ? standingMap.name : undefined);
+const npcPlace = placeForTown(npcTown);
 const relatedQuests = (await getCollection('quests'))
 	.map((questEntry) => questEntry.data)
 	.filter((quest) => quest.giver === npc.id || quest.turn_in === npc.id)
@@ -38,6 +43,7 @@ const runShops = (await getCollection('shops'))
 const statisticRows = [
 	{ label: 'Role', value: npc.role },
 	{ label: 'Map', value: standingMap?.name, href: standingMap ? `/maps/${standingMap.id}/` : undefined },
+	{ label: 'Town', value: npcTown, href: npcPlace ? `/places/${npcPlace}/` : undefined },
 	{ label: 'Region', value: npc.region },
 ];
 
@@ -45,7 +51,7 @@ const headings = [
 	{ depth: 2, slug: 'stats', text: 'NPC' },
 	...(relatedQuests.length > 0 || runShops.length > 0 ? [{ depth: 2, slug: 'links', text: 'Quests and shops' }] : []),
 	...(npc.notes ? [{ depth: 2, slug: 'notes', text: 'Notes' }] : []),
-	{ depth: 2, slug: 'history', text: 'History' },
+	...(npc.changes.length > 0 ? [{ depth: 2, slug: 'history', text: 'History' }] : []),
 ];
 ---
 
@@ -96,7 +102,7 @@ const headings = [
 		)
 	}
 
-	<ChangeLog collectionName="npcs" entityIdentifier={npc.id} />
+	{npc.changes.length > 0 && <ChangeLog collectionName="npcs" entityIdentifier={npc.id} />}
 
 	<SourceCredit sources={[npc.source_page]} />
 </StarlightPage>

@@ -1,6 +1,8 @@
 id: the-deep-forest-of-patience-step-5
 name: The Deep Forest of Patience (Step 5)
 region: Victoria Island
+town: Sleepywood
+kind: town
 monsters:
   - super-jr-necki
   - super-slime

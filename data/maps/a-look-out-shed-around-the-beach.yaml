@@ -1,6 +1,8 @@
 id: a-look-out-shed-around-the-beach
 name: A Look-Out Shed Around the Beach
 region: Victoria Island
+town: Florina Beach
+kind: field
 monsters:
   - lorang
   - lupin

@@ -1,6 +1,8 @@
 id: ant-tunnel-iii
 name: Ant Tunnel III
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
 monsters:
   - horny-mushroom
   - zombie-mushroom

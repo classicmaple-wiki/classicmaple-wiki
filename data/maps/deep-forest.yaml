@@ -1,6 +1,8 @@
 id: deep-forest
 name: Deep Forest
 region: Victoria Island
+town: Sleepywood
+kind: field
 monsters:
   - dark-axe-stump
   - dark-stump

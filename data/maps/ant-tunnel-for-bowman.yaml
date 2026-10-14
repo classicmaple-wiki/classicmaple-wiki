@@ -1,6 +1,8 @@
 id: ant-tunnel-for-bowman
 name: Ant Tunnel For Bowman
 region: Hidden Street
+town: Henesys
+kind: dungeon
 monsters:
   - evil-eye
   - zombie-mushroom

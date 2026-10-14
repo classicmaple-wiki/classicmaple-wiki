@@ -1,6 +1,8 @@
 id: ellinia-station
 name: Ellinia Station
 region: Victoria Island
+town: Ellinia
+kind: town-interior
 source_page: https://mapleclassic.wiki/wiki/Ellinia_Station
 verified:
   status: unverified

@@ -1,6 +1,8 @@
 id: the-cave-of-evil-eye-i
 name: The Cave of Evil Eye I
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
 monsters:
   - evil-eye
   - jr-boogie-2

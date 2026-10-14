@@ -1,6 +1,8 @@
 id: thicket-around-the-beach-ii
 name: Thicket Around the Beach II
 region: Victoria Island
+town: Lith Harbor
+kind: field
 monsters:
   - orange-mushroom
   - pig

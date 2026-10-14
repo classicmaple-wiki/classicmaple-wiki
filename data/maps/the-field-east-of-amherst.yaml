@@ -1,6 +1,8 @@
 id: the-field-east-of-amherst
 name: The Field East of Amherst
 region: Maple Island
+town: Amherst
+kind: field
 monsters:
   - blue-snail
   - orange-mushroom

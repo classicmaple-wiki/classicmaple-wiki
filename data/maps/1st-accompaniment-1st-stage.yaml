@@ -1,6 +1,7 @@
 id: 1st-accompaniment-1st-stage
 name: 1st Accompaniment (1st Stage)
 region: Hidden Street
+kind: field
 monsters:
   - ligator
 source_page: https://mapleclassic.wiki/wiki/1st_Accompaniment_(1st_Stage)

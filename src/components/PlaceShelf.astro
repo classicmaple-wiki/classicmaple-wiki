@@ -18,19 +18,13 @@
    pointing nowhere. Styles live in
    pages.css. The list opts out of Starlight's markdown styles.
 */
-import type { SceneIdentifier } from '../../schemas/shared';
 import { sceneAspectRatio } from '../lib/sceneArt';
 import { placeOrder, scenes } from '../lib/scenes';
 import Scene from './scenes/Scene.astro';
 
-const placePages: Partial<Record<SceneIdentifier, string>> = {
-	henesys: '/economy/crafting/',
-	'kerning-city': '/classes/thief/',
-};
-
 const places = placeOrder.map((identifier) => ({
 	...scenes[identifier],
-	href: placePages[identifier],
+	href: `/places/${identifier}/`,
 	isPainted: sceneAspectRatio(identifier) !== undefined,
 }));
 const paintedPlaces = places.filter((place) => place.isPainted);
@@ -54,7 +48,6 @@ const unpaintedPlaces = places.filter((place) => !place.isPainted);
 						<span class="place-shelf__label">
 							<span class="place-shelf__name">{place.label}</span>
 							<span class="place-shelf__moment">{place.moment}</span>
-							{!place.href && <span class="place-shelf__status">No pages yet</span>}
 						</span>
 					</CardTag>
 				</li>

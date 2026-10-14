@@ -1,6 +1,8 @@
 id: sleepy-dungeon-iii
 name: Sleepy Dungeon III
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
 monsters:
   - curse-eye
   - dark-stone-golem

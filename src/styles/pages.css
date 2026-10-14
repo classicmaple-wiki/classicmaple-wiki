@@ -1111,3 +1111,19 @@ site-search button[data-open-modal]:hover {
 	color: inherit;
 	text-decoration: underline;
 }
+
+/*
+   Map groups on a place page (spec 0007): a small Fredoka label over
+   each group of map links, with space between groups.
+*/
+.window .place-maps + .place-maps {
+	margin-top: var(--space-5);
+}
+
+.window .place-maps__label {
+	margin: 0 0 var(--space-2);
+	font-family: var(--font-display);
+	font-size: var(--text-md);
+	font-weight: 600;
+	color: var(--color-ink-muted);
+}

@@ -1,6 +1,8 @@
 id: deep-ant-tunnel-ii
 name: Deep Ant Tunnel II
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
 monsters:
   - evil-eye
   - horny-mushroom

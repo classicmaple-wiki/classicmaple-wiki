@@ -1,6 +1,8 @@
 id: rocky-road-i
 name: Rocky Road I
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - dark-stump
   - green-mushroom

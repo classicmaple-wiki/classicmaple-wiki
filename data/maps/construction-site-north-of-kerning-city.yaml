@@ -1,6 +1,8 @@
 id: construction-site-north-of-kerning-city
 name: Construction Site North of Kerning City
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - axe-stump
   - blue-mushroom

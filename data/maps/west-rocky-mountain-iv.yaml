@@ -1,6 +1,8 @@
 id: west-rocky-mountain-iv
 name: West Rocky Mountain IV
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - axe-stump
   - dark-axe-stump

@@ -1,6 +1,8 @@
 id: sleepywood
 name: Sleepywood
 region: Victoria Island
+town: Sleepywood
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Sleepywood
 verified:
   status: unverified

@@ -1,6 +1,8 @@
 id: b2-area-2
 name: B2 (Area 2)
 region: Victoria Island
+town: Kerning City
+kind: town
 source_page: https://mapleclassic.wiki/wiki/B2_(Area_2)
 verified:
   status: unverified

@@ -1,6 +1,8 @@
 id: truth-booth
 name: Truth Booth
 region: Hidden Street
+town: Truth Booth
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Truth_Booth
 verified:
   status: unverified

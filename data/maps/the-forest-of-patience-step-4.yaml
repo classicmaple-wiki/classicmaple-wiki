@@ -1,6 +1,8 @@
 id: the-forest-of-patience-step-4
 name: The Forest of Patience (Step 4)
 region: Victoria Island
+town: Ellinia
+kind: town
 monsters:
   - super-jr-necki
 source_page: https://mapleclassic.wiki/wiki/The_Forest_of_Patience_(Step_4)

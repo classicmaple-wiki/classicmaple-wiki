@@ -1,6 +1,8 @@
 id: henesys-townstreet
 name: Henesys Townstreet
 region: Victoria Island
+town: Henesys
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Henesys_Townstreet
 verified:
   status: unverified

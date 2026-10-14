@@ -1,6 +1,8 @@
 id: tomato-field
 name: Tomato Field
 region: Maple Island
+town: Amherst
+kind: field
 monsters:
   - blue-snail
   - orange-mushroom

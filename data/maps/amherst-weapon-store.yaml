@@ -1,6 +1,8 @@
 id: amherst-weapon-store
 name: Amherst Weapon Store
 region: Maple Island
+town: Amherst
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Amherst_Weapon_Store
 verified:
   status: unverified

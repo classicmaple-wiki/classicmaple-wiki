@@ -1,6 +1,8 @@
 id: east-rocky-mountain-iii
 name: East Rocky Mountain III
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - axe-stump
   - dark-stump

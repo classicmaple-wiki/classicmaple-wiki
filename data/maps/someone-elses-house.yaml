@@ -1,6 +1,8 @@
 id: someone-elses-house
 name: Someone Else's House
 region: Victoria Island
+town: Henesys
+kind: field
 monsters:
   - fairy-2
   - iron-hog

@@ -1,6 +1,8 @@
 id: the-forest-of-evil-i
 name: The Forest of Evil I
 region: Victoria Island
+town: Ellinia
+kind: field
 monsters:
   - malady
   - zombie-lupin

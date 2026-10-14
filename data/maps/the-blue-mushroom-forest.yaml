@@ -1,6 +1,8 @@
 id: the-blue-mushroom-forest
 name: The Blue Mushroom Forest
 region: Victoria Island
+town: Henesys
+kind: field
 monsters:
   - blue-mushroom
   - blue-snail

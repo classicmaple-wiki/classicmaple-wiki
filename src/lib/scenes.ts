@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import type { Mood, SceneIdentifier } from '../../schemas/shared';
+import { placeForTown } from './places';
 
 /*
    The library of places (spec 0002). Every page sits in one of seven
@@ -75,8 +76,11 @@ export function resolveGuideScene(frontmatter: PresentationFields): ResolvedScen
 	return combine(frontmatter, 'default');
 }
 
-export async function resolveMapScene(map: PresentationFields & { region?: string }): Promise<ResolvedScene> {
-	return combine(map, sceneFromPlaceName(map.region) ?? 'default');
+export async function resolveMapScene(
+	map: PresentationFields & { region?: string; town?: string; name?: string; kind?: string }
+): Promise<ResolvedScene> {
+	const town = map.town ?? (map.kind === 'town' ? map.name : undefined);
+	return combine(map, placeForTown(town) ?? sceneFromPlaceName(map.region) ?? 'default');
 }
 
 /*

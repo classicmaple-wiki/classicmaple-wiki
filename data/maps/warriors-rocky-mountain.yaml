@@ -1,6 +1,8 @@
 id: warriors-rocky-mountain
 name: Warrior's Rocky Mountain
 region: Hidden Street
+town: Perion
+kind: field
 monsters:
   - fire-boar
   - lupin

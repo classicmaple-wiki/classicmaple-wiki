@@ -1,6 +1,8 @@
 id: b3-area-1
 name: B3 (Area 1)
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - super-stirge
 source_page: https://mapleclassic.wiki/wiki/B3_(Area_1)

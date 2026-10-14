@@ -1,6 +1,8 @@
 id: tree-dungeon-monkey-forest-i
 name: Tree Dungeon, Monkey Forest I
 region: Victoria Island
+town: Ellinia
+kind: dungeon
 monsters:
   - curse-eye
   - zombie-lupin

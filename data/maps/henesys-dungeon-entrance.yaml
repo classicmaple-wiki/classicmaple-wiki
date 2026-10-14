@@ -1,6 +1,8 @@
 id: henesys-dungeon-entrance
 name: Henesys Dungeon Entrance
 region: Victoria Island
+town: Henesys
+kind: dungeon
 monsters:
   - blue-mushroom
   - green-mushroom

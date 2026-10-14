@@ -1,6 +1,8 @@
 id: the-burnt-land-ii
 name: The Burnt Land II
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - dark-axe-stump
   - fire-boar

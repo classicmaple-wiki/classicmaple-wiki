@@ -1,6 +1,8 @@
 id: sleepy-dungeon-i
 name: Sleepy Dungeon I
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
 monsters:
   - curse-eye
   - green-mushroom

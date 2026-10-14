@@ -1,6 +1,8 @@
 id: perion-department-store
 name: Perion Department Store
 region: Victoria Island
+town: Perion
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Perion_Department_Store
 verified:
   status: unverified

@@ -1,6 +1,8 @@
 id: snail-field-of-flowers
 name: Snail Field of Flowers
 region: Maple Island
+town: Amherst
+kind: field
 monsters:
   - blue-snail
   - orange-mushroom

@@ -1,6 +1,8 @@
 id: henesys-skin-care
 name: Henesys Skin-Care
 region: Victoria Island
+town: Henesys
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Henesys_Skin-Care
 verified:
   status: unverified

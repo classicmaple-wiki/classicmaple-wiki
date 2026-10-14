@@ -1,6 +1,8 @@
 id: mushroom-garden-maple-island
 name: Mushroom Garden (Maple Island)
 region: Maple Island
+town: Amherst
+kind: hunting-ground
 monsters:
   - orange-mushroom
   - shroom

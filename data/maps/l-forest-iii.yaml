@@ -1,6 +1,8 @@
 id: l-forest-iii
 name: L Forest III
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - blue-mushroom
   - blue-snail

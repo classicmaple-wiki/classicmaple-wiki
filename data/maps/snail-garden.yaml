@@ -1,6 +1,8 @@
 id: snail-garden
 name: Snail Garden
 region: Maple Island
+town: Amherst
+kind: hunting-ground
 monsters:
   - blue-snail
   - red-snail

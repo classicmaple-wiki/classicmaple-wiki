@@ -1,6 +1,8 @@
 id: the-tunnel-that-lost-light-i
 name: The Tunnel That Lost Light I
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
 monsters:
   - cold-eye
   - drake

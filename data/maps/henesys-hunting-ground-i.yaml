@@ -1,6 +1,8 @@
 id: henesys-hunting-ground-i
 name: Henesys Hunting Ground I
 region: Victoria Island
+town: Henesys
+kind: hunting-ground
 monsters:
   - blue-snail
   - green-mushroom

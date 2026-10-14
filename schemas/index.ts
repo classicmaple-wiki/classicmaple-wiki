@@ -71,6 +71,8 @@ export const spriteSource = z.strictObject({
 
 export const map = entityBase.extend({
 	region: z.string().optional(),
+	town: z.string().optional(),
+	kind: z.enum(['town', 'field', 'dungeon', 'hunting-ground', 'trading-hub', 'town-interior', 'hidden-street']).optional(),
 	recommended_level: z.tuple([positiveInteger, positiveInteger]).optional(),
 	monsters: z.array(identifier).default([]),
 });

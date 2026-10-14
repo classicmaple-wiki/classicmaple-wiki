@@ -1,6 +1,8 @@
 id: the-swamp-of-despair-iii
 name: The Swamp of Despair III
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - jr-necki
   - ligator
