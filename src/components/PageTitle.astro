@@ -6,7 +6,10 @@
    bottom, so the text always reads whatever the picture is. A small
    wooden tag above the name says which section the page belongs to, the
    one warm touch kept from the storybook look. On an entity page, its
-   sprite stands beside the name.
+   sprite stands beside the name. On a class page, the class character
+   from src/assets/characters/ stands on the right of the banner, and the
+   Leveling overview shows the Beginner. A page without a picture yet
+   simply shows none.
 
    Under the banner, plain text on the page: the breadcrumb, then on an
    entity page the verification chip and the entity's id, read from its
@@ -24,6 +27,8 @@
    the table of contents still land on it. Styles live in pages.css.
 */
 import { existsSync, readFileSync } from 'node:fs';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import { getCollection, getEntry } from 'astro:content';
 import type { Verification } from '../../schemas/shared';
 import { libraryTypeForSection } from '../lib/library';
@@ -185,6 +190,14 @@ const entityStatus = await findEntityStatus();
 const resident = findResident(entityStatus?.spriteFile);
 const bandAspectRatio = sceneAspectRatio(resolved.scene);
 const sectionTag = breadcrumb.length > 2 ? breadcrumb[breadcrumb.length - 2].label : undefined;
+
+const characterPictures = import.meta.glob<{ default: ImageMetadata }>('../assets/characters/*.{png,webp}', { eager: true });
+const characterName =
+	pathSegments[0] === 'classes' && pathSegments.length === 2 ? pathSegments[1] : route.id === 'leveling' ? 'beginner' : undefined;
+const characterPicture = characterName
+	? Object.entries(characterPictures).find(([filePath]) => filePath.split('/').pop()?.replace(/\.(png|webp)$/, '') === characterName)?.[1]
+			.default
+	: undefined;
 ---
 
 <div class="page-title">
@@ -195,6 +208,19 @@ const sectionTag = breadcrumb.length > 2 ? breadcrumb[breadcrumb.length - 2].lab
 		style={bandAspectRatio && `--scene-aspect: ${bandAspectRatio}`}
 	>
 		<Scene scene={resolved.scene} variant="band" />
+		{
+			characterPicture && (
+				<Image
+					class="page-title__character"
+					src={characterPicture}
+					alt=""
+					height={360}
+					widths={[180, 360]}
+					sizes="180px"
+					loading="eager"
+				/>
+			)
+		}
 		<div class="page-title__overlay">
 			{
 				resident && (
@@ -236,7 +262,10 @@ const sectionTag = breadcrumb.length > 2 ? breadcrumb[breadcrumb.length - 2].lab
 		{
 			entityStatus && (
 				<p class="page-title__meta">
-					<VerifiedBadge verified={entityStatus.verified} />
+					<VerifiedBadge
+						verified={entityStatus.verified}
+						href={entityStatus.verified.source?.startsWith('https://mapleclassic.wiki/') ? '#source' : undefined}
+					/>
 					<span class="page-title__meta-item">
 						<span class="page-title__meta-label">{entityStatus.identifierLabel}</span>
 						<code>{entityStatus.identifier}</code>

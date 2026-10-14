@@ -25,7 +25,7 @@ const lines: CreditLine[] = creditLines(Astro.props.sources);
 
 {
 	lines.length > 0 && (
-		<aside class="source-credit" aria-label="Source and license">
+		<aside class="source-credit" id="source" aria-label="Source and license">
 			<p class="source-credit__title">Source</p>
 			<ul class="source-credit__list">
 				{lines.map((line) => (
