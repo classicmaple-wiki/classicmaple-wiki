@@ -4,3 +4,8 @@ source_page: https://mapleclassic.wiki/wiki/Iron_Hog
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Iron_Hog
+sprite:
+  file: monsters/iron-hog.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/4230103/render/stand/0
+  retrieved: 2026-10-14

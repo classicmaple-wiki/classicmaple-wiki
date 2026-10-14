@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Squishy_Liquid
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Squishy_Liquid
+sprite:
+  file: items/squishy-liquid.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000004/icon
+  retrieved: 2026-10-14

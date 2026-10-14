@@ -22,3 +22,8 @@ source_page: https://mapleclassic.wiki/wiki/Dark_Axe_Stump
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Axe_Stump
+sprite:
+  file: monsters/dark-axe-stump.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/2130100/render/stand/0
+  retrieved: 2026-10-14

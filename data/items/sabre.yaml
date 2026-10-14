@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Sabre
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sabre
+sprite:
+  file: items/sabre.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1302005/icon
+  retrieved: 2026-10-14

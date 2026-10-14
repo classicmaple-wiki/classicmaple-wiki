@@ -4,3 +4,8 @@ source_page: https://mapleclassic.wiki/wiki/Dark_Stone_Golem
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Stone_Golem
+sprite:
+  file: monsters/dark-stone-golem.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/5130102/render/stand/0
+  retrieved: 2026-10-14

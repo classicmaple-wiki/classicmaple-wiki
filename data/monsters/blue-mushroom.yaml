@@ -36,3 +36,8 @@ source_page: https://mapleclassic.wiki/wiki/Blue_Mushroom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Mushroom
+sprite:
+  file: monsters/blue-mushroom.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/2220100/render/stand/0
+  retrieved: 2026-10-14

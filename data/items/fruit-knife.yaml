@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Fruit_Knife
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Fruit_Knife
+sprite:
+  file: items/fruit-knife.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1332007/icon
+  retrieved: 2026-10-14

@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Apple
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Apple
+sprite:
+  file: items/apple.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2010000/icon
+  retrieved: 2026-10-14

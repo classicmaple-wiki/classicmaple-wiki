@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Grape_Juice
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Grape_Juice
+sprite:
+  file: items/grape-juice.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2020010/icon
+  retrieved: 2026-10-14

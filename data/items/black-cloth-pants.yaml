@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Black_Cloth_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Cloth_Pants
+sprite:
+  file: items/black-cloth-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060023/icon
+  retrieved: 2026-10-14

@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Red_Nightshift
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Nightshift
+sprite:
+  file: items/red-nightshift.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041044/icon
+  retrieved: 2026-10-14

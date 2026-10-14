@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Fried_Chicken
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Fried_Chicken
+sprite:
+  file: items/fried-chicken.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2020001/icon
+  retrieved: 2026-10-14

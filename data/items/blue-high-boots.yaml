@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Blue_High_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_High_Boots
+sprite:
+  file: items/blue-high-boots.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1072047/icon
+  retrieved: 2026-10-14

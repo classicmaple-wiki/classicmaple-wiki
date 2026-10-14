@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Top
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Top
+sprite:
+  file: items/brown-hard-leather-top.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040003/icon
+  retrieved: 2026-10-14

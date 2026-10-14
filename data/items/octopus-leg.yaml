@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Octopus_Leg
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Octopus_Leg
+sprite:
+  file: items/octopus-leg.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000006/icon
+  retrieved: 2026-10-14

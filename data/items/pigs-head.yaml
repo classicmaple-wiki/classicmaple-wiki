@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Pig's_Head
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Pig's_Head
+sprite:
+  file: items/pigs-head.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000017/icon
+  retrieved: 2026-10-14

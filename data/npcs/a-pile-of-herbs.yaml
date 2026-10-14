@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/A_pile_of_herbs
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/A_pile_of_herbs
+sprite:
+  file: npcs/a-pile-of-herbs.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1043001/render/stand/0
+  retrieved: 2026-10-14

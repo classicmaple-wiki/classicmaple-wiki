@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Beige_Plain_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Beige_Plain_Robe
+sprite:
+  file: items/beige-plain-robe.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1050008/icon
+  retrieved: 2026-10-14

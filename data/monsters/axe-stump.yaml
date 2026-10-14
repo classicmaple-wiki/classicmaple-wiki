@@ -36,3 +36,8 @@ source_page: https://mapleclassic.wiki/wiki/Axe_Stump
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Axe_Stump
+sprite:
+  file: monsters/axe-stump.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/1130100/render/stand/0
+  retrieved: 2026-10-14

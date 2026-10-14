@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Black_Bennis_Chainmail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Bennis_Chainmail
+sprite:
+  file: items/black-bennis-chainmail.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040023/icon
+  retrieved: 2026-10-14

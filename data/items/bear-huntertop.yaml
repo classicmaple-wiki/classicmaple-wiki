@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Bear_Huntertop
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bear_Huntertop
+sprite:
+  file: items/bear-huntertop.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1072067/icon
+  retrieved: 2026-10-14

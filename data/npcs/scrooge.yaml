@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Scrooge
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Scrooge
+sprite:
+  file: npcs/scrooge.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/9030100/render/stand/0
+  retrieved: 2026-10-14

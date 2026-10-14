@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Luke
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Luke
+sprite:
+  file: npcs/luke.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1040000/render/stand/0
+  retrieved: 2026-10-14

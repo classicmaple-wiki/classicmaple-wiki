@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Hard_Briefcase
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hard_Briefcase
+sprite:
+  file: items/hard-briefcase.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1322008/icon
+  retrieved: 2026-10-14

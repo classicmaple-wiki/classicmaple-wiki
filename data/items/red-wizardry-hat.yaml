@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Red_Wizardry_Hat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Wizardry_Hat
+sprite:
+  file: items/red-wizardry-hat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002073/icon
+  retrieved: 2026-10-14

@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Estelle
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Estelle
+sprite:
+  file: npcs/estelle.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1032105/render/stand/0
+  retrieved: 2026-10-14

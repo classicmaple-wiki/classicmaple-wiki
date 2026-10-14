@@ -62,3 +62,8 @@ source_page: https://mapleclassic.wiki/wiki/Snail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Snail
+sprite:
+  file: monsters/snail.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/100100/render/stand/0
+  retrieved: 2026-10-14

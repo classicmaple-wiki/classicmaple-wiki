@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Red_Headband
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Headband
+sprite:
+  file: items/red-headband.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002014/icon
+  retrieved: 2026-10-14

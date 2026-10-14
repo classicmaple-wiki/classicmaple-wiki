@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Egg
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Egg
+sprite:
+  file: items/egg.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4032451/icon
+  retrieved: 2026-10-14

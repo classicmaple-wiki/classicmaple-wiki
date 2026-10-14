@@ -4,3 +4,8 @@ source_page: https://mapleclassic.wiki/wiki/Red_Drake
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Drake
+sprite:
+  file: monsters/red-drake.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/6130100/render/stand/0
+  retrieved: 2026-10-14

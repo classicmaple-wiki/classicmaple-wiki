@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Red_Snail_Shell
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Snail_Shell
+sprite:
+  file: items/red-snail-shell.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000016/icon
+  retrieved: 2026-10-14

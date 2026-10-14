@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Blue_Qi_Pao
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Qi_Pao
+sprite:
+  file: items/blue-qi-pao.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041040/icon
+  retrieved: 2026-10-14

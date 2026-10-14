@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Balanche
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Balanche
+sprite:
+  file: items/balanche.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1462003/icon
+  retrieved: 2026-10-14

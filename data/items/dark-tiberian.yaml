@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Dark_Tiberian
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Tiberian
+sprite:
+  file: items/dark-tiberian.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002150/icon
+  retrieved: 2026-10-14

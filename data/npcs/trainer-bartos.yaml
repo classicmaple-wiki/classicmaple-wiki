@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Trainer_Bartos
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Trainer_Bartos
+sprite:
+  file: npcs/trainer-bartos.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1012006/render/stand/0
+  retrieved: 2026-10-14

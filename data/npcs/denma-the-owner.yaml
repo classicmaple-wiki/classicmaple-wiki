@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Denma_the_Owner
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Denma_the_Owner
+sprite:
+  file: npcs/denma-the-owner.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1052004/render/stand/0
+  retrieved: 2026-10-14

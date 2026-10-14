@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Ultra_Jr._Necki_1
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ultra_Jr._Necki_1
+sprite:
+  file: monsters/ultra-jr-necki-1.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/9100003/render/stand/0
+  retrieved: 2026-10-14

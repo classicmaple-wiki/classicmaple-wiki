@@ -53,3 +53,8 @@ source_page: https://mapleclassic.wiki/wiki/Dark_Stump
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Stump
+sprite:
+  file: monsters/dark-stump.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/1110101/render/stand/0
+  retrieved: 2026-10-14

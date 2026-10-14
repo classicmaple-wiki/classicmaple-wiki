@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Black_Thief_Hood
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Thief_Hood
+sprite:
+  file: items/black-thief-hood.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002110/icon
+  retrieved: 2026-10-14

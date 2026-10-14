@@ -70,3 +70,8 @@ source_page: https://mapleclassic.wiki/wiki/Ribbon_Pig
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+sprite:
+  file: monsters/ribbon-pig.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/1210101/render/stand/0
+  retrieved: 2026-10-14

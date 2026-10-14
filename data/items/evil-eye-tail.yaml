@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Evil_Eye_Tail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Evil_Eye_Tail
+sprite:
+  file: items/evil-eye-tail.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000007/icon
+  retrieved: 2026-10-14

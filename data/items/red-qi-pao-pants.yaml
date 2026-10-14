@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Red_Qi_Pao_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Qi_Pao_Pants
+sprite:
+  file: items/red-qi-pao-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061003/icon
+  retrieved: 2026-10-14

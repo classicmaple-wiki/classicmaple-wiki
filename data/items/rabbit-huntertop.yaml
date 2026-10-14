@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Rabbit_Huntertop
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Rabbit_Huntertop
+sprite:
+  file: items/rabbit-huntertop.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1072026/icon
+  retrieved: 2026-10-14

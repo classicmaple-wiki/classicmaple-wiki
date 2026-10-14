@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Bubbling's_Huge_Bubble
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bubbling's_Huge_Bubble
+sprite:
+  file: items/bubblings-huge-bubble.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000037/icon
+  retrieved: 2026-10-14

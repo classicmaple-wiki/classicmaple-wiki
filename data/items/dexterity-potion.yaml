@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Dexterity_Potion
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dexterity_Potion
+sprite:
+  file: items/dexterity-potion.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2002000/icon
+  retrieved: 2026-10-14

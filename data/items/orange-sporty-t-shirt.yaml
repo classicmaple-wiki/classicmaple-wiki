@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Orange_Sporty_T-Shirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Orange_Sporty_T-Shirt
+sprite:
+  file: items/orange-sporty-t-shirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040014/icon
+  retrieved: 2026-10-14

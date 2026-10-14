@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Topaz_Ore
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Topaz_Ore
+sprite:
+  file: items/topaz-ore.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4020006/icon
+  retrieved: 2026-10-14

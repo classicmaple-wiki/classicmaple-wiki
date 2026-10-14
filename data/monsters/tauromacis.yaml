@@ -4,3 +4,8 @@ source_page: https://mapleclassic.wiki/wiki/Tauromacis
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tauromacis
+sprite:
+  file: monsters/tauromacis.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/7130100/render/stand/0
+  retrieved: 2026-10-14

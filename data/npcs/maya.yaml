@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Maya
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Maya
+sprite:
+  file: npcs/maya.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1012101/render/stand/0
+  retrieved: 2026-10-14

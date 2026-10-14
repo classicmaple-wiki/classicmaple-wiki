@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Grey_Able_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Grey_Able_Skirt
+sprite:
+  file: items/grey-able-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061059/icon
+  retrieved: 2026-10-14

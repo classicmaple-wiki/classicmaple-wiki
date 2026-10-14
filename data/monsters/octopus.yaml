@@ -54,3 +54,8 @@ source_page: https://mapleclassic.wiki/wiki/Octopus
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Octopus
+sprite:
+  file: monsters/octopus.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/1120100/render/stand/0
+  retrieved: 2026-10-14
