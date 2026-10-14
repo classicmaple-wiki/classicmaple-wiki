@@ -1,10 +1,12 @@
 id: bronze-aroa-boots
 name: Bronze Aroa Boots
 category: equipment
+required_level: 16
 source_page: https://mapleclassic.wiki/wiki/Bronze_Aroa_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bronze_Aroa_Boots
+  build: cot2
 sprite:
   file: items/bronze-aroa-boots.png
   source: maplestory-io

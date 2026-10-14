@@ -1,6 +1,11 @@
 id: dark-cave
 name: Dark Cave
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
+recommended_level:
+  - 20
+  - 24
 monsters:
   - horny-mushroom
   - stirge
@@ -9,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Dark_Cave
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Cave
+  build: cot2

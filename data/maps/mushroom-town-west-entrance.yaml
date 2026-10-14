@@ -1,6 +1,8 @@
 id: mushroom-town-west-entrance
 name: Mushroom Town - West Entrance
 region: Maple Island
+town: Mushroom Town - West Entrance
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Mushroom_Town_-_West_Entrance
 verified:
   status: unverified

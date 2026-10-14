@@ -6,6 +6,8 @@
    first, each linked to its own page, then the quests this one opens.
    Rewards and requirements are left out until a player confirms them.
    Notes, the history, and the source credit follow.
+
+   The History window appears only once the entry has a recorded change.
 */
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getCollection } from 'astro:content';
@@ -52,7 +54,7 @@ const headings = [
 	{ depth: 2, slug: 'stats', text: 'Quest' },
 	...(prerequisites.length > 0 || opens.length > 0 ? [{ depth: 2, slug: 'chain', text: 'Quest chain' }] : []),
 	...(quest.notes ? [{ depth: 2, slug: 'notes', text: 'Notes' }] : []),
-	{ depth: 2, slug: 'history', text: 'History' },
+	...(quest.changes.length > 0 ? [{ depth: 2, slug: 'history', text: 'History' }] : []),
 ];
 ---
 
@@ -98,7 +100,7 @@ const headings = [
 		)
 	}
 
-	<ChangeLog collectionName="quests" entityIdentifier={quest.id} />
+	{quest.changes.length > 0 && <ChangeLog collectionName="quests" entityIdentifier={quest.id} />}
 
 	<SourceCredit sources={[quest.source_page]} />
 </StarlightPage>

@@ -4,4 +4,140 @@ scene: kerning-city
 mood: dusk
 verified:
   status: unverified
-skills: []
+skills:
+  - id: nimble-body
+    name: "Nimble Body"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: keen-eyes
+    name: "Keen Eyes"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: disorder
+    name: "Disorder"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: dark-sight
+    name: "Dark Sight"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: double-stab
+    name: "Double Stab"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: lucky-seven
+    name: "Lucky Seven"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: claw-mastery
+    name: "Claw Mastery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: critical-throw
+    name: "Critical Throw"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: critical-recovery
+    name: "Critical Recovery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: claw-booster
+    name: "Claw Booster"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: haste
+    name: "Haste"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: drain
+    name: "Drain"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: dagger-mastery
+    name: "Dagger Mastery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: nimble-recovery
+    name: "Nimble Recovery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: dagger-booster
+    name: "Dagger Booster"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: steal
+    name: "Steal"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14
+  - id: savage-blow
+    name: "Savage Blow"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
+      date: 2026-10-14

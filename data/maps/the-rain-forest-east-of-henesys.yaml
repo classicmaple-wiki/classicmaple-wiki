@@ -1,6 +1,8 @@
 id: the-rain-forest-east-of-henesys
 name: The Rain-Forest East of Henesys
 region: Victoria Island
+town: Henesys
+kind: field
 monsters:
   - pig
   - ribbon-pig

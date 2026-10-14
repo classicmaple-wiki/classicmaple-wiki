@@ -1,10 +1,12 @@
 id: lion-huntertop
 name: Lion Huntertop
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Lion_Huntertop
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Lion_Huntertop
+  build: cot2
 sprite:
   file: items/lion-huntertop.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: red-pao
 name: Red Pao
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Red_Pao
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Pao
+  build: cot2
 sprite:
   file: items/red-pao.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: orange-whitebottom-boots
 name: Orange Whitebottom Boots
 category: equipment
+required_level: 26
 source_page: https://mapleclassic.wiki/wiki/Orange_Whitebottom_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Orange_Whitebottom_Boots
+  build: cot2
 sprite:
   file: items/orange-whitebottom-boots.png
   source: maplestory-io

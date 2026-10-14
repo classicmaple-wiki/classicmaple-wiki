@@ -1,9 +1,9 @@
 ---
 /*
-   The window frame from spec 0002, the signature component. Every boxed
-   block on the site sits in one: a wooden title bar (spec 0003) with a 3
-   pixel stripe in the page's mood rule, the title in heavy game text, and
-   an optional build chip on the right. The body is a parchment panel. A footer strip appears only when the footer
+   The window card from spec 0002, the signature component. Every boxed
+   block on the site sits in one: a warm tinted header strip with the
+   title in Fredoka and an optional build chip on the right, then a warm
+   white body (spec 0006). A footer strip appears only when the footer
    slot is used.
 
    The title is always a real heading, so the outline and the table of
@@ -11,7 +11,7 @@
    title prop, and the window draws an h2, or an h3 when headingLevel asks
    for one, with the given id. Guides in MDX pass a markdown heading in
    the title slot instead, because Starlight only lists markdown headings
-   in a guide's table of contents. The heading lands in the title bar and
+   in a guide's table of contents. The heading lands in the header and
    looks the same. Its id comes from its text, so the id given here must
    match it for the section label to work.
 
@@ -21,9 +21,14 @@
    prop heading gets an id made from the title, used only to label the
    section.
 
+   The build chip shows the build's name from data/builds.yaml, such as
+   Closed Online Test 2, not its id.
+
    All styling lives in src/styles/window.css as global rules, so markup
    from any page can reuse the same classes.
 */
+import { getEntry } from 'astro:content';
+
 interface Props {
 	title?: string;
 	id?: string;
@@ -41,13 +46,14 @@ const titleSlug = (title ?? '')
 	.replace(/^-+|-+$/g, '');
 const headingIdentifier = id ?? (hasTitleSlot ? undefined : `window-${titleSlug || 'untitled'}`);
 const HeadingTag = `h${headingLevel}` as const;
+const buildName = build ? ((await getEntry('builds', build))?.data.name ?? build) : undefined;
 const hasFooter = Astro.slots.has('footer');
 ---
 
 <section class="window" aria-labelledby={headingIdentifier}>
 	<div class="window__title-bar">
 		{hasTitleSlot ? <Fragment set:html={slottedTitle} /> : <HeadingTag class="window__title" id={headingIdentifier}>{title}</HeadingTag>}
-		{build && <span class="chip window__build">{build}</span>}
+		{buildName && <span class="chip window__build">{buildName}</span>}
 	</div>
 	<div class="window__body">
 		<slot />

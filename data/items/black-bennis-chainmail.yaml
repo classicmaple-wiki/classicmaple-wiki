@@ -1,10 +1,12 @@
 id: black-bennis-chainmail
 name: Black Bennis Chainmail
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Black_Bennis_Chainmail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Bennis_Chainmail
+  build: cot2
 sprite:
   file: items/black-bennis-chainmail.png
   source: maplestory-io

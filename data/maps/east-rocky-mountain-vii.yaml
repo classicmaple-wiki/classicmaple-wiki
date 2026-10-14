@@ -1,6 +1,11 @@
 id: east-rocky-mountain-vii
 name: East Rocky Mountain VII
 region: Victoria Island
+town: Perion
+kind: field
+recommended_level:
+  - 25
+  - 25
 monsters:
   - copper-drake
   - dark-axe-stump
@@ -9,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_VII
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_VII
+  build: cot2

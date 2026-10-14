@@ -11,3 +11,196 @@ skills:
       a 4th job skill.
     verified:
       status: unverified
+  - id: improved-hp-recovery
+    name: "Improved HP Recovery"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: max-hp-increase
+    name: "Max HP Increase"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: precise-strikes
+    name: "Precise Strikes"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: iron-body
+    name: "Iron Body"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: power-strike
+    name: "Power Strike"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: slash-blast
+    name: "Slash Blast"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: sword-mastery
+    name: "Sword Mastery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: axe-mastery
+    name: "Axe Mastery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: final-attack-sword
+    name: "Final Attack: Sword"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: final-attack-axe
+    name: "Final Attack: Axe"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: sword-booster
+    name: "Sword Booster"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: axe-booster
+    name: "Axe Booster"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: rage
+    name: "Rage"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: blunt-weapon-mastery
+    name: "Blunt Weapon Mastery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: final-attack-blunt-weapon
+    name: "Final Attack: Blunt Weapon"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: blunt-weapon-booster
+    name: "Blunt Weapon Booster"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: threaten
+    name: "Threaten"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: spear-mastery
+    name: "Spear Mastery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: polearm-mastery
+    name: "Polearm Mastery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: final-attack-spear
+    name: "Final Attack: Spear"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: final-attack-polearm
+    name: "Final Attack: Polearm"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: spear-booster
+    name: "Spear Booster"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: polearm-booster
+    name: "Polearm Booster"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+  - id: iron-will
+    name: "Iron Will"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
+      date: 2026-10-14
+scene: perion

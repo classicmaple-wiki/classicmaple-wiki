@@ -1,6 +1,11 @@
 id: damp-forest
 name: Damp Forest
 region: Victoria Island
+town: Sleepywood
+kind: field
+recommended_level:
+  - 22
+  - 24
 monsters:
   - jr-necki
   - octopus
@@ -9,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Damp_Forest
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Damp_Forest
+  build: cot2

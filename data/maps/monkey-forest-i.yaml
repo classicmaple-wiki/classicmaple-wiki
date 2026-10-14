@@ -1,6 +1,11 @@
 id: monkey-forest-i
 name: Monkey Forest I
 region: Victoria Island
+town: Ellinia
+kind: field
+recommended_level:
+  - 37
+  - 41
 monsters:
   - green-mushroom
   - lupin
@@ -8,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Monkey_Forest_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Monkey_Forest_I
+  build: cot2

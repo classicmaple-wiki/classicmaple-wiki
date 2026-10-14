@@ -1,6 +1,8 @@
 id: west-rocky-mountain-i
 name: West Rocky Mountain I
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - axe-stump
   - red-snail

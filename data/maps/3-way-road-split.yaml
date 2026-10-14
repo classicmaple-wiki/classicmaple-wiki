@@ -1,6 +1,8 @@
 id: 3-way-road-split
 name: 3-Way Road-Split
 region: Victoria Island
+town: Lith Harbor
+kind: field
 monsters:
   - blue-snail
   - orange-mushroom

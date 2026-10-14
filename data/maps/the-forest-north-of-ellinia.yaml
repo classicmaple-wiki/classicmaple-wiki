@@ -1,6 +1,8 @@
 id: the-forest-north-of-ellinia
 name: The Forest North of Ellinia
 region: Victoria Island
+town: Ellinia
+kind: field
 monsters:
   - axe-stump
   - slime

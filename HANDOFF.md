@@ -14,19 +14,25 @@ Pull request 5 is merged and live. Founder's Access patch notes summary is in pl
 
 ## In progress
 
-Spec 0005, the MapleClassic Wiki import (option 2), is in a pull request from branch `data/mapleclassic-import`, labeled `ai-drafted`, waiting for owner review.
+Two pull requests wait for the owner, to merge in order:
 
-- 1,281 records imported, all `unverified`, each with `source_page`. The manifest is `data/imports/mapleclassic.yaml`.
-- The owner chose not to ask the maintainers and to relicense the whole site to CC BY-NC-SA 4.0 (decision 0008, `data/imports/mapleclassic-license.md`).
-- 1,300 pages build in about 3.5 seconds. Lighthouse mobile: library 98, monster page 98, accessibility 100.
+1. #6, `data/mapleclassic-import`: 1,280 records from MapleClassic Wiki (spec 0005), NPC, quest, and shop pages, the library as the one way into every entry, and 594 sprites from maplestory.io (`scripts/fetch-sprites.ts`).
+2. #7, `site/field-guide-look`: the new look (spec 0006, decision 0009). Built on #6.
+
+3. #8, `site/launch-revision`: place pages, cross-links, the audit script, and `docs/launch-readiness.md` (spec 0007). Built on #7.
+
+4. #9, `data/core-numbers`: core numbers from MapleClassic Wiki (owner decision 2026-10-14), build names on chips, and empty Crafted by and Role rows hidden. Built on #8.
+5. A guide pull request from the research agent, built on #8, drafted from official sources.
 
 ## Next step
 
-Owner reviews and merges the pull request. Then P5 continues with level 1 to 30 routes. Rerun the importer with `npx tsx scripts/import-mapleclassic.ts` (dry run) and `--write` when the source updates.
+After both merge: run Lighthouse on the live site (previews need a Vercel login). Then P5 continues with level 1 to 30 routes.
+
+Left for people: 104 entries without a sprite. Most have no exact name match on maplestory.io. King Slime and one NPC are too large and need trimming. Rerun `npx tsx scripts/fetch-sprites.ts` (dry run) to list them.
 
 ## Blockers and questions for the owner
 
-None.
+None. Decisions of 2026-10-14 are in `docs/launch-readiness.md`.
 
 ## Verify
 

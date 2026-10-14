@@ -1,6 +1,8 @@
 id: the-forest-south-of-ellinia
 name: The Forest South of Ellinia
 region: Victoria Island
+town: Ellinia
+kind: field
 monsters:
   - axe-stump
   - green-mushroom

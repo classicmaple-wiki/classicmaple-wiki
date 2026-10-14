@@ -7,9 +7,17 @@ import {
 	siteTitle,
 	siteUrl,
 } from './site.config.mjs';
+import { satteri } from '@astrojs/markdown-satteri';
+import { createEntityLinksPlugin } from './src/lib/entityLinks.mjs';
 
 export default defineConfig({
 	site: siteUrl,
+	markdown: {
+		processor: satteri({
+			mdastPlugins: [createEntityLinksPlugin()],
+			features: { gfm: { footnotes: { label: 'Sources', backLabel: 'Back to the text' } } },
+		}),
+	},
 	integrations: [
 		starlight({
 			title: siteTitle,
@@ -40,7 +48,7 @@ export default defineConfig({
 					tag: 'link',
 					attrs: {
 						rel: 'preload',
-						href: '/fonts/silkscreen-400-latin.woff2',
+						href: '/fonts/fredoka-latin.woff2',
 						as: 'font',
 						type: 'font/woff2',
 						crossorigin: '',
@@ -60,6 +68,17 @@ export default defineConfig({
 						{ label: 'How to contribute', slug: 'contributing' },
 						{ label: 'Credits and license', slug: 'credits' },
 						{ label: 'Privacy', slug: 'privacy' },
+					],
+				},
+				{
+					label: 'Places',
+					items: [
+						{ label: 'Maple Island', link: '/places/maple-island/' },
+						{ label: 'Henesys', link: '/places/henesys/' },
+						{ label: 'Ellinia', link: '/places/ellinia/' },
+						{ label: 'Perion', link: '/places/perion/' },
+						{ label: 'Kerning City', link: '/places/kerning-city/' },
+						{ label: 'Sleepywood', link: '/places/sleepywood/' },
 					],
 				},
 				{ label: 'Classes', items: [{ autogenerate: { directory: 'classes' } }] },

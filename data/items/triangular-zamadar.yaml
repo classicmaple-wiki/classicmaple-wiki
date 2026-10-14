@@ -1,10 +1,12 @@
 id: triangular-zamadar
 name: Triangular Zamadar
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Triangular_Zamadar
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Triangular_Zamadar
+  build: cot2
 sprite:
   file: items/triangular-zamadar.png
   source: maplestory-io

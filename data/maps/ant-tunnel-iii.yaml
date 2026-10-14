@@ -1,6 +1,11 @@
 id: ant-tunnel-iii
 name: Ant Tunnel III
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
+recommended_level:
+  - 22
+  - 24
 monsters:
   - horny-mushroom
   - zombie-mushroom
@@ -8,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Ant_Tunnel_III
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ant_Tunnel_III
+  build: cot2

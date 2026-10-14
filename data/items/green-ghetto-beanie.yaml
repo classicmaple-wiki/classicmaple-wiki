@@ -1,10 +1,12 @@
 id: green-ghetto-beanie
 name: Green Ghetto Beanie
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Green_Ghetto_Beanie
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Ghetto_Beanie
+  build: cot2
 sprite:
   file: items/green-ghetto-beanie.png
   source: maplestory-io

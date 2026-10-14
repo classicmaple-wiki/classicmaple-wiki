@@ -1,6 +1,11 @@
 id: east-rocky-mountain-ii
 name: East Rocky Mountain II
 region: Victoria Island
+town: Perion
+kind: field
+recommended_level:
+  - 5
+  - 11
 monsters:
   - axe-stump
   - red-snail
@@ -9,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_II
+  build: cot2

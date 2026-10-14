@@ -1,9 +1,13 @@
 id: tauromacis
 name: Tauromacis
+level: 70
+hp: 9328
+exp: 337
 source_page: https://mapleclassic.wiki/wiki/Tauromacis
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tauromacis
+  build: cot2
 sprite:
   file: monsters/tauromacis.png
   source: maplestory-io

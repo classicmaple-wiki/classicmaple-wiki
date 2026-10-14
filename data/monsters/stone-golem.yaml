@@ -1,9 +1,13 @@
 id: stone-golem
 name: Stone Golem
+level: 56
+hp: 5134
+exp: 175
 source_page: https://mapleclassic.wiki/wiki/Stone_Golem
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Stone_Golem
+  build: cot2
 sprite:
   file: monsters/stone-golem.png
   source: maplestory-io

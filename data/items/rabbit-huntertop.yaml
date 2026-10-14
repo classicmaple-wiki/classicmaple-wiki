@@ -1,10 +1,12 @@
 id: rabbit-huntertop
 name: Rabbit Huntertop
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Rabbit_Huntertop
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Rabbit_Huntertop
+  build: cot2
 sprite:
   file: items/rabbit-huntertop.png
   source: maplestory-io

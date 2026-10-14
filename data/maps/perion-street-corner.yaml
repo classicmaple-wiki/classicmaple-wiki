@@ -1,6 +1,8 @@
 id: perion-street-corner
 name: Perion Street Corner
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - blue-snail
   - dark-stump

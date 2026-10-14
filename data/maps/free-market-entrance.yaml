@@ -1,6 +1,7 @@
 id: free-market-entrance
 name: Free Market Entrance
 region: Hidden Street
+kind: trading-hub
 source_page: https://mapleclassic.wiki/wiki/Free_Market_Entrance
 verified:
   status: unverified

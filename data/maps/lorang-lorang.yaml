@@ -1,6 +1,11 @@
 id: lorang-lorang
 name: Lorang Lorang
 region: Victoria Island
+town: Florina Beach
+kind: field
+recommended_level:
+  - 37
+  - 38
 monsters:
   - lorang
   - lupin
@@ -8,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Lorang_Lorang
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Lorang_Lorang
+  build: cot2

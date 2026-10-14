@@ -1,10 +1,12 @@
 id: black-sneak-pants
 name: Black Sneak Pants
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Black_Sneak_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Sneak_Pants
+  build: cot2
 sprite:
   file: items/black-sneak-pants.png
   source: maplestory-io

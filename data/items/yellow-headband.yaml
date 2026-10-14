@@ -1,10 +1,12 @@
 id: yellow-headband
 name: Yellow Headband
 category: equipment
+required_level: 5
 source_page: https://mapleclassic.wiki/wiki/Yellow_Headband
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Yellow_Headband
+  build: cot2
 sprite:
   file: items/yellow-headband.png
   source: maplestory-io

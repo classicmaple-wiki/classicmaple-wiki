@@ -1,6 +1,11 @@
 id: sleepy-dungeon-i
 name: Sleepy Dungeon I
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
+recommended_level:
+  - 37
+  - 37
 monsters:
   - curse-eye
   - green-mushroom
@@ -13,3 +18,4 @@ source_page: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_I
+  build: cot2

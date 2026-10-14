@@ -1,6 +1,8 @@
 id: southperry-armor-store
 name: Southperry Armor Store
 region: Maple Island
+town: Southperry
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Southperry_Armor_Store
 verified:
   status: unverified

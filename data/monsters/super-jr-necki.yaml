@@ -1,11 +1,15 @@
 id: super-jr-necki
 name: Super Jr. Necki
+level: 200
+hp: 9999
+exp: 0
 location: the-forest-of-patience-step-4
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Super_Jr._Necki
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Super_Jr._Necki
+  build: cot2
 sprite:
   file: monsters/super-jr-necki.png
   source: maplestory-io

@@ -1,6 +1,11 @@
 id: tree-dungeon-monkey-forest-i
 name: Tree Dungeon, Monkey Forest I
 region: Victoria Island
+town: Ellinia
+kind: dungeon
+recommended_level:
+  - 37
+  - 37
 monsters:
   - curse-eye
   - zombie-lupin
@@ -8,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Monkey_Forest_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Monkey_Forest_I
+  build: cot2

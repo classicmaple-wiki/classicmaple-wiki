@@ -1,6 +1,7 @@
 id: kerning-city
 name: Kerning City
 region: Victoria Island
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Kerning_City
 verified:
   status: unverified

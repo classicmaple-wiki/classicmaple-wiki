@@ -1,10 +1,12 @@
 id: green-tiberian
 name: Green Tiberian
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Green_Tiberian
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Tiberian
+  build: cot2
 sprite:
   file: items/green-tiberian.png
   source: maplestory-io

@@ -1,6 +1,11 @@
 id: mushroom-garden-maple-island
 name: Mushroom Garden (Maple Island)
 region: Maple Island
+town: Amherst
+kind: hunting-ground
+recommended_level:
+  - 1
+  - 8
 monsters:
   - orange-mushroom
   - shroom
@@ -9,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Mushroom_Garden_(Maple_Island)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Mushroom_Garden_(Maple_Island)
+  build: cot2

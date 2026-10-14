@@ -1,6 +1,11 @@
 id: the-road-to-the-dungeon
 name: The Road to the Dungeon
 region: Victoria Island
+town: Henesys
+kind: dungeon
+recommended_level:
+  - 19
+  - 22
 monsters:
   - blue-mushroom
   - blue-snail
@@ -15,3 +20,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Road_to_the_Dungeon
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Road_to_the_Dungeon
+  build: cot2

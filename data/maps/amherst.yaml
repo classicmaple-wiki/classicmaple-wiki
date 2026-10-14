@@ -1,6 +1,8 @@
 id: amherst
 name: Amherst
 region: Maple Island
+town: Amherst
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Amherst
 verified:
   status: unverified

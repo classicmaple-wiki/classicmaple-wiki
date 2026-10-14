@@ -1,6 +1,8 @@
 id: b3-subway-depot
 name: B3 (Subway Depot)
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - jr-boogie-1
   - jr-boogie-2

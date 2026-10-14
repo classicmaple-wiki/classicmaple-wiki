@@ -1,7 +1,9 @@
 id: black-pao-bottoms
 name: Black Pao Bottoms
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Black_Pao_Bottoms
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Pao_Bottoms
+  build: cot2

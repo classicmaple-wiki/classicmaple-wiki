@@ -1,10 +1,12 @@
 id: brown-hard-leather-boots
 name: Brown Hard Leather Boots
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Boots
+  build: cot2
 sprite:
   file: items/brown-hard-leather-boots.png
   source: maplestory-io

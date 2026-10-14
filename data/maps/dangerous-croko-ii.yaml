@@ -1,6 +1,8 @@
 id: dangerous-croko-ii
 name: Dangerous Croko II
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - croco
   - jr-necki

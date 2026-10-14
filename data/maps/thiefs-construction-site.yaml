@@ -1,6 +1,8 @@
 id: thiefs-construction-site
 name: Thief's Construction Site
 region: Hidden Street
+town: Kerning City
+kind: field
 monsters:
   - blue-mushroom
   - cold-eye

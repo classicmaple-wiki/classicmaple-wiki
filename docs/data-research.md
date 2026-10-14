@@ -19,7 +19,7 @@ Not sources, never cite them, never copy from them:
 - Old Global MapleStory data from any year, including version 83 databases such as maplestory.io's numbers. Classic World changed many values. maplestory.io may be used for sprites only, under `docs/policies/images.md`, never for numbers.
 - Private servers and their libraries: MapleLegends, MapleRoyals, Old School Maple, and any other. Nexon forbids promoting them, and their values are their own.
 - Other wikis and databases: Fandom, maplestorywiki.net, Hidden Street, NiaMeowDB, and the like. Their text and data are not ours to copy, and most describe a different version. You may read them to learn what to look for, then confirm it from a rank 1 or 2 source.
-- One exception: MapleClassic Wiki, imported only by `scripts/import-mapleclassic.ts` and only the fields in spec 0005 (decision 0008). Never copy from it by hand, and never copy its prose. Its records enter as `unverified` like anything else.
+- One exception: MapleClassic Wiki, imported only by `scripts/import-mapleclassic.ts` and only the fields in spec 0005 (decision 0008). Never copy from it by hand, and never copy its prose. Since 2026-10-14 the importer also takes core numbers (decision 0008, amendment). All other numbers still come only from rank 1 or 2 sources. Its records enter as `unverified` like anything else.
 - Modern MapleStory, MapleStory Worlds, MapleStory M, or any regional server other than Classic World.
 - Your own memory or a model's general knowledge. If you cannot point to a rank 1 or 2 source, the value stays out.
 
@@ -28,10 +28,11 @@ Not sources, never cite them, never copy from them:
 1. **Never invent a value.** Leave a field out when you have no source. The site shows Unknown.
 2. **AI never raises a verification status.** Anything an AI drafts enters as `unverified`, even when it quotes official notes. A human owner reviews it and raises it.
 3. **Every number names its build.** Use an id from `data/builds.yaml`: `founders-2026-10-06` today, `launch-2026-10-21` from launch day.
-4. **Write in your own words.** Summarize official notes, link to them, never paste them in full. Short sentences, plain words, no em dashes.
-5. **Do not delete history.** When a value changes between builds, update it and add a line to `changes`.
-6. **Do not scrape.** Read pages one at a time, respect rate limits and robots rules, and never bulk download. Never fetch from a private server.
-7. **No schema changes without the owner.** If the data needs a new field or a new collection, such as quests or NPCs, write a short spec in `specs/` and stop.
+4. **Write in your own words.** Summarize official notes, cite them, never paste them in full. Short sentences, plain words, no em dashes.
+5. **Link inside the wiki, cite outside it.** Write names plainly. The build links the first mention of every place, NPC, monster, map, quest, shop, item, and class to its page (spec 0008). Cite sources as footnotes, `fact[^1]`, with `[^1]: [Title](url), read on YYYY-MM-DD.` at the end of the page. Never link a name to an outside site.
+6. **Do not delete history.** When a value changes between builds, update it and add a line to `changes`.
+7. **Do not scrape.** Read pages one at a time, respect rate limits and robots rules, and never bulk download. Never fetch from a private server.
+8. **No schema changes without the owner.** If the data needs a new field or a new collection, such as quests or NPCs, write a short spec in `specs/` and stop.
 
 ## Where things go
 

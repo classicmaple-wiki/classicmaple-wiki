@@ -1,7 +1,9 @@
 id: spear-item
 name: Spear (item)
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Spear_(item)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Spear_(item)
+  build: cot2

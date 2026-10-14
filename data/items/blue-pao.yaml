@@ -1,10 +1,12 @@
 id: blue-pao
 name: Blue Pao
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Blue_Pao
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Pao
+  build: cot2
 sprite:
   file: items/blue-pao.png
   source: maplestory-io

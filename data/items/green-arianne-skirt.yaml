@@ -1,10 +1,12 @@
 id: green-arianne-skirt
 name: Green Arianne Skirt
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Green_Arianne_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Arianne_Skirt
+  build: cot2
 sprite:
   file: items/green-arianne-skirt.png
   source: maplestory-io

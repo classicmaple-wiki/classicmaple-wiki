@@ -1,10 +1,12 @@
 id: blue-nightshift-pants
 name: Blue Nightshift Pants
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Blue_Nightshift_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Nightshift_Pants
+  build: cot2
 sprite:
   file: items/blue-nightshift-pants.png
   source: maplestory-io

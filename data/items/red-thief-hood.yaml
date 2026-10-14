@@ -1,10 +1,12 @@
 id: red-thief-hood
 name: Red Thief Hood
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Red_Thief_Hood
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Thief_Hood
+  build: cot2
 sprite:
   file: items/red-thief-hood.png
   source: maplestory-io

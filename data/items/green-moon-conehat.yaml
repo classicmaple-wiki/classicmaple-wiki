@@ -1,10 +1,12 @@
 id: green-moon-conehat
 name: Green Moon Conehat
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Green_Moon_Conehat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Moon_Conehat
+  build: cot2
 sprite:
   file: items/green-moon-conehat.png
   source: maplestory-io

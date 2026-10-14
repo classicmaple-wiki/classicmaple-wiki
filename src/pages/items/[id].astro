@@ -8,10 +8,15 @@
    The Item window lists every field as a labeled row. Stats are listed
    one per row under their own names. Missing values read Unknown, and
    when every value is Unknown one invitation replaces the per row links.
-   The crafting profession links to the crafting guide. Notes and the
+   The crafting profession, shown only for crafted items, links to the
+   crafting guide. Then where to get
+   it: the monsters players saw drop it, with the chance and the kills
+   behind it, and the shops that sell it (spec 0007). Notes and the
    history follow, then the source credit when the data came from
    MapleClassic Wiki (spec 0005). Nothing here is typed by hand: every value comes from
    the item's data file.
+
+   The History window appears only once the entry has a recorded change.
 */
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getCollection, getEntry } from 'astro:content';
@@ -20,7 +25,7 @@ import ChangeLog from '../../components/ChangeLog.astro';
 import SourceCredit from '../../components/SourceCredit.astro';
 import StatRows from '../../components/StatRows.astro';
 import Window from '../../components/Window.astro';
-import { formatStatistic } from '../../lib/data';
+import { formatDropChance, formatStatistic } from '../../lib/data';
 import { resolveGuideScene } from '../../lib/scenes';
 
 export async function getStaticPaths() {
@@ -37,17 +42,30 @@ const editUrl = `${editBaseUrl}data/items/${item.id}.yaml`;
 const category = item.category.charAt(0).toUpperCase() + item.category.slice(1);
 const profession = item.crafted_by ? await getEntry('professions', item.crafted_by) : undefined;
 
+const droppedBy = (await getCollection('monsters'))
+	.map((monsterEntry) => monsterEntry.data)
+	.flatMap((monster) =>
+		monster.drops.filter((monsterDrop) => monsterDrop.item === item.id).map((monsterDrop) => ({ monster, monsterDrop }))
+	)
+	.sort((first, second) => second.monsterDrop.rate_percent - first.monsterDrop.rate_percent);
+const soldAt = (await getCollection('shops'))
+	.map((shopEntry) => shopEntry.data)
+	.filter((shop) => shop.items.includes(item.id))
+	.sort((first, second) => first.name.localeCompare(second.name));
+
 const statisticRows = [
 	{ label: 'Category', value: category },
 	{ label: 'Required level', value: item.required_level === undefined ? undefined : formatStatistic(item.required_level) },
 	...Object.entries(item.stats).map(([name, value]) => ({ label: name, value: formatStatistic(value) })),
-	{ label: 'Crafted by', value: profession?.data.name, href: profession ? '/economy/crafting/' : undefined },
+	...(profession ? [{ label: 'Crafted by', value: profession.data.name, href: '/economy/crafting/' }] : []),
 ];
 
 const headings = [
 	{ depth: 2, slug: 'stats', text: 'Item' },
+	...(droppedBy.length > 0 ? [{ depth: 2, slug: 'dropped-by', text: 'Dropped by' }] : []),
+	...(soldAt.length > 0 ? [{ depth: 2, slug: 'sold-at', text: 'Sold at' }] : []),
 	...(item.notes ? [{ depth: 2, slug: 'notes', text: 'Notes' }] : []),
-	{ depth: 2, slug: 'history', text: 'History' },
+	...(item.changes.length > 0 ? [{ depth: 2, slug: 'history', text: 'History' }] : []),
 ];
 ---
 
@@ -64,7 +82,52 @@ const headings = [
 >
 	<Window title="Item" id="stats" build={item.verified.build}>
 		<StatRows rows={statisticRows} editUrl={editUrl} subject="this item" />
+		{item.verified.build === 'cot2' && <p class="window__note">These numbers were seen in the closed beta. They may differ at launch.</p>}
 	</Window>
+
+	{
+		droppedBy.length > 0 && (
+			<Window title="Dropped by" id="dropped-by" build={droppedBy[0].monsterDrop.build}>
+				<p class="window__note">Community estimates from player observations, not official rates.</p>
+				<div class="window__scroll" tabindex="0" role="region" aria-label="Dropped by, scrolls sideways">
+					<table class="data-table">
+						<thead>
+							<tr>
+								<th scope="col">Monster</th>
+								<th scope="col">Chance</th>
+								<th scope="col">Based on</th>
+							</tr>
+						</thead>
+						<tbody>
+							{droppedBy.map(({ monster, monsterDrop }) => (
+								<tr>
+									<th scope="row">
+										<a href={`/monsters/${monster.id}/`}>{monster.name}</a>
+									</th>
+									<td>{formatDropChance(monsterDrop.rate_percent)}</td>
+									<td>{monsterDrop.sample_kills} kills</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+			</Window>
+		)
+	}
+
+	{
+		soldAt.length > 0 && (
+			<Window title="Sold at" id="sold-at">
+				<ul class="link-list">
+					{soldAt.map((shop) => (
+						<li>
+							<a href={`/shops/${shop.id}/`}>{shop.name}</a>
+						</li>
+					))}
+				</ul>
+			</Window>
+		)
+	}
 
 	{
 		item.notes && (
@@ -74,7 +137,7 @@ const headings = [
 		)
 	}
 
-	<ChangeLog collectionName="items" entityIdentifier={item.id} />
+	{item.changes.length > 0 && <ChangeLog collectionName="items" entityIdentifier={item.id} />}
 
-	<SourceCredit sources={[item.source_page]} />
+	<SourceCredit sources={[item.source_page, ...droppedBy.map(({ monsterDrop }) => monsterDrop.source)]} />
 </StarlightPage>

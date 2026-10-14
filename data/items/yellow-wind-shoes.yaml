@@ -1,7 +1,9 @@
 id: yellow-wind-shoes
 name: Yellow Wind Shoes
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Yellow_Wind_Shoes
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Yellow_Wind_Shoes
+  build: cot2

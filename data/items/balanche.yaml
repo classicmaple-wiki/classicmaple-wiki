@@ -1,10 +1,12 @@
 id: balanche
 name: Balanche
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Balanche
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Balanche
+  build: cot2
 sprite:
   file: items/balanche.png
   source: maplestory-io

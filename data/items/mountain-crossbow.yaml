@@ -1,10 +1,12 @@
 id: mountain-crossbow
 name: Mountain Crossbow
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Mountain_Crossbow
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Mountain_Crossbow
+  build: cot2
 sprite:
   file: items/mountain-crossbow.png
   source: maplestory-io

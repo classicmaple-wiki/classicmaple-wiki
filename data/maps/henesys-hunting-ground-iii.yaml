@@ -1,6 +1,11 @@
 id: henesys-hunting-ground-iii
 name: Henesys Hunting Ground III
 region: Victoria Island
+town: Henesys
+kind: hunting-ground
+recommended_level:
+  - 8
+  - 15
 monsters:
   - blue-snail
   - green-mushroom
@@ -12,3 +17,4 @@ source_page: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_III
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_III
+  build: cot2

@@ -1,6 +1,11 @@
 id: snail-field-of-flowers
 name: Snail Field of Flowers
 region: Maple Island
+town: Amherst
+kind: field
+recommended_level:
+  - 1
+  - 6
 monsters:
   - blue-snail
   - orange-mushroom
@@ -10,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/Snail_Field_of_Flowers
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Snail_Field_of_Flowers
+  build: cot2

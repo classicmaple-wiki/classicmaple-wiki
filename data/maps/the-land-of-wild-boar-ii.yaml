@@ -1,6 +1,11 @@
 id: the-land-of-wild-boar-ii
 name: The Land of Wild Boar II
 region: Victoria Island
+town: Perion
+kind: field
+recommended_level:
+  - 23
+  - 25
 monsters:
   - axe-stump
   - dark-axe-stump
@@ -10,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Land_of_Wild_Boar_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Land_of_Wild_Boar_II
+  build: cot2

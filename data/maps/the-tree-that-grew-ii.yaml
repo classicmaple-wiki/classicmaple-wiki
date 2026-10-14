@@ -1,6 +1,11 @@
 id: the-tree-that-grew-ii
 name: The Tree That Grew II
 region: Victoria Island
+town: Ellinia
+kind: field
+recommended_level:
+  - 6
+  - 11
 monsters:
   - dark-stump
   - slime
@@ -9,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Tree_That_Grew_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Tree_That_Grew_II
+  build: cot2

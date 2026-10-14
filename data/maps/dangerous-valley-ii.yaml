@@ -1,6 +1,11 @@
 id: dangerous-valley-ii
 name: Dangerous Valley II
 region: Victoria Island
+town: Perion
+kind: field
+recommended_level:
+  - 32
+  - 32
 monsters:
   - copper-drake
   - fire-boar
@@ -9,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Dangerous_Valley_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dangerous_Valley_II
+  build: cot2

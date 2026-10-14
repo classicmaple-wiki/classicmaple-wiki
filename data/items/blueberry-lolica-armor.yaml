@@ -1,10 +1,12 @@
 id: blueberry-lolica-armor
 name: Blueberry Lolica Armor
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Blueberry_Lolica_Armor
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blueberry_Lolica_Armor
+  build: cot2
 sprite:
   file: items/blueberry-lolica-armor.png
   source: maplestory-io

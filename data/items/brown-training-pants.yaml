@@ -1,7 +1,9 @@
 id: brown-training-pants
 name: Brown Training Pants
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Brown_Training_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Training_Pants
+  build: cot2

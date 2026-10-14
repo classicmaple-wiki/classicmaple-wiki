@@ -1,9 +1,13 @@
 id: lupin
 name: Lupin
+level: 37
+hp: 1336
+exp: 75
 source_page: https://mapleclassic.wiki/wiki/Lupin
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Lupin
+  build: cot2
 sprite:
   file: monsters/lupin.png
   source: maplestory-io

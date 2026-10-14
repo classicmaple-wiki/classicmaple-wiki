@@ -6,7 +6,7 @@ The look of Classic Maple Wiki, and how to make any picture it needs. Decisions 
 
 The site's identity is painted HD pixel art: cozy, sunlit or lamplit places from a mid 2000s side-scrolling fantasy MMORPG, redrawn at high resolution with modern light. New and old at the same time. Crisp pixel edges, painterly shading, saturated warm color, deep layered scenes full of small props, and no people. The characters come from real sprites the site stands in the scene.
 
-The art leads. The interface is quiet and serves it: it frames the pictures, uses the materials and colors found in them, and never competes with them. Spec 0003 turns that into the interface.
+The art leads. The interface is quiet and serves it: it frames the pictures and never competes with them. Since spec 0006 the interface is a clean field guide with a little storybook warmth: warm white cards, Fredoka headings, Nunito text, line icons, and wood only for small tags. No pixel fonts or pixel interface glyphs. Pixel art belongs to the scenes and sprites.
 
 ## Reference pictures
 
@@ -67,6 +67,16 @@ For the picture at the top of a page. Wide pictures from 16:9 to 3:1 all work.
 
 For an indoor place, add: "Show the room as a cutaway: the front wall of the building is open, so we see the room inside like a stage, with the building's roof and the outside sky around it."
 
+### Layout block: class character
+
+For the character that stands on each class page's banner. Use the character exclusions below instead of the usual ones, because this picture is the one place a character belongs.
+
+> A single character, full body, standing in a confident idle pose, turned three quarters toward the viewer's left, centered on a square canvas, filling about 85 percent of its height, feet just above the bottom edge. Cute chibi proportions about two and a half heads tall, a big head, large friendly eyes, small hands and feet, like an avatar from a classic 2D side-scrolling MMORPG. Fully transparent background. No ground, no cast shadow, no scenery.
+
+Character exclusions, used only with this layout:
+
+> Only this one character. No other people, creatures, or pets. Do not copy any existing game character, outfit, weapon, or official artwork; this is an original design. No emblems, crests, or insignia from any existing game. No text, letters, numbers, or logos. No user interface, no border, no frame, no watermark. Not a 3D render, not a photo, not blurry.
+
 ### Layout block: social share image
 
 For the preview card when a page is shared. The site adds the page title on top later.
@@ -112,6 +122,20 @@ Proven on Henesys. Attach the finished day picture, then send:
 
 For a scene that is already dusk or night, such as Kerning City, ask for "later at night, after the sunset" instead, with the sky turning deep indigo and every light switched on.
 
+### Class characters
+
+One original character per class, made with the class character layout. They are original designs that only suggest each class, never Nexon's own job instructors, outfits, or art. Attach `henesys.webp` and add "Match the art style of the attached image exactly" so the character fits the scenes. Make each one in two looks if you want a choice, then keep the best.
+
+| Class | File | Subject |
+| --- | --- | --- |
+| Beginner | `beginner.png` | A fresh young adventurer just off the boat. A plain cream linen tunic with rolled sleeves, simple brown shorts, soft leather boots, a small travel satchel, holding a short wooden stick like a first sword. Messy brown hair, an eager smile. |
+| Warrior | `warrior.png` | A sturdy young knight. Light bronze plate armor over a red tunic, a short red cape, a round wooden shield with an iron rim and a plain center, a broad one handed sword resting on the shoulder. Short spiky hair, a determined grin. |
+| Magician | `magician.png` | An apprentice mage. A deep blue hooded robe with simple gold trim and wide sleeves, a wooden staff topped with a softly glowing blue crystal, a small floating spark of light near the free hand, a little satchel of scrolls. Calm, curious face. |
+| Bowman | `bowman.png` | A forest ranger. A green tunic with a brown leather vest and bracers, a green cap with one long feather, a wooden longbow in one hand, a quiver of arrows with white fletching on the back. Focused, friendly look. |
+| Thief | `thief.png` | A nimble street rogue at dusk. A dark navy hooded jacket with a scarf pulled up over the nose, fingerless gloves, a belt with small throwing stars, a short curved dagger held low. Sharp, playful eyes above the scarf. |
+
+Ask for a few variations if the first is too plain: "Same character, more detail in the outfit, brighter colors, crisper pixel edges."
+
 ### Special pages
 
 All four are done: `workshop.webp` for About, `harbor-board.webp` for What changed, `potion-shop.webp` for Support, and `closed-shop.webp` for the 404 page. Their scene names are in `src/lib/scenes.ts`.
@@ -154,6 +178,7 @@ node -e "require('sharp')('in.png').webp({quality:92,effort:6}).toFile('src/asse
 ```
 
 - The build makes the small files for phones and desktops. Check Lighthouse mobile stays at 95 or more after each new picture.
+- Class characters go in `src/assets/characters/`, named after the class id: `warrior.png`, `magician.png`, `bowman.png`, `thief.png`, and `beginner.png`. Keep the transparent background, so save as PNG or WebP with alpha, at least 1024 pixels tall. The class page shows its character on the banner as soon as the file is there.
 - Sprites are not made here. They follow `docs/policies/images.md`.
 
 ## Steps

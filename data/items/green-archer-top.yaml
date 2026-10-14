@@ -1,10 +1,12 @@
 id: green-archer-top
 name: Green Archer Top
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Green_Archer_Top
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Archer_Top
+  build: cot2
 sprite:
   file: items/green-archer-top.png
   source: maplestory-io

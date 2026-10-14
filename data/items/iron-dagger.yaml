@@ -1,10 +1,12 @@
 id: iron-dagger
 name: Iron Dagger
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Iron_Dagger
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Iron_Dagger
+  build: cot2
 sprite:
   file: items/iron-dagger.png
   source: maplestory-io

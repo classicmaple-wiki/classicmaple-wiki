@@ -1,10 +1,12 @@
 id: blood-sneak
 name: Blood Sneak
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Blood_Sneak
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blood_Sneak
+  build: cot2
 sprite:
   file: items/blood-sneak.png
   source: maplestory-io

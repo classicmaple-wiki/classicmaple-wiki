@@ -1,6 +1,8 @@
 id: before-takeoff-to-orbis
 name: Before Takeoff (To Orbis)
 region: Victoria Island
+town: Ellinia Station
+kind: field
 source_page: https://mapleclassic.wiki/wiki/Before_Takeoff_(To_Orbis)
 verified:
   status: unverified

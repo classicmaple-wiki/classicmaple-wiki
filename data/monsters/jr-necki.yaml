@@ -1,9 +1,13 @@
 id: jr-necki
 name: Jr. Necki
+level: 21
+hp: 272
+exp: 39
 source_page: https://mapleclassic.wiki/wiki/Jr._Necki
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Jr._Necki
+  build: cot2
 sprite:
   file: monsters/jr-necki.png
   source: maplestory-io

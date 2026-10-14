@@ -1,8 +1,12 @@
 id: super-ribbon-pig
 name: Super Ribbon Pig
+level: 200
+hp: 9999
+exp: 0
 location: utahs-pig-farm
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Super_Ribbon_Pig
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Super_Ribbon_Pig
+  build: cot2

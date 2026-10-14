@@ -1,9 +1,13 @@
 id: zombie-lupin
 name: Zombie Lupin
+level: 41
+hp: 1774
+exp: 89
 source_page: https://mapleclassic.wiki/wiki/Zombie_Lupin
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Zombie_Lupin
+  build: cot2
 sprite:
   file: monsters/zombie-lupin.png
   source: maplestory-io

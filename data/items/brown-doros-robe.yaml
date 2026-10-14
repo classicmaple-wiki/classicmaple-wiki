@@ -1,10 +1,12 @@
 id: brown-doros-robe
 name: Brown Doros Robe
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Brown_Doros_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Doros_Robe
+  build: cot2
 sprite:
   file: items/brown-doros-robe.png
   source: maplestory-io

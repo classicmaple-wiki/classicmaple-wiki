@@ -1,10 +1,12 @@
 id: fusion-mace
 name: Fusion Mace
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Fusion_Mace
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Fusion_Mace
+  build: cot2
 sprite:
   file: items/fusion-mace.png
   source: maplestory-io

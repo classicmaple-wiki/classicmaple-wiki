@@ -1,10 +1,12 @@
 id: amethyst-earrings
 name: Amethyst Earrings
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Amethyst_Earrings
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Amethyst_Earrings
+  build: cot2
 sprite:
   file: items/amethyst-earrings.png
   source: maplestory-io

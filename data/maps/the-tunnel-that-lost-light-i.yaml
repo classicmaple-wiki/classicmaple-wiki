@@ -1,6 +1,11 @@
 id: the-tunnel-that-lost-light-i
 name: The Tunnel That Lost Light I
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
+recommended_level:
+  - 45
+  - 50
 monsters:
   - cold-eye
   - drake
@@ -8,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Tunnel_That_Lost_Light_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Tunnel_That_Lost_Light_I
+  build: cot2

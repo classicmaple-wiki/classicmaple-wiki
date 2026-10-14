@@ -12,3 +12,148 @@ skills:
       launch build, so this comes from pre-launch testing.
     verified:
       status: unverified
+  - id: improved-mp-recovery
+    name: "Improved MP Recovery"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: max-mp-increase
+    name: "Max MP Increase"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: magic-guard
+    name: "Magic Guard"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: magic-armor
+    name: "Magic Armor"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: energy-bolt
+    name: "Energy Bolt"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: magic-claw
+    name: "Magic Claw"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: mp-eater
+    name: "MP Eater"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: meditation
+    name: "Meditation"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: teleport
+    name: "Teleport"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: slow
+    name: "Slow"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: fire-arrow
+    name: "Fire Arrow"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: poison-breath
+    name: "Poison Breath"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: cold-beam
+    name: "Cold Beam"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: thunder-bolt
+    name: "Thunder Bolt"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: heal
+    name: "Heal"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: invincible
+    name: "Invincible"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: bless
+    name: "Bless"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+  - id: holy-arrow
+    name: "Holy Arrow"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
+      date: 2026-10-14
+scene: ellinia

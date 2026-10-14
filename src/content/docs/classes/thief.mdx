@@ -12,7 +12,8 @@ import SkillList from '../../../components/SkillList.astro';
 import StatRows from '../../../components/StatRows.astro';
 import Window from '../../../components/Window.astro';
 
-<Window id="job-path">
+
+<Window id="job-path" build="founders-2026-10-06">
 <Fragment slot="title">
 
 ## Job path
@@ -21,14 +22,54 @@ import Window from '../../../components/Window.astro';
 
 <StatRows
 	rows={[
-		{ label: 'First job level' },
-		{ label: 'Job instructor' },
-		{ label: 'Where' },
-		{ label: 'Requirements' },
+		{ label: 'First job level', value: 10 },
+		{ label: 'Job instructor', value: 'Dark Lord', href: '/npcs/dark-lord/' },
+		{ label: 'Where', value: 'Kerning City', href: '/places/kerning-city/' },
+		{ label: 'Requirements', value: 'Reach level 10' },
+		{ label: 'Second job level', value: 30 },
+		{ label: 'Second job paths', value: 'Assassin or Bandit' },
+		{ label: 'Main stat', value: 'LUK' },
+		{ label: 'Secondary stat', value: 'DEX' },
 	]}
 	editUrl={`${editBaseUrl}data/classes/thief.yaml`}
 	subject="the Thief job path"
 />
+
+At level 10, talk to [Dark Lord](/npcs/dark-lord/) in [Kerning City](/places/kerning-city/) to become a Thief[^1]. At level 30, talk to Dark Lord again and pick Assassin or Bandit[^1]. Nexon's page calls the first job Rogue[^2].
+
+The official notes name no requirement other than the level. If the game asks for more, please add it with a screenshot.
+
+Founder's Access has first and second job only[^1]. Third job was open for testing at level 70 in Closed Online Test 2, and Nexon said test content may change[^3]. Nexon has not said when third job comes to the live game. Inkwell said content such as third job may arrive in stages[^4].
+
+</Window>
+
+<Window id="stats">
+<Fragment slot="title">
+
+## Stats
+
+</Fragment>
+
+LUK is the Thief's main stat. It raises Thief damage and Evasion, raises Accuracy a little, and cuts the EXP you lose when you die. DEX raises Thief damage a little and raises Accuracy. STR also raises Thief damage a little[^5].
+
+You get 5 AP each level. From level 10 you get 3 SP each level, plus 1 extra SP when you take first and second job[^5].
+
+</Window>
+
+<Window id="skills-by-job">
+<Fragment slot="title">
+
+## Skills by job
+
+</Fragment>
+
+Nexon's Thief page[^2] lists these skills. It also explains what each one does.
+
+- **Rogue (first job):** Nimble Body, Keen Eyes, Disorder, Dark Sight, Double Stab, Lucky Seven.
+- **Assassin (second job):** Claw Mastery, Critical Throw, Critical Recovery, Claw Booster, Haste, Drain.
+- **Bandit (second job):** Dagger Mastery, Nimble Recovery, Dagger Booster, Haste, Steal, Savage Blow.
+
+Skill levels, costs, and damage numbers are not in the official pages yet. If you have them from the game, please add them with a screenshot.
 
 </Window>
 
@@ -39,6 +80,23 @@ import Window from '../../../components/Window.astro';
 
 </Fragment>
 </SkillList>
+
+<Window id="announced-fixes">
+<Fragment slot="title">
+
+## Announced fixes
+
+</Fragment>
+
+Nexon's notice for the October 15, 2026 maintenance lists these Thief fixes[^6]:
+
+- Dark Sight needs Disorder at level 3. The skill text wrongly said level 1.
+- Steal no longer drops mesos or items, steals, or gives its buff when the attack misses.
+- You can no longer open a Store Permit shop while Dark Sight is on. Before, other players could not see the shop.
+
+Nexon has not announced other Thief skill changes for Classic World.
+
+</Window>
 
 <Window id="where-to-train">
 <Fragment slot="title">
@@ -69,3 +127,10 @@ Nothing here yet. Tested builds, stat advice, and party tips are welcome.
 
 </Fragment>
 </ChangeLog>
+
+[^1]: [Founder's Access Release Notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes), read on 2026-10-14.
+[^2]: [Thief, Classic World Classes and Jobs](https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief), read on 2026-10-14.
+[^3]: [Closed Online Test #2 Release Notes](https://www.nexon.com/maplestory/news/general/43432/closed-online-test-2-release-notes), read on 2026-10-14.
+[^4]: [Inkwell on the Future of Global MapleStory and Classic World](https://www.nexon.com/maplestory/news/general/45681), read on 2026-10-14.
+[^5]: [Character Stats guide](https://www.nexon.com/maplestory/game/mscw/maple-guides/all/46103/character-stats), read on 2026-10-14.
+[^6]: [Scheduled Minor Patch Maintenance, October 15, 2026](https://www.nexon.com/maplestory/news/maintenance/46523), read on 2026-10-14.

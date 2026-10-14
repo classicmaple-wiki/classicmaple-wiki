@@ -1,6 +1,11 @@
 id: ant-tunnel-park
 name: Ant Tunnel Park
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
+recommended_level:
+  - 22
+  - 27
 monsters:
   - evil-eye
   - horny-mushroom
@@ -9,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Ant_Tunnel_Park
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ant_Tunnel_Park
+  build: cot2

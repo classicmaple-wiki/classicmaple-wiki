@@ -84,14 +84,3 @@
 			);
 	}
 }
-
-.scene-resident {
-	position: absolute;
-	max-height: 62%;
-	width: auto;
-	left: 62%;
-	bottom: 22%;
-	transform: translateX(-50%);
-	image-rendering: pixelated;
-	pointer-events: none;
-}

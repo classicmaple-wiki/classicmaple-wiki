@@ -1,6 +1,11 @@
 id: the-swamp-of-despair-ii
 name: The Swamp of Despair II
 region: Victoria Island
+town: Kerning City
+kind: field
+recommended_level:
+  - 6
+  - 31
 monsters:
   - horny-mushroom
   - jr-necki
@@ -10,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_II
+  build: cot2

@@ -1,10 +1,12 @@
 id: sabre
 name: Sabre
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Sabre
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sabre
+  build: cot2
 sprite:
   file: items/sabre.png
   source: maplestory-io

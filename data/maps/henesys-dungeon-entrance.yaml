@@ -1,6 +1,11 @@
 id: henesys-dungeon-entrance
 name: Henesys Dungeon Entrance
 region: Victoria Island
+town: Henesys
+kind: dungeon
+recommended_level:
+  - 19
+  - 24
 monsters:
   - blue-mushroom
   - green-mushroom
@@ -12,3 +17,4 @@ source_page: https://mapleclassic.wiki/wiki/Henesys_Dungeon_Entrance
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Henesys_Dungeon_Entrance
+  build: cot2

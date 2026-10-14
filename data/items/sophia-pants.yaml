@@ -1,10 +1,12 @@
 id: sophia-pants
 name: Sophia Pants
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Sophia_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sophia_Pants
+  build: cot2
 sprite:
   file: items/sophia-pants.png
   source: maplestory-io

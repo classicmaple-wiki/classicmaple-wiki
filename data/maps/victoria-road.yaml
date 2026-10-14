@@ -1,6 +1,8 @@
 id: victoria-road
 name: Victoria Road
 region: Hidden Street
+town: Henesys
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Victoria_Road
 verified:
   status: unverified

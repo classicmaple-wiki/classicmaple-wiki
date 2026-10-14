@@ -1,6 +1,11 @@
 id: deep-valley-iii
 name: Deep Valley III
 region: Victoria Island
+town: Perion
+kind: field
+recommended_level:
+  - 19
+  - 23
 monsters:
   - axe-stump
   - dark-axe-stump
@@ -11,3 +16,4 @@ source_page: https://mapleclassic.wiki/wiki/Deep_Valley_III
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Deep_Valley_III
+  build: cot2

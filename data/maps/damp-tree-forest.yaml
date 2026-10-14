@@ -1,6 +1,11 @@
 id: damp-tree-forest
 name: Damp Tree-Forest
 region: Victoria Island
+town: Sleepywood
+kind: field
+recommended_level:
+  - 22
+  - 24
 monsters:
   - dark-axe-stump
   - jr-necki
@@ -10,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/Damp_Tree-Forest
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Damp_Tree-Forest
+  build: cot2

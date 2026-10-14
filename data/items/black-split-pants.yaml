@@ -1,10 +1,12 @@
 id: black-split-pants
 name: Black Split Pants
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Black_Split_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Split_Pants
+  build: cot2
 sprite:
   file: items/black-split-pants.png
   source: maplestory-io

@@ -1,6 +1,11 @@
 id: the-burnt-land-ii
 name: The Burnt Land II
 region: Victoria Island
+town: Perion
+kind: field
+recommended_level:
+  - 32
+  - 42
 monsters:
   - dark-axe-stump
   - fire-boar
@@ -8,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Burnt_Land_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Burnt_Land_II
+  build: cot2

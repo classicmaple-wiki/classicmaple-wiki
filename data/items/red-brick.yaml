@@ -1,10 +1,12 @@
 id: red-brick
 name: Red Brick
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Red_Brick
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Brick
+  build: cot2
 sprite:
   file: items/red-brick.png
   source: maplestory-io

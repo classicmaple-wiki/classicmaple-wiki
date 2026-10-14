@@ -1,6 +1,11 @@
 id: the-cave-of-evil-eye-i
 name: The Cave of Evil Eye I
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
+recommended_level:
+  - 27
+  - 35
 monsters:
   - evil-eye
   - jr-boogie-2
@@ -8,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Cave_of_Evil_Eye_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Cave_of_Evil_Eye_I
+  build: cot2

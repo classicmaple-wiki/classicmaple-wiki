@@ -1,10 +1,12 @@
 id: brown-baseball-cap
 name: Brown Baseball Cap
 category: equipment
+required_level: 22
 source_page: https://mapleclassic.wiki/wiki/Brown_Baseball_Cap
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Baseball_Cap
+  build: cot2
 sprite:
   file: items/brown-baseball-cap.png
   source: maplestory-io

@@ -1,5 +1,8 @@
 id: stirge
 name: Stirge
+level: 20
+hp: 296
+exp: 37
 drops:
   - item: arrows-for-crossbows
     rate_percent: 5
@@ -39,3 +42,4 @@ source_page: https://mapleclassic.wiki/wiki/Stirge
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Stirge
+  build: cot2

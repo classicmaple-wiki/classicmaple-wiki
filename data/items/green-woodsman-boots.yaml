@@ -1,10 +1,12 @@
 id: green-woodsman-boots
 name: Green Woodsman Boots
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Green_Woodsman_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Woodsman_Boots
+  build: cot2
 sprite:
   file: items/green-woodsman-boots.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: red-cloth-vest
 name: Red Cloth Vest
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Red_Cloth_Vest
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Cloth_Vest
+  build: cot2
 sprite:
   file: items/red-cloth-vest.png
   source: maplestory-io

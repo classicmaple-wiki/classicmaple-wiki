@@ -1,10 +1,12 @@
 id: bronze-full-helm
 name: Bronze Full Helm
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Bronze_Full_Helm
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bronze_Full_Helm
+  build: cot2
 sprite:
   file: items/bronze-full-helm.png
   source: maplestory-io

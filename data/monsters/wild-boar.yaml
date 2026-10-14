@@ -1,9 +1,13 @@
 id: wild-boar
 name: Wild Boar
+level: 25
+hp: 510
+exp: 46
 source_page: https://mapleclassic.wiki/wiki/Wild_Boar
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Wild_Boar
+  build: cot2
 sprite:
   file: monsters/wild-boar.png
   source: maplestory-io

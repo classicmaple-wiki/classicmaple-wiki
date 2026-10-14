@@ -1,6 +1,8 @@
 id: b1-subway-depot
 name: B1 (Subway Depot)
 region: Victoria Island
+town: Kerning City
+kind: field
 monsters:
   - bubbling
 source_page: https://mapleclassic.wiki/wiki/B1_(Subway_Depot)

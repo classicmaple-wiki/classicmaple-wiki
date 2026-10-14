@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import type { Mood, SceneIdentifier } from '../../schemas/shared';
+import { placeForTown } from './places';
 
 /*
    The library of places (spec 0002). Every page sits in one of seven
@@ -75,20 +76,30 @@ export function resolveGuideScene(frontmatter: PresentationFields): ResolvedScen
 	return combine(frontmatter, 'default');
 }
 
-export async function resolveMapScene(map: PresentationFields & { region?: string }): Promise<ResolvedScene> {
-	return combine(map, sceneFromPlaceName(map.region) ?? 'default');
+export async function resolveMapScene(
+	map: PresentationFields & { region?: string; town?: string; name?: string; kind?: string }
+): Promise<ResolvedScene> {
+	const town = map.town ?? (map.kind === 'town' ? map.name : undefined);
+	return combine(map, placeForTown(town) ?? sceneFromPlaceName(map.region) ?? 'default');
 }
 
 /*
-   A monster takes the scene of the first map, by name, that lists it. The
-   map's own scene choice wins over its region.
+   A monster takes the scene of its own region when that is a hub, such as
+   Maple Island. Otherwise it takes the scene of its main map, or of the
+   first map, by name, that lists it. A map's own scene choice wins over
+   its region.
 */
-export async function resolveMonsterScene(monster: PresentationFields & { id: string }): Promise<ResolvedScene> {
+export async function resolveMonsterScene(
+	monster: PresentationFields & { id: string; region?: string; location?: string }
+): Promise<ResolvedScene> {
+	if (monster.scene) return combine(monster, 'default');
+	const fromRegion = sceneFromPlaceName(monster.region);
+	if (fromRegion) return combine(monster, fromRegion);
 	const maps = (await getCollection('maps'))
 		.map((mapEntry) => mapEntry.data)
-		.filter((map) => map.monsters.includes(monster.id))
-		.sort((first, second) => first.name.localeCompare(second.name));
-	if (monster.scene || maps.length === 0) return combine(monster, 'default');
+		.filter((map) => map.monsters.includes(monster.id) || map.id === monster.location)
+		.sort((first, second) => Number(second.id === monster.location) - Number(first.id === monster.location) || first.name.localeCompare(second.name));
+	if (maps.length === 0) return combine(monster, 'default');
 	const inherited = await resolveMapScene(maps[0]);
 	return combine(monster, inherited.scene);
 }

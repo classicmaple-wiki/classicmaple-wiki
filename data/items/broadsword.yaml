@@ -1,10 +1,12 @@
 id: broadsword
 name: Broadsword
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Broadsword
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Broadsword
+  build: cot2
 sprite:
   file: items/broadsword.png
   source: maplestory-io

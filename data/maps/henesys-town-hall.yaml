@@ -1,6 +1,8 @@
 id: henesys-town-hall
 name: Henesys Town Hall
 region: Victoria Island
+town: Henesys
+kind: field
 source_page: https://mapleclassic.wiki/wiki/Henesys_Town_Hall
 verified:
   status: unverified

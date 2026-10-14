@@ -1,10 +1,14 @@
 id: jr-balrog
 name: Jr. Balrog
+level: 80
+hp: 325400
+exp: 2188
 boss: true
 source_page: https://mapleclassic.wiki/wiki/Jr._Balrog
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Jr._Balrog
+  build: cot2
 sprite:
   file: monsters/jr-balrog.png
   source: maplestory-io

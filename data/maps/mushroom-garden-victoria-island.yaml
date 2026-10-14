@@ -1,6 +1,11 @@
 id: mushroom-garden-victoria-island
 name: Mushroom Garden (Victoria Island)
 region: Victoria Island
+town: Henesys
+kind: hunting-ground
+recommended_level:
+  - 3
+  - 8
 monsters:
   - orange-mushroom
   - red-snail
@@ -9,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Mushroom_Garden_(Victoria_Island)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Mushroom_Garden_(Victoria_Island)
+  build: cot2

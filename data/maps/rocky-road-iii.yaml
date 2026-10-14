@@ -1,6 +1,8 @@
 id: rocky-road-iii
 name: Rocky Road III
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - axe-stump
   - dark-axe-stump

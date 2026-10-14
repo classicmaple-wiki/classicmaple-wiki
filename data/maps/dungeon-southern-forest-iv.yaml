@@ -1,6 +1,11 @@
 id: dungeon-southern-forest-iv
 name: Dungeon, Southern Forest IV
 region: Victoria Island
+town: Ellinia
+kind: dungeon
+recommended_level:
+  - 15
+  - 15
 monsters:
   - blue-mushroom
   - green-mushroom
@@ -10,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_IV
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_IV
+  build: cot2

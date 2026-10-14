@@ -1,6 +1,11 @@
 id: east-rocky-mountain-iv
 name: East Rocky Mountain IV
 region: Victoria Island
+town: Perion
+kind: field
+recommended_level:
+  - 17
+  - 23
 monsters:
   - axe-stump
   - dark-axe-stump
@@ -10,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_IV
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_IV
+  build: cot2

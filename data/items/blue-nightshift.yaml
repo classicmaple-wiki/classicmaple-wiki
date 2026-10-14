@@ -1,10 +1,12 @@
 id: blue-nightshift
 name: Blue Nightshift
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Blue_Nightshift
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Nightshift
+  build: cot2
 sprite:
   file: items/blue-nightshift.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: green-hard-leather-boots
 name: Green Hard Leather Boots
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Green_Hard_Leather_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Hard_Leather_Boots
+  build: cot2
 sprite:
   file: items/green-hard-leather-boots.png
   source: maplestory-io

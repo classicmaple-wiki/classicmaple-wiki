@@ -1,10 +1,12 @@
 id: blue-cloth-vest
 name: Blue Cloth Vest
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Blue_Cloth_Vest
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Cloth_Vest
+  build: cot2
 sprite:
   file: items/blue-cloth-vest.png
   source: maplestory-io

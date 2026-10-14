@@ -15,7 +15,7 @@
    filter hide it by type or by name without touching the markup.
 */
 import { existsSync, readFileSync } from 'node:fs';
-import { glyphPath, glyphs } from '../lib/glyphs';
+import Icon from './Icon.astro';
 import { libraryTypes, type LibraryCard } from '../lib/library';
 import VerifiedBadge from './VerifiedBadge.astro';
 
@@ -66,17 +66,7 @@ const sprite = spriteDisplay(card.spriteFile);
 						decoding="async"
 					/>
 				) : (
-					<svg
-						class="library-card__glyph"
-						width="36"
-						height="36"
-						viewBox="0 0 12 12"
-						shape-rendering="crispEdges"
-						aria-hidden="true"
-						focusable="false"
-					>
-						<path d={glyphPath(glyphs[typeInfo.glyph])} />
-					</svg>
+					<Icon name={typeInfo.glyph} size={36} strokeWidth={1.6} class="library-card__glyph" />
 				)
 			}
 		</span>

@@ -1,10 +1,12 @@
 id: white-kendo-robe
 name: White Kendo Robe
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/White_Kendo_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/White_Kendo_Robe
+  build: cot2
 sprite:
   file: items/white-kendo-robe.png
   source: maplestory-io

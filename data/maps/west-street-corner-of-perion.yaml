@@ -1,6 +1,8 @@
 id: west-street-corner-of-perion
 name: West Street Corner of Perion
 region: Victoria Island
+town: Perion
+kind: field
 monsters:
   - blue-snail
   - dark-stump

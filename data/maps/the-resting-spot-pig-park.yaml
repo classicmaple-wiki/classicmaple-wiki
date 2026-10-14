@@ -1,6 +1,8 @@
 id: the-resting-spot-pig-park
 name: The Resting Spot, Pig Park
 region: Victoria Island
+town: Henesys
+kind: field
 source_page: https://mapleclassic.wiki/wiki/The_Resting_Spot%2C_Pig_Park
 verified:
   status: unverified

@@ -1,6 +1,8 @@
 id: utahs-pig-farm
 name: Utah's Pig Farm
 region: Victoria Island
+town: Henesys
+kind: field
 monsters:
   - super-ribbon-pig
 source_page: https://mapleclassic.wiki/wiki/Utah's_Pig_Farm

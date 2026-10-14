@@ -1,10 +1,12 @@
 id: red-shark-skirt
 name: Red Shark Skirt
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Red_Shark_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Shark_Skirt
+  build: cot2
 sprite:
   file: items/red-shark-skirt.png
   source: maplestory-io

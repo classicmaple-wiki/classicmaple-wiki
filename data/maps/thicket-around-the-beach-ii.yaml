@@ -1,6 +1,11 @@
 id: thicket-around-the-beach-ii
 name: Thicket Around the Beach II
 region: Victoria Island
+town: Lith Harbor
+kind: field
+recommended_level:
+  - 2
+  - 4
 monsters:
   - orange-mushroom
   - pig
@@ -10,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_II
+  build: cot2

@@ -1,10 +1,12 @@
 id: blue-qi-pao-pants
 name: Blue Qi Pao Pants
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Blue_Qi_Pao_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Qi_Pao_Pants
+  build: cot2
 sprite:
   file: items/blue-qi-pao-pants.png
   source: maplestory-io

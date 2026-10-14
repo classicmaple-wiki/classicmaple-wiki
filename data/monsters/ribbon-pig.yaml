@@ -1,5 +1,8 @@
 id: ribbon-pig
 name: Ribbon Pig
+level: 10
+hp: 172
+exp: 19
 drops:
   - item: animal-fur-bundle
     rate_percent: 5
@@ -70,6 +73,7 @@ source_page: https://mapleclassic.wiki/wiki/Ribbon_Pig
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+  build: cot2
 sprite:
   file: monsters/ribbon-pig.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: red-qi-pao-pants
 name: Red Qi Pao Pants
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Red_Qi_Pao_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Qi_Pao_Pants
+  build: cot2
 sprite:
   file: items/red-qi-pao-pants.png
   source: maplestory-io

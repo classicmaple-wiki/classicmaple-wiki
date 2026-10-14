@@ -1,6 +1,11 @@
 id: northern-top-of-construction-site
 name: Northern Top of Construction Site
 region: Victoria Island
+town: Kerning City
+kind: field
+recommended_level:
+  - 12
+  - 15
 monsters:
   - blue-mushroom
   - octopus
@@ -9,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Northern_Top_of_Construction_Site
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Northern_Top_of_Construction_Site
+  build: cot2

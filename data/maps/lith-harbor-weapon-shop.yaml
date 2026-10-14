@@ -1,6 +1,8 @@
 id: lith-harbor-weapon-shop
 name: Lith Harbor Weapon Shop
 region: Victoria Island
+town: Lith Harbor
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Lith_Harbor_Weapon_Shop
 verified:
   status: unverified

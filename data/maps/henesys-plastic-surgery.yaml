@@ -1,6 +1,8 @@
 id: henesys-plastic-surgery
 name: Henesys Plastic Surgery
 region: Victoria Island
+town: Henesys
+kind: town
 source_page: https://mapleclassic.wiki/wiki/Henesys_Plastic_Surgery
 verified:
   status: unverified

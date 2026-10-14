@@ -1,9 +1,13 @@
 id: wild-kargo
 name: Wild Kargo
+level: 62
+hp: 5057
+exp: 231
 source_page: https://mapleclassic.wiki/wiki/Wild_Kargo
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Wild_Kargo
+  build: cot2
 sprite:
   file: monsters/wild-kargo.png
   source: maplestory-io

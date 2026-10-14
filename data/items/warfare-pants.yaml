@@ -1,10 +1,12 @@
 id: warfare-pants
 name: Warfare Pants
 category: equipment
+required_level: 26
 source_page: https://mapleclassic.wiki/wiki/Warfare_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Warfare_Pants
+  build: cot2
 sprite:
   file: items/warfare-pants.png
   source: maplestory-io

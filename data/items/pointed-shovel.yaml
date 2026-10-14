@@ -1,10 +1,12 @@
 id: pointed-shovel
 name: Pointed Shovel
 category: equipment
+required_level: 22
 source_page: https://mapleclassic.wiki/wiki/Pointed_Shovel
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Pointed_Shovel
+  build: cot2
 sprite:
   file: items/pointed-shovel.png
   source: maplestory-io

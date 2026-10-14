@@ -1,6 +1,11 @@
 id: ant-tunnel-i
 name: Ant Tunnel I
 region: Victoria Island
+town: Sleepywood
+kind: dungeon
+recommended_level:
+  - 22
+  - 24
 monsters:
   - horny-mushroom
   - zombie-mushroom
@@ -8,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Ant_Tunnel_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ant_Tunnel_I
+  build: cot2

@@ -1,0 +1,152 @@
+---
+/*
+   One page per place on the home shelf (spec 0007): Maple Island,
+   Henesys, Ellinia, Perion, Kerning City, and Sleepywood. Each sits in
+   its own painted scene and gathers everything that belongs there, as
+   worked out in src/lib/places.ts: the monsters and NPCs as inventory
+   cards with their sprites, then the maps grouped by kind, the shops,
+   and the quests that start there. Every entry links to its own page.
+   The table of contents lists exactly the windows shown.
+*/
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getCollection } from 'astro:content';
+import LibraryCard from '../../components/LibraryCard.astro';
+import Window from '../../components/Window.astro';
+import { libraryCards } from '../../lib/library';
+import { placeContents } from '../../lib/places';
+import { placeOrder, scenes } from '../../lib/scenes';
+
+export async function getStaticPaths() {
+	return placeOrder.map((identifier) => ({ params: { id: identifier }, props: { identifier } }));
+}
+
+const { identifier } = Astro.props;
+const place = scenes[identifier];
+const contents = await placeContents(identifier);
+const allCards = await libraryCards();
+const monsterCards = allCards.filter((card) => card.type === 'monster' && contents.monsterIds.has(card.identifier));
+const npcCards = allCards.filter((card) => card.type === 'npc' && contents.npcIds.has(card.identifier));
+const shops = (await getCollection('shops'))
+	.map((entry) => entry.data)
+	.filter((shop) => contents.shopIds.has(shop.id))
+	.sort((first, second) => first.name.localeCompare(second.name));
+const quests = (await getCollection('quests'))
+	.map((entry) => entry.data)
+	.filter((quest) => contents.questIds.has(quest.id))
+	.sort((first, second) => first.name.localeCompare(second.name));
+
+const mapGroups = [
+	{ label: 'Towns', kinds: ['town', 'town-interior', 'trading-hub'] },
+	{ label: 'Fields and hunting grounds', kinds: ['field', 'hunting-ground'] },
+	{ label: 'Dungeons', kinds: ['dungeon'] },
+	{ label: 'Other maps', kinds: ['hidden-street', undefined] },
+]
+	.map((group) => ({
+		label: group.label,
+		maps: contents.maps
+			.filter((map) => group.kinds.includes(map.kind))
+			.sort((first, second) => first.name.localeCompare(second.name)),
+	}))
+	.filter((group) => group.maps.length > 0);
+
+const counts = [
+	[contents.maps.length, 'map'],
+	[monsterCards.length, 'monster'],
+	[npcCards.length, 'NPC'],
+	[quests.length, 'quest'],
+] as const;
+const subtitle = counts
+	.filter(([count]) => count > 0)
+	.map(([count, noun]) => `${count} ${noun}${count === 1 ? '' : 's'}`)
+	.join(', ');
+
+const headings = [
+	...(monsterCards.length > 0 ? [{ depth: 2, slug: 'monsters', text: 'Monsters' }] : []),
+	...(npcCards.length > 0 ? [{ depth: 2, slug: 'npcs', text: 'NPCs' }] : []),
+	...(mapGroups.length > 0 ? [{ depth: 2, slug: 'maps', text: 'Maps' }] : []),
+	...(shops.length > 0 ? [{ depth: 2, slug: 'shops', text: 'Shops' }] : []),
+	...(quests.length > 0 ? [{ depth: 2, slug: 'quests', text: 'Quests' }] : []),
+];
+---
+
+<StarlightPage
+	frontmatter={{
+		title: place.label,
+		description: `${place.label} in MapleStory Classic World: its maps, monsters, NPCs, shops, and quests.`,
+		scene: identifier,
+		subtitle: subtitle ? `${place.moment} ${subtitle}.` : place.moment,
+	}}
+	headings={headings}
+>
+	{
+		monsterCards.length > 0 && (
+			<Window title="Monsters" id="monsters">
+				<ol class="library-grid not-content">
+					{monsterCards.map((card) => (
+						<LibraryCard card={card} />
+					))}
+				</ol>
+			</Window>
+		)
+	}
+
+	{
+		npcCards.length > 0 && (
+			<Window title="NPCs" id="npcs">
+				<ol class="library-grid not-content">
+					{npcCards.map((card) => (
+						<LibraryCard card={card} />
+					))}
+				</ol>
+			</Window>
+		)
+	}
+
+	{
+		mapGroups.length > 0 && (
+			<Window title="Maps" id="maps">
+				{mapGroups.map((group) => (
+					<section class="place-maps">
+						<h3 class="place-maps__label">{group.label}</h3>
+						<ul class="link-list link-list--columns">
+							{group.maps.map((map) => (
+								<li>
+									<a href={`/maps/${map.id}/`}>{map.name}</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				))}
+			</Window>
+		)
+	}
+
+	{
+		shops.length > 0 && (
+			<Window title="Shops" id="shops">
+				<ul class="link-list link-list--columns">
+					{shops.map((shop) => (
+						<li>
+							<a href={`/shops/${shop.id}/`}>{shop.name}</a>
+						</li>
+					))}
+				</ul>
+			</Window>
+		)
+	}
+
+	{
+		quests.length > 0 && (
+			<Window title="Quests" id="quests">
+				<p class="window__note">Quests whose starting NPC is here.</p>
+				<ul class="link-list link-list--columns">
+					{quests.map((quest) => (
+						<li>
+							<a href={`/quests/${quest.id}/`}>{quest.name}</a>
+						</li>
+					))}
+				</ul>
+			</Window>
+		)
+	}
+</StarlightPage>

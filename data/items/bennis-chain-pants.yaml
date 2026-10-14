@@ -1,7 +1,9 @@
 id: bennis-chain-pants
 name: Bennis Chain Pants
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Bennis_Chain_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bennis_Chain_Pants
+  build: cot2

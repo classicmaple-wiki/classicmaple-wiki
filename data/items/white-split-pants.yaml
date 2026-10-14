@@ -1,10 +1,12 @@
 id: white-split-pants
 name: White Split Pants
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/White_Split_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/White_Split_Pants
+  build: cot2
 sprite:
   file: items/white-split-pants.png
   source: maplestory-io

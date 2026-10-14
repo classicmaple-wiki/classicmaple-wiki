@@ -1,6 +1,11 @@
 id: henesys-hunting-ground-ii
 name: Henesys Hunting Ground II
 region: Victoria Island
+town: Henesys
+kind: hunting-ground
+recommended_level:
+  - 7
+  - 15
 monsters:
   - blue-snail
   - green-mushroom
@@ -13,3 +18,4 @@ source_page: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_II
+  build: cot2

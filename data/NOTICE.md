@@ -6,8 +6,8 @@ https://classicmaple.wiki/data/.
 
 Records with a `source_page` on mapleclassic.wiki were imported from
 MapleClassic Wiki (https://mapleclassic.wiki/), licensed CC BY-NC-SA 4.0, and
-modified: facts were extracted and reformatted, and stats, prices, rewards,
-game text, and images were left out. The editors are named on each source
+modified: facts and core numbers were extracted and reformatted, and item
+stats, prices, rewards, game text, and images were left out. The editors are named on each source
 page's history. `imports/mapleclassic.yaml` lists the revision of every page
 used. Classic Maple Wiki is not affiliated with or endorsed by MapleClassic
 Wiki or its editors.

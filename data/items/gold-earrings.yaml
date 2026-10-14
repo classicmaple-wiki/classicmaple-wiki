@@ -1,10 +1,12 @@
 id: gold-earrings
 name: Gold Earrings
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Gold_Earrings
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Gold_Earrings
+  build: cot2
 sprite:
   file: items/gold-earrings.png
   source: maplestory-io

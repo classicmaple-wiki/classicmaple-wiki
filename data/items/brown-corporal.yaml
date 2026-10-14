@@ -1,10 +1,12 @@
 id: brown-corporal
 name: Brown Corporal
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Brown_Corporal
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Corporal
+  build: cot2
 sprite:
   file: items/brown-corporal.png
   source: maplestory-io

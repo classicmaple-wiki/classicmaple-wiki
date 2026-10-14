@@ -1,10 +1,12 @@
 id: bronze-viking-helm
 name: Bronze Viking Helm
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Bronze_Viking_Helm
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bronze_Viking_Helm
+  build: cot2
 sprite:
   file: items/bronze-viking-helm.png
   source: maplestory-io

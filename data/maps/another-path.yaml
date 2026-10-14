@@ -1,9 +1,15 @@
 id: another-path
 name: Another Path
 region: Victoria Island
+town: Sleepywood
+kind: field
+recommended_level:
+  - 40
+  - 40
 monsters:
   - cold-eye
 source_page: https://mapleclassic.wiki/wiki/Another_Path
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Another_Path
+  build: cot2

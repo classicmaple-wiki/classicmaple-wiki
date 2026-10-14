@@ -1,6 +1,11 @@
 id: a-look-out-shed-around-the-beach
 name: A Look-Out Shed Around the Beach
 region: Victoria Island
+town: Florina Beach
+kind: field
+recommended_level:
+  - 37
+  - 38
 monsters:
   - lorang
   - lupin
@@ -8,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/A_Look-Out_Shed_Around_the_Beach
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/A_Look-Out_Shed_Around_the_Beach
+  build: cot2

@@ -1,7 +1,9 @@
 id: blue-wizardry-hat
 name: Blue Wizardry Hat
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Blue_Wizardry_Hat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Wizardry_Hat
+  build: cot2

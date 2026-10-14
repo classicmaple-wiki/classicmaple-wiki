@@ -1,7 +1,11 @@
 id: king-slime
 name: King Slime
+level: 32
+hp: 16820
+exp: 2400
 boss: true
 source_page: https://mapleclassic.wiki/wiki/King_Slime
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/King_Slime
+  build: cot2

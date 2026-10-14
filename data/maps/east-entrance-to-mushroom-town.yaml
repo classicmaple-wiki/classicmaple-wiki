@@ -1,6 +1,8 @@
 id: east-entrance-to-mushroom-town
 name: East Entrance to Mushroom Town
 region: Maple Island
+town: Mushroom Town (Nina)
+kind: hunting-ground
 monsters:
   - tutorial-jr-sentinel
 source_page: https://mapleclassic.wiki/wiki/East_Entrance_to_Mushroom_Town

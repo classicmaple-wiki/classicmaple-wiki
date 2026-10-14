@@ -1,6 +1,8 @@
 id: magicians-tree-dungeon
 name: Magician's Tree Dungeon
 region: Hidden Street
+town: Ellinia
+kind: dungeon
 monsters:
   - curse-eye
   - horny-mushroom

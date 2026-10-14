@@ -1,9 +1,15 @@
 id: the-cursed-sanctuary
 name: The Cursed Sanctuary
 region: Victoria Island
+town: Sleepywood
+kind: field
+recommended_level:
+  - 80
+  - 80
 monsters:
   - jr-balrog
 source_page: https://mapleclassic.wiki/wiki/The_Cursed_Sanctuary
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Cursed_Sanctuary
+  build: cot2

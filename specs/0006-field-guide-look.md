@@ -1,6 +1,6 @@
 # 0006: The field guide look
 
-Status: draft. Direction chosen by the owner on 2026-10-14: "Strong A, and just a bit of B."
+Status: approved by the owner on 2026-10-14 ("looks good, let's go"). Built. Direction: "Strong A, and just a bit of B."
 
 ## Problem
 
@@ -69,14 +69,16 @@ Restyle tokens first, then windows, then the title banner, then cards and icons,
 
 ## Tasks
 
-- [ ] Owner approves this spec.
-- [ ] Add Fredoka, remove Silkscreen.
-- [ ] Tokens, windows, title banner, library cards, icons, home, footer.
-- [ ] Decision 0009 records the change from the pixel interface.
-- [ ] Update `docs/art-direction.md` where it describes the interface.
+- [x] Owner approves this spec.
+- [x] Add Fredoka, remove Silkscreen.
+- [x] Tokens, windows, title banner, library cards, icons, home, footer.
+- [x] Decision 0009 records the change from the pixel interface.
+- [x] Update `docs/art-direction.md` where it describes the interface.
 - [ ] Lighthouse on home, library, and a monster page.
 - [ ] Run `npm run validate` and `npm run build`.
 - [ ] Update `BACKLOG.md` and rewrite `HANDOFF.md`.
+
+Also fixed while restyling: a common monster's title listed every map it lives in, about 50 for Blue Snail. The title now names the region and the map count, the Monster window names the main map, and a Where to find window lists every map. A monster's scene now comes from its region first.
 
 ## Open questions
 
