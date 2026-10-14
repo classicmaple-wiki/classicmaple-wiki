@@ -1,6 +1,11 @@
 id: citizenship
 name: Citizenship
 required_level: 12
-summary: New system in Classic World. Details needed.
+summary: >-
+  A new Classic World system. Become a resident of Henesys or Kerning City to
+  get shop items and discounts. Town requests raise your Citizenship grade.
 verified:
   status: unverified
+  build: founders-2026-10-06
+  source: https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes
+  date: 2026-10-14

@@ -2,4 +2,140 @@ id: bowman
 name: Bowman
 verified:
   status: unverified
-skills: []
+skills:
+  - id: critical-shot
+    name: "Critical Shot"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: the-eye-of-amazon
+    name: "The Eye of Amazon"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: focus
+    name: "Focus"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: power-knockback
+    name: "Power Knockback"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: arrow-blow
+    name: "Arrow Blow"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: double-shot
+    name: "Double Shot"
+    job: 1
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: bow-mastery
+    name: "Bow Mastery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: amazons-judgement
+    name: "Amazon's Judgement"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: final-attack-bow
+    name: "Final Attack: Bow"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: bow-booster
+    name: "Bow Booster"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: soul-arrow-bow
+    name: "Soul Arrow: Bow"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: arrow-bomb
+    name: "Arrow Bomb"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: crossbow-mastery
+    name: "Crossbow Mastery"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: final-attack-crossbow
+    name: "Final Attack: Crossbow"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: crossbow-booster
+    name: "Crossbow Booster"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: soul-arrow-crossbow
+    name: "Soul Arrow: Crossbow"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
+  - id: iron-arrow
+    name: "Iron Arrow"
+    job: 2
+    verified:
+      status: unverified
+      build: founders-2026-10-06
+      source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
+      date: 2026-10-14
