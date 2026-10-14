@@ -2,6 +2,13 @@ id: borrowing-seras-mirror
 name: Borrowing Sera's Mirror
 giver: heena
 turn_in: sera
+start_map: mushroom-town-west-entrance
+next: bringing-a-mirror-to-heena
+steps:
+  - npc: heena
+    map: mushroom-town-west-entrance
+  - npc: sera
+    map: mushroom-town-west-entrance
 region: Maple Island
 source_page: https://mapleclassic.wiki/wiki/Borrowing_Sera's_Mirror
 verified:

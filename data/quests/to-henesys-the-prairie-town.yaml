@@ -1,6 +1,8 @@
 id: to-henesys-the-prairie-town
 name: To Henesys, the Prairie Town
 turn_in: arthur
+start_mode: quest-log
+next: to-the-gray-city-kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/To_Henesys%2C_the_Prairie_Town
 verified:

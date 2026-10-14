@@ -2,8 +2,14 @@ id: im-bored-2
 name: I'm Bored 2
 giver: icarus
 turn_in: icarus
+start_map: kerning-city
 prerequisites:
   - im-bored-1
+steps:
+  - npc: icarus
+    map: kerning-city
+  - npc: icarus
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/I'm_Bored_2
 verified:

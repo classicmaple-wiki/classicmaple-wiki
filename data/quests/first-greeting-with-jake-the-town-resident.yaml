@@ -2,6 +2,12 @@ id: first-greeting-with-jake-the-town-resident
 name: First Greeting with Jake, the Town Resident
 giver: community-board-kerning-city
 turn_in: jake
+start_map: kerning-city
+steps:
+  - npc: community-board
+    map: kerning-city
+  - npc: jake
+    map: subway-ticketing-booth
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/First_Greeting_with_Jake%2C_the_Town_Resident
 verified:

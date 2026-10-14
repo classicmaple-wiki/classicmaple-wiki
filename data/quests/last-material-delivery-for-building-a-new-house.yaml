@@ -2,8 +2,16 @@ id: last-material-delivery-for-building-a-new-house
 name: Last Material Delivery for Building a New House
 giver: ronnie
 turn_in: ronnie
+start_map: the-tree-tunnel-at-the-forest-up-north
 prerequisites:
   - third-material-delivery-for-building-a-new-house
+steps:
+  - npc: ronnie
+    map: the-tree-tunnel-at-the-forest-up-north
+  - monster: cold-eye
+  - monster: drake
+  - npc: ronnie
+    map: the-tree-tunnel-at-the-forest-up-north
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Last_Material_Delivery_for_Building_a_New_House
 verified:

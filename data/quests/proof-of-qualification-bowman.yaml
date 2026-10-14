@@ -2,8 +2,14 @@ id: proof-of-qualification-bowman
 name: Proof of Qualification (Bowman)
 giver: bowman-job-instructor
 turn_in: athena-pierce
+start_map: the-road-to-the-dungeon
 prerequisites:
   - test-of-qualification-bowman
+steps:
+  - npc: bowman-job-instructor
+    map: the-road-to-the-dungeon
+  - npc: athena-pierce
+    map: bowman-instructional-school
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Bowman)
 verified:

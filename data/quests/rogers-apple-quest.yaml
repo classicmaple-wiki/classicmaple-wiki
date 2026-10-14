@@ -2,6 +2,9 @@ id: rogers-apple-quest
 name: Roger's Apple (quest)
 giver: roger
 turn_in: roger
+steps:
+  - npc: roger
+  - npc: roger
 region: Maple Island
 source_page: https://mapleclassic.wiki/wiki/Roger's_Apple_(quest)
 verified:

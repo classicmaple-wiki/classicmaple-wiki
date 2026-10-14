@@ -1,6 +1,7 @@
 id: the-fifth-mark
 name: The Fifth Mark
 giver: jay
+start_map: henesys
 prerequisites:
   - the-fourth-mark
 region: Victoria Island

@@ -2,8 +2,15 @@ id: a-marble-made-with-care
 name: A Marble Made With Care
 giver: camila
 turn_in: pia
+start_map: henesys
 prerequisites:
   - materials-for-a-special-marble
+next: a-promise-between-three-friends
+steps:
+  - npc: camila
+    map: henesys
+  - npc: pia
+    map: henesys-park
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Marble_Made_With_Care
 verified:

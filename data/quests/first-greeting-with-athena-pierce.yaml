@@ -2,6 +2,12 @@ id: first-greeting-with-athena-pierce
 name: First Greeting with Athena Pierce
 giver: community-board-henesys
 turn_in: athena-pierce
+start_map: henesys
+steps:
+  - npc: community-board
+    map: henesys
+  - npc: athena-pierce
+    map: bowman-instructional-school
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/First_Greeting_with_Athena_Pierce
 verified:

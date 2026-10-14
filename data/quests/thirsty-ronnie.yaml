@@ -2,8 +2,15 @@ id: thirsty-ronnie
 name: Thirsty Ronnie
 giver: ronnie
 turn_in: rowen-the-fairy
+start_map: the-tree-tunnel-at-the-forest-up-north
 prerequisites:
   - rinas-unagi-special-quest
+next: cold-milk
+steps:
+  - npc: ronnie
+    map: the-tree-tunnel-at-the-forest-up-north
+  - npc: rowen-the-fairy
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Thirsty_Ronnie
 verified:

@@ -2,8 +2,14 @@ id: an-unresolved-question
 name: An Unresolved Question
 giver: roxy
 turn_in: chun-ji
+start_map: kerning-city-civic-center
 prerequisites:
   - an-old-grudge
+steps:
+  - npc: roxy
+    map: kerning-city-civic-center
+  - npc: chun-ji
+    map: kerning-city-construction-site
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/An_Unresolved_Question
 verified:

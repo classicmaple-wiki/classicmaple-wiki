@@ -2,6 +2,9 @@ id: the-magicians-next-journey
 name: The Magician's Next Journey
 giver: grendel-the-really-old
 turn_in: grendel-the-really-old
+start_mode: quest-log
+start_map: magic-library
+next: finding-the-instructor-magician
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Magician's_Next_Journey
 verified:

@@ -2,8 +2,15 @@ id: grandfathers-vitamin-gummy
 name: Grandfather's Vitamin Gummy
 giver: mr-goldstein
 turn_in: mong-from-kong
+start_map: lith-harbor
 prerequisites:
   - the-final-ingredient-for-the-cure
+next: its-all-in-the-mind
+steps:
+  - npc: mr-goldstein
+    map: lith-harbor
+  - npc: mong-from-kong
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Grandfather's_Vitamin_Gummy
 verified:

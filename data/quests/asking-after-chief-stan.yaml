@@ -2,8 +2,14 @@ id: asking-after-chief-stan
 name: Asking After Chief Stan
 giver: community-board-henesys
 turn_in: chief-stan
+start_map: henesys
 prerequisites:
   - first-greeting-with-chief-stan
+steps:
+  - npc: community-board
+    map: henesys
+  - npc: chief-stan
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Asking_After_Chief_Stan
 verified:

@@ -2,6 +2,12 @@ id: asking-after-rina-the-town-resident
 name: Asking After Rina, the Town Resident
 giver: community-board-henesys
 turn_in: rina
+start_map: henesys
+steps:
+  - npc: community-board
+    map: henesys
+  - npc: rina
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Asking_After_Rina%2C_the_Town_Resident
 verified:

@@ -2,8 +2,16 @@ id: dr-faymuss-request
 name: Dr. Faymus's Request
 giver: nella
 turn_in: nella
+start_map: kerning-city
 prerequisites:
   - andres-request
+steps:
+  - npc: nella
+    map: kerning-city
+  - monster: jr-necki
+  - monster: horny-mushroom
+  - npc: nella
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Dr._Faymus's_Request
 verified:

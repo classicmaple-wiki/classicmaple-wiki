@@ -1,6 +1,12 @@
 id: strangers-request
 name: Stranger's Request
 giver: jane-doe
+start_map: niora-hospital
+next: strangers-identity
+steps:
+  - npc: jane-doe
+    map: niora-hospital
+  - monster: stirge
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Stranger's_Request
 verified:

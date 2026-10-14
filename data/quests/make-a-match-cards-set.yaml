@@ -2,6 +2,12 @@ id: make-a-match-cards-set
 name: Make a Match Cards Set
 giver: casey
 turn_in: casey
+start_map: henesys-park
+steps:
+  - npc: casey
+    map: henesys-park
+  - npc: casey
+    map: henesys-park
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Make_a_Match_Cards_Set
 verified:

@@ -2,8 +2,12 @@ id: returning-to-nina
 name: Returning to Nina
 giver: sen
 turn_in: nina
+start_map: mushroom-town-townstreet
 prerequisites:
   - what-sen-wants-to-eat
+steps:
+  - npc: sen
+  - npc: nina
 region: Maple Island
 source_page: https://mapleclassic.wiki/wiki/Returning_to_Nina
 verified:

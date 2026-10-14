@@ -2,8 +2,14 @@ id: icaruss-hang-glider
 name: Icarus's Hang Glider
 giver: icarus
 turn_in: icarus
+start_map: kerning-city
 prerequisites:
   - im-bored-2
+steps:
+  - npc: icarus
+    map: kerning-city
+  - npc: icarus
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Icarus's_Hang_Glider
 verified:

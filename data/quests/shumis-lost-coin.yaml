@@ -2,6 +2,12 @@ id: shumis-lost-coin
 name: Shumi's Lost Coin
 giver: shumi
 turn_in: shumi
+start_map: kerning-city
+steps:
+  - npc: shumi
+    map: kerning-city
+  - npc: shumi
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Shumi's_Lost_Coin
 verified:

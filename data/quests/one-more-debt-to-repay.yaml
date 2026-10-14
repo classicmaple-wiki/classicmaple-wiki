@@ -2,8 +2,15 @@ id: one-more-debt-to-repay
 name: One More Debt to Repay
 giver: alex
 turn_in: jm-from-tha-streetz
+start_map: kerning-city
 prerequisites:
   - nellas-old-memory
+next: not-ready-to-go-home-yet
+steps:
+  - npc: alex
+    map: kerning-city
+  - npc: jm-from-tha-streetz
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/One_More_Debt_to_Repay
 verified:

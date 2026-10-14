@@ -2,8 +2,16 @@ id: olafs-second-training
 name: Olaf's Second Training
 giver: olaf
 turn_in: olaf
+start_map: lith-harbor
 prerequisites:
   - olafs-first-training
+steps:
+  - npc: olaf
+    map: lith-harbor
+  - monster: pig
+  - monster: orange-mushroom
+  - npc: olaf
+    map: lith-harbor
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Olaf's_Second_Training
 verified:

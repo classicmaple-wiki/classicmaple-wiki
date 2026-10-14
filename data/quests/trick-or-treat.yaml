@@ -1,5 +1,6 @@
 id: trick-or-treat
 name: Trick or Treat!
+start_map: kerning-city
 prerequisites:
   - halloween-candies-quest
 region: Victoria Island

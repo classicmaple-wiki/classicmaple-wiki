@@ -2,8 +2,15 @@ id: estelles-request
 name: Estelle's Request
 giver: estelle
 turn_in: estelle
+start_map: the-field-south-of-ellinia
 prerequisites:
   - mrs-ming-mings-second-worry
+next: estelles-special-sauce-quest
+steps:
+  - npc: estelle
+    map: the-field-south-of-ellinia
+  - npc: estelle
+    map: the-field-south-of-ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Estelle's_Request
 verified:

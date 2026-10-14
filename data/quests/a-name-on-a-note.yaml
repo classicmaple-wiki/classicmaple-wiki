@@ -2,8 +2,15 @@ id: a-name-on-a-note
 name: A Name on a Note
 giver: maya
 turn_in: chrishrama
+start_map: henesys-townstreet
 prerequisites:
   - an-unknown-savior
+next: a-price-to-pay
+steps:
+  - npc: maya
+    map: henesys-townstreet
+  - npc: chrishrama
+    map: sleepywood
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Name_on_a_Note
 verified:

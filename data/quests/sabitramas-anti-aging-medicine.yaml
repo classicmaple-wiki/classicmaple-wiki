@@ -2,8 +2,14 @@ id: sabitramas-anti-aging-medicine
 name: Sabitrama's Anti-Aging Medicine
 giver: sabitrama
 turn_in: sabitrama
+start_map: sleepywood
 prerequisites:
   - sabitrama-and-the-diet-medicine
+steps:
+  - npc: sabitrama
+    map: sleepywood
+  - npc: sabitrama
+    map: sleepywood
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Sabitrama's_Anti-Aging_Medicine
 verified:

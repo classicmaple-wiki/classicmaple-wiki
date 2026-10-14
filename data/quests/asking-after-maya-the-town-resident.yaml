@@ -2,6 +2,12 @@ id: asking-after-maya-the-town-resident
 name: Asking After Maya, the Town Resident
 giver: community-board-henesys
 turn_in: maya
+start_map: henesys
+steps:
+  - npc: community-board
+    map: henesys
+  - npc: maya
+    map: henesys-townstreet
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Asking_After_Maya%2C_the_Town_Resident
 verified:

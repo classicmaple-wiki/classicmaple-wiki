@@ -2,8 +2,15 @@ id: what-pia-borrowed
 name: What Pia Borrowed
 giver: rina
 turn_in: rina
+start_map: henesys
 prerequisites:
   - looking-for-the-red-cape
+next: pias-gift
+steps:
+  - npc: rina
+    map: henesys
+  - npc: rina
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/What_Pia_Borrowed
 verified:

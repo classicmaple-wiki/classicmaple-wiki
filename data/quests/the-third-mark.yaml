@@ -1,6 +1,7 @@
 id: the-third-mark
 name: The Third Mark
 giver: jay
+start_map: henesys
 prerequisites:
   - the-second-mark
 region: Victoria Island

@@ -2,6 +2,13 @@ id: mrs-ming-mings-concern
 name: Mrs. Ming Ming's Concern
 giver: mrs-ming-ming
 turn_in: jay
+start_map: henesys
+next: chief-stans-past
+steps:
+  - npc: mrs-ming-ming
+    map: henesys
+  - npc: jay
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Mrs._Ming_Ming's_Concern
 verified:

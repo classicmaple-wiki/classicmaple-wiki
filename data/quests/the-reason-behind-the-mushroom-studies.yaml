@@ -2,6 +2,14 @@ id: the-reason-behind-the-mushroom-studies
 name: The Reason Behind the Mushroom Studies
 giver: bruce
 turn_in: bruce
+start_map: henesys
+steps:
+  - npc: bruce
+    map: henesys
+  - monster: shroom
+  - monster: orange-mushroom
+  - npc: bruce
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Reason_Behind_the_Mushroom_Studies
 verified:

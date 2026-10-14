@@ -2,8 +2,15 @@ id: too-shy-to-say-it-himself
 name: Too Shy to Say It Himself
 giver: alex
 turn_in: nella
+start_map: kerning-city
 prerequisites:
   - a-lost-thank-you
+next: nellas-old-memory
+steps:
+  - npc: alex
+    map: kerning-city
+  - npc: nella
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Too_Shy_to_Say_It_Himself
 verified:

@@ -1,6 +1,8 @@
 id: founders-first-step
 name: Founder's First Step
 giver: maple-administrator
+start_mode: automatic
+start_map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Founder's_First_Step
 verified:

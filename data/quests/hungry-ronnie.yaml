@@ -2,8 +2,16 @@ id: hungry-ronnie
 name: Hungry Ronnie
 giver: ronnie
 turn_in: ronnie
+start_map: the-tree-tunnel-at-the-forest-up-north
 prerequisites:
   - a-clue-to-the-secret-book
+next: still-hungry-ronnie
+steps:
+  - npc: ronnie
+    map: the-tree-tunnel-at-the-forest-up-north
+  - monster: lupin
+  - npc: ronnie
+    map: the-tree-tunnel-at-the-forest-up-north
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Hungry_Ronnie
 verified:

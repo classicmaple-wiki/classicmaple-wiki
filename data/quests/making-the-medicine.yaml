@@ -2,8 +2,15 @@ id: making-the-medicine
 name: Making the Medicine
 giver: mong-from-kong
 turn_in: mong-from-kong
+start_map: kerning-city
 prerequisites:
   - stirge-phobia
+next: the-final-ingredient-for-the-cure
+steps:
+  - npc: mong-from-kong
+    map: kerning-city
+  - npc: mong-from-kong
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Making_the_Medicine
 verified:

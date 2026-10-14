@@ -2,6 +2,12 @@ id: first-greeting-with-chief-stan
 name: First Greeting with Chief Stan
 giver: community-board-henesys
 turn_in: chief-stan
+start_map: henesys
+steps:
+  - npc: community-board
+    map: henesys
+  - npc: chief-stan
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/First_Greeting_with_Chief_Stan
 verified:

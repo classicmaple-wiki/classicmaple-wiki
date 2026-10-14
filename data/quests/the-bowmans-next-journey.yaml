@@ -2,6 +2,9 @@ id: the-bowmans-next-journey
 name: The Bowman's Next Journey
 giver: athena-pierce
 turn_in: athena-pierce
+start_mode: quest-log
+start_map: bowman-instructional-school
+next: finding-the-instructor-bowman
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Bowman's_Next_Journey
 verified:

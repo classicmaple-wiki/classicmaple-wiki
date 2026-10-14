@@ -2,6 +2,11 @@ id: what-sen-wants-to-eat
 name: What Sen wants to eat
 giver: nina
 turn_in: sen
+start_map: mushroom-town-nina
+next: returning-to-nina
+steps:
+  - npc: nina
+  - npc: sen
 region: Maple Island
 source_page: https://mapleclassic.wiki/wiki/What_Sen_wants_to_eat
 verified:

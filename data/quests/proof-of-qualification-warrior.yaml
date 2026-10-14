@@ -2,8 +2,14 @@ id: proof-of-qualification-warrior
 name: Proof of Qualification (Warrior)
 giver: warrior-job-instructor
 turn_in: dances-with-balrog
+start_map: west-rocky-mountain-iv
 prerequisites:
   - test-of-qualification-warrior
+steps:
+  - npc: warrior-job-instructor
+    map: west-rocky-mountain-iv
+  - npc: dances-with-balrog
+    map: warriors-sanctuary
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Warrior)
 verified:

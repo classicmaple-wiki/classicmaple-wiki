@@ -2,8 +2,13 @@ id: mais-training
 name: Mai's Training
 giver: mai
 turn_in: mai
+start_map: a-split-road
 prerequisites:
   - sams-suggestion
+next: mais-final-training
+steps:
+  - npc: mai
+  - npc: mai
 region: Maple Island
 source_page: https://mapleclassic.wiki/wiki/Mai's_Training
 verified:

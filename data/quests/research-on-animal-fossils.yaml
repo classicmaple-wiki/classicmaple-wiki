@@ -2,8 +2,15 @@ id: research-on-animal-fossils
 name: Research on Animal Fossils
 giver: betty
 turn_in: anne
+start_map: ellinia
 prerequisites:
   - research-on-plant-fossils
+next: transporting-drakes-skull
+steps:
+  - npc: betty
+    map: ellinia
+  - npc: anne
+    map: the-hill-east-of-henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Research_on_Animal_Fossils
 verified:

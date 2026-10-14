@@ -2,8 +2,15 @@ id: mrs-ming-mings-advice
 name: Mrs. Ming Ming's Advice
 giver: mrs-ming-ming
 turn_in: bruce
+start_map: henesys
 prerequisites:
   - bruces-dilemma
+next: bruces-cooking-ingredients
+steps:
+  - npc: mrs-ming-ming
+    map: henesys
+  - npc: bruce
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Mrs._Ming_Ming's_Advice
 verified:

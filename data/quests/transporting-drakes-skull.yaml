@@ -2,8 +2,14 @@ id: transporting-drakes-skull
 name: Transporting Drake's Skull
 giver: anne
 turn_in: betty
+start_map: the-hill-east-of-henesys
 prerequisites:
   - research-on-animal-fossils
+steps:
+  - npc: anne
+    map: the-hill-east-of-henesys
+  - npc: betty
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Transporting_Drake's_Skull
 verified:

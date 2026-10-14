@@ -2,6 +2,12 @@ id: first-greeting-with-rina-the-town-resident
 name: First Greeting with Rina, the Town Resident
 giver: community-board-henesys
 turn_in: rina
+start_map: henesys
+steps:
+  - npc: community-board
+    map: henesys
+  - npc: rina
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/First_Greeting_with_Rina%2C_the_Town_Resident
 verified:

@@ -2,8 +2,15 @@ id: making-a-sparkling-rock
 name: Making a Sparkling Rock
 giver: sophia
 turn_in: manji
+start_map: perion-department-store
 prerequisites:
   - finding-sophia
+next: arcons-blood
+steps:
+  - npc: sophia
+    map: perion-department-store
+  - npc: manji
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Making_a_Sparkling_Rock
 verified:

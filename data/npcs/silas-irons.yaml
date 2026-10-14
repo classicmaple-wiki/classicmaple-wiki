@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Silas_Irons
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Silas_Irons
+sprite:
+  file: npcs/silas-irons.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/255/npc/1022004/render/stand/0
+  retrieved: 2026-10-15

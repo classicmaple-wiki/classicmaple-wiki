@@ -2,8 +2,15 @@ id: another-lead
 name: Another Lead
 giver: chun-ji
 turn_in: roxy
+start_map: kerning-city-construction-site
 prerequisites:
   - a-quiet-line-of-work
+next: a-name-she-couldnt-say
+steps:
+  - npc: chun-ji
+    map: kerning-city-construction-site
+  - npc: roxy
+    map: kerning-city-civic-center
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Another_Lead
 verified:

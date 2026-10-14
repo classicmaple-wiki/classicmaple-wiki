@@ -2,8 +2,15 @@ id: a-craftsmans-touch
 name: A Craftsman's Touch
 giver: vicious
 turn_in: vicious
+start_map: henesys-market
 prerequisites:
   - a-worn-out-bow
+next: a-memory-restored
+steps:
+  - npc: vicious
+    map: henesys-market
+  - npc: vicious
+    map: henesys-market
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Craftsman's_Touch
 verified:

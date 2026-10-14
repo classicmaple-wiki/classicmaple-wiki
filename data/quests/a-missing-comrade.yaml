@@ -2,8 +2,15 @@ id: a-missing-comrade
 name: A Missing Comrade
 giver: dark-lord
 turn_in: dark-lord
+start_map: thieves-hideout
 prerequisites:
   - becoming-a-citizen-of-honor-kerning-city
+next: an-unbreakable-code
+steps:
+  - npc: dark-lord
+    map: thieves-hideout
+  - npc: dark-lord
+    map: thieves-hideout
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Missing_Comrade
 verified:

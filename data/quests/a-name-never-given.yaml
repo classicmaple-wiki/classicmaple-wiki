@@ -2,8 +2,14 @@ id: a-name-never-given
 name: A Name Never Given
 giver: manji
 turn_in: maya
+start_map: perion
 prerequisites:
   - a-man-atoning
+steps:
+  - npc: manji
+    map: perion
+  - npc: maya
+    map: henesys-townstreet
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Name_Never_Given
 verified:

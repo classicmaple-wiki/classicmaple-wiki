@@ -2,8 +2,15 @@ id: once-a-renowned-doctor
 name: Once a Renowned Doctor
 giver: roxy
 turn_in: nella
+start_map: kerning-city-civic-center
 prerequisites:
   - a-torn-letter
+next: the-price-of-information
+steps:
+  - npc: roxy
+    map: kerning-city-civic-center
+  - npc: nella
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Once_a_Renowned_Doctor
 verified:

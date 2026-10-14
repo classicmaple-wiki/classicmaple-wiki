@@ -2,8 +2,15 @@ id: a-box-hidden-long-ago
 name: A Box Hidden Long Ago
 giver: athena-pierce
 turn_in: athena-pierce
+start_map: bowman-instructional-school
 prerequisites:
   - becoming-a-citizen-of-honor-henesys
+next: a-worn-out-bow
+steps:
+  - npc: athena-pierce
+    map: bowman-instructional-school
+  - npc: athena-pierce
+    map: bowman-instructional-school
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Box_Hidden_Long_Ago
 verified:

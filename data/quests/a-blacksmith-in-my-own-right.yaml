@@ -2,8 +2,16 @@ id: a-blacksmith-in-my-own-right
 name: A Blacksmith in My Own Right!
 giver: silas-irons
 turn_in: silas-irons
+start_map: perion
 prerequisites:
   - silas-irons-in-need-of-an-apprentice
+steps:
+  - npc: silas-irons
+    map: perion
+  - monster: dark-axe-stump
+  - monster: zombie-mushroom
+  - npc: silas-irons
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Blacksmith_in_My_Own_Right!
 verified:

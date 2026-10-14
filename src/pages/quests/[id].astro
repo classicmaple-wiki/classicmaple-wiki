@@ -3,8 +3,10 @@
    One page per quest, generated from data/quests/ (spec 0005), in the
    same layout as the map pages. The Quest window gives who starts the
    quest, who finishes it, the region, and the quests that must come
-   first. Then who to talk to, the start and end NPCs as cards with their
-   sprites, and the quest chain as cards (spec 0009). The page sits in
+   first. Then who to talk to, the start, end, and other NPCs as cards
+   with their sprites, the steps in order, built from the NPC, monster, and
+   map each step names, and the quest chain as cards (specs 0009, 0012).
+   A quest with no NPC to start it says how it starts instead. The page sits in
    the scene of the town where the quest starts.
    Rewards and requirements are left out until a player confirms them.
    Notes, the history, and the source credit follow.
@@ -37,23 +39,48 @@ const allQuests = (await getCollection('quests')).map((questEntry) => questEntry
 const questsById = new Map(allQuests.map((otherQuest) => [otherQuest.id, otherQuest]));
 const giver = quest.giver ? npcsById.get(quest.giver) : undefined;
 const turnIn = quest.turn_in ? npcsById.get(quest.turn_in) : undefined;
-const giverMap = giver?.map ? (await getCollection('maps')).find((mapEntry) => mapEntry.data.id === giver.map)?.data : undefined;
-const resolved = await resolveMapScene(giverMap ?? quest);
+const mapsById = new Map((await getCollection('maps')).map((mapEntry) => [mapEntry.data.id, mapEntry.data]));
+const monstersById = new Map((await getCollection('monsters')).map((monsterEntry) => [monsterEntry.data.id, monsterEntry.data]));
+const startMap = quest.start_map ? mapsById.get(quest.start_map) : undefined;
+const giverMap = giver?.map ? mapsById.get(giver.map) : undefined;
+const resolved = await resolveMapScene(startMap ?? giverMap ?? quest);
+const startLabels = { 'quest-log': 'Your quest log', automatic: 'Starts by itself' } as const;
 const allCards = await libraryCards();
 const npcCardsById = new Map(allCards.filter((card) => card.type === 'npc').map((card) => [card.identifier, card]));
 const questCardsById = new Map(allCards.filter((card) => card.type === 'quest').map((card) => [card.identifier, card]));
 const peopleCards = [
 	...(giver ? [{ ...npcCardsById.get(giver.id)!, fact: turnIn?.id === giver.id ? 'Starts and ends it' : 'Starts it' }] : []),
 	...(turnIn && turnIn.id !== giver?.id ? [{ ...npcCardsById.get(turnIn.id)!, fact: 'Ends it' }] : []),
+	...[...new Set(quest.steps.flatMap((step) => (step.npc ? [step.npc] : [])))]
+		.filter((npcId) => npcId !== giver?.id && npcId !== turnIn?.id)
+		.map((npcId) => ({ ...npcCardsById.get(npcId)!, fact: 'Along the way' })),
 ].filter((card) => card.identifier);
+
+/*
+   One step in plain words, built only from the NPC, monster, and map the
+   step names, never from the source's step text.
+*/
+function describeStep(step: { npc?: string; monster?: string; map?: string }) {
+	const npc = step.npc ? npcsById.get(step.npc) : undefined;
+	const monster = step.monster ? monstersById.get(step.monster) : undefined;
+	const map = step.map ? mapsById.get(step.map) : undefined;
+	const verb = npc ? 'Talk to' : monster ? 'Hunt' : 'Go to';
+	return { verb, npc, monster, map };
+}
+const steps = quest.steps.map(describeStep);
 const prerequisites = quest.prerequisites.flatMap((identifier) => questsById.get(identifier) ?? []);
-const opens = allQuests
-	.filter((otherQuest) => otherQuest.prerequisites.includes(quest.id))
-	.sort((first, second) => first.name.localeCompare(second.name));
+const nextQuest = quest.next ? questsById.get(quest.next) : undefined;
+const opens = [
+	...allQuests.filter((otherQuest) => otherQuest.prerequisites.includes(quest.id)),
+	...(nextQuest && !nextQuest.prerequisites.includes(quest.id) ? [nextQuest] : []),
+].sort((first, second) => first.name.localeCompare(second.name));
 
 const statisticRows = [
-	{ label: 'Starts with', value: giver?.name, href: giver ? `/npcs/${giver.id}/` : undefined },
+	giver
+		? { label: 'Starts with', value: giver.name, href: `/npcs/${giver.id}/` }
+		: { label: 'Starts with', value: quest.start_mode ? startLabels[quest.start_mode] : undefined },
 	{ label: 'Ends with', value: turnIn?.name, href: turnIn ? `/npcs/${turnIn.id}/` : undefined },
+	{ label: 'Starts in', value: startMap?.name, href: startMap ? `/maps/${startMap.id}/` : undefined },
 	{ label: 'Region', value: quest.region },
 	{ label: 'Comes after', value: prerequisites.length === 0 ? 'Nothing' : `${prerequisites.length} ${prerequisites.length === 1 ? 'quest' : 'quests'}, see the chain below` },
 ];
@@ -61,6 +88,7 @@ const statisticRows = [
 const headings = [
 	{ depth: 2, slug: 'stats', text: 'Quest' },
 	...(peopleCards.length > 0 ? [{ depth: 2, slug: 'people', text: 'Who to talk to' }] : []),
+	...(steps.length > 0 ? [{ depth: 2, slug: 'steps', text: 'Steps' }] : []),
 	...(prerequisites.length > 0 || opens.length > 0 ? [{ depth: 2, slug: 'chain', text: 'Quest chain' }] : []),
 	...(quest.notes ? [{ depth: 2, slug: 'notes', text: 'Notes' }] : []),
 	...(quest.changes.length > 0 ? [{ depth: 2, slug: 'history', text: 'History' }] : []),
@@ -88,6 +116,34 @@ const headings = [
 				<ol class="library-grid not-content">
 					{peopleCards.map((card) => (
 						<LibraryCard card={card} />
+					))}
+				</ol>
+			</Window>
+		)
+	}
+
+	{
+		steps.length > 0 && (
+			<Window title="Steps" id="steps">
+				<ol class="quest-steps">
+					{steps.map((step) => (
+						<li>
+							{step.verb}{' '}
+							{step.npc && <a href={`/npcs/${step.npc.id}/`}>{step.npc.name}</a>}
+							{!step.npc && step.monster && <a href={`/monsters/${step.monster.id}/`}>{step.monster.name}</a>}
+							{step.npc && step.monster && (
+								<>
+									{', then hunt '}
+									<a href={`/monsters/${step.monster.id}/`}>{step.monster.name}</a>
+								</>
+							)}
+							{step.map && (
+								<>
+									{step.npc || step.monster ? ' in ' : ''}
+									<a href={`/maps/${step.map.id}/`}>{step.map.name}</a>
+								</>
+							)}
+						</li>
 					))}
 				</ol>
 			</Window>

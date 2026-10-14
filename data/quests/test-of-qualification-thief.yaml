@@ -2,8 +2,15 @@ id: test-of-qualification-thief
 name: Test of Qualification (Thief)
 giver: thief-job-instructor
 turn_in: thief-job-instructor
+start_map: construction-site-north-of-kerning-city
 prerequisites:
   - finding-the-instructor-thief
+next: proof-of-qualification-thief
+steps:
+  - npc: thief-job-instructor
+    map: construction-site-north-of-kerning-city
+  - npc: thief-job-instructor
+    map: construction-site-north-of-kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Test_of_Qualification_(Thief)
 verified:

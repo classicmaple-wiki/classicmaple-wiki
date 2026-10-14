@@ -2,8 +2,15 @@ id: shumis-request
 name: Shumi's Request
 giver: nella
 turn_in: nella
+start_map: kerning-city
 prerequisites:
   - don-hwangs-request
+steps:
+  - npc: nella
+    map: kerning-city
+  - monster: dark-stump
+  - npc: nella
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Shumi's_Request
 verified:

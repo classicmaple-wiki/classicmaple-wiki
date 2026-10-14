@@ -2,8 +2,14 @@ id: the-best-dad
 name: The Best Dad
 giver: ayan
 turn_in: bruce
+start_map: perion
 prerequisites:
   - a-fathers-love-for-his-daughter
+steps:
+  - npc: ayan
+    map: perion
+  - npc: bruce
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Best_Dad
 verified:

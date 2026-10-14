@@ -1,6 +1,7 @@
 id: the-final-mark
 name: The Final Mark
 giver: jay
+start_map: henesys
 prerequisites:
   - the-fifth-mark
 region: Victoria Island

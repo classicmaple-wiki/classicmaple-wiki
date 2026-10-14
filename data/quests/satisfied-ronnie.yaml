@@ -2,8 +2,15 @@ id: satisfied-ronnie
 name: Satisfied Ronnie
 giver: rowen-the-fairy
 turn_in: ronnie
+start_map: ellinia
 prerequisites:
   - cold-milk
+next: returned-secret-book
+steps:
+  - npc: rowen-the-fairy
+    map: ellinia
+  - npc: ronnie
+    map: the-tree-tunnel-at-the-forest-up-north
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Satisfied_Ronnie
 verified:

@@ -2,6 +2,13 @@ id: jm-from-tha-streetz-looking-for-a-partner
 name: JM From tha Streetz Looking for a Partner
 giver: jm-from-tha-streetz
 turn_in: jm-from-tha-streetz
+start_map: kerning-city
+steps:
+  - npc: jm-from-tha-streetz
+    map: kerning-city
+  - monster: pig
+  - npc: jm-from-tha-streetz
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/JM_From_tha_Streetz_Looking_for_a_Partner
 verified:

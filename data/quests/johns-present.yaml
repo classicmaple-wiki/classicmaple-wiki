@@ -2,8 +2,14 @@ id: johns-present
 name: John's Present
 giver: john
 turn_in: john
+start_map: lith-harbor
 prerequisites:
   - johns-pink-flower-basket
+steps:
+  - npc: john
+    map: lith-harbor
+  - npc: john
+    map: lith-harbor
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/John's_Present
 verified:

@@ -2,8 +2,15 @@ id: a-weaponcrafter-in-my-own-right
 name: A Weaponcrafter in My Own Right!
 giver: mr-thunder
 turn_in: mr-thunder
+start_map: perion
 prerequisites:
   - mr-thunder-in-need-of-an-apprentice
+steps:
+  - npc: mr-thunder
+    map: perion
+  - monster: iron-hog
+  - npc: mr-thunder
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Weaponcrafter_in_My_Own_Right!
 verified:

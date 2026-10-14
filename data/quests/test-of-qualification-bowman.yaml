@@ -2,8 +2,15 @@ id: test-of-qualification-bowman
 name: Test of Qualification (Bowman)
 giver: bowman-job-instructor
 turn_in: bowman-job-instructor
+start_map: the-road-to-the-dungeon
 prerequisites:
   - finding-the-instructor-bowman
+next: proof-of-qualification-bowman
+steps:
+  - npc: bowman-job-instructor
+    map: the-road-to-the-dungeon
+  - npc: bowman-job-instructor
+    map: the-road-to-the-dungeon
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Test_of_Qualification_(Bowman)
 verified:

@@ -2,8 +2,16 @@ id: an-old-grudge
 name: An Old Grudge
 giver: jane-doe
 turn_in: roxy
+start_map: niora-hospital
 prerequisites:
   - a-name-she-couldnt-say
+next: an-unresolved-question
+steps:
+  - npc: jane-doe
+    map: niora-hospital
+  - monster: shade
+  - npc: roxy
+    map: kerning-city-civic-center
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/An_Old_Grudge
 verified:

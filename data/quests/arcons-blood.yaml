@@ -2,8 +2,16 @@ id: arcons-blood
 name: Arcon's Blood?
 giver: manji
 turn_in: manji
+start_map: perion
 prerequisites:
   - making-a-sparkling-rock
+next: getting-arcons-blood
+steps:
+  - npc: manji
+    map: perion
+  - monster: zombie-mushroom
+  - npc: manji
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Arcon's_Blood%3F
 verified:

@@ -2,6 +2,11 @@ id: letter-for-lucas
 name: Letter for Lucas
 giver: maria
 turn_in: lucas
+start_map: a-split-road
+next: lucas-reply
+steps:
+  - npc: maria
+  - npc: lucas
 region: Maple Island
 source_page: https://mapleclassic.wiki/wiki/Letter_for_Lucas
 verified:

@@ -2,6 +2,9 @@ id: the-thiefs-next-journey
 name: The Thief's Next Journey
 giver: dark-lord
 turn_in: dark-lord
+start_mode: quest-log
+start_map: thieves-hideout
+next: finding-the-instructor-thief
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Thief's_Next_Journey
 verified:

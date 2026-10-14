@@ -2,8 +2,15 @@ id: strangers-identity
 name: Stranger's Identity
 giver: jane-doe
 turn_in: jane-doe
+start_map: niora-hospital
 prerequisites:
   - strangers-request
+steps:
+  - npc: jane-doe
+    map: niora-hospital
+  - monster: zombie-mushroom
+  - npc: jane-doe
+    map: niora-hospital
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Stranger's_Identity
 verified:

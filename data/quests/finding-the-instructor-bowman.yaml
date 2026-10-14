@@ -2,8 +2,15 @@ id: finding-the-instructor-bowman
 name: Finding the Instructor (Bowman)
 giver: athena-pierce
 turn_in: bowman-job-instructor
+start_map: bowman-instructional-school
 prerequisites:
   - the-bowmans-next-journey
+next: test-of-qualification-bowman
+steps:
+  - npc: athena-pierce
+    map: bowman-instructional-school
+  - npc: bowman-job-instructor
+    map: the-road-to-the-dungeon
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Bowman)
 verified:

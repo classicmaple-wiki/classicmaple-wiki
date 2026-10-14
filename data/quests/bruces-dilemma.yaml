@@ -2,6 +2,13 @@ id: bruces-dilemma
 name: Bruce's Dilemma
 giver: bruce
 turn_in: mrs-ming-ming
+start_map: henesys
+next: mrs-ming-mings-advice
+steps:
+  - npc: bruce
+    map: henesys
+  - npc: mrs-ming-ming
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Bruce's_Dilemma
 verified:

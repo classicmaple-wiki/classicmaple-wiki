@@ -2,8 +2,15 @@ id: cold-milk
 name: Cold Milk
 giver: rowen-the-fairy
 turn_in: rowen-the-fairy
+start_map: ellinia
 prerequisites:
   - thirsty-ronnie
+next: satisfied-ronnie
+steps:
+  - npc: rowen-the-fairy
+    map: ellinia
+  - npc: rowen-the-fairy
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Cold_Milk
 verified:

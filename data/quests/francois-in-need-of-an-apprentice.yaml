@@ -2,6 +2,13 @@ id: francois-in-need-of-an-apprentice
 name: Francois in Need of an Apprentice
 giver: francois
 turn_in: francois
+start_map: ellinia
+steps:
+  - npc: francois
+    map: ellinia
+  - monster: dark-stump
+  - npc: francois
+    map: ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Francois_in_Need_of_an_Apprentice
 verified:

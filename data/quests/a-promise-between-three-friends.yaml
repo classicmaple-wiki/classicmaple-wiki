@@ -2,8 +2,14 @@ id: a-promise-between-three-friends
 name: A Promise Between Three Friends
 giver: pia
 turn_in: camila
+start_map: henesys-park
 prerequisites:
   - a-marble-made-with-care
+steps:
+  - npc: pia
+    map: henesys-park
+  - npc: camila
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Promise_Between_Three_Friends
 verified:

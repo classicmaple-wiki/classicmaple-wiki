@@ -2,6 +2,10 @@ id: biggss-collection-of-items
 name: Biggs's Collection of Items
 giver: biggs
 turn_in: biggs
+start_map: southperry
+steps:
+  - npc: biggs
+  - npc: biggs
 region: Maple Island
 source_page: https://mapleclassic.wiki/wiki/Biggs's_Collection_of_Items
 verified:

@@ -2,6 +2,12 @@ id: first-greeting-with-icarus-the-town-resident
 name: First Greeting with Icarus, the Town Resident
 giver: community-board-kerning-city
 turn_in: icarus
+start_map: kerning-city
+steps:
+  - npc: community-board
+    map: kerning-city
+  - npc: icarus
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/First_Greeting_with_Icarus%2C_the_Town_Resident
 verified:

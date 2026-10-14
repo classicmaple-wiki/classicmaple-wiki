@@ -2,8 +2,15 @@ id: test-of-qualification-magician
 name: Test of Qualification (Magician)
 giver: magician-job-instructor
 turn_in: magician-job-instructor
+start_map: the-forest-north-of-ellinia
 prerequisites:
   - finding-the-instructor-magician
+next: proof-of-qualification-magician
+steps:
+  - npc: magician-job-instructor
+    map: the-forest-north-of-ellinia
+  - npc: magician-job-instructor
+    map: the-forest-north-of-ellinia
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Test_of_Qualification_(Magician)
 verified:

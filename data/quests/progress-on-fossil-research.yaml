@@ -2,8 +2,14 @@ id: progress-on-fossil-research
 name: Progress on Fossil Research
 giver: betty
 turn_in: winston
+start_map: ellinia
 prerequisites:
   - transporting-drakes-skull
+steps:
+  - npc: betty
+    map: ellinia
+  - npc: winston
+    map: east-rocky-mountain-ii
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Progress_on_Fossil_Research
 verified:

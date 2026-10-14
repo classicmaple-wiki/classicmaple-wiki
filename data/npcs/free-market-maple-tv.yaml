@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Free_Market_Maple_TV
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Free_Market_Maple_TV
+sprite:
+  file: npcs/free-market-maple-tv.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/255/npc/9250025/render/stand/0
+  retrieved: 2026-10-15

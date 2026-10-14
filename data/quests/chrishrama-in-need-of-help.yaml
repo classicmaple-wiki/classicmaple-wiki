@@ -2,8 +2,15 @@ id: chrishrama-in-need-of-help
 name: Chrishrama in Need of Help
 giver: chrishrama
 turn_in: chrishrama
+start_map: sleepywood
 prerequisites:
   - chrishrama-in-need-of-an-apprentice
+steps:
+  - npc: chrishrama
+    map: sleepywood
+  - monster: green-mushroom
+  - npc: chrishrama
+    map: sleepywood
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Chrishrama_in_Need_of_Help
 verified:

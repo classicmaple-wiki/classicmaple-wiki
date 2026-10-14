@@ -2,8 +2,14 @@ id: building-a-new-house-for-blackbull
 name: Building a New House For Blackbull
 giver: blackbull
 turn_in: blackbull
+start_map: perion
 prerequisites:
   - fixing-blackbulls-house
+steps:
+  - npc: blackbull
+    map: perion
+  - npc: blackbull
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Building_a_New_House_For_Blackbull
 verified:

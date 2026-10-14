@@ -2,8 +2,15 @@ id: pias-mischievous-wish
 name: Pia's Mischievous Wish
 giver: pia
 turn_in: camila
+start_map: henesys-park
 prerequisites:
   - a-gift-for-pia
+next: materials-for-a-special-marble
+steps:
+  - npc: pia
+    map: henesys-park
+  - npc: camila
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Pia's_Mischievous_Wish
 verified:

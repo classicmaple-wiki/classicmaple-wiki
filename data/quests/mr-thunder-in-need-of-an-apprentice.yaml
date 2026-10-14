@@ -2,8 +2,14 @@ id: mr-thunder-in-need-of-an-apprentice
 name: Mr. Thunder in Need of an Apprentice
 giver: mr-thunder
 turn_in: mr-thunder
+start_map: perion
 prerequisites:
   - silas-irons-in-need-of-an-apprentice
+steps:
+  - npc: mr-thunder
+    map: perion
+  - npc: mr-thunder
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Mr._Thunder_in_Need_of_an_Apprentice
 verified:

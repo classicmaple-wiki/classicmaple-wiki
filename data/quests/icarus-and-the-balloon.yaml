@@ -2,8 +2,14 @@ id: icarus-and-the-balloon
 name: Icarus and the Balloon
 giver: icarus
 turn_in: icarus
+start_map: kerning-city
 prerequisites:
   - icaruss-hang-glider
+steps:
+  - npc: icarus
+    map: kerning-city
+  - npc: icarus
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Icarus_and_the_Balloon
 verified:

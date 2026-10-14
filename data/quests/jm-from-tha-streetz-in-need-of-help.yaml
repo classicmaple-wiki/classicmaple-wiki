@@ -2,8 +2,15 @@ id: jm-from-tha-streetz-in-need-of-help
 name: JM From tha Streetz in Need of Help
 giver: jm-from-tha-streetz
 turn_in: jm-from-tha-streetz
+start_map: kerning-city
 prerequisites:
   - jm-from-tha-streetz-looking-for-a-partner
+steps:
+  - npc: jm-from-tha-streetz
+    map: kerning-city
+  - monster: jr-necki
+  - npc: jm-from-tha-streetz
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/JM_From_tha_Streetz_in_Need_of_Help
 verified:

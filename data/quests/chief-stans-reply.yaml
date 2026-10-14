@@ -2,8 +2,14 @@ id: chief-stans-reply
 name: Chief Stan's Reply
 giver: chief-stan
 turn_in: lewis
+start_map: henesys
 prerequisites:
   - welcome-to-the-free-market
+steps:
+  - npc: chief-stan
+    map: henesys
+  - npc: lewis
+    map: free-market-entrance
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Chief_Stan's_Reply
 verified:

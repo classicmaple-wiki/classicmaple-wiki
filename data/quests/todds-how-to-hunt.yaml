@@ -2,6 +2,11 @@ id: todds-how-to-hunt
 name: Todd's How-to-Hunt
 giver: todd
 turn_in: peter
+start_map: east-entrance-to-mushroom-town
+steps:
+  - npc: todd
+  - npc: peter
+    map: east-entrance-to-mushroom-town
 region: Maple Island
 source_page: https://mapleclassic.wiki/wiki/Todd's_How-to-Hunt
 verified:

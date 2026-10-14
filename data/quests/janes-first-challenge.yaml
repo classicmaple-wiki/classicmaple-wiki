@@ -2,8 +2,16 @@ id: janes-first-challenge
 name: Jane's First Challenge
 giver: jane
 turn_in: jane
+start_map: lith-harbor
 prerequisites:
   - jane-and-the-mushroom
+steps:
+  - npc: jane
+    map: lith-harbor
+  - monster: copper-drake
+  - monster: wraith
+  - npc: jane
+    map: lith-harbor
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Jane's_First_Challenge
 verified:

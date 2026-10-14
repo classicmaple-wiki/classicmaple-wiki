@@ -2,8 +2,15 @@ id: looking-for-the-red-cape
 name: Looking for the Red Cape
 giver: pia
 turn_in: rina
+start_map: henesys-park
 prerequisites:
   - pias-present-for-a-friend
+next: what-pia-borrowed
+steps:
+  - npc: pia
+    map: henesys-park
+  - npc: rina
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Looking_for_the_Red_Cape
 verified:

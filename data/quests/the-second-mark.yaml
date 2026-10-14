@@ -1,6 +1,7 @@
 id: the-second-mark
 name: The Second Mark
 giver: jay
+start_map: henesys
 prerequisites:
   - the-first-mark
 region: Victoria Island

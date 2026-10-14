@@ -2,8 +2,16 @@ id: a-quiet-line-of-work
 name: A Quiet Line of Work
 giver: chun-ji
 turn_in: chun-ji
+start_map: kerning-city-construction-site
 prerequisites:
   - first-greeting-with-chun-ji
+next: another-lead
+steps:
+  - npc: chun-ji
+    map: kerning-city-construction-site
+  - monster: wraith
+  - npc: chun-ji
+    map: kerning-city-construction-site
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Quiet_Line_of_Work
 verified:

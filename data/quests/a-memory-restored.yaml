@@ -2,8 +2,14 @@ id: a-memory-restored
 name: A Memory Restored
 giver: vicious
 turn_in: athena-pierce
+start_map: henesys-market
 prerequisites:
   - a-craftsmans-touch
+steps:
+  - npc: vicious
+    map: henesys-market
+  - npc: athena-pierce
+    map: bowman-instructional-school
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/A_Memory_Restored
 verified:

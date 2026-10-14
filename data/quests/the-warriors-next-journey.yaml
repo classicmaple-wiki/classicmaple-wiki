@@ -2,6 +2,9 @@ id: the-warriors-next-journey
 name: The Warrior's Next Journey
 giver: dances-with-balrog
 turn_in: dances-with-balrog
+start_mode: quest-log
+start_map: warriors-sanctuary
+next: finding-the-instructor-warrior
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Warrior's_Next_Journey
 verified:

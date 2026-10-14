@@ -2,8 +2,14 @@ id: regained-vitality
 name: Regained Vitality
 giver: chief-stan
 turn_in: mrs-ming-ming
+start_map: henesys
 prerequisites:
   - memories-of-youth
+steps:
+  - npc: chief-stan
+    map: henesys
+  - npc: mrs-ming-ming
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Regained_Vitality
 verified:

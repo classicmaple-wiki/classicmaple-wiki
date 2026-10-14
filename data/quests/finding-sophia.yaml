@@ -2,8 +2,15 @@ id: finding-sophia
 name: Finding Sophia
 giver: teo
 turn_in: sophia
+start_map: lith-harbor
 prerequisites:
   - maya-of-henesys
+next: making-a-sparkling-rock
+steps:
+  - npc: teo
+    map: lith-harbor
+  - npc: sophia
+    map: perion-department-store
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Finding_Sophia
 verified:

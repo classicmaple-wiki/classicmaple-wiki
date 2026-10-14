@@ -2,8 +2,14 @@ id: mayas-last-collection
 name: Maya's Last Collection
 giver: maya
 turn_in: maya
+start_map: henesys-townstreet
 prerequisites:
   - mayas-third-collection
+steps:
+  - npc: maya
+    map: henesys-townstreet
+  - npc: maya
+    map: henesys-townstreet
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Maya's_Last_Collection
 verified:

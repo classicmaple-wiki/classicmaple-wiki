@@ -2,8 +2,14 @@ id: special-taste-of-florina-beach-iii
 name: Special Taste of Florina Beach III
 giver: riel
 turn_in: riel
+start_map: florina-beach
 prerequisites:
   - special-taste-of-florina-beach-ii
+steps:
+  - npc: riel
+    map: florina-beach
+  - npc: riel
+    map: florina-beach
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Special_Taste_of_Florina_Beach_III
 verified:

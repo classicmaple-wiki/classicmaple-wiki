@@ -2,8 +2,15 @@ id: teos-even-weirder-hobby
 name: Teo's Even Weirder Hobby
 giver: teo
 turn_in: teo
+start_map: lith-harbor
 prerequisites:
   - teos-weird-hobby
+steps:
+  - npc: teo
+    map: lith-harbor
+  - monster: pig
+  - npc: teo
+    map: lith-harbor
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Teo's_Even_Weirder_Hobby
 verified:

@@ -2,8 +2,15 @@ id: cutthroat-mannys-request
 name: Cutthroat Manny's Request
 giver: nella
 turn_in: nella
+start_map: kerning-city
 prerequisites:
   - chriss-request
+steps:
+  - npc: nella
+    map: kerning-city
+  - monster: evil-eye
+  - npc: nella
+    map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Cutthroat_Manny's_Request
 verified:

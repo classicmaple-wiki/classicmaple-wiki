@@ -1,5 +1,9 @@
 id: halloween-candies-quest
 name: Halloween Candies (quest)
+start_map: kerning-city
+steps:
+  - map: kerning-city
+  - map: kerning-city
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Halloween_Candies_(quest)
 verified:

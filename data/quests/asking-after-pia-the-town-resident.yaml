@@ -2,6 +2,12 @@ id: asking-after-pia-the-town-resident
 name: Asking After Pia, the Town Resident
 giver: community-board-henesys
 turn_in: pia
+start_map: henesys
+steps:
+  - npc: community-board
+    map: henesys
+  - npc: pia
+    map: henesys-park
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Asking_After_Pia%2C_the_Town_Resident
 verified:

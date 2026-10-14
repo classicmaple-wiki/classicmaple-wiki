@@ -2,8 +2,16 @@ id: taking-out-the-alligators-1
 name: Taking Out the Alligators 1
 giver: ayan
 turn_in: ayan
+start_map: perion
 prerequisites:
   - i-need-to-find-my-daughter-2
+steps:
+  - npc: ayan
+    map: perion
+  - monster: jr-necki
+  - monster: ligator
+  - npc: ayan
+    map: perion
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Taking_Out_the_Alligators_1
 verified:

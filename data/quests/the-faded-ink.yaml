@@ -2,8 +2,14 @@ id: the-faded-ink
 name: The Faded Ink
 giver: chrishrama
 turn_in: hotel-receptionist
+start_map: sleepywood
 prerequisites:
   - repairing-the-book
+steps:
+  - npc: chrishrama
+    map: sleepywood
+  - npc: hotel-receptionist
+    map: sleepywood-hotel
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/The_Faded_Ink
 verified:

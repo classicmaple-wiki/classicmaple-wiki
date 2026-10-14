@@ -2,8 +2,15 @@ id: still-hungry-ronnie
 name: Still Hungry Ronnie
 giver: ronnie
 turn_in: rina
+start_map: the-tree-tunnel-at-the-forest-up-north
 prerequisites:
   - hungry-ronnie
+next: secret-to-unagi-special
+steps:
+  - npc: ronnie
+    map: the-tree-tunnel-at-the-forest-up-north
+  - npc: rina
+    map: henesys
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Still_Hungry_Ronnie
 verified:
