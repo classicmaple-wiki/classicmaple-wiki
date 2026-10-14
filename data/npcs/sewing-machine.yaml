@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Sewing_Machine
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sewing_Machine
+sprite:
+  file: npcs/sewing-machine.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/255/npc/1530656/render/stand/0
+  retrieved: 2026-10-15
