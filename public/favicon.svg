@@ -1,4 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-	<rect width="64" height="64" rx="14" fill="#c2570c" />
-	<text x="32" y="43" font-family="system-ui, sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="#fff">CM</text>
+	<defs>
+		<linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0" stop-color="#fff6e6" />
+			<stop offset="1" stop-color="#f5ddb0" />
+		</linearGradient>
+	</defs>
+	<rect x="2" y="2" width="60" height="60" rx="15" fill="url(#tile)" stroke="#8b5a2b" stroke-width="3" />
+	<g transform="translate(8 7) scale(2)">
+		<path fill="#E8731A" stroke="#E8731A" stroke-width="0.8" stroke-linejoin="round" d="M12 1.5L13.6 4.6L15.6 3.6L14.9 8.2L17.6 5.6L18.3 7.3L21.6 6.6L20.4 10.2L22.3 11.2L17.4 15.2L18 17L13 16.2H12.6V22.5H11.4V16.2H11L6 17L6.6 15.2L1.7 11.2L3.6 10.2L2.4 6.6L5.7 7.3L6.4 5.6L9.1 8.2L8.4 3.6L10.4 4.6Z" />
+		<path fill="none" stroke="#9A3D08" stroke-width="1" stroke-linecap="round" d="M12 6V16M12 12.5L16 9.5M12 12.5L8 9.5" />
+	</g>
 </svg>

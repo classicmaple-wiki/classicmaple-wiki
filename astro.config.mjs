@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import {
@@ -9,6 +10,12 @@ import {
 } from './site.config.mjs';
 import { satteri } from '@astrojs/markdown-satteri';
 import { createEntityLinksPlugin } from './src/lib/entityLinks.mjs';
+
+/*
+   The brand icon from scripts/make-icons.ts, once the owner's logo is in.
+   Until then the site uses the leaf in public/favicon.svg.
+*/
+const hasBrandIcon = existsSync('public/favicon-32.png');
 
 export default defineConfig({
 	site: siteUrl,
@@ -23,6 +30,7 @@ export default defineConfig({
 			title: siteTitle,
 			description: siteDescription,
 			logo: { src: './src/assets/leaf.svg' },
+			favicon: hasBrandIcon ? '/favicon-32.png' : '/favicon.svg',
 			social: [{ icon: 'github', label: 'GitHub', href: repositoryUrl }],
 			editLink: { baseUrl: editBaseUrl },
 			lastUpdated: true,
@@ -34,6 +42,12 @@ export default defineConfig({
 				'./src/styles/pages.css',
 			],
 			head: [
+				...(hasBrandIcon
+					? [
+							{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' } },
+							{ tag: 'link', attrs: { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicon-192.png' } },
+						]
+					: []),
 				{
 					tag: 'link',
 					attrs: {

@@ -136,6 +136,16 @@ One original character per class, made with the class character layout. They are
 
 Ask for a few variations if the first is too plain: "Same character, more detail in the outfit, brighter colors, crisper pixel edges."
 
+### Brand icon
+
+The site's logo: the browser tab icon, the home screen icon, and the GitHub organization's picture. One square picture makes all of them. It has to read at 32 pixels, so keep it to one bold shape. It must be original: never copy or echo the MapleStory logo or any other game's logo.
+
+> A square app icon, 1024 by 1024 pixels. Modern HD pixel art in the style of a cozy mid 2000s 2D side-scrolling fantasy MMORPG, crisp visible pixel edges, painterly shading, a saturated warm palette, soft bloom. One bright orange maple leaf with a darker red brown vein, tilted slightly, resting on a small open field guide book with cream pages, centered and filling about 70 percent of the canvas. Behind it, a rounded square tile with a warm cream to soft gold gradient and a thick dark brown outline, like a wooden sign. A bold, simple silhouette that still reads at 32 by 32 pixels. Original design: do not copy the MapleStory logo or any existing game logo. No text, letters, or numbers. Nothing outside the rounded square, no watermark, not a 3D render.
+
+Variations to ask for: "Same icon, simpler, fewer details so it reads at 32 pixels." or "Same icon without the book, only the leaf on the tile."
+
+Save the chosen picture as `src/assets/brand/icon.png` or `icon.webp`, square and at least 512 pixels a side, with the corners outside the tile transparent, then run `npx tsx scripts/make-icons.ts`. It writes the favicons and `public/icon-512.png`, which is the file to upload as the GitHub organization's picture. The current master, made by the owner on 2026-10-15, is `src/assets/brand/icon.webp`. `public/favicon.svg` is only the fallback.
+
 ### Special pages
 
 All four are done: `workshop.webp` for About, `harbor-board.webp` for What changed, `potion-shop.webp` for Support, and `closed-shop.webp` for the 404 page. Their scene names are in `src/lib/scenes.ts`.
