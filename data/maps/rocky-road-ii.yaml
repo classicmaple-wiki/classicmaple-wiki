@@ -1,0 +1,15 @@
+id: rocky-road-ii
+name: Rocky Road II
+region: Victoria Island
+monsters:
+  - axe-stump
+  - dark-axe-stump
+  - dark-stump
+  - red-snail
+  - snail
+  - stump
+  - wild-boar
+source_page: https://mapleclassic.wiki/wiki/Rocky_Road_II
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Rocky_Road_II

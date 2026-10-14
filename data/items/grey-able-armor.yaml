@@ -1,0 +1,12 @@
+id: grey-able-armor
+name: Grey Able Armor
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Grey_Able_Armor
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Grey_Able_Armor
+sprite:
+  file: items/grey-able-armor.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041063/icon
+  retrieved: 2026-10-14

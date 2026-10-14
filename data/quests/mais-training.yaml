@@ -1,0 +1,11 @@
+id: mais-training
+name: Mai's Training
+giver: mai
+turn_in: mai
+prerequisites:
+  - sams-suggestion
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Mai's_Training
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mai's_Training

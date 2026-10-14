@@ -1,0 +1,12 @@
+id: red-baseball-cap
+name: Red Baseball Cap
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Baseball_Cap
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Baseball_Cap
+sprite:
+  file: items/red-baseball-cap.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002012/icon
+  retrieved: 2026-10-14

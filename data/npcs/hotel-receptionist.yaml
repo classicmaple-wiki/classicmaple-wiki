@@ -1,0 +1,13 @@
+id: hotel-receptionist
+name: Hotel Receptionist
+map: sleepywood-hotel
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Hotel_Receptionist
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Hotel_Receptionist
+sprite:
+  file: npcs/hotel-receptionist.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1061100/render/stand/0
+  retrieved: 2026-10-14

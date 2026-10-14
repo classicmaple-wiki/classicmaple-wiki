@@ -1,0 +1,11 @@
+id: monkey-swamp-ii
+name: Monkey Swamp II
+region: Victoria Island
+monsters:
+  - jr-necki
+  - lupin
+  - zombie-lupin
+source_page: https://mapleclassic.wiki/wiki/Monkey_Swamp_II
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Monkey_Swamp_II

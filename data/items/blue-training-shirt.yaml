@@ -1,0 +1,12 @@
+id: blue-training-shirt
+name: Blue Training Shirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Blue_Training_Shirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_Training_Shirt
+sprite:
+  file: items/blue-training-shirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040004/icon
+  retrieved: 2026-10-14

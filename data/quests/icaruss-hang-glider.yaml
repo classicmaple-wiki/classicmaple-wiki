@@ -1,0 +1,11 @@
+id: icaruss-hang-glider
+name: Icarus's Hang Glider
+giver: icarus
+turn_in: icarus
+prerequisites:
+  - im-bored-2
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Icarus's_Hang_Glider
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Icarus's_Hang_Glider

@@ -1,0 +1,13 @@
+id: mrs-ming-ming
+name: Mrs. Ming Ming
+map: henesys
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Mrs._Ming_Ming
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mrs._Ming_Ming
+sprite:
+  file: npcs/mrs-ming-ming.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1012106/render/stand/0
+  retrieved: 2026-10-14

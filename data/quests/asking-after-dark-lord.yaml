@@ -1,0 +1,11 @@
+id: asking-after-dark-lord
+name: Asking After Dark Lord
+giver: community-board-kerning-city
+turn_in: dark-lord
+prerequisites:
+  - first-greeting-with-dark-lord
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Asking_After_Dark_Lord
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Asking_After_Dark_Lord

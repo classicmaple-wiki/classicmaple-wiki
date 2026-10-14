@@ -1,0 +1,12 @@
+id: studded-polearm
+name: Studded Polearm
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Studded_Polearm
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Studded_Polearm
+sprite:
+  file: items/studded-polearm.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1442007/icon
+  retrieved: 2026-10-14

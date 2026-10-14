@@ -1,0 +1,12 @@
+id: silver-master-sergeant
+name: Silver Master Sergeant
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Silver_Master_Sergeant
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Silver_Master_Sergeant
+sprite:
+  file: items/silver-master-sergeant.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040040/icon
+  retrieved: 2026-10-14

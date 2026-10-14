@@ -1,0 +1,11 @@
+id: chrishrama-in-need-of-help
+name: Chrishrama in Need of Help
+giver: chrishrama
+turn_in: chrishrama
+prerequisites:
+  - chrishrama-in-need-of-an-apprentice
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Chrishrama_in_Need_of_Help
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Chrishrama_in_Need_of_Help

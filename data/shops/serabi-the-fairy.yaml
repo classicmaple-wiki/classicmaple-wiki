@@ -1,0 +1,71 @@
+id: serabi-the-fairy
+name: Serabi the Fairy
+npc: serabi-the-fairy
+map: ellinia-weapon-store
+region: Victoria Island
+items:
+  - beige-nitty
+  - beige-plain-robe
+  - black-armine
+  - black-armine-skirt
+  - black-nitty
+  - black-split
+  - black-split-pants
+  - black-split-piece
+  - black-split-skirt
+  - black-wind-shoes
+  - blue-apprentice-hat
+  - blue-basic-boots
+  - blue-doros-robe
+  - blue-jewelry-boots
+  - blue-moon-conehat
+  - blue-plain-robe
+  - blue-split-piece
+  - blue-training-pants
+  - blue-training-shirt
+  - blue-wizardry-hat
+  - brown-apprentice-hat
+  - brown-basic-boots
+  - brown-doroness-robe
+  - brown-doros-robe
+  - brown-moon-conehat
+  - brown-training-pants
+  - brown-training-shirt
+  - dark-moon-conehat
+  - gold-earrings
+  - green-arianne
+  - green-arianne-skirt
+  - green-armine
+  - green-armine-skirt
+  - green-moon-conehat
+  - green-plain-robe
+  - green-wizardry-hat
+  - orange-split-piece
+  - pink-arianne
+  - pink-arianne-skirt
+  - pink-moon-conehat
+  - purple-arianne
+  - purple-arianne-skirt
+  - purple-doroness-robe
+  - purple-jewelry-boots
+  - purple-split
+  - red-apprentice-hat
+  - red-doroness-robe
+  - red-jewelry-boots
+  - red-split
+  - red-wizardry-hat
+  - silver-wind-shoes
+  - weighted-earrings
+  - white-doros-robe
+  - white-split-pants
+  - white-split-skirt
+  - yellow-arianne
+  - yellow-arianne-skirt
+  - yellow-basic-boots
+  - yellow-doros-robe
+  - yellow-square
+  - yellow-wind-shoes
+source_page: https://mapleclassic.wiki/wiki/Serabi_the_Fairy
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Serabi_the_Fairy

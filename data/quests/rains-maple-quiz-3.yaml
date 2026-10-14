@@ -1,0 +1,11 @@
+id: rains-maple-quiz-3
+name: Rain's Maple Quiz 3
+giver: rain
+turn_in: rain
+prerequisites:
+  - rains-maple-quiz-2
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_3
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_3

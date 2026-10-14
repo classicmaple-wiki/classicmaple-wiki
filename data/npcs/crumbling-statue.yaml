@@ -1,0 +1,13 @@
+id: crumbling-statue
+name: Crumbling Statue
+map: the-deep-forest-of-patience-step-1
+region: Hidden Street
+source_page: https://mapleclassic.wiki/wiki/Crumbling_Statue
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Crumbling_Statue
+sprite:
+  file: npcs/crumbling-statue.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1061007/render/stand/0
+  retrieved: 2026-10-14

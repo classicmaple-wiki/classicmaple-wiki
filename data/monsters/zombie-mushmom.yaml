@@ -1,0 +1,13 @@
+id: zombie-mushmom
+name: Zombie Mushmom
+boss: true
+location: the-grave-of-mushmom
+source_page: https://mapleclassic.wiki/wiki/Zombie_Mushmom
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Zombie_Mushmom
+sprite:
+  file: monsters/zombie-mushmom.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/6300005/render/stand/0
+  retrieved: 2026-10-14

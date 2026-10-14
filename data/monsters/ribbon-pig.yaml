@@ -1,0 +1,77 @@
+id: ribbon-pig
+name: Ribbon Pig
+drops:
+  - item: animal-fur-bundle
+    rate_percent: 5
+    observed_on: 2026-10-11
+    sample_kills: 40
+    sample_drops: 2
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+  - item: arrows-for-bows
+    rate_percent: 5
+    quantity:
+      - 16
+      - 16
+    observed_on: 2026-10-11
+    sample_kills: 40
+    sample_drops: 2
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+  - item: arrows-for-crossbows
+    rate_percent: 2.5
+    quantity:
+      - 20
+      - 20
+    observed_on: 2026-10-11
+    sample_kills: 40
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+  - item: leather
+    rate_percent: 7.5
+    observed_on: 2026-10-11
+    sample_kills: 40
+    sample_drops: 3
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+  - item: meso
+    rate_percent: 75
+    quantity:
+      - 21
+      - 26
+    observed_on: 2026-10-11
+    sample_kills: 40
+    sample_drops: 30
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+  - item: mithril-ore
+    rate_percent: 2.5
+    observed_on: 2026-10-11
+    sample_kills: 40
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+  - item: pigs-ribbon
+    rate_percent: 47.5
+    observed_on: 2026-10-11
+    sample_kills: 40
+    sample_drops: 19
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+  - item: stiff-feather
+    rate_percent: 12.5
+    observed_on: 2026-10-11
+    sample_kills: 40
+    sample_drops: 5
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+source_page: https://mapleclassic.wiki/wiki/Ribbon_Pig
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Ribbon_Pig
+sprite:
+  file: monsters/ribbon-pig.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/1210101/render/stand/0
+  retrieved: 2026-10-14

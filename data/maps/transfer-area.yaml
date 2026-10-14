@@ -1,0 +1,9 @@
+id: transfer-area
+name: Transfer Area
+region: Victoria Island
+monsters:
+  - stirge
+source_page: https://mapleclassic.wiki/wiki/Transfer_Area
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Transfer_Area

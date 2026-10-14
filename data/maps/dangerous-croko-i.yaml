@@ -1,0 +1,12 @@
+id: dangerous-croko-i
+name: Dangerous Croko I
+region: Victoria Island
+monsters:
+  - croco
+  - jr-necki
+  - ligator
+  - slime
+source_page: https://mapleclassic.wiki/wiki/Dangerous_Croko_I
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dangerous_Croko_I

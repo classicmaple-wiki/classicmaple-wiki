@@ -33,5 +33,8 @@ export const collections = {
 	classes: defineCollection({ loader: dataFolder('classes'), schema: dataSchemas.classes }),
 	professions: defineCollection({ loader: dataFolder('professions'), schema: dataSchemas.professions }),
 	systems: defineCollection({ loader: dataFolder('systems'), schema: dataSchemas.systems }),
+	npcs: defineCollection({ loader: dataFolder('npcs'), schema: dataSchemas.npcs }),
+	quests: defineCollection({ loader: dataFolder('quests'), schema: dataSchemas.quests }),
+	shops: defineCollection({ loader: dataFolder('shops'), schema: dataSchemas.shops }),
 	patches: defineCollection({ loader: dataFolder('patches'), schema: dataSchemas.patches }),
 };

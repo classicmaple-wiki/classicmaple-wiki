@@ -1,0 +1,10 @@
+id: dangerous-valley
+name: Dangerous Valley
+region: Victoria Island
+monsters:
+  - copper-drake
+  - fire-boar
+source_page: https://mapleclassic.wiki/wiki/Dangerous_Valley
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dangerous_Valley

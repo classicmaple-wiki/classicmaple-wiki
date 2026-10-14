@@ -1,0 +1,11 @@
+id: snail-hunting-ground-iii
+name: Snail Hunting Ground III
+region: Maple Island
+monsters:
+  - blue-snail
+  - red-snail
+  - snail
+source_page: https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_III
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_III

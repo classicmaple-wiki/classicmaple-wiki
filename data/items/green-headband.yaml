@@ -1,0 +1,12 @@
+id: green-headband
+name: Green Headband
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Headband
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Headband
+sprite:
+  file: items/green-headband.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002067/icon
+  retrieved: 2026-10-14

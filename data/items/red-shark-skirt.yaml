@@ -1,0 +1,12 @@
+id: red-shark-skirt
+name: Red Shark Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Shark_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Shark_Skirt
+sprite:
+  file: items/red-shark-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061020/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,36 @@
+id: evil-eye
+name: Evil Eye
+drops:
+  - item: evil-eye-tail
+    rate_percent: 47.54
+    observed_on: 2026-10-11
+    sample_kills: 61
+    sample_drops: 29
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Evil_Eye
+  - item: meso
+    rate_percent: 75.41
+    quantity:
+      - 53
+      - 64
+    observed_on: 2026-10-11
+    sample_kills: 61
+    sample_drops: 46
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Evil_Eye
+  - item: orange-potion
+    rate_percent: 6.56
+    observed_on: 2026-10-11
+    sample_kills: 61
+    sample_drops: 4
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Evil_Eye
+source_page: https://mapleclassic.wiki/wiki/Evil_Eye
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Evil_Eye
+sprite:
+  file: monsters/evil-eye.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/2230100/render/stand/0
+  retrieved: 2026-10-14

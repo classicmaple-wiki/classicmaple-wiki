@@ -1,0 +1,16 @@
+id: forest-west-of-henesys
+name: Forest West of Henesys
+region: Victoria Island
+monsters:
+  - blue-snail
+  - orange-mushroom
+  - pig
+  - red-snail
+  - ribbon-pig
+  - slime
+  - snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/Forest_West_of_Henesys
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Forest_West_of_Henesys

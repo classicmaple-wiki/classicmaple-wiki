@@ -1,0 +1,12 @@
+id: blue-bandana
+name: Blue Bandana
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Blue_Bandana
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_Bandana
+sprite:
+  file: items/blue-bandana.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002081/icon
+  retrieved: 2026-10-14

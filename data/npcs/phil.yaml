@@ -1,0 +1,13 @@
+id: phil
+name: Phil
+map: lith-harbor
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Phil
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Phil
+sprite:
+  file: npcs/phil.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1002000/render/stand/0
+  retrieved: 2026-10-14

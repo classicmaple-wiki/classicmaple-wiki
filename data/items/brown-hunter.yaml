@@ -1,0 +1,12 @@
+id: brown-hunter
+name: Brown Hunter
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Brown_Hunter
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brown_Hunter
+sprite:
+  file: items/brown-hunter.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002160/icon
+  retrieved: 2026-10-14

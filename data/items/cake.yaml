@@ -1,0 +1,12 @@
+id: cake
+name: Cake
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Cake
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Cake
+sprite:
+  file: items/cake.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2020002/icon
+  retrieved: 2026-10-14

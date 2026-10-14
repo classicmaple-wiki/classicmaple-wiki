@@ -1,0 +1,12 @@
+id: grey-thick-sweat-pants
+name: Grey Thick Sweat Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Grey_Thick_Sweat_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Grey_Thick_Sweat_Pants
+sprite:
+  file: items/grey-thick-sweat-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060004/icon
+  retrieved: 2026-10-14

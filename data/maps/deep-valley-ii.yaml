@@ -1,0 +1,13 @@
+id: deep-valley-ii
+name: Deep Valley II
+region: Victoria Island
+monsters:
+  - axe-stump
+  - dark-axe-stump
+  - dark-stump
+  - fire-boar
+  - wild-boar
+source_page: https://mapleclassic.wiki/wiki/Deep_Valley_II
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Deep_Valley_II

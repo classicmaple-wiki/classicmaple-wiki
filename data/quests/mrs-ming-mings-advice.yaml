@@ -1,0 +1,11 @@
+id: mrs-ming-mings-advice
+name: Mrs. Ming Ming's Advice
+giver: mrs-ming-ming
+turn_in: bruce
+prerequisites:
+  - bruces-dilemma
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Mrs._Ming_Ming's_Advice
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mrs._Ming_Ming's_Advice

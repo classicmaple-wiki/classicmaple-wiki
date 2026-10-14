@@ -1,0 +1,12 @@
+id: sophia-pants
+name: Sophia Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Sophia_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Sophia_Pants
+sprite:
+  file: items/sophia-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061023/icon
+  retrieved: 2026-10-14

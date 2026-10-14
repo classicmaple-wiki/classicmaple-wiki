@@ -1,0 +1,12 @@
+id: tomato-field
+name: Tomato Field
+region: Maple Island
+monsters:
+  - blue-snail
+  - orange-mushroom
+  - red-snail
+  - snail
+source_page: https://mapleclassic.wiki/wiki/Tomato_Field
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Tomato_Field

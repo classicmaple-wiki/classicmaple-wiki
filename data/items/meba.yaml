@@ -1,0 +1,12 @@
+id: meba
+name: Meba
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Meba
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Meba
+sprite:
+  file: items/meba.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1472007/icon
+  retrieved: 2026-10-14

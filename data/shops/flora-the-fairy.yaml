@@ -1,0 +1,23 @@
+id: flora-the-fairy
+name: Flora the Fairy
+npc: flora-the-fairy
+map: ellinia-weapon-store
+region: Victoria Island
+items:
+  - emerald-staff
+  - fusion-mace
+  - hardwood-wand
+  - ice-wand
+  - iron-mace
+  - mace
+  - metal-wand
+  - old-wooden-staff
+  - sapphire-staff
+  - sky-blue-umbrella
+  - wizard-staff
+  - wooden-staff
+  - wooden-wand
+source_page: https://mapleclassic.wiki/wiki/Flora_the_Fairy
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Flora_the_Fairy

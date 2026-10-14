@@ -1,0 +1,12 @@
+id: silver-leather-hoodwear
+name: Silver Leather Hoodwear
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Silver_Leather_Hoodwear
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Silver_Leather_Hoodwear
+sprite:
+  file: items/silver-leather-hoodwear.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040011/icon
+  retrieved: 2026-10-14

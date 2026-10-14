@@ -1,0 +1,12 @@
+id: steel-corporal-pants
+name: Steel Corporal Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Steel_Corporal_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Steel_Corporal_Pants
+sprite:
+  file: items/steel-corporal-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060009/icon
+  retrieved: 2026-10-14

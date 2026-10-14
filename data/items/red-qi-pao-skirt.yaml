@@ -1,0 +1,12 @@
+id: red-qi-pao-skirt
+name: Red Qi Pao Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Qi_Pao_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Qi_Pao_Skirt
+sprite:
+  file: items/red-qi-pao-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061040/icon
+  retrieved: 2026-10-14

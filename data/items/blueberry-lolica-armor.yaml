@@ -1,0 +1,12 @@
+id: blueberry-lolica-armor
+name: Blueberry Lolica Armor
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Blueberry_Lolica_Armor
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blueberry_Lolica_Armor
+sprite:
+  file: items/blueberry-lolica-armor.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041064/icon
+  retrieved: 2026-10-14

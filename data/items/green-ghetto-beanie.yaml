@@ -1,0 +1,12 @@
+id: green-ghetto-beanie
+name: Green Ghetto Beanie
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Ghetto_Beanie
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Ghetto_Beanie
+sprite:
+  file: items/green-ghetto-beanie.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002126/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,11 @@
+id: taking-out-the-alligators-2
+name: Taking Out the Alligators 2
+giver: ayan
+turn_in: ayan
+prerequisites:
+  - taking-out-the-alligators-1
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Taking_Out_the_Alligators_2
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Taking_Out_the_Alligators_2

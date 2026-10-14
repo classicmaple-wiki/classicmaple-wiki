@@ -1,0 +1,13 @@
+id: sunset-sky
+name: Sunset Sky
+region: Victoria Island
+monsters:
+  - blue-snail
+  - dark-stump
+  - green-mushroom
+  - orange-mushroom
+  - stump
+source_page: https://mapleclassic.wiki/wiki/Sunset_Sky
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Sunset_Sky

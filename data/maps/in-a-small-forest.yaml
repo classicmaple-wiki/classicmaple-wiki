@@ -1,0 +1,13 @@
+id: in-a-small-forest
+name: In a Small Forest
+region: Maple Island
+monsters:
+  - blue-snail
+  - orange-mushroom
+  - red-snail
+  - shroom
+  - snail
+source_page: https://mapleclassic.wiki/wiki/In_a_Small_Forest
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/In_a_Small_Forest

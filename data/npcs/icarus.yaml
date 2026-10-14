@@ -1,0 +1,13 @@
+id: icarus
+name: Icarus
+map: kerning-city
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Icarus
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Icarus
+sprite:
+  file: npcs/icarus.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1052106/render/stand/0
+  retrieved: 2026-10-14

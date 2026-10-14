@@ -1,0 +1,12 @@
+id: brown-able-skirt
+name: Brown Able Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Brown_Able_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brown_Able_Skirt
+sprite:
+  file: items/brown-able-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061058/icon
+  retrieved: 2026-10-14

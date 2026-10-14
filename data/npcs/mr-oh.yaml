@@ -1,0 +1,13 @@
+id: mr-oh
+name: Mr. Oh
+map: sleepywood
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Mr._Oh
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mr._Oh
+sprite:
+  file: npcs/mr-oh.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1061008/render/stand/0
+  retrieved: 2026-10-14

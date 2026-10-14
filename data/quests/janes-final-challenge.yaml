@@ -1,0 +1,11 @@
+id: janes-final-challenge
+name: Jane's Final Challenge
+giver: jane
+turn_in: jane
+prerequisites:
+  - janes-second-challenge
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Jane's_Final_Challenge
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Jane's_Final_Challenge

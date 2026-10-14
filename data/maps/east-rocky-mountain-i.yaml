@@ -1,0 +1,12 @@
+id: east-rocky-mountain-i
+name: East Rocky Mountain I
+region: Victoria Island
+monsters:
+  - blue-snail
+  - dark-stump
+  - red-snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_I
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_I

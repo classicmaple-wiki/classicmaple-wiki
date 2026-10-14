@@ -1,0 +1,12 @@
+id: black-sneak-pants
+name: Black Sneak Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Black_Sneak_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Black_Sneak_Pants
+sprite:
+  file: items/black-sneak-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060039/icon
+  retrieved: 2026-10-14

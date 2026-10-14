@@ -1,0 +1,12 @@
+id: blue-potion
+name: Blue Potion
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Blue_Potion
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_Potion
+sprite:
+  file: items/blue-potion.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2000003/icon
+  retrieved: 2026-10-14

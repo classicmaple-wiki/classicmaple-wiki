@@ -1,0 +1,11 @@
+id: nellas-old-memory
+name: Nella's Old Memory
+giver: nella
+turn_in: alex
+prerequisites:
+  - too-shy-to-say-it-himself
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Nella's_Old_Memory
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Nella's_Old_Memory

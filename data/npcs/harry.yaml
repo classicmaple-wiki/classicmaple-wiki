@@ -1,0 +1,13 @@
+id: harry
+name: Harry
+map: perion-weapon-store
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Harry
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Harry
+sprite:
+  file: npcs/harry.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1021001/render/stand/0
+  retrieved: 2026-10-14

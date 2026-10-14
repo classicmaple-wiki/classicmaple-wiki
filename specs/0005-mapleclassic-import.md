@@ -1,6 +1,6 @@
 # 0005: Seed the database from MapleClassic Wiki
 
-Status: draft. Waiting for the owner on the blocking question below.
+Status: draft. Option 2 chosen on 2026-10-13. Built and dry run. The real run waits on the license question in "Legal review".
 
 ## Problem
 
@@ -27,6 +27,29 @@ The owner's instructions say both "seed from mapleclassic.wiki" and "do not use 
 
 Recommendation: option 2 if the datamining ban is meant strictly, option 1 if it was aimed at the other sites. The importer is the same code for both. Only a field allow list changes.
 
+**Answer, 2026-10-13: option 2**, "and just make sure that it's safe to import without any law issues."
+
+Option 2 narrows what comes from client data but cannot remove it. Names, locations, quest links, and shop lists were probably read from the closed beta client too. Only the drop rates are certainly player observed. Facts are not Nexon's copyright, and we never datamine ourselves, so the risk is low, but it is not zero.
+
+## Legal review
+
+Full text: `docs/research/mapleclassic-legal-review.md`. It is research, not legal advice. The short version:
+
+- **The source contradicts itself on its license.** The footer and API say CC BY-NC-SA 4.0. The About page says editor content is CC BY-SA 4.0. Their copyright page does not exist. The two licenses cannot be mixed in either direction, so picking "the stricter one" is not automatically safe.
+- **The review recommends a written answer from the maintainers before the real run.** Their About page also asks bulk importers to "coordinate with maintainers first". The owner said earlier not to contact other sites, so this is the owner's call.
+- **Bare facts are mostly not protected** in US law (Feist). The license may not even reach them. Following it anyway is the safe default.
+- **The names are close.** "Classic Maple Wiki" and "MapleClassic Wiki" are the same two words swapped. Every credit says we are independent of them.
+
+What the importer and site now do because of it:
+
+- Only api.php, an explicit field list on every query, and never `observed_by`, descriptions, NPC roles or summaries, prices, stats, or rewards.
+- Stops if the license changes, or if a page level license template appears.
+- `--write` refuses to run until `data/imports/mapleclassic-license.md` records which license the import relies on and why.
+- `--remove-all` and `--remove-page` delete imported data in one command, for a takedown.
+- The manifest records the date, the license, and the revision of every page. `npm run validate` fails if an imported record is not in it.
+- Every imported page ends with a credit: the source page, a contributors link to its history, the license, "modified", what was left out, and the non-affiliation line.
+- Drop rates show as "about 1 in N", labeled community estimates, with kills and date.
+
 ## Goals and non-goals
 
 Goals:
@@ -44,7 +67,7 @@ Non-goals:
 
 ## Requirements
 
-- [ ] `scripts/import-mapleclassic.ts` reads only `api.php` with `action=cargoquery`, at most one request per second, with the User-Agent `ClassicMapleWikiImporter/1.0 (https://classicmaple.wiki; https://github.com/classicmaple-wiki/classicmaple-wiki)`.
+- [ ] `scripts/import-mapleclassic.ts` reads only `api.php`, at most one request per second, with the User-Agent `ClassicMapleWikiImporter/1.0 (https://classicmaple.wiki; https://github.com/classicmaple-wiki/classicmaple-wiki)`.
 - [ ] It never requests `/index.php?` or `Special:` pages, and never downloads images.
 - [ ] It is rerunnable: an existing file is updated in place, never duplicated, and a value a human has raised above `unverified` is never overwritten.
 - [ ] Every imported record stores `source_page`, the URL of the page it came from, and enters with `verified.status: unverified`.
@@ -58,7 +81,7 @@ Non-goals:
 
 ### Build
 
-Their data is from the closed beta, so it gets its own build in `data/builds.yaml`: `beta-0-9-0`, "Closed beta, as documented by MapleClassic Wiki", with a note that values may differ at launch. Every imported record points at it. Launch values replace it through the normal `changes` history.
+Under option 2 no imported record carries a game value, so records name no build. Drops are the one exception. Only rows observed on or after 2026-10-06 are taken, and each points at `founders-2026-10-06`. No closed beta build is needed.
 
 ### Schema additions
 
@@ -89,18 +112,22 @@ The research agent working on P5 writes some of the same entities by hand. The i
 
 ## Tasks
 
-- [ ] Owner answers the blocking question and confirms the schema shapes.
+- [x] Owner answers the blocking question: option 2.
+- [x] Legal review, saved in `docs/research/mapleclassic-legal-review.md`.
+- [ ] Owner decides the license basis: ask the maintainers, or proceed on the footer license. Record it in `data/imports/mapleclassic-license.md`.
+- [ ] Owner decides: relicense the whole site to CC BY-NC-SA 4.0, or only the imported data and the pages built from it.
 - [ ] Decision 0008: MapleClassic Wiki as a source, and the license change. Update `docs/data-research.md`, which today forbids copying other wikis.
-- [ ] Schemas and validator.
-- [ ] Importer script, with a dry run mode that prints the plan without writing.
-- [ ] Dry run, shown to the owner.
+- [x] Schemas and validator, including the import manifest check.
+- [x] Importer script, with a dry run mode, the write gate, and removal.
+- [x] Dry run: 1,281 records in 20 requests. Shown to the owner on 2026-10-13.
 - [ ] Real run, on a branch, as one `data:` pull request labeled `ai-drafted`.
-- [ ] Pages, attribution block, library paging, license and footer.
+- [x] NPC, quest, and shop pages, the drops window, and the credit block.
+- [ ] Credits page, privacy page, library paging, license files and footer, data notice.
 - [ ] `npm run validate`, `npm run build`, Lighthouse.
 - [ ] Update `BACKLOG.md` and `HANDOFF.md`.
 
 ## Open questions
 
-- Option 1, 2, or 3 (blocking).
+- The license basis and the relicensing scope, above (blocking the real run).
 - Confirm leaving out all game text: descriptions and dialogue.
 - CC BY-NC-SA's non-commercial term binds all our content from then on, including what we write ourselves. The Sirux credit is fine. Ads and paid features would not be.

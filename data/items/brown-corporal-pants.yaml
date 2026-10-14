@@ -1,0 +1,12 @@
+id: brown-corporal-pants
+name: Brown Corporal Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Brown_Corporal_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brown_Corporal_Pants
+sprite:
+  file: items/brown-corporal-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060027/icon
+  retrieved: 2026-10-14

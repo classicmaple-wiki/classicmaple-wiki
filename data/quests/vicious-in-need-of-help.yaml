@@ -1,0 +1,11 @@
+id: vicious-in-need-of-help
+name: Vicious in Need of Help
+giver: vicious
+turn_in: vicious
+prerequisites:
+  - vicious-in-need-of-an-apprentice
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Vicious_in_Need_of_Help
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Vicious_in_Need_of_Help

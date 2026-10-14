@@ -1,0 +1,11 @@
+id: research-on-animal-fossils
+name: Research on Animal Fossils
+giver: betty
+turn_in: anne
+prerequisites:
+  - research-on-plant-fossils
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Research_on_Animal_Fossils
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Research_on_Animal_Fossils

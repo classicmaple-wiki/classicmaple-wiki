@@ -1,0 +1,11 @@
+id: a-marble-made-with-care
+name: A Marble Made With Care
+giver: camila
+turn_in: pia
+prerequisites:
+  - materials-for-a-special-marble
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Marble_Made_With_Care
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Marble_Made_With_Care

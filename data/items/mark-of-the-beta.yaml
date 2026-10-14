@@ -1,8 +1,11 @@
 id: mark-of-the-beta
 name: Mark of the Beta
 category: equipment
-notes: >-
-  Reported as a quest reward for early launch players. Stats, quest steps,
-  and the deadline need confirmation.
+notes: Reported as a quest reward for early launch players. Stats, quest steps, and the deadline need confirmation.
 verified:
   status: unverified
+sprite:
+  file: items/mark-of-the-beta.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002419/icon
+  retrieved: 2026-10-14

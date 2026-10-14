@@ -1,0 +1,12 @@
+id: green-ramel-skirt
+name: Green Ramel Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Ramel_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Ramel_Skirt
+sprite:
+  file: items/green-ramel-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061017/icon
+  retrieved: 2026-10-14

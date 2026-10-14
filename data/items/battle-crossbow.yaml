@@ -1,0 +1,12 @@
+id: battle-crossbow
+name: Battle Crossbow
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Battle_Crossbow
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Battle_Crossbow
+sprite:
+  file: items/battle-crossbow.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1462002/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,12 @@
+id: purple-qi-pao-pants
+name: Purple Qi Pao Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Purple_Qi_Pao_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Purple_Qi_Pao_Pants
+sprite:
+  file: items/purple-qi-pao-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061032/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,10 @@
+id: the-fifth-mark
+name: The Fifth Mark
+giver: jay
+prerequisites:
+  - the-fourth-mark
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/The_Fifth_Mark
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Fifth_Mark

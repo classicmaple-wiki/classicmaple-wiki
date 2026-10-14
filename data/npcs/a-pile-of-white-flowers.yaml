@@ -1,0 +1,13 @@
+id: a-pile-of-white-flowers
+name: A pile of white flowers
+map: the-deep-forest-of-patience-step-7
+region: Hidden Street
+source_page: https://mapleclassic.wiki/wiki/A_pile_of_white_flowers
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_pile_of_white_flowers
+sprite:
+  file: npcs/a-pile-of-white-flowers.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1063002/render/stand/0
+  retrieved: 2026-10-14

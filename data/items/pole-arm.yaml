@@ -1,0 +1,12 @@
+id: pole-arm
+name: Pole Arm
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Pole_Arm
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pole_Arm
+sprite:
+  file: items/pole-arm.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1442000/icon
+  retrieved: 2026-10-14

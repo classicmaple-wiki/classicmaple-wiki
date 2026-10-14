@@ -1,0 +1,11 @@
+id: the-ingredients-for-the-flying-medicine
+name: The Ingredients for the Flying Medicine
+giver: wing-the-fairy
+turn_in: wing-the-fairy
+prerequisites:
+  - in-search-of-wing-the-fairy
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/The_Ingredients_for_the_Flying_Medicine
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Ingredients_for_the_Flying_Medicine

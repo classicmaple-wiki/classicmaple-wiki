@@ -1,0 +1,12 @@
+id: metal-axe
+name: Metal Axe
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Metal_Axe
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Metal_Axe
+sprite:
+  file: items/metal-axe.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1412001/icon
+  retrieved: 2026-10-14

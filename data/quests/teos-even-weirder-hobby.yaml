@@ -1,0 +1,11 @@
+id: teos-even-weirder-hobby
+name: Teo's Even Weirder Hobby
+giver: teo
+turn_in: teo
+prerequisites:
+  - teos-weird-hobby
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Teo's_Even_Weirder_Hobby
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Teo's_Even_Weirder_Hobby

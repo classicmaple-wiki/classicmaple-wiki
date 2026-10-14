@@ -1,0 +1,55 @@
+id: blue-snail
+name: Blue Snail
+location: snail-hunting-ground-ii
+region: Maple Island
+drops:
+  - item: arrows-for-crossbows
+    rate_percent: 4.76
+    quantity:
+      - 12
+      - 19
+    observed_on: 2026-10-11
+    sample_kills: 105
+    sample_drops: 5
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Blue_Snail
+  - item: blue-snail-shell
+    rate_percent: 46.67
+    observed_on: 2026-10-11
+    sample_kills: 105
+    sample_drops: 49
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Blue_Snail
+  - item: iron-ore
+    rate_percent: 2.86
+    observed_on: 2026-10-11
+    sample_kills: 105
+    sample_drops: 3
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Blue_Snail
+  - item: meso
+    rate_percent: 64.76
+    quantity:
+      - 6
+      - 7
+    observed_on: 2026-10-11
+    sample_kills: 105
+    sample_drops: 68
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Blue_Snail
+  - item: red-potion
+    rate_percent: 2.86
+    observed_on: 2026-10-11
+    sample_kills: 105
+    sample_drops: 3
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Blue_Snail
+source_page: https://mapleclassic.wiki/wiki/Blue_Snail
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_Snail
+sprite:
+  file: monsters/blue-snail.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/100101/render/stand/0
+  retrieved: 2026-10-14

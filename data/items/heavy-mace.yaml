@@ -1,0 +1,12 @@
+id: heavy-mace
+name: Heavy Mace
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Heavy_Mace
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Heavy_Mace
+sprite:
+  file: items/heavy-mace.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1422002/icon
+  retrieved: 2026-10-14

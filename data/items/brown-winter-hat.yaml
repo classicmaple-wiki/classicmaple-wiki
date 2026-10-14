@@ -1,0 +1,12 @@
+id: brown-winter-hat
+name: Brown Winter Hat
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Brown_Winter_Hat
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brown_Winter_Hat
+sprite:
+  file: items/brown-winter-hat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002010/icon
+  retrieved: 2026-10-14

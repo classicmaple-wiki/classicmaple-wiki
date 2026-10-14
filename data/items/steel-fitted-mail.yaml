@@ -1,0 +1,12 @@
+id: steel-fitted-mail
+name: Steel Fitted Mail
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Steel_Fitted_Mail
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Steel_Fitted_Mail
+sprite:
+  file: items/steel-fitted-mail.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1051000/icon
+  retrieved: 2026-10-14

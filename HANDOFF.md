@@ -14,15 +14,19 @@ Pull request 5 is merged and live. Founder's Access patch notes summary is in pl
 
 ## In progress
 
-P5 launch content. Next topic is priority 2: level 1 to 30 leveling routes in `src/content/docs/leveling/`.
+Spec 0005, the MapleClassic Wiki import (option 2), is in a pull request from branch `data/mapleclassic-import`, labeled `ai-drafted`, waiting for owner review.
+
+- 1,281 records imported, all `unverified`, each with `source_page`. The manifest is `data/imports/mapleclassic.yaml`.
+- The owner chose not to ask the maintainers and to relicense the whole site to CC BY-NC-SA 4.0 (decision 0008, `data/imports/mapleclassic-license.md`).
+- 1,300 pages build in about 3.5 seconds. Lighthouse mobile: library 98, monster page 98, accessibility 100.
 
 ## Next step
 
-Research agent prepares the plan for level 1 to 30 leveling routes (`src/content/docs/leveling/`), gets owner approval, creates a branch, and opens a pull request.
+Owner reviews and merges the pull request. Then P5 continues with level 1 to 30 routes. Rerun the importer with `npx tsx scripts/import-mapleclassic.ts` (dry run) and `--write` when the source updates.
 
 ## Blockers and questions for the owner
 
-None. Ready for the next data research pull request.
+None.
 
 ## Verify
 

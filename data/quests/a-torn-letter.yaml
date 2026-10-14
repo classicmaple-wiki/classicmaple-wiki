@@ -1,0 +1,11 @@
+id: a-torn-letter
+name: A Torn Letter
+giver: jane-doe
+turn_in: roxy
+prerequisites:
+  - worn-bandages
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Torn_Letter
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Torn_Letter

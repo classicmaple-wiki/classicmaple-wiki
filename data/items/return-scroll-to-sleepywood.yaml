@@ -1,0 +1,12 @@
+id: return-scroll-to-sleepywood
+name: Return Scroll to Sleepywood
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Return_Scroll_to_Sleepywood
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Return_Scroll_to_Sleepywood
+sprite:
+  file: items/return-scroll-to-sleepywood.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2030006/icon
+  retrieved: 2026-10-14

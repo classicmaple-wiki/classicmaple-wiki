@@ -1,0 +1,33 @@
+id: arturo
+name: Arturo
+npc: arturo
+map: perion-department-store
+region: Victoria Island
+items:
+  - apple
+  - arrows-for-bows
+  - arrows-for-crossbows
+  - black-dye
+  - blue-dye
+  - blue-potion
+  - dexterity-potion
+  - egg
+  - lemon
+  - meat
+  - orange
+  - orange-potion
+  - pet-food
+  - red-dye
+  - red-potion
+  - return-scroll-nearest-town
+  - return-scroll-to-perion
+  - speed-potion
+  - subi-throwing-stars
+  - warrior-potion
+  - white-dye
+  - white-potion
+  - yellow-dye
+source_page: https://mapleclassic.wiki/wiki/Arturo
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Arturo

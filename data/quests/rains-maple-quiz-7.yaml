@@ -1,0 +1,11 @@
+id: rains-maple-quiz-7
+name: Rain's Maple Quiz 7
+giver: rain
+turn_in: rain
+prerequisites:
+  - rains-maple-quiz-6
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_7
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_7

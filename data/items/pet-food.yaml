@@ -1,0 +1,12 @@
+id: pet-food
+name: Pet Food
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Pet_Food
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pet_Food
+sprite:
+  file: items/pet-food.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2120000/icon
+  retrieved: 2026-10-14

@@ -15,9 +15,9 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 ## Next
 
-- **P6** Seed the database from MapleClassic Wiki (CC BY-NC-SA 4.0) with a rerunnable importer, new NPC, quest, shop, and drop schemas, and attribution on every page. Spec: [0005](specs/0005-mapleclassic-import.md). Status: blocked on the owner: their data is largely from client files, which conflicts with the no datamined sources rule. Owner: agent.
+- **P6** Seed the database from MapleClassic Wiki. Spec: [0005](specs/0005-mapleclassic-import.md), decision 0008. Status: in review. Option 2 imported 1,281 unverified records (items 450, maps 278, monsters 62, NPCs 185, quests 276, shops 30), with NPC, quest, and shop pages, drops on monsters, a credit on every imported page, credits and privacy pages, and the site relicensed to CC BY-NC-SA 4.0. Later: library paging if it slows down (98 on mobile today, 18,403 elements). Owner: agent, reviewed by the owner.
 - **P5** Launch content: patch notes, level 1 to 30 routes, job advancement, monsters and maps for levels 1 to 30, what changed from the original, professions and citizenship. Brief: [docs/data-research.md](docs/data-research.md). Status: in progress. Founder's Access notes merged. Next: level 1 to 30 routes. Owner: research agent, reviewed by the owner.
-- **P3** Ecosystem pages: `/about` and a credits list for sprite sources. Footer credit, official game link, and disclaimer are done. Donations wait: Buy Me a Coffee or Patreon, once the owner can receive money. Spec: not yet written. Status: todo. Owner: agent.
+- **P3** Ecosystem pages: `/about` and a credits list for sprite sources. Footer credit, official game link, disclaimer, `/credits/`, and `/privacy/` are done. Donations wait: Buy Me a Coffee or Patreon, once the owner can receive money. Spec: not yet written. Status: todo. Owner: agent.
 - **P2b** Sprites for every monster and item, from allowed sources, following the images policy. Spec: none needed, the policy is the process. Status: in progress. Crimson Balrog done from maplestory.io. Owner: agent or contributors.
 - **P2c** Direction C, the storybook look from decision 0005. Status: replaced by P2f and spec 0003. Owner: agent.
 

@@ -1,0 +1,13 @@
+id: rina
+name: Rina
+map: henesys
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Rina
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Rina
+sprite:
+  file: npcs/rina.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1010100/render/stand/0
+  retrieved: 2026-10-14

@@ -1,0 +1,12 @@
+id: green-feather-hat
+name: Green Feather Hat
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Feather_Hat
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Feather_Hat
+sprite:
+  file: items/green-feather-hat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002114/icon
+  retrieved: 2026-10-14

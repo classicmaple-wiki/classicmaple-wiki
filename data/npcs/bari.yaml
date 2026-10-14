@@ -1,0 +1,13 @@
+id: bari
+name: Bari
+map: southperry
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Bari
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Bari
+sprite:
+  file: npcs/bari.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/20001/render/stand/0
+  retrieved: 2026-10-14

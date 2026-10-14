@@ -1,0 +1,13 @@
+id: blackbull
+name: Blackbull
+map: perion
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Blackbull
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blackbull
+sprite:
+  file: npcs/blackbull.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1020000/render/stand/0
+  retrieved: 2026-10-14

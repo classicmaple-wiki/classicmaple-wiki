@@ -1,0 +1,10 @@
+id: the-second-mark
+name: The Second Mark
+giver: jay
+prerequisites:
+  - the-first-mark
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/The_Second_Mark
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Second_Mark

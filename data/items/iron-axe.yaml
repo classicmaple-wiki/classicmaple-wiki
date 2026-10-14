@@ -1,0 +1,12 @@
+id: iron-axe
+name: Iron Axe
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Iron_Axe
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Iron_Axe
+sprite:
+  file: items/iron-axe.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1412002/icon
+  retrieved: 2026-10-14

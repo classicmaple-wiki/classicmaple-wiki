@@ -1,0 +1,12 @@
+id: weighted-earrings
+name: Weighted Earrings
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Weighted_Earrings
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Weighted_Earrings
+sprite:
+  file: items/weighted-earrings.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1032000/icon
+  retrieved: 2026-10-14

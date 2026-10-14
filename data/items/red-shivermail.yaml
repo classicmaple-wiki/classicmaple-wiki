@@ -1,0 +1,12 @@
+id: red-shivermail
+name: Red Shivermail
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Shivermail
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Shivermail
+sprite:
+  file: items/red-shivermail.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041027/icon
+  retrieved: 2026-10-14

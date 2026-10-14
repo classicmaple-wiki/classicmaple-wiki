@@ -1,0 +1,12 @@
+id: two-handed-sword
+name: Two-Handed Sword
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Two-Handed_Sword
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Two-Handed_Sword
+sprite:
+  file: items/two-handed-sword.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1402000/icon
+  retrieved: 2026-10-14

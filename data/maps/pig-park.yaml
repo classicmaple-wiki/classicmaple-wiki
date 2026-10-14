@@ -1,0 +1,9 @@
+id: pig-park
+name: Pig Park
+region: Victoria Island
+monsters:
+  - iron-hog
+source_page: https://mapleclassic.wiki/wiki/Pig_Park
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pig_Park

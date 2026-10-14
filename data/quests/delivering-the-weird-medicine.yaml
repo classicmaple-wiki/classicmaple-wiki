@@ -1,0 +1,11 @@
+id: delivering-the-weird-medicine
+name: Delivering the Weird Medicine
+giver: teo
+turn_in: maya
+prerequisites:
+  - making-sparkling-rock
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Delivering_the_Weird_Medicine
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Delivering_the_Weird_Medicine

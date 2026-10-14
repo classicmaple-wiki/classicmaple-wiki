@@ -1,0 +1,11 @@
+id: lucas-reply
+name: Lucas' Reply
+giver: lucas
+turn_in: maria
+prerequisites:
+  - letter-for-lucas
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Lucas'_Reply
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Lucas'_Reply

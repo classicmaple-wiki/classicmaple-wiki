@@ -1,0 +1,12 @@
+id: opal-ore
+name: Opal Ore
+category: material
+source_page: https://mapleclassic.wiki/wiki/Opal_Ore
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Opal_Ore
+sprite:
+  file: items/opal-ore.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4020004/icon
+  retrieved: 2026-10-14

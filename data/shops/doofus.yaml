@@ -1,0 +1,11 @@
+id: doofus
+name: Doofus
+npc: doofus
+map: henesys-market
+region: Victoria Island
+items:
+  - pet-food
+source_page: https://mapleclassic.wiki/wiki/Doofus
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Doofus

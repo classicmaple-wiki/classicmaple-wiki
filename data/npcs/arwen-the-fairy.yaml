@@ -1,0 +1,13 @@
+id: arwen-the-fairy
+name: Arwen the Fairy
+map: ellinia
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Arwen_the_Fairy
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Arwen_the_Fairy
+sprite:
+  file: npcs/arwen-the-fairy.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1032100/render/stand/0
+  retrieved: 2026-10-14

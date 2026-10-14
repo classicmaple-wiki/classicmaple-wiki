@@ -1,0 +1,12 @@
+id: green-able-armor
+name: Green Able Armor
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Able_Armor
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Able_Armor
+sprite:
+  file: items/green-able-armor.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041008/icon
+  retrieved: 2026-10-14

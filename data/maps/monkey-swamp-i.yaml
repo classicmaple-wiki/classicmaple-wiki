@@ -1,0 +1,10 @@
+id: monkey-swamp-i
+name: Monkey Swamp I
+region: Victoria Island
+monsters:
+  - jr-necki
+  - lupin
+source_page: https://mapleclassic.wiki/wiki/Monkey_Swamp_I
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Monkey_Swamp_I

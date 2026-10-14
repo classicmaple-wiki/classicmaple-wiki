@@ -1,0 +1,12 @@
+id: brown-ramel-skirt
+name: Brown Ramel Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Brown_Ramel_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brown_Ramel_Skirt
+sprite:
+  file: items/brown-ramel-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061018/icon
+  retrieved: 2026-10-14

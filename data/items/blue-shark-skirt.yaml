@@ -1,0 +1,12 @@
+id: blue-shark-skirt
+name: Blue Shark Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Blue_Shark_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_Shark_Skirt
+sprite:
+  file: items/blue-shark-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061015/icon
+  retrieved: 2026-10-14

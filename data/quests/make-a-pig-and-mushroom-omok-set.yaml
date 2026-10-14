@@ -1,0 +1,11 @@
+id: make-a-pig-and-mushroom-omok-set
+name: Make a Pig & Mushroom Omok Set
+giver: casey
+turn_in: casey
+prerequisites:
+  - make-a-slime-and-octopus-omok-set
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Make_a_Pig_%26_Mushroom_Omok_Set
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Make_a_Pig_%26_Mushroom_Omok_Set

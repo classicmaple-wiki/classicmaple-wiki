@@ -1,0 +1,11 @@
+id: chief-stans-reply
+name: Chief Stan's Reply
+giver: chief-stan
+turn_in: lewis
+prerequisites:
+  - welcome-to-the-free-market
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Chief_Stan's_Reply
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Chief_Stan's_Reply

@@ -1,0 +1,12 @@
+id: dark-master-sergeant
+name: Dark Master Sergeant
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Dark_Master_Sergeant
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dark_Master_Sergeant
+sprite:
+  file: items/dark-master-sergeant.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040041/icon
+  retrieved: 2026-10-14

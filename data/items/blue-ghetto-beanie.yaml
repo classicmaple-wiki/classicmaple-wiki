@@ -1,0 +1,12 @@
+id: blue-ghetto-beanie
+name: Blue Ghetto Beanie
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Blue_Ghetto_Beanie
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_Ghetto_Beanie
+sprite:
+  file: items/blue-ghetto-beanie.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002123/icon
+  retrieved: 2026-10-14

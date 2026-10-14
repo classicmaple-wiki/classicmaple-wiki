@@ -1,0 +1,12 @@
+id: green-winter-hat
+name: Green Winter Hat
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Winter_Hat
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Winter_Hat
+sprite:
+  file: items/green-winter-hat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002057/icon
+  retrieved: 2026-10-14

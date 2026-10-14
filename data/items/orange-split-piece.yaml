@@ -1,0 +1,12 @@
+id: orange-split-piece
+name: Orange Split Piece
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Orange_Split_Piece
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Orange_Split_Piece
+sprite:
+  file: items/orange-split-piece.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040019/icon
+  retrieved: 2026-10-14

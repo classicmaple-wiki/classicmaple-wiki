@@ -1,0 +1,11 @@
+id: what-pia-borrowed
+name: What Pia Borrowed
+giver: rina
+turn_in: rina
+prerequisites:
+  - looking-for-the-red-cape
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/What_Pia_Borrowed
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/What_Pia_Borrowed

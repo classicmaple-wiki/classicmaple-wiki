@@ -1,0 +1,11 @@
+id: andres-request
+name: Andre's Request
+giver: nella
+turn_in: nella
+prerequisites:
+  - shumis-request
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Andre's_Request
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Andre's_Request

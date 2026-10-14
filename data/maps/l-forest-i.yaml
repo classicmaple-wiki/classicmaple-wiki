@@ -1,0 +1,18 @@
+id: l-forest-i
+name: L Forest I
+region: Victoria Island
+monsters:
+  - blue-snail
+  - green-mushroom
+  - iron-hog
+  - orange-mushroom
+  - pig
+  - red-snail
+  - ribbon-pig
+  - shroom
+  - slime
+  - stump
+source_page: https://mapleclassic.wiki/wiki/L_Forest_I
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/L_Forest_I

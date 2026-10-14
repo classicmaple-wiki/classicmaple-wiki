@@ -1,0 +1,12 @@
+id: green-plain-robe
+name: Green Plain Robe
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Plain_Robe
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Plain_Robe
+sprite:
+  file: items/green-plain-robe.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1050010/icon
+  retrieved: 2026-10-14

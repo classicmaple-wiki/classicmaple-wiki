@@ -1,0 +1,11 @@
+id: asking-perion-for-help
+name: Asking Perion for Help
+giver: lewis
+turn_in: dances-with-balrog
+prerequisites:
+  - chief-stans-reply
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Asking_Perion_for_Help
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Asking_Perion_for_Help

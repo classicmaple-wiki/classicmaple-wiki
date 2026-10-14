@@ -1,0 +1,12 @@
+id: coconut-knife
+name: Coconut Knife
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Coconut_Knife
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Coconut_Knife
+sprite:
+  file: items/coconut-knife.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1332008/icon
+  retrieved: 2026-10-14

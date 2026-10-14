@@ -1,0 +1,12 @@
+id: purple-arianne
+name: Purple Arianne
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Purple_Arianne
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Purple_Arianne
+sprite:
+  file: items/purple-arianne.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041017/icon
+  retrieved: 2026-10-14

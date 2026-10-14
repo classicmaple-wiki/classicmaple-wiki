@@ -1,0 +1,13 @@
+id: el-moth
+name: El Moth
+map: the-tree-that-grew-iii
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/El_Moth
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/El_Moth
+sprite:
+  file: npcs/el-moth.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1032103/render/stand/0
+  retrieved: 2026-10-14

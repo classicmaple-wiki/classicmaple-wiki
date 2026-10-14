@@ -1,0 +1,12 @@
+id: garnier
+name: Garnier
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Garnier
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Garnier
+sprite:
+  file: items/garnier.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1472000/icon
+  retrieved: 2026-10-14

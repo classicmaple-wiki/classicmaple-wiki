@@ -1,0 +1,13 @@
+id: brittany
+name: Brittany
+map: henesys-hair-salon
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Brittany
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brittany
+sprite:
+  file: npcs/brittany.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1012104/render/stand/0
+  retrieved: 2026-10-14

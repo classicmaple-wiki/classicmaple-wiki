@@ -15,6 +15,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getCollection } from 'astro:content';
 import { editBaseUrl } from '../../../site.config.mjs';
 import ChangeLog from '../../components/ChangeLog.astro';
+import SourceCredit from '../../components/SourceCredit.astro';
 import StatRows from '../../components/StatRows.astro';
 import Window from '../../components/Window.astro';
 import { formatList } from '../../lib/data';
@@ -77,4 +78,6 @@ const headings = [
 	}
 
 	<ChangeLog collectionName="maps" entityIdentifier={map.id} />
+
+	<SourceCredit sources={[map.source_page]} />
 </StarlightPage>

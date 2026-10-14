@@ -1,0 +1,12 @@
+id: red-cloth-pants
+name: Red Cloth Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Cloth_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Cloth_Pants
+sprite:
+  file: items/red-cloth-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060022/icon
+  retrieved: 2026-10-14

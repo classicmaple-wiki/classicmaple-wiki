@@ -1,0 +1,12 @@
+id: purple-shivermail-skirt
+name: Purple Shivermail Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Purple_Shivermail_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Purple_Shivermail_Skirt
+sprite:
+  file: items/purple-shivermail-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061026/icon
+  retrieved: 2026-10-14

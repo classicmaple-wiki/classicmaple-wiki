@@ -1,0 +1,12 @@
+id: mithril-ore
+name: Mithril Ore
+category: material
+source_page: https://mapleclassic.wiki/wiki/Mithril_Ore
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mithril_Ore
+sprite:
+  file: items/mithril-ore.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4010002/icon
+  retrieved: 2026-10-14

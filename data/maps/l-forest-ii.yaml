@@ -1,0 +1,20 @@
+id: l-forest-ii
+name: L Forest II
+region: Victoria Island
+monsters:
+  - blue-mushroom
+  - blue-snail
+  - green-mushroom
+  - lupin
+  - orange-mushroom
+  - pig
+  - red-snail
+  - ribbon-pig
+  - shroom
+  - slime
+  - snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/L_Forest_II
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/L_Forest_II

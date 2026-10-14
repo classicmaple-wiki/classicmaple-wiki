@@ -1,0 +1,11 @@
+id: mayas-first-collection
+name: Maya's First Collection
+giver: maya
+turn_in: maya
+prerequisites:
+  - delivering-the-weird-medicine
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Maya's_First_Collection
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Maya's_First_Collection

@@ -1,0 +1,11 @@
+id: zombie-mushroom
+name: Zombie Mushroom
+source_page: https://mapleclassic.wiki/wiki/Zombie_Mushroom
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Zombie_Mushroom
+sprite:
+  file: monsters/zombie-mushroom.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/2230101/render/stand/0
+  retrieved: 2026-10-14

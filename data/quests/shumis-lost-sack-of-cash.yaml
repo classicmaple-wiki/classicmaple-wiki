@@ -1,0 +1,11 @@
+id: shumis-lost-sack-of-cash
+name: Shumi's Lost Sack of Cash
+giver: shumi
+turn_in: shumi
+prerequisites:
+  - shumis-lost-roll-of-cash
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Shumi's_Lost_Sack_of_Cash
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Shumi's_Lost_Sack_of_Cash

@@ -1,0 +1,13 @@
+id: the-pig-beach
+name: The Pig Beach
+region: Victoria Island
+monsters:
+  - blue-snail
+  - iron-hog
+  - pig
+  - red-snail
+  - ribbon-pig
+source_page: https://mapleclassic.wiki/wiki/The_Pig_Beach
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Pig_Beach

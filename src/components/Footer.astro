@@ -4,7 +4,8 @@
    appear on every page without anyone having to remember them. The game
    comes first: a plain text link sends readers to the official MapleStory
    Classic World site (decision 0005). Then the fan site disclaimer, then
-   the builder credit, linked from site.config.mjs.
+   the content license with links to the credits and privacy pages (decision
+   0008), then the builder credit, linked from site.config.mjs.
 
    When any painted scene picture exists, a line discloses that scene art
    is made with AI image tools and edited by hand (decision 0006). The
@@ -37,6 +38,10 @@ const hasPaintedScenes = Object.keys(scenePictures).length > 0;
 			<p class="site-credits__line">Scene art made with AI image tools and edited by hand.</p>
 		)
 	}
+	<p class="site-credits__line">
+		Content <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license noopener">CC BY-NC-SA 4.0</a>,
+		with data from MapleClassic Wiki. <a href="/credits/">Credits and license</a>. <a href="/privacy/">Privacy</a>.
+	</p>
 	<p class="site-credits__line">
 		Built by <a href={builderUrl} rel="noopener">{builderName}</a>.
 	</p>

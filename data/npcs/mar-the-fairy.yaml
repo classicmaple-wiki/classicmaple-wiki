@@ -1,0 +1,13 @@
+id: mar-the-fairy
+name: Mar the Fairy
+map: marrs-forest
+region: Hidden Street
+source_page: https://mapleclassic.wiki/wiki/Mar_the_Fairy
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mar_the_Fairy
+sprite:
+  file: npcs/mar-the-fairy.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1032102/render/stand/0
+  retrieved: 2026-10-14

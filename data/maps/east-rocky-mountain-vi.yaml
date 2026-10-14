@@ -1,0 +1,13 @@
+id: east-rocky-mountain-vi
+name: East Rocky Mountain VI
+region: Victoria Island
+monsters:
+  - axe-stump
+  - dark-axe-stump
+  - dark-stump
+  - fire-boar
+  - lupin
+source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_VI
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_VI

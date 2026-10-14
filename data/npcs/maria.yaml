@@ -1,0 +1,13 @@
+id: maria
+name: Maria
+map: a-split-road
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Maria
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Maria
+sprite:
+  file: npcs/maria.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/2103/render/stand/0
+  retrieved: 2026-10-14

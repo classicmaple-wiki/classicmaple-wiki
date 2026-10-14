@@ -1,0 +1,13 @@
+id: ronnie
+name: Ronnie
+map: the-tree-tunnel-at-the-forest-up-north
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Ronnie
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Ronnie
+sprite:
+  file: npcs/ronnie.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1061004/render/stand/0
+  retrieved: 2026-10-14

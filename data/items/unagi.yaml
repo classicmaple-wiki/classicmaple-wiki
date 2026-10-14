@@ -1,0 +1,12 @@
+id: unagi
+name: Unagi
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Unagi
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Unagi
+sprite:
+  file: items/unagi.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2022003/icon
+  retrieved: 2026-10-14

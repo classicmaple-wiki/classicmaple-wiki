@@ -1,0 +1,81 @@
+id: sam
+name: Sam
+npc: sam
+map: henesys-weapon-store
+region: Victoria Island
+items:
+  - amethyst-earrings
+  - archer-pants
+  - bear-huntertop
+  - bennis-chain-pants
+  - black-baseball-cap
+  - black-bennis-chainmail
+  - black-feather-hat
+  - black-hunter
+  - black-robin-hat
+  - blue-baseball-cap
+  - blue-bennis-chainmail
+  - blue-bennis-chainmail-female
+  - blue-feather-hat
+  - blue-hunter
+  - blue-robin-hat
+  - blue-whitebottom-boots
+  - blue-woodsman-boots
+  - brown-able-skirt
+  - brown-archer-top
+  - brown-baseball-cap
+  - brown-feather-hat
+  - brown-hard-leather-boots
+  - brown-hard-leather-pants
+  - brown-hard-leather-top
+  - brown-hunter
+  - brown-robin-hat
+  - brown-skullcap
+  - brown-winter-hat
+  - brown-woodsman-boots
+  - deer-huntertop
+  - green-able-armor
+  - green-able-armor-skirt
+  - green-archer-top
+  - green-avelin
+  - green-avelin-skirt
+  - green-bennis-chainmail
+  - green-bennis-chainmail-female
+  - green-feather-hat
+  - green-hard-leather-boots
+  - green-hunter
+  - green-leather-hoodwear
+  - green-robin-hat
+  - green-shivermail
+  - green-shivermail-skirt
+  - green-winter-hat
+  - green-woodsman-boots
+  - grey-able-armor
+  - grey-able-skirt
+  - lion-huntertop
+  - old-wisconsin
+  - orange-whitebottom-boots
+  - pink-whitebottom-boots
+  - purple-shivermail
+  - purple-shivermail-skirt
+  - rabbit-huntertop
+  - red-baseball-cap
+  - red-bennis-chainmail
+  - red-bennis-chainmail-female
+  - red-feather-hat
+  - red-hunter
+  - red-robin-hat
+  - red-shivermail
+  - red-shivermail-skirt
+  - red-whitebottom-boots
+  - silver-leather-hoodwear
+  - single-earring
+  - yellow-able-armor
+  - yellow-avelin
+  - yellow-avelin-skirt
+  - yellow-baseball-cap
+  - yellow-bennis-chainmail
+source_page: https://mapleclassic.wiki/wiki/Sam
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Sam

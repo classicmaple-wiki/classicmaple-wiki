@@ -1,0 +1,12 @@
+id: blue-sergeant
+name: Blue Sergeant
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Blue_Sergeant
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_Sergeant
+sprite:
+  file: items/blue-sergeant.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040012/icon
+  retrieved: 2026-10-14

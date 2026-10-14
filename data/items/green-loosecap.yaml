@@ -1,0 +1,12 @@
+id: green-loosecap
+name: Green Loosecap
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Loosecap
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Loosecap
+sprite:
+  file: items/green-loosecap.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002131/icon
+  retrieved: 2026-10-14

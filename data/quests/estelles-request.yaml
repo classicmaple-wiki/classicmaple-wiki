@@ -1,0 +1,11 @@
+id: estelles-request
+name: Estelle's Request
+giver: estelle
+turn_in: estelle
+prerequisites:
+  - mrs-ming-mings-second-worry
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Estelle's_Request
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Estelle's_Request

@@ -1,0 +1,11 @@
+id: a-price-to-pay
+name: A Price to Pay
+giver: chrishrama
+turn_in: chrishrama
+prerequisites:
+  - a-name-on-a-note
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Price_to_Pay
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Price_to_Pay

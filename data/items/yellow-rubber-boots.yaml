@@ -1,0 +1,12 @@
+id: yellow-rubber-boots
+name: Yellow Rubber Boots
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Yellow_Rubber_Boots
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Yellow_Rubber_Boots
+sprite:
+  file: items/yellow-rubber-boots.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1072037/icon
+  retrieved: 2026-10-14

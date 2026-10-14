@@ -1,0 +1,12 @@
+id: brown-hard-leather-boots
+name: Brown Hard Leather Boots
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Boots
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Boots
+sprite:
+  file: items/brown-hard-leather-boots.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1072015/icon
+  retrieved: 2026-10-14

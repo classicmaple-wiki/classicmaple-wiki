@@ -1,0 +1,16 @@
+id: ben
+name: Ben
+npc: ben
+map: kerning-city-civic-center
+region: Victoria Island
+items:
+  - bottomwear-def-scroll-lesser
+  - earring-evasion-scroll-lesser
+  - gloves-attack-scroll-lesser
+  - overall-armor-int-scroll-lesser
+  - overall-armor-luk-scroll-lesser
+  - topwear-def-scroll-lesser
+source_page: https://mapleclassic.wiki/wiki/Ben
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Ben

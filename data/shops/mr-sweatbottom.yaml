@@ -1,0 +1,26 @@
+id: mr-sweatbottom
+name: Mr. Sweatbottom
+npc: mr-sweatbottom
+map: regular-sauna
+region: Victoria Island
+items:
+  - apple
+  - arrows-for-bows
+  - arrows-for-crossbows
+  - blue-potion
+  - egg
+  - lemon
+  - meat
+  - orange
+  - orange-potion
+  - pure-water
+  - red-potion
+  - return-scroll-nearest-town
+  - return-scroll-to-sleepywood
+  - subi-throwing-stars
+  - unagi
+  - white-potion
+source_page: https://mapleclassic.wiki/wiki/Mr._Sweatbottom
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mr._Sweatbottom

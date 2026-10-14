@@ -1,0 +1,11 @@
+id: dr-faymuss-request
+name: Dr. Faymus's Request
+giver: nella
+turn_in: nella
+prerequisites:
+  - andres-request
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Dr._Faymus's_Request
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dr._Faymus's_Request

@@ -1,0 +1,46 @@
+id: shroom
+name: Shroom
+drops:
+  - item: arrows-for-bows
+    rate_percent: 4.76
+    quantity:
+      - 20
+      - 20
+    observed_on: 2026-10-11
+    sample_kills: 21
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Shroom
+  - item: field-dagger
+    rate_percent: 4.76
+    observed_on: 2026-10-11
+    sample_kills: 21
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Shroom
+  - item: meso
+    rate_percent: 61.9
+    quantity:
+      - 8
+      - 9
+    observed_on: 2026-10-11
+    sample_kills: 21
+    sample_drops: 13
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Shroom
+  - item: mushroom-spore
+    rate_percent: 42.86
+    observed_on: 2026-10-11
+    sample_kills: 21
+    sample_drops: 9
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Shroom
+source_page: https://mapleclassic.wiki/wiki/Shroom
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Shroom
+sprite:
+  file: monsters/shroom.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/120100/render/stand/0
+  retrieved: 2026-10-14

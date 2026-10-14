@@ -1,0 +1,13 @@
+id: shade
+name: Shade
+boss: true
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Shade
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Shade
+sprite:
+  file: monsters/shade.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/5090000/render/stand/0
+  retrieved: 2026-10-14

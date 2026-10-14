@@ -1,0 +1,11 @@
+id: asking-after-chief-stan
+name: Asking After Chief Stan
+giver: community-board-henesys
+turn_in: chief-stan
+prerequisites:
+  - first-greeting-with-chief-stan
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Asking_After_Chief_Stan
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Asking_After_Chief_Stan

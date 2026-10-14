@@ -1,0 +1,11 @@
+id: fairy-2
+name: Fairy 2
+source_page: https://mapleclassic.wiki/wiki/Fairy_2
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Fairy_2
+sprite:
+  file: monsters/fairy-2.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/3000002/render/stand/0
+  retrieved: 2026-10-14

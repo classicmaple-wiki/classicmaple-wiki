@@ -1,0 +1,15 @@
+id: sleepy-dungeon-v
+name: Sleepy Dungeon V
+region: Victoria Island
+monsters:
+  - curse-eye
+  - dark-stone-golem
+  - jr-boogie-1
+  - jr-boogie-2
+  - jr-necki
+  - lupin
+  - slime
+source_page: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_V
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_V

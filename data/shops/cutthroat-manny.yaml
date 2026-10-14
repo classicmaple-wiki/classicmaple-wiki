@@ -1,0 +1,30 @@
+id: cutthroat-manny
+name: Cutthroat Manny
+npc: cutthroat-manny
+map: kerning-city-self-defence-item-store
+region: Victoria Island
+items:
+  - coconut-knife
+  - field-dagger
+  - fork-on-a-stick
+  - forked-dagger
+  - garnier
+  - iron-dagger
+  - long-sword
+  - meba
+  - metal-axe
+  - pointed-shovel
+  - pole-arm
+  - spear-item
+  - square-shovel
+  - steel-igor
+  - steel-titans
+  - stinger
+  - triangular-zamadar
+  - triple-tipped-zamadar
+  - wooden-mallet
+  - wooden-sword
+source_page: https://mapleclassic.wiki/wiki/Cutthroat_Manny
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Cutthroat_Manny

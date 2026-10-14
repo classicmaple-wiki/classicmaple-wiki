@@ -1,0 +1,16 @@
+id: beach-hunting-ground
+name: Beach Hunting Ground
+region: Victoria Island
+monsters:
+  - blue-snail
+  - orange-mushroom
+  - pig
+  - red-snail
+  - ribbon-pig
+  - shroom
+  - slime
+  - snail
+source_page: https://mapleclassic.wiki/wiki/Beach_Hunting_Ground
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Beach_Hunting_Ground

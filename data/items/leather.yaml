@@ -1,0 +1,12 @@
+id: leather
+name: Leather
+category: material
+source_page: https://mapleclassic.wiki/wiki/Leather
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Leather
+sprite:
+  file: items/leather.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000021/icon
+  retrieved: 2026-10-14

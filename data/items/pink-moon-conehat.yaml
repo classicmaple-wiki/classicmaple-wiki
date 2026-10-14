@@ -1,0 +1,12 @@
+id: pink-moon-conehat
+name: Pink Moon Conehat
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Pink_Moon_Conehat
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pink_Moon_Conehat
+sprite:
+  file: items/pink-moon-conehat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002103/icon
+  retrieved: 2026-10-14

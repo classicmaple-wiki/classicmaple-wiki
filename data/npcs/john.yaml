@@ -1,0 +1,13 @@
+id: john
+name: John
+map: lith-harbor
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/John
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/John
+sprite:
+  file: npcs/john.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/20000/render/stand/0
+  retrieved: 2026-10-14

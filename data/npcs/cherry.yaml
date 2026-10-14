@@ -1,0 +1,13 @@
+id: cherry
+name: Cherry
+map: ellinia-station
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Cherry
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Cherry
+sprite:
+  file: npcs/cherry.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1032008/render/stand/0
+  retrieved: 2026-10-14

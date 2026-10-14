@@ -1,0 +1,12 @@
+id: lemona
+name: Lemona
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Lemona
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Lemona
+sprite:
+  file: items/lemona.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1082019/icon
+  retrieved: 2026-10-14

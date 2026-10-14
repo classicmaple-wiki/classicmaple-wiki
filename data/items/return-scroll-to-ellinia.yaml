@@ -1,0 +1,12 @@
+id: return-scroll-to-ellinia
+name: Return Scroll to Ellinia
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Return_Scroll_to_Ellinia
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Return_Scroll_to_Ellinia
+sprite:
+  file: items/return-scroll-to-ellinia.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2030002/icon
+  retrieved: 2026-10-14

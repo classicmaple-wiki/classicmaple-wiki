@@ -1,0 +1,12 @@
+id: wizard-staff
+name: Wizard Staff
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Wizard_Staff
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Wizard_Staff
+sprite:
+  file: items/wizard-staff.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1382002/icon
+  retrieved: 2026-10-14

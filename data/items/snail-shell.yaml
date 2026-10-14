@@ -1,0 +1,12 @@
+id: snail-shell
+name: Snail Shell
+category: material
+source_page: https://mapleclassic.wiki/wiki/Snail_Shell
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Snail_Shell
+sprite:
+  file: items/snail-shell.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000019/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,12 @@
+id: stinger
+name: Stinger
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Stinger
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Stinger
+sprite:
+  file: items/stinger.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1332013/icon
+  retrieved: 2026-10-14

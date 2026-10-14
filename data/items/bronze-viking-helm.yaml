@@ -1,0 +1,12 @@
+id: bronze-viking-helm
+name: Bronze Viking Helm
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Bronze_Viking_Helm
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Bronze_Viking_Helm
+sprite:
+  file: items/bronze-viking-helm.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002059/icon
+  retrieved: 2026-10-14

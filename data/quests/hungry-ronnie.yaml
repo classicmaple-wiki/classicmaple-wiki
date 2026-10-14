@@ -1,0 +1,11 @@
+id: hungry-ronnie
+name: Hungry Ronnie
+giver: ronnie
+turn_in: ronnie
+prerequisites:
+  - a-clue-to-the-secret-book
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Hungry_Ronnie
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Hungry_Ronnie

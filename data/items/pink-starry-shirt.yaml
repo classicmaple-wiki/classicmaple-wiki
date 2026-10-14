@@ -1,0 +1,12 @@
+id: pink-starry-shirt
+name: Pink Starry Shirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Pink_Starry_Shirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pink_Starry_Shirt
+sprite:
+  file: items/pink-starry-shirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041004/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,11 @@
+id: arcons-blood
+name: Arcon's Blood?
+giver: manji
+turn_in: manji
+prerequisites:
+  - making-a-sparkling-rock
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Arcon's_Blood%3F
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Arcon's_Blood%3F

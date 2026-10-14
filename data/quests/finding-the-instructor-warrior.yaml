@@ -1,0 +1,11 @@
+id: finding-the-instructor-warrior
+name: Finding the Instructor (Warrior)
+giver: dances-with-balrog
+turn_in: warrior-job-instructor
+prerequisites:
+  - the-warriors-next-journey
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Warrior)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Warrior)

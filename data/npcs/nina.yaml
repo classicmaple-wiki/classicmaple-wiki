@@ -1,0 +1,13 @@
+id: nina
+name: Nina
+map: mushroom-town-nina
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Nina
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Nina
+sprite:
+  file: npcs/nina.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/2102/render/stand/0
+  retrieved: 2026-10-14

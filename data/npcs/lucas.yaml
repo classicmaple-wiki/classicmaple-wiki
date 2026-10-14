@@ -1,0 +1,13 @@
+id: lucas
+name: Lucas
+map: amherst
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Lucas
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Lucas
+sprite:
+  file: npcs/lucas.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/12000/render/stand/0
+  retrieved: 2026-10-14

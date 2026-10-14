@@ -1,0 +1,11 @@
+id: jr-boogie-2
+name: Jr. Boogie 2
+source_page: https://mapleclassic.wiki/wiki/Jr._Boogie_2
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Jr._Boogie_2
+sprite:
+  file: monsters/jr-boogie-2.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/3230301/render/stand/0
+  retrieved: 2026-10-14

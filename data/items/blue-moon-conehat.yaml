@@ -1,0 +1,12 @@
+id: blue-moon-conehat
+name: Blue Moon Conehat
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Blue_Moon_Conehat
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_Moon_Conehat
+sprite:
+  file: items/blue-moon-conehat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002102/icon
+  retrieved: 2026-10-14

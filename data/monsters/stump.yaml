@@ -1,0 +1,78 @@
+id: stump
+name: Stump
+location: the-tree-that-grew-ii
+drops:
+  - item: arrows-for-bows
+    rate_percent: 0.48
+    quantity:
+      - 14
+      - 14
+    observed_on: 2026-10-11
+    sample_kills: 207
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Stump
+  - item: arrows-for-crossbows
+    rate_percent: 1.45
+    quantity:
+      - 10
+      - 16
+    observed_on: 2026-10-11
+    sample_kills: 207
+    sample_drops: 3
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Stump
+  - item: bronze-ore
+    rate_percent: 2.42
+    observed_on: 2026-10-11
+    sample_kills: 207
+    sample_drops: 5
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Stump
+  - item: emerald-ore
+    rate_percent: 0.48
+    observed_on: 2026-10-11
+    sample_kills: 207
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Stump
+  - item: meso
+    rate_percent: 67.15
+    quantity:
+      - 11
+      - 14
+    observed_on: 2026-10-11
+    sample_kills: 207
+    sample_drops: 139
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Stump
+  - item: red-potion
+    rate_percent: 3.38
+    observed_on: 2026-10-11
+    sample_kills: 207
+    sample_drops: 7
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Stump
+  - item: tree-branch
+    rate_percent: 45.41
+    observed_on: 2026-10-11
+    sample_kills: 207
+    sample_drops: 94
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Stump
+  - item: wooden-wand
+    rate_percent: 0.48
+    observed_on: 2026-10-11
+    sample_kills: 207
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Stump
+source_page: https://mapleclassic.wiki/wiki/Stump
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Stump
+sprite:
+  file: monsters/stump.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/130100/render/stand/0
+  retrieved: 2026-10-14

@@ -1,0 +1,11 @@
+id: lorang
+name: Lorang
+source_page: https://mapleclassic.wiki/wiki/Lorang
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Lorang
+sprite:
+  file: monsters/lorang.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/3230102/render/stand/0
+  retrieved: 2026-10-14

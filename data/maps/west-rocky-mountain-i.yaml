@@ -1,0 +1,11 @@
+id: west-rocky-mountain-i
+name: West Rocky Mountain I
+region: Victoria Island
+monsters:
+  - axe-stump
+  - red-snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/West_Rocky_Mountain_I
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/West_Rocky_Mountain_I

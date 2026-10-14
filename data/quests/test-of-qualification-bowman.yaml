@@ -1,0 +1,11 @@
+id: test-of-qualification-bowman
+name: Test of Qualification (Bowman)
+giver: bowman-job-instructor
+turn_in: bowman-job-instructor
+prerequisites:
+  - finding-the-instructor-bowman
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Test_of_Qualification_(Bowman)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Test_of_Qualification_(Bowman)

@@ -1,0 +1,12 @@
+id: red-bennis-chainmail
+name: Red Bennis Chainmail
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Bennis_Chainmail
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Bennis_Chainmail
+sprite:
+  file: items/red-bennis-chainmail.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040025/icon
+  retrieved: 2026-10-14

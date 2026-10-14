@@ -1,0 +1,25 @@
+id: max
+name: Max
+npc: max
+map: kerning-city-civic-center
+region: Victoria Island
+items:
+  - andres-seafood-soup
+  - destructive-potion
+  - dried-squid
+  - elixir
+  - fat-sausage
+  - fried-chicken
+  - grape-juice
+  - hamburger
+  - orange-juice
+  - pizza
+  - ribbon-pig-daydream
+  - salad
+  - supreme-dexterity-potion
+  - unagi
+  - wolbi-throwing-stars
+source_page: https://mapleclassic.wiki/wiki/Max
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Max

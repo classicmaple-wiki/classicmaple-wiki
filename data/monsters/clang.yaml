@@ -1,0 +1,11 @@
+id: clang
+name: Clang
+source_page: https://mapleclassic.wiki/wiki/Clang
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Clang
+sprite:
+  file: monsters/clang.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/4230104/render/stand/0
+  retrieved: 2026-10-14

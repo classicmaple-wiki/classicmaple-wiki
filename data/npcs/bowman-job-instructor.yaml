@@ -1,0 +1,13 @@
+id: bowman-job-instructor
+name: Bowman Job Instructor
+map: the-road-to-the-dungeon
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Bowman_Job_Instructor
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Bowman_Job_Instructor
+sprite:
+  file: npcs/bowman-job-instructor.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1072002/render/stand/0
+  retrieved: 2026-10-14

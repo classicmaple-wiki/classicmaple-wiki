@@ -1,0 +1,12 @@
+id: brown-sneak-pants
+name: Brown Sneak Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Brown_Sneak_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brown_Sneak_Pants
+sprite:
+  file: items/brown-sneak-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060038/icon
+  retrieved: 2026-10-14

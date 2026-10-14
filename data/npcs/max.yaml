@@ -1,0 +1,13 @@
+id: max
+name: Max
+map: kerning-city-civic-center
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Max
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Max
+sprite:
+  file: npcs/max.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/2080002/render/stand/0
+  retrieved: 2026-10-14

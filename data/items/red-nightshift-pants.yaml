@@ -1,0 +1,12 @@
+id: red-nightshift-pants
+name: Red Nightshift Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Nightshift_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Nightshift_Pants
+sprite:
+  file: items/red-nightshift-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061037/icon
+  retrieved: 2026-10-14

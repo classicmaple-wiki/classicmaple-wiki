@@ -1,0 +1,64 @@
+id: orange-mushroom
+name: Orange Mushroom
+region: Victoria Island
+drops:
+  - item: arrows-for-bows
+    rate_percent: 1.63
+    quantity:
+      - 11
+      - 16
+    observed_on: 2026-10-11
+    sample_kills: 184
+    sample_drops: 3
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Orange_Mushroom
+  - item: arrows-for-crossbows
+    rate_percent: 0.54
+    quantity:
+      - 18
+      - 18
+    observed_on: 2026-10-11
+    sample_kills: 184
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Orange_Mushroom
+  - item: bronze-ore
+    rate_percent: 2.17
+    observed_on: 2026-10-11
+    sample_kills: 184
+    sample_drops: 4
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Orange_Mushroom
+  - item: meso
+    rate_percent: 63.59
+    quantity:
+      - 17
+      - 20
+    observed_on: 2026-10-11
+    sample_kills: 184
+    sample_drops: 117
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Orange_Mushroom
+  - item: orange-mushroom-cap
+    rate_percent: 48.37
+    observed_on: 2026-10-11
+    sample_kills: 184
+    sample_drops: 89
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Orange_Mushroom
+  - item: red-potion
+    rate_percent: 2.17
+    observed_on: 2026-10-11
+    sample_kills: 184
+    sample_drops: 4
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Orange_Mushroom
+source_page: https://mapleclassic.wiki/wiki/Orange_Mushroom
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Orange_Mushroom
+sprite:
+  file: monsters/orange-mushroom.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/1210102/render/stand/0
+  retrieved: 2026-10-14

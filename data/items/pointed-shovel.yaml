@@ -1,0 +1,12 @@
+id: pointed-shovel
+name: Pointed Shovel
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Pointed_Shovel
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pointed_Shovel
+sprite:
+  file: items/pointed-shovel.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1322011/icon
+  retrieved: 2026-10-14

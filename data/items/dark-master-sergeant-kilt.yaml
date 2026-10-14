@@ -1,0 +1,12 @@
+id: dark-master-sergeant-kilt
+name: Dark Master Sergeant Kilt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Dark_Master_Sergeant_Kilt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dark_Master_Sergeant_Kilt
+sprite:
+  file: items/dark-master-sergeant-kilt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060030/icon
+  retrieved: 2026-10-14

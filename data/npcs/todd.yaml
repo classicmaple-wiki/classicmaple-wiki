@@ -1,0 +1,13 @@
+id: todd
+name: Todd
+map: east-entrance-to-mushroom-town
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Todd
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Todd
+sprite:
+  file: npcs/todd.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/2004/render/stand/0
+  retrieved: 2026-10-14

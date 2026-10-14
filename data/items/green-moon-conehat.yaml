@@ -1,0 +1,12 @@
+id: green-moon-conehat
+name: Green Moon Conehat
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Moon_Conehat
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Moon_Conehat
+sprite:
+  file: items/green-moon-conehat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002104/icon
+  retrieved: 2026-10-14

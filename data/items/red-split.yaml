@@ -1,0 +1,12 @@
+id: red-split
+name: Red Split
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Split
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Split
+sprite:
+  file: items/red-split.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041030/icon
+  retrieved: 2026-10-14

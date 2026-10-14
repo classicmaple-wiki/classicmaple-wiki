@@ -1,0 +1,12 @@
+id: red-pao
+name: Red Pao
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Pao
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Pao
+sprite:
+  file: items/red-pao.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040043/icon
+  retrieved: 2026-10-14

@@ -8,7 +8,10 @@ import { z } from 'astro/zod';
    between builds). Those two fields are what make the wiki version-aware.
 
    All objects are strict, so a misspelled key fails validation instead of
-   being silently ignored.
+   being silently ignored. An entry imported from another wiki records the
+   page it came from in source_page (spec 0005), which the site shows as
+   attribution and the importer uses to tell imported entries from hand
+   written ones.
 */
 export const identifier = z
 	.string()
@@ -87,6 +90,7 @@ export const entityBase = z.strictObject({
 	notes: z.string().optional(),
 	scene: sceneIdentifier.optional(),
 	mood: mood.optional(),
+	source_page: z.url().optional(),
 	verified: verification,
 	changes: z.array(change).default([]),
 });

@@ -7,8 +7,8 @@
 
    A page's emblem follows its section: monsters get the monster, classes
    the mask, items the potion, maps and leveling the flag, economy the
-   hammer, the change log the two arrows, and every other page, the
-   library included, the scroll.
+   hammer, the change log the two arrows, NPCs the person, shops the bag,
+   and every other page, quests and the library included, the scroll.
 */
 export const glyphs = {
 	flag: [
@@ -24,6 +24,34 @@ export const glyphs = {
 		'..###.......',
 		'.#####..##..',
 		'############',
+	],
+	person: [
+		'....####....',
+		'...######...',
+		'...######...',
+		'...######...',
+		'....####....',
+		'.....##.....',
+		'..########..',
+		'.##########.',
+		'.##.####.##.',
+		'.##.####.##.',
+		'....#..#....',
+		'...##..##...',
+	],
+	bag: [
+		'....####....',
+		'...#....#...',
+		'...#....#...',
+		'.##########.',
+		'.##########.',
+		'.####..####.',
+		'.###....###.',
+		'.###....###.',
+		'.####..####.',
+		'.##########.',
+		'.##########.',
+		'..########..',
 	],
 	podium: [
 		'........#...',
@@ -157,6 +185,8 @@ const sectionEmblems: Record<string, GlyphName> = {
 	leveling: 'flag',
 	economy: 'hammer',
 	changes: 'arrows',
+	npcs: 'person',
+	shops: 'bag',
 };
 
 /*

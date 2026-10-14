@@ -1,0 +1,12 @@
+id: gold-ore
+name: Gold Ore
+category: material
+source_page: https://mapleclassic.wiki/wiki/Gold_Ore
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Gold_Ore
+sprite:
+  file: items/gold-ore.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4010006/icon
+  retrieved: 2026-10-14

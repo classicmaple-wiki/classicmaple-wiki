@@ -1,0 +1,13 @@
+id: athena-pierce
+name: Athena Pierce
+map: bowman-instructional-school
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Athena_Pierce
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Athena_Pierce
+sprite:
+  file: npcs/athena-pierce.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/10200/render/stand/0
+  retrieved: 2026-10-14

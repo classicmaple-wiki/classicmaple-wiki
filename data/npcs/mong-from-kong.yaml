@@ -1,0 +1,13 @@
+id: mong-from-kong
+name: Mong from Kong
+map: kerning-city
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Mong_from_Kong
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mong_from_Kong
+sprite:
+  file: npcs/mong-from-kong.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1052012/render/stand/0
+  retrieved: 2026-10-14

@@ -1,0 +1,12 @@
+id: square-hammer
+name: Square Hammer
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Square_Hammer
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Square_Hammer
+sprite:
+  file: items/square-hammer.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1422003/icon
+  retrieved: 2026-10-14

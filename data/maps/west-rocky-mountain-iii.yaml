@@ -1,0 +1,14 @@
+id: west-rocky-mountain-iii
+name: West Rocky Mountain III
+region: Victoria Island
+monsters:
+  - axe-stump
+  - dark-axe-stump
+  - dark-stump
+  - green-mushroom
+  - red-snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/West_Rocky_Mountain_III
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/West_Rocky_Mountain_III

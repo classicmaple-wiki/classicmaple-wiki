@@ -1,0 +1,11 @@
+id: mayas-last-collection
+name: Maya's Last Collection
+giver: maya
+turn_in: maya
+prerequisites:
+  - mayas-third-collection
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Maya's_Last_Collection
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Maya's_Last_Collection

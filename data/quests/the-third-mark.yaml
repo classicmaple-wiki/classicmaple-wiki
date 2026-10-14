@@ -1,0 +1,10 @@
+id: the-third-mark
+name: The Third Mark
+giver: jay
+prerequisites:
+  - the-second-mark
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/The_Third_Mark
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Third_Mark

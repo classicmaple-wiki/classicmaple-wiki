@@ -1,0 +1,12 @@
+id: black-hunter
+name: Black Hunter
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Black_Hunter
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Black_Hunter
+sprite:
+  file: items/black-hunter.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002159/icon
+  retrieved: 2026-10-14

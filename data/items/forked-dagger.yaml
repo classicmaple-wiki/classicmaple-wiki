@@ -1,0 +1,12 @@
+id: forked-dagger
+name: Forked Dagger
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Forked_Dagger
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Forked_Dagger
+sprite:
+  file: items/forked-dagger.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1332004/icon
+  retrieved: 2026-10-14

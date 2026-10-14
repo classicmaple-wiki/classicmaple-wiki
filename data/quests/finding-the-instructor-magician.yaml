@@ -1,0 +1,11 @@
+id: finding-the-instructor-magician
+name: Finding the Instructor (Magician)
+giver: grendel-the-really-old
+turn_in: magician-job-instructor
+prerequisites:
+  - the-magicians-next-journey
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Magician)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Magician)

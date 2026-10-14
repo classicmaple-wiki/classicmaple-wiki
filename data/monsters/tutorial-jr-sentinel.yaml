@@ -1,0 +1,11 @@
+id: tutorial-jr-sentinel
+name: Tutorial Jr. Sentinel
+source_page: https://mapleclassic.wiki/wiki/Tutorial_Jr._Sentinel
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Tutorial_Jr._Sentinel
+sprite:
+  file: monsters/tutorial-jr-sentinel.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/9300018/render/stand/0
+  retrieved: 2026-10-14

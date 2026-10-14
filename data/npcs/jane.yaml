@@ -1,0 +1,13 @@
+id: jane
+name: Jane
+map: lith-harbor
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Jane
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Jane
+sprite:
+  file: npcs/jane.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1002100/render/stand/0
+  retrieved: 2026-10-14

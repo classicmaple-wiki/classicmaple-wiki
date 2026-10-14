@@ -1,0 +1,13 @@
+id: mysterious-statue
+name: Mysterious Statue
+map: sleepywood
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Mysterious_Statue
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mysterious_Statue
+sprite:
+  file: npcs/mysterious-statue.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1061006/render/stand/0
+  retrieved: 2026-10-14

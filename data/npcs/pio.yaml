@@ -1,0 +1,13 @@
+id: pio
+name: Pio
+map: amherst
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Pio
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pio
+sprite:
+  file: npcs/pio.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/10000/render/stand/0
+  retrieved: 2026-10-14

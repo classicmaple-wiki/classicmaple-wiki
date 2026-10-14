@@ -1,0 +1,13 @@
+id: manji
+name: Manji
+map: perion
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Manji
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Manji
+sprite:
+  file: npcs/manji.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1022002/render/stand/0
+  retrieved: 2026-10-14

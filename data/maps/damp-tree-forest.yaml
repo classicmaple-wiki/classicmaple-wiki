@@ -1,0 +1,12 @@
+id: damp-tree-forest
+name: Damp Tree-Forest
+region: Victoria Island
+monsters:
+  - dark-axe-stump
+  - jr-necki
+  - octopus
+  - slime
+source_page: https://mapleclassic.wiki/wiki/Damp_Tree-Forest
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Damp_Tree-Forest

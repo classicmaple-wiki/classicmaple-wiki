@@ -30,6 +30,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { getCollection, getEntry } from 'astro:content';
 import type { Verification } from '../../schemas/shared';
 import { emblemForSection, glyphPath, glyphs } from '../lib/glyphs';
+import { libraryTypeForSection } from '../lib/library';
 import { resolveClassScene, resolveGuideScene, type ResolvedScene } from '../lib/scenes';
 import { sceneAspectRatio } from '../lib/sceneArt';
 import Scene from './scenes/Scene.astro';
@@ -66,8 +67,10 @@ interface BreadcrumbStep {
 /*
    Section pages are either guides, whose id is the section name, or
    generated index pages under src/pages. Guides lend their title to the
-   breadcrumb. Other sections show their folder name in plain words. The
-   last step is the page itself.
+   breadcrumb. Entity sections, such as quests or NPCs, point at the
+   library with that type chosen, so every entry is reached the same way.
+   Other sections show their folder name in plain words. The last step is
+   the page itself.
 */
 async function buildBreadcrumb(): Promise<BreadcrumbStep[]> {
 	const parentSegments = pathSegments.slice(0, -1);
@@ -77,6 +80,11 @@ async function buildBreadcrumb(): Promise<BreadcrumbStep[]> {
 		const sectionPath = parentSegments.slice(0, position + 1).join('/');
 		const guideTitle = guideTitles.get(sectionPath) ?? guideTitles.get(`${sectionPath}/index`);
 		const plainLabel = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+		const libraryType = position === 0 ? libraryTypeForSection(segment) : undefined;
+		if (libraryType) {
+			steps.push({ label: libraryType.pluralLabel, href: `/library/?type=${libraryType.type}` });
+			return;
+		}
 		const sectionExists = guideTitle !== undefined || existsSync(`src/pages/${sectionPath}/index.astro`);
 		steps.push({ label: guideTitle ?? plainLabel, href: sectionExists ? `/${sectionPath}/` : undefined });
 	});
@@ -92,9 +100,10 @@ interface EntityStatus {
 }
 
 /*
-   A class guide, or a monster, item, or map page, is about one entry in
-   data/. Its file holds the verification record that the status line
-   shows, and for monsters and items the sprite that stands in the scene.
+   A class guide, or a monster, item, map, NPC, quest, or shop page, is
+   about one entry in data/. Its file holds the verification record that
+   the status line shows, and for monsters, items, and NPCs the sprite
+   that stands in the scene.
 */
 async function findEntityStatus(): Promise<EntityStatus | undefined> {
 	if (pathSegments.length !== 2) return undefined;
@@ -128,6 +137,25 @@ async function findEntityStatus(): Promise<EntityStatus | undefined> {
 	if (section === 'maps') {
 		const mapEntry = await getEntry('maps', identifier);
 		return mapEntry && { identifierLabel: 'Map id', identifier, verified: mapEntry.data.verified };
+	}
+	if (section === 'npcs') {
+		const npcEntry = await getEntry('npcs', identifier);
+		return (
+			npcEntry && {
+				identifierLabel: 'NPC id',
+				identifier,
+				verified: npcEntry.data.verified,
+				spriteFile: npcEntry.data.sprite?.file,
+			}
+		);
+	}
+	if (section === 'quests') {
+		const questEntry = await getEntry('quests', identifier);
+		return questEntry && { identifierLabel: 'Quest id', identifier, verified: questEntry.data.verified };
+	}
+	if (section === 'shops') {
+		const shopEntry = await getEntry('shops', identifier);
+		return shopEntry && { identifierLabel: 'Shop id', identifier, verified: shopEntry.data.verified };
 	}
 	return undefined;
 }

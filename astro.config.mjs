@@ -58,6 +58,8 @@ export default defineConfig({
 					items: [
 						{ label: 'Welcome', link: '/' },
 						{ label: 'How to contribute', slug: 'contributing' },
+						{ label: 'Credits and license', slug: 'credits' },
+						{ label: 'Privacy', slug: 'privacy' },
 					],
 				},
 				{ label: 'Classes', items: [{ autogenerate: { directory: 'classes' } }] },
@@ -66,8 +68,13 @@ export default defineConfig({
 				{
 					label: 'Database',
 					items: [
-						{ label: 'Library', link: '/library/' },
-						{ label: 'Monsters', link: '/monsters/' },
+						{ label: 'Everything', link: '/library/' },
+						{ label: 'Monsters', link: '/library/?type=monster' },
+						{ label: 'Items', link: '/library/?type=item' },
+						{ label: 'Maps', link: '/library/?type=map' },
+						{ label: 'NPCs', link: '/library/?type=npc' },
+						{ label: 'Quests', link: '/library/?type=quest' },
+						{ label: 'Shops', link: '/library/?type=shop' },
 						{ label: 'What changed', link: '/changes/' },
 					],
 				},

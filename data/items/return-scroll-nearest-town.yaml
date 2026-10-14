@@ -1,0 +1,12 @@
+id: return-scroll-nearest-town
+name: Return Scroll - Nearest Town
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Return_Scroll_-_Nearest_Town
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Return_Scroll_-_Nearest_Town
+sprite:
+  file: items/return-scroll-nearest-town.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2030000/icon
+  retrieved: 2026-10-14

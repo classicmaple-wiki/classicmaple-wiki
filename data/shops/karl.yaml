@@ -1,0 +1,23 @@
+id: karl
+name: Karl
+npc: karl
+map: henesys-weapon-store
+region: Victoria Island
+items:
+  - balanche
+  - battle-bow
+  - battle-crossbow
+  - composite-bow
+  - crossbow-item
+  - hard-briefcase
+  - hunters-bow
+  - leather-purse
+  - mountain-crossbow
+  - plunger
+  - red-brick
+  - sword-item
+  - war-bow
+source_page: https://mapleclassic.wiki/wiki/Karl
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Karl

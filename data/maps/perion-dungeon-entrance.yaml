@@ -1,0 +1,12 @@
+id: perion-dungeon-entrance
+name: Perion Dungeon Entrance
+region: Victoria Island
+monsters:
+  - dark-axe-stump
+  - dark-stump
+  - fire-boar
+  - wild-boar
+source_page: https://mapleclassic.wiki/wiki/Perion_Dungeon_Entrance
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Perion_Dungeon_Entrance

@@ -1,0 +1,12 @@
+id: green-shivermail-skirt
+name: Green Shivermail Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Shivermail_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Shivermail_Skirt
+sprite:
+  file: items/green-shivermail-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061024/icon
+  retrieved: 2026-10-14

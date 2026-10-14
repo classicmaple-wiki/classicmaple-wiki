@@ -1,0 +1,12 @@
+id: machete
+name: Machete
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Machete
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Machete
+sprite:
+  file: items/machete.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1302006/icon
+  retrieved: 2026-10-14

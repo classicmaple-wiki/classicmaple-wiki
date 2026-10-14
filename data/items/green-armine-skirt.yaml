@@ -1,0 +1,12 @@
+id: green-armine-skirt
+name: Green Armine Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Armine_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Armine_Skirt
+sprite:
+  file: items/green-armine-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061011/icon
+  retrieved: 2026-10-14

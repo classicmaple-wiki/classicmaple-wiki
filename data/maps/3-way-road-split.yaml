@@ -1,0 +1,15 @@
+id: 3-way-road-split
+name: 3-Way Road-Split
+region: Victoria Island
+monsters:
+  - blue-snail
+  - orange-mushroom
+  - pig
+  - red-snail
+  - ribbon-pig
+  - slime
+  - snail
+source_page: https://mapleclassic.wiki/wiki/3-Way_Road-Split
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/3-Way_Road-Split

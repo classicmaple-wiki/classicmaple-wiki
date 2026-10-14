@@ -1,0 +1,12 @@
+id: golems-temple-i
+name: Golem's Temple I
+region: Victoria Island
+monsters:
+  - blue-mushroom
+  - fairy-4
+  - lupin
+  - stone-golem
+source_page: https://mapleclassic.wiki/wiki/Golem's_Temple_I
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Golem's_Temple_I

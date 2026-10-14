@@ -1,0 +1,11 @@
+id: dark-cave
+name: Dark Cave
+region: Victoria Island
+monsters:
+  - horny-mushroom
+  - stirge
+  - zombie-mushroom
+source_page: https://mapleclassic.wiki/wiki/Dark_Cave
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dark_Cave

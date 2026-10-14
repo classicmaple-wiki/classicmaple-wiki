@@ -1,0 +1,13 @@
+id: lucy
+name: Lucy
+map: amherst-department-store
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Lucy
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Lucy
+sprite:
+  file: npcs/lucy.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/11100/render/stand/0
+  retrieved: 2026-10-14

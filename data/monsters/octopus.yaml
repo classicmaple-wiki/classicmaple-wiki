@@ -1,0 +1,61 @@
+id: octopus
+name: Octopus
+region: Victoria Island
+drops:
+  - item: aquamarine-ore
+    rate_percent: 4.35
+    observed_on: 2026-10-11
+    sample_kills: 23
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Octopus
+  - item: arrows-for-crossbows
+    rate_percent: 4.35
+    quantity:
+      - 16
+      - 16
+    observed_on: 2026-10-11
+    sample_kills: 23
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Octopus
+  - item: fragment-of-magic
+    rate_percent: 4.35
+    observed_on: 2026-10-11
+    sample_kills: 23
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Octopus
+  - item: meso
+    rate_percent: 69.57
+    quantity:
+      - 25
+      - 30
+    observed_on: 2026-10-11
+    sample_kills: 23
+    sample_drops: 16
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Octopus
+  - item: octopus-leg
+    rate_percent: 47.83
+    observed_on: 2026-10-11
+    sample_kills: 23
+    sample_drops: 11
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Octopus
+  - item: red-potion
+    rate_percent: 4.35
+    observed_on: 2026-10-11
+    sample_kills: 23
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Octopus
+source_page: https://mapleclassic.wiki/wiki/Octopus
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Octopus
+sprite:
+  file: monsters/octopus.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/1120100/render/stand/0
+  retrieved: 2026-10-14

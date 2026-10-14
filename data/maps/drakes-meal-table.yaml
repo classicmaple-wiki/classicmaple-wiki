@@ -1,0 +1,12 @@
+id: drakes-meal-table
+name: Drake's Meal Table
+region: Victoria Island
+monsters:
+  - cold-eye
+  - drake
+  - snail
+  - wild-kargo
+source_page: https://mapleclassic.wiki/wiki/Drake's_Meal_Table
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Drake's_Meal_Table

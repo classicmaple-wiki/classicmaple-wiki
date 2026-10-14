@@ -1,0 +1,12 @@
+id: return-scroll-to-henesys
+name: Return Scroll to Henesys
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Return_Scroll_to_Henesys
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Return_Scroll_to_Henesys
+sprite:
+  file: items/return-scroll-to-henesys.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2030004/icon
+  retrieved: 2026-10-14

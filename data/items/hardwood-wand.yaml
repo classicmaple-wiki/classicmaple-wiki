@@ -1,0 +1,12 @@
+id: hardwood-wand
+name: Hardwood Wand
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Hardwood_Wand
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Hardwood_Wand
+sprite:
+  file: items/hardwood-wand.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1372006/icon
+  retrieved: 2026-10-14

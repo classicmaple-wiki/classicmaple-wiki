@@ -1,0 +1,12 @@
+id: slime-bubble
+name: Slime Bubble
+category: material
+source_page: https://mapleclassic.wiki/wiki/Slime_Bubble
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Slime_Bubble
+sprite:
+  file: items/slime-bubble.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000010/icon
+  retrieved: 2026-10-14

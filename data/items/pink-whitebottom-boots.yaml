@@ -1,0 +1,12 @@
+id: pink-whitebottom-boots
+name: Pink Whitebottom Boots
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Pink_Whitebottom_Boots
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pink_Whitebottom_Boots
+sprite:
+  file: items/pink-whitebottom-boots.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1072055/icon
+  retrieved: 2026-10-14

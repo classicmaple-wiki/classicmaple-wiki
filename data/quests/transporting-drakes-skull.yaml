@@ -1,0 +1,11 @@
+id: transporting-drakes-skull
+name: Transporting Drake's Skull
+giver: anne
+turn_in: betty
+prerequisites:
+  - research-on-animal-fossils
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Transporting_Drake's_Skull
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Transporting_Drake's_Skull

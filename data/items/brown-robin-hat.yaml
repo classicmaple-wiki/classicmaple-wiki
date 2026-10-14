@@ -1,0 +1,12 @@
+id: brown-robin-hat
+name: Brown Robin Hat
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Brown_Robin_Hat
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brown_Robin_Hat
+sprite:
+  file: items/brown-robin-hat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002121/icon
+  retrieved: 2026-10-14

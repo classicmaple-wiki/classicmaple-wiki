@@ -1,0 +1,11 @@
+id: ligator
+name: Ligator
+source_page: https://mapleclassic.wiki/wiki/Ligator
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Ligator
+sprite:
+  file: monsters/ligator.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/3110100/render/stand/0
+  retrieved: 2026-10-14

@@ -1,0 +1,12 @@
+id: blue-one-lined-t-shirt
+name: Blue One-lined T-Shirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Blue_One-lined_T-Shirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_One-lined_T-Shirt
+sprite:
+  file: items/blue-one-lined-t-shirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040013/icon
+  retrieved: 2026-10-14

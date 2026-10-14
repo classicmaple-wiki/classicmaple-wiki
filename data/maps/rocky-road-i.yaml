@@ -1,0 +1,13 @@
+id: rocky-road-i
+name: Rocky Road I
+region: Victoria Island
+monsters:
+  - dark-stump
+  - green-mushroom
+  - red-snail
+  - snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/Rocky_Road_I
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Rocky_Road_I

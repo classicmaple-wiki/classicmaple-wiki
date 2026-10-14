@@ -1,0 +1,13 @@
+id: thief-job-instructor
+name: Thief Job Instructor
+map: construction-site-north-of-kerning-city
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Thief_Job_Instructor
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Thief_Job_Instructor
+sprite:
+  file: npcs/thief-job-instructor.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1072003/render/stand/0
+  retrieved: 2026-10-14

@@ -1,0 +1,12 @@
+id: over-the-wall
+name: Over the Wall
+region: Victoria Island
+monsters:
+  - axe-stump
+  - dark-axe-stump
+  - dark-stump
+  - stump
+source_page: https://mapleclassic.wiki/wiki/Over_the_Wall
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Over_the_Wall

@@ -1,0 +1,12 @@
+id: fork-on-a-stick
+name: Fork on a Stick
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Fork_on_a_Stick
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Fork_on_a_Stick
+sprite:
+  file: items/fork-on-a-stick.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1432001/icon
+  retrieved: 2026-10-14

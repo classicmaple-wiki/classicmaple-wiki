@@ -1,0 +1,11 @@
+id: shumis-request
+name: Shumi's Request
+giver: nella
+turn_in: nella
+prerequisites:
+  - don-hwangs-request
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Shumi's_Request
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Shumi's_Request

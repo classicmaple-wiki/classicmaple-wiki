@@ -1,0 +1,12 @@
+id: yellow-headband
+name: Yellow Headband
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Yellow_Headband
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Yellow_Headband
+sprite:
+  file: items/yellow-headband.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002068/icon
+  retrieved: 2026-10-14

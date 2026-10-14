@@ -1,0 +1,11 @@
+id: making-sparkling-rock
+name: Making Sparkling Rock
+giver: sophia
+turn_in: teo
+prerequisites:
+  - getting-arcons-blood
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Making_Sparkling_Rock
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Making_Sparkling_Rock

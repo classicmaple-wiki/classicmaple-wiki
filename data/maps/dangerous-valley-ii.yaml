@@ -1,0 +1,11 @@
+id: dangerous-valley-ii
+name: Dangerous Valley II
+region: Victoria Island
+monsters:
+  - copper-drake
+  - fire-boar
+  - red-drake
+source_page: https://mapleclassic.wiki/wiki/Dangerous_Valley_II
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dangerous_Valley_II

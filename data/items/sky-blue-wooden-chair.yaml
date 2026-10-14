@@ -1,0 +1,12 @@
+id: sky-blue-wooden-chair
+name: Sky-blue Wooden Chair
+category: other
+source_page: https://mapleclassic.wiki/wiki/Sky-blue_Wooden_Chair
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Sky-blue_Wooden_Chair
+sprite:
+  file: items/sky-blue-wooden-chair.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/3010001/icon
+  retrieved: 2026-10-14

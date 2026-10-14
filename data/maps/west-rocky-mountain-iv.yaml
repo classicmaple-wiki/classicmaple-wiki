@@ -1,0 +1,12 @@
+id: west-rocky-mountain-iv
+name: West Rocky Mountain IV
+region: Victoria Island
+monsters:
+  - axe-stump
+  - dark-axe-stump
+  - lupin
+  - wild-boar
+source_page: https://mapleclassic.wiki/wiki/West_Rocky_Mountain_IV
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/West_Rocky_Mountain_IV

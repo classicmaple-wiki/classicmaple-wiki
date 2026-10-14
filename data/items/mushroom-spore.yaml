@@ -1,0 +1,12 @@
+id: mushroom-spore
+name: Mushroom Spore
+category: material
+source_page: https://mapleclassic.wiki/wiki/Mushroom_Spore
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mushroom_Spore
+sprite:
+  file: items/mushroom-spore.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000011/icon
+  retrieved: 2026-10-14

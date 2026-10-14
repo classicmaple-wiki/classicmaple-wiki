@@ -1,0 +1,12 @@
+id: tree-branch
+name: Tree Branch
+category: material
+source_page: https://mapleclassic.wiki/wiki/Tree_Branch
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Tree_Branch
+sprite:
+  file: items/tree-branch.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000003/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,16 @@
+id: flint
+name: Flint
+npc: flint
+map: henesys-town-hall
+region: Victoria Island
+items:
+  - bottomwear-def-scroll-lesser
+  - earring-crit-damage-scroll-lesser
+  - gloves-attack-scroll-lesser
+  - overall-armor-dex-scroll-lesser
+  - overall-armor-str-scroll-lesser
+  - topwear-def-scroll-lesser
+source_page: https://mapleclassic.wiki/wiki/Flint
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Flint

@@ -1,0 +1,11 @@
+id: pias-present-for-a-friend
+name: Pia's Present For a Friend
+giver: pia
+turn_in: pia
+prerequisites:
+  - pia-and-the-blue-mushroom
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Pia's_Present_For_a_Friend
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pia's_Present_For_a_Friend

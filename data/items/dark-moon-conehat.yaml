@@ -1,0 +1,12 @@
+id: dark-moon-conehat
+name: Dark Moon Conehat
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Dark_Moon_Conehat
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dark_Moon_Conehat
+sprite:
+  file: items/dark-moon-conehat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002105/icon
+  retrieved: 2026-10-14

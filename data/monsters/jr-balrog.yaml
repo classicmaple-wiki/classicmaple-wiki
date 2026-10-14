@@ -1,0 +1,12 @@
+id: jr-balrog
+name: Jr. Balrog
+boss: true
+source_page: https://mapleclassic.wiki/wiki/Jr._Balrog
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Jr._Balrog
+sprite:
+  file: monsters/jr-balrog.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/6400008/render/stand/0
+  retrieved: 2026-10-14

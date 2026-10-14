@@ -1,0 +1,12 @@
+id: leaf
+name: Leaf
+category: material
+source_page: https://mapleclassic.wiki/wiki/Leaf
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Leaf
+sprite:
+  file: items/leaf.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1012031/icon
+  retrieved: 2026-10-14

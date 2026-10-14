@@ -1,0 +1,13 @@
+id: mr-hong
+name: Mr. Hong
+map: kerning-city
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Mr._Hong
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mr._Hong
+sprite:
+  file: npcs/mr-hong.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1052017/render/stand/0
+  retrieved: 2026-10-14

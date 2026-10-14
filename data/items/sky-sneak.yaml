@@ -1,0 +1,12 @@
+id: sky-sneak
+name: Sky Sneak
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Sky_Sneak
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Sky_Sneak
+sprite:
+  file: items/sky-sneak.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041059/icon
+  retrieved: 2026-10-14

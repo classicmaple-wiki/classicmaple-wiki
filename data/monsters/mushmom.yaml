@@ -1,0 +1,13 @@
+id: mushmom
+name: Mushmom
+boss: true
+location: someone-elses-house
+source_page: https://mapleclassic.wiki/wiki/Mushmom
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mushmom
+sprite:
+  file: monsters/mushmom.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/6130101/render/stand/0
+  retrieved: 2026-10-14

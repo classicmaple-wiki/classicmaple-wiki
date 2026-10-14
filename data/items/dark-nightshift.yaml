@@ -1,0 +1,12 @@
+id: dark-nightshift
+name: Dark Nightshift
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Dark_Nightshift
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dark_Nightshift
+sprite:
+  file: items/dark-nightshift.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040034/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,12 @@
+id: red-tiberian
+name: Red Tiberian
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Tiberian
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Tiberian
+sprite:
+  file: items/red-tiberian.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002146/icon
+  retrieved: 2026-10-14

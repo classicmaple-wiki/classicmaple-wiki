@@ -1,0 +1,11 @@
+id: a-blacksmith-in-my-own-right
+name: A Blacksmith in My Own Right!
+giver: silas-irons
+turn_in: silas-irons
+prerequisites:
+  - silas-irons-in-need-of-an-apprentice
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Blacksmith_in_My_Own_Right!
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Blacksmith_in_My_Own_Right!

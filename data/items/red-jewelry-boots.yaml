@@ -1,0 +1,12 @@
+id: red-jewelry-boots
+name: Red Jewelry Boots
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Jewelry_Boots
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Jewelry_Boots
+sprite:
+  file: items/red-jewelry-boots.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1072021/icon
+  retrieved: 2026-10-14

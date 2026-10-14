@@ -1,0 +1,12 @@
+id: rookie-pants
+name: Rookie Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Rookie_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Rookie_Pants
+sprite:
+  file: items/rookie-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061014/icon
+  retrieved: 2026-10-14

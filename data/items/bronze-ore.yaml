@@ -1,0 +1,12 @@
+id: bronze-ore
+name: Bronze Ore
+category: material
+source_page: https://mapleclassic.wiki/wiki/Bronze_Ore
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Bronze_Ore
+sprite:
+  file: items/bronze-ore.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4010000/icon
+  retrieved: 2026-10-14

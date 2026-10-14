@@ -1,0 +1,29 @@
+id: bubbling
+name: Bubbling
+drops:
+  - item: bubblings-huge-bubble
+    rate_percent: 38.89
+    observed_on: 2026-10-11
+    sample_kills: 18
+    sample_drops: 7
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Bubbling
+  - item: meso
+    rate_percent: 55.56
+    quantity:
+      - 30
+      - 37
+    observed_on: 2026-10-11
+    sample_kills: 18
+    sample_drops: 10
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Bubbling
+source_page: https://mapleclassic.wiki/wiki/Bubbling
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Bubbling
+sprite:
+  file: monsters/bubbling.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/1210103/render/stand/0
+  retrieved: 2026-10-14

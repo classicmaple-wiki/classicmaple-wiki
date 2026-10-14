@@ -1,0 +1,12 @@
+id: brown-nightshift-pants
+name: Brown Nightshift Pants
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Brown_Nightshift_Pants
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brown_Nightshift_Pants
+sprite:
+  file: items/brown-nightshift-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061038/icon
+  retrieved: 2026-10-14

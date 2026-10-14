@@ -1,0 +1,11 @@
+id: fairy-3
+name: Fairy 3
+source_page: https://mapleclassic.wiki/wiki/Fairy_3
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Fairy_3
+sprite:
+  file: monsters/fairy-3.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/3000003/render/stand/0
+  retrieved: 2026-10-14

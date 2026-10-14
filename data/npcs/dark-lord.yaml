@@ -1,0 +1,12 @@
+id: dark-lord
+name: Dark Lord
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Dark_Lord
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dark_Lord
+sprite:
+  file: npcs/dark-lord.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/10203/render/stand/0
+  retrieved: 2026-10-14

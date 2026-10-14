@@ -1,0 +1,12 @@
+id: pigs-ribbon
+name: Pig's Ribbon
+category: material
+source_page: https://mapleclassic.wiki/wiki/Pig's_Ribbon
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pig's_Ribbon
+sprite:
+  file: items/pigs-ribbon.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/4000002/icon
+  retrieved: 2026-10-14

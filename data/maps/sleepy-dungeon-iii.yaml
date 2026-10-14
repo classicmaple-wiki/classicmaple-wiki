@@ -1,0 +1,13 @@
+id: sleepy-dungeon-iii
+name: Sleepy Dungeon III
+region: Victoria Island
+monsters:
+  - curse-eye
+  - dark-stone-golem
+  - jr-boogie-1
+  - jr-necki
+  - lupin
+source_page: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_III
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_III

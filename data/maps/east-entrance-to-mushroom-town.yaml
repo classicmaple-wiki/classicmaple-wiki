@@ -1,0 +1,9 @@
+id: east-entrance-to-mushroom-town
+name: East Entrance to Mushroom Town
+region: Maple Island
+monsters:
+  - tutorial-jr-sentinel
+source_page: https://mapleclassic.wiki/wiki/East_Entrance_to_Mushroom_Town
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/East_Entrance_to_Mushroom_Town

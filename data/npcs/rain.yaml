@@ -1,0 +1,13 @@
+id: rain
+name: Rain
+map: amherst
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Rain
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Rain
+sprite:
+  file: npcs/rain.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/12101/render/stand/0
+  retrieved: 2026-10-14

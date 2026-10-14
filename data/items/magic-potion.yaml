@@ -1,0 +1,12 @@
+id: magic-potion
+name: Magic Potion
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Magic_Potion
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Magic_Potion
+sprite:
+  file: items/magic-potion.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2002002/icon
+  retrieved: 2026-10-14

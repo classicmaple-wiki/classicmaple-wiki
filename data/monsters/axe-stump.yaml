@@ -1,0 +1,43 @@
+id: axe-stump
+name: Axe Stump
+drops:
+  - item: firewood
+    rate_percent: 45.95
+    observed_on: 2026-10-11
+    sample_kills: 37
+    sample_drops: 17
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Axe_Stump
+  - item: meso
+    rate_percent: 70.27
+    quantity:
+      - 34
+      - 41
+    observed_on: 2026-10-11
+    sample_kills: 37
+    sample_drops: 26
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Axe_Stump
+  - item: orihalcon-ore
+    rate_percent: 2.7
+    observed_on: 2026-10-11
+    sample_kills: 37
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Axe_Stump
+  - item: red-potion
+    rate_percent: 2.7
+    observed_on: 2026-10-11
+    sample_kills: 37
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Axe_Stump
+source_page: https://mapleclassic.wiki/wiki/Axe_Stump
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Axe_Stump
+sprite:
+  file: monsters/axe-stump.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/1130100/render/stand/0
+  retrieved: 2026-10-14

@@ -1,0 +1,12 @@
+id: black-headband
+name: Black Headband
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Black_Headband
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Black_Headband
+sprite:
+  file: items/black-headband.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002066/icon
+  retrieved: 2026-10-14

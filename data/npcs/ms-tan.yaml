@@ -1,0 +1,13 @@
+id: ms-tan
+name: Ms. Tan
+map: henesys-skin-care
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Ms._Tan
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Ms._Tan
+sprite:
+  file: npcs/ms-tan.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1012105/render/stand/0
+  retrieved: 2026-10-14

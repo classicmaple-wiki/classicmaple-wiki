@@ -1,0 +1,12 @@
+id: red-rubber-boots
+name: Red Rubber Boots
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Rubber_Boots
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Rubber_Boots
+sprite:
+  file: items/red-rubber-boots.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1072001/icon
+  retrieved: 2026-10-14

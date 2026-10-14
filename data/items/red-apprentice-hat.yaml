@@ -1,0 +1,12 @@
+id: red-apprentice-hat
+name: Red Apprentice Hat
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Apprentice_Hat
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Apprentice_Hat
+sprite:
+  file: items/red-apprentice-hat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002075/icon
+  retrieved: 2026-10-14

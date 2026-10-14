@@ -1,0 +1,12 @@
+id: bronze-full-helm
+name: Bronze Full Helm
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Bronze_Full_Helm
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Bronze_Full_Helm
+sprite:
+  file: items/bronze-full-helm.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002051/icon
+  retrieved: 2026-10-14

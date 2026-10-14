@@ -1,0 +1,12 @@
+id: return-scroll-to-kerning-city
+name: Return Scroll to Kerning City
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Return_Scroll_to_Kerning_City
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Return_Scroll_to_Kerning_City
+sprite:
+  file: items/return-scroll-to-kerning-city.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2030005/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,12 @@
+id: gold-earrings
+name: Gold Earrings
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Gold_Earrings
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Gold_Earrings
+sprite:
+  file: items/gold-earrings.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1032004/icon
+  retrieved: 2026-10-14

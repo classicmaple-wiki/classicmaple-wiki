@@ -1,0 +1,13 @@
+id: alex
+name: Alex
+map: kerning-city
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Alex
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Alex
+sprite:
+  file: npcs/alex.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1052000/render/stand/0
+  retrieved: 2026-10-14

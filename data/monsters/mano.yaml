@@ -1,0 +1,13 @@
+id: mano
+name: Mano
+boss: true
+location: thicket-around-the-beach-iii
+source_page: https://mapleclassic.wiki/wiki/Mano
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mano
+sprite:
+  file: monsters/mano.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/2220000/render/stand/0
+  retrieved: 2026-10-14

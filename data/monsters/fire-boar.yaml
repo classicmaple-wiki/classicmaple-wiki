@@ -1,0 +1,11 @@
+id: fire-boar
+name: Fire Boar
+source_page: https://mapleclassic.wiki/wiki/Fire_Boar
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Fire_Boar
+sprite:
+  file: monsters/fire-boar.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/3210100/render/stand/0
+  retrieved: 2026-10-14

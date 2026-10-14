@@ -1,0 +1,12 @@
+id: red-sergeant-kilt
+name: Red Sergeant Kilt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Sergeant_Kilt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Sergeant_Kilt
+sprite:
+  file: items/red-sergeant-kilt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060029/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,11 @@
+id: mais-final-training
+name: Mai's Final Training
+giver: mai
+turn_in: mai
+prerequisites:
+  - mais-training
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Mai's_Final_Training
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mai's_Final_Training

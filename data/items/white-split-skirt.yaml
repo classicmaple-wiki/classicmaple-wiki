@@ -1,0 +1,12 @@
+id: white-split-skirt
+name: White Split Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/White_Split_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/White_Split_Skirt
+sprite:
+  file: items/white-split-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061028/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,13 @@
+id: betty
+name: Betty
+map: ellinia
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Betty
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Betty
+sprite:
+  file: npcs/betty.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1032104/render/stand/0
+  retrieved: 2026-10-14

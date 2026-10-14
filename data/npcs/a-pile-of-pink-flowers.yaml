@@ -1,0 +1,13 @@
+id: a-pile-of-pink-flowers
+name: A pile of pink flowers
+map: the-deep-forest-of-patience-step-2
+region: Hidden Street
+source_page: https://mapleclassic.wiki/wiki/A_pile_of_pink_flowers
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_pile_of_pink_flowers
+sprite:
+  file: npcs/a-pile-of-pink-flowers.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1063000/render/stand/0
+  retrieved: 2026-10-14

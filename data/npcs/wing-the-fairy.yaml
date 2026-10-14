@@ -1,0 +1,13 @@
+id: wing-the-fairy
+name: Wing the Fairy
+map: ellinia
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Wing_the_Fairy
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Wing_the_Fairy
+sprite:
+  file: npcs/wing-the-fairy.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1032106/render/stand/0
+  retrieved: 2026-10-14

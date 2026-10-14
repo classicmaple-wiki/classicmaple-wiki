@@ -1,0 +1,13 @@
+id: sera
+name: Sera
+map: mushroom-town-west-entrance
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Sera
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Sera
+sprite:
+  file: npcs/sera.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/2100/render/stand/0
+  retrieved: 2026-10-14

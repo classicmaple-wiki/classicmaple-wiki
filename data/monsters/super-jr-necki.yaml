@@ -1,0 +1,13 @@
+id: super-jr-necki
+name: Super Jr. Necki
+location: the-forest-of-patience-step-4
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Super_Jr._Necki
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Super_Jr._Necki
+sprite:
+  file: monsters/super-jr-necki.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/9100001/render/stand/0
+  retrieved: 2026-10-14

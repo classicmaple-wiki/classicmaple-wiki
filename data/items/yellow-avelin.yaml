@@ -1,0 +1,12 @@
+id: yellow-avelin
+name: Yellow Avelin
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Yellow_Avelin
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Yellow_Avelin
+sprite:
+  file: items/yellow-avelin.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041061/icon
+  retrieved: 2026-10-14

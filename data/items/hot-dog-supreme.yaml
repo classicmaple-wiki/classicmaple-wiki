@@ -1,0 +1,12 @@
+id: hot-dog-supreme
+name: Hot Dog Supreme
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Hot_Dog_Supreme
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Hot_Dog_Supreme
+sprite:
+  file: items/hot-dog-supreme.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2020006/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,60 @@
+id: harry
+name: Harry
+npc: harry
+map: perion-weapon-store
+region: Victoria Island
+items:
+  - blue-high-boots
+  - blue-kendo-robe
+  - blue-lolico-armor
+  - blue-lolico-pants
+  - blue-sergeant
+  - blue-shark
+  - blue-shark-skirt
+  - blueberry-lolica-armor
+  - bronze-football-helmet
+  - bronze-full-helm
+  - bronze-grieves
+  - bronze-helmet
+  - bronze-koif
+  - bronze-viking-helm
+  - brown-corporal
+  - brown-corporal-pants
+  - brown-high-boots
+  - brown-lamelle
+  - brown-lolico-armor
+  - brown-lolico-pants
+  - brown-ramel-skirt
+  - dark-master-sergeant
+  - dark-master-sergeant-kilt
+  - green-lamelle
+  - green-ramel-skirt
+  - iron-burgernet-helm
+  - orange-high-boots
+  - orange-lolica-armor
+  - orihalcon-master-sergeant
+  - orihalcon-master-sergeant-kilt
+  - red-kendo-robe
+  - red-lamelle
+  - red-ramel-skirt
+  - red-sergeant
+  - red-sergeant-kilt
+  - red-shark
+  - red-shark-skirt
+  - rookie-pants
+  - silver-master-sergeant
+  - silver-master-sergeant-kilt
+  - sky-shark
+  - sky-shark-skirt
+  - sophia-pants
+  - steel-corporal
+  - steel-corporal-pants
+  - steel-fitted-mail
+  - steel-grieves
+  - steel-sergeant-kilt
+  - steel-sharp-helm
+  - white-kendo-robe
+source_page: https://mapleclassic.wiki/wiki/Harry
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Harry

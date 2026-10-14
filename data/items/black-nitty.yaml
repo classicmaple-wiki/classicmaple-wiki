@@ -1,0 +1,12 @@
+id: black-nitty
+name: Black Nitty
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Black_Nitty
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Black_Nitty
+sprite:
+  file: items/black-nitty.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1072024/icon
+  retrieved: 2026-10-14

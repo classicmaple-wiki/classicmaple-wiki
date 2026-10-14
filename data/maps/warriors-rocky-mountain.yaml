@@ -1,0 +1,10 @@
+id: warriors-rocky-mountain
+name: Warrior's Rocky Mountain
+region: Hidden Street
+monsters:
+  - fire-boar
+  - lupin
+source_page: https://mapleclassic.wiki/wiki/Warrior's_Rocky_Mountain
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Warrior's_Rocky_Mountain

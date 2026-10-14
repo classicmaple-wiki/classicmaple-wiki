@@ -1,0 +1,12 @@
+id: green-hunter
+name: Green Hunter
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Green_Hunter
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Hunter
+sprite:
+  file: items/green-hunter.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002158/icon
+  retrieved: 2026-10-14

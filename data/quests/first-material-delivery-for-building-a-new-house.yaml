@@ -1,0 +1,11 @@
+id: first-material-delivery-for-building-a-new-house
+name: First Material Delivery for Building a New House
+giver: ronnie
+turn_in: ronnie
+prerequisites:
+  - returned-secret-book
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/First_Material_Delivery_for_Building_a_New_House
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/First_Material_Delivery_for_Building_a_New_House

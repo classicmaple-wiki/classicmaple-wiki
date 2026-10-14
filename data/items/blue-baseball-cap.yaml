@@ -1,0 +1,12 @@
+id: blue-baseball-cap
+name: Blue Baseball Cap
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Blue_Baseball_Cap
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_Baseball_Cap
+sprite:
+  file: items/blue-baseball-cap.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002063/icon
+  retrieved: 2026-10-14

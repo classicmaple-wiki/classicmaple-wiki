@@ -1,0 +1,11 @@
+id: chriss-request
+name: Chris's Request
+giver: nella
+turn_in: nella
+prerequisites:
+  - dr-faymuss-request
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Chris's_Request
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Chris's_Request

@@ -1,0 +1,12 @@
+id: yellow-arianne-skirt
+name: Yellow Arianne Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Yellow_Arianne_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Yellow_Arianne_Skirt
+sprite:
+  file: items/yellow-arianne-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061022/icon
+  retrieved: 2026-10-14

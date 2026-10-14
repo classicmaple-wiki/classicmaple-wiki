@@ -1,0 +1,11 @@
+id: i-need-to-find-my-daughter-2
+name: I Need to Find My Daughter 2
+giver: ayan
+turn_in: bruce
+prerequisites:
+  - i-need-to-find-my-daughter-1
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/I_Need_to_Find_My_Daughter_2
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/I_Need_to_Find_My_Daughter_2

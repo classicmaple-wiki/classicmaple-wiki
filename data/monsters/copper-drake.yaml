@@ -1,0 +1,11 @@
+id: copper-drake
+name: Copper Drake
+source_page: https://mapleclassic.wiki/wiki/Copper_Drake
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Copper_Drake
+sprite:
+  file: monsters/copper-drake.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/4130100/render/stand/0
+  retrieved: 2026-10-14

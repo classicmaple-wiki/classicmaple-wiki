@@ -1,0 +1,13 @@
+id: mr-park
+name: Mr. Park
+map: ellinia
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Mr._Park
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mr._Park
+sprite:
+  file: npcs/mr-park.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1032006/render/stand/0
+  retrieved: 2026-10-14

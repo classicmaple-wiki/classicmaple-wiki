@@ -1,0 +1,13 @@
+id: mai
+name: Mai
+map: a-split-road
+region: Maple Island
+source_page: https://mapleclassic.wiki/wiki/Mai
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mai
+sprite:
+  file: npcs/mai.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/12100/render/stand/0
+  retrieved: 2026-10-14

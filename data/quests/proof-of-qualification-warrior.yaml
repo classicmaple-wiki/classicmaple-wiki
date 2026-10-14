@@ -1,0 +1,11 @@
+id: proof-of-qualification-warrior
+name: Proof of Qualification (Warrior)
+giver: warrior-job-instructor
+turn_in: dances-with-balrog
+prerequisites:
+  - test-of-qualification-warrior
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Warrior)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Warrior)

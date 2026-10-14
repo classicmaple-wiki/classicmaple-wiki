@@ -1,0 +1,33 @@
+id: dr-faymus
+name: Dr. Faymus
+npc: dr-faymus
+map: kerning-city-pharmacy
+region: Victoria Island
+items:
+  - apple
+  - arrows-for-bows
+  - arrows-for-crossbows
+  - black-dye
+  - blue-dye
+  - blue-potion
+  - dexterity-potion
+  - egg
+  - lemon
+  - meat
+  - orange
+  - orange-potion
+  - pet-food
+  - red-dye
+  - red-potion
+  - return-scroll-nearest-town
+  - return-scroll-to-kerning-city
+  - speed-potion
+  - subi-throwing-stars
+  - warrior-potion
+  - white-dye
+  - white-potion
+  - yellow-dye
+source_page: https://mapleclassic.wiki/wiki/Dr._Faymus
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dr._Faymus

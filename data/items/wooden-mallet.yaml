@@ -1,0 +1,12 @@
+id: wooden-mallet
+name: Wooden Mallet
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Wooden_Mallet
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Wooden_Mallet
+sprite:
+  file: items/wooden-mallet.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1422000/icon
+  retrieved: 2026-10-14

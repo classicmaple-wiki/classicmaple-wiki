@@ -1,0 +1,12 @@
+id: yellow-avelin-skirt
+name: Yellow Avelin Skirt
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Yellow_Avelin_Skirt
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Yellow_Avelin_Skirt
+sprite:
+  file: items/yellow-avelin-skirt.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1061057/icon
+  retrieved: 2026-10-14

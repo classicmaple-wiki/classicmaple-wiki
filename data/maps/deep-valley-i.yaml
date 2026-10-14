@@ -1,0 +1,15 @@
+id: deep-valley-i
+name: Deep Valley I
+region: Victoria Island
+monsters:
+  - axe-stump
+  - blue-snail
+  - dark-axe-stump
+  - dark-stump
+  - fire-boar
+  - red-snail
+  - wild-boar
+source_page: https://mapleclassic.wiki/wiki/Deep_Valley_I
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Deep_Valley_I

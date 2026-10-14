@@ -1,0 +1,12 @@
+id: metal-wand
+name: Metal Wand
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Metal_Wand
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Metal_Wand
+sprite:
+  file: items/metal-wand.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1372002/icon
+  retrieved: 2026-10-14

@@ -1,0 +1,11 @@
+id: croco
+name: Croco
+source_page: https://mapleclassic.wiki/wiki/Croco
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Croco
+sprite:
+  file: monsters/croco.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/5130103/render/stand/0
+  retrieved: 2026-10-14

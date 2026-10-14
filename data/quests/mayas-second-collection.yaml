@@ -1,0 +1,11 @@
+id: mayas-second-collection
+name: Maya's Second Collection
+giver: maya
+turn_in: maya
+prerequisites:
+  - mayas-first-collection
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Maya's_Second_Collection
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Maya's_Second_Collection

@@ -1,0 +1,13 @@
+id: utah
+name: Utah
+map: utahs-pig-farm
+region: Hidden Street
+source_page: https://mapleclassic.wiki/wiki/Utah
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Utah
+sprite:
+  file: npcs/utah.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1012107/render/stand/0
+  retrieved: 2026-10-14

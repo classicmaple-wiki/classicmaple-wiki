@@ -1,0 +1,12 @@
+id: triple-tipped-zamadar
+name: Triple-Tipped Zamadar
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Triple-Tipped_Zamadar
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Triple-Tipped_Zamadar
+sprite:
+  file: items/triple-tipped-zamadar.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1332002/icon
+  retrieved: 2026-10-14

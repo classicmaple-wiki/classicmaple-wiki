@@ -1,0 +1,11 @@
+id: finding-the-instructor-thief
+name: Finding the Instructor (Thief)
+giver: dark-lord
+turn_in: thief-job-instructor
+prerequisites:
+  - the-thiefs-next-journey
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Thief)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Thief)

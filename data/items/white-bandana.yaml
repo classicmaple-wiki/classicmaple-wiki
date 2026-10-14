@@ -1,0 +1,12 @@
+id: white-bandana
+name: White Bandana
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/White_Bandana
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/White_Bandana
+sprite:
+  file: items/white-bandana.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002019/icon
+  retrieved: 2026-10-14

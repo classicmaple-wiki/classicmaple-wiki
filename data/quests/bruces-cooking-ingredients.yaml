@@ -1,0 +1,11 @@
+id: bruces-cooking-ingredients
+name: Bruce's Cooking Ingredients
+giver: bruce
+turn_in: bruce
+prerequisites:
+  - mrs-ming-mings-advice
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Bruce's_Cooking_Ingredients
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Bruce's_Cooking_Ingredients

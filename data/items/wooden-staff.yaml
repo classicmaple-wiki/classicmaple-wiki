@@ -1,0 +1,12 @@
+id: wooden-staff
+name: Wooden Staff
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Wooden_Staff
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Wooden_Staff
+sprite:
+  file: items/wooden-staff.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1382000/icon
+  retrieved: 2026-10-14

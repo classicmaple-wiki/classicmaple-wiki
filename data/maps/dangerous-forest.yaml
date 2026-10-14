@@ -1,0 +1,12 @@
+id: dangerous-forest
+name: Dangerous Forest
+region: Maple Island
+monsters:
+  - blue-snail
+  - orange-mushroom
+  - red-snail
+  - snail
+source_page: https://mapleclassic.wiki/wiki/Dangerous_Forest
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dangerous_Forest

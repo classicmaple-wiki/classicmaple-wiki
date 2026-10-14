@@ -1,0 +1,12 @@
+id: dried-squid
+name: Dried Squid
+category: consumable
+source_page: https://mapleclassic.wiki/wiki/Dried_Squid
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dried_Squid
+sprite:
+  file: items/dried-squid.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2020007/icon
+  retrieved: 2026-10-14

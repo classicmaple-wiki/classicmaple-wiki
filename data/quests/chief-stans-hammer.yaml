@@ -1,0 +1,11 @@
+id: chief-stans-hammer
+name: Chief Stan's Hammer
+giver: mrs-ming-ming
+turn_in: mrs-ming-ming
+prerequisites:
+  - chief-stans-past
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Chief_Stan's_Hammer
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Chief_Stan's_Hammer

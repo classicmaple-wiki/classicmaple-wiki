@@ -1,0 +1,12 @@
+id: red-triangular-shield
+name: Red Triangular Shield
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Red_Triangular_Shield
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Red_Triangular_Shield
+sprite:
+  file: items/red-triangular-shield.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1092001/icon
+  retrieved: 2026-10-14

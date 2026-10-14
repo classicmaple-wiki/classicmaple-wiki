@@ -1,0 +1,11 @@
+id: the-entrance-of-golems-temple
+name: The Entrance of Golem's Temple
+region: Victoria Island
+monsters:
+  - blue-mushroom
+  - fairy-4
+  - stone-golem
+source_page: https://mapleclassic.wiki/wiki/The_Entrance_of_Golem's_Temple
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Entrance_of_Golem's_Temple

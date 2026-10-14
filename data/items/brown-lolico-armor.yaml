@@ -1,0 +1,12 @@
+id: brown-lolico-armor
+name: Brown Lolico Armor
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Brown_Lolico_Armor
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Brown_Lolico_Armor
+sprite:
+  file: items/brown-lolico-armor.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040015/icon
+  retrieved: 2026-10-14

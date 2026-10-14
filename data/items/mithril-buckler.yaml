@@ -1,0 +1,12 @@
+id: mithril-buckler
+name: Mithril Buckler
+category: equipment
+source_page: https://mapleclassic.wiki/wiki/Mithril_Buckler
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mithril_Buckler
+sprite:
+  file: items/mithril-buckler.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1092006/icon
+  retrieved: 2026-10-14
