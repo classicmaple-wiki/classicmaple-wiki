@@ -1,25 +1,43 @@
 ---
 title: How to contribute
-description: Three ways to add patch notes, item and monster stats, and leveling routes to Classic Maple Wiki. No coding required.
+description: Send a correction or new info to Classic Maple Wiki in two minutes. No account and no coding needed.
 ---
 
-import { repositoryUrl } from '../../../site.config.mjs';
+import { correctionFormUrl, repositoryUrl } from '../../../site.config.mjs';
 
-This wiki is built by players. You do not need to know how to code.
+This wiki is built by players. If you play MapleStory Classic World, you already know things we do not.
+
+## Send a correction
+
+The easiest way. No account, no coding.
+
+1. {correctionFormUrl ? <a href={correctionFormUrl}>Open the correction form</a> : <>Use the <strong>Send a correction</strong> link at the bottom of any page</>}. The link at the bottom of a page fills in which page you were on.
+2. Say what is wrong or missing, and what it should be.
+3. Add a screenshot from the game if you can. It is the best proof we can get.
+4. Send it. We check it, add it to the wiki, and note which version of the game it came from.
+
+Leave a name if you would like credit. Everything you send is published under the wiki's license, so only send screenshots you took yourself. See [Legal and credits](/legal/).
+
+## What helps most
+
+- **Numbers from your own game:** a monster's MP or elements, an item's stats, a shop's prices, a quest's rewards.
+- **Missing pictures:** some NPCs, items, and maps have no picture yet.
+- **Corrections:** anything that changed at launch, or that we have wrong.
+
+Every page shows "Unknown" where we are still missing something.
 
 ## The one rule
 
 Every fact needs a **source** and a **build**.
 
-- **Source:** official patch notes, an official post, or your own in-game screenshot.
-- **Build:** the game version you saw it in. See the build list on [What changed](/changes/).
+- **Source:** your own in-game screenshot, or an official Nexon post.
+- **Build:** the version of the game you saw it in, such as Founder's Access or Grand Launch. See the list on [What changed](/changes/).
 
-Not sure about a number? Submit it and mark it `unverified`.
+## For people who use GitHub
 
-## Three ways to help
+You can also work on the wiki directly. Changes go through a short review.
 
-1. **Report it.** <a href={`${repositoryUrl}/issues/new/choose`}>Open an issue on GitHub</a>, pick a form, fill in the
-   blanks, attach a screenshot.
+1. **Report it.** <a href={`${repositoryUrl}/issues/new/choose`}>Open an issue on GitHub</a>, pick a form, and attach a screenshot.
 2. **Edit in the browser.** Use the **Edit page** link at the bottom of any page.
 3. **Work locally.** Clone the repository, run `npm install`, then `npm run dev`.
 

@@ -56,7 +56,7 @@ const editUrl = `${editBaseUrl}data/monsters/${monster.id}.yaml`;
 const mapCountText = homeMaps.length === 1 ? 'Found in 1 map.' : `Found in ${homeMaps.length} maps.`;
 const subtitle =
 	homeMaps.length === 0
-		? 'Place unknown. Add it if you have seen it.'
+		? 'Place unknown.'
 		: [monster.region && `${monster.region}.`, mapCountText].filter(Boolean).join(' ');
 
 /*

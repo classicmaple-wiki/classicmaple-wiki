@@ -30,7 +30,7 @@ These facts come from Nexon's official posts. They are not a route.
 - Nexon's October 15 notice fixes a bug where monsters killed by damage over time, such as burn or bleed, gave double EXP and drops[^6].
 
 Nexon has not posted maps, monster levels, or EXP rates for leveling. Those come from players. If you have tested a
-map, add it with a screenshot.
+map, [send a correction](/contributing/) with a screenshot.
 
 ## Routes we need
 

@@ -80,7 +80,7 @@ const townName = map.town ?? (map.kind === 'town' ? map.name : undefined);
 const townPlace = placeForTown(townName);
 
 const placeLine = [townName && townName !== map.name ? `Near ${townName}` : undefined, map.region].filter(Boolean).join(', ');
-const subtitle = placeLine ? `${placeLine}.` : 'Region unknown. Add it if you have been there.';
+const subtitle = placeLine ? `${placeLine}.` : 'Region unknown.';
 
 const statisticRows = [
 	{ label: 'Kind', value: map.kind ? mapKindLabels[map.kind] : undefined },
