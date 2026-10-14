@@ -102,6 +102,8 @@ export const skill = z.strictObject({
 	max_level: positiveInteger.optional(),
 	summary: z.string().optional(),
 	differs_from_original: z.string().optional(),
+	branches: z.array(z.string()).default([]),
+	icon: sprite.optional(),
 	verified: verification,
 });
 

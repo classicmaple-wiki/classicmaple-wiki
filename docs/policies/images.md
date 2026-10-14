@@ -7,6 +7,7 @@ The rules for every picture on Classic Maple Wiki. Agents and contributors follo
 | Kind | Allowed | Where it comes from |
 | --- | --- | --- |
 | Small sprite of a monster, NPC, or item | Yes, next to that entry's name, and standing in the scene band of that entry's own page | A site on the approved list, our own drawing, or your own screenshot crop |
+| A skill's icon | Yes, next to that skill's name on its class page (owner, 2026-10-15) | maplestory.io, fetched by `scripts/fetch-skill-icons.ts` |
 | Scenes, page headers, the shelf of places | Yes | Our own painted pictures, made with an image model or by hand, following `docs/art-direction.md` |
 | Wordmark, icons, interface glyphs | Yes | Our own art, or the open icon sets listed in `docs/research/assets.md` |
 | Your own in-game screenshot | Yes, small, in a guide, as evidence | You took it yourself |

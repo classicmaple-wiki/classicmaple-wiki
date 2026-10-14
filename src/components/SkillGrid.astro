@@ -1,0 +1,57 @@
+---
+/*
+   A class's skills as icons, grouped by branch the way the game's skill
+   window groups them: the first job, then each second job path, as
+   Nexon's official class pages list them (spec 0011). A skill shared by
+   several paths, such as Rush, shows under each. Each skill shows its 32 pixel icon, doubled so its pixels stay
+   crisp, over its name. A skill with no icon yet shows a plain glyph.
+   Skills with no branch recorded are grouped by job.
+*/
+import { getEntry } from 'astro:content';
+import Icon from './Icon.astro';
+
+interface Props {
+	classId: string;
+}
+
+const classEntry = await getEntry('classes', Astro.props.classId);
+if (!classEntry) throw new Error(`SkillGrid: no class "${Astro.props.classId}" in data/classes/`);
+
+const groups = new Map<string, { label: string; job: number; skills: typeof classEntry.data.skills }>();
+for (const skill of classEntry.data.skills) {
+	const labels = skill.branches.length > 0 ? skill.branches : [skill.job === 1 ? 'First job' : 'Second job'];
+	for (const label of labels) {
+		const group = groups.get(label) ?? { label, job: skill.job, skills: [] };
+		group.skills.push(skill);
+		groups.set(label, group);
+	}
+}
+const orderedGroups = [...groups.values()].sort((first, second) => first.job - second.job);
+---
+
+<div class="skill-grid not-content">
+	{
+		orderedGroups.map((group) => (
+			<section class="skill-grid__group">
+				<h3 class="skill-grid__label">
+					{group.label}
+					<span class="skill-grid__job">{group.job === 1 ? 'First job' : 'Second job'}</span>
+				</h3>
+				<ul class="skill-grid__list">
+					{group.skills.map((skill) => (
+						<li class="skill-grid__skill">
+							<span class="skill-grid__slot">
+								{skill.icon ? (
+									<img src={`/sprites/${skill.icon.file}`} width="64" height="64" alt="" loading="lazy" decoding="async" />
+								) : (
+									<Icon name="scroll" size={28} strokeWidth={1.6} />
+								)}
+							</span>
+							<span class="skill-grid__name">{skill.name}</span>
+						</li>
+					))}
+				</ul>
+			</section>
+		))
+	}
+</div>

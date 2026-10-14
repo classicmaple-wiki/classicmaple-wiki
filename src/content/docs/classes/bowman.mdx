@@ -7,6 +7,7 @@ sidebar:
 
 import { editBaseUrl } from '../../../../site.config.mjs';
 import ChangeLog from '../../../components/ChangeLog.astro';
+import SkillGrid from '../../../components/SkillGrid.astro';
 import SkillList from '../../../components/SkillList.astro';
 import StatRows from '../../../components/StatRows.astro';
 import Window from '../../../components/Window.astro';
@@ -64,11 +65,10 @@ You get 5 AP each level. From level 10 you get 3 SP each level, plus 1 extra SP 
 
 Nexon's Bowman page[^2] lists these skills. It also explains what each one does.
 
-- **Archer (first job):** Critical Shot, The Eye of Amazon, Focus, Power Knockback, Arrow Blow, Double Shot.
-- **Hunter (second job):** Bow Mastery, Amazon's Judgement, Final Attack: Bow, Bow Booster, Soul Arrow: Bow, Arrow Bomb.
-- **Crossbowman (second job):** Crossbow Mastery, Amazon's Judgement, Final Attack: Crossbow, Crossbow Booster, Soul Arrow: Crossbow, Iron Arrow.
 
-Skill levels, costs, and damage numbers are not in the official pages yet. If you have them from the game, please add them with a screenshot.
+<SkillGrid classId="bowman" />
+
+Skill levels, costs, and damage numbers are not in the official pages yet. If you have them from the game, please [send a correction](/contributing/) with a screenshot.
 
 </Window>
 

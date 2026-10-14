@@ -29,7 +29,7 @@ export default defineConfig({
 		starlight({
 			title: siteTitle,
 			description: siteDescription,
-			logo: { src: './src/assets/leaf.svg' },
+			logo: { src: './src/assets/brand/icon.webp' },
 			favicon: hasBrandIcon ? '/favicon-32.png' : '/favicon.svg',
 			social: [{ icon: 'github', label: 'GitHub', href: repositoryUrl }],
 			editLink: { baseUrl: editBaseUrl },
