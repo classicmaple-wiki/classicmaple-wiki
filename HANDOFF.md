@@ -9,7 +9,7 @@ The new design is live on https://classicmaple.wiki since 2026-10-14: art led in
 ## Just done
 
 - Merged pull request 3. Closed specs 0002 and 0003.
-- Recorded the owner's player centric contribution idea as P4d.
+- Recorded the owner's player centric contribution idea as P4d, with the agreed two stage plan.
 
 ## In progress
 
@@ -17,7 +17,7 @@ Nothing open in code. The owner is painting the remaining scenes with `docs/art-
 
 ## Next step
 
-Ask the owner which comes next: the launch content spec (where to level, quests, job advancement), the about page and credits (P3), or first sprites (P2b). Launch is 2026-10-21.
+Write the launch content spec: where to level, quests, job advancement, and how players fill them from screenshots. Then the about page and credits (P3) and first sprites (P2b). After launch, stage 1 of P4d. Launch is 2026-10-21.
 
 ## Blockers and questions for the owner
 
