@@ -1,43 +1,42 @@
 ---
 /*
-   The six things most readers come to the home page for, as task cards
-   from direction B. Each card is one link with an original pixel glyph,
-   a title, and one short line. Two columns on phones, three on desktop.
+   The six things most readers come to the home page for, as task cards.
+   Each card is one link with a line icon, a title, and one short line.
+   Two columns on phones, three on desktop.
 
-   Glyphs come from src/lib/glyphs.ts, shared with the page emblems, and
-   are turned into one svg path at build time. A task links only to a
-   page that exists. Quests have no page yet, so that card asks for help
-   instead, and so does the route card, since no route is tested yet.
+   Icons come from src/lib/glyphs.ts through Icon.astro. A task links only
+   to a page that exists.
 
    Styles live in pages.css. The list opts out of Starlight's markdown
    styles, since it sits inside the home page's markdown body.
 */
-import { glyphPath, glyphs } from '../lib/glyphs';
+import type { GlyphName } from '../lib/glyphs';
+import Icon from './Icon.astro';
 
 interface Task {
 	title: string;
 	line: string;
 	href: string;
-	glyph: readonly string[];
+	glyph: GlyphName;
 }
 
 const tasks: Task[] = [
-	{ title: 'Where to train', line: 'Party routes. Help test them.', href: '/leveling/', glyph: glyphs.flag },
+	{ title: 'Where to train', line: 'Party routes. Help test them.', href: '/leveling/', glyph: 'flag' },
 	{
 		title: 'Job advancement',
 		line: 'What changed for each class, skill by skill.',
 		href: '/classes/warrior/',
-		glyph: glyphs.podium,
+		glyph: 'podium',
 	},
-	{ title: 'Quests', line: 'Who gives them, and what comes next.', href: '/library/?type=quest', glyph: glyphs.scroll },
-	{ title: 'Library', line: 'Every monster, item, map, NPC, quest, and shop.', href: '/library/', glyph: glyphs.monster },
+	{ title: 'Quests', line: 'Who gives them, and what comes next.', href: '/library/?type=quest', glyph: 'scroll' },
+	{ title: 'Library', line: 'Every monster, item, map, NPC, quest, and shop.', href: '/library/', glyph: 'monster' },
 	{
 		title: 'Crafting',
 		line: 'Professions and the new systems, explained.',
 		href: '/economy/crafting/',
-		glyph: glyphs.hammer,
+		glyph: 'hammer',
 	},
-	{ title: 'What changed', line: 'Values that moved between builds.', href: '/changes/', glyph: glyphs.arrows },
+	{ title: 'What changed', line: 'Values that moved between builds.', href: '/changes/', glyph: 'arrows' },
 ];
 ---
 
@@ -47,16 +46,7 @@ const tasks: Task[] = [
 			<li class="task-grid__item">
 				<a class="task-grid__card" href={task.href}>
 					<span class="task-grid__icon">
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 12 12"
-							shape-rendering="crispEdges"
-							aria-hidden="true"
-							focusable="false"
-						>
-							<path d={glyphPath(task.glyph)} />
-						</svg>
+						<Icon name={task.glyph} size={24} />
 					</span>
 					<span class="task-grid__title">{task.title}</span>
 					<span class="task-grid__line">{task.line}</span>

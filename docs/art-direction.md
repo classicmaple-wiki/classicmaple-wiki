@@ -6,7 +6,7 @@ The look of Classic Maple Wiki, and how to make any picture it needs. Decisions 
 
 The site's identity is painted HD pixel art: cozy, sunlit or lamplit places from a mid 2000s side-scrolling fantasy MMORPG, redrawn at high resolution with modern light. New and old at the same time. Crisp pixel edges, painterly shading, saturated warm color, deep layered scenes full of small props, and no people. The characters come from real sprites the site stands in the scene.
 
-The art leads. The interface is quiet and serves it: it frames the pictures, uses the materials and colors found in them, and never competes with them. Spec 0003 turns that into the interface.
+The art leads. The interface is quiet and serves it: it frames the pictures and never competes with them. Since spec 0006 the interface is a clean field guide with a little storybook warmth: warm white cards, Fredoka headings, Nunito text, line icons, and wood only for small tags. No pixel fonts or pixel interface glyphs. Pixel art belongs to the scenes and sprites.
 
 ## Reference pictures
 

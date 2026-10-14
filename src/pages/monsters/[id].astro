@@ -4,8 +4,10 @@
    points at the YAML file, so fixing a number is one click away.
 
    The page sits in the scene of the first map that lists the monster, or
-   in the default scene with the monster's own mood. The subtitle says
-   where it lives, or plainly that nobody knows yet.
+   in the default scene with the monster's own mood. The subtitle names
+   the region and how many maps it lives in, or plainly that nobody knows
+   yet. The Monster window names its main map, and a Where to find window
+   lists every map, so a common monster never floods the title.
 
    Reports that differ from the original game come first, in a lead
    window titled Not the original, set apart from the facts. The title is
@@ -39,10 +41,10 @@ export async function getStaticPaths() {
 const { monster } = Astro.props;
 
 const allMaps = (await getCollection('maps')).map((mapEntry) => mapEntry.data);
-const mapNames = allMaps
+const homeMaps = allMaps
 	.filter((map) => map.monsters.includes(monster.id) || map.id === monster.location)
-	.map((map) => map.name)
-	.sort((first, second) => first.localeCompare(second));
+	.sort((first, second) => first.name.localeCompare(second.name));
+const mainMap = homeMaps.find((map) => map.id === monster.location) ?? homeMaps[0];
 const itemNames = new Map((await getCollection('items')).map((itemEntry) => [itemEntry.data.id, itemEntry.data.name]));
 
 /*
@@ -58,8 +60,11 @@ const sortedDrops = [...monster.drops].sort((first, second) => second.rate_perce
 
 const resolved = await resolveMonsterScene(monster);
 const editUrl = `${editBaseUrl}data/monsters/${monster.id}.yaml`;
+const mapCountText = homeMaps.length === 1 ? 'Found in 1 map.' : `Found in ${homeMaps.length} maps.`;
 const subtitle =
-	mapNames.length === 0 ? 'Place unknown. Add it if you have seen it.' : `Found in ${formatList(mapNames)}.`;
+	homeMaps.length === 0
+		? 'Place unknown. Add it if you have seen it.'
+		: [monster.region && `${monster.region}.`, mapCountText].filter(Boolean).join(' ');
 
 /*
    Known numbers keep the shared formatting. A missing number stays
@@ -87,7 +92,8 @@ const statisticRows = [
 	{ label: 'Weak to', value: listValue(monster.weak_to) },
 	{ label: 'Strong to', value: listValue(monster.strong_to) },
 	{ label: 'Immune to', value: listValue(monster.immune_to) },
-	{ label: 'Found in', value: mapNames.length === 0 ? undefined : formatList(mapNames) },
+	{ label: 'Main map', value: mainMap?.name, href: mainMap ? `/maps/${mainMap.id}/` : undefined },
+	{ label: 'Region', value: monster.region },
 ];
 
 const headings = [
@@ -95,6 +101,7 @@ const headings = [
 		? [{ depth: 2, slug: 'differs-from-original', text: 'Not the original' }]
 		: []),
 	{ depth: 2, slug: 'stats', text: 'Monster' },
+	...(homeMaps.length > 1 ? [{ depth: 2, slug: 'where', text: 'Where to find' }] : []),
 	...(monster.drops.length > 0 ? [{ depth: 2, slug: 'drops', text: 'Drops' }] : []),
 	...(monster.notes ? [{ depth: 2, slug: 'notes', text: 'Notes' }] : []),
 	{ depth: 2, slug: 'history', text: 'History' },
@@ -130,6 +137,20 @@ const headings = [
 	<Window title="Monster" id="stats" build={monster.verified.build}>
 		<StatRows rows={statisticRows} editUrl={editUrl} subject="this monster" />
 	</Window>
+
+	{
+		homeMaps.length > 1 && (
+			<Window title="Where to find" id="where">
+				<ul class="link-list link-list--columns">
+					{homeMaps.map((map) => (
+						<li>
+							<a href={`/maps/${map.id}/`}>{map.name}</a>
+						</li>
+					))}
+				</ul>
+			</Window>
+		)
+	}
 
 	{
 		sortedDrops.length > 0 && (
