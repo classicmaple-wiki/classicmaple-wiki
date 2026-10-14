@@ -26,6 +26,10 @@ export const scenes: Record<SceneIdentifier, SceneDefinition> = {
 	'kerning-city': { identifier: 'kerning-city', label: 'Kerning City', defaultMood: 'dusk', moment: 'Rooftops at dusk.' },
 	sleepywood: { identifier: 'sleepywood', label: 'Sleepywood', defaultMood: 'cave', moment: 'Below the roots.' },
 	default: { identifier: 'default', label: 'Classic Maple Wiki', defaultMood: 'morning', moment: '' },
+	workshop: { identifier: 'workshop', label: 'The workshop', defaultMood: 'dusk', moment: 'Lamps on at dusk.' },
+	'harbor-board': { identifier: 'harbor-board', label: 'The harbor notice board', defaultMood: 'morning', moment: 'Fresh notes pinned.' },
+	'potion-shop': { identifier: 'potion-shop', label: 'The potion shop', defaultMood: 'midday', moment: 'Open for the afternoon.' },
+	'closed-shop': { identifier: 'closed-shop', label: 'A closed shop', defaultMood: 'night', moment: 'Shutters down for the night.' },
 };
 
 export const placeOrder: SceneIdentifier[] = [

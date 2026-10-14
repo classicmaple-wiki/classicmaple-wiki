@@ -6,3 +6,8 @@ differs_from_original: >-
   needed, with a screenshot.
 verified:
   status: unverified
+sprite:
+  file: monsters/crimson-balrog.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/8150000/render/stand
+  retrieved: 2026-10-14

@@ -21,7 +21,9 @@
    newest build is Grand Launch itself. Both come
    from data/builds.yaml, so nothing here is typed by hand. Any hero
    actions in the frontmatter render below as old client buttons. The
-   home page centers on search (the owner's direction, 2026-10-13). The
+   hero shows the page's own scene when its frontmatter names one, such
+   as the closed shop on the 404 page, and Henesys otherwise. The home
+   page centers on search (the owner's direction, 2026-10-13). The
    painted picture fills the whole hero as a background, under a soft
    veil, parchment by day and indigo by night, so it sets the mood without
    competing. On top, centered, the wordmark hangs as a wooden sign, and
@@ -34,6 +36,7 @@ import { getCollection } from 'astro:content';
 import { Icon } from '@astrojs/starlight/components';
 import DraftContentNotice from '@astrojs/starlight/components/DraftContentNotice.astro';
 import Leaf from '../assets/leaf.svg';
+import { resolveGuideScene } from '../lib/scenes';
 import Scene from './scenes/Scene.astro';
 
 const pageTitleIdentifier = '_top';
@@ -62,11 +65,12 @@ const isTrackingGrandLaunch = newestStartedBuild !== undefined && newestStartedB
 const trackingSentence = newestStartedBuild ? `Tracking ${newestStartedBuild.name}.` : undefined;
 const launchDay = grandLaunch && !isTrackingGrandLaunch ? calendarDay(grandLaunch.date) : undefined;
 const launchVerb = launchDay !== undefined && launchDay <= today ? 'was' : 'is';
+const heroScene = data.scene ? resolveGuideScene({ scene: data.scene, mood: data.mood }) : { scene: 'henesys' as const, mood: 'midday' as const };
 ---
 
 <div class="home-hero">
-	<div class="scene-band home-hero__band" data-mood="midday" data-scene="henesys">
-		<Scene scene="henesys" variant="home" />
+	<div class="scene-band home-hero__band" data-mood={heroScene.mood} data-scene={heroScene.scene}>
+		<Scene scene={heroScene.scene} variant="home" />
 		<span class="home-hero__veil" aria-hidden="true"></span>
 		<div class="home-hero__stage">
 			<h1 class="home-hero__wordmark" id={pageTitleIdentifier} data-page-title>

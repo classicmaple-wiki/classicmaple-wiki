@@ -92,8 +92,9 @@ interface EntityStatus {
 }
 
 /*
-   A class guide or a monster page is about one entry in data/. Its file
-   holds the verification record that the status line shows.
+   A class guide, or a monster, item, or map page, is about one entry in
+   data/. Its file holds the verification record that the status line
+   shows, and for monsters and items the sprite that stands in the scene.
 */
 async function findEntityStatus(): Promise<EntityStatus | undefined> {
 	if (pathSegments.length !== 2) return undefined;
@@ -112,6 +113,21 @@ async function findEntityStatus(): Promise<EntityStatus | undefined> {
 				spriteFile: monsterEntry.data.sprite?.file,
 			}
 		);
+	}
+	if (section === 'items') {
+		const itemEntry = await getEntry('items', identifier);
+		return (
+			itemEntry && {
+				identifierLabel: 'Item id',
+				identifier,
+				verified: itemEntry.data.verified,
+				spriteFile: itemEntry.data.sprite?.file,
+			}
+		);
+	}
+	if (section === 'maps') {
+		const mapEntry = await getEntry('maps', identifier);
+		return mapEntry && { identifierLabel: 'Map id', identifier, verified: mapEntry.data.verified };
 	}
 	return undefined;
 }

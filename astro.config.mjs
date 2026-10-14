@@ -66,6 +66,7 @@ export default defineConfig({
 				{
 					label: 'Database',
 					items: [
+						{ label: 'Library', link: '/library/' },
 						{ label: 'Monsters', link: '/monsters/' },
 						{ label: 'What changed', link: '/changes/' },
 					],

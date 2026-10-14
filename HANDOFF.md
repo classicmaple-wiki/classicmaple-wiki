@@ -4,24 +4,26 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-The new design is live on https://classicmaple.wiki since 2026-10-14: art led interface (spec 0003), home centered on search, map name signs, painted Henesys and Kerning City scenes. Production Lighthouse mobile is 100 for performance and accessibility on home, Thief, and Crimson Balrog. Content is still mostly Unknown.
+The art led design is live. Branch `site/scenes-and-library` adds every remaining painted scene, four special page rooms, and the library (spec 0004): `/library/` lists every entry as an inventory card with search and type filters, and items and maps get their own pages. Crimson Balrog has the first sprite. It waits for the owner's review on the pull request preview.
 
 ## Just done
 
-- Merged pull request 3. Closed specs 0002 and 0003.
-- Recorded the owner's player centric contribution idea as P4d, with the agreed two stage plan.
+- Scenes: Maple Island, Ellinia, Perion, Sleepywood, Default, plus workshop, harbor board, potion shop, and closed shop. What changed and 404 use their rooms. Only home has a night picture.
+- Library page, cards, item and map pages, Library in the sidebar and on the home task grid.
+- Sprite cap raised to 192 pixels for bosses.
+- Lighthouse mobile on a local build: library 99, monster 98, item 98, accessibility 100, layout shift 0.
 
 ## In progress
 
-Nothing open in code. The owner is painting the remaining scenes with `docs/art-direction.md`.
+Pull request for `site/scenes-and-library`.
 
 ## Next step
 
-Write the launch content spec: where to level, quests, job advancement, and how players fill them from screenshots. Then the about page and credits (P3) and first sprites (P2b). After launch, stage 1 of P4d. Launch is 2026-10-21.
+Owner reviews and merges. Then the launch content spec: where to level, quests, job advancement. Then the about and support pages in their rooms (P3), and more sprites (P2b). Launch is 2026-10-21.
 
 ## Blockers and questions for the owner
 
-- Remaining pictures: Kerning City night, Maple Island, Ellinia, Perion, Sleepywood, Default.
+- Review the library on the preview.
 
 ## Verify
 

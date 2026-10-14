@@ -903,3 +903,220 @@ site-search button[data-open-modal]:hover {
 	font-size: var(--text-sm);
 	text-align: center;
 }
+
+/*
+   The library (spec 0004). The search window holds a large name field
+   and one pill per type. Pills are small wooden tags: parchment when
+   off, wood with cream text when chosen, so the choice reads at a glance
+   and in both themes.
+
+   Entries sit in an inventory grid: as many columns as fit, and always
+   two on a phone, with a smaller slot. Each card is a small window. The type chip sits in the top
+   corner, and in the middle a square slot is cut into the card like an
+   inventory cell, inset and a step darker, holding the sprite at a
+   pixelated scale or the type glyph in sign gold on wood. The name is
+   heavy, the fact is muted, and the status chip closes the card. The
+   whole card is the link: it lifts slightly and takes the accent edge on
+   hover and focus.
+*/
+.library-search {
+	display: grid;
+	gap: var(--space-3);
+}
+
+.library-search__label {
+	font-weight: 800;
+}
+
+.library-search__field {
+	width: 100%;
+	min-height: 52px;
+	padding: 0 var(--space-4);
+	background: var(--color-paper);
+	color: var(--color-ink);
+	border: 2px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow: inset 0 2px 0 color-mix(in srgb, var(--color-ink) 7%, transparent);
+	font: inherit;
+	font-size: var(--text-lg);
+}
+
+.library-search__field::placeholder {
+	color: var(--color-ink-muted);
+	opacity: 1;
+}
+
+.library-search__pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2);
+}
+
+.library-pill {
+	min-height: 40px;
+	padding: 0 var(--space-4);
+	background: var(--color-panel);
+	color: var(--color-ink);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: 999px;
+	box-shadow: 0 2px 0 color-mix(in srgb, var(--color-ink) 14%, transparent);
+	font: inherit;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.library-pill:hover {
+	border-color: var(--color-accent);
+}
+
+.library-pill[aria-pressed='true'] {
+	background: var(--color-wood);
+	color: var(--color-wood-text);
+	border-color: color-mix(in srgb, var(--color-wood) 60%, #000);
+}
+
+.window__body > .library-search__count,
+.library-search .library-search__count {
+	margin: 0;
+	color: var(--color-ink-muted);
+	font-size: var(--text-sm);
+}
+
+.library-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+	gap: var(--space-3);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.library-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	background: var(--color-panel);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow: var(--shadow-window);
+	transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.library-card[hidden] {
+	display: none;
+}
+
+.library-card:hover,
+.library-card:focus-within {
+	transform: translateY(-2px);
+	border-color: var(--color-accent);
+}
+
+.library-card__link {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--space-1);
+	padding: var(--space-3) var(--space-3) var(--space-2);
+	color: var(--color-ink);
+	text-align: center;
+	text-decoration: none;
+}
+
+.library-card__type {
+	align-self: flex-start;
+	margin-bottom: var(--space-2);
+}
+
+.library-card__slot {
+	display: grid;
+	place-items: center;
+	width: 88px;
+	height: 88px;
+	margin-bottom: var(--space-2);
+	background:
+		repeating-linear-gradient(to bottom, transparent 0 10px, rgb(0 0 0 / 0.07) 10px 11px),
+		var(--color-wood);
+	border: 2px solid color-mix(in srgb, var(--color-wood) 55%, #000);
+	border-radius: 6px;
+	box-shadow:
+		inset 0 3px 6px rgb(0 0 0 / 0.35),
+		0 1px 0 rgb(255 255 255 / 0.25);
+}
+
+.library-card__sprite {
+	image-rendering: pixelated;
+	filter: drop-shadow(0 2px 0 rgb(0 0 0 / 0.35));
+}
+
+.library-card__glyph {
+	fill: var(--color-sign-text);
+	opacity: 0.85;
+}
+
+.library-card__name {
+	font-weight: 800;
+	font-size: var(--text-md);
+	line-height: 1.25;
+	color: var(--color-accent);
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	text-underline-offset: 0.18em;
+}
+
+.library-card__link:hover .library-card__name {
+	text-decoration-color: currentColor;
+}
+
+.library-card__fact {
+	color: var(--color-ink-muted);
+	font-size: var(--text-sm);
+	line-height: 1.35;
+}
+
+.library-card__status {
+	display: flex;
+	justify-content: center;
+	padding: 0 var(--space-2) var(--space-3);
+}
+
+@media (min-width: 50em) {
+	.library-grid {
+		grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+		gap: var(--space-4);
+	}
+}
+
+@media (max-width: 479px) {
+	.library-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: var(--space-2);
+	}
+
+	.library-card__link {
+		padding: var(--space-2) var(--space-2) var(--space-1);
+	}
+
+	.library-card__slot {
+		width: 72px;
+		height: 72px;
+	}
+
+	.library-card__name {
+		font-size: var(--text-base);
+		overflow-wrap: anywhere;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.library-card {
+		transition: none;
+	}
+
+	.library-card:hover,
+	.library-card:focus-within {
+		transform: none;
+	}
+}

@@ -1,0 +1,109 @@
+---
+/*
+   The library (spec 0004): every entry in data/ on one page, laid out
+   like the inventory of a game database. The page sits in the default
+   scene, the library room, with "Library" on the hanging sign.
+
+   A search window holds a name field and one pill per type. Below it,
+   every entry is an inventory card in one grid, grouped by type. The
+   grid is rendered at build time, so it is complete with JavaScript off.
+   The script only hides cards that do not match the field and the
+   chosen pill, and says how many are shown. Pills are buttons that
+   report their state with aria-pressed, and the count is announced
+   politely to screen readers.
+*/
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import LibraryCard from '../components/LibraryCard.astro';
+import Window from '../components/Window.astro';
+import { libraryCards, libraryTypes } from '../lib/library';
+
+const cards = await libraryCards();
+const presentTypes = libraryTypes.filter((entry) => cards.some((card) => card.type === entry.type));
+---
+
+<StarlightPage
+	frontmatter={{
+		title: 'Library',
+		description: 'Every monster, item, map, class, and profession in MapleStory Classic World, in one place.',
+		scene: 'default',
+		subtitle: 'Every monster, item, map, class, and profession.',
+	}}
+	headings={[
+		{ depth: 2, slug: 'look-something-up', text: 'Look something up' },
+		{ depth: 2, slug: 'entries', text: 'Entries' },
+	]}
+>
+	<Window title="Look something up" id="look-something-up">
+		<div class="library-search" data-library-search>
+			<label class="library-search__label" for="library-search-field">Name</label>
+			<input
+				class="library-search__field"
+				id="library-search-field"
+				type="search"
+				placeholder="Try Crimson Balrog, Thief, or Smithing"
+				autocomplete="off"
+				data-library-field
+			/>
+			<div class="library-search__pills" role="group" aria-label="Show only">
+				<button class="library-pill" type="button" aria-pressed="true" data-library-pill="all">All</button>
+				{
+					presentTypes.map((entry) => (
+						<button class="library-pill" type="button" aria-pressed="false" data-library-pill={entry.type}>
+							{entry.pluralLabel}
+						</button>
+					))
+				}
+			</div>
+			<p class="library-search__count" aria-live="polite" data-library-count>{cards.length} entries</p>
+		</div>
+	</Window>
+
+	<Window title="Entries" id="entries">
+		<ol class="library-grid not-content" data-library-grid>
+			{cards.map((card) => <LibraryCard card={card} />)}
+		</ol>
+		<p class="window__note" data-library-empty hidden>Nothing matches. Try another name, or pick All.</p>
+	</Window>
+</StarlightPage>
+
+<script>
+	/*
+	   Filters the library grid by the name field and the chosen pill. A
+	   card shows when its name contains the typed text and its type is
+	   the chosen one, or the pill is All. The count line and the empty
+	   note follow, so the reader always knows what they are looking at.
+	*/
+	function connectLibraryFilter(): void {
+		const field = document.querySelector<HTMLInputElement>('[data-library-field]');
+		const pills = [...document.querySelectorAll<HTMLButtonElement>('[data-library-pill]')];
+		const cards = [...document.querySelectorAll<HTMLElement>('[data-library-grid] > li')];
+		const count = document.querySelector<HTMLElement>('[data-library-count]');
+		const emptyNote = document.querySelector<HTMLElement>('[data-library-empty]');
+		if (!field) return;
+		let chosenType = 'all';
+
+		const applyFilter = (): void => {
+			const query = field.value.trim().toLowerCase();
+			let shown = 0;
+			for (const card of cards) {
+				const matchesType = chosenType === 'all' || card.dataset.type === chosenType;
+				const matchesName = (card.dataset.name ?? '').includes(query);
+				card.hidden = !(matchesType && matchesName);
+				if (!card.hidden) shown += 1;
+			}
+			if (count) count.textContent = `${shown} ${shown === 1 ? 'entry' : 'entries'}`;
+			if (emptyNote) emptyNote.hidden = shown > 0;
+		};
+
+		field.addEventListener('input', applyFilter);
+		for (const pill of pills) {
+			pill.addEventListener('click', () => {
+				chosenType = pill.dataset.libraryPill ?? 'all';
+				for (const other of pills) other.setAttribute('aria-pressed', String(other === pill));
+				applyFilter();
+			});
+		}
+	}
+
+	connectLibraryFilter();
+</script>
