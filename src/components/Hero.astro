@@ -26,17 +26,18 @@
    page centers on search (the owner's direction, 2026-10-13). The
    painted picture fills the whole hero as a background, under a soft
    veil, parchment by day and indigo by night, so it sets the mood without
-   competing. On top, centered, the wordmark hangs as a wooden sign, and
-   below it a solid parchment card holds the tagline, a large search
-   field, the build line, and the actions. Every word sits on the sign or
-   the card, never on the picture. Nunito is preloaded from
-   astro.config.mjs, so the sign does not reflow when the font arrives.    Styles live in pages.css.
+   competing. On top, centered, the wordmark sits on a small dark glass
+   plate (spec 0006), and below it a card holds the tagline, a large search
+   field, the build line, and the actions. Every word sits on the plate or
+   the card, never on the picture. Nunito and Fredoka are preloaded from
+   astro.config.mjs, so the wordmark does not reflow when the font arrives.    Styles live in pages.css.
 */
 import { getCollection } from 'astro:content';
 import { Icon } from '@astrojs/starlight/components';
 import DraftContentNotice from '@astrojs/starlight/components/DraftContentNotice.astro';
 import Leaf from '../assets/leaf.svg';
 import { resolveGuideScene } from '../lib/scenes';
+import GlyphIcon from './Icon.astro';
 import Scene from './scenes/Scene.astro';
 
 const pageTitleIdentifier = '_top';
@@ -83,19 +84,7 @@ const heroScene = data.scene ? resolveGuideScene({ scene: data.scene, mood: data
 				{data.draft && <DraftContentNotice />}
 				{tagline && <p class="home-hero__tagline" set:html={tagline} />}
 				<a class="home-hero__search" href="/library/" data-home-search>
-					<svg
-						class="home-hero__search-glyph"
-						width="20"
-						height="20"
-						viewBox="0 0 10 10"
-						shape-rendering="crispEdges"
-						aria-hidden="true"
-						focusable="false"
-					>
-						<path
-							d="M1 0h4v1h-4zM0 1h1v1h-1zM5 1h1v1h-1zM0 2h1v1h-1zM5 2h1v1h-1zM0 3h1v1h-1zM5 3h1v1h-1zM0 4h1v1h-1zM5 4h1v1h-1zM1 5h4v1h-4zM5 6h2v1h-2zM6 7h2v1h-2zM7 8h2v1h-2zM8 9h2v1h-2z"
-						></path>
-					</svg>
+					<GlyphIcon name="search" size={20} class="home-hero__search-glyph" />
 					<span class="home-hero__search-text">Search the wiki</span>
 				</a>
 				{

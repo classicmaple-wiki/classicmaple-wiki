@@ -40,7 +40,7 @@ export default defineConfig({
 					tag: 'link',
 					attrs: {
 						rel: 'preload',
-						href: '/fonts/silkscreen-400-latin.woff2',
+						href: '/fonts/fredoka-latin.woff2',
 						as: 'font',
 						type: 'font/woff2',
 						crossorigin: '',

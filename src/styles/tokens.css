@@ -1,10 +1,12 @@
 /*
-   Design tokens for Classic Maple Wiki (specs 0002 and 0003). This is the
-   one place that defines color, type, spacing, radius, and shadow. Since
-   decision 0007 the colors come from the painted art: parchment panels,
-   wood for title bars and the wordmark sign, stone for the footer, and a
-   night indigo dark mode that matches the Henesys night picture. custom.css maps
-   Starlight's own variables onto these, so the theme follows them.
+   Design tokens for Classic Maple Wiki (specs 0002, 0003, and 0006). This
+   is the one place that defines color, type, spacing, radius, and shadow.
+   Since spec 0006 the look is a field guide with a little storybook
+   warmth: warm white cards on a soft page, a tinted header strip on each
+   card, wood only for small tags, Fredoka for headings and Nunito for
+   text, and a night indigo dark mode that matches the Henesys night
+   picture. custom.css maps Starlight's own variables onto these, so the
+   theme follows them.
 
    Light values sit on :root. Dark values apply under data-theme="dark",
    which Starlight's theme toggle sets on the html element. Every text pair
@@ -34,42 +36,36 @@
 }
 
 @font-face {
-	font-family: 'Silkscreen';
+	font-family: 'Fredoka';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 500 600;
 	font-display: swap;
-	src: url('/fonts/silkscreen-400-latin.woff2') format('woff2');
-}
-
-@font-face {
-	font-family: 'Silkscreen';
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src: url('/fonts/silkscreen-700-latin.woff2') format('woff2');
+	src: url('/fonts/fredoka-latin.woff2') format('woff2');
 }
 
 :root {
-	--color-paper: #f6efdf;
-	--color-panel: #fff9ec;
-	--color-ink: #2a1f17;
-	--color-ink-muted: #5c4b3c;
-	--color-line: #e3d6bc;
-	--color-edge: color-mix(in srgb, var(--color-ink) 22%, var(--color-panel));
-	--color-edge-strong: color-mix(in srgb, var(--color-ink) 55%, var(--color-panel));
-	--color-accent: #9a3d08;
-	--color-accent-fill: #e8711c;
-	--color-chip: #f3e3c7;
-	--color-titlebar: #f4d9b0;
+	--color-paper: #f8f5ef;
+	--color-panel: #fffdf9;
+	--color-ink: #2a2620;
+	--color-ink-muted: #665c4e;
+	--color-line: #e9e0cf;
+	--color-edge: var(--color-line);
+	--color-edge-strong: color-mix(in srgb, var(--color-ink) 18%, var(--color-panel));
+	--color-accent: #2c7438;
+	--color-accent-fill: #e8731a;
+	--color-chip: #f5eddd;
+	--color-titlebar: #f5eddd;
 	--color-focus: #1f6fb2;
-	--color-wood: #7a4a26;
-	--color-wood-text: #fff4dc;
-	--color-sign: #5a361d;
-	--color-sign-text: #ffb85c;
-	--color-stone: #4f4034;
-	--color-stone-text: #fff4dc;
-	--color-stone-link: #ffb85c;
+	--color-wood: #8b5a2b;
+	--color-wood-text: #fff4df;
+	--color-sign: #8b5a2b;
+	--color-sign-text: #fff4df;
+	--color-stone: #f2ece0;
+	--color-stone-text: #4a4136;
+	--color-stone-link: #2c7438;
 	--color-wood-highlight: #ffd59a;
+	--color-slot-light: #ffffff;
+	--color-slot-dark: #f2e6cd;
 
 	--badge-official-background: #e2f0da;
 	--badge-official-foreground: #2f5e1f;
@@ -79,7 +75,7 @@
 	--badge-unverified-foreground: #7a4306;
 
 	--font-body: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
-	--font-display: 'Silkscreen', 'Nunito', system-ui, sans-serif;
+	--font-display: 'Fredoka', 'Nunito', system-ui, sans-serif;
 
 	--text-xs: 0.8125rem;
 	--text-sm: 0.875rem;
@@ -100,11 +96,11 @@
 	--space-7: 48px;
 	--space-8: 64px;
 
-	--radius-chrome: 2px;
-	--radius-window: 4px;
-	--radius-panel: 10px;
-	--shadow-panel: 0 1px 0 var(--color-line), 0 8px 24px rgb(42 31 23 / 0.08);
-	--shadow-window: inset 0 1px 0 #ffffff, 0 2px 0 rgb(42 31 23 / 0.18);
+	--radius-chrome: 999px;
+	--radius-window: 16px;
+	--radius-panel: 16px;
+	--shadow-panel: 0 3px 0 var(--color-line);
+	--shadow-window: 0 3px 0 var(--color-line);
 
 	--scene-band-minimum: 180px;
 	--scene-band-maximum: 240px;
@@ -124,24 +120,27 @@
 }
 
 :root[data-theme='dark'] {
-	--color-paper: #0b1230;
-	--color-panel: #141c42;
-	--color-ink: #f4ebda;
-	--color-ink-muted: #c2c6de;
-	--color-line: #2a3468;
-	--color-accent: #f7c14b;
-	--color-accent-fill: #e8711c;
-	--color-chip: #1e2856;
-	--color-titlebar: #2a2350;
+	--color-paper: #121729;
+	--color-panel: #1a2138;
+	--color-ink: #eceef8;
+	--color-ink-muted: #a7aec8;
+	--color-line: #2e3757;
+	--color-edge-strong: #3d4770;
+	--color-accent: #8fd49a;
+	--color-accent-fill: #e8731a;
+	--color-chip: #222b47;
+	--color-titlebar: #222b47;
 	--color-focus: #7fb8f0;
-	--color-wood: #5a361d;
-	--color-wood-text: #fff4dc;
-	--color-sign: #3e2414;
-	--color-sign-text: #ffb85c;
-	--color-stone: #161c3c;
-	--color-stone-text: #f4ebda;
-	--color-stone-link: #f7c14b;
+	--color-wood: #8b5a2b;
+	--color-wood-text: #fff4df;
+	--color-sign: #8b5a2b;
+	--color-sign-text: #fff4df;
+	--color-stone: #161c31;
+	--color-stone-text: #c9cee3;
+	--color-stone-link: #8fd49a;
 	--color-wood-highlight: #ffb85c;
+	--color-slot-light: #2a3456;
+	--color-slot-dark: #1a2138;
 
 	--badge-official-background: #21351a;
 	--badge-official-foreground: #b7e39e;
@@ -150,8 +149,8 @@
 	--badge-unverified-background: #3a2810;
 	--badge-unverified-foreground: #f6c98a;
 
-	--shadow-panel: 0 0 0 1px var(--color-line);
-	--shadow-window: inset 0 1px 0 rgb(255 255 255 / 0.06), 0 2px 0 rgb(0 0 0 / 0.5);
+	--shadow-panel: 0 3px 0 var(--color-line);
+	--shadow-window: 0 3px 0 var(--color-line);
 }
 
 [data-mood='dawn'],

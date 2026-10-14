@@ -1,29 +1,26 @@
 /*
    Maps Starlight's theme variables onto our tokens (src/styles/tokens.css),
    so search, sidebar, table of contents, asides, and badges all follow the
-   same parchment, ink, and orange palette in light mode and the night
-   indigo palette in dark mode (spec 0003). This file is
-   unlayered, so it wins over Starlight's layered defaults without needing
-   higher specificity.
+   same warm white, ink, and leaf green palette in light mode and the night
+   indigo palette in dark mode (spec 0006). This file is unlayered, so it
+   wins over Starlight's layered defaults without needing higher
+   specificity.
 
-   Base typography also lives here: Nunito for everything a reader reads,
-   Silkscreen only for tiny labels such as chips and captions, a 70
-   character measure, and tabular
-   figures in tables so numbers line up. Prose headings step down clearly
-   from the 30 to 44 pixel page title: H2 at 24 pixels on phones and 30 on
-   desktop, H3 at 20.
+   Base typography also lives here: Fredoka for headings, Nunito for
+   everything a reader reads, a 70 character measure, and tabular figures
+   in tables so numbers line up. Prose headings step down clearly from the
+   page title: H2 at 24 pixels on phones and 30 on desktop, H3 at 20.
 
    The Starlight pieces that sit around the windows are drawn in the same
    family. The current sidebar link is chip paper with accent text and a
    mushroom orange stripe, never a solid accent block, and group labels
    are small muted capitals. Page links at the foot of a page are window
-   cards. Asides take the window edge and radius with a status colored
+   cards. Asides take the card edge and radius with a status colored
    stripe, the caution aside uses the Unverified colors, and step numbers
-   are square chips instead of round bubbles. Their labels and titles are
-   Nunito, not the pixel font (spec 0003).
+   are round chips.
 
-   Focus rings are blue, except on wood, where blue on brown is too faint,
-   so they turn cream. Starlight's page wrapper clips sideways overflow,
+   Focus rings are blue, except on wood tags and over the scene banner,
+   where blue is too faint, so they turn cream. Starlight's page wrapper clips sideways overflow,
    so the full width home picture never adds a horizontal scroll next to
    a desktop scrollbar.
 */
@@ -82,7 +79,8 @@ body {
 
 .sl-markdown-content :is(h2, h3) {
 	color: var(--color-ink);
-	font-weight: 800;
+	font-family: var(--font-display);
+	font-weight: 600;
 }
 
 .sl-markdown-content > .sl-heading-wrapper.level-h2,
@@ -117,7 +115,7 @@ body {
 	background: var(--color-chip);
 	color: var(--color-accent);
 	font-weight: 800;
-	border-radius: var(--radius-chrome);
+	border-radius: 10px;
 	box-shadow: inset 3px 0 0 var(--color-accent-fill);
 }
 
@@ -151,9 +149,9 @@ body {
 }
 
 .pagination-links .link-title {
-	font-family: var(--font-body);
+	font-family: var(--font-display);
 	font-size: var(--text-lg);
-	font-weight: 800;
+	font-weight: 600;
 	text-transform: none;
 	letter-spacing: 0;
 	color: var(--color-accent);
@@ -226,7 +224,7 @@ a {
 	overflow-x: clip;
 }
 
-:is(.page-title__strip, .window__title-bar, .home-hero__wordmark) :focus-visible {
+:is(.page-title__band, .page-title__tag, .home-hero__band) :focus-visible {
 	outline-color: var(--color-wood-text);
 }
 
