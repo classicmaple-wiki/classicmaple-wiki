@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "validate": "tsx scripts/validate.ts",
-    "build": "npm run validate && astro build",
+    "build": "npm run validate && astro build --force",
     "preview": "astro preview",
     "astro": "astro"
   },
