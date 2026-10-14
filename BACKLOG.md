@@ -28,6 +28,5 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 Answers unblock the items above. Record the answer in the related spec.
 
-- **Q12** May the unused scripted scene files be deleted: `scripts/draw-scenes.py` and `src/components/scenes/artwork.ts`. Nothing uses them since decision 0006.
-- Answered 2026-10-13: Q2 donations will be Buy Me a Coffee or Patreon, later. Q3 credit links to Sirux at sirux.io, after a link to the official game. Q10 takedown requests come in as GitHub issues with the `takedown` label, no email. Q11 source statuses confirmed, use what is allowed and draw our own otherwise, never contact sites.
+- Answered 2026-10-13: Q2 donations will be Buy Me a Coffee or Patreon, later. Q3 credit links to Sirux at sirux.io, after a link to the official game. Q10 takedown requests come in as GitHub issues with the `takedown` label, no email. Q11 source statuses confirmed, use what is allowed and draw our own otherwise, never contact sites. Q12 old scripted scene files deleted.
 - Answered: Q1 repository address, Q4 CI only protection, Q5 Vercel app and DNS, Q6 domain at Name.com, Q7 admin bypass, Q8 asset defaults, Q9 moods and hubs, Vercel spend cap of $50 a month set 2026-10-13.

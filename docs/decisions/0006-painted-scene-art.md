@@ -22,4 +22,4 @@ Scene art is painted, not scripted.
 - Image weight matters. The build converts each picture to WebP at a few sizes. Lighthouse must stay at 95 or above on mobile, so pictures are checked after each one lands.
 - Every sprite still follows `docs/policies/images.md`, and only allowed sources are used. Sources are never contacted.
 - Some fans dislike AI art. The disclosure line and the hand edit requirement are the answer. The owner accepts that trade.
-- The scripted scenes (`scripts/draw-scenes.py`, `src/components/scenes/artwork.ts`) are no longer used.
+- The scripted scenes and their generator were deleted on 2026-10-13, with the owner's approval.

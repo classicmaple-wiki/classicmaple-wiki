@@ -24,7 +24,6 @@ Owner paints Kerning City and Henesys first (P2e). Agent checks each picture on 
 ## Blockers and questions for the owner
 
 - P2e scene pictures.
-- Q12: may the unused scripted scene files be deleted.
 
 ## Verify
 
