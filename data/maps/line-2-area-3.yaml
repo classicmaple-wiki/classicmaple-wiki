@@ -5,6 +5,9 @@ town: Kerning City
 kind: field
 monsters:
   - wraith
+exits:
+  - to: line-2-area-2
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Line_2_(Area_3)
 verified:
   status: unverified

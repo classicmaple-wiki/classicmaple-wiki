@@ -10,6 +10,13 @@ monsters:
   - evil-eye
   - horny-mushroom
   - zombie-mushroom
+exits:
+  - to: ant-tunnel-park
+    kind: walking
+    direction: east
+  - to: deep-ant-tunnel-i
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Deep_Ant_Tunnel_II
 verified:
   status: unverified

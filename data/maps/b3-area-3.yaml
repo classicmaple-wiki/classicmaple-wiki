@@ -3,6 +3,9 @@ name: B3 (Area 3)
 region: Victoria Island
 town: Kerning City
 kind: field
+exits:
+  - to: b3-subway-depot
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/B3_(Area_3)
 verified:
   status: unverified

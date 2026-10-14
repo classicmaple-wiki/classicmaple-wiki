@@ -12,6 +12,11 @@ monsters:
   - jr-boogie-1
   - jr-necki
   - lupin
+exits:
+  - to: sleepy-dungeon-ii
+    kind: walking
+  - to: sleepy-dungeon-iv
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_III
 verified:
   status: unverified

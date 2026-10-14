@@ -9,6 +9,13 @@ monsters:
   - red-snail
   - snail
   - stump
+exits:
+  - to: east-rocky-mountain-i
+    kind: walking
+    direction: west
+  - to: rocky-road-ii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Rocky_Road_I
 verified:
   status: unverified

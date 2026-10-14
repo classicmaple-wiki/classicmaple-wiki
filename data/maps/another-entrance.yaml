@@ -3,6 +3,16 @@ name: Another Entrance
 region: Victoria Island
 town: Sleepywood
 kind: field
+exits:
+  - to: another-path
+    kind: hidden
+    direction: east
+  - to: drakes-meal-table
+    kind: hidden
+    direction: east
+  - to: the-tunnel-that-lost-light-ii
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Another_Entrance
 verified:
   status: unverified

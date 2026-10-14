@@ -8,6 +8,13 @@ monsters:
   - dark-stump
   - green-mushroom
   - stump
+exits:
+  - to: perion
+    kind: walking
+    direction: east
+  - to: west-rocky-mountain-i
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/West_Street_Corner_of_Perion
 verified:
   status: unverified

@@ -4,7 +4,8 @@
    Henesys, Ellinia, Perion, Kerning City, and Sleepywood. Each sits in
    its own painted scene and gathers everything that belongs there, as
    worked out in src/lib/places.ts: the monsters and NPCs as inventory
-   cards with their sprites, then the maps grouped by kind, the shops,
+   cards with their sprites, then the maps grouped by kind as cards with
+   their town's painted scene, the shops,
    and the quests that start there. Every entry links to its own page.
    The table of contents lists exactly the windows shown.
 */
@@ -25,6 +26,7 @@ const place = scenes[identifier];
 const contents = await placeContents(identifier);
 const allCards = await libraryCards();
 const monsterCards = allCards.filter((card) => card.type === 'monster' && contents.monsterIds.has(card.identifier));
+const mapCardsById = new Map(allCards.filter((card) => card.type === 'map').map((card) => [card.identifier, card]));
 const npcCards = allCards.filter((card) => card.type === 'npc' && contents.npcIds.has(card.identifier));
 const shops = (await getCollection('shops'))
 	.map((entry) => entry.data)
@@ -108,13 +110,11 @@ const headings = [
 				{mapGroups.map((group) => (
 					<section class="place-maps">
 						<h3 class="place-maps__label">{group.label}</h3>
-						<ul class="link-list link-list--columns">
+						<ol class="library-grid not-content">
 							{group.maps.map((map) => (
-								<li>
-									<a href={`/maps/${map.id}/`}>{map.name}</a>
-								</li>
+								<LibraryCard card={mapCardsById.get(map.id)!} />
 							))}
-						</ul>
+						</ol>
 					</section>
 				))}
 			</Window>

@@ -10,6 +10,9 @@ monsters:
   - green-mushroom
   - horny-mushroom
   - slime
+exits:
+  - to: the-forest-north-of-ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Forest_Up_North_V
 verified:
   status: unverified

@@ -3,6 +3,9 @@ name: Henesys Plastic Surgery
 region: Victoria Island
 town: Henesys
 kind: town
+exits:
+  - to: henesys-market
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Henesys_Plastic_Surgery
 verified:
   status: unverified

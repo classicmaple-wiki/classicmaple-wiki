@@ -64,3 +64,36 @@ export async function placeContents(place: SceneIdentifier) {
 
 	return { maps: placeMaps, monsterIds, npcIds, shopIds, questIds };
 }
+
+/*
+   The place one entry belongs to, for its breadcrumb: a map by its town,
+   an NPC by its map, a shop by its map or its NPC, a quest by the NPC who
+   gives it, and a monster by its main map or the first map it lives on.
+   Undefined when the entry belongs to no shelf place.
+*/
+export async function placeOfEntry(section: string, identifier: string): Promise<SceneIdentifier | undefined> {
+	const maps = new Map((await getCollection('maps')).map((entry) => [entry.data.id, entry.data]));
+	const npcs = new Map((await getCollection('npcs')).map((entry) => [entry.data.id, entry.data]));
+	const placeOfMap = (mapId: string | undefined) => {
+		const map = mapId ? maps.get(mapId) : undefined;
+		return map ? placeForTown(map.town ?? (map.kind === 'town' ? map.name : undefined)) : undefined;
+	};
+	const placeOfNpc = (npcId: string | undefined) => placeOfMap(npcId ? npcs.get(npcId)?.map : undefined);
+
+	if (section === 'maps') return placeOfMap(identifier);
+	if (section === 'npcs') return placeOfNpc(identifier);
+	if (section === 'shops') {
+		const shop = (await getCollection('shops')).find((entry) => entry.data.id === identifier)?.data;
+		return placeOfMap(shop?.map) ?? placeOfNpc(shop?.npc);
+	}
+	if (section === 'quests') {
+		const quest = (await getCollection('quests')).find((entry) => entry.data.id === identifier)?.data;
+		return placeOfNpc(quest?.giver);
+	}
+	if (section === 'monsters') {
+		const monster = (await getCollection('monsters')).find((entry) => entry.data.id === identifier)?.data;
+		const homeMap = monster?.location ?? [...maps.values()].find((map) => map.monsters.includes(identifier))?.id;
+		return placeOfMap(homeMap);
+	}
+	return undefined;
+}

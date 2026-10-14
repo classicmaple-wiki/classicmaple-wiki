@@ -10,6 +10,9 @@ monsters:
   - clang
   - lorang
   - tortie
+exits:
+  - to: lorang-and-clang
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Clang_and_Lorang
 verified:
   status: unverified

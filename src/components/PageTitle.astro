@@ -32,7 +32,8 @@ import type { ImageMetadata } from 'astro';
 import { getCollection, getEntry } from 'astro:content';
 import type { Verification } from '../../schemas/shared';
 import { libraryTypeForSection } from '../lib/library';
-import { resolveClassScene, resolveGuideScene, type ResolvedScene } from '../lib/scenes';
+import { placeOfEntry } from '../lib/places';
+import { resolveClassScene, resolveGuideScene, scenes, type ResolvedScene } from '../lib/scenes';
 import { sceneAspectRatio } from '../lib/sceneArt';
 import Scene from './scenes/Scene.astro';
 import VerifiedBadge from './VerifiedBadge.astro';
@@ -68,12 +69,17 @@ interface BreadcrumbStep {
 /*
    Section pages are either guides, whose id is the section name, or
    generated index pages under src/pages. Guides lend their title to the
-   breadcrumb. Entity sections, such as quests or NPCs, point at the
-   library with that type chosen, so every entry is reached the same way.
+   breadcrumb. An entry that belongs to a place, such as an NPC in
+   Henesys, follows geography: Home, then the place, then the entry (spec
+   0009). Other entries go through the library with their type chosen.
    Other sections show their folder name in plain words. The last step is
    the page itself.
 */
 async function buildBreadcrumb(): Promise<BreadcrumbStep[]> {
+	const entryPlace =
+		pathSegments.length === 2 && libraryTypeForSection(pathSegments[0])
+			? await placeOfEntry(pathSegments[0], pathSegments[1])
+			: undefined;
 	const parentSegments = pathSegments.slice(0, -1);
 	const guideTitles = new Map((await getCollection('docs')).map((guideEntry) => [guideEntry.id, guideEntry.data.title]));
 	const steps: BreadcrumbStep[] = [{ label: 'Home', href: '/' }];
@@ -83,7 +89,11 @@ async function buildBreadcrumb(): Promise<BreadcrumbStep[]> {
 		const plainLabel = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
 		const libraryType = position === 0 ? libraryTypeForSection(segment) : undefined;
 		if (libraryType) {
-			steps.push({ label: libraryType.pluralLabel, href: `/library/?type=${libraryType.type}` });
+			steps.push(
+				entryPlace
+					? { label: scenes[entryPlace].label, href: `/places/${entryPlace}/` }
+					: { label: libraryType.pluralLabel, href: `/library/?type=${libraryType.type}` }
+			);
 			return;
 		}
 		const sectionExists = guideTitle !== undefined || existsSync(`src/pages/${sectionPath}/index.astro`);
@@ -189,7 +199,12 @@ const breadcrumb = await buildBreadcrumb();
 const entityStatus = await findEntityStatus();
 const resident = findResident(entityStatus?.spriteFile);
 const bandAspectRatio = sceneAspectRatio(resolved.scene);
-const sectionTag = breadcrumb.length > 2 ? breadcrumb[breadcrumb.length - 2].label : undefined;
+const sectionLibraryType = pathSegments.length === 2 ? libraryTypeForSection(pathSegments[0]) : undefined;
+const sectionTag = sectionLibraryType
+	? { label: sectionLibraryType.pluralLabel, href: `/library/?type=${sectionLibraryType.type}` }
+	: breadcrumb.length > 2
+		? breadcrumb[breadcrumb.length - 2]
+		: undefined;
 
 const characterPictures = import.meta.glob<{ default: ImageMetadata }>('../assets/characters/*.{png,webp}', { eager: true });
 const characterName =
@@ -235,7 +250,16 @@ const characterPicture = characterName
 				)
 			}
 			<div class="page-title__text">
-				{sectionTag && <span class="page-title__tag">{sectionTag}</span>}
+				{
+					sectionTag &&
+						(sectionTag.href ? (
+							<a class="page-title__tag" href={sectionTag.href}>
+								{sectionTag.label}
+							</a>
+						) : (
+							<span class="page-title__tag">{sectionTag.label}</span>
+						))
+				}
 				<h1 class="page-title__heading" id={pageTitleIdentifier}>{title}</h1>
 				{subtitle && <p class="page-title__subtitle">{subtitle}</p>}
 			</div>

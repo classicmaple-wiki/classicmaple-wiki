@@ -10,6 +10,13 @@ monsters:
   - drake
   - horny-mushroom
   - jr-boogie-2
+exits:
+  - to: the-cave-of-evil-eye-iv
+    kind: walking
+    direction: east
+  - to: the-tunnel-that-lost-light-i
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Drake_Hunting_Ground
 verified:
   status: unverified

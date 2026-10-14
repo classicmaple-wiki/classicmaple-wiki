@@ -7,6 +7,9 @@ monsters:
   - fairy-2
   - iron-hog
   - mushmom
+exits:
+  - to: pig-park-ii
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Someone_Else's_House
 verified:
   status: unverified

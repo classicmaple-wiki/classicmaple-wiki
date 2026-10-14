@@ -9,6 +9,15 @@ recommended_level:
 monsters:
   - lorang
   - lupin
+exits:
+  - to: a-look-out-shed-around-the-beach
+    kind: walking
+    direction: west
+  - to: lorang-and-clang
+    kind: walking
+    direction: east
+  - to: lorang-lorang-lorang
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Lorang_Lorang
 verified:
   status: unverified

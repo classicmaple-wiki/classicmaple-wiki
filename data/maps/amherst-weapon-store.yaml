@@ -3,6 +3,9 @@ name: Amherst Weapon Store
 region: Maple Island
 town: Amherst
 kind: town
+exits:
+  - to: amherst
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Amherst_Weapon_Store
 verified:
   status: unverified

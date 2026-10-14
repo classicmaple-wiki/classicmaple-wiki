@@ -3,6 +3,19 @@ name: Amherst
 region: Maple Island
 town: Amherst
 kind: town
+exits:
+  - to: amherst-department-store
+    kind: walking
+  - to: amherst-townstreet
+    kind: walking
+  - to: amherst-weapon-store
+    kind: walking
+  - to: the-field-east-of-amherst
+    kind: walking
+    direction: east
+  - to: the-field-west-of-amherst
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Amherst
 verified:
   status: unverified

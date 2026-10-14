@@ -12,6 +12,14 @@ monsters:
   - dark-stump
   - fire-boar
   - wild-boar
+exits:
+  - to: deep-valley-i
+    kind: walking
+    direction: east
+  - to: deep-valley-iii
+    kind: walking
+  - to: the-burnt-land-i
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Deep_Valley_II
 verified:
   status: unverified

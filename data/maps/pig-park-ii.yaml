@@ -5,6 +5,11 @@ town: Henesys
 kind: field
 monsters:
   - iron-hog
+exits:
+  - to: pig-park
+    kind: walking
+  - to: someone-elses-house
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Pig_Park_II
 verified:
   status: unverified

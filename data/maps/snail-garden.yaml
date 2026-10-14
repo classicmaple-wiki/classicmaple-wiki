@@ -10,6 +10,9 @@ monsters:
   - blue-snail
   - red-snail
   - snail
+exits:
+  - to: the-field-west-of-amherst
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Snail_Garden
 verified:
   status: unverified

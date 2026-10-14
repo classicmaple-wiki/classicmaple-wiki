@@ -11,6 +11,11 @@ monsters:
   - dark-axe-stump
   - dark-stump
   - snail
+exits:
+  - to: east-rocky-mountain-iii
+    kind: walking
+  - to: east-rocky-mountain-v
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_IV
 verified:
   status: unverified

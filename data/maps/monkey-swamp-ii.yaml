@@ -10,6 +10,11 @@ monsters:
   - jr-necki
   - lupin
   - zombie-lupin
+exits:
+  - to: monkey-swamp-i
+    kind: hidden
+  - to: monkey-swamp-iii
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Monkey_Swamp_II
 verified:
   status: unverified

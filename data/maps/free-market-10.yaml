@@ -2,6 +2,9 @@ id: free-market-10
 name: Free Market (10)
 region: Hidden Street
 kind: trading-hub
+exits:
+  - to: free-market-entrance
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Free_Market_(10)
 verified:
   status: unverified

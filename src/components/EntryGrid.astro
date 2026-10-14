@@ -1,0 +1,19 @@
+---
+/*
+   A grid of library cards for one type, for guide index pages written in
+   MDX, such as the classes index (spec 0009). It shows every entry of
+   that type with its sprite or icon, in name order.
+*/
+import { libraryCards, type LibraryType } from '../lib/library';
+import LibraryCard from './LibraryCard.astro';
+
+interface Props {
+	type: LibraryType;
+}
+
+const cards = (await libraryCards()).filter((card) => card.type === Astro.props.type);
+---
+
+<ol class="library-grid not-content">
+	{cards.map((card) => <LibraryCard card={card} />)}
+</ol>

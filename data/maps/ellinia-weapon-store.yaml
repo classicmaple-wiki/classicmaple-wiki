@@ -3,6 +3,9 @@ name: Ellinia Weapon Store
 region: Victoria Island
 town: Ellinia
 kind: town
+exits:
+  - to: ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Ellinia_Weapon_Store
 verified:
   status: unverified

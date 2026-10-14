@@ -11,6 +11,15 @@ monsters:
   - jr-necki
   - octopus
   - slime
+exits:
+  - to: damp-forest
+    kind: hidden
+  - to: dangerous-croko-ii
+    kind: walking
+    direction: west
+  - to: deep-forest
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Damp_Tree-Forest
 verified:
   status: unverified

@@ -7,6 +7,17 @@ monsters:
   - green-mushroom
   - slime
   - snail
+exits:
+  - to: downstairs-at-the-forest
+    kind: hidden
+  - to: monkey-forest-i
+    kind: hidden
+  - to: the-field-south-of-ellinia
+    kind: walking
+    direction: east
+  - to: the-forest-south-of-ellinia
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/The_Forest_of_Wisdom
 verified:
   status: unverified

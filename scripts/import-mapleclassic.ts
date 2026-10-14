@@ -3,7 +3,8 @@
    numbers), a Classic World wiki licensed CC BY-NC-SA 4.0.
 
    What it takes is deliberately narrow. Names, where things are, who gives
-   a quest and which quests come first, what a shop sells, and monster
+   a quest and which quests come first, which maps connect through
+   portals, what a shop sells, and monster
    drops that players observed, with the date and the number of kills
    behind each rate. Since 2026-10-14 the owner also allows the core
    numbers players look up most: a monster's level, HP, and EXP, an item's
@@ -325,9 +326,10 @@ function makeIdentifierAllocator(collection: string) {
 */
 async function planImport(): Promise<PlannedRecord[]> {
 	const excludedTitles = await notAtLaunchTitles();
-	const [maps, spawns, monsters, drops, npcs, quests, prerequisiteRows, shops, shopItems, items] = [
+	const [maps, spawns, portals, monsters, drops, npcs, quests, prerequisiteRows, shops, shopItems, items] = [
 		await cargoQuery('maps', '_pageName=page,region,nearest_town=town,map_type=kind,recommended_level_min=levelmin,recommended_level_max=levelmax'),
 		await cargoQuery('monster_spawns', 'monster_id=monster,map_id=map'),
+		await cargoQuery('portals', '_pageName=page,to_map=to,portal_type=kind,direction'),
 		await cargoQuery('monsters', '_pageName=page,primary_location=location,region,boss,released,variant,level,hp,exp'),
 		await cargoQuery(
 			'monster_drops',
@@ -461,6 +463,28 @@ async function planImport(): Promise<PlannedRecord[]> {
 		monstersOnMap.set(mapPage, list);
 	}
 
+	const exitsByMap = new Map<string, DataRecord[]>();
+	const portalKinds = new Set(['walking', 'hidden', 'door', 'transport']);
+	const directions = new Set(['north', 'south', 'east', 'west', 'up', 'down']);
+	for (const row of portals) {
+		const fromPage = decodeEntities(row.page);
+		const toPage = decodeEntities(row.to);
+		if (!fromPage || !toPage || fromPage === toPage || !mapPages.has(fromPage) || !mapPages.has(toPage)) continue;
+		const list = exitsByMap.get(fromPage) ?? [];
+		const target = mapIdentifier(toPage)!;
+		if (list.some((exit) => exit.to === target)) continue;
+		const kind = decodeEntities(row.kind)?.toLowerCase();
+		const direction = decodeEntities(row.direction)?.toLowerCase();
+		list.push(
+			compact({
+				to: target,
+				kind: kind && portalKinds.has(kind) ? kind : undefined,
+				direction: direction && directions.has(direction) ? direction : undefined,
+			})
+		);
+		exitsByMap.set(fromPage, list);
+	}
+
 	for (const [page, row] of [...mapPages.entries()].sort(([first], [second]) => first.localeCompare(second))) {
 		const identifier = mapIdentifier(page)!;
 		const levelMinimum = positiveNumber(row.levelmin);
@@ -481,6 +505,7 @@ async function planImport(): Promise<PlannedRecord[]> {
 				kind: toIdentifier(decodeEntities(row.kind)),
 				recommended_level: recommendedLevel,
 				monsters: [...(monstersOnMap.get(page) ?? [])].sort(),
+				exits: exitsByMap.get(page)?.sort((first, second) => String(first.to).localeCompare(String(second.to))),
 				source_page: sourcePageUrl(page),
 				verified: importedVerification(page, recommendedLevel !== undefined),
 			}),

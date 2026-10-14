@@ -10,6 +10,9 @@ monsters:
   - copper-drake
   - fire-boar
   - red-drake
+exits:
+  - to: dangerous-valley
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Dangerous_Valley_II
 verified:
   status: unverified

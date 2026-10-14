@@ -3,6 +3,9 @@ name: Sleepywood Hotel
 region: Victoria Island
 town: Sleepywood
 kind: field
+exits:
+  - to: sleepywood
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Sleepywood_Hotel
 verified:
   status: unverified

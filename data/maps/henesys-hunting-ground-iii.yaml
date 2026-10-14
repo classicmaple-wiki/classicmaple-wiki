@@ -13,6 +13,9 @@ monsters:
   - red-snail
   - slime
   - stump
+exits:
+  - to: henesys-hunting-ground-ii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_III
 verified:
   status: unverified

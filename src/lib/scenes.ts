@@ -76,11 +76,19 @@ export function resolveGuideScene(frontmatter: PresentationFields): ResolvedScen
 	return combine(frontmatter, 'default');
 }
 
+/*
+   Towns without a place page of their own that still have a fitting
+   painted scene. Lith Harbor is a port, so it takes the harbor pier.
+*/
+const townSceneFallbacks: Record<string, SceneIdentifier> = {
+	'Lith Harbor': 'harbor-board',
+};
+
 export async function resolveMapScene(
 	map: PresentationFields & { region?: string; town?: string; name?: string; kind?: string }
 ): Promise<ResolvedScene> {
 	const town = map.town ?? (map.kind === 'town' ? map.name : undefined);
-	return combine(map, placeForTown(town) ?? sceneFromPlaceName(map.region) ?? 'default');
+	return combine(map, placeForTown(town) ?? (town ? townSceneFallbacks[town] : undefined) ?? sceneFromPlaceName(map.region) ?? 'default');
 }
 
 /*

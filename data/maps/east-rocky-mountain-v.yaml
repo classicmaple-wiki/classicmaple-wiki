@@ -11,6 +11,11 @@ monsters:
   - dark-stump
   - fire-boar
   - red-snail
+exits:
+  - to: east-rocky-mountain-iv
+    kind: walking
+  - to: east-rocky-mountain-vi
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_V
 verified:
   status: unverified

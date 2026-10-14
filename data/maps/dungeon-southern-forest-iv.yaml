@@ -11,6 +11,9 @@ monsters:
   - green-mushroom
   - horny-mushroom
   - slime
+exits:
+  - to: the-forest-south-of-ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_IV
 verified:
   status: unverified

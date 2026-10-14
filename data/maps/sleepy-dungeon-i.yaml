@@ -14,6 +14,11 @@ monsters:
   - lupin
   - octopus
   - slime
+exits:
+  - to: sleepy-dungeon-ii
+    kind: walking
+  - to: sleepywood
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_I
 verified:
   status: unverified

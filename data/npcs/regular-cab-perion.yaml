@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Regular_Cab_(Perion)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Regular_Cab_(Perion)
+sprite:
+  file: npcs/regular-cab-perion.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1012000/render/stand/0
+  retrieved: 2026-10-14

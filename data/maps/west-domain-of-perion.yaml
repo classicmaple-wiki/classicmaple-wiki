@@ -10,6 +10,12 @@ monsters:
   - red-snail
   - snail
   - stump
+exits:
+  - to: construction-site-north-of-kerning-city
+    kind: walking
+    direction: west
+  - to: west-rocky-mountain-i
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/West_Domain_of_Perion
 verified:
   status: unverified

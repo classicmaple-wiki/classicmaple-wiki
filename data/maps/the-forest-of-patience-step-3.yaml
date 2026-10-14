@@ -3,6 +3,9 @@ name: The Forest of Patience (Step 3)
 region: Victoria Island
 town: Ellinia
 kind: town
+exits:
+  - to: the-forest-of-patience-step-4
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Forest_of_Patience_(Step_3)
 verified:
   status: unverified

@@ -9,6 +9,13 @@ recommended_level:
 monsters:
   - green-mushroom
   - lupin
+exits:
+  - to: monkey-forest-ii
+    kind: walking
+  - to: the-forest-of-wisdom
+    kind: walking
+  - to: tree-dungeon-monkey-forest-i
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Monkey_Forest_I
 verified:
   status: unverified

@@ -2,6 +2,10 @@ id: free-market-1
 name: Free Market (1)
 region: Hidden Street
 kind: trading-hub
+exits:
+  - to: free-market-entrance
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Free_Market_(1)
 verified:
   status: unverified

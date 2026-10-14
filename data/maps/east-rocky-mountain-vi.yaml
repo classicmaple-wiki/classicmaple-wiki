@@ -12,6 +12,11 @@ monsters:
   - dark-stump
   - fire-boar
   - lupin
+exits:
+  - to: east-rocky-mountain-v
+    kind: walking
+  - to: east-rocky-mountain-vii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_VI
 verified:
   status: unverified

@@ -3,6 +3,9 @@ name: Amherst Department Store
 region: Maple Island
 town: Amherst
 kind: town
+exits:
+  - to: amherst
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Amherst_Department_Store
 verified:
   status: unverified

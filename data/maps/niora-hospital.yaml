@@ -3,6 +3,9 @@ name: Niora Hospital
 region: Victoria Island
 town: Kerning City
 kind: town
+exits:
+  - to: kerning-city
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Niora_Hospital
 verified:
   status: unverified

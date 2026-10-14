@@ -7,3 +7,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Cloth_Vest_(Female)
   build: cot2
+sprite:
+  file: items/blue-cloth-vest-female.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040031/icon
+  retrieved: 2026-10-14

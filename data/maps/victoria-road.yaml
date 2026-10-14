@@ -3,6 +3,9 @@ name: Victoria Road
 region: Hidden Street
 town: Henesys
 kind: town
+exits:
+  - to: henesys
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Victoria_Road
 verified:
   status: unverified

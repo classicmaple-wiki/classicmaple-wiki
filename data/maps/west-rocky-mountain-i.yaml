@@ -7,6 +7,15 @@ monsters:
   - axe-stump
   - red-snail
   - stump
+exits:
+  - to: west-domain-of-perion
+    kind: walking
+    direction: west
+  - to: west-rocky-mountain-ii
+    kind: walking
+  - to: west-street-corner-of-perion
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/West_Rocky_Mountain_I
 verified:
   status: unverified

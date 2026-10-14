@@ -10,6 +10,9 @@ monsters:
   - jr-necki
   - octopus
   - slime
+exits:
+  - to: damp-tree-forest
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Damp_Forest
 verified:
   status: unverified

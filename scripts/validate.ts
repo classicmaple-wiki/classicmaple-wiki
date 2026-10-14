@@ -145,6 +145,11 @@ function validateDataFiles(buildIdentifiers: Set<string>) {
 				}
 			}
 		}
+		if (collectionName === 'maps') {
+			for (const exit of (data.exits as { to: string }[] | undefined) ?? []) {
+				if (!parsedEntities.has(`maps/${exit.to}`)) report(filePath, `exits: "${exit.to}" does not exist in data/maps/`);
+			}
+		}
 		if (collectionName === 'monsters') {
 			for (const monsterDrop of (data.drops as { item: string; build: string }[] | undefined) ?? []) {
 				if (monsterDrop.item !== 'meso' && !parsedEntities.has(`items/${monsterDrop.item}`)) {

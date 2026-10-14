@@ -11,6 +11,9 @@ monsters:
   - orange-mushroom
   - red-snail
   - snail
+exits:
+  - to: the-field-east-of-amherst
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Tomato_Field
 verified:
   status: unverified

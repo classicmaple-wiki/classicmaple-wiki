@@ -11,6 +11,13 @@ monsters:
   - ribbon-pig
   - shroom
   - slime
+exits:
+  - to: henesys
+    kind: walking
+    direction: west
+  - to: the-rain-forest-east-of-henesys
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/The_Hill_East_of_Henesys
 verified:
   status: unverified

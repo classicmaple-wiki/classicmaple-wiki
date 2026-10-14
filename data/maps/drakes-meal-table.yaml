@@ -8,6 +8,13 @@ monsters:
   - drake
   - snail
   - wild-kargo
+exits:
+  - to: another-entrance
+    kind: walking
+    direction: west
+  - to: wild-kargos-area
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Drake's_Meal_Table
 verified:
   status: unverified

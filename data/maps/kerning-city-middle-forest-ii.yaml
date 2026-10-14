@@ -12,6 +12,11 @@ monsters:
   - ribbon-pig
   - shroom
   - slime
+exits:
+  - to: kerning-city-middle-forest-i
+    kind: walking
+  - to: kerning-city-middle-forest-iii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Kerning_City_Middle_Forest_II
 verified:
   status: unverified

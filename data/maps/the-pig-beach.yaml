@@ -12,6 +12,9 @@ monsters:
   - pig
   - red-snail
   - ribbon-pig
+exits:
+  - to: 3-way-road-split
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Pig_Beach
 verified:
   status: unverified

@@ -13,6 +13,16 @@ monsters:
   - jr-necki
   - octopus
   - slime
+exits:
+  - to: deep-forest
+    kind: walking
+  - to: henesys-dungeon-entrance
+    kind: walking
+    direction: west
+  - to: hunting-ground-in-the-deep-forest-i
+    kind: walking
+  - to: sleepywood
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Swampy_Land_in_a_Deep_Forest
 verified:
   status: unverified

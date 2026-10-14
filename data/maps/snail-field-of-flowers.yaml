@@ -11,6 +11,10 @@ monsters:
   - orange-mushroom
   - red-snail
   - snail
+exits:
+  - to: amherst-townstreet
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Snail_Field_of_Flowers
 verified:
   status: unverified

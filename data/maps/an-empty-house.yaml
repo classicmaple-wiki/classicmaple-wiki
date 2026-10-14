@@ -5,6 +5,11 @@ town: Henesys
 kind: field
 monsters:
   - orange-mushroom
+exits:
+  - to: henesys
+    kind: walking
+  - to: pig-park
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/An_Empty_House
 verified:
   status: unverified

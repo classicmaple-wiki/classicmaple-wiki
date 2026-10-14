@@ -5,6 +5,9 @@ town: Kerning City
 kind: field
 monsters:
   - super-stirge
+exits:
+  - to: b3-area-2
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/B3_(Area_1)
 verified:
   status: unverified

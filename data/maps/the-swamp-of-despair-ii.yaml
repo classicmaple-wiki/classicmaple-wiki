@@ -11,6 +11,13 @@ monsters:
   - jr-necki
   - ligator
   - slime
+exits:
+  - to: the-swamp-of-despair-i
+    kind: walking
+    direction: west
+  - to: the-swamp-of-despair-iii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_II
 verified:
   status: unverified

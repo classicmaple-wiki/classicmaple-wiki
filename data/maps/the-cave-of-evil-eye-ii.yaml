@@ -9,6 +9,11 @@ recommended_level:
 monsters:
   - evil-eye
   - jr-boogie-2
+exits:
+  - to: the-cave-of-evil-eye-i
+    kind: walking
+  - to: the-cave-of-evil-eye-iii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Cave_of_Evil_Eye_II
 verified:
   status: unverified

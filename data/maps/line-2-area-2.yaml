@@ -7,6 +7,11 @@ monsters:
   - jr-necki
   - jr-wraith
   - wraith
+exits:
+  - to: line-2-area-1
+    kind: hidden
+  - to: line-2-area-3
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Line_2_(Area_2)
 verified:
   status: unverified

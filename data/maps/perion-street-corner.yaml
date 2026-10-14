@@ -9,6 +9,15 @@ monsters:
   - red-snail
   - snail
   - stump
+exits:
+  - to: east-rocky-mountain-i
+    kind: walking
+    direction: east
+  - to: land-of-wild-boar
+    kind: hidden
+  - to: perion
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Perion_Street_Corner
 verified:
   status: unverified

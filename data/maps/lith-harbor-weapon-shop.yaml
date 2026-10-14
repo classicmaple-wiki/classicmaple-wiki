@@ -3,6 +3,9 @@ name: Lith Harbor Weapon Shop
 region: Victoria Island
 town: Lith Harbor
 kind: town
+exits:
+  - to: lith-harbor
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Lith_Harbor_Weapon_Shop
 verified:
   status: unverified

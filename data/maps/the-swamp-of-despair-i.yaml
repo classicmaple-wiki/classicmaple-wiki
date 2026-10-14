@@ -11,6 +11,13 @@ monsters:
   - jr-necki
   - ligator
   - slime
+exits:
+  - to: kerning-city
+    kind: walking
+    direction: west
+  - to: the-swamp-of-despair-ii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_I
 verified:
   status: unverified

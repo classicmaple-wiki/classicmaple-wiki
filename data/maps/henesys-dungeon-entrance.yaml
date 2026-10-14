@@ -13,6 +13,14 @@ monsters:
   - lupin
   - slime
   - stone-golem
+exits:
+  - to: swampy-land-in-a-deep-forest
+    kind: walking
+  - to: the-breathing-rock
+    kind: hidden
+  - to: the-road-to-the-dungeon
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Henesys_Dungeon_Entrance
 verified:
   status: unverified

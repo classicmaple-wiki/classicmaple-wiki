@@ -7,6 +7,15 @@ monsters:
   - croco
   - jr-necki
   - slime
+exits:
+  - to: damp-tree-forest
+    kind: walking
+    direction: east
+  - to: dangerous-croko-i
+    kind: walking
+    direction: west
+  - to: monkey-swamp-i
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Dangerous_Croko_II
 verified:
   status: unverified

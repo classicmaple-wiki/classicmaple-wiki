@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Thief_Job_Instructor_(2nd_Job_Test)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Thief_Job_Instructor_(2nd_Job_Test)
+sprite:
+  file: npcs/thief-job-instructor-2nd-job-test.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1072003/render/stand/0
+  retrieved: 2026-10-14

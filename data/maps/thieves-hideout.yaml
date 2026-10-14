@@ -3,6 +3,9 @@ name: Thieves' Hideout
 region: Victoria Island
 town: Kerning City
 kind: town
+exits:
+  - to: kerning-city
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Thieves'_Hideout
 verified:
   status: unverified

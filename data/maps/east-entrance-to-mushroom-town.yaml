@@ -5,6 +5,13 @@ town: Mushroom Town (Nina)
 kind: hunting-ground
 monsters:
   - tutorial-jr-sentinel
+exits:
+  - to: mushroom-town-nina
+    kind: walking
+    direction: west
+  - to: snail-hunting-ground-i
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/East_Entrance_to_Mushroom_Town
 verified:
   status: unverified

@@ -1,0 +1,52 @@
+---
+/*
+   The index of places (spec 0009), so the Places step in every
+   breadcrumb leads somewhere. The six painted places come first, as on
+   the home shelf, each linking to its place page. Then the other towns,
+   such as Lith Harbor, as map cards, since they have no painted place of
+   their own yet.
+*/
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getCollection } from 'astro:content';
+import LibraryCard from '../../components/LibraryCard.astro';
+import PlaceShelf from '../../components/PlaceShelf.astro';
+import Window from '../../components/Window.astro';
+import { libraryCards } from '../../lib/library';
+import { placeForTown } from '../../lib/places';
+
+const otherTownIds = new Set(
+	(await getCollection('maps'))
+		.map((mapEntry) => mapEntry.data)
+		.filter((map) => map.kind === 'town' && !placeForTown(map.town ?? map.name))
+		.map((map) => map.id)
+);
+const otherTownCards = (await libraryCards()).filter((card) => card.type === 'map' && otherTownIds.has(card.identifier));
+---
+
+<StarlightPage
+	frontmatter={{
+		title: 'Places',
+		description: 'Every town and region in MapleStory Classic World, with their maps, monsters, NPCs, shops, and quests.',
+		subtitle: 'In the order a new player meets them.',
+	}}
+	headings={[
+		{ depth: 2, slug: 'places', text: 'Places' },
+		...(otherTownCards.length > 0 ? [{ depth: 2, slug: 'other-towns', text: 'Other towns' }] : []),
+	]}
+>
+	<Window title="Places" id="places">
+		<PlaceShelf />
+	</Window>
+
+	{
+		otherTownCards.length > 0 && (
+			<Window title="Other towns" id="other-towns">
+				<ol class="library-grid not-content">
+					{otherTownCards.map((card) => (
+						<LibraryCard card={card} />
+					))}
+				</ol>
+			</Window>
+		)
+	}
+</StarlightPage>

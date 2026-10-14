@@ -2,6 +2,29 @@ id: free-market-entrance
 name: Free Market Entrance
 region: Hidden Street
 kind: trading-hub
+exits:
+  - to: free-market-1
+    kind: walking
+  - to: free-market-10
+    kind: walking
+  - to: free-market-11
+    kind: walking
+  - to: free-market-2
+    kind: walking
+  - to: free-market-3
+    kind: walking
+  - to: free-market-4
+    kind: walking
+  - to: free-market-5
+    kind: walking
+  - to: free-market-6
+    kind: walking
+  - to: free-market-7
+    kind: walking
+  - to: free-market-8
+    kind: walking
+  - to: free-market-9
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Free_Market_Entrance
 verified:
   status: unverified

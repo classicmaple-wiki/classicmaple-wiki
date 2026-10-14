@@ -5,6 +5,9 @@ town: Henesys
 kind: field
 monsters:
   - super-ribbon-pig
+exits:
+  - to: the-forest-east-of-henesys
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Utah's_Pig_Farm
 verified:
   status: unverified

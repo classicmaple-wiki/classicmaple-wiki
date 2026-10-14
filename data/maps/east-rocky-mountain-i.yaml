@@ -8,6 +8,15 @@ monsters:
   - dark-stump
   - red-snail
   - stump
+exits:
+  - to: east-rocky-mountain-ii
+    kind: walking
+  - to: perion-street-corner
+    kind: walking
+    direction: west
+  - to: rocky-road-i
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_I
 verified:
   status: unverified

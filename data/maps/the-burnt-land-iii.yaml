@@ -9,6 +9,11 @@ recommended_level:
 monsters:
   - dark-axe-stump
   - fire-boar
+exits:
+  - to: the-burnt-land-ii
+    kind: walking
+  - to: the-burnt-land-iv
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Burnt_Land_III
 verified:
   status: unverified

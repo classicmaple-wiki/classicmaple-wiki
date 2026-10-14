@@ -10,6 +10,9 @@ monsters:
   - dark-axe-stump
   - fire-boar
   - lupin
+exits:
+  - to: the-burnt-land-iv
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Burnt_Land_V
 verified:
   status: unverified

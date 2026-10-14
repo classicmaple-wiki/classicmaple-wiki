@@ -10,6 +10,9 @@ monsters:
   - orange-mushroom
   - red-snail
   - shroom
+exits:
+  - to: a-hill-west-of-henesys
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Mushroom_Garden_(Victoria_Island)
 verified:
   status: unverified

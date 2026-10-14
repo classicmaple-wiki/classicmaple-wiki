@@ -10,6 +10,12 @@ monsters:
   - dark-stump
   - slime
   - stump
+exits:
+  - to: the-tree-that-grew-i
+    kind: hidden
+  - to: the-tree-that-grew-iii
+    kind: hidden
+    direction: up
 source_page: https://mapleclassic.wiki/wiki/The_Tree_That_Grew_II
 verified:
   status: unverified

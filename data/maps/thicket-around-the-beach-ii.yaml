@@ -11,6 +11,13 @@ monsters:
   - pig
   - slime
   - snail
+exits:
+  - to: thicket-around-the-beach-i
+    kind: walking
+    direction: west
+  - to: thicket-around-the-beach-iii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_II
 verified:
   status: unverified

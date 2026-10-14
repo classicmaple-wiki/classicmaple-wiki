@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Nella_(KPQ_1st_Stage)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Nella_(KPQ_1st_Stage)
+sprite:
+  file: npcs/nella-kpq-1st-stage.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1052103/render/stand/0
+  retrieved: 2026-10-14

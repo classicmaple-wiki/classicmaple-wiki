@@ -9,7 +9,8 @@
    fitted inside 64 pixels, which fits the slot on every screen. Its
    width and height come from the PNG header at build time, so the grid
    never shifts while sprites load. An entry without a sprite shows its
-   type glyph instead, never a guess.
+   type glyph instead, never a guess. A map has no sprite, so its slot
+   shows a small crop of its town's painted scene (spec 0009).
 
    The whole card is one link. Its data attributes let the library's
    filter hide it by type or by name without touching the markup.
@@ -18,6 +19,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import Icon from './Icon.astro';
 import { libraryTypes, type LibraryCard } from '../lib/library';
 import VerifiedBadge from './VerifiedBadge.astro';
+import Scene from './scenes/Scene.astro';
 
 interface Props {
 	card: LibraryCard;
@@ -53,7 +55,8 @@ const sprite = spriteDisplay(card.spriteFile);
 <li class="library-card" data-type={card.type} data-name={card.name.toLowerCase()}>
 	<a class="library-card__link" href={card.href}>
 		<span class="chip library-card__type">{typeInfo.label}</span>
-		<span class="library-card__slot">
+		<span class:list={['library-card__slot', { 'library-card__slot--scene': !sprite && card.scene }]}>
+			{!sprite && card.scene && <Scene scene={card.scene} variant="card" />}
 			{
 				sprite ? (
 					<img
@@ -65,7 +68,7 @@ const sprite = spriteDisplay(card.spriteFile);
 						loading="lazy"
 						decoding="async"
 					/>
-				) : (
+				) : card.scene ? null : (
 					<Icon name={typeInfo.glyph} size={36} strokeWidth={1.6} class="library-card__glyph" />
 				)
 			}
@@ -73,5 +76,5 @@ const sprite = spriteDisplay(card.spriteFile);
 		<span class="library-card__name">{card.name}</span>
 		<span class="library-card__fact">{card.fact}</span>
 	</a>
-	<span class="library-card__status"><VerifiedBadge verified={card.verified} /></span>
+	<span class="library-card__status"><VerifiedBadge verified={card.verified} compact /></span>
 </li>

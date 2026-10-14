@@ -11,6 +11,9 @@
    the first standing frame of a monster or NPC, or an item's icon. Never
    an animation, a character render, or a composite.
 
+   When the full name has no match, it tries once more without a trailing
+   note in brackets, so "Regular Cab (Henesys)" finds the Regular Cab.
+
    A sprite is kept only if it is a PNG of at most 192 by 192 pixels and
    40 KB, the limits npm run validate enforces. Anything larger, and any
    name with no match, is listed in the summary and left without a sprite
@@ -133,7 +136,10 @@ async function main(): Promise<void> {
 				continue;
 			}
 			const name = String(record.name);
-			const gameId = await findGameId(collection.searchPath, name);
+			const shortName = name.replace(/\s*\([^)]*\)\s*$/, '');
+			const gameId =
+				(await findGameId(collection.searchPath, name)) ??
+				(shortName !== name ? await findGameId(collection.searchPath, shortName) : undefined);
 			if (gameId === undefined) {
 				count('no exact name match');
 				leftForPeople.push(`${collection.name}/${record.id}: no match for "${name}"`);

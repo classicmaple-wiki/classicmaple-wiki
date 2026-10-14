@@ -3,6 +3,9 @@ name: The Tree Tunnel At the Forest Up North
 region: Victoria Island
 town: Ellinia
 kind: dungeon
+exits:
+  - to: the-forest-north-of-ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Tree_Tunnel_At_the_Forest_Up_North
 verified:
   status: unverified

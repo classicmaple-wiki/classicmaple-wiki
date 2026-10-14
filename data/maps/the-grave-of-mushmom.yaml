@@ -9,6 +9,9 @@ monsters:
   - jr-boogie-2
   - zombie-mushmom
   - zombie-mushroom
+exits:
+  - to: ant-tunnel-park
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Grave_of_Mushmom
 verified:
   status: unverified

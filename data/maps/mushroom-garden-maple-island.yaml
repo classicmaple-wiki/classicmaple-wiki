@@ -10,6 +10,9 @@ monsters:
   - orange-mushroom
   - shroom
   - snail
+exits:
+  - to: the-field-west-of-amherst
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Mushroom_Garden_(Maple_Island)
 verified:
   status: unverified

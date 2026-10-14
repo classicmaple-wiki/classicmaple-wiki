@@ -7,6 +7,11 @@ monsters:
   - jr-wraith
   - stirge
   - wraith
+exits:
+  - to: line-1-area-2
+    kind: walking
+  - to: line-1-area-4
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Line_1_(Area_3)
 verified:
   status: unverified

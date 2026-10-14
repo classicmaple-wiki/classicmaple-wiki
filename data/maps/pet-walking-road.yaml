@@ -3,6 +3,9 @@ name: Pet-Walking Road
 region: Victoria Island
 town: Henesys
 kind: town
+exits:
+  - to: henesys-park
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Pet-Walking_Road
 verified:
   status: unverified

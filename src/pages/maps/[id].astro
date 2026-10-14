@@ -8,7 +8,10 @@
    The Map window lists the kind of map, its town, linked to the place
    page when the town has one, the region, and the recommended levels.
    Then what is there (spec 0007): the monsters and NPCs as inventory
-   cards with their sprites, and the shops. Missing values read Unknown,
+   cards with their sprites, and the shops. Then the way around (spec
+   0009): the maps its portals lead to, and the maps that lead here, as
+   cards with their town's painted scene, so a reader can walk the world
+   from page to page. Hidden portals are marked. Missing values read Unknown,
    and when every value is Unknown one invitation replaces the per row
    links. Notes and the history follow. Every value comes from
    the map's data file.
@@ -23,7 +26,7 @@ import SourceCredit from '../../components/SourceCredit.astro';
 import StatRows from '../../components/StatRows.astro';
 import LibraryCard from '../../components/LibraryCard.astro';
 import Window from '../../components/Window.astro';
-import { libraryCards } from '../../lib/library';
+import { libraryCards, mapKindLabels } from '../../lib/library';
 import { placeForTown } from '../../lib/places';
 import { resolveMapScene } from '../../lib/scenes';
 
@@ -48,23 +51,24 @@ const shopsHere = (await getCollection('shops'))
 	.map((shopEntry) => shopEntry.data)
 	.filter((shop) => shop.map === map.id || (shop.npc !== undefined && npcIdsHere.has(shop.npc)))
 	.sort((first, second) => first.name.localeCompare(second.name));
+const allMaps = (await getCollection('maps')).map((mapEntry) => mapEntry.data);
+const exitTargets = new Set(map.exits.map((exit) => exit.to));
+const hiddenExits = new Set(map.exits.filter((exit) => exit.kind === 'hidden').map((exit) => exit.to));
+const exitCards = allCards
+	.filter((card) => card.type === 'map' && exitTargets.has(card.identifier))
+	.map((card) => (hiddenExits.has(card.identifier) ? { ...card, fact: `Hidden portal. ${card.fact}` } : card));
+const entranceIds = new Set(
+	allMaps.filter((other) => other.id !== map.id && other.exits.some((exit) => exit.to === map.id) && !exitTargets.has(other.id)).map((other) => other.id)
+);
+const entranceCards = allCards.filter((card) => card.type === 'map' && entranceIds.has(card.identifier));
 const townName = map.town ?? (map.kind === 'town' ? map.name : undefined);
 const townPlace = placeForTown(townName);
-const kindLabels: Record<string, string> = {
-	town: 'Town',
-	field: 'Field',
-	dungeon: 'Dungeon',
-	'hunting-ground': 'Hunting ground',
-	'trading-hub': 'Trading hub',
-	'town-interior': 'Inside a town',
-	'hidden-street': 'Hidden street',
-};
 
 const placeLine = [townName && townName !== map.name ? `Near ${townName}` : undefined, map.region].filter(Boolean).join(', ');
 const subtitle = placeLine ? `${placeLine}.` : 'Region unknown. Add it if you have been there.';
 
 const statisticRows = [
-	{ label: 'Kind', value: map.kind ? kindLabels[map.kind] : undefined },
+	{ label: 'Kind', value: map.kind ? mapKindLabels[map.kind] : undefined },
 	{ label: 'Town', value: townName, href: townPlace ? `/places/${townPlace}/` : undefined },
 	{ label: 'Region', value: map.region },
 	{
@@ -75,6 +79,8 @@ const statisticRows = [
 
 const headings = [
 	{ depth: 2, slug: 'stats', text: 'Map' },
+	...(exitCards.length > 0 ? [{ depth: 2, slug: 'exits', text: 'Exits' }] : []),
+	...(entranceCards.length > 0 ? [{ depth: 2, slug: 'ways-in', text: 'Ways in' }] : []),
 	...(monsterCards.length > 0 ? [{ depth: 2, slug: 'monsters', text: 'Monsters' }] : []),
 	...(npcCards.length > 0 ? [{ depth: 2, slug: 'npcs', text: 'NPCs' }] : []),
 	...(shopsHere.length > 0 ? [{ depth: 2, slug: 'shops', text: 'Shops' }] : []),
@@ -98,6 +104,32 @@ const headings = [
 		<StatRows rows={statisticRows} editUrl={editUrl} subject="this map" />
 		{map.verified.build === 'cot2' && <p class="window__note">These numbers were seen in the closed beta. They may differ at launch.</p>}
 	</Window>
+
+	{
+		exitCards.length > 0 && (
+			<Window title="Exits" id="exits">
+				<p class="window__note">Where the portals here lead.</p>
+				<ol class="library-grid not-content">
+					{exitCards.map((card) => (
+						<LibraryCard card={card} />
+					))}
+				</ol>
+			</Window>
+		)
+	}
+
+	{
+		entranceCards.length > 0 && (
+			<Window title="Ways in" id="ways-in">
+				<p class="window__note">Maps with a portal to here that this map does not lead back to.</p>
+				<ol class="library-grid not-content">
+					{entranceCards.map((card) => (
+						<LibraryCard card={card} />
+					))}
+				</ol>
+			</Window>
+		)
+	}
 
 	{
 		monsterCards.length > 0 && (

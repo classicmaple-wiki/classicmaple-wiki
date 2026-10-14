@@ -13,6 +13,13 @@ monsters:
   - red-snail
   - snail
   - stump
+exits:
+  - to: 3-way-road-split
+    kind: walking
+    direction: east
+  - to: thicket-around-the-beach-ii
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_III
 verified:
   status: unverified

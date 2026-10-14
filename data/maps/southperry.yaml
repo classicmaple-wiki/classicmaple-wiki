@@ -3,6 +3,15 @@ name: Southperry
 region: Maple Island
 town: Southperry
 kind: town
+exits:
+  - to: a-split-road
+    kind: walking
+    direction: west
+  - to: lith-harbor
+    kind: transport
+  - to: southperry-armor-store
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Southperry
 verified:
   status: unverified

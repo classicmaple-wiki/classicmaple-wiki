@@ -3,6 +3,12 @@ name: Amherst Townstreet
 region: Maple Island
 town: Amherst
 kind: town
+exits:
+  - to: amherst
+    kind: walking
+  - to: snail-field-of-flowers
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Amherst_Townstreet
 verified:
   status: unverified

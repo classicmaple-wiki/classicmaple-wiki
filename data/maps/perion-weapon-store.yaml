@@ -3,6 +3,9 @@ name: Perion Weapon Store
 region: Victoria Island
 town: Perion
 kind: town
+exits:
+  - to: perion
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Perion_Weapon_Store
 verified:
   status: unverified

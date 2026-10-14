@@ -12,6 +12,10 @@ Everything from 2026-10-14 is merged and live on classicmaple.wiki:
 - **Guides:** drafts from official sources. Everything is `unverified`.
 - **Live Lighthouse mobile:** home 99, monster page 99, Henesys 100, library 92. Accessibility is 100 everywhere.
 
+## Latest
+
+Pull request for spec 0009, easier navigation: map pictures from town scenes, map exits, cards for quest NPCs, shop stock, and NPC links, geographic breadcrumbs, and Places, Classes, and Economy index pages.
+
 ## Next step
 
 1. **Library speed:** it scores 92, under the 95 target. Page or lazy-render the grid; it has 18,000+ elements.

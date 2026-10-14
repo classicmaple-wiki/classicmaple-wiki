@@ -11,6 +11,9 @@ monsters:
   - dark-axe-stump
   - dark-stump
   - stump
+exits:
+  - to: land-of-wild-boar
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Over_the_Wall
 verified:
   status: unverified

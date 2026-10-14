@@ -10,6 +10,9 @@ monsters:
   - blue-mushroom
   - octopus
   - orange-mushroom
+exits:
+  - to: construction-site-north-of-kerning-city
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Northern_Top_of_Construction_Site
 verified:
   status: unverified

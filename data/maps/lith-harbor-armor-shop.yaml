@@ -3,6 +3,9 @@ name: Lith Harbor Armor Shop
 region: Victoria Island
 town: Lith Harbor
 kind: town
+exits:
+  - to: lith-harbor
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Lith_Harbor_Armor_Shop
 verified:
   status: unverified

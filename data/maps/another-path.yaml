@@ -8,6 +8,13 @@ recommended_level:
   - 40
 monsters:
   - cold-eye
+exits:
+  - to: another-entrance
+    kind: walking
+    direction: west
+  - to: sanctuary-entrance-i
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Another_Path
 verified:
   status: unverified

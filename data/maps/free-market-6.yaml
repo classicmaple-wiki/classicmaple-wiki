@@ -2,6 +2,10 @@ id: free-market-6
 name: Free Market (6)
 region: Hidden Street
 kind: trading-hub
+exits:
+  - to: free-market-entrance
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Free_Market_(6)
 verified:
   status: unverified

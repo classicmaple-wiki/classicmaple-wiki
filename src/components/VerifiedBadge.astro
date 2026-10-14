@@ -4,7 +4,8 @@
    or unverified, plus the build it was seen in. It never links out of the
    wiki: sources live in one place on each page, the Sources notes or the
    Source block at the bottom. A page may pass href to point the badge at
-   that block, such as "#source".
+   that block, such as "#source". On small cards, compact leaves out the
+   build so the chip stays on one line.
 
    Drawn as a small rounded pill (spec 0006) in the badge colors from the
    tokens, with a line icon before the word: a check for official, an eye
@@ -19,9 +20,10 @@ import Icon from './Icon.astro';
 interface Props {
 	verified: Verification;
 	href?: string;
+	compact?: boolean;
 }
 
-const { verified, href } = Astro.props;
+const { verified, href, compact = false } = Astro.props;
 
 const labels = {
 	official: 'Official',
@@ -38,7 +40,7 @@ const variants = {
 const icons = { official: 'check', 'in-game': 'eye', unverified: 'question' } as const;
 
 const buildName = verified.build ? ((await getEntry('builds', verified.build))?.data.name ?? verified.build) : undefined;
-const text = buildName ? `${labels[verified.status]} · ${buildName}` : labels[verified.status];
+const text = buildName && !compact ? `${labels[verified.status]} · ${buildName}` : labels[verified.status];
 const chipClass = `chip ${variants[verified.status]}`;
 ---
 

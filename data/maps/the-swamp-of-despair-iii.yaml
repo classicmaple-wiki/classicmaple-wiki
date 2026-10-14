@@ -10,6 +10,13 @@ monsters:
   - jr-necki
   - ligator
   - slime
+exits:
+  - to: dangerous-croko-i
+    kind: walking
+    direction: east
+  - to: the-swamp-of-despair-ii
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_III
 verified:
   status: unverified

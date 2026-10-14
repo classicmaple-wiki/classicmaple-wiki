@@ -3,6 +3,9 @@ name: Henesys Townstreet
 region: Victoria Island
 town: Henesys
 kind: town
+exits:
+  - to: henesys
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Henesys_Townstreet
 verified:
   status: unverified

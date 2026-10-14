@@ -16,6 +16,13 @@ monsters:
   - slime
   - snail
   - stump
+exits:
+  - to: l-forest-i
+    kind: walking
+    direction: west
+  - to: l-forest-iii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/L_Forest_II
 verified:
   status: unverified

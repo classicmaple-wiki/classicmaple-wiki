@@ -10,6 +10,13 @@ monsters:
   - horny-mushroom
   - stirge
   - zombie-mushroom
+exits:
+  - to: ant-tunnel-iv
+    kind: walking
+    direction: west
+  - to: dangerous-steam
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Dark_Cave
 verified:
   status: unverified

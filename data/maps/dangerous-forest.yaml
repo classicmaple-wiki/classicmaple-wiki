@@ -11,6 +11,9 @@ monsters:
   - orange-mushroom
   - red-snail
   - snail
+exits:
+  - to: the-field-west-of-amherst
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Dangerous_Forest
 verified:
   status: unverified

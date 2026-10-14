@@ -3,6 +3,9 @@ name: Kerning City Hair Salon
 region: Victoria Island
 town: Kerning City
 kind: town
+exits:
+  - to: kerning-city
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Kerning_City_Hair_Salon
 verified:
   status: unverified

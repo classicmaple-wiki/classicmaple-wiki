@@ -9,6 +9,11 @@ recommended_level:
 monsters:
   - malady
   - zombie-lupin
+exits:
+  - to: monkey-forest-ii
+    kind: walking
+  - to: the-forest-of-evil-ii
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/The_Forest_of_Evil_I
 verified:
   status: unverified

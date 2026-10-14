@@ -3,6 +3,15 @@ name: Henesys Park
 region: Victoria Island
 town: Henesys
 kind: town
+exits:
+  - to: bowman-instructional-school
+    kind: walking
+  - to: henesys
+    kind: walking
+  - to: henesys-market
+    kind: walking
+  - to: pet-walking-road
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Henesys_Park
 verified:
   status: unverified

@@ -7,6 +7,16 @@ monsters:
   - blue-snail
   - red-snail
   - shroom
+exits:
+  - to: snail-hunting-ground-ii
+    kind: walking
+  - to: snail-hunting-ground-iii
+    kind: walking
+    direction: west
+  - to: southperry
+    kind: walking
+  - to: the-field-west-of-amherst
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/A_Split_Road
 verified:
   status: unverified

@@ -8,6 +8,13 @@ monsters:
   - jr-necki
   - ligator
   - slime
+exits:
+  - to: dangerous-croko-ii
+    kind: walking
+    direction: east
+  - to: the-swamp-of-despair-iii
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Dangerous_Croko_I
 verified:
   status: unverified

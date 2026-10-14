@@ -8,6 +8,9 @@ monsters:
   - fairy-4
   - lupin
   - stone-golem
+exits:
+  - to: the-entrance-of-golems-temple
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Golem's_Temple_III
 verified:
   status: unverified

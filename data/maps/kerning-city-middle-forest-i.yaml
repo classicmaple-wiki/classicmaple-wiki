@@ -11,6 +11,15 @@ monsters:
   - ribbon-pig
   - shroom
   - slime
+exits:
+  - to: 3-way-road-split
+    kind: walking
+    direction: east
+  - to: kerning-city-middle-forest-ii
+    kind: walking
+  - to: l-forest-iii
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Kerning_City_Middle_Forest_I
 verified:
   status: unverified

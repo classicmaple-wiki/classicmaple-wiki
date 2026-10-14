@@ -8,6 +8,13 @@ recommended_level:
   - 20
 monsters:
   - stirge
+exits:
+  - to: line-1-area-1
+    kind: walking
+  - to: line-1-area-2
+    kind: hidden
+  - to: line-2-area-1
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Transfer_Area
 verified:
   status: unverified

@@ -10,6 +10,11 @@ monsters:
   - axe-stump
   - red-snail
   - stump
+exits:
+  - to: east-rocky-mountain-i
+    kind: walking
+  - to: east-rocky-mountain-iii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_II
 verified:
   status: unverified

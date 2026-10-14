@@ -73,6 +73,7 @@ export default defineConfig({
 				{
 					label: 'Places',
 					items: [
+						{ label: 'All places', link: '/places/' },
 						{ label: 'Maple Island', link: '/places/maple-island/' },
 						{ label: 'Henesys', link: '/places/henesys/' },
 						{ label: 'Ellinia', link: '/places/ellinia/' },

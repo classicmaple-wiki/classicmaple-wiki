@@ -10,6 +10,10 @@ monsters:
   - dark-stump
   - green-mushroom
   - stump
+exits:
+  - to: the-tree-that-grew-ii
+    kind: hidden
+    direction: down
 source_page: https://mapleclassic.wiki/wiki/The_Tree_That_Grew_III
 verified:
   status: unverified

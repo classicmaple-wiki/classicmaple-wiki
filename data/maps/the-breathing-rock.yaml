@@ -11,6 +11,11 @@ monsters:
   - fairy-4
   - lupin
   - stone-golem
+exits:
+  - to: henesys-dungeon-entrance
+    kind: walking
+  - to: the-entrance-of-golems-temple
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/The_Breathing_Rock
 verified:
   status: unverified

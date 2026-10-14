@@ -2,6 +2,9 @@ id: free-market-9
 name: Free Market (9)
 region: Hidden Street
 kind: trading-hub
+exits:
+  - to: free-market-entrance
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Free_Market_(9)
 verified:
   status: unverified

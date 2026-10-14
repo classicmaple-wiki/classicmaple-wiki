@@ -10,6 +10,13 @@ monsters:
   - blue-snail
   - red-snail
   - slime
+exits:
+  - to: lith-harbor
+    kind: walking
+    direction: west
+  - to: thicket-around-the-beach-i
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Right_Around_Lith_Harbor
 verified:
   status: unverified
