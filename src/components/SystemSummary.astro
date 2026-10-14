@@ -1,10 +1,21 @@
 ---
 /*
    A short fact box for one game system, read from data/systems/.
+
+   The facts sit in a window as stat rows, which stack label over value on
+   a phone. The status chip lives in the window footer, since a chip is
+   not a stat. When every fact is missing, one invitation points at the
+   system's file on GitHub.
+
+   On a guide, the page can pass a markdown heading in the title slot,
+   so the window shows up in the table of contents. The heading's text
+   must match the window's id.
 */
 import { getEntry } from 'astro:content';
-import { formatStatistic } from '../lib/data';
+import { editBaseUrl } from '../../site.config.mjs';
+import StatRows from './StatRows.astro';
 import VerifiedBadge from './VerifiedBadge.astro';
+import Window from './Window.astro';
 
 interface Props {
 	systemId: string;
@@ -15,21 +26,21 @@ const systemEntry = await getEntry('systems', systemId);
 if (!systemEntry) throw new Error(`SystemSummary: no system "${systemId}" in data/systems/`);
 
 const system = systemEntry.data;
+const systemFileUrl = `${editBaseUrl}data/systems/${systemId}.yaml`;
 ---
 
-<table>
-	<tbody>
-		<tr>
-			<th scope="row">Unlocks at level</th>
-			<td>{formatStatistic(system.required_level)}</td>
-		</tr>
-		<tr>
-			<th scope="row">Summary</th>
-			<td>{system.summary ?? 'Needs details'}</td>
-		</tr>
-		<tr>
-			<th scope="row">Status</th>
-			<td><VerifiedBadge verified={system.verified} /></td>
-		</tr>
-	</tbody>
-</table>
+<Window title="At a glance" id="at-a-glance">
+	{Astro.slots.has('title') && <slot name="title" slot="title" />}
+	<StatRows
+		rows={[
+			{ label: 'Unlocks at level', value: system.required_level },
+			{ label: 'Summary', value: system.summary },
+		]}
+		editUrl={systemFileUrl}
+		subject="this system"
+	/>
+	<p class="window__status" slot="footer">
+		<span class="window__status-label">Status</span>
+		<VerifiedBadge verified={system.verified} />
+	</p>
+</Window>

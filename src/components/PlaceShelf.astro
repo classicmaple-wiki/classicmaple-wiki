@@ -1,0 +1,69 @@
+---
+/*
+   The shelf of places on the home page: one card for each launch scene,
+   in the order a new player meets them. Each card shows its scene in the
+   scene's own default mood, then a label strip with the place name and
+   its moment, under a stripe in that mood's rule color.
+
+   The card carries data-mood, so its art and stripe take that mood while
+   the rest of the page keeps its own. The art frame has a fixed two to
+   one shape and the scene fills it exactly, so the whole picture shows
+   and nothing shifts as the page loads.
+
+   Only places with a painted picture get a card (decision 0007), so the
+   shelf never shows blank tiles next to painted ones. The rest are named
+   in one muted line under the shelf, in the same order, and get their
+   card the moment their picture lands. A card is a link only when a page
+   for that place exists. The others say so in muted text instead of
+   pointing nowhere. Styles live in
+   pages.css. The list opts out of Starlight's markdown styles.
+*/
+import type { SceneIdentifier } from '../../schemas/shared';
+import { sceneAspectRatio } from '../lib/sceneArt';
+import { placeOrder, scenes } from '../lib/scenes';
+import Scene from './scenes/Scene.astro';
+
+const placePages: Partial<Record<SceneIdentifier, string>> = {
+	henesys: '/economy/crafting/',
+	'kerning-city': '/classes/thief/',
+};
+
+const places = placeOrder.map((identifier) => ({
+	...scenes[identifier],
+	href: placePages[identifier],
+	isPainted: sceneAspectRatio(identifier) !== undefined,
+}));
+const paintedPlaces = places.filter((place) => place.isPainted);
+const unpaintedPlaces = places.filter((place) => !place.isPainted);
+---
+
+<ol class="place-shelf not-content">
+	{
+		paintedPlaces.map((place) => {
+			const CardTag = place.href ? 'a' : 'div';
+			return (
+				<li class="place-shelf__item">
+					<CardTag
+						class:list={['place-shelf__card', { 'place-shelf__card--link': place.href }]}
+						href={place.href}
+						data-mood={place.defaultMood}
+					>
+						<span class="place-shelf__art">
+							<Scene scene={place.identifier} variant="card" />
+						</span>
+						<span class="place-shelf__label">
+							<span class="place-shelf__name">{place.label}</span>
+							<span class="place-shelf__moment">{place.moment}</span>
+							{!place.href && <span class="place-shelf__status">No pages yet</span>}
+						</span>
+					</CardTag>
+				</li>
+			);
+		})
+	}
+</ol>
+{
+	unpaintedPlaces.length > 0 && (
+		<p class="place-shelf__waiting">Still being painted: {unpaintedPlaces.map((place) => place.label).join(', ')}.</p>
+	)
+}

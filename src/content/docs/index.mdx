@@ -13,31 +13,39 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import Window from '../../components/Window.astro';
+import TaskGrid from '../../components/TaskGrid.astro';
+import PlaceShelf from '../../components/PlaceShelf.astro';
+import VerifiedBadge from '../../components/VerifiedBadge.astro';
 
-<CardGrid>
-	<LinkCard title="Classes" description="What changed for each class, skill by skill." href="/classes/warrior/" />
-	<LinkCard title="Leveling" description="Party routes, tested and labeled by build." href="/leveling/" />
-	<LinkCard title="Crafting and Citizenship" description="The new systems, explained." href="/economy/crafting/" />
-	<LinkCard title="Monsters" description="HP, EXP, and weaknesses in one table." href="/monsters/" />
-</CardGrid>
+<Window title="Find something" id="find-something">
+	<TaskGrid />
+</Window>
 
-## How to read this wiki
+<Window title="Places" id="places">
+	<p class="home-lead">In the order a new player meets them.</p>
+	<PlaceShelf />
+</Window>
 
-<CardGrid>
-	<Card title="Official" icon="approve-check">
-		Taken from official patch notes or posts. The badge links to the source.
-	</Card>
-	<Card title="Confirmed in game" icon="seti:image">
-		Seen in the live game by a player, with a screenshot.
-	</Card>
-	<Card title="Unverified" icon="warning">
-		Reported but not yet confirmed. Treat it as a lead, not a fact.
-	</Card>
-	<Card title="What changed" icon="list-format">
-		When a value moves between builds, the old one is kept. See [What changed](/changes/).
-	</Card>
-</CardGrid>
+<Window title="How to read this wiki" id="how-to-read">
+	<ul class="status-key not-content">
+		<li class="status-key__row">
+			<span class="status-key__badge"><VerifiedBadge verified={{ status: 'official' }} /></span>
+			<span>Taken from official patch notes or posts. The badge links to the source.</span>
+		</li>
+		<li class="status-key__row">
+			<span class="status-key__badge"><VerifiedBadge verified={{ status: 'in-game' }} /></span>
+			<span>Seen in the live game by a player, with a screenshot.</span>
+		</li>
+		<li class="status-key__row">
+			<span class="status-key__badge"><VerifiedBadge verified={{ status: 'unverified' }} /></span>
+			<span>Reported but not yet confirmed. Treat it as a lead, not a fact.</span>
+		</li>
+		<li class="status-key__row">
+			<span class="status-key__badge"><span class="chip">What changed</span></span>
+			<span>When a value moves between builds, the old one is kept. See <a href="/changes/">What changed</a>.</span>
+		</li>
+	</ul>
+</Window>
 
-Most pages are marked unverified right now. That is on purpose. If you are playing, you can fix that in a few
-minutes: see [How to contribute](/contributing/).
+<p class="home-closing">Most pages are marked unverified right now. That is on purpose. If you are playing, you can fix that in a few minutes: see <a href="/contributing/">How to contribute</a>.</p>

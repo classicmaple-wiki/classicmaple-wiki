@@ -1,0 +1,164 @@
+---
+/*
+   The home page hero from spec 0002, overriding Starlight's Hero. The mix
+   the owner picked: a tall pixel scene from direction B, then the calm
+   centered panel from direction A, overlapping the scene's bottom edge so
+   no text ever sits on the art.
+
+   The band carries data-mood, so tokens.css hands the midday rule to every
+   window stripe on the page without any script. The panel holds the
+   wordmark as the page's h1, with Starlight's title id so the skip link
+   still lands on it, then the tagline from the page frontmatter, a large
+   search button, and the build line.
+
+   The search button looks like a search field. It is a plain link to the
+   monster table, so it still goes somewhere useful with JavaScript off.
+   With JavaScript on, it becomes a button that opens Starlight's own
+   search dialog through the header search button.
+
+   The build line is worked out when the site is built: the newest build
+   that has started by that day, then the Grand Launch date, unless that
+   newest build is Grand Launch itself. Both come
+   from data/builds.yaml, so nothing here is typed by hand. Any hero
+   actions in the frontmatter render below as old client buttons. The
+   home page centers on search (the owner's direction, 2026-10-13). The
+   painted picture fills the whole hero as a background, under a soft
+   veil, parchment by day and indigo by night, so it sets the mood without
+   competing. On top, centered, the wordmark hangs as a wooden sign, and
+   below it a solid parchment card holds the tagline, a large search
+   field, the build line, and the actions. Every word sits on the sign or
+   the card, never on the picture. Nunito is preloaded from
+   astro.config.mjs, so the sign does not reflow when the font arrives.    Styles live in pages.css.
+*/
+import { getCollection } from 'astro:content';
+import { Icon } from '@astrojs/starlight/components';
+import DraftContentNotice from '@astrojs/starlight/components/DraftContentNotice.astro';
+import Leaf from '../assets/leaf.svg';
+import Scene from './scenes/Scene.astro';
+
+const pageTitleIdentifier = '_top';
+const grandLaunchName = 'Grand Launch';
+const { data } = Astro.locals.starlightRoute.entry;
+const { title = data.title, tagline, actions = [] } = data.hero ?? {};
+const titleWords = title.trim().split(/\s+/);
+const lastTitleWord = titleWords.pop();
+const leadingTitleWords = titleWords.join(' ');
+
+/*
+   Compares calendar days, not moments, so a build that goes live today
+   counts as started no matter what hour the site is built.
+*/
+function calendarDay(date: Date): string {
+	return date.toISOString().slice(0, 10);
+}
+
+const today = calendarDay(new Date());
+const buildsNewestFirst = (await getCollection('builds'))
+	.map((buildEntry) => buildEntry.data)
+	.sort((first, second) => second.date.getTime() - first.date.getTime());
+const newestStartedBuild = buildsNewestFirst.find((build) => calendarDay(build.date) <= today);
+const grandLaunch = buildsNewestFirst.find((build) => build.name === grandLaunchName);
+const isTrackingGrandLaunch = newestStartedBuild !== undefined && newestStartedBuild.id === grandLaunch?.id;
+const trackingSentence = newestStartedBuild ? `Tracking ${newestStartedBuild.name}.` : undefined;
+const launchDay = grandLaunch && !isTrackingGrandLaunch ? calendarDay(grandLaunch.date) : undefined;
+const launchVerb = launchDay !== undefined && launchDay <= today ? 'was' : 'is';
+---
+
+<div class="home-hero">
+	<div class="scene-band home-hero__band" data-mood="midday" data-scene="henesys">
+		<Scene scene="henesys" variant="home" />
+		<span class="home-hero__veil" aria-hidden="true"></span>
+		<div class="home-hero__stage">
+			<h1 class="home-hero__wordmark" id={pageTitleIdentifier} data-page-title>
+				<Leaf class="home-hero__leaf" width={48} height={48} aria-hidden="true" focusable="false" />
+				<span class="home-hero__name">
+					{leadingTitleWords && `${leadingTitleWords} `}<span class="home-hero__name-end">{lastTitleWord}</span>
+				</span>
+			</h1>
+			<div class="home-hero__card">
+				{data.draft && <DraftContentNotice />}
+				{tagline && <p class="home-hero__tagline" set:html={tagline} />}
+				<a class="home-hero__search" href="/monsters/" data-home-search>
+					<svg
+						class="home-hero__search-glyph"
+						width="20"
+						height="20"
+						viewBox="0 0 10 10"
+						shape-rendering="crispEdges"
+						aria-hidden="true"
+						focusable="false"
+					>
+						<path
+							d="M1 0h4v1h-4zM0 1h1v1h-1zM5 1h1v1h-1zM0 2h1v1h-1zM5 2h1v1h-1zM0 3h1v1h-1zM5 3h1v1h-1zM0 4h1v1h-1zM5 4h1v1h-1zM1 5h4v1h-4zM5 6h2v1h-2zM6 7h2v1h-2zM7 8h2v1h-2zM8 9h2v1h-2z"
+						></path>
+					</svg>
+					<span class="home-hero__search-text">Search the wiki</span>
+				</a>
+				{
+					(trackingSentence || launchDay) && (
+						<p class="home-hero__build-line">
+							<span class="chip">Build</span>
+							<span>
+								{trackingSentence}
+								{trackingSentence && launchDay && ' '}
+								{launchDay && (
+									<>
+										{grandLaunchName} {launchVerb} <time datetime={launchDay}>{launchDay}</time>.
+									</>
+								)}
+							</span>
+						</p>
+					)
+				}
+				{
+					actions.length > 0 && (
+						<div class="home-hero__actions">
+							{actions.map(({ attrs: { class: className, ...attributes } = {}, icon, link, text, variant }) => (
+								<a
+									class:list={['client-button', 'home-hero__action', `home-hero__action--${variant}`, className]}
+									href={link}
+									{...attributes}
+								>
+									<span>{text}</span>
+									{icon?.type === 'icon' && <Icon name={icon.name} size="1.125rem" />}
+									{icon?.type === 'raw' && <Fragment set:html={icon.html} />}
+								</a>
+							))}
+						</div>
+					)
+				}
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	/*
+	   Turns the hero search link into a button that opens Starlight's
+	   search dialog. It clicks the header search button, so the dialog,
+	   its focus handling, and the keyboard shortcut stay Starlight's own.
+	   The click stops here, because the dialog closes on any outside click
+	   that reaches the window. If the header button is not ready yet, the
+	   link simply goes to the monster table.
+	*/
+	function connectHomeSearch(): void {
+		const trigger = document.querySelector<HTMLAnchorElement>('[data-home-search]');
+		const headerSearchButton = document.querySelector<HTMLButtonElement>('site-search button[data-open-modal]');
+		if (!trigger || !headerSearchButton) return;
+		trigger.setAttribute('role', 'button');
+		trigger.setAttribute('aria-haspopup', 'dialog');
+		trigger.addEventListener('click', (event) => {
+			if (headerSearchButton.disabled) return;
+			event.preventDefault();
+			event.stopPropagation();
+			headerSearchButton.click();
+		});
+		trigger.addEventListener('keydown', (event) => {
+			if (event.key !== ' ') return;
+			event.preventDefault();
+			trigger.click();
+		});
+	}
+
+	connectHomeSearch();
+</script>

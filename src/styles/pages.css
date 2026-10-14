@@ -1,0 +1,905 @@
+/*
+   Page level layout for spec 0002: how the pieces sit on a page, not how
+   each piece looks inside. Windows, chips, and tables live in window.css,
+   scene fills in scenes.css, and every color here is a token.
+
+   The look is the mix the owner picked. Outside windows the page is soft
+   paper, as in direction A. Titles are Nunito 800, so long names stay
+   readable on a phone. Everything boxed wears the window frame from
+   direction B. Each section below is one part of the page and is labeled,
+   so a later section can be added without touching the ones above it.
+
+   This file is unlayered, so it wins over Starlight's layered defaults.
+*/
+
+/*
+   Page title (spec 0003, option one of the owner's title ideas). The band
+   takes the shape of its own painted picture through an aspect ratio set
+   by PageTitle, kept between a minimum and a maximum height. Its size
+   never waits on the picture, so nothing shifts. On phones it bleeds to
+   both screen edges and up to the header. From 50em it is a framed window
+   into the place.
+
+   The page's name hangs in the scene's top left corner on a wooden sign,
+   like the map name banner in the game, held by two short ropes from the
+   top edge. The art direction keeps the top quarter of every picture free
+   of anything important, so the sign covers sky or ceiling only. The sign
+   is solid wood, so its text never sits on the art: the title in sign
+   gold game text with a dark outline painted under the letters, the
+   subtitle in cream.
+
+   Under the scene, attached with no gap, a wooden strip carries the
+   breadcrumb, the status line on entity pages, and the section emblem,
+   which steps aside on small phones so the strip stays compact. Nothing
+   floats over the picture any more. A page whose scene has no
+   picture yet gets a short strip of its mood gradient that holds the sign
+   in normal flow, so the title still leads until the art arrives.
+*/
+.page-title {
+	margin-top: -1.5rem;
+	margin-inline: calc(-1 * var(--sl-content-pad-x));
+}
+
+.page-title__band {
+	position: relative;
+	aspect-ratio: var(--scene-aspect, 3 / 1);
+	min-height: var(--scene-band-minimum);
+	max-height: var(--scene-band-maximum);
+	width: 100%;
+	overflow: hidden;
+	background: var(--scene-ground);
+}
+
+.page-title__band:has(.scene-art--placeholder) {
+	aspect-ratio: auto;
+	min-height: 0;
+	max-height: none;
+	padding: var(--space-4);
+}
+
+.page-title__sign {
+	position: absolute;
+	top: var(--space-4);
+	left: var(--space-4);
+	max-width: min(85%, 30rem);
+	padding: var(--space-2) var(--space-4) 10px;
+	background:
+		repeating-linear-gradient(to bottom, transparent 0 12px, rgb(0 0 0 / 0.08) 12px 13px),
+		linear-gradient(to bottom, rgb(255 255 255 / 0.12), transparent 40%, rgb(0 0 0 / 0.18)),
+		var(--color-sign);
+	color: var(--color-wood-text);
+	border: 2px solid color-mix(in srgb, var(--color-sign) 60%, #000);
+	border-radius: 8px;
+	box-shadow:
+		inset 0 1px 0 rgb(255 255 255 / 0.2),
+		0 3px 0 color-mix(in srgb, var(--color-sign) 55%, #000),
+		0 8px 18px rgb(0 0 0 / 0.28);
+}
+
+.page-title__band:has(.scene-art--placeholder) .page-title__sign {
+	position: relative;
+	top: auto;
+	left: auto;
+	display: inline-block;
+}
+
+.page-title__sign::before,
+.page-title__sign::after {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	width: 3px;
+	height: calc(var(--space-4) + 2px);
+	background: color-mix(in srgb, var(--color-sign) 55%, #000);
+}
+
+.page-title__sign::before {
+	left: 20px;
+}
+
+.page-title__sign::after {
+	right: 20px;
+}
+
+.page-title__heading {
+	margin: 0;
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+	line-height: 1.15;
+	letter-spacing: 0;
+	color: var(--color-sign-text);
+	-webkit-text-stroke: 4px color-mix(in srgb, var(--color-sign) 45%, #000);
+	paint-order: stroke fill;
+	text-shadow: 0 2px 0 rgb(0 0 0 / 0.4);
+	overflow-wrap: break-word;
+	text-wrap: balance;
+}
+
+.page-title__subtitle {
+	margin: 2px 0 0;
+	color: var(--color-wood-text);
+	font-size: var(--text-sm);
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.page-title__strip {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-2) var(--space-5);
+	padding: var(--space-2) var(--space-4);
+	background:
+		repeating-linear-gradient(to bottom, transparent 0 10px, rgb(0 0 0 / 0.07) 10px 11px),
+		linear-gradient(to bottom, rgb(255 255 255 / 0.1), transparent 45%, rgb(0 0 0 / 0.14)),
+		var(--color-wood);
+	color: var(--color-wood-text);
+	border-top: 2px solid color-mix(in srgb, var(--color-wood) 60%, #000);
+	box-shadow: 0 2px 0 color-mix(in srgb, var(--color-wood) 55%, #000);
+}
+
+.page-title__emblem {
+	flex: none;
+	width: 24px;
+	height: 24px;
+	margin-left: auto;
+	fill: var(--color-sign-text);
+}
+
+.page-title__breadcrumb {
+	min-width: 0;
+	margin: 0;
+	font-size: var(--text-sm);
+	line-height: 1.4;
+	color: var(--color-wood-text);
+}
+
+.page-title__breadcrumb ol {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px var(--space-2);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.page-title__breadcrumb li {
+	margin: 0;
+}
+
+.page-title__breadcrumb li + li::before {
+	content: '/';
+	margin-right: var(--space-2);
+	color: var(--color-wood-text);
+}
+
+.page-title__breadcrumb a {
+	color: var(--color-wood-text);
+	font-weight: 700;
+}
+
+.page-title__breadcrumb [aria-current='page'] {
+	color: var(--color-wood-highlight);
+	font-weight: 800;
+}
+
+.page-title__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-2) var(--space-4);
+	margin: 0;
+	color: var(--color-wood-text);
+	font-size: var(--text-sm);
+}
+
+.page-title__meta-item {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-2);
+}
+
+.page-title__meta-label {
+	font-weight: 700;
+}
+
+.page-title__meta code {
+	padding: 1px 6px;
+	background: rgb(0 0 0 / 0.22);
+	color: var(--color-wood-text);
+	border-radius: var(--radius-chrome);
+}
+
+.content-panel:has(.page-title) + .content-panel {
+	border-top: 0;
+	padding-top: var(--space-2);
+}
+
+@media (max-width: 479px) {
+	.page-title__sign {
+		top: var(--space-3);
+		left: var(--space-3);
+		padding: 6px var(--space-3) var(--space-2);
+	}
+
+	.page-title__sign::before,
+	.page-title__sign::after {
+		height: calc(var(--space-3) + 2px);
+	}
+
+	.page-title__heading {
+		-webkit-text-stroke-width: 3px;
+	}
+
+	.page-title__emblem {
+		display: none;
+	}
+}
+
+@media (min-width: 50em) {
+	.page-title {
+		margin-top: 0;
+		margin-inline: 0;
+	}
+
+	.page-title__band {
+		border: 1px solid var(--color-edge-strong);
+		border-bottom: 0;
+		border-radius: var(--radius-window) var(--radius-window) 0 0;
+	}
+
+	.page-title__strip {
+		padding-inline: var(--space-5);
+		border-radius: 0 0 var(--radius-window) var(--radius-window);
+	}
+
+	.page-title__sign {
+		top: var(--space-5);
+		left: var(--space-5);
+		padding: 10px var(--space-5) 12px;
+	}
+
+	.page-title__sign::before,
+	.page-title__sign::after {
+		height: calc(var(--space-5) + 2px);
+	}
+}
+
+/*
+   Windows on a page. Every window gets the same breathing room from the
+   text around it, and the first one under the title starts close to the
+   panel. A lead window is set apart from the facts: a dashed amber edge,
+   the color of the Unverified chip, with the quote on chip paper behind a
+   solid amber rule. Its title bar stays wood like every window. It holds a report that is not
+   yet a fact, so it must never look like a stat block.
+*/
+.sl-markdown-content > * + :is(.window, .lead-window),
+.sl-markdown-content > :is(.window, .lead-window) + * {
+	margin-top: var(--space-5);
+}
+
+.lead-window > .window {
+	border-style: dashed;
+	border-color: color-mix(in srgb, var(--badge-unverified-foreground) 60%, transparent);
+}
+
+.lead-window blockquote {
+	margin: 0 0 var(--space-3);
+	padding: var(--space-3) var(--space-4);
+	background: var(--color-chip);
+	border: 0;
+	border-left: 4px solid var(--badge-unverified-foreground);
+	border-radius: 0 var(--radius-chrome) var(--radius-chrome) 0;
+	color: var(--color-ink);
+	font-style: normal;
+}
+
+.lead-window blockquote p {
+	margin: 0;
+}
+
+.lead-window__note {
+	margin: 0;
+	color: var(--color-ink-muted);
+}
+
+/*
+   The patch notes list on the changes page. Each patch is one entry with
+   the link and date on the first line and the summary below in muted
+   text. Dotted dividers separate entries, as inside every window.
+*/
+.patch-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.patch-list > li {
+	margin: 0;
+	padding: var(--space-3) 0;
+	background: linear-gradient(to right, color-mix(in srgb, var(--color-ink) 32%, transparent) 2px, transparent 2px) 0 0 / 6px 2px repeat-x;
+}
+
+.patch-list > li:first-child {
+	padding-top: 0;
+	background: none;
+}
+
+.patch-list > li:last-child {
+	padding-bottom: 0;
+}
+
+.patch-list p {
+	margin: var(--space-1) 0 0;
+	color: var(--color-ink-muted);
+}
+
+/* ===================== Home page and header ===================== */
+
+/*
+   Header rule and search. The header ends in a 2 pixel wooden rule, the
+   same wood as every title bar. The search button takes the window radius and the strong edge,
+   so it matches the search field in the home hero.
+*/
+header.header {
+	border-bottom: 2px solid var(--color-wood);
+}
+
+site-search button[data-open-modal] {
+	border-color: var(--color-edge-strong);
+	border-radius: var(--radius-window);
+}
+
+site-search button[data-open-modal]:hover {
+	border-color: var(--color-accent);
+}
+
+/*
+   Header wordmark. Starlight's site title becomes the wordmark: the pixel
+   leaf at its own 24 pixel size, so every grid pixel lands on a screen
+   pixel, then the name in Nunito 800, matching the wooden sign on the
+   home page (spec 0003). It drops from 20 to 17 pixels under 640 so the
+   header stays on one row at 360.
+*/
+.site-title {
+	gap: var(--space-2);
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: 1.25rem;
+	line-height: 1;
+	letter-spacing: 0;
+	color: var(--color-ink);
+}
+
+.site-title:hover {
+	color: var(--color-accent);
+}
+
+.site-title img {
+	flex: none;
+	width: 24px;
+	height: 24px;
+	image-rendering: pixelated;
+}
+
+@media (max-width: 639px) {
+	.site-title {
+		gap: 6px;
+		font-size: 1.0625rem;
+	}
+}
+
+/*
+   Home hero, centered on search (the owner's direction, 2026-10-13). The
+   painted picture fills a tall hero edge to edge as a background, under
+   a veil that softens it: parchment by day, night indigo by night, a
+   little clearer at the edges than in the middle, so the scene sets the
+   mood without competing with the words. The hero's height never depends
+   on the picture, so nothing shifts while it loads. Starlight's page
+   wrapper clips sideways overflow, so the full width hero never adds a
+   horizontal scroll next to a desktop scrollbar.
+
+   In the middle, the wordmark hangs as a wooden sign: plank lines and a
+   soft top light in CSS, sign gold game text in Nunito 800 with a dark
+   outline. Under it, a solid parchment card in the window frame holds
+   the tagline, the search field, the build line, and the actions. The
+   search field is the largest and clearest thing on the card. Every word
+   sits on the sign or the card, never on the picture.
+*/
+.home-hero {
+	margin-top: -1.5rem;
+	margin-inline: calc(-1 * var(--sl-content-pad-x));
+}
+
+.home-hero__band {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	min-height: clamp(560px, 82svh, 820px);
+	margin-inline: calc(50% - 50vw);
+	padding: var(--space-7) var(--space-4);
+	overflow: hidden;
+	background: var(--scene-ground);
+	box-shadow: 0 2px 0 color-mix(in srgb, var(--color-ink) 18%, transparent);
+}
+
+.home-hero__veil {
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(ellipse 60% 55% at 50% 50%, color-mix(in srgb, var(--color-paper) 55%, transparent), transparent 75%),
+		color-mix(in srgb, var(--color-paper) 45%, transparent);
+	pointer-events: none;
+}
+
+:root[data-theme='dark'] .home-hero__veil {
+	background:
+		radial-gradient(ellipse 60% 55% at 50% 50%, rgb(11 18 48 / 0.45), transparent 75%),
+		rgb(11 18 48 / 0.4);
+}
+
+.home-hero__stage {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--space-4);
+	width: min(100%, 40rem);
+}
+
+.home-hero__wordmark {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-3);
+	margin: 0;
+	padding: var(--space-3) var(--space-5);
+	background:
+		repeating-linear-gradient(to bottom, transparent 0 12px, rgb(0 0 0 / 0.08) 12px 13px),
+		linear-gradient(to bottom, rgb(255 255 255 / 0.12), transparent 40%, rgb(0 0 0 / 0.18)),
+		var(--color-sign);
+	color: var(--color-sign-text);
+	border: 2px solid color-mix(in srgb, var(--color-sign) 60%, #000);
+	border-radius: 10px;
+	box-shadow:
+		inset 0 1px 0 rgb(255 255 255 / 0.2),
+		0 4px 0 color-mix(in srgb, var(--color-sign) 55%, #000),
+		0 12px 28px rgb(0 0 0 / 0.25);
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: clamp(1.75rem, 1.25rem + 2.2vw, 2.75rem);
+	line-height: 1.1;
+	letter-spacing: 0;
+	-webkit-text-stroke: 4px color-mix(in srgb, var(--color-sign) 45%, #000);
+	paint-order: stroke fill;
+	text-shadow: 0 2px 0 rgb(0 0 0 / 0.45);
+	text-wrap: balance;
+}
+
+.home-hero__leaf {
+	flex: none;
+	width: 48px;
+	height: 48px;
+}
+
+.home-hero__card {
+	width: 100%;
+	padding: var(--space-6) var(--space-5);
+	background: var(--color-panel);
+	color: var(--color-ink);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow:
+		var(--shadow-window),
+		0 16px 40px rgb(0 0 0 / 0.18);
+	text-align: center;
+}
+
+.home-hero__card > * {
+	margin: 0;
+}
+
+.home-hero__card .home-hero__tagline {
+	max-width: 34ch;
+	margin: 0 auto var(--space-5);
+	font-size: var(--text-lg);
+	line-height: 1.5;
+	color: var(--color-ink);
+}
+
+.home-hero__search {
+	display: flex;
+	align-items: center;
+	gap: var(--space-3);
+	min-height: 60px;
+	margin-inline: auto;
+	padding: 0 var(--space-5);
+	background: var(--color-paper);
+	color: var(--color-ink-muted);
+	border: 2px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow:
+		inset 0 2px 0 color-mix(in srgb, var(--color-ink) 7%, transparent),
+		0 2px 0 color-mix(in srgb, var(--color-ink) 10%, transparent);
+	font-size: var(--text-lg);
+	font-weight: 600;
+	text-align: left;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.home-hero__search:hover {
+	border-color: var(--color-accent);
+	color: var(--color-ink);
+}
+
+.home-hero__search-glyph {
+	flex: none;
+	width: 22px;
+	height: 22px;
+	fill: currentColor;
+}
+
+.home-hero__card .home-hero__build-line {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-2) var(--space-3);
+	margin-top: var(--space-4);
+	color: var(--color-ink-muted);
+	font-size: var(--text-sm);
+}
+
+.home-hero__build-line time {
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.home-hero__card .home-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--space-3);
+	margin-top: var(--space-5);
+}
+
+.home-hero__action {
+	font-size: var(--text-base);
+}
+
+.home-hero__action--primary {
+	background: var(--color-accent-fill);
+	color: #2a1f17;
+	border-color: color-mix(in srgb, var(--color-accent-fill) 55%, #000);
+	box-shadow:
+		inset 0 1px 0 rgb(255 255 255 / 0.3),
+		0 2px 0 color-mix(in srgb, var(--color-accent-fill) 50%, #000);
+}
+
+.home-hero__action--minimal {
+	background: var(--color-panel);
+}
+
+@media (max-width: 559px) {
+	.home-hero__band {
+		min-height: clamp(520px, 86svh, 720px);
+		padding: var(--space-6) var(--space-3);
+	}
+
+	.home-hero__wordmark {
+		flex-direction: column;
+		gap: var(--space-1);
+		padding: var(--space-3) var(--space-4);
+		font-size: 1.5rem;
+		-webkit-text-stroke-width: 3px;
+	}
+
+	.home-hero__card {
+		padding: var(--space-5) var(--space-4);
+	}
+
+	.home-hero__card .home-hero__tagline {
+		font-size: var(--text-md);
+	}
+}
+
+@media (min-width: 50em) {
+	.home-hero {
+		margin-inline: 0;
+	}
+
+	.home-hero__card {
+		padding: var(--space-6) var(--space-7);
+	}
+}
+
+/*
+   Home body. The windows sit a little further apart than on other pages,
+   since each one is a whole section. The lead line in a window is muted.
+   The closing line sits on paper, centered under the last window.
+*/
+[data-has-hero] .sl-markdown-content > * + .window {
+	margin-top: var(--space-6);
+}
+
+.window__body > .home-lead {
+	margin: 0 0 var(--space-4);
+	color: var(--color-ink-muted);
+}
+
+.sl-markdown-content > .home-closing {
+	max-width: 60ch;
+	margin: var(--space-6) auto 0;
+	text-align: center;
+	color: var(--color-ink-muted);
+}
+
+/*
+   Task cards, cut like direction B's: a framed card with a raised ledge,
+   a chip colored square holding the pixel glyph, an accent title, and a
+   muted line. On small phones the glyph sits above the words, so two
+   columns still fit at 360. From 480 it moves to the left.
+*/
+.task-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--space-3);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.task-grid__item {
+	min-width: 0;
+	margin: 0;
+}
+
+.task-grid__card {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	align-content: start;
+	justify-items: start;
+	gap: var(--space-1);
+	height: 100%;
+	padding: var(--space-3);
+	background: var(--color-panel);
+	color: var(--color-ink);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow:
+		inset 0 1px 0 var(--window-highlight, var(--color-panel)),
+		0 2px 0 var(--color-edge-strong);
+	text-decoration: none;
+}
+
+.task-grid__card:hover {
+	background: color-mix(in srgb, var(--color-chip) 55%, var(--color-panel));
+}
+
+.task-grid__card:active {
+	transform: translateY(1px);
+	box-shadow:
+		inset 0 1px 0 var(--window-highlight, var(--color-panel)),
+		0 1px 0 var(--color-edge-strong);
+}
+
+.task-grid__icon {
+	display: grid;
+	place-items: center;
+	width: 40px;
+	height: 40px;
+	margin-bottom: var(--space-1);
+	background: var(--color-chip);
+	color: var(--color-accent);
+	border: 1px solid var(--color-edge);
+	border-radius: var(--radius-chrome);
+}
+
+.task-grid__icon svg {
+	width: 24px;
+	height: 24px;
+	fill: currentColor;
+}
+
+.task-grid__title {
+	font-weight: 800;
+	line-height: 1.3;
+	color: var(--color-accent);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	overflow-wrap: anywhere;
+}
+
+.task-grid__card:hover .task-grid__title {
+	text-decoration-thickness: 2px;
+}
+
+.task-grid__line {
+	font-size: var(--text-sm);
+	line-height: 1.4;
+	color: var(--color-ink-muted);
+}
+
+@media (min-width: 30em) {
+	.task-grid__card {
+		grid-template-columns: 40px minmax(0, 1fr);
+		align-items: center;
+		column-gap: var(--space-3);
+		padding: var(--space-3) var(--space-4) var(--space-3) var(--space-3);
+	}
+
+	.task-grid__icon {
+		grid-row: span 2;
+		margin-bottom: 0;
+	}
+
+	.task-grid__line {
+		font-size: var(--text-base);
+	}
+}
+
+@media (min-width: 50em) {
+	.task-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+/*
+   The shelf of places. Each card takes the mood named on it, so its art
+   and the stripe over its label show that place's light. The art frame
+   keeps a two to one shape and the scene fills it exactly. Cards that
+   link look like links; the rest keep ink titles and say no pages yet.
+*/
+.place-shelf {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--space-3);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.place-shelf__item {
+	min-width: 0;
+	margin: 0;
+}
+
+.place-shelf__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+	background: var(--color-panel);
+	color: var(--color-ink);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow:
+		inset 0 1px 0 var(--window-highlight, var(--color-panel)),
+		0 2px 0 var(--color-edge-strong);
+	text-decoration: none;
+}
+
+.place-shelf__art {
+	display: block;
+	position: relative;
+	aspect-ratio: 2 / 1;
+	overflow: hidden;
+	background: var(--scene-ground);
+	border-bottom: 1px solid var(--color-edge-strong);
+}
+
+.place-shelf__label {
+	display: grid;
+	gap: 2px;
+	padding: var(--space-2) var(--space-3) var(--space-3);
+	box-shadow: inset 0 3px 0 var(--mood-rule);
+}
+
+.place-shelf__name {
+	padding-top: 2px;
+	font-weight: 800;
+	line-height: 1.3;
+	color: var(--color-ink);
+}
+
+.place-shelf__card--link .place-shelf__name {
+	color: var(--color-accent);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+.place-shelf__card--link:hover {
+	background: color-mix(in srgb, var(--color-chip) 55%, var(--color-panel));
+}
+
+.place-shelf__card--link:hover .place-shelf__name {
+	text-decoration-thickness: 2px;
+}
+
+.place-shelf__moment,
+.place-shelf__status {
+	font-size: var(--text-sm);
+	line-height: 1.4;
+	color: var(--color-ink-muted);
+}
+
+.place-shelf__status {
+	font-style: italic;
+}
+
+@media (min-width: 50em) {
+	.place-shelf {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: var(--space-4);
+	}
+}
+
+/*
+   How to read this wiki. Each status chip sits beside its one line, with
+   the dotted window divider between rows. On phones the chip sits above
+   its line; from 640 they share a row, chips in one column. Rows run the
+   full window width, past the reading measure set on list items, and
+   links keep the accent, since the list opts out of markdown styles.
+*/
+.status-key {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.status-key__row {
+	display: grid;
+	gap: var(--space-2);
+	margin: 0;
+	padding: var(--space-3) 0;
+	background: var(--window-divider);
+}
+
+.status-key__row:first-child {
+	padding-top: 0;
+	background: none;
+}
+
+.status-key__row:last-child {
+	padding-bottom: 0;
+}
+
+.status-key .status-key__row {
+	max-width: none;
+}
+
+.status-key__badge {
+	min-width: 0;
+}
+
+.status-key a {
+	color: var(--color-accent);
+	font-weight: 600;
+}
+
+@media (min-width: 40em) {
+	.status-key__row {
+		grid-template-columns: 14rem minmax(0, 1fr);
+		align-items: baseline;
+		gap: var(--space-4);
+	}
+}
+
+/*
+   The line under the place shelf that names the places still waiting for
+   their painted picture. Muted, small, and centered, so it reads as a
+   note, not as missing content.
+*/
+.place-shelf__waiting {
+	margin: var(--space-4) 0 0;
+	color: var(--color-ink-muted);
+	font-size: var(--text-sm);
+	text-align: center;
+}

@@ -3,6 +3,8 @@ import type { Change } from '../../schemas/shared';
 
 /*
    Small helpers shared by the generated pages and the table components.
+   A missing number or an empty list reads Unknown, the one word the site
+   uses for any value nobody has recorded yet.
 
    The change log is not stored anywhere on its own. It is assembled at
    build time from the "changes" list on every entity, then ordered by the
@@ -23,7 +25,7 @@ export function formatStatistic(value: number | undefined): string {
 }
 
 export function formatList(values: string[]): string {
-	return values.length === 0 ? 'None recorded' : values.join(', ');
+	return values.length === 0 ? 'Unknown' : values.join(', ');
 }
 
 export async function getBuildsNewestFirst() {

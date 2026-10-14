@@ -1,0 +1,247 @@
+/*
+   Design tokens for Classic Maple Wiki (specs 0002 and 0003). This is the
+   one place that defines color, type, spacing, radius, and shadow. Since
+   decision 0007 the colors come from the painted art: parchment panels,
+   wood for title bars and the wordmark sign, stone for the footer, and a
+   night indigo dark mode that matches the Henesys night picture. custom.css maps
+   Starlight's own variables onto these, so the theme follows them.
+
+   Light values sit on :root. Dark values apply under data-theme="dark",
+   which Starlight's theme toggle sets on the html element. Every text pair
+   below was checked for WCAG AA against the panel and paper in its mode;
+   the ratios are recorded in the spec.
+
+   Moods set the scene colors and one rule color. Any element can carry
+   data-mood, and its descendants inherit that mood, which is how each
+   shelf card shows its own light. The page as a whole takes the mood of
+   its scene band through :has, so window stripes match the scene without
+   any script. Body text and links never change with mood.
+*/
+@font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 400 800;
+	font-display: swap;
+	src: url('/fonts/nunito-latin.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Nunito';
+	font-style: italic;
+	font-weight: 400 800;
+	font-display: swap;
+	src: url('/fonts/nunito-italic-latin.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Silkscreen';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/silkscreen-400-latin.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Silkscreen';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/silkscreen-700-latin.woff2') format('woff2');
+}
+
+:root {
+	--color-paper: #f6efdf;
+	--color-panel: #fff9ec;
+	--color-ink: #2a1f17;
+	--color-ink-muted: #5c4b3c;
+	--color-line: #e3d6bc;
+	--color-edge: color-mix(in srgb, var(--color-ink) 22%, var(--color-panel));
+	--color-edge-strong: color-mix(in srgb, var(--color-ink) 55%, var(--color-panel));
+	--color-accent: #9a3d08;
+	--color-accent-fill: #e8711c;
+	--color-chip: #f3e3c7;
+	--color-titlebar: #f4d9b0;
+	--color-focus: #1f6fb2;
+	--color-wood: #7a4a26;
+	--color-wood-text: #fff4dc;
+	--color-sign: #5a361d;
+	--color-sign-text: #ffb85c;
+	--color-stone: #4f4034;
+	--color-stone-text: #fff4dc;
+	--color-stone-link: #ffb85c;
+	--color-wood-highlight: #ffd59a;
+
+	--badge-official-background: #e2f0da;
+	--badge-official-foreground: #2f5e1f;
+	--badge-in-game-background: #dcebf7;
+	--badge-in-game-foreground: #1f4e79;
+	--badge-unverified-background: #fbe6c8;
+	--badge-unverified-foreground: #7a4306;
+
+	--font-body: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--font-display: 'Silkscreen', 'Nunito', system-ui, sans-serif;
+
+	--text-xs: 0.8125rem;
+	--text-sm: 0.875rem;
+	--text-base: 1rem;
+	--text-md: 1.0625rem;
+	--text-lg: 1.25rem;
+	--text-xl: 1.5rem;
+	--text-2xl: 1.875rem;
+	--text-3xl: 2.25rem;
+	--text-4xl: 3rem;
+
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 24px;
+	--space-6: 32px;
+	--space-7: 48px;
+	--space-8: 64px;
+
+	--radius-chrome: 2px;
+	--radius-window: 4px;
+	--radius-panel: 10px;
+	--shadow-panel: 0 1px 0 var(--color-line), 0 8px 24px rgb(42 31 23 / 0.08);
+	--shadow-window: inset 0 1px 0 #ffffff, 0 2px 0 rgb(42 31 23 / 0.18);
+
+	--scene-band-minimum: 180px;
+	--scene-band-maximum: 240px;
+
+	--scene-sky-top: #bfe3f2;
+	--scene-sky-bottom: #eaf6f4;
+	--scene-ground: #8cc37a;
+	--scene-light: #ffe7a3;
+	--mood-rule: #2f7d4f;
+}
+
+@media (min-width: 50em) {
+	:root {
+		--scene-band-minimum: 200px;
+		--scene-band-maximum: 340px;
+	}
+}
+
+:root[data-theme='dark'] {
+	--color-paper: #0b1230;
+	--color-panel: #141c42;
+	--color-ink: #f4ebda;
+	--color-ink-muted: #c2c6de;
+	--color-line: #2a3468;
+	--color-accent: #f7c14b;
+	--color-accent-fill: #e8711c;
+	--color-chip: #1e2856;
+	--color-titlebar: #2a2350;
+	--color-focus: #7fb8f0;
+	--color-wood: #5a361d;
+	--color-wood-text: #fff4dc;
+	--color-sign: #3e2414;
+	--color-sign-text: #ffb85c;
+	--color-stone: #161c3c;
+	--color-stone-text: #f4ebda;
+	--color-stone-link: #f7c14b;
+	--color-wood-highlight: #ffb85c;
+
+	--badge-official-background: #21351a;
+	--badge-official-foreground: #b7e39e;
+	--badge-in-game-background: #16283a;
+	--badge-in-game-foreground: #a9cff2;
+	--badge-unverified-background: #3a2810;
+	--badge-unverified-foreground: #f6c98a;
+
+	--shadow-panel: 0 0 0 1px var(--color-line);
+	--shadow-window: inset 0 1px 0 rgb(255 255 255 / 0.06), 0 2px 0 rgb(0 0 0 / 0.5);
+}
+
+[data-mood='dawn'],
+:root:has(.scene-band[data-mood='dawn']) {
+	--scene-sky-top: #f6c9b8;
+	--scene-sky-bottom: #fbe6d2;
+	--scene-ground: #c98e7a;
+	--scene-light: #fff1d6;
+	--mood-rule: #c2410c;
+}
+[data-mood='morning'],
+:root:has(.scene-band[data-mood='morning']) {
+	--scene-sky-top: #bfe3f2;
+	--scene-sky-bottom: #eaf6f4;
+	--scene-ground: #8cc37a;
+	--scene-light: #ffe7a3;
+	--mood-rule: #2f7d4f;
+}
+[data-mood='midday'],
+:root:has(.scene-band[data-mood='midday']) {
+	--scene-sky-top: #9ed3f0;
+	--scene-sky-bottom: #e6f4fb;
+	--scene-ground: #6fb25b;
+	--scene-light: #fff6c8;
+	--mood-rule: #b45309;
+}
+[data-mood='dusk'],
+:root:has(.scene-band[data-mood='dusk']) {
+	--scene-sky-top: #f2a65a;
+	--scene-sky-bottom: #f8d9a8;
+	--scene-ground: #9c5b3b;
+	--scene-light: #ffe2a8;
+	--mood-rule: #b4410f;
+}
+[data-mood='night'],
+:root:has(.scene-band[data-mood='night']) {
+	--scene-sky-top: #1f2747;
+	--scene-sky-bottom: #3a3f6b;
+	--scene-ground: #232a3f;
+	--scene-light: #f4c06a;
+	--mood-rule: #3b4ba8;
+}
+[data-mood='cave'],
+:root:has(.scene-band[data-mood='cave']) {
+	--scene-sky-top: #3e4a3f;
+	--scene-sky-bottom: #5e6b55;
+	--scene-ground: #2f372e;
+	--scene-light: #e8d58a;
+	--mood-rule: #3f6b4e;
+}
+
+:root[data-theme='dark'] [data-mood='dawn'],
+:root[data-theme='dark']:has(.scene-band[data-mood='dawn']) {
+	--scene-sky-top: #2b2240;
+	--scene-sky-bottom: #4a3550;
+	--scene-ground: #241b26;
+	--mood-rule: #fdba8c;
+}
+:root[data-theme='dark'] [data-mood='morning'],
+:root[data-theme='dark']:has(.scene-band[data-mood='morning']) {
+	--scene-sky-top: #16233a;
+	--scene-sky-bottom: #24384a;
+	--scene-ground: #15241c;
+	--mood-rule: #8fd5a6;
+}
+:root[data-theme='dark'] [data-mood='midday'],
+:root[data-theme='dark']:has(.scene-band[data-mood='midday']) {
+	--scene-sky-top: #141e36;
+	--scene-sky-bottom: #22334f;
+	--scene-ground: #14241a;
+	--mood-rule: #fcd34d;
+}
+:root[data-theme='dark'] [data-mood='dusk'],
+:root[data-theme='dark']:has(.scene-band[data-mood='dusk']) {
+	--scene-sky-top: #2a1b2e;
+	--scene-sky-bottom: #4a2b30;
+	--scene-ground: #22161a;
+	--mood-rule: #f59e6b;
+}
+:root[data-theme='dark'] [data-mood='night'],
+:root[data-theme='dark']:has(.scene-band[data-mood='night']) {
+	--scene-sky-top: #0e1226;
+	--scene-sky-bottom: #1c2142;
+	--scene-ground: #0b0e1a;
+	--mood-rule: #a5b4fc;
+}
+:root[data-theme='dark'] [data-mood='cave'],
+:root[data-theme='dark']:has(.scene-band[data-mood='cave']) {
+	--scene-sky-top: #141a16;
+	--scene-sky-bottom: #222b24;
+	--scene-ground: #0e120f;
+	--mood-rule: #9ad1a8;
+}

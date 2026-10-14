@@ -3,9 +3,21 @@
    Lists the recorded skills for one class, grouped by nothing fancier than
    job order, with the Classic World difference front and center since that
    is what returning players come looking for.
+
+   The list sits in a window. Four columns fit a desktop panel; under 480
+   pixels each skill becomes its own labeled block, so nothing scrolls
+   sideways. With no skills recorded, one invitation points at the class
+   file on GitHub. A skill with no recorded difference reads Unknown.
+
+   On a guide, the page can pass a markdown heading in the title slot,
+   so the window shows up in the table of contents. The heading's text
+   must match the window's id.
 */
 import { getEntry } from 'astro:content';
+import { editBaseUrl } from '../../site.config.mjs';
+import Invitation from './Invitation.astro';
 import VerifiedBadge from './VerifiedBadge.astro';
+import Window from './Window.astro';
 
 interface Props {
 	classId: string;
@@ -18,35 +30,49 @@ if (!classEntry) throw new Error(`SkillList: no class "${classId}" in data/class
 const skills = [...classEntry.data.skills].sort(
 	(first, second) => first.job - second.job || first.name.localeCompare(second.name)
 );
+
+const classFileUrl = `${editBaseUrl}data/classes/${classId}.yaml`;
 ---
 
-{
-	skills.length === 0 ? (
-		<p>
-			No skills recorded yet. Add them to <code>data/classes/{classId}.yaml</code>.
-		</p>
-	) : (
-		<table>
-			<thead>
-				<tr>
-					<th>Skill</th>
-					<th>Job</th>
-					<th>Different in Classic World</th>
-					<th>Status</th>
-				</tr>
-			</thead>
-			<tbody>
-				{skills.map((skill) => (
+<Window title="Skills that changed" id="skills-that-changed">
+	{Astro.slots.has('title') && <slot name="title" slot="title" />}
+	{
+		skills.length === 0 ? (
+			<Invitation
+				message={`No skills recorded yet for the ${classEntry.data.name}. Seen one in game? Add it to data/classes/${classId}.yaml.`}
+				href={classFileUrl}
+				action="Add a skill"
+			/>
+		) : (
+			<table class="data-table data-table--stack">
+				<thead>
 					<tr>
-						<td>{skill.name}</td>
-						<td>{skill.job}</td>
-						<td>{skill.differs_from_original ?? skill.summary ?? 'No change recorded'}</td>
-						<td>
-							<VerifiedBadge verified={skill.verified} />
-						</td>
+						<th scope="col">Skill</th>
+						<th scope="col">Job</th>
+						<th scope="col">Different in Classic World</th>
+						<th scope="col">Status</th>
 					</tr>
-				))}
-			</tbody>
-		</table>
-	)
-}
+				</thead>
+				<tbody>
+					{skills.map((skill) => (
+						<tr>
+							<th scope="row">{skill.name}</th>
+							<td class="data-table__number" data-label="Job">
+								{skill.job}
+							</td>
+							<td
+								data-label="Different in Classic World"
+								class:list={{ 'unknown-value': !skill.differs_from_original && !skill.summary }}
+							>
+								{skill.differs_from_original ?? skill.summary ?? 'Unknown'}
+							</td>
+							<td data-label="Status">
+								<VerifiedBadge verified={skill.verified} />
+							</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		)
+	}
+</Window>

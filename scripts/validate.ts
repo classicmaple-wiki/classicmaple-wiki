@@ -1,8 +1,8 @@
-import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import path from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import type { z } from 'astro/zod';
-import { build, dataSchemas, routeFrontmatter, type DataCollectionName } from '../schemas';
+import { build, dataSchemas, pageFrontmatter, spriteSource, type DataCollectionName } from '../schemas';
 
 /*
    Checks every file a contributor can touch before the site is built.
@@ -19,6 +19,9 @@ import { build, dataSchemas, routeFrontmatter, type DataCollectionName } from '.
 */
 const dataDirectory = path.resolve('data');
 const routesDirectory = path.resolve('src/content/docs/leveling');
+const spritesDirectory = path.resolve('public/sprites');
+const maximumSpriteSide = 128;
+const maximumSpriteBytes = 40 * 1024;
 const problems: string[] = [];
 
 function report(filePath: string, message: string) {
@@ -141,7 +144,7 @@ function validateDataFiles(buildIdentifiers: Set<string>) {
 		}
 	}
 
-	return parsedEntities.size;
+	return parsedEntities;
 }
 
 /*
@@ -162,7 +165,7 @@ function validateLevelingRoutes(buildIdentifiers: Set<string>) {
 			report(filePath, 'Missing frontmatter block');
 			continue;
 		}
-		const frontmatter = checkAgainstSchema(filePath, routeFrontmatter, parseYaml(frontmatterMatch[1]));
+		const frontmatter = checkAgainstSchema(filePath, pageFrontmatter, parseYaml(frontmatterMatch[1]));
 		if (!frontmatter) continue;
 		for (const requiredField of ['level_range', 'party_size', 'classes'] as const) {
 			if (frontmatter[requiredField] === undefined) report(filePath, `Leveling routes need "${requiredField}"`);
@@ -174,8 +177,91 @@ function validateLevelingRoutes(buildIdentifiers: Set<string>) {
 	return routeFilePaths.length;
 }
 
+/*
+   Sprite sources are loaded once. Only allowed sources may back a sprite;
+   the statuses and the reasons behind them live in docs/policies/images.md.
+*/
+function loadSpriteSourceStatuses(): Map<string, string> {
+	const sourcesFilePath = path.join(dataDirectory, 'sprite-sources.yaml');
+	const statuses = new Map<string, string>();
+	if (!existsSync(sourcesFilePath)) return statuses;
+	const content = readYamlFile(sourcesFilePath);
+	if (!Array.isArray(content)) {
+		report(sourcesFilePath, 'Expected a list of sprite sources');
+		return statuses;
+	}
+	for (const entry of content) {
+		const parsedSource = checkAgainstSchema(sourcesFilePath, spriteSource, entry);
+		if (!parsedSource) continue;
+		if (statuses.has(parsedSource.id)) report(sourcesFilePath, `Duplicate sprite source "${parsedSource.id}"`);
+		statuses.set(parsedSource.id, parsedSource.status);
+	}
+	return statuses;
+}
+
+/*
+   Reads width and height straight from the PNG header, so the check needs
+   no image library. Returns undefined when the file is not a PNG.
+*/
+function readPngSize(filePath: string): { width: number; height: number } | undefined {
+	const header = readFileSync(filePath).subarray(0, 24);
+	const pngSignature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+	if (header.length < 24 || !header.subarray(0, 8).equals(pngSignature)) return undefined;
+	return { width: header.readUInt32BE(16), height: header.readUInt32BE(20) };
+}
+
+/*
+   Every sprite block must point at an allowed source and an existing,
+   small PNG named after its entry. Every file in public/sprites must be
+   claimed by an entry, so nothing sits on the site without a record of
+   where it came from.
+*/
+function validateSprites(
+	parsedEntities: Map<string, { filePath: string; data: Record<string, unknown> }>,
+	sourceStatuses: Map<string, string>
+) {
+	const claimedFiles = new Set<string>();
+	for (const [entityKey, { filePath, data }] of parsedEntities) {
+		const spriteRecord = data.sprite as { file: string; source: string } | undefined;
+		if (!spriteRecord) continue;
+		const expectedFile = `${entityKey}.png`;
+		if (spriteRecord.file !== expectedFile) report(filePath, `sprite.file must be "${expectedFile}"`);
+		const status = sourceStatuses.get(spriteRecord.source);
+		if (status === undefined) {
+			report(filePath, `sprite.source "${spriteRecord.source}" is not in data/sprite-sources.yaml`);
+		} else if (status !== 'allowed' && status !== 'allowed-with-credit') {
+			report(filePath, `sprite.source "${spriteRecord.source}" is ${status}. See docs/policies/images.md`);
+		}
+		const spritePath = path.join(spritesDirectory, spriteRecord.file);
+		claimedFiles.add(path.resolve(spritePath));
+		if (!existsSync(spritePath)) {
+			report(filePath, `sprite file public/sprites/${spriteRecord.file} does not exist`);
+			continue;
+		}
+		const size = readPngSize(spritePath);
+		if (!size) report(filePath, `public/sprites/${spriteRecord.file} is not a PNG`);
+		else if (size.width > maximumSpriteSide || size.height > maximumSpriteSide) {
+			report(filePath, `public/sprites/${spriteRecord.file} is ${size.width} by ${size.height}. Keep sprites at most ${maximumSpriteSide} by ${maximumSpriteSide}`);
+		}
+		if (statSync(spritePath).size > maximumSpriteBytes) {
+			report(filePath, `public/sprites/${spriteRecord.file} is over ${maximumSpriteBytes / 1024} KB`);
+		}
+	}
+	if (!existsSync(spritesDirectory)) return;
+	for (const folderName of readdirSync(spritesDirectory)) {
+		const folderPath = path.join(spritesDirectory, folderName);
+		if (!statSync(folderPath).isDirectory()) continue;
+		for (const fileName of readdirSync(folderPath)) {
+			const filePath = path.resolve(folderPath, fileName);
+			if (!claimedFiles.has(filePath)) report(filePath, 'No data entry claims this sprite. Add a sprite block or delete the file');
+		}
+	}
+}
+
 const buildIdentifiers = loadBuildIdentifiers();
-const entityCount = validateDataFiles(buildIdentifiers);
+const parsedEntities = validateDataFiles(buildIdentifiers);
+const entityCount = parsedEntities.size;
+validateSprites(parsedEntities, loadSpriteSourceStatuses());
 const routeCount = validateLevelingRoutes(buildIdentifiers);
 
 if (problems.length > 0) {

@@ -4,29 +4,26 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-Phase 1 is done. The site is live at https://classicmaple.wiki. Phase 2 (item P2) is in progress. The two research documents are written and waiting for owner review. No spec 0002 yet. No design code yet.
+Spec 0003, the interface that serves the art, is built on branch `spec/0002-design-system`, pull request 3, and waits for the owner's review on the preview. The home page centers on search over a veiled Henesys picture. Inner pages hang the page name on a wooden sign in the picture and attach a wooden strip under it. Painted scenes exist for Henesys (day and night) and Kerning City (dusk). The live site still runs the old look.
 
 ## Just done
 
-- `docs/research/ui.md`: eleven reference sites, the six Slow Snails principles applied to a wiki page, and the library of places developed into rules.
-- `docs/research/assets.md`: a 53 row asset inventory, verified Nexon quotes on fan sites, images, and money, enforcement history, and ten owner decisions with defaults.
-- `docs/decisions/0003-original-art-only.md`: original art only, kept minimal.
-- The research ran as a multi agent workflow. It hit a usage limit before its writers ran, so the documents were written from the saved findings. Quotes for the "other fan wikis" topic were never verified and are not shown.
+- Home centered on search, inner page map name sign, attached strip. The owner rejected the floating title panel.
+- Fixes from an independent review: dark mode placeholders, lead window and breadcrumb contrast, focus on wood, stone footer, painted only place shelf, leftover pixel font chrome.
+- Lighthouse mobile on a local build: home 99, Thief 98, Crimson Balrog 98, accessibility 100, layout shift 0.
 
 ## In progress
 
-Nothing open in code.
+Pull request 3, ready to merge. The old mockups are deleted.
 
 ## Next step
 
-Owner reviews both research documents and answers Q8 and Q9 in `BACKLOG.md`. Then write `specs/0002-design-system.md` from `specs/_template.md`. It must cover tokens, type, the window frame, the scene band and mood system, the schema fields for scene and mood (needs owner approval), and two mockup directions of home, Thief, and a monster page.
+Owner merges pull request 3. Then check production and run Lighthouse there. The owner paints the remaining scenes with `docs/art-direction.md`; the agent installs each one.
 
 ## Blockers and questions for the owner
 
-- Q8: the ten asset decisions in `docs/research/assets.md`.
-- Q9: moment vocabulary and launch hubs in `docs/research/ui.md`.
-- Donations are unclear under Nexon policy. Flagged before Phase 3.
-- Set a Vercel spend limit before 2026-10-21.
+- Review of the preview.
+- Remaining pictures: Kerning City night, Maple Island, Ellinia, Perion, Sleepywood, Default.
 
 ## Verify
 

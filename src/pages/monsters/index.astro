@@ -1,6 +1,13 @@
 ---
+/*
+   The monster index. One short line on how to read the numbers sits on
+   the page paper, then the monster table in its own window, then a small
+   window with the raw data download. The table of contents lists both
+   windows by their heading ids.
+*/
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import MonsterTable from '../../components/MonsterTable.astro';
+import Window from '../../components/Window.astro';
 ---
 
 <StarlightPage
@@ -8,13 +15,19 @@ import MonsterTable from '../../components/MonsterTable.astro';
 		title: 'Monsters',
 		description: 'Level, HP, EXP, and elemental weaknesses for monsters in MapleStory Classic World.',
 	}}
+	headings={[
+		{ depth: 2, slug: 'all-monsters', text: 'All monsters' },
+		{ depth: 2, slug: 'raw-data', text: 'Raw data' },
+	]}
 >
 	<p>
 		Every number here is tagged with the build it was seen in. A value shows as Unknown until someone confirms it in
 		game.
 	</p>
 	<MonsterTable />
-	<p>
-		Want the raw data? Download <a href="/data/monsters.json">monsters.json</a>.
-	</p>
+	<Window title="Raw data" id="raw-data">
+		<p>
+			Want the raw data? Download <a href="/data/monsters.json">monsters.json</a>.
+		</p>
+	</Window>
 </StarlightPage>

@@ -2,37 +2,69 @@
 /*
    Every crafting profession in one table, read straight from
    data/professions/.
+
+   The table sits in a window. Four columns fit a desktop panel; under 480
+   pixels each profession becomes its own labeled block, so nothing
+   scrolls sideways. Missing values read Unknown in muted italic. With no
+   professions recorded, one invitation points at the folder on GitHub.
+
+   On a guide, the page can pass a markdown heading in the title slot,
+   so the window shows up in the table of contents. The heading's text
+   must match the window's id.
 */
 import { getCollection } from 'astro:content';
+import { defaultBranch, repositoryUrl } from '../../site.config.mjs';
 import { formatStatistic } from '../lib/data';
+import Invitation from './Invitation.astro';
 import VerifiedBadge from './VerifiedBadge.astro';
+import Window from './Window.astro';
 
 const professions = (await getCollection('professions'))
 	.map((professionEntry) => professionEntry.data)
 	.sort((first, second) => first.name.localeCompare(second.name));
+
+const professionFolderUrl = `${repositoryUrl}/tree/${defaultBranch}/data/professions`;
 ---
 
-<table>
-	<thead>
-		<tr>
-			<th>Profession</th>
-			<th>Unlocks at level</th>
-			<th>What it makes</th>
-			<th>Status</th>
-		</tr>
-	</thead>
-	<tbody>
-		{
-			professions.map((profession) => (
-				<tr>
-					<td>{profession.name}</td>
-					<td>{formatStatistic(profession.required_level)}</td>
-					<td>{profession.summary ?? 'Needs details'}</td>
-					<td>
-						<VerifiedBadge verified={profession.verified} />
-					</td>
-				</tr>
-			))
-		}
-	</tbody>
-</table>
+<Window title="Professions" id="professions">
+	{Astro.slots.has('title') && <slot name="title" slot="title" />}
+	{
+		professions.length === 0 ? (
+			<Invitation
+				message="No professions recorded yet. Seen one in game? Bring a screenshot."
+				href={professionFolderUrl}
+				action="Add a profession"
+			/>
+		) : (
+			<table class="data-table data-table--stack">
+				<thead>
+					<tr>
+						<th scope="col">Profession</th>
+						<th scope="col">Unlocks at level</th>
+						<th scope="col">What it makes</th>
+						<th scope="col">Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					{professions.map((profession) => (
+						<tr>
+							<th scope="row">{profession.name}</th>
+							<td
+								data-label="Unlocks at level"
+								class:list={['data-table__number', { 'unknown-value': profession.required_level === undefined }]}
+							>
+								{formatStatistic(profession.required_level)}
+							</td>
+							<td data-label="What it makes" class:list={{ 'unknown-value': !profession.summary }}>
+								{profession.summary ?? 'Unknown'}
+							</td>
+							<td data-label="Status">
+								<VerifiedBadge verified={profession.verified} />
+							</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		)
+	}
+</Window>

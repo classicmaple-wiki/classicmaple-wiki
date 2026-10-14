@@ -3,10 +3,19 @@
    The monster database as one filterable table. Rows are rendered at build
    time, so the page works without JavaScript. The script at the bottom
    only hides rows that do not match what the reader types.
+
+   The table sits in a window. It has six columns, so it scrolls sideways
+   inside its own container with the monster name pinned on the left, and
+   the page itself never scrolls sideways on a phone. Unknown values read
+   Unknown in muted italic so known numbers stand out. When the filter
+   hides every row, a plain muted note says so.
 */
 import { getCollection } from 'astro:content';
+import { repositoryUrl, defaultBranch } from '../../site.config.mjs';
 import { formatList, formatStatistic } from '../lib/data';
+import Invitation from './Invitation.astro';
 import VerifiedBadge from './VerifiedBadge.astro';
+import Window from './Window.astro';
 
 const monsters = (await getCollection('monsters'))
 	.map((monsterEntry) => monsterEntry.data)
@@ -15,45 +24,80 @@ const monsters = (await getCollection('monsters'))
 			(first.level ?? Number.MAX_SAFE_INTEGER) - (second.level ?? Number.MAX_SAFE_INTEGER) ||
 			first.name.localeCompare(second.name)
 	);
+
+const monsterFolderUrl = `${repositoryUrl}/tree/${defaultBranch}/data/monsters`;
 ---
 
-<label class="monster-filter">
-	Filter monsters
-	<input type="search" placeholder="Name or weakness" data-monster-filter />
-</label>
+<Window title="All monsters" id="all-monsters">
+	{
+		monsters.length === 0 ? (
+			<Invitation
+				message="No monsters recorded yet. Seen one in game? Bring a screenshot."
+				href={monsterFolderUrl}
+				action="Add a monster"
+			/>
+		) : (
+			<>
+				<div class="data-filter">
+					<label class="data-filter__label" for="monster-filter">
+						Filter monsters
+					</label>
+					<input
+						class="data-filter__input"
+						id="monster-filter"
+						type="search"
+						placeholder="Name or weakness"
+						autocomplete="off"
+						data-monster-filter
+					/>
+				</div>
 
-<table>
-	<thead>
-		<tr>
-			<th>Monster</th>
-			<th>Level</th>
-			<th>HP</th>
-			<th>EXP</th>
-			<th>Weak to</th>
-			<th>Status</th>
-		</tr>
-	</thead>
-	<tbody data-monster-rows>
-		{
-			monsters.map((monster) => (
-				<tr data-search-text={`${monster.name} ${monster.weak_to.join(' ')}`.toLowerCase()}>
-					<td>
-						<a href={`/monsters/${monster.id}/`}>{monster.name}</a>
-					</td>
-					<td>{formatStatistic(monster.level)}</td>
-					<td>{formatStatistic(monster.hp)}</td>
-					<td>{formatStatistic(monster.exp)}</td>
-					<td>{formatList(monster.weak_to)}</td>
-					<td>
-						<VerifiedBadge verified={monster.verified} />
-					</td>
-				</tr>
-			))
-		}
-	</tbody>
-</table>
+				<div class="window__scroll" tabindex="0" role="region" aria-label="Monster table, scrolls sideways">
+					<table class="data-table">
+						<thead>
+							<tr>
+								<th scope="col">Monster</th>
+								<th scope="col">Level</th>
+								<th scope="col">HP</th>
+								<th scope="col">EXP</th>
+								<th scope="col">Weak to</th>
+								<th scope="col">Status</th>
+							</tr>
+						</thead>
+						<tbody data-monster-rows>
+							{monsters.map((monster) => (
+								<tr data-search-text={`${monster.name} ${monster.weak_to.join(' ')}`.toLowerCase()}>
+									<th scope="row">
+										<a href={`/monsters/${monster.id}/`}>{monster.name}</a>
+									</th>
+									<td class:list={['data-table__number', { 'unknown-value': monster.level === undefined }]}>
+										{formatStatistic(monster.level)}
+									</td>
+									<td class:list={['data-table__number', { 'unknown-value': monster.hp === undefined }]}>
+										{formatStatistic(monster.hp)}
+									</td>
+									<td class:list={['data-table__number', { 'unknown-value': monster.exp === undefined }]}>
+										{formatStatistic(monster.exp)}
+									</td>
+									<td class:list={{ 'unknown-value': monster.weak_to.length === 0 }}>
+										{formatList(monster.weak_to)}
+									</td>
+									<td>
+										<VerifiedBadge verified={monster.verified} />
+									</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
 
-<p class="monster-empty" data-monster-empty hidden>No monsters match that filter.</p>
+				<p class="window__note" data-monster-empty hidden>
+					No monsters match that filter.
+				</p>
+			</>
+		)
+	}
+</Window>
 
 <script>
 	const filterInput = document.querySelector<HTMLInputElement>('[data-monster-filter]');
@@ -71,22 +115,3 @@ const monsters = (await getCollection('monsters'))
 		if (emptyMessage) emptyMessage.hidden = visibleCount > 0;
 	});
 </script>
-
-<style>
-	.monster-filter {
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
-		max-width: 20rem;
-		font-size: var(--sl-text-sm);
-		color: var(--sl-color-gray-2);
-	}
-	.monster-filter input {
-		padding: 0.5rem 0.75rem;
-		border: 1px solid var(--sl-color-gray-5);
-		border-radius: 0.375rem;
-		background: var(--sl-color-bg);
-		color: var(--sl-color-white);
-		font: inherit;
-	}
-</style>

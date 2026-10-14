@@ -1,17 +1,235 @@
-/* Warm maple accent in place of the default Starlight blue. */
-:root {
-	--sl-color-accent-low: #3d1f06;
-	--sl-color-accent: #c2570c;
-	--sl-color-accent-high: #fcd9b6;
+/*
+   Maps Starlight's theme variables onto our tokens (src/styles/tokens.css),
+   so search, sidebar, table of contents, asides, and badges all follow the
+   same parchment, ink, and orange palette in light mode and the night
+   indigo palette in dark mode (spec 0003). This file is
+   unlayered, so it wins over Starlight's layered defaults without needing
+   higher specificity.
+
+   Base typography also lives here: Nunito for everything a reader reads,
+   Silkscreen only for tiny labels such as chips and captions, a 70
+   character measure, and tabular
+   figures in tables so numbers line up. Prose headings step down clearly
+   from the 30 to 44 pixel page title: H2 at 24 pixels on phones and 30 on
+   desktop, H3 at 20.
+
+   The Starlight pieces that sit around the windows are drawn in the same
+   family. The current sidebar link is chip paper with accent text and a
+   mushroom orange stripe, never a solid accent block, and group labels
+   are small muted capitals. Page links at the foot of a page are window
+   cards. Asides take the window edge and radius with a status colored
+   stripe, the caution aside uses the Unverified colors, and step numbers
+   are square chips instead of round bubbles. Their labels and titles are
+   Nunito, not the pixel font (spec 0003).
+
+   Focus rings are blue, except on wood, where blue on brown is too faint,
+   so they turn cream. Starlight's page wrapper clips sideways overflow,
+   so the full width home picture never adds a horizontal scroll next to
+   a desktop scrollbar.
+*/
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+	--sl-font: var(--font-body);
+
+	--sl-color-accent-low: var(--color-chip);
+	--sl-color-accent: var(--color-accent);
+	--sl-color-accent-high: var(--color-accent);
+
+	--sl-color-white: var(--color-ink);
+	--sl-color-gray-1: var(--color-ink);
+	--sl-color-gray-2: var(--color-ink);
+	--sl-color-gray-3: var(--color-ink-muted);
+	--sl-color-gray-4: var(--color-edge-strong);
+	--sl-color-gray-5: var(--color-line);
+	--sl-color-gray-6: var(--color-chip);
+	--sl-color-gray-7: var(--color-panel);
+	--sl-color-black: var(--color-paper);
+
+	--sl-color-text: var(--color-ink);
+	--sl-color-text-accent: var(--color-accent);
+	--sl-color-text-invert: var(--color-panel);
+	--sl-color-bg: var(--color-paper);
+	--sl-color-bg-nav: var(--color-panel);
+	--sl-color-bg-sidebar: var(--color-paper);
+	--sl-color-bg-inline-code: var(--color-chip);
+	--sl-color-bg-accent: var(--color-accent);
+	--sl-color-hairline-light: var(--color-line);
+	--sl-color-hairline: var(--color-line);
+	--sl-color-hairline-shade: var(--color-line);
+	--sl-color-backdrop-overlay: rgb(20 16 13 / 0.55);
+
+	--sl-text-body: var(--text-md);
+	--sl-line-height: 1.6;
 }
 
-:root[data-theme='light'] {
-	--sl-color-accent-low: #fde8d2;
-	--sl-color-accent: #b0480a;
-	--sl-color-accent-high: #5a2705;
+@media (min-width: 50em) {
+	:root {
+		--sl-text-body: 1.125rem;
+	}
 }
 
-/* Keep status badges on one line inside tables. */
+body {
+	background: var(--color-paper);
+	color: var(--color-ink);
+	font-feature-settings: 'kern';
+}
+
+.sl-markdown-content p,
+.sl-markdown-content li {
+	max-width: 70ch;
+}
+
+.sl-markdown-content :is(h2, h3) {
+	color: var(--color-ink);
+	font-weight: 800;
+}
+
+.sl-markdown-content > .sl-heading-wrapper.level-h2,
+.sl-markdown-content > h2 {
+	font-size: var(--text-xl);
+	line-height: 1.25;
+}
+
+.sl-markdown-content > .sl-heading-wrapper.level-h3,
+.sl-markdown-content > h3 {
+	font-size: var(--text-lg);
+}
+
+.sl-markdown-content > .sl-heading-wrapper > :is(h2, h3) {
+	font-size: inherit;
+}
+
+@media (min-width: 50em) {
+	.sl-markdown-content > .sl-heading-wrapper.level-h2,
+	.sl-markdown-content > h2 {
+		font-size: var(--text-2xl);
+	}
+}
+
+.sidebar-content a:hover {
+	color: var(--color-accent);
+}
+
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover,
+.sidebar-content a[aria-current='page']:focus {
+	background: var(--color-chip);
+	color: var(--color-accent);
+	font-weight: 800;
+	border-radius: var(--radius-chrome);
+	box-shadow: inset 3px 0 0 var(--color-accent-fill);
+}
+
+.sidebar-content summary .group-label .large {
+	font-size: var(--text-sm);
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--color-ink-muted);
+}
+
+.pagination-links a {
+	background: var(--color-panel);
+	color: var(--color-ink-muted);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow: var(--shadow-window);
+}
+
+.pagination-links a:hover {
+	border-color: var(--color-accent);
+}
+
+.pagination-links a > span {
+	font-family: var(--font-body);
+	font-size: var(--text-sm);
+	font-weight: 700;
+	text-transform: none;
+	letter-spacing: 0;
+	color: var(--color-ink-muted);
+}
+
+.pagination-links .link-title {
+	font-family: var(--font-body);
+	font-size: var(--text-lg);
+	font-weight: 800;
+	text-transform: none;
+	letter-spacing: 0;
+	color: var(--color-accent);
+}
+
+.starlight-aside {
+	background: var(--color-panel);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow:
+		inset 3px 0 0 var(--sl-color-asides-border),
+		var(--shadow-window);
+}
+
+.starlight-aside--note {
+	--sl-color-asides-border: var(--badge-in-game-foreground);
+	--sl-color-asides-text-accent: var(--badge-in-game-foreground);
+	background: var(--badge-in-game-background);
+}
+
+.starlight-aside--tip {
+	--sl-color-asides-border: var(--badge-official-foreground);
+	--sl-color-asides-text-accent: var(--badge-official-foreground);
+	background: var(--badge-official-background);
+}
+
+.starlight-aside--caution {
+	--sl-color-asides-border: var(--badge-unverified-foreground);
+	--sl-color-asides-text-accent: var(--badge-unverified-foreground);
+	background: var(--badge-unverified-background);
+}
+
+.starlight-aside__title {
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: var(--text-base);
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+.starlight-aside__icon {
+	display: none;
+}
+
+.sl-steps > li::before {
+	line-height: calc(var(--bullet-size) - 2px);
+	font-family: var(--font-body);
+	font-weight: 800;
+	color: var(--color-ink);
+	background: var(--color-chip);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-chrome);
+	box-shadow: none;
+}
+
+table {
+	font-variant-numeric: tabular-nums;
+}
+
+a {
+	text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+	outline: 3px solid var(--color-focus);
+	outline-offset: 2px;
+}
+
+.page {
+	overflow-x: clip;
+}
+
+:is(.page-title__strip, .window__title-bar, .home-hero__wordmark) :focus-visible {
+	outline-color: var(--color-wood-text);
+}
+
 td .sl-badge {
 	white-space: nowrap;
 }

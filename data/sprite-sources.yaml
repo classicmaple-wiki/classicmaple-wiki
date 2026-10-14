@@ -1,0 +1,81 @@
+# Where identification sprites may come from. Rules: docs/policies/images.md.
+# Only the owner changes a status. Use a source in an entry's sprite block
+# only when its status is allowed or allowed-with-credit.
+- id: original
+  name: Drawn by Classic Maple Wiki
+  status: allowed
+  checked: 2026-10-13
+  reason: Our own drawing, designed from scratch, not a copy or trace of a Nexon sprite.
+
+- id: own-screenshot
+  name: A contributor's own in-game screenshot
+  status: allowed
+  checked: 2026-10-13
+  reason: A crop from a screenshot the contributor took in the official game. Link the full screenshot as source_url.
+
+- id: maplelegends
+  name: MapleLegends
+  url: https://maplelegends.com/
+  status: blocked
+  checked: 2026-10-13
+  reason: A private server. Nexon's terms forbid promoting private servers and Nexon calls them infringement. Its data may not match Classic World.
+
+- id: mapleroyals
+  name: MapleRoyals
+  url: https://mapleroyals.com/
+  status: blocked
+  checked: 2026-10-13
+  reason: A private server. Same reason as MapleLegends.
+
+- id: maplestory-io
+  name: maplestory.io
+  url: https://maplestory.io/
+  status: allowed
+  terms_url: https://maplestory.io/
+  checked: 2026-10-13
+  reason: >-
+    Says all media and icons are the property of Nexon and claims no rights of its own. No rule against reuse and no
+    credit asked. Lists only official Nexon regions. Use single mob, NPC, or item frames only, never its character
+    renders or composites. Download and host them yourself.
+
+- id: maplestorywiki
+  name: MapleStory Wiki (maplestorywiki.net)
+  url: https://maplestorywiki.net/
+  status: allowed-with-credit
+  terms_url: https://maplestorywiki.net/w/MapleStory_Wiki:Copyrights
+  credit: Sprite via MapleStory Wiki (maplestorywiki.net).
+  checked: 2026-10-13
+  reason: >-
+    Its CC BY-NC-SA license covers article text, not game images, which it marks as Nexon copyright under fair use.
+    Nothing loaded forbids copying images. Credit is a courtesy. Never take its text or anything it made.
+
+- id: niadb
+  name: NiaMeowDB, rebranding to NiaDB (meowdb.com)
+  url: https://meowdb.com/
+  status: allowed-with-credit
+  terms_url: https://meowdb.com/reuse
+  credit: Credit NiaMeowDB (meowdb.com) and link to the specific page used.
+  checked: 2026-10-13
+  reason: >-
+    Its reuse page says sprites belong to their publishers and asks for credit with a link. Its terms ban bots,
+    scrapers, and bulk copying, so take one sprite at a time by hand. Never take its custom icons, emojis, or
+    contributed images. It credits maplestory.io for its sprites, so prefer that source.
+
+- id: fandom
+  name: MapleStory Fandom wiki (maplestory.fandom.com)
+  url: https://maplestory.fandom.com/
+  status: ask-first
+  terms_url: https://www.fandom.com/licensing
+  checked: 2026-10-13
+  reason: >-
+    Every Fandom page returned HTTP 402 to our checks, so its terms could not be read. Someone must read them in a
+    browser and record what they say before any use.
+
+- id: hidden-street
+  name: Hidden Street (hidden-street.net)
+  url: https://www.hidden-street.net/
+  status: ask-first
+  checked: 2026-10-13
+  reason: >-
+    Every page returned HTTP 403 to our checks, so its terms could not be read. Covers official regions, not a private
+    server. Read its terms in a browser before any use.

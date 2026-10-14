@@ -2,13 +2,28 @@
 /*
    One page per monster, generated from data/monsters/. The edit link
    points at the YAML file, so fixing a number is one click away.
+
+   The page sits in the scene of the first map that lists the monster, or
+   in the default scene with the monster's own mood. The subtitle says
+   where it lives, or plainly that nobody knows yet.
+
+   Reports that differ from the original game come first, in a lead
+   window titled Not the original, set apart from the facts. The title is
+   short so it stays on one line on a phone. Then the Monster window with
+   every stat as a labeled row, and the history last. Missing values read
+   Unknown. When every value is Unknown, one invitation replaces the per
+   row links. The status chip sits in the title panel, which finds it by
+   the page's path, so it is not repeated here. The table of contents
+   lists exactly the windows shown.
 */
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getCollection } from 'astro:content';
 import { editBaseUrl } from '../../../site.config.mjs';
 import ChangeLog from '../../components/ChangeLog.astro';
-import VerifiedBadge from '../../components/VerifiedBadge.astro';
+import StatRows from '../../components/StatRows.astro';
+import Window from '../../components/Window.astro';
 import { formatList, formatStatistic } from '../../lib/data';
+import { resolveMonsterScene } from '../../lib/scenes';
 
 export async function getStaticPaths() {
 	const monsterEntries = await getCollection('monsters');
@@ -20,45 +35,93 @@ export async function getStaticPaths() {
 
 const { monster } = Astro.props;
 
-const mapsWithMonster = (await getCollection('maps'))
+const mapNames = (await getCollection('maps'))
 	.map((mapEntry) => mapEntry.data)
-	.filter((map) => map.monsters.includes(monster.id));
+	.filter((map) => map.monsters.includes(monster.id))
+	.map((map) => map.name)
+	.sort((first, second) => first.localeCompare(second));
+
+const resolved = await resolveMonsterScene(monster);
+const editUrl = `${editBaseUrl}data/monsters/${monster.id}.yaml`;
+const subtitle =
+	mapNames.length === 0 ? 'Place unknown. Add it if you have seen it.' : `Found in ${formatList(mapNames)}.`;
+
+/*
+   Known numbers keep the shared formatting. A missing number stays
+   empty here, so the stat rows can show it as Unknown.
+*/
+function statisticValue(value: number | undefined): string | undefined {
+	return value === undefined ? undefined : formatStatistic(value);
+}
+
+/*
+   An empty list means nobody has recorded it yet, not that there is
+   nothing, so it also stays empty and shows as Unknown. Known element
+   names are capitalized for reading.
+*/
+function listValue(values: string[]): string | undefined {
+	if (values.length === 0) return undefined;
+	return formatList(values.map((value) => value.charAt(0).toUpperCase() + value.slice(1)));
+}
+
+const statisticRows = [
+	{ label: 'Level', value: statisticValue(monster.level) },
+	{ label: 'HP', value: statisticValue(monster.hp) },
+	{ label: 'MP', value: statisticValue(monster.mp) },
+	{ label: 'EXP', value: statisticValue(monster.exp) },
+	{ label: 'Weak to', value: listValue(monster.weak_to) },
+	{ label: 'Strong to', value: listValue(monster.strong_to) },
+	{ label: 'Immune to', value: listValue(monster.immune_to) },
+	{ label: 'Found in', value: mapNames.length === 0 ? undefined : formatList(mapNames) },
+];
+
+const headings = [
+	...(monster.differs_from_original
+		? [{ depth: 2, slug: 'differs-from-original', text: 'Not the original' }]
+		: []),
+	{ depth: 2, slug: 'stats', text: 'Monster' },
+	...(monster.notes ? [{ depth: 2, slug: 'notes', text: 'Notes' }] : []),
+	{ depth: 2, slug: 'history', text: 'History' },
+];
 ---
 
 <StarlightPage
 	frontmatter={{
 		title: monster.name,
 		description: `${monster.name} in MapleStory Classic World: level, HP, EXP, weaknesses, and changes between builds.`,
-		editUrl: `${editBaseUrl}data/monsters/${monster.id}.yaml`,
+		editUrl,
+		scene: resolved.scene,
+		mood: resolved.mood,
+		subtitle,
 	}}
-	headings={[
-		{ depth: 2, slug: 'stats', text: 'Stats' },
-		{ depth: 2, slug: 'history', text: 'History' },
-	]}
+	headings={headings}
 >
-	<p><VerifiedBadge verified={monster.verified} /></p>
+	{
+		monster.differs_from_original && (
+			<div class="lead-window">
+				<Window title="Not the original" id="differs-from-original">
+					<blockquote>
+						<p>{monster.differs_from_original}</p>
+					</blockquote>
+					<p class="lead-window__note">
+						This is a lead, not a fact. <a href={editUrl}>Add the real value</a>
+					</p>
+				</Window>
+			</div>
+		)
+	}
 
-	{monster.differs_from_original && <p>{monster.differs_from_original}</p>}
+	<Window title="Monster" id="stats" build={monster.verified.build}>
+		<StatRows rows={statisticRows} editUrl={editUrl} subject="this monster" />
+	</Window>
 
-	<h2 id="stats">Stats</h2>
-	<table>
-		<tbody>
-			<tr><th scope="row">Level</th><td>{formatStatistic(monster.level)}</td></tr>
-			<tr><th scope="row">HP</th><td>{formatStatistic(monster.hp)}</td></tr>
-			<tr><th scope="row">MP</th><td>{formatStatistic(monster.mp)}</td></tr>
-			<tr><th scope="row">EXP</th><td>{formatStatistic(monster.exp)}</td></tr>
-			<tr><th scope="row">Weak to</th><td>{formatList(monster.weak_to)}</td></tr>
-			<tr><th scope="row">Strong to</th><td>{formatList(monster.strong_to)}</td></tr>
-			<tr><th scope="row">Immune to</th><td>{formatList(monster.immune_to)}</td></tr>
-			<tr>
-				<th scope="row">Found in</th>
-				<td>{formatList(mapsWithMonster.map((map) => map.name))}</td>
-			</tr>
-		</tbody>
-	</table>
+	{
+		monster.notes && (
+			<Window title="Notes" id="notes">
+				<p>{monster.notes}</p>
+			</Window>
+		)
+	}
 
-	{monster.notes && <p>{monster.notes}</p>}
-
-	<h2 id="history">History</h2>
 	<ChangeLog collectionName="monsters" entityIdentifier={monster.id} />
 </StarlightPage>

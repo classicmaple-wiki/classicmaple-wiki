@@ -1,0 +1,219 @@
+---
+/*
+   The page title, overriding Starlight's PageTitle. Every page except the
+   home splash opens with its place (spec 0003, option one of the owner's
+   title ideas): the painted scene, with the page's name on a wooden sign
+   hanging in the scene's top left corner, the way MapleStory shows a map
+   name when you enter it. The art direction keeps the top quarter of
+   every picture free of anything important, so the sign never hides the
+   scene. The sign is solid wood, so its text never sits on the art.
+
+   Directly under the scene, attached to it rather than floating over it,
+   a wooden strip holds the breadcrumb, the status line on entity pages,
+   and the section's emblem. The breadcrumb is built from the page's path
+   and ends on the page itself. A parent section links only when a page
+   for it exists. On a class or monster page, the status line shows the
+   verification chip and the entity's id, read from its data file, which
+   is found by the page's path.
+
+   The band takes the shape of its own picture through an aspect ratio
+   from src/lib/sceneArt.ts. Its data-mood lets tokens.css set the page's
+   mood colors without any script. The scene and mood come from the page's
+   frontmatter first, a class guide falls back to its class data, and
+   anything else to the default scene. A page's own sprite stands on the
+   picture's ground strip.
+
+   The H1 keeps Starlight's id, so the skip link and the Overview entry in
+   the table of contents still land on it. Styles live in pages.css.
+*/
+import { existsSync, readFileSync } from 'node:fs';
+import { getCollection, getEntry } from 'astro:content';
+import type { Verification } from '../../schemas/shared';
+import { emblemForSection, glyphPath, glyphs } from '../lib/glyphs';
+import { resolveClassScene, resolveGuideScene, type ResolvedScene } from '../lib/scenes';
+import { sceneAspectRatio } from '../lib/sceneArt';
+import Scene from './scenes/Scene.astro';
+import VerifiedBadge from './VerifiedBadge.astro';
+
+const pageTitleIdentifier = '_top';
+const route = Astro.locals.starlightRoute;
+const { title, subtitle, scene, mood } = route.entry.data;
+const pathSegments = route.id.split('/').filter((segment) => segment !== '' && segment !== 'index');
+
+/*
+   The page's own scene wins. A class guide that names no scene inherits
+   the one on its class data, while still honoring a mood set on the page.
+*/
+async function resolvePageScene(): Promise<ResolvedScene> {
+	const ownChoice = { scene, mood };
+	if (ownChoice.scene) return resolveGuideScene(ownChoice);
+	if (pathSegments[0] === 'classes' && pathSegments.length > 1) {
+		const classEntry = await getEntry('classes', pathSegments[1]);
+		if (classEntry) {
+			const fromClass = resolveClassScene(classEntry.data);
+			return { scene: fromClass.scene, mood: ownChoice.mood ?? fromClass.mood };
+		}
+	}
+	return resolveGuideScene(ownChoice);
+}
+
+interface BreadcrumbStep {
+	label: string;
+	href?: string;
+	isCurrent?: boolean;
+}
+
+/*
+   Section pages are either guides, whose id is the section name, or
+   generated index pages under src/pages. Guides lend their title to the
+   breadcrumb. Other sections show their folder name in plain words. The
+   last step is the page itself.
+*/
+async function buildBreadcrumb(): Promise<BreadcrumbStep[]> {
+	const parentSegments = pathSegments.slice(0, -1);
+	const guideTitles = new Map((await getCollection('docs')).map((guideEntry) => [guideEntry.id, guideEntry.data.title]));
+	const steps: BreadcrumbStep[] = [{ label: 'Home', href: '/' }];
+	parentSegments.forEach((segment, position) => {
+		const sectionPath = parentSegments.slice(0, position + 1).join('/');
+		const guideTitle = guideTitles.get(sectionPath) ?? guideTitles.get(`${sectionPath}/index`);
+		const plainLabel = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+		const sectionExists = guideTitle !== undefined || existsSync(`src/pages/${sectionPath}/index.astro`);
+		steps.push({ label: guideTitle ?? plainLabel, href: sectionExists ? `/${sectionPath}/` : undefined });
+	});
+	steps.push({ label: title, isCurrent: true });
+	return steps;
+}
+
+interface EntityStatus {
+	identifierLabel: string;
+	identifier: string;
+	verified: Verification;
+	spriteFile?: string;
+}
+
+/*
+   A class guide or a monster page is about one entry in data/. Its file
+   holds the verification record that the status line shows.
+*/
+async function findEntityStatus(): Promise<EntityStatus | undefined> {
+	if (pathSegments.length !== 2) return undefined;
+	const [section, identifier] = pathSegments;
+	if (section === 'classes') {
+		const classEntry = await getEntry('classes', identifier);
+		return classEntry && { identifierLabel: 'Class id', identifier, verified: classEntry.data.verified };
+	}
+	if (section === 'monsters') {
+		const monsterEntry = await getEntry('monsters', identifier);
+		return (
+			monsterEntry && {
+				identifierLabel: 'Monster id',
+				identifier,
+				verified: monsterEntry.data.verified,
+				spriteFile: monsterEntry.data.sprite?.file,
+			}
+		);
+	}
+	return undefined;
+}
+
+interface Resident {
+	source: string;
+	width: number;
+	height: number;
+}
+
+/*
+   The page's own sprite stands in its scene (decision 0006). Its size is
+   read from the PNG header so the band never shifts, and it is drawn at a
+   whole number scale, doubled when small, so the pixels stay crisp. The
+   validation script already guarantees the file exists and is small.
+*/
+function findResident(spriteFile: string | undefined): Resident | undefined {
+	if (!spriteFile) return undefined;
+	const filePath = `public/sprites/${spriteFile}`;
+	if (!existsSync(filePath)) return undefined;
+	const header = readFileSync(filePath).subarray(16, 24);
+	const width = header.readUInt32BE(0);
+	const height = header.readUInt32BE(4);
+	const scale = Math.max(width, height) <= 64 ? 2 : 1;
+	return { source: `/sprites/${spriteFile}`, width: width * scale, height: height * scale };
+}
+
+const resolved = await resolvePageScene();
+const breadcrumb = await buildBreadcrumb();
+const entityStatus = await findEntityStatus();
+const resident = findResident(entityStatus?.spriteFile);
+const bandAspectRatio = sceneAspectRatio(resolved.scene);
+const emblemPath = glyphPath(glyphs[emblemForSection(pathSegments[0])]);
+---
+
+<div class="page-title">
+	<div
+		class="scene-band page-title__band"
+		data-mood={resolved.mood}
+		data-scene={resolved.scene}
+		style={bandAspectRatio && `--scene-aspect: ${bandAspectRatio}`}
+	>
+		<Scene scene={resolved.scene} variant="band" />
+		{
+			resident && (
+				<img
+					class="scene-resident"
+					src={resident.source}
+					width={resident.width}
+					height={resident.height}
+					alt=""
+					decoding="async"
+				/>
+			)
+		}
+		<div class="page-title__sign">
+			<h1 class="page-title__heading" id={pageTitleIdentifier}>{title}</h1>
+			{subtitle && <p class="page-title__subtitle">{subtitle}</p>}
+		</div>
+	</div>
+	<div class="page-title__strip">
+		<nav class="page-title__breadcrumb" aria-label="Breadcrumb">
+			<ol>
+				{
+					breadcrumb.map((step) => (
+						<li>
+							{step.isCurrent ? (
+								<span aria-current="page">{step.label}</span>
+							) : step.href ? (
+								<a href={step.href}>{step.label}</a>
+							) : (
+								<span>{step.label}</span>
+							)}
+						</li>
+					))
+				}
+			</ol>
+		</nav>
+		{
+			entityStatus && (
+				<p class="page-title__meta">
+					<span class="page-title__meta-item">
+						<span class="page-title__meta-label">Status</span>
+						<VerifiedBadge verified={entityStatus.verified} />
+					</span>
+					<span class="page-title__meta-item">
+						<span class="page-title__meta-label">{entityStatus.identifierLabel}</span>
+						<code>{entityStatus.identifier}</code>
+					</span>
+				</p>
+			)
+		}
+		<svg
+			class="page-title__emblem"
+			width="24"
+			height="24"
+			viewBox="0 0 12 12"
+			shape-rendering="crispEdges"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path d={emblemPath}></path>
+		</svg>
+	</div>
+</div>

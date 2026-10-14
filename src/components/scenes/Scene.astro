@@ -1,0 +1,50 @@
+---
+/*
+   One scene from the library of places, as a painted picture (decisions
+   0006 and 0007). src/lib/sceneArt.ts finds the picture and its night
+   twin and makes WebP files at a small and a large width. Both are set
+   as CSS custom properties and used as a cover background, so only the
+   size and theme the reader actually sees is downloaded. Without a night
+   picture, dark mode dims the day one. Without any picture, the scene is
+   a plain gradient in its mood, so a page never shows a broken scene.
+
+   The wrapper decides the size, so nothing shifts while the picture
+   loads. The element is a span, so it is valid inside the shelf card
+   links. The art is decoration, hidden from assistive technology, since
+   the page title already says where the reader is.
+*/
+import type { SceneIdentifier } from '../../../schemas/shared';
+import { scenePictures, type SceneVariant } from '../../lib/sceneArt';
+
+interface Props {
+	scene: SceneIdentifier;
+	variant: SceneVariant;
+}
+
+const { scene, variant } = Astro.props;
+const pictures = await scenePictures(scene, variant);
+
+const style = pictures
+	? [
+			`--scene-day-small: url('${pictures.day.small}')`,
+			`--scene-day-large: url('${pictures.day.large}')`,
+			pictures.night ? `--scene-night-small: url('${pictures.night.small}')` : '',
+			pictures.night ? `--scene-night-large: url('${pictures.night.large}')` : '',
+		]
+			.filter(Boolean)
+			.join('; ')
+	: undefined;
+---
+
+{
+	pictures ? (
+		<span
+			class:list={['scene-art', { 'scene-art--dim-at-night': !pictures.night }]}
+			style={style}
+			data-variant={variant}
+			aria-hidden="true"
+		/>
+	) : (
+		<span class="scene-art scene-art--placeholder" data-variant={variant} aria-hidden="true" />
+	)
+}

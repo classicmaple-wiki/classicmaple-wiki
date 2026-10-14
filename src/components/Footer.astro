@@ -1,23 +1,75 @@
 ---
 /*
-   Wraps the default Starlight footer and adds the fan site disclaimer, so
-   it appears on every page without anyone having to remember it.
+   Wraps the default Starlight footer and adds the site credits, so they
+   appear on every page without anyone having to remember them. The game
+   comes first: a plain text link sends readers to the official MapleStory
+   Classic World site (decision 0005). Then the fan site disclaimer, then
+   the builder credit, linked from site.config.mjs.
+
+   When any painted scene picture exists, a line discloses that scene art
+   is made with AI image tools and edited by hand (decision 0006). The
+   check runs at build time, so the line appears with the first picture.
+
+   The credits sit on a dark stone ledge under a wooden edge, the same
+   ground the painted pictures stand on (spec 0003): blocks laid in offset
+   rows, drawn with CSS gradients, not an image. Text is cream and links
+   are lantern gold, both well above AA on the stone and its joints.
 */
 import Default from '@astrojs/starlight/components/Footer.astro';
+import { builderName, builderUrl, officialGameUrl } from '../../site.config.mjs';
+
+const scenePictures = import.meta.glob('../assets/scenes/*.{png,jpg,jpeg,webp}');
+const hasPaintedScenes = Object.keys(scenePictures).length > 0;
 ---
 
 <Default><slot /></Default>
 
-<p class="disclaimer">
-	Unofficial fan site. Not affiliated with or endorsed by Nexon. MapleStory and related names are trademarks of their
-	respective owners.
-</p>
+<div class="site-credits">
+	<p class="site-credits__line">
+		Play MapleStory Classic World on the <a href={officialGameUrl} rel="noopener">official site</a>.
+	</p>
+	<p class="site-credits__line">
+		Unofficial fan site. Not affiliated with or endorsed by Nexon. MapleStory and related names are trademarks of their
+		respective owners.
+	</p>
+	{
+		hasPaintedScenes && (
+			<p class="site-credits__line">Scene art made with AI image tools and edited by hand.</p>
+		)
+	}
+	<p class="site-credits__line">
+		Built by <a href={builderUrl} rel="noopener">{builderName}</a>.
+	</p>
+</div>
 
 <style>
-	.disclaimer {
-		margin-top: 2rem;
-		font-size: var(--sl-text-xs);
-		color: var(--sl-color-gray-3);
+	.site-credits {
+		margin-top: var(--space-6);
+		padding: var(--space-4) var(--space-4) var(--space-5);
+		background:
+			linear-gradient(rgb(0 0 0 / 0.18) 2px, transparent 2px) 0 0 / 100% 24px,
+			repeating-linear-gradient(to right, transparent 0 46px, rgb(0 0 0 / 0.18) 46px 48px) 0 0 / 100% 24px no-repeat,
+			repeating-linear-gradient(to right, transparent 0 22px, rgb(0 0 0 / 0.18) 22px 24px, transparent 24px 46px) 0 24px / 100% 24px,
+			var(--color-stone);
+		color: var(--color-stone-text);
+		border-top: 3px solid var(--color-wood);
+		border-radius: 0 0 var(--radius-window) var(--radius-window);
 		text-align: center;
+	}
+
+	.site-credits__line {
+		margin: 0 auto;
+		max-width: 60ch;
+		font-size: var(--text-xs);
+		line-height: 1.5;
+		color: var(--color-stone-text);
+	}
+
+	.site-credits__line + .site-credits__line {
+		margin-top: var(--space-1);
+	}
+
+	.site-credits__line a {
+		color: var(--color-stone-link);
 	}
 </style>

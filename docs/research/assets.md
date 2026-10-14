@@ -4,7 +4,9 @@ Date: 2026-10-13. Phase 2, deliverable 2.
 
 This document lists every asset type the wiki might use, who owns it, what its terms say, and what we do with it. It quotes what Nexon publishes about fan use, game images, and money, with a link to each source. It flags the one question that must be answered before the support page ships: whether donations are clearly allowed.
 
-Standing rules:
+Update 2026-10-13: decision 0005 now allows small plain identification sprites from fan sites whose terms allow it. Where this inventory says "do not use" for sprites taken from other wikis, 0005 and `docs/policies/images.md` now govern instead. Map art, logos, music, and client extraction stay out.
+
+Standing rules at the time of this research:
 
 - No bulk download of game art, sprites, or sounds.
 - No extraction from the game client.
@@ -201,11 +203,14 @@ What this means for the support page:
 
 ## Decisions the owner must make
 
+Answered 2026-10-13: the owner accepted every recommended default below. They are now standing decisions.
+
+
 1. Screenshots. Allow your own in game screenshots, small and attributed, under a fair use claim with a per file label and a takedown contact, or allow none. Recommended default: none at launch. Revisit after launch with a written request to Nexon.
 2. Donations. Proceed with the wording in the monetization section, or wait for a Nexon answer. Recommended default: proceed.
 3. Site name. Keep MapleStory in the tagline and description as plain text with the not affiliated line, or avoid the word in the site name. Recommended default: keep it in the description, never in the wordmark.
 4. Mascot. Allow a generic mushroom motif with its own design, or avoid mushrooms. Recommended default: a generic mushroom, clearly not the Orange Mushroom sprite.
-5. Fonts. Pick one pixel display face from Pixelify Sans, Press Start 2P, and Silkscreen, and one body face from Inter, Nunito, Source Serif 4, and Lora. Recommended default: Pixelify Sans for display, Nunito for body, Silkscreen for chips. The spec will show them.
+5. Fonts. Pick one pixel display face from Pixelify Sans, Press Start 2P, and Silkscreen, and one body face from Inter, Nunito, Source Serif 4, and Lora. Recommended default: Pixelify Sans for display, Nunito for body, Silkscreen for chips. The spec will show them. Changed 2026-10-13 during the mockups: Silkscreen replaces Pixelify Sans for display too, because the Pixelify capital C reads as an O. Owner to confirm with the direction pick.
 6. Icons. Pick one line set and one pixel set. Recommended default: Lucide for interface icons, Pixelarticons free set for entity glyphs.
 7. Open art packs. Allow Kenney CC0 packs as raw material for window frames and tiles, recolored to our palette, or draw everything from scratch. Recommended default: allow Kenney as raw material, nothing else without a per file check.
 8. Other wikis' text. Write everything original, or allow data table reuse from maplestorywiki.net under CC BY-SA 3.0 with credit and share alike. Recommended default: original only.
