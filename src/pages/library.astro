@@ -72,6 +72,9 @@ const presentTypes = libraryTypes.filter((entry) => cards.some((card) => card.ty
 	   card shows when its name contains the typed text and its type is
 	   the chosen one, or the pill is All. The count line and the empty
 	   note follow, so the reader always knows what they are looking at.
+	   The chosen type lives in the address as ?type=quest, so the home
+	   page, the sidebar, and breadcrumbs can open the library on one type,
+	   and a filtered view can be shared.
 	*/
 	function connectLibraryFilter(): void {
 		const field = document.querySelector<HTMLInputElement>('[data-library-field]');
@@ -95,14 +98,26 @@ const presentTypes = libraryTypes.filter((entry) => cards.some((card) => card.ty
 			if (emptyNote) emptyNote.hidden = shown > 0;
 		};
 
+		const choose = (pill: HTMLButtonElement): void => {
+			chosenType = pill.dataset.libraryPill ?? 'all';
+			for (const other of pills) other.setAttribute('aria-pressed', String(other === pill));
+			applyFilter();
+		};
+
 		field.addEventListener('input', applyFilter);
 		for (const pill of pills) {
 			pill.addEventListener('click', () => {
-				chosenType = pill.dataset.libraryPill ?? 'all';
-				for (const other of pills) other.setAttribute('aria-pressed', String(other === pill));
-				applyFilter();
+				choose(pill);
+				const address = new URL(window.location.href);
+				if (chosenType === 'all') address.searchParams.delete('type');
+				else address.searchParams.set('type', chosenType);
+				history.replaceState(null, '', address);
 			});
 		}
+
+		const requestedType = new URLSearchParams(window.location.search).get('type');
+		const requestedPill = pills.find((pill) => pill.dataset.libraryPill === requestedType);
+		if (requestedPill) choose(requestedPill);
 	}
 
 	connectLibraryFilter();

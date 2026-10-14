@@ -49,6 +49,14 @@ export const libraryTypes: { type: LibraryType; label: string; pluralLabel: stri
 ];
 
 /*
+   The library type whose pages live under a path section, such as
+   "quests" for quest pages, so links can open the library on that type.
+*/
+export function libraryTypeForSection(section: string) {
+	return libraryTypes.find((entry) => `${entry.type}s` === section && ['monster', 'item', 'map', 'npc', 'quest', 'shop'].includes(entry.type));
+}
+
+/*
    Turns a lowercase word from the data, such as "equipment", into a
    label for reading.
 */

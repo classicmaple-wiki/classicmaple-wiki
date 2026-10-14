@@ -30,6 +30,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { getCollection, getEntry } from 'astro:content';
 import type { Verification } from '../../schemas/shared';
 import { emblemForSection, glyphPath, glyphs } from '../lib/glyphs';
+import { libraryTypeForSection } from '../lib/library';
 import { resolveClassScene, resolveGuideScene, type ResolvedScene } from '../lib/scenes';
 import { sceneAspectRatio } from '../lib/sceneArt';
 import Scene from './scenes/Scene.astro';
@@ -66,8 +67,10 @@ interface BreadcrumbStep {
 /*
    Section pages are either guides, whose id is the section name, or
    generated index pages under src/pages. Guides lend their title to the
-   breadcrumb. Other sections show their folder name in plain words. The
-   last step is the page itself.
+   breadcrumb. Entity sections, such as quests or NPCs, point at the
+   library with that type chosen, so every entry is reached the same way.
+   Other sections show their folder name in plain words. The last step is
+   the page itself.
 */
 async function buildBreadcrumb(): Promise<BreadcrumbStep[]> {
 	const parentSegments = pathSegments.slice(0, -1);
@@ -77,6 +80,11 @@ async function buildBreadcrumb(): Promise<BreadcrumbStep[]> {
 		const sectionPath = parentSegments.slice(0, position + 1).join('/');
 		const guideTitle = guideTitles.get(sectionPath) ?? guideTitles.get(`${sectionPath}/index`);
 		const plainLabel = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+		const libraryType = position === 0 ? libraryTypeForSection(segment) : undefined;
+		if (libraryType) {
+			steps.push({ label: libraryType.pluralLabel, href: `/library/?type=${libraryType.type}` });
+			return;
+		}
 		const sectionExists = guideTitle !== undefined || existsSync(`src/pages/${sectionPath}/index.astro`);
 		steps.push({ label: guideTitle ?? plainLabel, href: sectionExists ? `/${sectionPath}/` : undefined });
 	});
