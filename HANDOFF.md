@@ -1,29 +1,29 @@
 # Handoff
 
-Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spec of the top Now item.
+Rewritten at the end of every session. Read this, then `AGENTS.md`, then `docs/data-research.md`.
 
 ## Current state
 
-The art led design is live on https://classicmaple.wiki. Pull request 4 (`site/scenes-and-library`) adds every painted scene, four special page rooms, the library (spec 0004), item and map pages, the first sprite, and the data research brief. It waits for the owner to merge. Game content is still mostly Unknown, and data research is being handed to Gemini or Antigravity.
+Pull request 4 is merged. The art led design, scenes, library, and sprite foundations are live on https://classicmaple.wiki. Launch content research (item P5) is in progress. Every research pull request is tagged with `ai-drafted` and enters as `unverified` for owner review.
 
 ## Just done
 
-- `docs/data-research.md`: what counts as a Classic World source, what never does, the rules, where each fact goes, launch priorities, and how to hand work in.
-- `GEMINI.md` pointer, and AGENTS.md now points data work at the brief.
-- The library, scenes, and sprite work listed in spec 0004.
+- Summarized official Founder's Access release notes into `data/patches/2026-10-06-founders-access.yaml`.
+- Verified dates, level cap (100), region scope, job paths, and new systems against official Nexon notice 45621.
+- Validated schemas and static build cleanly with `npm run validate` and `npm run build`.
+- Opened pull request `patch: summarize founder's access release notes`.
 
 ## In progress
 
-Pull request 4. P5 launch content, by a research agent, from the brief.
+P5 launch content. Next topic is priority 2: level 1 to 30 leveling routes in `src/content/docs/leveling/`.
 
 ## Next step
 
-Owner merges pull request 4. The research agent works through the priorities in `docs/data-research.md`, one pull request per topic, each labeled `ai-drafted`. The owner reviews each on its preview and raises statuses only where sources hold. Then P3 (about and support pages in their rooms) and more sprites (P2b). After launch, stage 1 of P4d. Launch is 2026-10-21.
+Owner reviews the Founder's Access patch notes pull request on the Vercel preview. Then the research agent creates the plan and branch for level 1 to 30 leveling routes.
 
 ## Blockers and questions for the owner
 
-- Merge pull request 4.
-- Review research pull requests as they arrive.
+- Review pull request for Founder's Access patch notes on its Vercel preview link.
 
 ## Verify
 
