@@ -14,6 +14,9 @@ Everything from 2026-10-14 is merged and live on classicmaple.wiki:
 
 ## Latest
 
+Spec 0010: corrections without GitHub through a Tally form, a three item footer, and `/legal/`. The Tally form is live at https://tally.so/r/GeveVj. Corrections arrive by email to the owner; turn them into data pull requests with the right build.
+
+
 Pull request for spec 0009, easier navigation: map pictures from town scenes, map exits, cards for quest NPCs, shop stock, and NPC links, geographic breadcrumbs, and Places, Classes, and Economy index pages.
 
 ## Next step

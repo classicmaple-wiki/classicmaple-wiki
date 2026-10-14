@@ -22,3 +22,12 @@ export const officialGameUrl = 'https://www.nexon.com/maplestory/classic';
 export const builderName = 'Sirux';
 
 export const builderUrl = 'https://sirux.io';
+
+/*
+   The correction form players use without GitHub (spec 0010), a Tally
+   form the owner made. Paste its share link here, such as
+   'https://tally.so/r/abc123'. While it is empty, the site's correction
+   links go to the How to contribute page instead. Each link passes the
+   page it came from as ?page=, which the form keeps in a hidden field.
+*/
+export const correctionFormUrl = 'https://tally.so/r/GeveVj';

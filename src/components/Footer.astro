@@ -1,56 +1,36 @@
 ---
 /*
-   Wraps the default Starlight footer and adds the site credits, so they
-   appear on every page without anyone having to remember them. First, one
-   line leads to How to contribute, the single place to add or fix data
-   (owner, 2026-10-15). The game
-   comes first: a plain text link sends readers to the official MapleStory
-   Classic World site (decision 0005). Then the fan site disclaimer, then
-   the content license with links to the credits and privacy pages (decision
-   0008), then the builder credit, linked from site.config.mjs.
+   Wraps the default Starlight footer (spec 0010). It stays short: one
+   box asking readers to send a correction, then three items in one row:
+   a link to play MapleStory Classic World on the official site, the Legal
+   page with every disclaimer, license, and credit, and the builder
+   credit. The full fine print lives on /legal/, one click away on every
+   page.
 
-   When any painted scene picture exists, a line discloses that scene art
-   is made with AI image tools and edited by hand (decision 0006). The
-   check runs at build time, so the line appears with the first picture.
-
-   The credits sit on a soft band under a 1 pixel line, a step darker than
-   the page (spec 0006). Text and links use the footer tokens, both well
-   above AA in both themes.
+   The correction link opens the Tally form from site.config.mjs with
+   this page's address filled in, or the How to contribute page while no
+   form is set. The footer sits on a soft band under a 1 pixel line.
 */
 import Default from '@astrojs/starlight/components/Footer.astro';
-import { builderName, builderUrl, officialGameUrl } from '../../site.config.mjs';
+import { builderName, builderUrl, correctionFormUrl, officialGameUrl, siteUrl } from '../../site.config.mjs';
 
-const scenePictures = import.meta.glob('../assets/scenes/*.{png,jpg,jpeg,webp}');
-const hasPaintedScenes = Object.keys(scenePictures).length > 0;
+const pageAddress = new URL(Astro.url.pathname, siteUrl).href;
+const correctionUrl = correctionFormUrl
+	? `${correctionFormUrl}?page=${encodeURIComponent(pageAddress)}`
+	: '/contributing/';
 ---
 
 <Default><slot /></Default>
 
 <p class="site-contribute">
-	Spotted something missing or wrong? <a href="/contributing/">Here is how to help</a>.
+	Spotted something missing or wrong? <a href={correctionUrl}>Send a correction</a>. No account needed.
 </p>
 
-<div class="site-credits">
-	<p class="site-credits__line">
-		Play MapleStory Classic World on the <a href={officialGameUrl} rel="noopener">official site</a>.
-	</p>
-	<p class="site-credits__line">
-		Unofficial fan site. Not affiliated with or endorsed by Nexon. MapleStory and related names are trademarks of their
-		respective owners.
-	</p>
-	{
-		hasPaintedScenes && (
-			<p class="site-credits__line">Scene art made with AI image tools and edited by hand.</p>
-		)
-	}
-	<p class="site-credits__line">
-		Content <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license noopener">CC BY-NC-SA 4.0</a>,
-		with data from MapleClassic Wiki. <a href="/credits/">Credits and license</a>. <a href="/privacy/">Privacy</a>.
-	</p>
-	<p class="site-credits__line">
-		Built by <a href={builderUrl} rel="noopener">{builderName}</a>.
-	</p>
-</div>
+<nav class="site-credits" aria-label="Site">
+	<a href={officialGameUrl} rel="noopener">Play MapleStory Classic World</a>
+	<a href="/legal/">Legal and credits</a>
+	<span>Built with love and care by <a href={builderUrl} rel="noopener">{builderName}</a></span>
+</nav>
 
 <style>
 	.site-contribute {
@@ -65,28 +45,22 @@ const hasPaintedScenes = Object.keys(scenePictures).length > 0;
 	}
 
 	.site-credits {
-		margin-top: var(--space-6);
-		padding: var(--space-4) var(--space-4) var(--space-5);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--space-2) var(--space-5);
+		margin-top: var(--space-4);
+		padding: var(--space-4);
 		background: var(--color-stone);
 		color: var(--color-stone-text);
 		border-top: 1px solid var(--color-line);
 		border-radius: var(--radius-window);
+		font-size: var(--text-sm);
 		text-align: center;
 	}
 
-	.site-credits__line {
-		margin: 0 auto;
-		max-width: 60ch;
-		font-size: var(--text-xs);
-		line-height: 1.5;
-		color: var(--color-stone-text);
-	}
-
-	.site-credits__line + .site-credits__line {
-		margin-top: var(--space-1);
-	}
-
-	.site-credits__line a {
+	.site-credits a {
 		color: var(--color-stone-link);
+		font-weight: 700;
 	}
 </style>
