@@ -6,138 +6,248 @@ verified:
   status: unverified
 skills:
   - id: nimble-body
-    name: "Nimble Body"
+    name: Nimble Body
     job: 1
+    branches:
+      - Rogue
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-nimble-body.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/400/skillbook
+      retrieved: 2026-10-14
   - id: keen-eyes
-    name: "Keen Eyes"
+    name: Keen Eyes
     job: 1
+    branches:
+      - Rogue
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-keen-eyes.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/400/skillbook
+      retrieved: 2026-10-14
   - id: disorder
-    name: "Disorder"
+    name: Disorder
     job: 1
+    branches:
+      - Rogue
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-disorder.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/400/skillbook
+      retrieved: 2026-10-14
   - id: dark-sight
-    name: "Dark Sight"
+    name: Dark Sight
     job: 1
+    branches:
+      - Rogue
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-dark-sight.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/400/skillbook
+      retrieved: 2026-10-14
   - id: double-stab
-    name: "Double Stab"
+    name: Double Stab
     job: 1
+    branches:
+      - Rogue
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-double-stab.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/400/skillbook
+      retrieved: 2026-10-14
   - id: lucky-seven
-    name: "Lucky Seven"
+    name: Lucky Seven
     job: 1
+    branches:
+      - Rogue
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-lucky-seven.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/400/skillbook
+      retrieved: 2026-10-14
   - id: claw-mastery
-    name: "Claw Mastery"
+    name: Claw Mastery
     job: 2
+    branches:
+      - Assassin
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-claw-mastery.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/410/skillbook
+      retrieved: 2026-10-14
   - id: critical-throw
-    name: "Critical Throw"
+    name: Critical Throw
     job: 2
+    branches:
+      - Assassin
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-critical-throw.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/410/skillbook
+      retrieved: 2026-10-14
   - id: critical-recovery
-    name: "Critical Recovery"
+    name: Critical Recovery
     job: 2
+    branches:
+      - Assassin
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
   - id: claw-booster
-    name: "Claw Booster"
+    name: Claw Booster
     job: 2
+    branches:
+      - Assassin
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-claw-booster.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/410/skillbook
+      retrieved: 2026-10-14
   - id: haste
-    name: "Haste"
+    name: Haste
     job: 2
+    branches:
+      - Assassin
+      - Bandit
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-haste.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/410/skillbook
+      retrieved: 2026-10-14
   - id: drain
-    name: "Drain"
+    name: Drain
     job: 2
+    branches:
+      - Assassin
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-drain.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/410/skillbook
+      retrieved: 2026-10-14
   - id: dagger-mastery
-    name: "Dagger Mastery"
+    name: Dagger Mastery
     job: 2
+    branches:
+      - Bandit
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-dagger-mastery.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/420/skillbook
+      retrieved: 2026-10-14
   - id: nimble-recovery
-    name: "Nimble Recovery"
+    name: Nimble Recovery
     job: 2
+    branches:
+      - Bandit
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
   - id: dagger-booster
-    name: "Dagger Booster"
+    name: Dagger Booster
     job: 2
+    branches:
+      - Bandit
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-dagger-booster.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/420/skillbook
+      retrieved: 2026-10-14
   - id: steal
-    name: "Steal"
+    name: Steal
     job: 2
+    branches:
+      - Bandit
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-steal.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/420/skillbook
+      retrieved: 2026-10-14
   - id: savage-blow
-    name: "Savage Blow"
+    name: Savage Blow
     job: 2
+    branches:
+      - Bandit
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46086/thief
       date: 2026-10-14
+    icon:
+      file: skills/thief-savage-blow.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/420/skillbook
+      retrieved: 2026-10-14

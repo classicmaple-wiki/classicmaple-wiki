@@ -54,7 +54,14 @@ const classFileUrl = `${editBaseUrl}data/classes/${classId}.yaml`;
 				<tbody>
 					{skills.map((skill) => (
 						<tr>
-							<th scope="row">{skill.name}</th>
+							<th scope="row">
+								<span class="skill-name">
+									{skill.icon && (
+										<img src={`/sprites/${skill.icon.file}`} width="32" height="32" alt="" loading="lazy" decoding="async" />
+									)}
+									{skill.name}
+								</span>
+							</th>
 							<td class="data-table__number" data-label="Job">
 								{skill.job}
 							</td>

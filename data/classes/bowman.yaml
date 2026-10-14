@@ -4,64 +4,116 @@ verified:
   status: unverified
 skills:
   - id: critical-shot
-    name: "Critical Shot"
+    name: Critical Shot
     job: 1
+    branches:
+      - Archer
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-critical-shot.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/300/skillbook
+      retrieved: 2026-10-14
   - id: the-eye-of-amazon
-    name: "The Eye of Amazon"
+    name: The Eye of Amazon
     job: 1
+    branches:
+      - Archer
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-the-eye-of-amazon.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/300/skillbook
+      retrieved: 2026-10-14
   - id: focus
-    name: "Focus"
+    name: Focus
     job: 1
+    branches:
+      - Archer
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-focus.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/300/skillbook
+      retrieved: 2026-10-14
   - id: power-knockback
-    name: "Power Knockback"
+    name: Power Knockback
     job: 1
+    branches:
+      - Archer
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-power-knockback.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/310/skillbook
+      retrieved: 2026-10-14
   - id: arrow-blow
-    name: "Arrow Blow"
+    name: Arrow Blow
     job: 1
+    branches:
+      - Archer
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-arrow-blow.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/300/skillbook
+      retrieved: 2026-10-14
   - id: double-shot
-    name: "Double Shot"
+    name: Double Shot
     job: 1
+    branches:
+      - Archer
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-double-shot.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/300/skillbook
+      retrieved: 2026-10-14
   - id: bow-mastery
-    name: "Bow Mastery"
+    name: Bow Mastery
     job: 2
+    branches:
+      - Hunter
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-bow-mastery.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/310/skillbook
+      retrieved: 2026-10-14
   - id: amazons-judgement
-    name: "Amazon's Judgement"
+    name: Amazon's Judgement
     job: 2
+    branches:
+      - Hunter
+      - Crossbowman
     verified:
       status: unverified
       build: founders-2026-10-06
@@ -70,73 +122,136 @@ skills:
   - id: final-attack-bow
     name: "Final Attack: Bow"
     job: 2
+    branches:
+      - Hunter
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-final-attack-bow.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/310/skillbook
+      retrieved: 2026-10-14
   - id: bow-booster
-    name: "Bow Booster"
+    name: Bow Booster
     job: 2
+    branches:
+      - Hunter
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-bow-booster.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/310/skillbook
+      retrieved: 2026-10-14
   - id: soul-arrow-bow
     name: "Soul Arrow: Bow"
     job: 2
+    branches:
+      - Hunter
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-soul-arrow-bow.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/310/skillbook
+      retrieved: 2026-10-14
   - id: arrow-bomb
-    name: "Arrow Bomb"
+    name: Arrow Bomb
     job: 2
+    branches:
+      - Hunter
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-arrow-bomb.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/310/skillbook
+      retrieved: 2026-10-14
   - id: crossbow-mastery
-    name: "Crossbow Mastery"
+    name: Crossbow Mastery
     job: 2
+    branches:
+      - Crossbowman
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-crossbow-mastery.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/320/skillbook
+      retrieved: 2026-10-14
   - id: final-attack-crossbow
     name: "Final Attack: Crossbow"
     job: 2
+    branches:
+      - Crossbowman
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-final-attack-crossbow.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/320/skillbook
+      retrieved: 2026-10-14
   - id: crossbow-booster
-    name: "Crossbow Booster"
+    name: Crossbow Booster
     job: 2
+    branches:
+      - Crossbowman
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-crossbow-booster.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/320/skillbook
+      retrieved: 2026-10-14
   - id: soul-arrow-crossbow
     name: "Soul Arrow: Crossbow"
     job: 2
+    branches:
+      - Crossbowman
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-soul-arrow-crossbow.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/320/skillbook
+      retrieved: 2026-10-14
   - id: iron-arrow
-    name: "Iron Arrow"
+    name: Iron Arrow
     job: 2
+    branches:
+      - Crossbowman
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46085/bowman
       date: 2026-10-14
+    icon:
+      file: skills/bowman-iron-arrow.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/320/skillbook
+      retrieved: 2026-10-14
 scene: henesys

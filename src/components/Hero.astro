@@ -35,7 +35,8 @@
 import { getCollection } from 'astro:content';
 import { Icon } from '@astrojs/starlight/components';
 import DraftContentNotice from '@astrojs/starlight/components/DraftContentNotice.astro';
-import Leaf from '../assets/leaf.svg';
+import { Image } from 'astro:assets';
+import brandIcon from '../assets/brand/icon.webp';
 import { resolveGuideScene } from '../lib/scenes';
 import GlyphIcon from './Icon.astro';
 import Scene from './scenes/Scene.astro';
@@ -75,7 +76,7 @@ const heroScene = data.scene ? resolveGuideScene({ scene: data.scene, mood: data
 		<span class="home-hero__veil" aria-hidden="true"></span>
 		<div class="home-hero__stage">
 			<h1 class="home-hero__wordmark" id={pageTitleIdentifier} data-page-title>
-				<Leaf class="home-hero__leaf" width={48} height={48} aria-hidden="true" focusable="false" />
+				<Image class="home-hero__leaf" src={brandIcon} width={64} height={64} densities={[1, 2]} alt="" loading="eager" />
 				<span class="home-hero__name">
 					{leadingTitleWords && `${leadingTitleWords} `}<span class="home-hero__name-end">{lastTitleWord}</span>
 				</span>

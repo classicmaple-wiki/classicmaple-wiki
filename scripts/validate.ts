@@ -324,7 +324,19 @@ const parsedEntities = validateDataFiles(buildIdentifiers);
 const entityCount = parsedEntities.size;
 validateImportProvenance(parsedEntities);
 const spriteSourceStatuses = loadSpriteSourceStatuses();
-validatePictures(parsedEntities, spriteSourceStatuses, {
+/*
+   Skill icons live inside a class file, one per skill. Each is checked as
+   its own sprite named skills/<class>-<skill>.png, so the same rules and
+   the same unclaimed file check apply to them.
+*/
+const spriteOwners = new Map(parsedEntities);
+for (const [entityKey, { filePath, data }] of parsedEntities) {
+	if (!entityKey.startsWith('classes/')) continue;
+	for (const skill of (data.skills as { id: string; icon?: unknown }[] | undefined) ?? []) {
+		if (skill.icon) spriteOwners.set(`skills/${data.id}-${skill.id}`, { filePath, data: { sprite: skill.icon } });
+	}
+}
+validatePictures(spriteOwners, spriteSourceStatuses, {
 	field: 'sprite',
 	root: spritesDirectory,
 	directory: spritesDirectory,

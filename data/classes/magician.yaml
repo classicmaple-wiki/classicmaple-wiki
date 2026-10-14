@@ -6,154 +6,288 @@ skills:
   - id: holy-symbol
     name: Holy Symbol
     job: 3
-    differs_from_original: >-
-      Reported to work as a revive for the Priest. In original MapleStory,
-      Holy Symbol increased EXP gained by the party. 3rd job is not in the
-      launch build, so this comes from pre-launch testing.
+    differs_from_original: Reported to work as a revive for the Priest. In original MapleStory, Holy Symbol increased EXP gained by the party. 3rd job is not in the launch build, so this comes from pre-launch testing.
     verified:
       status: unverified
+    icon:
+      file: skills/magician-holy-symbol.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/231/skillbook
+      retrieved: 2026-10-14
   - id: improved-mp-recovery
-    name: "Improved MP Recovery"
+    name: Improved MP Recovery
     job: 1
+    branches:
+      - Magician
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-improved-mp-recovery.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/200/skillbook
+      retrieved: 2026-10-14
   - id: max-mp-increase
-    name: "Max MP Increase"
+    name: Max MP Increase
     job: 1
+    branches:
+      - Magician
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-max-mp-increase.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/200/skillbook
+      retrieved: 2026-10-14
   - id: magic-guard
-    name: "Magic Guard"
+    name: Magic Guard
     job: 1
+    branches:
+      - Magician
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-magic-guard.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/200/skillbook
+      retrieved: 2026-10-14
   - id: magic-armor
-    name: "Magic Armor"
+    name: Magic Armor
     job: 1
+    branches:
+      - Magician
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-magic-armor.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/200/skillbook
+      retrieved: 2026-10-14
   - id: energy-bolt
-    name: "Energy Bolt"
+    name: Energy Bolt
     job: 1
+    branches:
+      - Magician
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-energy-bolt.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/200/skillbook
+      retrieved: 2026-10-14
   - id: magic-claw
-    name: "Magic Claw"
+    name: Magic Claw
     job: 1
+    branches:
+      - Magician
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-magic-claw.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/200/skillbook
+      retrieved: 2026-10-14
   - id: mp-eater
-    name: "MP Eater"
+    name: MP Eater
     job: 2
+    branches:
+      - Wizard (Fire/Poison)
+      - Wizard (Ice/Lightning)
+      - Cleric
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-mp-eater.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/210/skillbook
+      retrieved: 2026-10-14
   - id: meditation
-    name: "Meditation"
+    name: Meditation
     job: 2
+    branches:
+      - Wizard (Fire/Poison)
+      - Wizard (Ice/Lightning)
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-meditation.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/210/skillbook
+      retrieved: 2026-10-14
   - id: teleport
-    name: "Teleport"
+    name: Teleport
     job: 2
+    branches:
+      - Wizard (Fire/Poison)
+      - Wizard (Ice/Lightning)
+      - Cleric
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-teleport.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/210/skillbook
+      retrieved: 2026-10-14
   - id: slow
-    name: "Slow"
+    name: Slow
     job: 2
+    branches:
+      - Wizard (Fire/Poison)
+      - Wizard (Ice/Lightning)
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-slow.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/210/skillbook
+      retrieved: 2026-10-14
   - id: fire-arrow
-    name: "Fire Arrow"
+    name: Fire Arrow
     job: 2
+    branches:
+      - Wizard (Fire/Poison)
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-fire-arrow.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/210/skillbook
+      retrieved: 2026-10-14
   - id: poison-breath
-    name: "Poison Breath"
+    name: Poison Breath
     job: 2
+    branches:
+      - Wizard (Fire/Poison)
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-poison-breath.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/210/skillbook
+      retrieved: 2026-10-14
   - id: cold-beam
-    name: "Cold Beam"
+    name: Cold Beam
     job: 2
+    branches:
+      - Wizard (Ice/Lightning)
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-cold-beam.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/220/skillbook
+      retrieved: 2026-10-14
   - id: thunder-bolt
-    name: "Thunder Bolt"
+    name: Thunder Bolt
     job: 2
+    branches:
+      - Wizard (Ice/Lightning)
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-thunder-bolt.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/220/skillbook
+      retrieved: 2026-10-14
   - id: heal
-    name: "Heal"
+    name: Heal
     job: 2
+    branches:
+      - Cleric
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-heal.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/230/skillbook
+      retrieved: 2026-10-14
   - id: invincible
-    name: "Invincible"
+    name: Invincible
     job: 2
+    branches:
+      - Cleric
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-invincible.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/230/skillbook
+      retrieved: 2026-10-14
   - id: bless
-    name: "Bless"
+    name: Bless
     job: 2
+    branches:
+      - Cleric
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-bless.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/230/skillbook
+      retrieved: 2026-10-14
   - id: holy-arrow
-    name: "Holy Arrow"
+    name: Holy Arrow
     job: 2
+    branches:
+      - Cleric
     verified:
       status: unverified
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46084/magician
       date: 2026-10-14
+    icon:
+      file: skills/magician-holy-arrow.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/230/skillbook
+      retrieved: 2026-10-14
 scene: ellinia
