@@ -20,7 +20,7 @@ import { build, dataSchemas, pageFrontmatter, spriteSource, type DataCollectionN
 const dataDirectory = path.resolve('data');
 const routesDirectory = path.resolve('src/content/docs/leveling');
 const spritesDirectory = path.resolve('public/sprites');
-const maximumSpriteSide = 128;
+const maximumSpriteSide = 192;
 const maximumSpriteBytes = 40 * 1024;
 const problems: string[] = [];
 

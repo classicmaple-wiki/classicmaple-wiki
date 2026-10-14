@@ -15,7 +15,9 @@
 
    A page's own sprite stands on the picture's walkable ground strip,
    which the art direction puts at 70 to 80 percent of the height, so it
-   sits 22 percent up from the bottom, just right of center.
+   sits 22 percent up from the bottom, just right of center. A tall sprite,
+   such as a boss, is capped at 62 percent of the band's height so it never
+   fills a phone sized band.
 */
 .scene-art {
 	display: block;
@@ -85,6 +87,8 @@
 
 .scene-resident {
 	position: absolute;
+	max-height: 62%;
+	width: auto;
 	left: 62%;
 	bottom: 22%;
 	transform: translateX(-50%);

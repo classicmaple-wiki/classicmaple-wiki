@@ -1,0 +1,87 @@
+---
+/*
+   One inventory card in the library (spec 0004). A small window that
+   reads like a slot in the game's inventory: the type as a chip in the
+   corner, a square inset slot holding the entry's sprite, the name in
+   heavy game text, one fact from the data, and the verification chip.
+
+   The sprite keeps its pixels: it is drawn with pixelated scaling and
+   fitted inside 64 pixels, which fits the slot on every screen. Its
+   width and height come from the PNG header at build time, so the grid
+   never shifts while sprites load. An entry without a sprite shows its
+   type glyph instead, never a guess.
+
+   The whole card is one link. Its data attributes let the library's
+   filter hide it by type or by name without touching the markup.
+*/
+import { existsSync, readFileSync } from 'node:fs';
+import { glyphPath, glyphs } from '../lib/glyphs';
+import { libraryTypes, type LibraryCard } from '../lib/library';
+import VerifiedBadge from './VerifiedBadge.astro';
+
+interface Props {
+	card: LibraryCard;
+}
+
+const { card } = Astro.props;
+const typeInfo = libraryTypes.find((entry) => entry.type === card.type)!;
+const slotSize = 64;
+
+/*
+   The sprite's display size, fitted inside the slot. A small sprite is
+   doubled so its pixels stay crisp; a large one is scaled down to fit.
+*/
+function spriteDisplay(spriteFile: string | undefined) {
+	if (!spriteFile) return undefined;
+	const filePath = `public/sprites/${spriteFile}`;
+	if (!existsSync(filePath)) return undefined;
+	const header = readFileSync(filePath).subarray(16, 24);
+	const width = header.readUInt32BE(0);
+	const height = header.readUInt32BE(4);
+	const largestSide = Math.max(width, height);
+	const scale = largestSide * 2 <= slotSize ? 2 : Math.min(1, slotSize / largestSide);
+	return {
+		source: `/sprites/${spriteFile}`,
+		width: Math.round(width * scale),
+		height: Math.round(height * scale),
+	};
+}
+
+const sprite = spriteDisplay(card.spriteFile);
+---
+
+<li class="library-card" data-type={card.type} data-name={card.name.toLowerCase()}>
+	<a class="library-card__link" href={card.href}>
+		<span class="chip library-card__type">{typeInfo.label}</span>
+		<span class="library-card__slot">
+			{
+				sprite ? (
+					<img
+						class="library-card__sprite"
+						src={sprite.source}
+						width={sprite.width}
+						height={sprite.height}
+						alt=""
+						loading="lazy"
+						decoding="async"
+					/>
+				) : (
+					<svg
+						class="library-card__glyph"
+						width="36"
+						height="36"
+						viewBox="0 0 12 12"
+						shape-rendering="crispEdges"
+						aria-hidden="true"
+						focusable="false"
+					>
+						<path d={glyphPath(glyphs[typeInfo.glyph])} />
+					</svg>
+				)
+			}
+		</span>
+		<span class="library-card__name">{card.name}</span>
+		<span class="library-card__fact">{card.fact}</span>
+	</a>
+	<span class="library-card__status"><VerifiedBadge verified={card.verified} /></span>
+</li>

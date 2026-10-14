@@ -51,6 +51,10 @@ export const sceneIdentifier = z.enum([
 	'kerning-city',
 	'sleepywood',
 	'default',
+	'workshop',
+	'harbor-board',
+	'potion-shop',
+	'closed-shop',
 ]);
 
 export const mood = z.enum(['dawn', 'morning', 'midday', 'dusk', 'night', 'cave']);

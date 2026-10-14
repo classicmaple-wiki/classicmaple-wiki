@@ -6,8 +6,9 @@
    pixel is two screen pixels and the edges stay crisp.
 
    A page's emblem follows its section: monsters get the monster, classes
-   the mask, leveling the flag, economy the hammer, the change log the two
-   arrows, and every other page the scroll.
+   the mask, items the potion, maps and leveling the flag, economy the
+   hammer, the change log the two arrows, and every other page, the
+   library included, the scroll.
 */
 export const glyphs = {
 	flag: [
@@ -108,6 +109,20 @@ export const glyphs = {
 		'.....##.....',
 		'............',
 	],
+	potion: [
+		'....####....',
+		'....#..#....',
+		'.....##.....',
+		'....#..#....',
+		'...#....#...',
+		'..#......#..',
+		'..########..',
+		'..########..',
+		'..########..',
+		'...######...',
+		'....####....',
+		'............',
+	],
 } as const satisfies Record<string, readonly string[]>;
 
 export type GlyphName = keyof typeof glyphs;
@@ -136,6 +151,8 @@ export function glyphPath(rows: readonly string[]): string {
 
 const sectionEmblems: Record<string, GlyphName> = {
 	monsters: 'monster',
+	items: 'potion',
+	maps: 'flag',
 	classes: 'mask',
 	leveling: 'flag',
 	economy: 'hammer',

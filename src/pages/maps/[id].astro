@@ -1,0 +1,80 @@
+---
+/*
+   One page per map, generated from data/maps/ (spec 0004), in the same
+   layout as the monster pages. The page sits in its region's hub scene
+   when the region names one, or the scene its data names, or the default
+   scene.
+
+   The Map window lists the region, the recommended levels, and the
+   monsters found there, each linked to its own page. Missing values read
+   Unknown, and when every value is Unknown one invitation replaces the
+   per row links. Notes and the history follow. Every value comes from
+   the map's data file.
+*/
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getCollection } from 'astro:content';
+import { editBaseUrl } from '../../../site.config.mjs';
+import ChangeLog from '../../components/ChangeLog.astro';
+import StatRows from '../../components/StatRows.astro';
+import Window from '../../components/Window.astro';
+import { formatList } from '../../lib/data';
+import { resolveMapScene } from '../../lib/scenes';
+
+export async function getStaticPaths() {
+	const mapEntries = await getCollection('maps');
+	return mapEntries.map((mapEntry) => ({
+		params: { id: mapEntry.data.id },
+		props: { map: mapEntry.data },
+	}));
+}
+
+const { map } = Astro.props;
+const resolved = await resolveMapScene(map);
+const editUrl = `${editBaseUrl}data/maps/${map.id}.yaml`;
+const monsterNames = (await getCollection('monsters'))
+	.map((monsterEntry) => monsterEntry.data)
+	.filter((monster) => map.monsters.includes(monster.id))
+	.map((monster) => monster.name)
+	.sort((first, second) => first.localeCompare(second));
+
+const statisticRows = [
+	{ label: 'Region', value: map.region },
+	{
+		label: 'Recommended level',
+		value: map.recommended_level ? `${map.recommended_level[0]} to ${map.recommended_level[1]}` : undefined,
+	},
+	{ label: 'Monsters', value: monsterNames.length === 0 ? undefined : formatList(monsterNames) },
+];
+
+const headings = [
+	{ depth: 2, slug: 'stats', text: 'Map' },
+	...(map.notes ? [{ depth: 2, slug: 'notes', text: 'Notes' }] : []),
+	{ depth: 2, slug: 'history', text: 'History' },
+];
+---
+
+<StarlightPage
+	frontmatter={{
+		title: map.name,
+		description: `${map.name} in MapleStory Classic World: region, levels, monsters, and changes between builds.`,
+		editUrl,
+		scene: resolved.scene,
+		mood: resolved.mood,
+		subtitle: map.region ? `${map.region}.` : 'Region unknown. Add it if you have been there.',
+	}}
+	headings={headings}
+>
+	<Window title="Map" id="stats" build={map.verified.build}>
+		<StatRows rows={statisticRows} editUrl={editUrl} subject="this map" />
+	</Window>
+
+	{
+		map.notes && (
+			<Window title="Notes" id="notes">
+				<p>{map.notes}</p>
+			</Window>
+		)
+	}
+
+	<ChangeLog collectionName="maps" entityIdentifier={map.id} />
+</StarlightPage>

@@ -94,14 +94,17 @@ Status shows what is done.
 | Scene | Status | Subject |
 | --- | --- | --- |
 | Henesys, a slow afternoon | Done, day and night | A sunny village of cream colored cottages with big round orange mushroom cap roofs with cream spots, a giant leafy tree behind them, a wooden market stall with a striped orange and cream awning, baskets of red apples and potion bottles, barrels, lanterns on wooden posts, wooden fences, sunflowers and daisies, rolling green hills with waterfalls, stone bridges, distant mushroom houses and a windmill, mountains, bright blue sky with big white clouds, sun rays from the top right. |
-| Kerning City, rooftops at dusk | Done, day only | A gritty city rooftop district at dusk. In the center, a cutaway rooftop bar with its front wall open: shelves of glowing bottles, a bar counter with round red stools, hanging warm lamps, a star shaped neon sign in pink and a moon shaped neon sign in teal, a dartboard, potted plants. A rooftop terrace above with a striped umbrella and a water tower. Construction cranes over the skyline, power poles with sagging wires, weathered apartment blocks with outdoor stairs, a small food stall with a blue awning, graffiti made of shapes. A dramatic magenta, gold, and purple sunset sky. The ground band is an old brick wall with pipes, ladders, and round sewer grates. |
-| Maple Island, first light | To do | A small grassy island village at sunrise. A wooden dock on posts with a little sailboat with one cream sail, calm sparkling sea, small cottages with orange mushroom cap roofs, a blank wooden signpost, palm-like trees, soft pink and gold sky. |
-| Ellinia, at dawn | To do | A magical forest of giant tall trees with wooden platforms, treehouse doors, and rope bridges between trunks, hanging paper lanterns, glowing moss and small mushrooms, light rays through the canopy, soft blue and lilac morning mist. |
-| Perion, dusk on the rocks | To do | A warrior village in a red rock canyon at sunset. Carved wooden totem poles, hide tents and wooden huts on stone ledges, a campfire, straw training dummies, layered red mesas, long orange light and purple shadows. |
-| Sleepywood, below the roots | To do | A quiet underground hollow beneath enormous tree roots. A lantern on a crooked post, glowing blue and green mushrooms, a small wooden shrine, a steaming hot spring pool, fireflies, low mist, dim green and gold glow. |
-| Default, the library of places | To do | A cozy wooden archive room in warm afternoon light, shown as a cutaway. Tall shelves of scrolls and books, a cork notice board with blank papers, a brass lantern, a big round window with orange maple leaves drifting past, a reading desk with an open blank map, a small ladder. |
+| Kerning City, rooftops at dusk | Done | A gritty city rooftop district at dusk. In the center, a cutaway rooftop bar with its front wall open: shelves of glowing bottles, a bar counter with round red stools, hanging warm lamps, a star shaped neon sign in pink and a moon shaped neon sign in teal, a dartboard, potted plants. A rooftop terrace above with a striped umbrella and a water tower. Construction cranes over the skyline, power poles with sagging wires, weathered apartment blocks with outdoor stairs, a small food stall with a blue awning, graffiti made of shapes. A dramatic magenta, gold, and purple sunset sky. The ground band is an old brick wall with pipes, ladders, and round sewer grates. |
+| Maple Island, first light | Done | A small grassy island village at sunrise. A wooden dock on posts with a little sailboat with one cream sail, calm sparkling sea, small cottages with orange mushroom cap roofs, a blank wooden signpost, palm-like trees, soft pink and gold sky. |
+| Ellinia, at dawn | Done | A magical forest of giant tall trees with wooden platforms, treehouse doors, and rope bridges between trunks, hanging paper lanterns, glowing moss and small mushrooms, light rays through the canopy, soft blue and lilac morning mist. |
+| Perion, dusk on the rocks | Done | A warrior village in a red rock canyon at sunset. Carved wooden totem poles, hide tents and wooden huts on stone ledges, a campfire, straw training dummies, layered red mesas, long orange light and purple shadows. |
+| Sleepywood, below the roots | Done | A quiet underground hollow beneath enormous tree roots. A lantern on a crooked post, glowing blue and green mushrooms, a small wooden shrine, a steaming hot spring pool, fireflies, low mist, dim green and gold glow. |
+| Default, the library of places | Done | A cozy wooden archive room in warm afternoon light, shown as a cutaway. Tall shelves of scrolls and books, a cork notice board with blank papers, a brass lantern, a big round window with orange maple leaves drifting past, a reading desk with an open blank map, a small ladder. |
 
 ### Night version
+
+Decided 2026-10-14: only the home page, Henesys, has a night picture. Every other scene uses its day picture in dark mode, dimmed with a night tint by the site. Use this prompt only if that decision changes.
+
 
 Proven on Henesys. Attach the finished day picture, then send:
 
@@ -110,6 +113,9 @@ Proven on Henesys. Attach the finished day picture, then send:
 For a scene that is already dusk or night, such as Kerning City, ask for "later at night, after the sunset" instead, with the sky turning deep indigo and every light switched on.
 
 ### Special pages
+
+All four are done: `workshop.webp` for About, `harbor-board.webp` for What changed, `potion-shop.webp` for Support, and `closed-shop.webp` for the 404 page. Their scene names are in `src/lib/scenes.ts`.
+
 
 Invented rooms inside real places, the Slow Snails trick. Use the scene band layout.
 

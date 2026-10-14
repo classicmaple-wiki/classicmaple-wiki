@@ -4,24 +4,26 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-The new design is live on https://classicmaple.wiki since 2026-10-14: art led interface (spec 0003), home centered on search, map name signs, painted Henesys and Kerning City scenes. Production Lighthouse mobile is 100 for performance and accessibility on home, Thief, and Crimson Balrog. Content is still mostly Unknown.
+The art led design is live on https://classicmaple.wiki. Pull request 4 (`site/scenes-and-library`) adds every painted scene, four special page rooms, the library (spec 0004), item and map pages, the first sprite, and the data research brief. It waits for the owner to merge. Game content is still mostly Unknown, and data research is being handed to Gemini or Antigravity.
 
 ## Just done
 
-- Merged pull request 3. Closed specs 0002 and 0003.
-- Recorded the owner's player centric contribution idea as P4d, with the agreed two stage plan.
+- `docs/data-research.md`: what counts as a Classic World source, what never does, the rules, where each fact goes, launch priorities, and how to hand work in.
+- `GEMINI.md` pointer, and AGENTS.md now points data work at the brief.
+- The library, scenes, and sprite work listed in spec 0004.
 
 ## In progress
 
-Nothing open in code. The owner is painting the remaining scenes with `docs/art-direction.md`.
+Pull request 4. P5 launch content, by a research agent, from the brief.
 
 ## Next step
 
-Write the launch content spec: where to level, quests, job advancement, and how players fill them from screenshots. Then the about page and credits (P3) and first sprites (P2b). After launch, stage 1 of P4d. Launch is 2026-10-21.
+Owner merges pull request 4. The research agent works through the priorities in `docs/data-research.md`, one pull request per topic, each labeled `ai-drafted`. The owner reviews each on its preview and raises statuses only where sources hold. Then P3 (about and support pages in their rooms) and more sprites (P2b). After launch, stage 1 of P4d. Launch is 2026-10-21.
 
 ## Blockers and questions for the owner
 
-- Remaining pictures: Kerning City night, Maple Island, Ellinia, Perion, Sleepywood, Default.
+- Merge pull request 4.
+- Review research pull requests as they arrive.
 
 ## Verify
 
