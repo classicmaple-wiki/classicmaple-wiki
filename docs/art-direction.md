@@ -144,7 +144,7 @@ The site's logo: the browser tab icon, the home screen icon, and the GitHub orga
 
 Variations to ask for: "Same icon, simpler, fewer details so it reads at 32 pixels." or "Same icon without the book, only the leaf on the tile."
 
-Save the chosen picture as `src/assets/brand/icon.png`, square and at least 512 pixels a side, then run `npx tsx scripts/make-icons.ts`. It writes the favicons and `public/icon-512.png`, which is the file to upload as the GitHub organization's picture. Until then, the site uses the leaf tile in `public/favicon.svg`.
+Save the chosen picture as `src/assets/brand/icon.png` or `icon.webp`, square and at least 512 pixels a side, with the corners outside the tile transparent, then run `npx tsx scripts/make-icons.ts`. It writes the favicons and `public/icon-512.png`, which is the file to upload as the GitHub organization's picture. The current master, made by the owner on 2026-10-15, is `src/assets/brand/icon.webp`. `public/favicon.svg` is only the fallback.
 
 ### Special pages
 
