@@ -1,3 +1,769 @@
 /*
-   Placeholder for spec 0002 Phase B. Filled by the pages work.
+   Page level layout for spec 0002: how the pieces sit on a page, not how
+   each piece looks inside. Windows, chips, and tables live in window.css,
+   scene fills in scenes.css, and every color here is a token.
+
+   The look is the mix the owner picked. Outside windows the page is soft
+   paper, as in direction A. Titles are Nunito 800, so long names stay
+   readable on a phone. Everything boxed wears the window frame from
+   direction B. Each section below is one part of the page and is labeled,
+   so a later section can be added without touching the ones above it.
+
+   This file is unlayered, so it wins over Starlight's layered defaults.
 */
+
+/*
+   Page title band. The scene band is a fixed height box with the ground
+   color behind it, so nothing shifts while the svg paints. On phones the
+   content column is the whole screen, so the band bleeds past the column
+   padding to both edges and up to the header. From 50em the column sits
+   between the sidebar and the table of contents, and the band becomes a
+   framed window into the place, with the window border and radius.
+
+   The title panel is a window: the window border and shadow, then a
+   title bar in the title bar color with the mood rule stripe on its left,
+   holding the breadcrumb and the emblem. The emblem is the section's
+   pixel glyph at 24 pixels in the mood rule color. Below the bar the
+   panel is solid cream with the H1 in Nunito 800, the subtitle, and on
+   entity pages a status line under a dotted divider, as inside every
+   window. The panel overlaps the band's bottom edge by the scene overlap
+   and is inset from the band's sides, so the band frames it. The scenes
+   keep their motifs above that overlap, so no motif hides behind the
+   panel. Starlight's hairline between the title and the body goes, since
+   the panel already ends the header.
+*/
+.page-title {
+	margin-top: -1.5rem;
+	margin-inline: calc(-1 * var(--sl-content-pad-x));
+}
+
+.page-title__band {
+	position: relative;
+	height: var(--scene-height);
+	overflow: hidden;
+	background: var(--scene-ground);
+}
+
+.page-title__panel {
+	position: relative;
+	margin: calc(-1 * var(--scene-overlap)) var(--sl-content-pad-x) 0;
+	background: var(--color-panel);
+	color: var(--color-ink);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow: var(--shadow-window);
+}
+
+.page-title__bar {
+	display: flex;
+	align-items: center;
+	gap: var(--space-3);
+	min-height: 40px;
+	padding: 6px var(--space-3) 6px calc(var(--space-4) + 3px);
+	background: var(--color-titlebar);
+	border-bottom: 1px solid var(--color-edge);
+	border-radius: 3px 3px 0 0;
+	box-shadow:
+		inset 3px 0 0 var(--mood-rule),
+		inset 0 1px 0 color-mix(in srgb, var(--color-panel) 65%, transparent);
+}
+
+.page-title__emblem {
+	flex: none;
+	width: 24px;
+	height: 24px;
+	margin-left: auto;
+	fill: var(--mood-rule);
+}
+
+.page-title__body {
+	padding: var(--space-4) var(--space-4) var(--space-4) calc(var(--space-4) + 3px);
+}
+
+.page-title__breadcrumb {
+	min-width: 0;
+	margin: 0;
+	font-size: var(--text-sm);
+	line-height: 1.4;
+	color: var(--color-ink-muted);
+}
+
+.page-title__breadcrumb ol {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px var(--space-2);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.page-title__breadcrumb li {
+	margin: 0;
+}
+
+.page-title__breadcrumb li + li::before {
+	content: '/';
+	margin-right: var(--space-2);
+	color: var(--color-ink-muted);
+}
+
+.page-title__breadcrumb a {
+	color: var(--color-accent);
+	font-weight: 600;
+}
+
+.page-title__breadcrumb [aria-current='page'] {
+	color: var(--color-ink);
+	font-weight: 700;
+}
+
+.page-title__heading {
+	margin: 0;
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: clamp(1.875rem, 1.4rem + 1.6vw, 2.75rem);
+	line-height: 1.15;
+	letter-spacing: -0.01em;
+	color: var(--color-ink);
+	overflow-wrap: break-word;
+	text-wrap: balance;
+}
+
+.page-title__subtitle {
+	margin: var(--space-1) 0 0;
+	color: var(--color-ink-muted);
+	font-size: var(--text-md);
+	font-weight: 600;
+}
+
+.page-title__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-2) var(--space-5);
+	margin: var(--space-4) 0 0;
+	padding-top: var(--space-4);
+	background: linear-gradient(to right, color-mix(in srgb, var(--color-ink) 32%, transparent) 2px, transparent 2px) 0 0 / 6px 2px repeat-x;
+	color: var(--color-ink-muted);
+	font-size: var(--text-base);
+}
+
+.page-title__meta-item {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: var(--space-2);
+}
+
+.page-title__meta-label {
+	font-weight: 700;
+}
+
+.content-panel:has(.page-title) + .content-panel {
+	border-top: 0;
+	padding-top: var(--space-2);
+}
+
+@media (min-width: 50em) {
+	.page-title {
+		margin-top: 0;
+		margin-inline: 0;
+	}
+
+	.page-title__band {
+		border: 1px solid var(--color-edge-strong);
+		border-radius: var(--radius-window);
+		box-shadow: var(--shadow-window);
+	}
+
+	.page-title__panel {
+		margin-inline: var(--space-5);
+	}
+
+	.page-title__bar {
+		padding-inline: calc(var(--space-5) + 3px) var(--space-4);
+	}
+
+	.page-title__body {
+		padding: var(--space-5) var(--space-5) var(--space-5) calc(var(--space-5) + 3px);
+	}
+}
+
+/*
+   Windows on a page. Every window gets the same breathing room from the
+   text around it, and the first one under the title starts close to the
+   panel. A lead window is set apart from the facts: a dashed edge and an
+   amber title bar, the same colors as the Unverified chip, with the quote
+   on chip paper behind a solid amber rule. It holds a report that is not
+   yet a fact, so it must never look like a stat block.
+*/
+.sl-markdown-content > * + :is(.window, .lead-window),
+.sl-markdown-content > :is(.window, .lead-window) + * {
+	margin-top: var(--space-5);
+}
+
+.lead-window > .window {
+	border-style: dashed;
+	border-color: color-mix(in srgb, var(--badge-unverified-foreground) 60%, transparent);
+}
+
+.lead-window .window__title-bar {
+	background: var(--badge-unverified-background);
+}
+
+.lead-window .window__title {
+	color: var(--color-ink);
+}
+
+.lead-window blockquote {
+	margin: 0 0 var(--space-3);
+	padding: var(--space-3) var(--space-4);
+	background: var(--color-chip);
+	border: 0;
+	border-left: 4px solid var(--badge-unverified-foreground);
+	border-radius: 0 var(--radius-chrome) var(--radius-chrome) 0;
+	color: var(--color-ink);
+	font-style: normal;
+}
+
+.lead-window blockquote p {
+	margin: 0;
+}
+
+.lead-window__note {
+	margin: 0;
+	color: var(--color-ink-muted);
+}
+
+/*
+   The patch notes list on the changes page. Each patch is one entry with
+   the link and date on the first line and the summary below in muted
+   text. Dotted dividers separate entries, as inside every window.
+*/
+.patch-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.patch-list > li {
+	margin: 0;
+	padding: var(--space-3) 0;
+	background: linear-gradient(to right, color-mix(in srgb, var(--color-ink) 32%, transparent) 2px, transparent 2px) 0 0 / 6px 2px repeat-x;
+}
+
+.patch-list > li:first-child {
+	padding-top: 0;
+	background: none;
+}
+
+.patch-list > li:last-child {
+	padding-bottom: 0;
+}
+
+.patch-list p {
+	margin: var(--space-1) 0 0;
+	color: var(--color-ink-muted);
+}
+
+/* ===================== Home page and header ===================== */
+
+/*
+   Header rule and search. The header ends in a 2 pixel rule in the
+   page's mood color, so the header joins the place below it. tokens.css
+   lifts the mood onto the root from the scene band, so this needs no
+   script. The search button takes the window radius and the strong edge,
+   so it matches the search field in the home hero.
+*/
+header.header {
+	border-bottom: 2px solid var(--mood-rule);
+}
+
+site-search button[data-open-modal] {
+	border-color: var(--color-edge-strong);
+	border-radius: var(--radius-window);
+}
+
+site-search button[data-open-modal]:hover {
+	border-color: var(--color-accent);
+}
+
+/*
+   Header wordmark. Starlight's site title becomes the wordmark: the pixel
+   leaf at its own 24 pixel size, so every grid pixel lands on a screen
+   pixel, then the name in Silkscreen. It drops from 18 to 15 pixels under
+   640 so the header stays on one row at 360.
+*/
+.site-title {
+	gap: var(--space-2);
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-synthesis: none;
+	font-size: 1.125rem;
+	line-height: 1;
+	letter-spacing: 0.02em;
+	color: var(--color-ink);
+}
+
+.site-title:hover {
+	color: var(--color-accent);
+}
+
+.site-title img {
+	flex: none;
+	width: 24px;
+	height: 24px;
+	image-rendering: pixelated;
+}
+
+@media (max-width: 639px) {
+	.site-title {
+		gap: 6px;
+		font-size: 0.9375rem;
+		letter-spacing: 0;
+	}
+}
+
+/*
+   Home hero. The band follows the page title band: full bleed and up to
+   the header on phones, a framed window into the place from 50em. Its
+   fixed height and ground color keep the page still while the svg paints.
+
+   The panel is direction A's calm centered panel: soft radius, soft
+   shadow, everything centered. It overlaps the band by the scene overlap
+   and stays inset from its sides, so the scene frames it. The wordmark
+   stacks the leaf over the name under 560 pixels, where the name would
+   not fit on one line in Silkscreen, and puts its last word on a line of
+   its own, so the name never squeezes or reflows. The leaf shows at 48
+   pixels, twice its grid, to stay crisp.
+
+   The search button is drawn as a search field on paper, with a pixel
+   magnifier, so it reads as the place to type.
+*/
+.home-hero {
+	margin-top: -1.5rem;
+	margin-inline: calc(-1 * var(--sl-content-pad-x));
+}
+
+.home-hero__band {
+	position: relative;
+	height: var(--scene-height-home);
+	overflow: hidden;
+	background: var(--scene-ground);
+}
+
+.home-hero__panel {
+	position: relative;
+	max-width: 47.5rem;
+	margin: calc(-1 * var(--scene-overlap)) var(--sl-content-pad-x) 0;
+	padding: var(--space-6) var(--space-4);
+	background: var(--color-panel);
+	color: var(--color-ink);
+	border: 1px solid var(--color-line);
+	border-radius: var(--radius-panel);
+	box-shadow: var(--shadow-panel);
+	text-align: center;
+}
+
+.home-hero__panel > * {
+	margin: 0;
+}
+
+.home-hero__wordmark {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-3);
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-synthesis: none;
+	font-size: clamp(1.875rem, 1.3rem + 2.6vw, 3rem);
+	line-height: 1.1;
+	letter-spacing: 0.01em;
+	color: var(--color-ink);
+	text-wrap: balance;
+}
+
+.home-hero__leaf {
+	flex: none;
+	width: 48px;
+	height: 48px;
+}
+
+.home-hero__panel .home-hero__tagline {
+	max-width: 34ch;
+	margin: var(--space-4) auto var(--space-5);
+	font-size: var(--text-lg);
+	line-height: 1.5;
+	color: var(--color-ink);
+}
+
+.home-hero__search {
+	display: flex;
+	align-items: center;
+	gap: var(--space-3);
+	max-width: 32.5rem;
+	min-height: 52px;
+	margin-inline: auto;
+	padding: 0 var(--space-4);
+	background: var(--color-paper);
+	color: var(--color-ink-muted);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow: inset 0 2px 0 color-mix(in srgb, var(--color-ink) 7%, transparent);
+	font-size: var(--text-md);
+	text-align: left;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.home-hero__search:hover {
+	border-color: var(--color-accent);
+	color: var(--color-ink);
+}
+
+.home-hero__search-glyph {
+	flex: none;
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
+
+.home-hero__panel .home-hero__build-line {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-2) var(--space-3);
+	margin-top: var(--space-5);
+	color: var(--color-ink-muted);
+	font-size: var(--text-base);
+}
+
+.home-hero__build-line time {
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.home-hero__panel .home-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--space-3);
+	margin-top: var(--space-5);
+}
+
+.home-hero__action {
+	font-size: var(--text-base);
+}
+
+.home-hero__action--primary {
+	background: var(--color-titlebar);
+}
+
+.home-hero__action--minimal {
+	background: var(--color-panel);
+}
+
+@media (max-width: 559px) {
+	.home-hero__wordmark {
+		flex-direction: column;
+		gap: var(--space-2);
+		font-size: 1.875rem;
+	}
+
+	.home-hero__name-end {
+		display: block;
+	}
+}
+
+@media (min-width: 50em) {
+	.home-hero {
+		margin-top: 0;
+		margin-inline: 0;
+	}
+
+	.home-hero__band {
+		border: 1px solid var(--color-edge-strong);
+		border-radius: var(--radius-window);
+		box-shadow: var(--shadow-window);
+	}
+
+	.home-hero__panel {
+		margin-inline: auto;
+		padding: var(--space-6) var(--space-7);
+	}
+}
+
+/*
+   Home body. The windows sit a little further apart than on other pages,
+   since each one is a whole section. The lead line in a window is muted.
+   The closing line sits on paper, centered under the last window.
+*/
+[data-has-hero] .sl-markdown-content > * + .window {
+	margin-top: var(--space-6);
+}
+
+.window__body > .home-lead {
+	margin: 0 0 var(--space-4);
+	color: var(--color-ink-muted);
+}
+
+.sl-markdown-content > .home-closing {
+	max-width: 60ch;
+	margin: var(--space-6) auto 0;
+	text-align: center;
+	color: var(--color-ink-muted);
+}
+
+/*
+   Task cards, cut like direction B's: a framed card with a raised ledge,
+   a chip colored square holding the pixel glyph, an accent title, and a
+   muted line. On small phones the glyph sits above the words, so two
+   columns still fit at 360. From 480 it moves to the left.
+*/
+.task-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--space-3);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.task-grid__item {
+	min-width: 0;
+	margin: 0;
+}
+
+.task-grid__card {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	align-content: start;
+	justify-items: start;
+	gap: var(--space-1);
+	height: 100%;
+	padding: var(--space-3);
+	background: var(--color-panel);
+	color: var(--color-ink);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow:
+		inset 0 1px 0 var(--window-highlight, var(--color-panel)),
+		0 2px 0 var(--color-edge-strong);
+	text-decoration: none;
+}
+
+.task-grid__card:hover {
+	background: color-mix(in srgb, var(--color-chip) 55%, var(--color-panel));
+}
+
+.task-grid__card:active {
+	transform: translateY(1px);
+	box-shadow:
+		inset 0 1px 0 var(--window-highlight, var(--color-panel)),
+		0 1px 0 var(--color-edge-strong);
+}
+
+.task-grid__icon {
+	display: grid;
+	place-items: center;
+	width: 40px;
+	height: 40px;
+	margin-bottom: var(--space-1);
+	background: var(--color-chip);
+	color: var(--color-accent);
+	border: 1px solid var(--color-edge);
+	border-radius: var(--radius-chrome);
+}
+
+.task-grid__icon svg {
+	width: 24px;
+	height: 24px;
+	fill: currentColor;
+}
+
+.task-grid__title {
+	font-weight: 800;
+	line-height: 1.3;
+	color: var(--color-accent);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	overflow-wrap: anywhere;
+}
+
+.task-grid__card:hover .task-grid__title {
+	text-decoration-thickness: 2px;
+}
+
+.task-grid__line {
+	font-size: var(--text-sm);
+	line-height: 1.4;
+	color: var(--color-ink-muted);
+}
+
+@media (min-width: 30em) {
+	.task-grid__card {
+		grid-template-columns: 40px minmax(0, 1fr);
+		align-items: center;
+		column-gap: var(--space-3);
+		padding: var(--space-3) var(--space-4) var(--space-3) var(--space-3);
+	}
+
+	.task-grid__icon {
+		grid-row: span 2;
+		margin-bottom: 0;
+	}
+
+	.task-grid__line {
+		font-size: var(--text-base);
+	}
+}
+
+@media (min-width: 50em) {
+	.task-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+/*
+   The shelf of places. Each card takes the mood named on it, so its art
+   and the stripe over its label show that place's light. The art frame
+   keeps a two to one shape and the scene fills it exactly. Cards that
+   link look like links; the rest keep ink titles and say no pages yet.
+*/
+.place-shelf {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--space-3);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.place-shelf__item {
+	min-width: 0;
+	margin: 0;
+}
+
+.place-shelf__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+	background: var(--color-panel);
+	color: var(--color-ink);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow:
+		inset 0 1px 0 var(--window-highlight, var(--color-panel)),
+		0 2px 0 var(--color-edge-strong);
+	text-decoration: none;
+}
+
+.place-shelf__art {
+	display: block;
+	aspect-ratio: 2 / 1;
+	overflow: hidden;
+	background: var(--scene-ground);
+	border-bottom: 1px solid var(--color-edge-strong);
+}
+
+.place-shelf__label {
+	display: grid;
+	gap: 2px;
+	padding: var(--space-2) var(--space-3) var(--space-3);
+	box-shadow: inset 0 3px 0 var(--mood-rule);
+}
+
+.place-shelf__name {
+	padding-top: 2px;
+	font-weight: 800;
+	line-height: 1.3;
+	color: var(--color-ink);
+}
+
+.place-shelf__card--link .place-shelf__name {
+	color: var(--color-accent);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+.place-shelf__card--link:hover {
+	background: color-mix(in srgb, var(--color-chip) 55%, var(--color-panel));
+}
+
+.place-shelf__card--link:hover .place-shelf__name {
+	text-decoration-thickness: 2px;
+}
+
+.place-shelf__moment,
+.place-shelf__status {
+	font-size: var(--text-sm);
+	line-height: 1.4;
+	color: var(--color-ink-muted);
+}
+
+.place-shelf__status {
+	font-style: italic;
+}
+
+@media (min-width: 50em) {
+	.place-shelf {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: var(--space-4);
+	}
+}
+
+/*
+   How to read this wiki. Each status chip sits beside its one line, with
+   the dotted window divider between rows. On phones the chip sits above
+   its line; from 640 they share a row, chips in one column. Rows run the
+   full window width, past the reading measure set on list items, and
+   links keep the accent, since the list opts out of markdown styles.
+*/
+.status-key {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.status-key__row {
+	display: grid;
+	gap: var(--space-2);
+	margin: 0;
+	padding: var(--space-3) 0;
+	background: var(--window-divider);
+}
+
+.status-key__row:first-child {
+	padding-top: 0;
+	background: none;
+}
+
+.status-key__row:last-child {
+	padding-bottom: 0;
+}
+
+.status-key .status-key__row {
+	max-width: none;
+}
+
+.status-key__badge {
+	min-width: 0;
+}
+
+.status-key a {
+	color: var(--color-accent);
+	font-weight: 600;
+}
+
+@media (min-width: 40em) {
+	.status-key__row {
+		grid-template-columns: 14rem minmax(0, 1fr);
+		align-items: baseline;
+		gap: var(--space-4);
+	}
+}

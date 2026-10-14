@@ -4,34 +4,33 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-Phase 1 is done. The site is live at https://classicmaple.wiki. Phase 2 (item P2) is waiting for the owner. Spec `specs/0002-design-system.md` is a draft. Decision 0004, keep Starlight, is proposed. Two mockup directions are on branch `spec/0002-design-system` with an open pull request and a Vercel preview.
+The design system (spec 0002, the mix of mockups A and B) is built on branch `spec/0002-design-system`, pull request 3, and waits for the owner to look at the preview. The live site still runs the old look. The sprite system (decision 0005) is set up as rules, data, and validator checks, but no sprites exist yet.
 
 ## Just done
 
-- Research documents, decision 0003, and the owner's answers to all asset and scene questions.
-- Spec 0002 with checked contrast numbers for every token pair.
-- Mockups in `public/mockups/`: direction A "Morning Shelf" and B "Old Window", each with home, Thief, and Crimson Balrog. Built, reviewed with screenshots, and fixed by a multi agent workflow, then checked by hand.
-- Display font changed from Pixelify Sans to Silkscreen, because Pixelify's C reads as O.
+- Scenes: seven original pixel scenes from `scripts/draw-scenes.py`, in `src/components/scenes/`.
+- Windows: `Window`, `StatRows`, `Invitation`, and every data component restyled.
+- Page title band and home page as Starlight overrides. Silkscreen and Nunito self hosted and preloaded.
+- Checked: no sideways scroll on 9 pages at 360 and 1280 in both themes. Lighthouse mobile on a local build 98 to 99, accessibility 100, layout shift 0.
+- Sprite rules in `docs/policies/images.md`, sources in `data/sprite-sources.yaml`, evidence in `docs/research/sprite-sources.md`.
 
 ## In progress
 
-Pull request for `spec/0002-design-system`. Do not merge until the owner picks a direction. `public/mockups/` must be deleted before merge.
+Pull request 3. `public/mockups/` stays until the owner has compared, then is deleted before merge.
 
 ## Next step
 
-Owner picks A, B, or a mix, approves spec 0002, decision 0004, and the schema change. Then run Phase B of the spec's Tasks on the same branch.
+Owner reviews the preview. Then delete `public/mockups/`, merge, and run Lighthouse on production. Then P2b, the first sprites, and P3.
 
 ## Blockers and questions for the owner
 
-- Pick a direction.
-- Approve spec 0002, decision 0004, and the `scene`, `mood`, `subtitle` schema fields.
-- Confirm Silkscreen as the display font.
-- Set a Vercel spend limit before 2026-10-21.
+- Q10 takedown contact, Q11 source statuses, Q2 donation platforms, Q3 credit name. See `BACKLOG.md`.
+- Direction C, the storybook look in decision 0005, waits for the owner's reaction to this build.
 
 ## Verify
 
 ```bash
 npm run validate
 npm run build
-open public/mockups/index.html
+python3 scripts/draw-scenes.py
 ```

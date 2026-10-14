@@ -3,29 +3,52 @@
    The fact line at the top of a leveling route. It reads the frontmatter
    of the page it is placed on, so authors fill in the fields once. A route
    without "tested_in" is labeled Untested automatically.
+
+   The facts sit in a window as stat rows, which stack label over value on
+   a phone. The tested or untested chip lives in the window footer, cut
+   like the status chips: green for tested, amber for an untested draft.
+
+   On a guide, the page can pass a markdown heading in the title slot,
+   so the window shows up in the table of contents. The heading's text
+   must match the window's id.
 */
-import { Badge } from '@astrojs/starlight/components';
+import StatRows from './StatRows.astro';
+import Window from './Window.astro';
 
 const { level_range, party_size, classes, tested_in } = Astro.locals.starlightRoute.entry.data;
+const editUrl = Astro.locals.starlightRoute.editUrl?.href;
+
+const classNames = classes?.map((className: string) => className.charAt(0).toUpperCase() + className.slice(1));
 ---
 
-<p class="route-summary">
-	{level_range && <Badge text={`Level ${level_range[0]} to ${level_range[1]}`} variant="note" />}
-	{party_size && <Badge text={party_size === 1 ? 'Solo' : `Party of ${party_size}`} variant="note" />}
-	{classes && classes.length > 0 && <Badge text={classes.join(', ')} variant="default" />}
-	{
-		tested_in ? (
-			<Badge text={`Tested in ${tested_in}`} variant="success" />
-		) : (
-			<Badge text="Untested draft" variant="caution" />
-		)
-	}
-</p>
-
-<style>
-	.route-summary {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-	}
-</style>
+<Window title="Route at a glance" id="route-at-a-glance">
+	{Astro.slots.has('title') && <slot name="title" slot="title" />}
+	<StatRows
+		rows={[
+			{ label: 'Levels', value: level_range ? `Level ${level_range[0]} to ${level_range[1]}` : undefined },
+			{ label: 'Party', value: party_size ? (party_size === 1 ? 'Solo' : `Party of ${party_size}`) : undefined },
+			{ label: 'Classes', value: classNames && classNames.length > 0 ? classNames.join(', ') : undefined },
+		]}
+		editUrl={editUrl}
+		subject="this route"
+	/>
+	<p class="window__status" slot="footer">
+		{
+			tested_in ? (
+				<span class="chip chip--official">
+					<svg class="chip__glyph" width="9" height="9" viewBox="0 0 7 7" aria-hidden="true" focusable="false" shape-rendering="crispEdges">
+						<path d="M6 1h1v1h-1zM5 2h2v1h-2zM0 3h1v1h-1zM4 3h2v1h-2zM0 4h2v1h-2zM3 4h2v1h-2zM1 5h3v1h-3zM2 6h1v1h-1z" />
+					</svg>
+					<span class="chip__text">Tested in {tested_in}</span>
+				</span>
+			) : (
+				<span class="chip chip--unverified">
+					<svg class="chip__glyph" width="9" height="9" viewBox="0 0 7 7" aria-hidden="true" focusable="false" shape-rendering="crispEdges">
+						<path d="M2 0h3v1h-3zM1 1h1v1h-1zM5 1h1v2h-1zM4 3h1v1h-1zM3 4h1v1h-1zM3 6h1v1h-1z" />
+					</svg>
+					<span class="chip__text">Untested draft</span>
+				</span>
+			)
+		}
+	</p>
+</Window>

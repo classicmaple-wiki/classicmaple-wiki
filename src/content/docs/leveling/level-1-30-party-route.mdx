@@ -4,6 +4,7 @@ description: A party leveling route from level 1 to 30 in MapleStory Classic Wor
 level_range: [1, 30]
 party_size: 4
 classes: [warrior, magician, bowman, thief]
+scene: kerning-city
 sidebar:
   order: 1
 ---
@@ -11,7 +12,13 @@ sidebar:
 import { Aside, Steps } from '@astrojs/starlight/components';
 import RouteSummary from '../../../components/RouteSummary.astro';
 
-<RouteSummary />
+<RouteSummary>
+<Fragment slot="title">
+
+## Route at a glance
+
+</Fragment>
+</RouteSummary>
 
 <Aside type="caution" title="This is a skeleton">
 	The structure is here. The maps and level breakpoints are not. If you have run this in the live game, fill in a

@@ -14,6 +14,7 @@ export default defineConfig({
 		starlight({
 			title: siteTitle,
 			description: siteDescription,
+			logo: { src: './src/assets/leaf.svg' },
 			social: [{ icon: 'github', label: 'GitHub', href: repositoryUrl }],
 			editLink: { baseUrl: editBaseUrl },
 			lastUpdated: true,
@@ -30,6 +31,16 @@ export default defineConfig({
 					attrs: {
 						rel: 'preload',
 						href: '/fonts/nunito-latin.woff2',
+						as: 'font',
+						type: 'font/woff2',
+						crossorigin: '',
+					},
+				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'preload',
+						href: '/fonts/silkscreen-400-latin.woff2',
 						as: 'font',
 						type: 'font/woff2',
 						crossorigin: '',

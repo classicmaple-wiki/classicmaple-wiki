@@ -29,18 +29,18 @@ Non-goals:
 
 Acceptance criteria. The implementation is done when all of these pass.
 
-- [ ] Mobile first. Every page is usable at 360 pixels wide with no horizontal page scroll.
-- [ ] WCAG AA. Body text 4.5 to 1 or better against its panel in both modes. Large text and interface parts 3 to 1 or better. Checked with the contrast script in the Tasks and with an automated audit.
-- [ ] Lighthouse mobile performance 95 or higher on the home page, the Thief page, and the Crimson Balrog page, on the Vercel preview.
-- [ ] No layout shift. Cumulative layout shift under 0.02 on the same three pages. Every image and scene has fixed dimensions.
-- [ ] Tables usable on a phone. No table wider than its container at 360 pixels. Stat blocks reflow to one column. Any table over four columns either scrolls inside its own container with a sticky first column or becomes a labeled list.
-- [ ] Text never sits on a scene. All body text, titles, and badges live on a solid panel.
-- [ ] Every entity page has a scene and a mood, either named in its data or inherited, and the build passes when a page names neither.
-- [ ] Light and dark modes are the day and night of the same scene. Both follow the system setting by default and keep the existing Starlight toggle.
-- [ ] The fan site disclaimer stays on every page.
-- [ ] No em dashes in any user facing text.
-- [ ] Fonts are self hosted, at most two families and four files, with `font-display: swap`.
-- [ ] `npm run validate` and `npm run build` pass.
+- [x] Mobile first. Every page is usable at 360 pixels wide with no horizontal page scroll.
+- [x] WCAG AA. Body text 4.5 to 1 or better against its panel in both modes. Large text and interface parts 3 to 1 or better. Checked with the contrast script in the Tasks and with an automated audit.
+- [ ] Lighthouse mobile performance 95 or higher on the home page, the Thief page, and the Crimson Balrog page, on the Vercel preview. Local production build: 99, 98, 98. The Vercel preview needs a login, so this is checked on production right after merge.
+- [x] No layout shift. Cumulative layout shift under 0.02 on the same three pages. Every image and scene has fixed dimensions.
+- [x] Tables usable on a phone. No table wider than its container at 360 pixels. Stat blocks reflow to one column. Any table over four columns either scrolls inside its own container with a sticky first column or becomes a labeled list.
+- [x] Text never sits on a scene. All body text, titles, and badges live on a solid panel.
+- [x] Every entity page has a scene and a mood, either named in its data or inherited, and the build passes when a page names neither.
+- [x] Light and dark modes are the day and night of the same scene. Both follow the system setting by default and keep the existing Starlight toggle.
+- [x] The fan site disclaimer stays on every page.
+- [x] No em dashes in any user facing text.
+- [x] Fonts are self hosted, at most two families and four files, with `font-display: swap`.
+- [x] `npm run validate` and `npm run build` pass.
 
 ## Design
 
@@ -203,16 +203,16 @@ Phase A, before the pick:
 
 Phase B, after the pick:
 
-- [ ] `src/styles/tokens.css` and the Starlight variable mapping in `src/styles/custom.css`.
-- [ ] Self hosted font files and their license notices.
-- [ ] Schema fields `scene`, `mood`, `subtitle`, and `resolveScene`.
-- [ ] The seven scene SVGs.
-- [ ] `PageTitle` and `Hero` overrides.
-- [ ] `Window` component. `MonsterTable` and `SkillList` moved into it, with phone reflow.
-- [ ] Home, Thief, and Crimson Balrog pages in the chosen direction.
+- [x] `src/styles/tokens.css` and the Starlight variable mapping in `src/styles/custom.css`.
+- [x] Self hosted font files and their license notices.
+- [x] Schema fields `scene`, `mood`, `subtitle`, and `resolveScene`.
+- [x] The seven scene SVGs.
+- [x] `PageTitle` and `Hero` overrides.
+- [x] `Window` component. `MonsterTable` and `SkillList` moved into it, with phone reflow.
+- [x] Home, Thief, and Crimson Balrog pages in the chosen direction.
 - [ ] Remove `public/mockups/`.
-- [ ] Contrast script run on the final tokens. Lighthouse mobile on the preview for the three pages.
-- [ ] `npm run validate` and `npm run build`.
+- [x] Contrast script run on the final tokens. Lighthouse mobile run on a local production build: home 99, Thief 98, Crimson Balrog 98, accessibility 100, layout shift 0. Not yet run on the Vercel preview.
+- [x] `npm run validate` and `npm run build`.
 - [ ] Update `BACKLOG.md` and rewrite `HANDOFF.md`.
 
 ## Open questions

@@ -3,8 +3,22 @@
    Renders build-to-build changes, newest build first. With no props it
    shows every change on the site. Pass collectionName and entityIdentifier
    to show the history of a single entity.
+
+   The log sits in a window titled History for one entity and Value
+   changes for the whole site, with matching heading ids so pages can list
+   them in the table of contents. On a guide, the page can pass a markdown
+   heading in the title slot instead, so Starlight lists it too. The table
+   has five or six columns, so it scrolls sideways inside its own
+   container with the build pinned on the left.
+
+   With no changes, one entity's history is a plain muted note. It is
+   never the page's main data, so it does not get an invitation box of its
+   own. On the site log, value changes are the main data, so the empty
+   state is the one invitation, pointing at how to contribute.
 */
 import { collectChanges } from '../lib/data';
+import Invitation from './Invitation.astro';
+import Window from './Window.astro';
 
 interface Props {
 	collectionName?: string;
@@ -18,47 +32,63 @@ const changes = (await collectChanges()).filter(
 	(change) =>
 		!showsSingleEntity || (change.collectionName === collectionName && change.entityIdentifier === entityIdentifier)
 );
+
+const windowTitle = showsSingleEntity ? 'History' : 'Value changes';
+const windowIdentifier = showsSingleEntity ? 'history' : 'value-changes';
 ---
 
-{
-	changes.length === 0 ? (
-		<p>No changes recorded yet. When a value moves between builds, it shows up here.</p>
-	) : (
-		<table>
-			<thead>
-				<tr>
-					<th>Build</th>
-					{!showsSingleEntity && <th>What</th>}
-					<th>Field</th>
-					<th>Before</th>
-					<th>After</th>
-					<th>Source</th>
-				</tr>
-			</thead>
-			<tbody>
-				{changes.map((change) => (
-					<tr>
-						<td>{change.buildName}</td>
-						{!showsSingleEntity && (
-							<td>
-								{change.collectionName === 'monsters' ? (
-									<a href={`/monsters/${change.entityIdentifier}/`}>{change.entityName}</a>
-								) : (
-									change.entityName
+<Window title={windowTitle} id={windowIdentifier}>
+	{Astro.slots.has('title') && <slot name="title" slot="title" />}
+	{
+		changes.length === 0 ? (
+			showsSingleEntity ? (
+				<p class="window__note">No changes recorded yet. When a value moves between builds, it shows up here.</p>
+			) : (
+				<Invitation
+					message="No value changes recorded yet. When a value moves between builds, it shows up here."
+					href="/contributing/"
+					action="Record a change"
+				/>
+			)
+		) : (
+			<div class="window__scroll" tabindex="0" role="region" aria-label={`${windowTitle} table, scrolls sideways`}>
+				<table class="data-table">
+					<thead>
+						<tr>
+							<th scope="col">Build</th>
+							{!showsSingleEntity && <th scope="col">What</th>}
+							<th scope="col">Field</th>
+							<th scope="col">Before</th>
+							<th scope="col">After</th>
+							<th scope="col">Source</th>
+						</tr>
+					</thead>
+					<tbody>
+						{changes.map((change) => (
+							<tr>
+								<th scope="row">{change.buildName}</th>
+								{!showsSingleEntity && (
+									<td>
+										{change.collectionName === 'monsters' ? (
+											<a href={`/monsters/${change.entityIdentifier}/`}>{change.entityName}</a>
+										) : (
+											change.entityName
+										)}
+									</td>
 								)}
-							</td>
-						)}
-						<td>{change.field}</td>
-						<td>{change.from ?? ''}</td>
-						<td>{change.to ?? change.note ?? ''}</td>
-						<td>
-							<a href={change.source} rel="noopener">
-								Source
-							</a>
-						</td>
-					</tr>
-				))}
-			</tbody>
-		</table>
-	)
-}
+								<td>{change.field}</td>
+								<td class="data-table__number">{change.from ?? ''}</td>
+								<td class="data-table__number">{change.to ?? change.note ?? ''}</td>
+								<td>
+									<a href={change.source} rel="noopener">
+										Source<span class="sr-only"> for {change.entityName}, {change.field}</span>
+									</a>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		)
+	}
+</Window>

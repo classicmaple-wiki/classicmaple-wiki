@@ -1,9 +1,172 @@
 ---
 /*
-   Placeholder override. Replaced in spec 0002 Phase B by the scene band and
-   title panel. Renders the default title so the build keeps working.
+   The page title band from spec 0002, overriding Starlight's PageTitle.
+   Every page except the home splash opens with its place: a fixed height
+   scene band at the top of the content column, then a solid title panel
+   that overlaps the band's bottom edge. Text never sits on the scene.
+
+   The band carries data-mood, so tokens.css can hand the page's mood rule
+   to every window stripe below it without any script. The scene and mood
+   come from the page's own frontmatter first. A class guide with neither
+   takes them from its class data, and anything else falls back to the
+   default scene. Monster pages pass their resolved scene in through the
+   StarlightPage frontmatter, so they arrive here like any other page.
+
+   The panel is a window like every other box on the site. Its title bar
+   holds the breadcrumb on the left and the page's emblem on the right, a
+   small pixel glyph for the section drawn in the mood rule color. The
+   breadcrumb is built from the page's path and ends on the page itself.
+   A parent section links only when a page for it exists, either a guide
+   or a generated index, and otherwise reads as plain text.
+
+   The body holds the H1 in Nunito 800, then the subtitle. On an entity
+   page, a class or a monster, a status line follows under a dotted
+   divider: the verification chip and the entity's id, both read from its
+   data file, which is found by the page's path. No schema field needed.
+
+   The H1 keeps Starlight's id, so the skip link and the Overview entry
+   in the table of contents still land on it. Both fonts are preloaded
+   from the head setting in astro.config.mjs. Styles live in pages.css.
 */
-import Default from '@astrojs/starlight/components/PageTitle.astro';
+import { existsSync } from 'node:fs';
+import { getCollection, getEntry } from 'astro:content';
+import type { Verification } from '../../schemas/shared';
+import { emblemForSection, glyphPath, glyphs } from '../lib/glyphs';
+import { resolveClassScene, resolveGuideScene, type ResolvedScene } from '../lib/scenes';
+import Scene from './scenes/Scene.astro';
+import VerifiedBadge from './VerifiedBadge.astro';
+
+const pageTitleIdentifier = '_top';
+const route = Astro.locals.starlightRoute;
+const { title, subtitle, scene, mood } = route.entry.data;
+const pathSegments = route.id.split('/').filter((segment) => segment !== '' && segment !== 'index');
+
+/*
+   The page's own scene wins. A class guide that names no scene inherits
+   the one on its class data, while still honoring a mood set on the page.
+*/
+async function resolvePageScene(): Promise<ResolvedScene> {
+	const ownChoice = { scene, mood };
+	if (ownChoice.scene) return resolveGuideScene(ownChoice);
+	if (pathSegments[0] === 'classes' && pathSegments.length > 1) {
+		const classEntry = await getEntry('classes', pathSegments[1]);
+		if (classEntry) {
+			const fromClass = resolveClassScene(classEntry.data);
+			return { scene: fromClass.scene, mood: ownChoice.mood ?? fromClass.mood };
+		}
+	}
+	return resolveGuideScene(ownChoice);
+}
+
+interface BreadcrumbStep {
+	label: string;
+	href?: string;
+	isCurrent?: boolean;
+}
+
+/*
+   Section pages are either guides, whose id is the section name, or
+   generated index pages under src/pages. Guides lend their title to the
+   breadcrumb. Other sections show their folder name in plain words. The
+   last step is the page itself.
+*/
+async function buildBreadcrumb(): Promise<BreadcrumbStep[]> {
+	const parentSegments = pathSegments.slice(0, -1);
+	const guideTitles = new Map((await getCollection('docs')).map((guideEntry) => [guideEntry.id, guideEntry.data.title]));
+	const steps: BreadcrumbStep[] = [{ label: 'Home', href: '/' }];
+	parentSegments.forEach((segment, position) => {
+		const sectionPath = parentSegments.slice(0, position + 1).join('/');
+		const guideTitle = guideTitles.get(sectionPath) ?? guideTitles.get(`${sectionPath}/index`);
+		const plainLabel = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+		const sectionExists = guideTitle !== undefined || existsSync(`src/pages/${sectionPath}/index.astro`);
+		steps.push({ label: guideTitle ?? plainLabel, href: sectionExists ? `/${sectionPath}/` : undefined });
+	});
+	steps.push({ label: title, isCurrent: true });
+	return steps;
+}
+
+interface EntityStatus {
+	identifierLabel: string;
+	identifier: string;
+	verified: Verification;
+}
+
+/*
+   A class guide or a monster page is about one entry in data/. Its file
+   holds the verification record that the status line shows.
+*/
+async function findEntityStatus(): Promise<EntityStatus | undefined> {
+	if (pathSegments.length !== 2) return undefined;
+	const [section, identifier] = pathSegments;
+	if (section === 'classes') {
+		const classEntry = await getEntry('classes', identifier);
+		return classEntry && { identifierLabel: 'Class id', identifier, verified: classEntry.data.verified };
+	}
+	if (section === 'monsters') {
+		const monsterEntry = await getEntry('monsters', identifier);
+		return monsterEntry && { identifierLabel: 'Monster id', identifier, verified: monsterEntry.data.verified };
+	}
+	return undefined;
+}
+
+const resolved = await resolvePageScene();
+const breadcrumb = await buildBreadcrumb();
+const entityStatus = await findEntityStatus();
+const emblemPath = glyphPath(glyphs[emblemForSection(pathSegments[0])]);
 ---
 
-<Default />
+<div class="page-title">
+	<div class="scene-band page-title__band" data-mood={resolved.mood} data-scene={resolved.scene}>
+		<Scene scene={resolved.scene} variant="band" />
+	</div>
+	<div class="page-title__panel">
+		<div class="page-title__bar">
+			<nav class="page-title__breadcrumb" aria-label="Breadcrumb">
+				<ol>
+					{
+						breadcrumb.map((step) => (
+							<li>
+								{step.isCurrent ? (
+									<span aria-current="page">{step.label}</span>
+								) : step.href ? (
+									<a href={step.href}>{step.label}</a>
+								) : (
+									<span>{step.label}</span>
+								)}
+							</li>
+						))
+					}
+				</ol>
+			</nav>
+			<svg
+				class="page-title__emblem"
+				width="24"
+				height="24"
+				viewBox="0 0 12 12"
+				shape-rendering="crispEdges"
+				aria-hidden="true"
+				focusable="false"
+			>
+				<path d={emblemPath}></path>
+			</svg>
+		</div>
+		<div class="page-title__body">
+			<h1 class="page-title__heading" id={pageTitleIdentifier}>{title}</h1>
+			{subtitle && <p class="page-title__subtitle">{subtitle}</p>}
+			{
+				entityStatus && (
+					<p class="page-title__meta">
+						<span class="page-title__meta-item">
+							<span class="page-title__meta-label">Status</span>
+							<VerifiedBadge verified={entityStatus.verified} />
+						</span>
+						<span class="page-title__meta-item">
+							<span class="page-title__meta-label">{entityStatus.identifierLabel}</span>
+							<code>{entityStatus.identifier}</code>
+						</span>
+					</p>
+				)
+			}
+		</div>
+	</div>
+</div>

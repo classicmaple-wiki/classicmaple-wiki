@@ -1,11 +1,20 @@
 ---
 /*
-   The version-aware heart of the site: official patch notes at the top,
-   then every recorded value change, newest build first.
+   The version-aware heart of the site: the list of builds, official patch
+   notes, then every recorded value change, newest build first.
+
+   Each part sits in its own window, with heading ids the table of
+   contents points at. The builds table has three columns, so on a phone
+   each build becomes a small labeled block instead of scrolling. An
+   empty window shows the same invitation box as every other window with
+   no data.
 */
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getCollection } from 'astro:content';
 import ChangeLog from '../components/ChangeLog.astro';
+import Invitation from '../components/Invitation.astro';
+import Window from '../components/Window.astro';
+import { defaultBranch, repositoryUrl } from '../../site.config.mjs';
 import { getBuildsNewestFirst } from '../lib/data';
 
 const builds = await getBuildsNewestFirst();
@@ -13,6 +22,7 @@ const patches = (await getCollection('patches'))
 	.map((patchEntry) => patchEntry.data)
 	.sort((first, second) => second.date.getTime() - first.date.getTime());
 
+const patchFolderUrl = `${repositoryUrl}/tree/${defaultBranch}/data/patches`;
 const dateFormatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
 ---
 
@@ -27,45 +37,50 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', time
 		{ depth: 2, slug: 'value-changes', text: 'Value changes' },
 	]}
 >
-	<h2 id="builds">Builds</h2>
-	<table>
-		<thead>
-			<tr><th>Build</th><th>Id</th><th>Date</th></tr>
-		</thead>
-		<tbody>
-			{
-				builds.map((build) => (
-					<tr>
-						<td>{build.name}</td>
-						<td>
-							<code>{build.id}</code>
-						</td>
-						<td>{dateFormatter.format(build.date)}</td>
-					</tr>
-				))
-			}
-		</tbody>
-	</table>
+	<Window title="Builds" id="builds">
+		<table class="data-table data-table--stack">
+			<thead>
+				<tr><th scope="col">Build</th><th scope="col">Id</th><th scope="col">Date</th></tr>
+			</thead>
+			<tbody>
+				{
+					builds.map((build) => (
+						<tr>
+							<th scope="row">{build.name}</th>
+							<td data-label="Id">
+								<code>{build.id}</code>
+							</td>
+							<td data-label="Date">{dateFormatter.format(build.date)}</td>
+						</tr>
+					))
+				}
+			</tbody>
+		</table>
+	</Window>
 
-	<h2 id="patch-notes">Patch notes</h2>
-	{
-		patches.length === 0 ? (
-			<p>No patch notes recorded yet.</p>
-		) : (
-			<ul>
-				{patches.map((patch) => (
-					<li>
-						<a href={patch.source} rel="noopener">
-							{patch.name}
-						</a>
-						, {dateFormatter.format(patch.date)}
-						{patch.summary && <p>{patch.summary}</p>}
-					</li>
-				))}
-			</ul>
-		)
-	}
+	<Window title="Patch notes" id="patch-notes">
+		{
+			patches.length === 0 ? (
+				<Invitation
+					message="No patch notes recorded yet. Seen an official post? Link it here."
+					href={patchFolderUrl}
+					action="Add patch notes"
+				/>
+			) : (
+				<ul class="patch-list">
+					{patches.map((patch) => (
+						<li>
+							<a href={patch.source} rel="noopener">
+								{patch.name}
+							</a>
+							, {dateFormatter.format(patch.date)}
+							{patch.summary && <p>{patch.summary}</p>}
+						</li>
+					))}
+				</ul>
+			)
+		}
+	</Window>
 
-	<h2 id="value-changes">Value changes</h2>
 	<ChangeLog />
 </StarlightPage>

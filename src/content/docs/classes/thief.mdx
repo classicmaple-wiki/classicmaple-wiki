@@ -6,12 +6,66 @@ sidebar:
   order: 4
 ---
 
+import { editBaseUrl } from '../../../../site.config.mjs';
+import ChangeLog from '../../../components/ChangeLog.astro';
 import SkillList from '../../../components/SkillList.astro';
+import StatRows from '../../../components/StatRows.astro';
+import Window from '../../../components/Window.astro';
+
+<Window id="job-path">
+<Fragment slot="title">
+
+## Job path
+
+</Fragment>
+
+<StatRows
+	rows={[
+		{ label: 'First job level' },
+		{ label: 'Job instructor' },
+		{ label: 'Where' },
+		{ label: 'Requirements' },
+	]}
+	editUrl={`${editBaseUrl}data/classes/thief.yaml`}
+	subject="the Thief job path"
+/>
+
+</Window>
+
+<SkillList classId="thief">
+<Fragment slot="title">
 
 ## Skills that changed
 
-<SkillList classId="thief" />
+</Fragment>
+</SkillList>
+
+<Window id="where-to-train">
+<Fragment slot="title">
+
+## Where to train
+
+</Fragment>
+
+See the [Level 1 to 30 party route](/leveling/level-1-30-party-route/).
+
+</Window>
+
+<Window id="notes">
+<Fragment slot="title">
 
 ## Notes
 
+</Fragment>
+
 Nothing here yet. Tested builds, stat advice, and party tips are welcome.
+
+</Window>
+
+<ChangeLog collectionName="classes" entityIdentifier="thief">
+<Fragment slot="title">
+
+## History
+
+</Fragment>
+</ChangeLog>

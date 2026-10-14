@@ -1,23 +1,44 @@
 ---
 /*
-   Wraps the default Starlight footer and adds the fan site disclaimer, so
-   it appears on every page without anyone having to remember it.
+   Wraps the default Starlight footer and adds the site credits, so they
+   appear on every page without anyone having to remember them: the fan
+   site disclaimer, then one short line crediting Sirux, the builder.
+
+   The credits sit under a thin rule in the line color, apart from the
+   edit link and the page links above, so the footer reads as one
+   deliberate block. Dotted dividers stay inside windows. The credit is
+   plain text until the owner adds a Sirux address to site.config.mjs.
 */
 import Default from '@astrojs/starlight/components/Footer.astro';
 ---
 
 <Default><slot /></Default>
 
-<p class="disclaimer">
-	Unofficial fan site. Not affiliated with or endorsed by Nexon. MapleStory and related names are trademarks of their
-	respective owners.
-</p>
+<div class="site-credits">
+	<p class="site-credits__line">
+		Unofficial fan site. Not affiliated with or endorsed by Nexon. MapleStory and related names are trademarks of their
+		respective owners.
+	</p>
+	<p class="site-credits__line">Built by Sirux.</p>
+</div>
 
 <style>
-	.disclaimer {
-		margin-top: 2rem;
-		font-size: var(--sl-text-xs);
-		color: var(--sl-color-gray-3);
+	.site-credits {
+		margin-top: var(--space-6);
+		padding-top: var(--space-4);
+		border-top: 1px solid var(--color-line);
 		text-align: center;
+	}
+
+	.site-credits__line {
+		margin: 0 auto;
+		max-width: 60ch;
+		font-size: var(--text-xs);
+		line-height: 1.5;
+		color: var(--color-ink-muted);
+	}
+
+	.site-credits__line + .site-credits__line {
+		margin-top: var(--space-1);
 	}
 </style>

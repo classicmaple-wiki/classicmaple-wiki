@@ -1,0 +1,39 @@
+---
+/*
+   One scene from the library of places (spec 0002), drawn as an inline svg
+   on a pixel grid. The caller picks the place and the variant: band for a
+   page header, home for the taller home header, or card for a shelf card.
+
+   The scene does not set its mood. The caller puts data-mood on a wrapper
+   and scenes.css fills every color class from that mood's tokens, so the
+   same drawing works in every mood and in dark mode.
+
+   The svg fills its wrapper and crops from the bottom center, so the
+   wrapper's fixed height decides the size and nothing shifts while the
+   page loads. The art is decoration, hidden from assistive technology,
+   since the page title already says where the reader is.
+*/
+import type { SceneIdentifier } from '../../../schemas/shared';
+import { sceneArtwork, type SceneVariant } from './artwork';
+
+interface Props {
+	scene: SceneIdentifier;
+	variant: SceneVariant;
+}
+
+const { scene, variant } = Astro.props;
+const drawing = sceneArtwork[scene][variant];
+const displayScale = variant === 'card' ? 2 : 4;
+---
+
+<svg
+	class="scene"
+	width={drawing.viewBoxWidth * displayScale}
+	height={drawing.viewBoxHeight * displayScale}
+	viewBox={`0 0 ${drawing.viewBoxWidth} ${drawing.viewBoxHeight}`}
+	preserveAspectRatio="xMidYMax slice"
+	shape-rendering="crispEdges"
+	aria-hidden="true"
+	focusable="false"
+	set:html={drawing.markup}
+></svg>

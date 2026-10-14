@@ -53,19 +53,19 @@
 	--color-ink-muted: #5c4b3c;
 	--color-line: #e3d6bc;
 	--color-edge: color-mix(in srgb, var(--color-ink) 22%, var(--color-panel));
-	--color-edge-strong: color-mix(in srgb, var(--color-ink) 45%, var(--color-panel));
+	--color-edge-strong: color-mix(in srgb, var(--color-ink) 55%, var(--color-panel));
 	--color-accent: #9a3d08;
 	--color-accent-fill: #e8711c;
 	--color-chip: #f3e3c7;
 	--color-titlebar: #f4d9b0;
 	--color-focus: #1f6fb2;
 
-	--badge-official-bg: #e2f0da;
-	--badge-official-fg: #2f5e1f;
-	--badge-ingame-bg: #dcebf7;
-	--badge-ingame-fg: #1f4e79;
-	--badge-unverified-bg: #fbe6c8;
-	--badge-unverified-fg: #7a4306;
+	--badge-official-background: #e2f0da;
+	--badge-official-foreground: #2f5e1f;
+	--badge-in-game-background: #dcebf7;
+	--badge-in-game-foreground: #1f4e79;
+	--badge-unverified-background: #fbe6c8;
+	--badge-unverified-foreground: #7a4306;
 
 	--font-body: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
 	--font-display: 'Silkscreen', 'Nunito', system-ui, sans-serif;
@@ -125,12 +125,12 @@
 	--color-titlebar: #3a2a1c;
 	--color-focus: #7fb8f0;
 
-	--badge-official-bg: #21351a;
-	--badge-official-fg: #b7e39e;
-	--badge-ingame-bg: #16283a;
-	--badge-ingame-fg: #a9cff2;
-	--badge-unverified-bg: #3a2810;
-	--badge-unverified-fg: #f6c98a;
+	--badge-official-background: #21351a;
+	--badge-official-foreground: #b7e39e;
+	--badge-in-game-background: #16283a;
+	--badge-in-game-foreground: #a9cff2;
+	--badge-unverified-background: #3a2810;
+	--badge-unverified-foreground: #f6c98a;
 
 	--shadow-panel: 0 0 0 1px var(--color-line);
 	--shadow-window: inset 0 1px 0 rgb(255 255 255 / 0.06), 0 2px 0 rgb(0 0 0 / 0.5);
