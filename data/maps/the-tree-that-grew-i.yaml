@@ -7,6 +7,16 @@ monsters:
   - dark-stump
   - slime
   - stump
+exits:
+  - to: the-field-up-north-of-ellinia
+    kind: walking
+    direction: east
+  - to: the-forest-north-of-ellinia
+    kind: walking
+    direction: west
+  - to: the-tree-that-grew-ii
+    kind: hidden
+    direction: up
 source_page: https://mapleclassic.wiki/wiki/The_Tree_That_Grew_I
 verified:
   status: unverified

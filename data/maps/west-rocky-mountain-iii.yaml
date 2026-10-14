@@ -10,6 +10,11 @@ monsters:
   - green-mushroom
   - red-snail
   - stump
+exits:
+  - to: west-rocky-mountain-ii
+    kind: walking
+  - to: west-rocky-mountain-iv
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/West_Rocky_Mountain_III
 verified:
   status: unverified

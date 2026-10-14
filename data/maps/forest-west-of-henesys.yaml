@@ -12,6 +12,13 @@ monsters:
   - slime
   - snail
   - stump
+exits:
+  - to: 3-way-road-split
+    kind: walking
+    direction: west
+  - to: a-hill-west-of-henesys
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Forest_West_of_Henesys
 verified:
   status: unverified

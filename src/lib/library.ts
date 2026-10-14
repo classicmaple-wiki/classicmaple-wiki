@@ -12,7 +12,8 @@
    the guide that covers them.
 */
 import { getCollection } from 'astro:content';
-import type { Sprite, Verification } from '../../schemas/shared';
+import type { SceneIdentifier, Sprite, Verification } from '../../schemas/shared';
+import { resolveMapScene } from './scenes';
 import type { GlyphName } from './glyphs';
 
 export type LibraryType = 'monster' | 'item' | 'map' | 'npc' | 'quest' | 'shop' | 'class' | 'profession' | 'system';
@@ -29,8 +30,22 @@ export interface LibraryCard {
 	fact: string;
 	href: string;
 	spriteFile?: string;
+	scene?: SceneIdentifier;
 	verified: Verification;
 }
+
+/*
+   Plain words for a map's kind, for its card and its page.
+*/
+export const mapKindLabels: Record<string, string> = {
+	town: 'Town',
+	field: 'Field',
+	dungeon: 'Dungeon',
+	'hunting-ground': 'Hunting ground',
+	'trading-hub': 'Trading hub',
+	'town-interior': 'Inside a town',
+	'hidden-street': 'Hidden street',
+};
 
 /*
    The label, glyph, and filter order of each type. The order is the
@@ -105,12 +120,15 @@ export async function libraryCards(): Promise<LibraryCard[]> {
 		});
 	}
 	for (const { data } of await getCollection('maps')) {
+		const town = data.town ?? (data.kind === 'town' ? data.name : undefined);
+		const kindLabel = data.kind ? mapKindLabels[data.kind] : 'Map';
 		cards.push({
 			type: 'map',
 			identifier: data.id,
 			name: data.name,
-			fact: data.region ?? 'Region unknown',
+			fact: town && town !== data.name ? `${kindLabel} near ${town}` : kindLabel,
 			href: `/maps/${data.id}/`,
+			scene: (await resolveMapScene(data)).scene,
 			verified: data.verified,
 		});
 	}

@@ -12,6 +12,13 @@ monsters:
   - green-mushroom
   - orange-mushroom
   - stump
+exits:
+  - to: construction-site-north-of-kerning-city
+    kind: walking
+    direction: east
+  - to: kerning-city
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Sunset_Sky
 verified:
   status: unverified

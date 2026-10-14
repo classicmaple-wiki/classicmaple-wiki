@@ -11,6 +11,11 @@ monsters:
   - dark-stump
   - red-snail
   - stump
+exits:
+  - to: east-rocky-mountain-ii
+    kind: walking
+  - to: east-rocky-mountain-iv
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_III
 verified:
   status: unverified

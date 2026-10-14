@@ -3,6 +3,9 @@ name: Marr's Forest
 region: Victoria Island
 town: Ellinia
 kind: town
+exits:
+  - to: ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Marr's_Forest
 verified:
   status: unverified

@@ -8,6 +8,9 @@ recommended_level:
   - 33
 monsters:
   - curse-eye
+exits:
+  - to: the-forest-north-of-ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Forest_Up_North_IX
 verified:
   status: unverified

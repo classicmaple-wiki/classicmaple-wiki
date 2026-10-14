@@ -2,6 +2,31 @@ id: kerning-city
 name: Kerning City
 region: Victoria Island
 kind: town
+exits:
+  - to: kerning-city-civic-center
+    kind: hidden
+  - to: kerning-city-construction-site
+    kind: walking
+    direction: west
+  - to: kerning-city-hair-salon
+    kind: hidden
+  - to: kerning-city-pharmacy
+    kind: hidden
+  - to: kerning-city-repair-shop
+    kind: hidden
+  - to: kerning-city-self-defence-item-store
+    kind: hidden
+  - to: niora-hospital
+    kind: hidden
+  - to: subway-ticketing-booth
+    kind: hidden
+  - to: sunset-sky
+    kind: walking
+    direction: east
+  - to: the-swamp-of-despair-i
+    kind: hidden
+  - to: thieves-hideout
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Kerning_City
 verified:
   status: unverified

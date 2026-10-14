@@ -3,6 +3,9 @@ name: Perion Department Store
 region: Victoria Island
 town: Perion
 kind: town
+exits:
+  - to: perion
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Perion_Department_Store
 verified:
   status: unverified

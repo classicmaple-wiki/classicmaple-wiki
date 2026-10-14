@@ -9,6 +9,13 @@ recommended_level:
 monsters:
   - cold-eye
   - tauromacis
+exits:
+  - to: sanctuary-entrance-i
+    kind: walking
+    direction: west
+  - to: sanctuary-entrance-iii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Sanctuary_Entrance_II
 verified:
   status: unverified

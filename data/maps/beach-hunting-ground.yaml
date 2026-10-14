@@ -15,6 +15,9 @@ monsters:
   - shroom
   - slime
   - snail
+exits:
+  - to: 3-way-road-split
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Beach_Hunting_Ground
 verified:
   status: unverified

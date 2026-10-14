@@ -9,6 +9,13 @@ recommended_level:
 monsters:
   - horny-mushroom
   - zombie-mushroom
+exits:
+  - to: ant-tunnel-iii
+    kind: walking
+    direction: west
+  - to: dark-cave
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Ant_Tunnel_IV
 verified:
   status: unverified

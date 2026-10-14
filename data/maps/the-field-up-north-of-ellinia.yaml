@@ -7,6 +7,13 @@ monsters:
   - slime
   - snail
   - stump
+exits:
+  - to: ellinia
+    kind: walking
+    direction: east
+  - to: the-tree-that-grew-i
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/The_Field_Up_North_of_Ellinia
 verified:
   status: unverified

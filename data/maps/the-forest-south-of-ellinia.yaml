@@ -9,6 +9,21 @@ monsters:
   - slime
   - snail
   - stump
+exits:
+  - to: dungeon-southern-forest-i
+    kind: hidden
+  - to: dungeon-southern-forest-ii
+    kind: hidden
+  - to: dungeon-southern-forest-iii
+    kind: hidden
+  - to: dungeon-southern-forest-iv
+    kind: hidden
+  - to: the-forest-east-of-henesys
+    kind: walking
+    direction: west
+  - to: the-forest-of-wisdom
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/The_Forest_South_of_Ellinia
 verified:
   status: unverified

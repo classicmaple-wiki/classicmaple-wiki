@@ -3,6 +3,23 @@ name: Henesys Market
 region: Victoria Island
 town: Henesys
 kind: town
+exits:
+  - to: free-market-entrance
+    kind: walking
+  - to: henesys
+    kind: walking
+  - to: henesys-department-store
+    kind: walking
+  - to: henesys-hair-salon
+    kind: walking
+  - to: henesys-park
+    kind: walking
+  - to: henesys-plastic-surgery
+    kind: walking
+  - to: henesys-skin-care
+    kind: walking
+  - to: henesys-weapon-store
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Henesys_Market
 verified:
   status: unverified

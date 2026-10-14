@@ -11,6 +11,9 @@ monsters:
   - dark-axe-stump
   - dark-stump
   - wild-boar
+exits:
+  - to: east-domain-of-perion
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Land_of_Wild_Boar_II
 verified:
   status: unverified

@@ -9,6 +9,13 @@ recommended_level:
 monsters:
   - lorang
   - lupin
+exits:
+  - to: florina-beach
+    kind: walking
+    direction: west
+  - to: lorang-lorang
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/A_Look-Out_Shed_Around_the_Beach
 verified:
   status: unverified

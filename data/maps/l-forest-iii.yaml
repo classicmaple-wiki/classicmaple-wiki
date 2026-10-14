@@ -14,6 +14,13 @@ monsters:
   - slime
   - snail
   - stump
+exits:
+  - to: kerning-city-middle-forest-i
+    kind: walking
+    direction: east
+  - to: l-forest-ii
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/L_Forest_III
 verified:
   status: unverified

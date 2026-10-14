@@ -3,6 +3,9 @@ name: Henesys Town Hall
 region: Victoria Island
 town: Henesys
 kind: field
+exits:
+  - to: henesys
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Henesys_Town_Hall
 verified:
   status: unverified

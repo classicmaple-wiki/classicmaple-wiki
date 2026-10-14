@@ -9,6 +9,10 @@ recommended_level:
 monsters:
   - clang
   - tortie
+exits:
+  - to: lorang-and-clang
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Hot_Sand
 verified:
   status: unverified

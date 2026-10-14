@@ -11,6 +11,11 @@ monsters:
   - dark-stump
   - fire-boar
   - wild-boar
+exits:
+  - to: deep-forest
+    kind: walking
+  - to: deep-valley-iii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Perion_Dungeon_Entrance
 verified:
   status: unverified

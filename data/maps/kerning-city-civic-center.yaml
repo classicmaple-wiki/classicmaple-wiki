@@ -3,6 +3,9 @@ name: Kerning City Civic Center
 region: Victoria Island
 town: Kerning City
 kind: field
+exits:
+  - to: kerning-city
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Kerning_City_Civic_Center
 verified:
   status: unverified

@@ -3,6 +3,16 @@ name: Lith Harbor
 region: Victoria Island
 town: Lith Harbor
 kind: town
+exits:
+  - to: lith-harbor-armor-shop
+    kind: walking
+  - to: lith-harbor-department-store
+    kind: walking
+  - to: lith-harbor-weapon-shop
+    kind: walking
+  - to: right-around-lith-harbor
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Lith_Harbor
 verified:
   status: unverified

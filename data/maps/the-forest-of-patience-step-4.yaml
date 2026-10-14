@@ -5,6 +5,9 @@ town: Ellinia
 kind: town
 monsters:
   - super-jr-necki
+exits:
+  - to: the-forest-of-patience-step-5
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Forest_of_Patience_(Step_4)
 verified:
   status: unverified

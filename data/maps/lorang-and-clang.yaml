@@ -9,6 +9,15 @@ recommended_level:
 monsters:
   - clang
   - lorang
+exits:
+  - to: clang-and-lorang
+    kind: hidden
+  - to: hot-sand
+    kind: walking
+    direction: east
+  - to: lorang-lorang
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Lorang_and_Clang
 verified:
   status: unverified

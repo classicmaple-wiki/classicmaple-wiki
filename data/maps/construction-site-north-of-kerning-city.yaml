@@ -10,6 +10,15 @@ monsters:
   - octopus
   - orange-mushroom
   - red-snail
+exits:
+  - to: northern-top-of-construction-site
+    kind: hidden
+  - to: sunset-sky
+    kind: walking
+    direction: west
+  - to: west-domain-of-perion
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Construction_Site_North_of_Kerning_City
 verified:
   status: unverified

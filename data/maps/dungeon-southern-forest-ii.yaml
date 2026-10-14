@@ -9,6 +9,9 @@ recommended_level:
 monsters:
   - green-mushroom
   - slime
+exits:
+  - to: the-forest-south-of-ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_II
 verified:
   status: unverified

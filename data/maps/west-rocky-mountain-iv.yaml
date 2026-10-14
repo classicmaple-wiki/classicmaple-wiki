@@ -8,6 +8,9 @@ monsters:
   - dark-axe-stump
   - lupin
   - wild-boar
+exits:
+  - to: west-rocky-mountain-iii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/West_Rocky_Mountain_IV
 verified:
   status: unverified

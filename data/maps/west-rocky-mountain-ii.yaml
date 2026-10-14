@@ -8,6 +8,11 @@ monsters:
   - dark-stump
   - red-snail
   - stump
+exits:
+  - to: west-rocky-mountain-i
+    kind: walking
+  - to: west-rocky-mountain-iii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/West_Rocky_Mountain_II
 verified:
   status: unverified

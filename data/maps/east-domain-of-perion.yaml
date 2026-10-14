@@ -12,6 +12,15 @@ monsters:
   - red-snail
   - snail
   - stump
+exits:
+  - to: rocky-road-iii
+    kind: walking
+    direction: west
+  - to: the-forest-north-of-ellinia
+    kind: walking
+    direction: east
+  - to: the-land-of-wild-boar-ii
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/East_Domain_of_Perion
 verified:
   status: unverified

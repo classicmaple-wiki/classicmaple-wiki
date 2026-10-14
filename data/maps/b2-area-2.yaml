@@ -3,6 +3,9 @@ name: B2 (Area 2)
 region: Victoria Island
 town: Kerning City
 kind: town
+exits:
+  - to: b2-subway-depot
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/B2_(Area_2)
 verified:
   status: unverified

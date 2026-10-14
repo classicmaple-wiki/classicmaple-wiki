@@ -14,6 +14,15 @@ monsters:
   - fire-boar
   - red-snail
   - wild-boar
+exits:
+  - to: dangerous-valley
+    kind: hidden
+  - to: deep-valley-ii
+    kind: walking
+    direction: west
+  - to: perion
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Deep_Valley_I
 verified:
   status: unverified

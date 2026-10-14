@@ -73,6 +73,15 @@ export const map = entityBase.extend({
 	region: z.string().optional(),
 	town: z.string().optional(),
 	kind: z.enum(['town', 'field', 'dungeon', 'hunting-ground', 'trading-hub', 'town-interior', 'hidden-street']).optional(),
+	exits: z
+		.array(
+			z.strictObject({
+				to: identifier,
+				kind: z.enum(['walking', 'hidden', 'door', 'transport']).optional(),
+				direction: z.enum(['north', 'south', 'east', 'west', 'up', 'down']).optional(),
+			})
+		)
+		.default([]),
 	recommended_level: z.tuple([positiveInteger, positiveInteger]).optional(),
 	monsters: z.array(identifier).default([]),
 });

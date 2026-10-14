@@ -12,6 +12,11 @@ monsters:
   - jr-boogie-1
   - jr-boogie-2
   - jr-necki
+exits:
+  - to: sleepy-dungeon-iii
+    kind: walking
+  - to: sleepy-dungeon-v
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_IV
 verified:
   status: unverified

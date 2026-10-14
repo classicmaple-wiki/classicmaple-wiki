@@ -11,6 +11,15 @@ monsters:
   - slime
   - snail
   - stump
+exits:
+  - to: damp-tree-forest
+    kind: walking
+    direction: west
+  - to: perion-dungeon-entrance
+    kind: walking
+    direction: east
+  - to: swampy-land-in-a-deep-forest
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Deep_Forest
 verified:
   status: unverified

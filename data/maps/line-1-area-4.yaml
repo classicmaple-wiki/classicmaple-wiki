@@ -5,6 +5,9 @@ town: Kerning City
 kind: field
 monsters:
   - wraith
+exits:
+  - to: line-1-area-3
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Line_1_(Area_4)
 verified:
   status: unverified

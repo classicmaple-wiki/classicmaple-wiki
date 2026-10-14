@@ -3,6 +3,23 @@ name: Perion
 region: Victoria Island
 town: Perion
 kind: town
+exits:
+  - to: deep-valley-i
+    kind: walking
+  - to: free-market-entrance
+    kind: walking
+  - to: perion-department-store
+    kind: walking
+  - to: perion-street-corner
+    kind: walking
+    direction: east
+  - to: perion-weapon-store
+    kind: walking
+  - to: warriors-sanctuary
+    kind: walking
+  - to: west-street-corner-of-perion
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Perion
 verified:
   status: unverified

@@ -7,6 +7,9 @@ monsters:
   - blue-mushroom
   - fairy-4
   - stone-golem
+exits:
+  - to: the-entrance-of-golems-temple
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Golem's_Temple_IV
 verified:
   status: unverified

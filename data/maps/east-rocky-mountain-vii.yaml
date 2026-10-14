@@ -10,6 +10,9 @@ monsters:
   - copper-drake
   - dark-axe-stump
   - fire-boar
+exits:
+  - to: east-rocky-mountain-vi
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_VII
 verified:
   status: unverified

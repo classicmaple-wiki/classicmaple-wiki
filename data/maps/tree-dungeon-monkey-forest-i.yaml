@@ -9,6 +9,9 @@ recommended_level:
 monsters:
   - curse-eye
   - zombie-lupin
+exits:
+  - to: monkey-forest-i
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Monkey_Forest_I
 verified:
   status: unverified

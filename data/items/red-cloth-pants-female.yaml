@@ -7,3 +7,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Cloth_Pants_(Female)
   build: cot2
+sprite:
+  file: items/red-cloth-pants-female.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060022/icon
+  retrieved: 2026-10-14

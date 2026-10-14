@@ -2,6 +2,9 @@ id: magic-library
 name: Magic Library
 region: Victoria Island
 town: Ellinia
+exits:
+  - to: ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Magic_Library
 verified:
   status: unverified

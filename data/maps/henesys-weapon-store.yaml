@@ -3,6 +3,9 @@ name: Henesys Weapon Store
 region: Victoria Island
 town: Henesys
 kind: town
+exits:
+  - to: henesys-market
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Henesys_Weapon_Store
 verified:
   status: unverified

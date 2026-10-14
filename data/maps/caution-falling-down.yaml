@@ -10,6 +10,9 @@ monsters:
   - blue-mushroom
   - octopus
   - orange-mushroom
+exits:
+  - to: kerning-city-construction-site
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Caution_Falling_Down
 verified:
   status: unverified

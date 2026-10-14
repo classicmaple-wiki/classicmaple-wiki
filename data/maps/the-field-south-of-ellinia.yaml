@@ -11,6 +11,13 @@ monsters:
   - green-mushroom
   - slime
   - stump
+exits:
+  - to: ellinia
+    kind: walking
+    direction: east
+  - to: the-forest-of-wisdom
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/The_Field_South_of_Ellinia
 verified:
   status: unverified

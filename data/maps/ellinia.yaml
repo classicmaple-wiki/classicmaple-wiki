@@ -2,6 +2,22 @@ id: ellinia
 name: Ellinia
 region: Victoria Island
 kind: town
+exits:
+  - to: ellinia-department-store
+    kind: walking
+  - to: ellinia-station
+    kind: walking
+  - to: ellinia-weapon-store
+    kind: walking
+  - to: magic-library
+    kind: walking
+  - to: marrs-forest
+    kind: walking
+  - to: the-field-south-of-ellinia
+    kind: walking
+    direction: west
+  - to: the-field-up-north-of-ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Ellinia
 verified:
   status: unverified

@@ -3,6 +3,9 @@ name: Kerning City Self-Defence Item Store
 region: Victoria Island
 town: Kerning City
 kind: town
+exits:
+  - to: kerning-city
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Kerning_City_Self-Defence_Item_Store
 verified:
   status: unverified

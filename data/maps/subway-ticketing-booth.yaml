@@ -6,6 +6,11 @@ kind: field
 recommended_level:
   - 6
   - 8
+exits:
+  - to: kerning-city
+    kind: walking
+  - to: line-1-area-1
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Subway_Ticketing_Booth
 verified:
   status: unverified

@@ -9,6 +9,11 @@ recommended_level:
 monsters:
   - jr-necki
   - lupin
+exits:
+  - to: dangerous-croko-ii
+    kind: hidden
+  - to: monkey-swamp-ii
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Monkey_Swamp_I
 verified:
   status: unverified

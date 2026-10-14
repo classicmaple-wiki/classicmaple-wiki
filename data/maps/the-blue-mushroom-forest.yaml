@@ -11,6 +11,9 @@ monsters:
   - blue-snail
   - red-snail
   - slime
+exits:
+  - to: the-forest-east-of-henesys
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Blue_Mushroom_Forest
 verified:
   status: unverified

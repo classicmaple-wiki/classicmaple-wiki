@@ -11,6 +11,19 @@ monsters:
   - ribbon-pig
   - slime
   - snail
+exits:
+  - to: beach-hunting-ground
+    kind: hidden
+  - to: forest-west-of-henesys
+    kind: walking
+    direction: east
+  - to: kerning-city-middle-forest-i
+    kind: walking
+  - to: the-pig-beach
+    kind: hidden
+  - to: thicket-around-the-beach-iii
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/3-Way_Road-Split
 verified:
   status: unverified

@@ -13,6 +13,17 @@ monsters:
   - shroom
   - slime
   - snail
+exits:
+  - to: the-blue-mushroom-forest
+    kind: hidden
+  - to: the-forest-south-of-ellinia
+    kind: walking
+    direction: east
+  - to: the-rain-forest-east-of-henesys
+    kind: walking
+    direction: west
+  - to: utahs-pig-farm
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Forest_East_of_Henesys
 verified:
   status: unverified

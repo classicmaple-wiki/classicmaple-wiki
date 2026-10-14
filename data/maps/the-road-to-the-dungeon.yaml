@@ -16,6 +16,13 @@ monsters:
   - ribbon-pig
   - shroom
   - slime
+exits:
+  - to: henesys
+    kind: walking
+    direction: west
+  - to: henesys-dungeon-entrance
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/The_Road_to_the_Dungeon
 verified:
   status: unverified

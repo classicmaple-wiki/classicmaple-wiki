@@ -11,6 +11,11 @@ monsters:
   - jr-boogie-1
   - jr-boogie-2
   - wild-boar
+exits:
+  - to: over-the-wall
+    kind: hidden
+  - to: perion-street-corner
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Land_of_Wild_Boar
 verified:
   status: unverified

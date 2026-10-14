@@ -9,6 +9,14 @@ monsters:
   - octopus
   - orange-mushroom
   - stump
+exits:
+  - to: caution-falling-down
+    kind: hidden
+  - to: kerning-city
+    kind: walking
+  - to: l-forest-i
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Kerning_City_Construction_Site
 verified:
   status: unverified

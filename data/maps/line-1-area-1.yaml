@@ -5,6 +5,11 @@ town: Kerning City
 kind: field
 monsters:
   - bubbling
+exits:
+  - to: subway-ticketing-booth
+    kind: walking
+  - to: transfer-area
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Line_1_(Area_1)
 verified:
   status: unverified

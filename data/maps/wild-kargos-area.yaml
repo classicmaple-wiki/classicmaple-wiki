@@ -6,6 +6,10 @@ kind: field
 monsters:
   - cold-eye
   - wild-kargo
+exits:
+  - to: drakes-meal-table
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Wild_Kargo's_Area
 verified:
   status: unverified

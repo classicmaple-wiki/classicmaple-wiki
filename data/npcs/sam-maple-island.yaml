@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Sam_(Maple_Island)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sam_(Maple_Island)
+sprite:
+  file: npcs/sam-maple-island.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/2005/render/stand/0
+  retrieved: 2026-10-14

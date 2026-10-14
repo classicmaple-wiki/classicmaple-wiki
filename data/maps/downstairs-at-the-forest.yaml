@@ -11,6 +11,9 @@ monsters:
   - horny-mushroom
   - lupin
   - slime
+exits:
+  - to: the-forest-of-wisdom
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Downstairs_at_the_Forest
 verified:
   status: unverified

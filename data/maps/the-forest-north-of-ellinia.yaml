@@ -8,6 +8,32 @@ monsters:
   - slime
   - snail
   - stump
+exits:
+  - to: east-domain-of-perion
+    kind: walking
+  - to: the-tree-that-grew-i
+    kind: walking
+    direction: east
+  - to: the-tree-tunnel-at-the-forest-up-north
+    kind: hidden
+  - to: tree-dungeon-forest-up-north-i
+    kind: hidden
+  - to: tree-dungeon-forest-up-north-ii
+    kind: hidden
+  - to: tree-dungeon-forest-up-north-iii
+    kind: hidden
+  - to: tree-dungeon-forest-up-north-iv
+    kind: hidden
+  - to: tree-dungeon-forest-up-north-ix
+    kind: hidden
+  - to: tree-dungeon-forest-up-north-v
+    kind: hidden
+  - to: tree-dungeon-forest-up-north-vi
+    kind: hidden
+  - to: tree-dungeon-forest-up-north-vii
+    kind: hidden
+  - to: tree-dungeon-forest-up-north-viii
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/The_Forest_North_of_Ellinia
 verified:
   status: unverified

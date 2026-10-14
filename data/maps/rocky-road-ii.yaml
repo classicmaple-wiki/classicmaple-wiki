@@ -11,6 +11,13 @@ monsters:
   - snail
   - stump
   - wild-boar
+exits:
+  - to: rocky-road-i
+    kind: walking
+    direction: west
+  - to: rocky-road-iii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Rocky_Road_II
 verified:
   status: unverified

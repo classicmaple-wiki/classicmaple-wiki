@@ -8,6 +8,10 @@ recommended_level:
   - 80
 monsters:
   - jr-balrog
+exits:
+  - to: sanctuary-entrance-iv
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/The_Cursed_Sanctuary
 verified:
   status: unverified

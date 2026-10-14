@@ -2,6 +2,28 @@ id: henesys
 name: Henesys
 region: Victoria Island
 kind: town
+exits:
+  - to: an-empty-house
+    kind: hidden
+  - to: henesys-hunting-ground-i
+    kind: walking
+    direction: west
+  - to: henesys-market
+    kind: walking
+  - to: henesys-park
+    kind: walking
+  - to: henesys-town-hall
+    kind: walking
+  - to: henesys-townstreet
+    kind: walking
+  - to: the-hill-east-of-henesys
+    kind: walking
+    direction: east
+  - to: the-road-to-the-dungeon
+    kind: walking
+    direction: east
+  - to: victoria-road
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Henesys
 verified:
   status: unverified

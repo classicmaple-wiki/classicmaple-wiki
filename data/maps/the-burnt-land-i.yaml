@@ -9,6 +9,11 @@ recommended_level:
 monsters:
   - dark-axe-stump
   - fire-boar
+exits:
+  - to: deep-valley-ii
+    kind: walking
+  - to: the-burnt-land-ii
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/The_Burnt_Land_I
 verified:
   status: unverified

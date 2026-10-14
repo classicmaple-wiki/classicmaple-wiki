@@ -9,6 +9,13 @@ monsters:
   - red-snail
   - stump
   - wild-boar
+exits:
+  - to: east-domain-of-perion
+    kind: walking
+    direction: east
+  - to: rocky-road-ii
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Rocky_Road_III
 verified:
   status: unverified

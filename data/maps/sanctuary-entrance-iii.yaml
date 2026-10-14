@@ -10,6 +10,13 @@ monsters:
   - cold-eye
   - tauromacis
   - taurospear
+exits:
+  - to: sanctuary-entrance-ii
+    kind: walking
+    direction: west
+  - to: sanctuary-entrance-iv
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Sanctuary_Entrance_III
 verified:
   status: unverified

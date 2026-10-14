@@ -3,6 +3,9 @@ name: B3 (Area 2)
 region: Victoria Island
 town: Kerning City
 kind: field
+exits:
+  - to: b3-area-3
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/B3_(Area_2)
 verified:
   status: unverified

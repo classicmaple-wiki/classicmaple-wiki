@@ -3,6 +3,17 @@ name: Sleepywood
 region: Victoria Island
 town: Sleepywood
 kind: town
+exits:
+  - to: ant-tunnel-i
+    kind: walking
+    direction: east
+  - to: sleepy-dungeon-i
+    kind: hidden
+  - to: sleepywood-hotel
+    kind: walking
+  - to: swampy-land-in-a-deep-forest
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Sleepywood
 verified:
   status: unverified

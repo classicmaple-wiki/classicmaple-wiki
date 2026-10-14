@@ -14,6 +14,13 @@ monsters:
   - shroom
   - slime
   - stump
+exits:
+  - to: kerning-city-construction-site
+    kind: walking
+    direction: west
+  - to: l-forest-ii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/L_Forest_I
 verified:
   status: unverified

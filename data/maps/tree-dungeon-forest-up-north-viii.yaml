@@ -5,6 +5,9 @@ town: Ellinia
 kind: dungeon
 monsters:
   - curse-eye
+exits:
+  - to: the-forest-north-of-ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Forest_Up_North_VIII
 verified:
   status: unverified

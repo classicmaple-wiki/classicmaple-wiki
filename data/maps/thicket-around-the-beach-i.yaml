@@ -12,6 +12,13 @@ monsters:
   - slime
   - snail
   - stump
+exits:
+  - to: right-around-lith-harbor
+    kind: walking
+    direction: west
+  - to: thicket-around-the-beach-ii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_I
 verified:
   status: unverified

@@ -14,6 +14,15 @@ monsters:
   - shroom
   - slime
   - stump
+exits:
+  - to: a-hill-west-of-henesys
+    kind: walking
+    direction: west
+  - to: henesys
+    kind: walking
+    direction: east
+  - to: henesys-hunting-ground-ii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_I
 verified:
   status: unverified

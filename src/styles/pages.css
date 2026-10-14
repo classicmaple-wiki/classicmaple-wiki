@@ -102,6 +102,15 @@
 	line-height: 1.5;
 }
 
+a.page-title__tag {
+	text-decoration: none;
+}
+
+a.page-title__tag:hover {
+	background: color-mix(in srgb, var(--color-wood) 80%, #000);
+	text-decoration: underline;
+}
+
 .page-title__heading {
 	margin: 0;
 	font-family: var(--font-display);
@@ -1140,4 +1149,24 @@ site-search button[data-open-modal]:hover {
 	font-size: var(--text-md);
 	font-weight: 600;
 	color: var(--color-ink-muted);
+}
+
+/*
+   A map card's slot shows a crop of its town's painted scene, filling
+   the rounded slot (spec 0009).
+*/
+.library-card__slot--scene {
+	position: relative;
+	overflow: hidden;
+}
+
+/*
+   The library holds over a thousand cards. The browser skips layout and
+   paint for cards off screen until the reader scrolls near them, which
+   keeps the first view fast on phones. The intrinsic size reserves each
+   card's space so the scroll bar does not jump.
+*/
+.library-grid > .library-card {
+	content-visibility: auto;
+	contain-intrinsic-size: auto 220px;
 }

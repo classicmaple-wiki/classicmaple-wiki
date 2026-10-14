@@ -6,6 +6,14 @@ kind: hunting-ground
 monsters:
   - blue-snail
   - snail
+exits:
+  - to: a-split-road
+    kind: walking
+  - to: snail-hunting-ground-i
+    kind: walking
+    direction: west
+  - to: snail-hunting-ground-iii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_II
 verified:
   status: unverified

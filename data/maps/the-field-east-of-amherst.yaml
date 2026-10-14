@@ -8,6 +8,12 @@ monsters:
   - orange-mushroom
   - red-snail
   - snail
+exits:
+  - to: amherst
+    kind: walking
+    direction: west
+  - to: tomato-field
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/The_Field_East_of_Amherst
 verified:
   status: unverified

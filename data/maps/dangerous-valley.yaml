@@ -9,6 +9,11 @@ recommended_level:
 monsters:
   - copper-drake
   - fire-boar
+exits:
+  - to: dangerous-valley-ii
+    kind: walking
+  - to: deep-valley-i
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Dangerous_Valley
 verified:
   status: unverified

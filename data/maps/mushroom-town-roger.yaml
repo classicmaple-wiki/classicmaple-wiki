@@ -3,6 +3,13 @@ name: Mushroom Town (Roger)
 region: Maple Island
 town: Mushroom Town (Roger)
 kind: town
+exits:
+  - to: mushroom-town-nina
+    kind: walking
+    direction: east
+  - to: mushroom-town-west-entrance
+    kind: walking
+    direction: west
 source_page: https://mapleclassic.wiki/wiki/Mushroom_Town_(Roger)
 verified:
   status: unverified

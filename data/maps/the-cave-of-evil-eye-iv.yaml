@@ -9,6 +9,12 @@ recommended_level:
 monsters:
   - evil-eye
   - jr-boogie-2
+exits:
+  - to: drake-hunting-ground
+    kind: walking
+    direction: east
+  - to: the-cave-of-evil-eye-iii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Cave_of_Evil_Eye_IV
 verified:
   status: unverified

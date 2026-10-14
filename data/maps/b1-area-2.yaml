@@ -5,6 +5,9 @@ town: Kerning City
 kind: field
 monsters:
   - super-stirge
+exits:
+  - to: b1-subway-depot
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/B1_(Area_2)
 verified:
   status: unverified

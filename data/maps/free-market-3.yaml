@@ -2,6 +2,10 @@ id: free-market-3
 name: Free Market (3)
 region: Hidden Street
 kind: trading-hub
+exits:
+  - to: free-market-entrance
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Free_Market_(3)
 verified:
   status: unverified

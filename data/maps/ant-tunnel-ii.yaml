@@ -9,6 +9,13 @@ recommended_level:
 monsters:
   - horny-mushroom
   - zombie-mushroom
+exits:
+  - to: ant-tunnel-i
+    kind: walking
+    direction: west
+  - to: ant-tunnel-iii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Ant_Tunnel_II
 verified:
   status: unverified

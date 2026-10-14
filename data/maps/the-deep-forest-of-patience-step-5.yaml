@@ -6,6 +6,9 @@ kind: town
 monsters:
   - super-jr-necki
   - super-slime
+exits:
+  - to: the-deep-forest-of-patience-step-6
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Deep_Forest_of_Patience_(Step_5)
 verified:
   status: unverified

@@ -6,6 +6,11 @@ kind: field
 monsters:
   - jr-necki
   - jr-wraith
+exits:
+  - to: line-2-area-2
+    kind: hidden
+  - to: transfer-area
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Line_2_(Area_1)
 verified:
   status: unverified

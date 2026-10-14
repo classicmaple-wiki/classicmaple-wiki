@@ -3,6 +3,9 @@ name: Kerning City Pharmacy
 region: Victoria Island
 town: Kerning City
 kind: town
+exits:
+  - to: kerning-city
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Kerning_City_Pharmacy
 verified:
   status: unverified

@@ -9,6 +9,9 @@ recommended_level:
 monsters:
   - jr-necki
   - zombie-lupin
+exits:
+  - to: monkey-swamp-ii
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Monkey_Swamp_III
 verified:
   status: unverified

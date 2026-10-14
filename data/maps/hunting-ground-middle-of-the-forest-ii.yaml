@@ -12,6 +12,9 @@ monsters:
   - red-snail
   - shroom
   - snail
+exits:
+  - to: the-field-west-of-amherst
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Hunting_Ground_Middle_of_the_Forest_II
 verified:
   status: unverified

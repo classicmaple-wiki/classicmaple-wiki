@@ -3,6 +3,9 @@ name: Ellinia Station
 region: Victoria Island
 town: Ellinia
 kind: town-interior
+exits:
+  - to: ellinia
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Ellinia_Station
 verified:
   status: unverified

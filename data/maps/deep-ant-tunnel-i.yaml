@@ -11,6 +11,13 @@ monsters:
   - horny-mushroom
   - jr-boogie-2
   - zombie-mushroom
+exits:
+  - to: dangerous-steam
+    kind: walking
+    direction: west
+  - to: deep-ant-tunnel-ii
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Deep_Ant_Tunnel_I
 verified:
   status: unverified

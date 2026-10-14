@@ -13,6 +13,15 @@ monsters:
   - ribbon-pig
   - slime
   - stump
+exits:
+  - to: forest-west-of-henesys
+    kind: walking
+    direction: west
+  - to: henesys-hunting-ground-i
+    kind: walking
+    direction: east
+  - to: mushroom-garden-victoria-island
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/A_Hill_West_of_Henesys
 verified:
   status: unverified

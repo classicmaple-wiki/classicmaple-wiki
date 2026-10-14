@@ -12,6 +12,10 @@ monsters:
   - lupin
   - slime
   - snail
+exits:
+  - to: hunting-ground-in-the-deep-forest-i
+    kind: walking
+    direction: east
 source_page: https://mapleclassic.wiki/wiki/Hunting_Ground_in_the_Deep_Forest_II
 verified:
   status: unverified

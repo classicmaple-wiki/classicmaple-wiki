@@ -9,6 +9,13 @@ recommended_level:
 monsters:
   - lupin
   - zombie-lupin
+exits:
+  - to: monkey-forest-i
+    kind: walking
+  - to: the-forest-of-evil-i
+    kind: walking
+  - to: tree-dungeon-monkey-forest-ii
+    kind: hidden
 source_page: https://mapleclassic.wiki/wiki/Monkey_Forest_II
 verified:
   status: unverified

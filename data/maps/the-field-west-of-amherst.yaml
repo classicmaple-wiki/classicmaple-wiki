@@ -12,6 +12,23 @@ monsters:
   - red-snail
   - shroom
   - snail
+exits:
+  - to: a-split-road
+    kind: walking
+  - to: amherst
+    kind: walking
+  - to: dangerous-forest
+    kind: walking
+  - to: hunting-ground-middle-of-the-forest-i
+    kind: walking
+  - to: hunting-ground-middle-of-the-forest-ii
+    kind: walking
+  - to: in-a-small-forest
+    kind: walking
+  - to: mushroom-garden-maple-island
+    kind: walking
+  - to: snail-garden
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Field_West_of_Amherst
 verified:
   status: unverified

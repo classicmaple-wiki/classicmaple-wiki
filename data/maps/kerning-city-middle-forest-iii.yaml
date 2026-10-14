@@ -12,6 +12,9 @@ monsters:
   - ribbon-pig
   - slime
   - snail
+exits:
+  - to: kerning-city-middle-forest-ii
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/Kerning_City_Middle_Forest_III
 verified:
   status: unverified

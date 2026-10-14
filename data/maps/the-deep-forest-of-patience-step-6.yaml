@@ -3,6 +3,9 @@ name: The Deep Forest of Patience (Step 6)
 region: Victoria Island
 town: Sleepywood
 kind: town
+exits:
+  - to: the-deep-forest-of-patience-step-7
+    kind: walking
 source_page: https://mapleclassic.wiki/wiki/The_Deep_Forest_of_Patience_(Step_6)
 verified:
   status: unverified
