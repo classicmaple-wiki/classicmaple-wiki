@@ -1,10 +1,12 @@
 id: battle-axe
 name: Battle Axe
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Battle_Axe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Battle_Axe
+  build: cot2
 sprite:
   file: items/battle-axe.png
   source: maplestory-io

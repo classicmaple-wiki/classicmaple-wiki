@@ -1,10 +1,12 @@
 id: wooden-sword
 name: Wooden Sword
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Wooden_Sword
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Wooden_Sword
+  build: cot2
 sprite:
   file: items/wooden-sword.png
   source: maplestory-io

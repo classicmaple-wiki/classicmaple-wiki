@@ -1,9 +1,13 @@
 id: red-drake
 name: Red Drake
+level: 60
+hp: 5184
+exp: 211
 source_page: https://mapleclassic.wiki/wiki/Red_Drake
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Drake
+  build: cot2
 sprite:
   file: monsters/red-drake.png
   source: maplestory-io

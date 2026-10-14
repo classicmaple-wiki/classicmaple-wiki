@@ -1,9 +1,13 @@
 id: zombie-mushroom
 name: Zombie Mushroom
+level: 24
+hp: 436
+exp: 45
 source_page: https://mapleclassic.wiki/wiki/Zombie_Mushroom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Zombie_Mushroom
+  build: cot2
 sprite:
   file: monsters/zombie-mushroom.png
   source: maplestory-io

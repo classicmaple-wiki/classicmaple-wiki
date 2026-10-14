@@ -1,10 +1,12 @@
 id: black-cloth-vest
 name: Black Cloth Vest
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Black_Cloth_Vest
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Cloth_Vest
+  build: cot2
 sprite:
   file: items/black-cloth-vest.png
   source: maplestory-io

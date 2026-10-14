@@ -1,10 +1,12 @@
 id: red-kendo-robe
 name: Red Kendo Robe
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Red_Kendo_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Kendo_Robe
+  build: cot2
 sprite:
   file: items/red-kendo-robe.png
   source: maplestory-io

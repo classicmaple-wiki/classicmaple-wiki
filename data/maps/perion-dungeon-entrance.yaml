@@ -3,6 +3,9 @@ name: Perion Dungeon Entrance
 region: Victoria Island
 town: Perion
 kind: dungeon
+recommended_level:
+  - 22
+  - 23
 monsters:
   - dark-axe-stump
   - dark-stump
@@ -12,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/Perion_Dungeon_Entrance
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Perion_Dungeon_Entrance
+  build: cot2

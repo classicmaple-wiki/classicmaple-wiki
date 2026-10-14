@@ -22,3 +22,7 @@ The source also says, on its About page, that editor prose is CC BY-SA 4.0. The 
 - No terms of use, API keys, or other limits on reuse.
 - A removal request is handled with one command, within days.
 - Content released before 2026-10-14 under CC BY-SA 4.0 stays available under that license for anyone who got it then.
+
+## Amendment, 2026-10-14
+
+The owner widened the import to core numbers before launch: a monster's level, HP, and EXP, an item's required level, and a map's recommended levels. Item stats, prices, and rewards stay out. These numbers come from the source's closed beta data, which is client-derived, so this knowingly bends the rule against datamined sources for these fields only. Records that carry them name the Closed Online Test 2 build (`cot2`) and stay `unverified`, and each page says the numbers may differ at launch. The legal review covered option 2. The same reasoning applies, since these are facts, but the Nexon risk it describes is a little higher.

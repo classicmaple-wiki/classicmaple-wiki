@@ -3,6 +3,9 @@ name: Deep Ant Tunnel II
 region: Victoria Island
 town: Sleepywood
 kind: dungeon
+recommended_level:
+  - 22
+  - 27
 monsters:
   - evil-eye
   - horny-mushroom
@@ -11,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Deep_Ant_Tunnel_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Deep_Ant_Tunnel_II
+  build: cot2

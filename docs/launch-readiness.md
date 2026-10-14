@@ -13,17 +13,17 @@ Audit of 2026-10-14, a week before Grand Launch on 2026-10-21. It checks every b
 
 ## What is still missing
 
-All 1,294 entries are `unverified`. These values are empty because option 2 of spec 0005 leaves out numbers that come from the game's files, and no player has added them yet.
+All 1,294 entries are `unverified`. Since 2026-10-14 the importer also takes core numbers from MapleClassic Wiki's closed beta data (decision 0008, amendment). Everything else still waits for official sources or players.
 
-| Collection | Entries | Missing |
-| --- | --- | --- |
-| Monsters | 62 | Level, HP, EXP on all 62. Drops on 43. Sprite on 5. |
-| Items | 451 | Required level on all 451. Stats on all 350 equipment items. Sprite on 59. |
-| Maps | 279 | Recommended levels on all 279. Town on 28. |
-| NPCs | 185 | Role on all. Sprite on 39. Map on 3. |
-| Quests | 276 | Rewards and level on all. Giver on 10, turn in on 15. |
-| Shops | 30 | Prices on all. Stock on 6. |
-| Classes | 4 | Skills: 2 recorded in total. |
+| Collection | Entries | Filled | Still missing |
+| --- | --- | --- | --- |
+| Monsters | 62 | Level and HP on 61, EXP on 60 | MP and elements on all. Drops on 43. Sprite on 5. |
+| Items | 451 | Required level on 346 | Stats on all 350 equipment items. Sprite on 59. |
+| Maps | 279 | Level range on 117, town on 251 | Level range on 162, town on 28. |
+| NPCs | 185 | Map on 182, sprite on 146 | Sprite on 39. Map on 3. |
+| Quests | 276 | Giver on 266 | Rewards and level on all. |
+| Shops | 30 | Stock on 24 | Prices on all. |
+| Classes | 4 | | Skills: 2 recorded in total. |
 
 Guides are short drafts:
 
@@ -36,14 +36,15 @@ Guides are short drafts:
 
 ## How each gap can be filled
 
-1. **Game numbers** (levels, HP, EXP, stats, prices, rewards). Only three sources are allowed: official Nexon posts, a player's own screenshot, or, if the owner changes the rule, MapleClassic Wiki's client-derived values. See the open question below.
+1. **Game numbers.** Core numbers come from the importer. Item stats, prices, rewards, MP, and elements come only from official Nexon posts or a player's own screenshot.
 2. **Sprites** (103 left). Most names do not match maplestory.io exactly. A person can search by hand, or draw one under the images policy.
 3. **Guides.** The research agent (backlog P5) writes them from official sources. Priority: level 1 to 30 routes, job advancement, then each class.
 4. **Missing links** (towns, givers, stock). Fill by hand from in-game screenshots after launch.
 
-## Open question for the owner
+## Owner decisions, 2026-10-14
 
-Should game numbers come from MapleClassic Wiki (spec 0005 option 1, entered as `unverified`), or only from official posts and players? Option 1 fills almost every table before launch, but goes against the rule against datamined sources, and the legal review covered option 2 only.
+- Game numbers: import the core numbers only (monster level, HP, EXP, item required level, map level ranges). Item stats, prices, and rewards stay with official sources and players.
+- Guides: drafted by an agent from Nexon's official sources only, as a pull request labeled `ai-drafted`.
 
 ## Rerun the audit
 

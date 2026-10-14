@@ -1,5 +1,8 @@
 id: horny-mushroom
 name: Horny Mushroom
+level: 22
+hp: 403
+exp: 41
 location: ant-tunnel-i
 region: Victoria Island
 drops:
@@ -93,6 +96,7 @@ source_page: https://mapleclassic.wiki/wiki/Horny_Mushroom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Horny_Mushroom
+  build: cot2
 sprite:
   file: monsters/horny-mushroom.png
   source: maplestory-io

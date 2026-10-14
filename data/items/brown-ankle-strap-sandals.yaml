@@ -1,10 +1,12 @@
 id: brown-ankle-strap-sandals
 name: Brown Ankle-strap Sandals
 category: equipment
+required_level: 21
 source_page: https://mapleclassic.wiki/wiki/Brown_Ankle-strap_Sandals
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Ankle-strap_Sandals
+  build: cot2
 sprite:
   file: items/brown-ankle-strap-sandals.png
   source: maplestory-io

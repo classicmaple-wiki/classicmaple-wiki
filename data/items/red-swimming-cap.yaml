@@ -1,10 +1,12 @@
 id: red-swimming-cap
 name: Red Swimming Cap
 category: equipment
+required_level: 8
 source_page: https://mapleclassic.wiki/wiki/Red_Swimming_Cap
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Swimming_Cap
+  build: cot2
 sprite:
   file: items/red-swimming-cap.png
   source: maplestory-io

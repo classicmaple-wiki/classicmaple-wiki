@@ -1,10 +1,12 @@
 id: black-baseball-cap
 name: Black Baseball Cap
 category: equipment
+required_level: 22
 source_page: https://mapleclassic.wiki/wiki/Black_Baseball_Cap
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Baseball_Cap
+  build: cot2
 sprite:
   file: items/black-baseball-cap.png
   source: maplestory-io

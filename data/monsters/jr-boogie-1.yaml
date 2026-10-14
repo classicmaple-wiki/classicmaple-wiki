@@ -1,9 +1,13 @@
 id: jr-boogie-1
 name: Jr. Boogie 1
+level: 35
+hp: 1395
+exp: 69
 source_page: https://mapleclassic.wiki/wiki/Jr._Boogie_1
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Jr._Boogie_1
+  build: cot2
 sprite:
   file: monsters/jr-boogie-1.png
   source: maplestory-io

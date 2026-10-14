@@ -1,10 +1,12 @@
 id: pink-arianne
 name: Pink Arianne
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Pink_Arianne
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Pink_Arianne
+  build: cot2
 sprite:
   file: items/pink-arianne.png
   source: maplestory-io

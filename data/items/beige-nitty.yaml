@@ -1,10 +1,12 @@
 id: beige-nitty
 name: Beige Nitty
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Beige_Nitty
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Beige_Nitty
+  build: cot2
 sprite:
   file: items/beige-nitty.png
   source: maplestory-io

@@ -3,6 +3,9 @@ name: The Swamp of Despair III
 region: Victoria Island
 town: Kerning City
 kind: field
+recommended_level:
+  - 21
+  - 31
 monsters:
   - jr-necki
   - ligator
@@ -11,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_III
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_III
+  build: cot2

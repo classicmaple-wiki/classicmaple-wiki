@@ -1,10 +1,12 @@
 id: double-axe
 name: Double Axe
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Double_Axe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Double_Axe
+  build: cot2
 sprite:
   file: items/double-axe.png
   source: maplestory-io

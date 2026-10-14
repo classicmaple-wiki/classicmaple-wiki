@@ -1,10 +1,12 @@
 id: bronze-grieves
 name: Bronze Grieves
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Bronze_Grieves
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bronze_Grieves
+  build: cot2
 sprite:
   file: items/bronze-grieves.png
   source: maplestory-io

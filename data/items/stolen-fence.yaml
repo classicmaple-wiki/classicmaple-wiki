@@ -1,10 +1,12 @@
 id: stolen-fence
 name: Stolen Fence
 category: equipment
+required_level: 5
 source_page: https://mapleclassic.wiki/wiki/Stolen_Fence
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Stolen_Fence
+  build: cot2
 sprite:
   file: items/stolen-fence.png
   source: maplestory-io

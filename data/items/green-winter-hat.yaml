@@ -1,10 +1,12 @@
 id: green-winter-hat
 name: Green Winter Hat
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Green_Winter_Hat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Winter_Hat
+  build: cot2
 sprite:
   file: items/green-winter-hat.png
   source: maplestory-io

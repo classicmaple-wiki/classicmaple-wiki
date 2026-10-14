@@ -3,6 +3,9 @@ name: Sunset Sky
 region: Victoria Island
 town: Kerning City
 kind: field
+recommended_level:
+  - 4
+  - 8
 monsters:
   - blue-snail
   - dark-stump
@@ -13,3 +16,4 @@ source_page: https://mapleclassic.wiki/wiki/Sunset_Sky
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sunset_Sky
+  build: cot2

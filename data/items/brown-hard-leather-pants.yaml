@@ -1,10 +1,12 @@
 id: brown-hard-leather-pants
 name: Brown Hard Leather Pants
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Pants
+  build: cot2
 sprite:
   file: items/brown-hard-leather-pants.png
   source: maplestory-io

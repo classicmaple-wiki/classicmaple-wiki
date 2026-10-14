@@ -41,7 +41,7 @@ const runShops = (await getCollection('shops'))
 	.filter((shop) => shop.npc === npc.id);
 
 const statisticRows = [
-	{ label: 'Role', value: npc.role },
+	...(npc.role ? [{ label: 'Role', value: npc.role }] : []),
 	{ label: 'Map', value: standingMap?.name, href: standingMap ? `/maps/${standingMap.id}/` : undefined },
 	{ label: 'Town', value: npcTown, href: npcPlace ? `/places/${npcPlace}/` : undefined },
 	{ label: 'Region', value: npc.region },

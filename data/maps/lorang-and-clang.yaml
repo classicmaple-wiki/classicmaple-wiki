@@ -3,6 +3,9 @@ name: Lorang and Clang
 region: Victoria Island
 town: Florina Beach
 kind: field
+recommended_level:
+  - 38
+  - 49
 monsters:
   - clang
   - lorang
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Lorang_and_Clang
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Lorang_and_Clang
+  build: cot2

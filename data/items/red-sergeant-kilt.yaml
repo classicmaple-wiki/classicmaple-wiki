@@ -1,10 +1,12 @@
 id: red-sergeant-kilt
 name: Red Sergeant Kilt
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Red_Sergeant_Kilt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Sergeant_Kilt
+  build: cot2
 sprite:
   file: items/red-sergeant-kilt.png
   source: maplestory-io

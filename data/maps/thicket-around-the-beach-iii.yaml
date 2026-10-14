@@ -3,6 +3,9 @@ name: Thicket Around the Beach III
 region: Victoria Island
 town: Lith Harbor
 kind: field
+recommended_level:
+  - 2
+  - 4
 monsters:
   - blue-snail
   - mano
@@ -14,3 +17,4 @@ source_page: https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_III
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_III
+  build: cot2

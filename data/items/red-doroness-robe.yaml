@@ -1,10 +1,12 @@
 id: red-doroness-robe
 name: Red Doroness Robe
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Red_Doroness_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Doroness_Robe
+  build: cot2
 sprite:
   file: items/red-doroness-robe.png
   source: maplestory-io

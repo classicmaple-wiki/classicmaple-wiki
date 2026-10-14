@@ -3,6 +3,9 @@ name: Lorang Lorang Lorang
 region: Victoria Island
 town: Florina Beach
 kind: field
+recommended_level:
+  - 38
+  - 38
 monsters:
   - lorang
   - tortie
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Lorang_Lorang_Lorang
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Lorang_Lorang_Lorang
+  build: cot2

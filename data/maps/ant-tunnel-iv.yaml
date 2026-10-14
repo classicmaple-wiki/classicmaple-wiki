@@ -3,6 +3,9 @@ name: Ant Tunnel IV
 region: Victoria Island
 town: Sleepywood
 kind: dungeon
+recommended_level:
+  - 22
+  - 24
 monsters:
   - horny-mushroom
   - zombie-mushroom
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Ant_Tunnel_IV
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ant_Tunnel_IV
+  build: cot2

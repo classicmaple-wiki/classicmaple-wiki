@@ -3,6 +3,9 @@ name: Dungeon, Southern Forest III
 region: Victoria Island
 town: Ellinia
 kind: dungeon
+recommended_level:
+  - 14
+  - 15
 monsters:
   - green-mushroom
   - slime
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_III
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_III
+  build: cot2

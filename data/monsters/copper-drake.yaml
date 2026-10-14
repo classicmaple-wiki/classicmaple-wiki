@@ -1,9 +1,13 @@
 id: copper-drake
 name: Copper Drake
+level: 45
+hp: 2595
+exp: 107
 source_page: https://mapleclassic.wiki/wiki/Copper_Drake
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Copper_Drake
+  build: cot2
 sprite:
   file: monsters/copper-drake.png
   source: maplestory-io

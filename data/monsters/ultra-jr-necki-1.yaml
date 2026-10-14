@@ -1,10 +1,13 @@
 id: ultra-jr-necki-1
 name: Ultra Jr. Necki 1
+level: 200
+hp: 930000
 region: Hidden Street
 source_page: https://mapleclassic.wiki/wiki/Ultra_Jr._Necki_1
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ultra_Jr._Necki_1
+  build: cot2
 sprite:
   file: monsters/ultra-jr-necki-1.png
   source: maplestory-io

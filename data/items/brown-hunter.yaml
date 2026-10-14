@@ -1,10 +1,12 @@
 id: brown-hunter
 name: Brown Hunter
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Brown_Hunter
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Hunter
+  build: cot2
 sprite:
   file: items/brown-hunter.png
   source: maplestory-io

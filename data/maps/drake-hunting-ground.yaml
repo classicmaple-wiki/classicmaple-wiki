@@ -3,6 +3,9 @@ name: Drake Hunting Ground
 region: Victoria Island
 town: Sleepywood
 kind: hunting-ground
+recommended_level:
+  - 35
+  - 50
 monsters:
   - drake
   - horny-mushroom
@@ -11,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Drake_Hunting_Ground
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Drake_Hunting_Ground
+  build: cot2

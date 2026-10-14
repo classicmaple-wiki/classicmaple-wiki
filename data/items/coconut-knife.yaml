@@ -1,10 +1,12 @@
 id: coconut-knife
 name: Coconut Knife
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Coconut_Knife
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Coconut_Knife
+  build: cot2
 sprite:
   file: items/coconut-knife.png
   source: maplestory-io

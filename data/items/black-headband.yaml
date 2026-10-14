@@ -1,10 +1,12 @@
 id: black-headband
 name: Black Headband
 category: equipment
+required_level: 5
 source_page: https://mapleclassic.wiki/wiki/Black_Headband
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Headband
+  build: cot2
 sprite:
   file: items/black-headband.png
   source: maplestory-io

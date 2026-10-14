@@ -1,10 +1,12 @@
 id: purple-shivermail
 name: Purple Shivermail
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Purple_Shivermail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Purple_Shivermail
+  build: cot2
 sprite:
   file: items/purple-shivermail.png
   source: maplestory-io

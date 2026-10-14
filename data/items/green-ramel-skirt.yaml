@@ -1,10 +1,12 @@
 id: green-ramel-skirt
 name: Green Ramel Skirt
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Green_Ramel_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Ramel_Skirt
+  build: cot2
 sprite:
   file: items/green-ramel-skirt.png
   source: maplestory-io

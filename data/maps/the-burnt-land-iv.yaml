@@ -3,6 +3,9 @@ name: The Burnt Land IV
 region: Victoria Island
 town: Perion
 kind: field
+recommended_level:
+  - 28
+  - 45
 monsters:
   - dark-axe-stump
   - fire-boar
@@ -11,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Burnt_Land_IV
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Burnt_Land_IV
+  build: cot2

@@ -3,6 +3,9 @@ name: Dangerous Steam
 region: Victoria Island
 town: Sleepywood
 kind: field
+recommended_level:
+  - 20
+  - 24
 monsters:
   - horny-mushroom
   - stirge
@@ -11,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Dangerous_Steam
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dangerous_Steam
+  build: cot2

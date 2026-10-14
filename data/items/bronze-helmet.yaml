@@ -1,10 +1,12 @@
 id: bronze-helmet
 name: Bronze Helmet
 category: equipment
+required_level: 12
 source_page: https://mapleclassic.wiki/wiki/Bronze_Helmet
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bronze_Helmet
+  build: cot2
 sprite:
   file: items/bronze-helmet.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: garnier
 name: Garnier
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Garnier
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Garnier
+  build: cot2
 sprite:
   file: items/garnier.png
   source: maplestory-io

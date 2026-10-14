@@ -3,6 +3,9 @@ name: Monkey Swamp III
 region: Victoria Island
 town: Kerning City
 kind: field
+recommended_level:
+  - 21
+  - 41
 monsters:
   - jr-necki
   - zombie-lupin
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Monkey_Swamp_III
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Monkey_Swamp_III
+  build: cot2

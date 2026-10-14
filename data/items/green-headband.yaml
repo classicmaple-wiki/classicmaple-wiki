@@ -1,10 +1,12 @@
 id: green-headband
 name: Green Headband
 category: equipment
+required_level: 5
 source_page: https://mapleclassic.wiki/wiki/Green_Headband
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Headband
+  build: cot2
 sprite:
   file: items/green-headband.png
   source: maplestory-io

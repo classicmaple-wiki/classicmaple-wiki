@@ -1,5 +1,8 @@
 id: green-mushroom
 name: Green Mushroom
+level: 14
+hp: 233
+exp: 26
 region: Victoria Island
 drops:
   - item: arrows-for-bows
@@ -92,6 +95,7 @@ source_page: https://mapleclassic.wiki/wiki/Green_Mushroom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  build: cot2
 sprite:
   file: monsters/green-mushroom.png
   source: maplestory-io

@@ -1,9 +1,13 @@
 id: jr-wraith
 name: Jr. Wraith
+level: 34
+hp: 982
+exp: 66
 source_page: https://mapleclassic.wiki/wiki/Jr._Wraith
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Jr._Wraith
+  build: cot2
 sprite:
   file: monsters/jr-wraith.png
   source: maplestory-io

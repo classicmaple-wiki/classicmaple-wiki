@@ -1,10 +1,12 @@
 id: green-lamelle
 name: Green Lamelle
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Green_Lamelle
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Lamelle
+  build: cot2
 sprite:
   file: items/green-lamelle.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: red-bandana
 name: Red Bandana
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Red_Bandana
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Bandana
+  build: cot2
 sprite:
   file: items/red-bandana.png
   source: maplestory-io

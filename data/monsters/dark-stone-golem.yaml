@@ -1,9 +1,13 @@
 id: dark-stone-golem
 name: Dark Stone Golem
+level: 58
+hp: 5428
+exp: 192
 source_page: https://mapleclassic.wiki/wiki/Dark_Stone_Golem
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Stone_Golem
+  build: cot2
 sprite:
   file: monsters/dark-stone-golem.png
   source: maplestory-io

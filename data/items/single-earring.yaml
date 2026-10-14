@@ -1,10 +1,12 @@
 id: single-earring
 name: Single Earring
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Single_Earring
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Single_Earring
+  build: cot2
 sprite:
   file: items/single-earring.png
   source: maplestory-io

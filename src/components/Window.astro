@@ -21,9 +21,14 @@
    prop heading gets an id made from the title, used only to label the
    section.
 
+   The build chip shows the build's name from data/builds.yaml, such as
+   Closed Online Test 2, not its id.
+
    All styling lives in src/styles/window.css as global rules, so markup
    from any page can reuse the same classes.
 */
+import { getEntry } from 'astro:content';
+
 interface Props {
 	title?: string;
 	id?: string;
@@ -41,13 +46,14 @@ const titleSlug = (title ?? '')
 	.replace(/^-+|-+$/g, '');
 const headingIdentifier = id ?? (hasTitleSlot ? undefined : `window-${titleSlug || 'untitled'}`);
 const HeadingTag = `h${headingLevel}` as const;
+const buildName = build ? ((await getEntry('builds', build))?.data.name ?? build) : undefined;
 const hasFooter = Astro.slots.has('footer');
 ---
 
 <section class="window" aria-labelledby={headingIdentifier}>
 	<div class="window__title-bar">
 		{hasTitleSlot ? <Fragment set:html={slottedTitle} /> : <HeadingTag class="window__title" id={headingIdentifier}>{title}</HeadingTag>}
-		{build && <span class="chip window__build">{build}</span>}
+		{buildName && <span class="chip window__build">{buildName}</span>}
 	</div>
 	<div class="window__body">
 		<slot />

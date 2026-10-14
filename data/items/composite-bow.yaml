@@ -1,10 +1,12 @@
 id: composite-bow
 name: Composite Bow
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Composite_Bow
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Composite_Bow
+  build: cot2
 sprite:
   file: items/composite-bow.png
   source: maplestory-io

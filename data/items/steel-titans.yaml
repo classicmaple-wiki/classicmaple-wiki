@@ -1,10 +1,12 @@
 id: steel-titans
 name: Steel Titans
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Steel_Titans
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Steel_Titans
+  build: cot2
 sprite:
   file: items/steel-titans.png
   source: maplestory-io

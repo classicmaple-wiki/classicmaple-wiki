@@ -3,6 +3,9 @@ name: Thicket Around the Beach I
 region: Victoria Island
 town: Lith Harbor
 kind: field
+recommended_level:
+  - 1
+  - 4
 monsters:
   - blue-snail
   - red-snail
@@ -13,3 +16,4 @@ source_page: https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_I
+  build: cot2

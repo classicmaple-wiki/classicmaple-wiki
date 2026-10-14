@@ -1,9 +1,13 @@
 id: fire-boar
 name: Fire Boar
+level: 32
+hp: 842
+exp: 60
 source_page: https://mapleclassic.wiki/wiki/Fire_Boar
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Fire_Boar
+  build: cot2
 sprite:
   file: monsters/fire-boar.png
   source: maplestory-io

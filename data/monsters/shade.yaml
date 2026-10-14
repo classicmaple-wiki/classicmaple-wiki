@@ -1,11 +1,15 @@
 id: shade
 name: Shade
+level: 48
+hp: 47000
+exp: 488
 boss: true
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Shade
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Shade
+  build: cot2
 sprite:
   file: monsters/shade.png
   source: maplestory-io

@@ -3,6 +3,9 @@ name: Swampy Land in a Deep Forest
 region: Victoria Island
 town: Sleepywood
 kind: field
+recommended_level:
+  - 27
+  - 27
 monsters:
   - dark-stump
   - green-mushroom
@@ -14,3 +17,4 @@ source_page: https://mapleclassic.wiki/wiki/Swampy_Land_in_a_Deep_Forest
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Swampy_Land_in_a_Deep_Forest
+  build: cot2

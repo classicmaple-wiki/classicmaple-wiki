@@ -1,11 +1,15 @@
 id: zombie-mushmom
 name: Zombie Mushmom
+level: 55
+hp: 66640
+exp: 668
 boss: true
 location: the-grave-of-mushmom
 source_page: https://mapleclassic.wiki/wiki/Zombie_Mushmom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Zombie_Mushmom
+  build: cot2
 sprite:
   file: monsters/zombie-mushmom.png
   source: maplestory-io

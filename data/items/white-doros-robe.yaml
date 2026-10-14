@@ -1,10 +1,12 @@
 id: white-doros-robe
 name: White Doros Robe
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/White_Doros_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/White_Doros_Robe
+  build: cot2
 sprite:
   file: items/white-doros-robe.png
   source: maplestory-io

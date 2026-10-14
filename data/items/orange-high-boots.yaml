@@ -1,10 +1,12 @@
 id: orange-high-boots
 name: Orange High Boots
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Orange_High_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Orange_High_Boots
+  build: cot2
 sprite:
   file: items/orange-high-boots.png
   source: maplestory-io

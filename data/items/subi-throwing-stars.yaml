@@ -1,7 +1,9 @@
 id: subi-throwing-stars
 name: Subi Throwing Stars
 category: consumable
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Subi_Throwing_Stars
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Subi_Throwing_Stars
+  build: cot2

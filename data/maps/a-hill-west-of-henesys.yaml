@@ -3,6 +3,9 @@ name: A Hill West of Henesys
 region: Victoria Island
 town: Henesys
 kind: field
+recommended_level:
+  - 4
+  - 7
 monsters:
   - blue-snail
   - pig
@@ -14,3 +17,4 @@ source_page: https://mapleclassic.wiki/wiki/A_Hill_West_of_Henesys
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/A_Hill_West_of_Henesys
+  build: cot2

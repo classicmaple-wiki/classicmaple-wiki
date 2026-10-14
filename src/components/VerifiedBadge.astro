@@ -7,8 +7,10 @@
    Drawn as a small rounded pill (spec 0006) in the badge colors from the
    tokens, with a line icon before the word: a check for official, an eye
    for confirmed in game, and a question mark for unverified. Each badge
-   also carries its word, so color is never the only cue.
+   also carries its word, so color is never the only cue. The build shows
+   by its name from data/builds.yaml.
 */
+import { getEntry } from 'astro:content';
 import type { Verification } from '../../schemas/shared';
 import Icon from './Icon.astro';
 
@@ -32,7 +34,8 @@ const variants = {
 
 const icons = { official: 'check', 'in-game': 'eye', unverified: 'question' } as const;
 
-const text = verified.build ? `${labels[verified.status]} · ${verified.build}` : labels[verified.status];
+const buildName = verified.build ? ((await getEntry('builds', verified.build))?.data.name ?? verified.build) : undefined;
+const text = buildName ? `${labels[verified.status]} · ${buildName}` : labels[verified.status];
 const chipClass = `chip ${variants[verified.status]}`;
 ---
 

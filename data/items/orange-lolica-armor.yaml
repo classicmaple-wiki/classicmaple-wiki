@@ -1,10 +1,12 @@
 id: orange-lolica-armor
 name: Orange Lolica Armor
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Orange_Lolica_Armor
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Orange_Lolica_Armor
+  build: cot2
 sprite:
   file: items/orange-lolica-armor.png
   source: maplestory-io

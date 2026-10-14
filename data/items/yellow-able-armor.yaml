@@ -1,10 +1,12 @@
 id: yellow-able-armor
 name: Yellow Able Armor
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Yellow_Able_Armor
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Yellow_Able_Armor
+  build: cot2
 sprite:
   file: items/yellow-able-armor.png
   source: maplestory-io

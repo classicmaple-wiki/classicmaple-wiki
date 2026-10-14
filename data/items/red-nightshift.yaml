@@ -1,10 +1,12 @@
 id: red-nightshift
 name: Red Nightshift
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Red_Nightshift
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Nightshift
+  build: cot2
 sprite:
   file: items/red-nightshift.png
   source: maplestory-io

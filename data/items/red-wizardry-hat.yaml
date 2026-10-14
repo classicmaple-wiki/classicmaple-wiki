@@ -1,10 +1,12 @@
 id: red-wizardry-hat
 name: Red Wizardry Hat
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Red_Wizardry_Hat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Wizardry_Hat
+  build: cot2
 sprite:
   file: items/red-wizardry-hat.png
   source: maplestory-io

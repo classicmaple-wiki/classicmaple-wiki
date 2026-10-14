@@ -1,10 +1,12 @@
 id: square-shovel
 name: Square Shovel
 category: equipment
+required_level: 17
 source_page: https://mapleclassic.wiki/wiki/Square_Shovel
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Square_Shovel
+  build: cot2
 sprite:
   file: items/square-shovel.png
   source: maplestory-io

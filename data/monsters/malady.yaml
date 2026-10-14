@@ -1,6 +1,10 @@
 id: malady
 name: Malady
+level: 55
+hp: 2998
+exp: 167
 source_page: https://mapleclassic.wiki/wiki/Malady
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Malady
+  build: cot2

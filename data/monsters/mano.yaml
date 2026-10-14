@@ -1,11 +1,15 @@
 id: mano
 name: Mano
+level: 20
+hp: 7420
+exp: 148
 boss: true
 location: thicket-around-the-beach-iii
 source_page: https://mapleclassic.wiki/wiki/Mano
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Mano
+  build: cot2
 sprite:
   file: monsters/mano.png
   source: maplestory-io

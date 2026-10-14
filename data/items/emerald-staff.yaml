@@ -1,10 +1,12 @@
 id: emerald-staff
 name: Emerald Staff
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Emerald_Staff
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Emerald_Staff
+  build: cot2
 sprite:
   file: items/emerald-staff.png
   source: maplestory-io

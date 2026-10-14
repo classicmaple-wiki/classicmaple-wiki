@@ -1,10 +1,12 @@
 id: steel-shield
 name: Steel Shield
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Steel_Shield
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Steel_Shield
+  build: cot2
 sprite:
   file: items/steel-shield.png
   source: maplestory-io

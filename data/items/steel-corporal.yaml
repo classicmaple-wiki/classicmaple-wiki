@@ -1,10 +1,12 @@
 id: steel-corporal
 name: Steel Corporal
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Steel_Corporal
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Steel_Corporal
+  build: cot2
 sprite:
   file: items/steel-corporal.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: blue-bennis-chainmail
 name: Blue Bennis Chainmail
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Blue_Bennis_Chainmail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Bennis_Chainmail
+  build: cot2
 sprite:
   file: items/blue-bennis-chainmail.png
   source: maplestory-io

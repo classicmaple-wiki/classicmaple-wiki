@@ -3,6 +3,9 @@ name: Tree Dungeon, Forest Up North II
 region: Victoria Island
 town: Ellinia
 kind: dungeon
+recommended_level:
+  - 11
+  - 11
 monsters:
   - green-mushroom
   - horny-mushroom
@@ -11,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Forest_Up_North_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Forest_Up_North_II
+  build: cot2

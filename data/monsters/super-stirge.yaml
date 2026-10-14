@@ -1,8 +1,12 @@
 id: super-stirge
 name: Super Stirge
+level: 200
+hp: 9999
+exp: 0
 location: b1-area-2
 region: Victoria Island
 source_page: https://mapleclassic.wiki/wiki/Super_Stirge
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Super_Stirge
+  build: cot2

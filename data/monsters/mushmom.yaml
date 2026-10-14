@@ -1,11 +1,15 @@
 id: mushmom
 name: Mushmom
+level: 40
+hp: 34440
+exp: 340
 boss: true
 location: someone-elses-house
 source_page: https://mapleclassic.wiki/wiki/Mushmom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Mushmom
+  build: cot2
 sprite:
   file: monsters/mushmom.png
   source: maplestory-io

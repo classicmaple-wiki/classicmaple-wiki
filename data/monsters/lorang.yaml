@@ -1,9 +1,13 @@
 id: lorang
 name: Lorang
+level: 38
+hp: 1714
+exp: 78
 source_page: https://mapleclassic.wiki/wiki/Lorang
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Lorang
+  build: cot2
 sprite:
   file: monsters/lorang.png
   source: maplestory-io

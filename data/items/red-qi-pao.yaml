@@ -1,7 +1,9 @@
 id: red-qi-pao
 name: Red Qi Pao
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Red_Qi_Pao
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Qi_Pao
+  build: cot2

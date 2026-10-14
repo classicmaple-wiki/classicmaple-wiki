@@ -1,10 +1,12 @@
 id: wooden-buckler
 name: Wooden Buckler
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Wooden_Buckler
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Wooden_Buckler
+  build: cot2
 sprite:
   file: items/wooden-buckler.png
   source: maplestory-io

@@ -3,6 +3,9 @@ name: Deep Valley I
 region: Victoria Island
 town: Perion
 kind: field
+recommended_level:
+  - 17
+  - 19
 monsters:
   - axe-stump
   - blue-snail
@@ -15,3 +18,4 @@ source_page: https://mapleclassic.wiki/wiki/Deep_Valley_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Deep_Valley_I
+  build: cot2

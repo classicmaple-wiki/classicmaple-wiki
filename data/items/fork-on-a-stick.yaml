@@ -1,10 +1,12 @@
 id: fork-on-a-stick
 name: Fork on a Stick
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Fork_on_a_Stick
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Fork_on_a_Stick
+  build: cot2
 sprite:
   file: items/fork-on-a-stick.png
   source: maplestory-io

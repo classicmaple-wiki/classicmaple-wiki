@@ -1,10 +1,12 @@
 id: wooden-staff
 name: Wooden Staff
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Wooden_Staff
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Wooden_Staff
+  build: cot2
 sprite:
   file: items/wooden-staff.png
   source: maplestory-io

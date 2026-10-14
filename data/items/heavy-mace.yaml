@@ -1,10 +1,12 @@
 id: heavy-mace
 name: Heavy Mace
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Heavy_Mace
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Heavy_Mace
+  build: cot2
 sprite:
   file: items/heavy-mace.png
   source: maplestory-io

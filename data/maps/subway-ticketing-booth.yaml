@@ -3,7 +3,11 @@ name: Subway Ticketing Booth
 region: Victoria Island
 town: Kerning City
 kind: field
+recommended_level:
+  - 6
+  - 8
 source_page: https://mapleclassic.wiki/wiki/Subway_Ticketing_Booth
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Subway_Ticketing_Booth
+  build: cot2

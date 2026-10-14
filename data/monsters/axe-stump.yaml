@@ -1,5 +1,8 @@
 id: axe-stump
 name: Axe Stump
+level: 17
+hp: 371
+exp: 32
 drops:
   - item: firewood
     rate_percent: 45.95
@@ -36,6 +39,7 @@ source_page: https://mapleclassic.wiki/wiki/Axe_Stump
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Axe_Stump
+  build: cot2
 sprite:
   file: monsters/axe-stump.png
   source: maplestory-io

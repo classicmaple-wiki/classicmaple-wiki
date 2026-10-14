@@ -1,10 +1,12 @@
 id: hardwood-wand
 name: Hardwood Wand
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Hardwood_Wand
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hardwood_Wand
+  build: cot2
 sprite:
   file: items/hardwood-wand.png
   source: maplestory-io

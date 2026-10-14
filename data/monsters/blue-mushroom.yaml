@@ -1,5 +1,8 @@
 id: blue-mushroom
 name: Blue Mushroom
+level: 19
+hp: 342
+exp: 35
 drops:
   - item: arrows-for-crossbows
     rate_percent: 3.33
@@ -36,6 +39,7 @@ source_page: https://mapleclassic.wiki/wiki/Blue_Mushroom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Mushroom
+  build: cot2
 sprite:
   file: monsters/blue-mushroom.png
   source: maplestory-io

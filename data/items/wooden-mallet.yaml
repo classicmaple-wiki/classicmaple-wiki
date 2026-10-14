@@ -1,10 +1,12 @@
 id: wooden-mallet
 name: Wooden Mallet
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Wooden_Mallet
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Wooden_Mallet
+  build: cot2
 sprite:
   file: items/wooden-mallet.png
   source: maplestory-io

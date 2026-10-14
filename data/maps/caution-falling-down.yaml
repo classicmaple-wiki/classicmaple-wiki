@@ -3,6 +3,9 @@ name: Caution Falling Down
 region: Victoria Island
 town: Kerning City
 kind: field
+recommended_level:
+  - 4
+  - 12
 monsters:
   - blue-mushroom
   - octopus
@@ -11,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Caution_Falling_Down
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Caution_Falling_Down
+  build: cot2

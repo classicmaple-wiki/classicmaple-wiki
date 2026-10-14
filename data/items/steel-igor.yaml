@@ -1,10 +1,12 @@
 id: steel-igor
 name: Steel Igor
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Steel_Igor
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Steel_Igor
+  build: cot2
 sprite:
   file: items/steel-igor.png
   source: maplestory-io

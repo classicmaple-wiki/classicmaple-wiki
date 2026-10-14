@@ -1,10 +1,12 @@
 id: red-nightshift-pants
 name: Red Nightshift Pants
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Red_Nightshift_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Nightshift_Pants
+  build: cot2
 sprite:
   file: items/red-nightshift-pants.png
   source: maplestory-io

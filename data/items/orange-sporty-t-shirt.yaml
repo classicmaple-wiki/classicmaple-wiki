@@ -1,10 +1,12 @@
 id: orange-sporty-t-shirt
 name: Orange Sporty T-Shirt
 category: equipment
+required_level: 12
 source_page: https://mapleclassic.wiki/wiki/Orange_Sporty_T-Shirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Orange_Sporty_T-Shirt
+  build: cot2
 sprite:
   file: items/orange-sporty-t-shirt.png
   source: maplestory-io

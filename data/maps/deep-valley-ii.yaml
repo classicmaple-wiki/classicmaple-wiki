@@ -3,6 +3,9 @@ name: Deep Valley II
 region: Victoria Island
 town: Perion
 kind: field
+recommended_level:
+  - 17
+  - 19
 monsters:
   - axe-stump
   - dark-axe-stump
@@ -13,3 +16,4 @@ source_page: https://mapleclassic.wiki/wiki/Deep_Valley_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Deep_Valley_II
+  build: cot2

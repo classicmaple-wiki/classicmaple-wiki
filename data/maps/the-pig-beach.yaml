@@ -3,6 +3,9 @@ name: The Pig Beach
 region: Victoria Island
 town: Lith Harbor
 kind: hidden-street
+recommended_level:
+  - 2
+  - 28
 monsters:
   - blue-snail
   - iron-hog
@@ -13,3 +16,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Pig_Beach
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Pig_Beach
+  build: cot2

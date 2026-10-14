@@ -1,10 +1,12 @@
 id: brown-basic-boots
 name: Brown Basic Boots
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Brown_Basic_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Basic_Boots
+  build: cot2
 sprite:
   file: items/brown-basic-boots.png
   source: maplestory-io

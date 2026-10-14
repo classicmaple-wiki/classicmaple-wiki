@@ -1,10 +1,12 @@
 id: orange-split-piece
 name: Orange Split Piece
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Orange_Split_Piece
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Orange_Split_Piece
+  build: cot2
 sprite:
   file: items/orange-split-piece.png
   source: maplestory-io

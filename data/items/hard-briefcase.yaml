@@ -1,10 +1,12 @@
 id: hard-briefcase
 name: Hard Briefcase
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Hard_Briefcase
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hard_Briefcase
+  build: cot2
 sprite:
   file: items/hard-briefcase.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: black-nitty
 name: Black Nitty
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Black_Nitty
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Nitty
+  build: cot2
 sprite:
   file: items/black-nitty.png
   source: maplestory-io

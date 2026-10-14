@@ -1,10 +1,12 @@
 id: red-baseball-cap
 name: Red Baseball Cap
 category: equipment
+required_level: 22
 source_page: https://mapleclassic.wiki/wiki/Red_Baseball_Cap
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Baseball_Cap
+  build: cot2
 sprite:
   file: items/red-baseball-cap.png
   source: maplestory-io

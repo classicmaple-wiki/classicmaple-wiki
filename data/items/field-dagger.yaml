@@ -1,10 +1,12 @@
 id: field-dagger
 name: Field Dagger
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Field_Dagger
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Field_Dagger
+  build: cot2
 sprite:
   file: items/field-dagger.png
   source: maplestory-io

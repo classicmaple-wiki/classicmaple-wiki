@@ -1,10 +1,12 @@
 id: battle-crossbow
 name: Battle Crossbow
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Battle_Crossbow
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Battle_Crossbow
+  build: cot2
 sprite:
   file: items/battle-crossbow.png
   source: maplestory-io

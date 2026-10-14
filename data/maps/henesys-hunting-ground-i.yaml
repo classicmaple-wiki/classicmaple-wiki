@@ -3,6 +3,9 @@ name: Henesys Hunting Ground I
 region: Victoria Island
 town: Henesys
 kind: hunting-ground
+recommended_level:
+  - 1
+  - 14
 monsters:
   - blue-snail
   - green-mushroom
@@ -15,3 +18,4 @@ source_page: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_I
+  build: cot2

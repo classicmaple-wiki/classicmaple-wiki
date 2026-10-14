@@ -1,10 +1,12 @@
 id: brown-robin-hat
 name: Brown Robin Hat
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Brown_Robin_Hat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Robin_Hat
+  build: cot2
 sprite:
   file: items/brown-robin-hat.png
   source: maplestory-io

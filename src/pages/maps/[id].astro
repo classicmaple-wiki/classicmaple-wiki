@@ -96,6 +96,7 @@ const headings = [
 >
 	<Window title="Map" id="stats" build={map.verified.build}>
 		<StatRows rows={statisticRows} editUrl={editUrl} subject="this map" />
+		{map.verified.build === 'cot2' && <p class="window__note">These numbers were seen in the closed beta. They may differ at launch.</p>}
 	</Window>
 
 	{

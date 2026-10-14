@@ -3,6 +3,9 @@ name: Sleepy Dungeon IV
 region: Victoria Island
 town: Sleepywood
 kind: dungeon
+recommended_level:
+  - 56
+  - 58
 monsters:
   - curse-eye
   - dark-stone-golem
@@ -13,3 +16,4 @@ source_page: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_IV
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_IV
+  build: cot2

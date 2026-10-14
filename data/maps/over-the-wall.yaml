@@ -3,6 +3,9 @@ name: Over the Wall
 region: Victoria Island
 town: Perion
 kind: field
+recommended_level:
+  - 5
+  - 23
 monsters:
   - axe-stump
   - dark-axe-stump
@@ -12,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/Over_the_Wall
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Over_the_Wall
+  build: cot2

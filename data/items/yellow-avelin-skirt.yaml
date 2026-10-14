@@ -1,10 +1,12 @@
 id: yellow-avelin-skirt
 name: Yellow Avelin Skirt
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Yellow_Avelin_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Yellow_Avelin_Skirt
+  build: cot2
 sprite:
   file: items/yellow-avelin-skirt.png
   source: maplestory-io

@@ -3,9 +3,13 @@ name: Transfer Area
 region: Victoria Island
 town: Kerning City
 kind: field
+recommended_level:
+  - 20
+  - 20
 monsters:
   - stirge
 source_page: https://mapleclassic.wiki/wiki/Transfer_Area
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Transfer_Area
+  build: cot2

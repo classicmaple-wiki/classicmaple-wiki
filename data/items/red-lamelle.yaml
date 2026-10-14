@@ -1,10 +1,12 @@
 id: red-lamelle
 name: Red Lamelle
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Red_Lamelle
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Lamelle
+  build: cot2
 sprite:
   file: items/red-lamelle.png
   source: maplestory-io

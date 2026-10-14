@@ -1,10 +1,12 @@
 id: yellow-metal-gear
 name: Yellow Metal Gear
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Yellow_Metal_Gear
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Yellow_Metal_Gear
+  build: cot2
 sprite:
   file: items/yellow-metal-gear.png
   source: maplestory-io

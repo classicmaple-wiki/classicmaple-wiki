@@ -1,10 +1,12 @@
 id: iron-burgernet-helm
 name: Iron Burgernet Helm
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Iron_Burgernet_Helm
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Iron_Burgernet_Helm
+  build: cot2
 sprite:
   file: items/iron-burgernet-helm.png
   source: maplestory-io

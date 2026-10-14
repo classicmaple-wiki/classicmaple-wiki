@@ -1,10 +1,12 @@
 id: rookie-pants
 name: Rookie Pants
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Rookie_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Rookie_Pants
+  build: cot2
 sprite:
   file: items/rookie-pants.png
   source: maplestory-io

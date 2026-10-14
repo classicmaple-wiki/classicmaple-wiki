@@ -1,7 +1,9 @@
 id: wolbi-throwing-stars
 name: Wolbi Throwing Stars
 category: consumable
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Wolbi_Throwing_Stars
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Wolbi_Throwing_Stars
+  build: cot2

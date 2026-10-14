@@ -1,10 +1,12 @@
 id: studded-polearm
 name: Studded Polearm
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Studded_Polearm
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Studded_Polearm
+  build: cot2
 sprite:
   file: items/studded-polearm.png
   source: maplestory-io

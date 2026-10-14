@@ -1,7 +1,9 @@
 id: red-bennis-chainmail-female
 name: Red Bennis Chainmail (Female)
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Red_Bennis_Chainmail_(Female)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Bennis_Chainmail_(Female)
+  build: cot2

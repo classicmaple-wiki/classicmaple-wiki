@@ -1,7 +1,9 @@
 id: mithril-axe
 name: Mithril Axe
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Mithril_Axe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Mithril_Axe
+  build: cot2

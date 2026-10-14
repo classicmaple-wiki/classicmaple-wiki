@@ -1,9 +1,13 @@
 id: wraith
 name: Wraith
+level: 48
+hp: 2350
+exp: 122
 source_page: https://mapleclassic.wiki/wiki/Wraith
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Wraith
+  build: cot2
 sprite:
   file: monsters/wraith.png
   source: maplestory-io

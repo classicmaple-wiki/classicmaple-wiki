@@ -1,10 +1,12 @@
 id: dark-brown-sneak-pants
 name: Dark Brown Sneak Pants
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Dark_Brown_Sneak_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Brown_Sneak_Pants
+  build: cot2
 sprite:
   file: items/dark-brown-sneak-pants.png
   source: maplestory-io

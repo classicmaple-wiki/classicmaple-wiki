@@ -1,10 +1,12 @@
 id: yellow-doros-robe
 name: Yellow Doros Robe
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Yellow_Doros_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Yellow_Doros_Robe
+  build: cot2
 sprite:
   file: items/yellow-doros-robe.png
   source: maplestory-io

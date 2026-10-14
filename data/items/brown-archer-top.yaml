@@ -1,10 +1,12 @@
 id: brown-archer-top
 name: Brown Archer Top
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Brown_Archer_Top
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Archer_Top
+  build: cot2
 sprite:
   file: items/brown-archer-top.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: iron-ball
 name: Iron Ball
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Iron_Ball
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Iron_Ball
+  build: cot2
 sprite:
   file: items/iron-ball.png
   source: maplestory-io

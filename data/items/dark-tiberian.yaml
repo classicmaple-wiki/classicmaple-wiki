@@ -1,10 +1,12 @@
 id: dark-tiberian
 name: Dark Tiberian
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Dark_Tiberian
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Tiberian
+  build: cot2
 sprite:
   file: items/dark-tiberian.png
   source: maplestory-io

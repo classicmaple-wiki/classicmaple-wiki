@@ -1,10 +1,12 @@
 id: green-shivermail
 name: Green Shivermail
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Green_Shivermail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Shivermail
+  build: cot2
 sprite:
   file: items/green-shivermail.png
   source: maplestory-io

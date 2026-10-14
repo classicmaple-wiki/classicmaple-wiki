@@ -1,10 +1,12 @@
 id: old-wooden-staff
 name: Old Wooden Staff
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Old_Wooden_Staff
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Old_Wooden_Staff
+  build: cot2
 sprite:
   file: items/old-wooden-staff.png
   source: maplestory-io

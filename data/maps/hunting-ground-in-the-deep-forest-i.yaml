@@ -3,6 +3,9 @@ name: Hunting Ground in the Deep Forest I
 region: Victoria Island
 town: Sleepywood
 kind: hunting-ground
+recommended_level:
+  - 27
+  - 33
 monsters:
   - curse-eye
   - green-mushroom
@@ -15,3 +18,4 @@ source_page: https://mapleclassic.wiki/wiki/Hunting_Ground_in_the_Deep_Forest_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hunting_Ground_in_the_Deep_Forest_I
+  build: cot2
