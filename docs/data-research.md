@@ -19,6 +19,7 @@ Not sources, never cite them, never copy from them:
 - Old Global MapleStory data from any year, including version 83 databases such as maplestory.io's numbers. Classic World changed many values. maplestory.io may be used for sprites only, under `docs/policies/images.md`, never for numbers.
 - Private servers and their libraries: MapleLegends, MapleRoyals, Old School Maple, and any other. Nexon forbids promoting them, and their values are their own.
 - Other wikis and databases: Fandom, maplestorywiki.net, Hidden Street, NiaMeowDB, and the like. Their text and data are not ours to copy, and most describe a different version. You may read them to learn what to look for, then confirm it from a rank 1 or 2 source.
+- One exception: MapleClassic Wiki, imported only by `scripts/import-mapleclassic.ts` and only the fields in spec 0005 (decision 0008). Never copy from it by hand, and never copy its prose. Its records enter as `unverified` like anything else.
 - Modern MapleStory, MapleStory Worlds, MapleStory M, or any regional server other than Classic World.
 - Your own memory or a model's general knowledge. If you cannot point to a rank 1 or 2 source, the value stays out.
 

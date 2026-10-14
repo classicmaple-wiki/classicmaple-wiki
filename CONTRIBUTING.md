@@ -171,7 +171,7 @@ Put `<RouteSummary />` at the top of the page (copy the import from an existing 
 
 ## License
 
-Code is MIT. Data and guides are CC BY-SA 4.0. By contributing, you agree to release your work under these licenses.
+Code is MIT. Data and guides are CC BY-NC-SA 4.0. By contributing, you agree to release your work under these licenses.
 
 ## Conduct
 

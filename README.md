@@ -52,7 +52,7 @@ Each data collection is published as JSON at `/data/<collection>.json`, for exam
 
 ## License
 
-Code is under the [MIT License](LICENSE). Data and guides are under [CC BY-SA 4.0](LICENSE-CONTENT.md).
+Code is under the [MIT License](LICENSE). Data and guides are under [CC BY-NC-SA 4.0](LICENSE-CONTENT.md). Some data comes from [MapleClassic Wiki](https://mapleclassic.wiki/), see [credits](https://classicmaple.wiki/credits/).
 
 ## Working on the site
 
