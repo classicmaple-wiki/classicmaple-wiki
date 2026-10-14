@@ -45,7 +45,7 @@ function findPicture(name: string): ImageMetadata | undefined {
 	return match?.[1].default;
 }
 
-const widths = variant === 'card' ? { small: 360, large: 720 } : { small: 900, large: 1800 };
+const widths = variant === 'card' ? { small: 320, large: 560 } : { small: 720, large: 1440 };
 
 /*
    Two WebP sizes per picture. A picture smaller than the target width is
@@ -54,7 +54,7 @@ const widths = variant === 'card' ? { small: 360, large: 720 } : { small: 900, l
 async function pictureSources(picture: ImageMetadata) {
 	const [small, large] = await Promise.all(
 		[widths.small, widths.large].map((width) =>
-			getImage({ src: picture, width: Math.min(width, picture.width), format: 'webp', quality: 74 })
+			getImage({ src: picture, width: Math.min(width, picture.width), format: 'webp', quality: 68 })
 		)
 	);
 	return { small: small.src, large: large.src };

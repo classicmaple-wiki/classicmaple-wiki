@@ -45,46 +45,44 @@ The reference is the Slow Snails style: a richly painted pixel art room or place
 
 ## Prompts
 
-Each prompt below is complete. Paste one as is into ChatGPT or Gemini.
+The approved reference is `src/assets/scenes/henesys.webp`, made with ChatGPT on 2026-10-13. Every other scene must look like it came from the same game. Each prompt has four parts: the style block, the scene, the layout block, and the exclusions. Paste the whole thing as one message.
 
-- **ChatGPT:** ask for a wide landscape image. It returns 3:2, which works.
-- **Gemini:** add "16:9" if it does not offer a wide size.
-- **Retries:** if the result has people, text, or a logo, say "same image, remove the people and all text" rather than starting over.
-- **Style references:** do not upload someone else's picture, such as a Slow Snails thumbnail, as a style reference. The prompts describe the style instead, so the result stays ours.
+Tips:
 
-### Kerning City, after dark
+- **ChatGPT:** ask for a wide landscape image.
+- **Gemini:** add "16:9".
+- **Matching the style:** you may upload our own `henesys.webp` as a style reference and add "match the art style of this image exactly". Never upload someone else's picture.
+- **Fixing a result:** if something is wrong, ask for "same image, but ..." rather than starting over.
 
-> A detailed HD pixel art scene of a cozy back alley bar at night in a gritty fantasy city, side view like a stage in a cute 2D side-scrolling MMORPG from the mid 2000s. Exposed red brick walls, tall wooden shelves full of glowing bottles, a long polished dark marble bar counter with round chrome stools, warm hanging Edison bulbs, a few neon signs made only of simple shapes like a star and a moon, copper pipes along the wall, a dartboard, small framed pictures, faded graffiti made of abstract shapes. Warm amber lamp light mixed with soft pink and teal neon glow, gentle bloom on every light. Painted pixel textures, soft rounded friendly shapes, rich detail in the background, calm open wooden floor in the foreground. Completely empty: no people, no characters, no creatures, no animals. No text, no letters, no words, no logos anywhere. Wide landscape composition with the bar counter in the center.
+### Style block
 
-### Henesys, a slow afternoon
+> Modern HD pixel art in the style of a cozy mid 2000s 2D side-scrolling fantasy MMORPG, like a 32-bit game redrawn at high resolution with modern lighting. Crisp visible pixel edges, small pixel clusters and soft dithering inside shapes, painterly shading, rounded friendly cartoon proportions, chunky outlined props. Saturated warm palette, high contrast, clean bright highlights, soft cast shadows. Layered parallax depth: sky and far scenery at the back, the main buildings and props in the middle, a framing ledge with plants at the very front.
 
-> A detailed HD pixel art scene of a peaceful village in rolling green hills on a sunny afternoon, side view like a stage in a cute 2D side-scrolling MMORPG from the mid 2000s. Cream colored cottages with big round orange spotted mushroom cap roofs, a small wooden market stall with baskets of apples and potions, a wooden fence with flowers, a little windmill on a far hill, tall leafy trees, fluffy white clouds in a bright blue sky. Warm golden midday light, soft shadows, gentle bloom on the sun. Painted pixel textures, soft rounded friendly shapes, saturated warm colors, layered hills for depth, calm open grassy path in the foreground. Completely empty: no people, no characters, no creatures, no animals. No text, no letters, no words, no logos anywhere. Wide landscape composition with the mushroom houses in the center.
+### Layout block
 
-### Maple Island, first light
+> Wide 16:9 landscape. Eye level side view, like a game stage. The main building or focal object sits in the center, between 30 and 70 percent of the width. A wide, flat, open walkable ground strip runs across the whole image at about 70 to 78 percent of the height, clear of objects in the center so characters could stand there. Below it, the bottom 20 percent is a low decorative ledge, such as a mossy stone wall, wooden planks, or rocks, with a few plants. The top 25 percent is sky, ceiling, or far background with nothing important in it.
 
-> A detailed HD pixel art scene of a small grassy island at sunrise, side view like a stage in a cute 2D side-scrolling MMORPG from the mid 2000s. A short wooden dock on posts, a little sailboat with one cream sail tied to it, calm sparkling blue sea, low green hills, a few palm-like trees, a blank wooden signpost, soft pink and gold morning sky with small clouds. Painted pixel textures, soft rounded friendly shapes, gentle bloom on the rising sun, calm open sandy ground in the foreground. Completely empty: no people, no characters, no creatures, no animals. No text, no letters, no words, no logos anywhere. Wide landscape composition with the dock in the center.
+### Exclusions
 
-### Ellinia, at dawn
+> No people, no characters, no creatures, no animals. No text, letters, numbers, or logos anywhere, signs show only simple shapes. No user interface, no border, no frame, no watermark. Not a 3D render, not a photo, not blurry.
 
-> A detailed HD pixel art scene of a magical forest of giant tall trees at dawn, side view like a stage in a cute 2D side-scrolling MMORPG from the mid 2000s. Huge trunks with wooden platforms and rope bridges between them, hanging paper lanterns glowing softly, glowing moss and small mushrooms, light rays falling through the canopy, soft blue and lilac morning mist. Painted pixel textures, soft rounded friendly shapes, layered trunks for depth, calm open mossy ground in the foreground. Completely empty: no people, no characters, no creatures, no animals. No text, no letters, no words, no logos anywhere. Wide landscape composition with a rope bridge in the center.
+### Scenes
 
-### Perion, dusk on the rocks
+Use the style block, then one scene below, then the layout block, then the exclusions.
 
-> A detailed HD pixel art scene of a warrior village in a red rock canyon at sunset, side view like a stage in a cute 2D side-scrolling MMORPG from the mid 2000s. Tall carved wooden totem poles, hide tents and wooden huts on stone ledges, a crackling campfire, training dummies made of straw, layered red mesas in the distance. Long orange sunset light, purple shadows, gentle bloom on the sun and the fire. Painted pixel textures, soft rounded friendly shapes, calm open dusty ground in the foreground. Completely empty: no people, no characters, no creatures, no animals. No text, no letters, no words, no logos anywhere. Wide landscape composition with a totem pole in the center.
-
-### Sleepywood, below the roots
-
-> A detailed HD pixel art scene of a quiet underground hollow beneath enormous tree roots, side view like a stage in a cute 2D side-scrolling MMORPG from the mid 2000s. Thick roots arching down from the ceiling, a lantern on a crooked wooden post, glowing blue and green mushrooms, a small wooden shrine, a calm hot spring pool with steam, fireflies, low mist. Dim green and gold glow, gentle bloom on every light source. Painted pixel textures, soft rounded friendly shapes, layered roots for depth, calm open stone floor in the foreground. Completely empty: no people, no characters, no creatures, no animals. No text, no letters, no words, no logos anywhere. Wide landscape composition with the lantern in the center.
-
-### Default, the library of places
-
-> A detailed HD pixel art scene of a cozy wooden archive room in warm afternoon light, side view like a stage in a cute 2D side-scrolling MMORPG from the mid 2000s. Tall shelves of rolled scrolls and bound books, a cork notice board with pinned blank papers, a brass lantern, a big round window with orange maple leaves drifting past outside, a reading desk with an open blank map, a potted plant, a small ladder. Warm golden light through the window, gentle bloom. Painted pixel textures, soft rounded friendly shapes, rich detail on the shelves, calm open wooden floor in the foreground. Completely empty: no people, no characters, no creatures, no animals. No text, no letters, no words, no logos anywhere. Wide landscape composition with the round window in the center.
+- **Henesys, a slow afternoon (done).** A sunny village of cream colored cottages with big round orange mushroom cap roofs with cream spots, a giant leafy tree behind them, a wooden market stall with a striped orange and cream awning, baskets of red apples and potion bottles, barrels, lanterns on wooden posts, wooden fences, sunflowers and daisies, rolling green hills with waterfalls, stone bridges, distant mushroom houses and a windmill, mountains, bright blue sky with big white clouds, sun rays from the top right.
+- **Kerning City, after dark.** A cozy back alley bar at night in a gritty fantasy city. Red brick walls, tall wooden shelves full of glowing bottles, a long polished dark marble bar counter in the center with round chrome stools, warm hanging bulbs, neon signs made only of simple shapes like a star and a moon in pink and teal, copper pipes, a dartboard, framed pictures, graffiti made of abstract shapes. Warm amber lamp light mixed with soft neon glow. The floor strip is dark wooden planks, the front ledge is a low wooden rail with a potted plant.
+- **Maple Island, first light.** A small grassy island village at sunrise. A wooden dock on posts with a little sailboat with one cream sail, calm sparkling sea, small cottages with orange mushroom cap roofs, a blank wooden signpost, palm-like trees, soft pink and gold sky.
+- **Ellinia, at dawn.** A magical forest of giant tall trees with wooden platforms, treehouse doors, and rope bridges between trunks, hanging paper lanterns, glowing moss and small mushrooms, light rays through the canopy, soft blue and lilac morning mist.
+- **Perion, dusk on the rocks.** A warrior village in a red rock canyon at sunset. Carved wooden totem poles, hide tents and wooden huts on stone ledges, a campfire, straw training dummies, layered red mesas, long orange light and purple shadows.
+- **Sleepywood, below the roots.** A quiet underground hollow beneath enormous tree roots. A lantern on a crooked post, glowing blue and green mushrooms, a small wooden shrine, a steaming hot spring pool, fireflies, low mist, dim green and gold glow.
+- **Default, the library of places.** A cozy wooden archive room in warm afternoon light. Tall shelves of scrolls and books, a cork notice board with blank papers, a brass lantern, a big round window with orange maple leaves drifting past, a reading desk with an open blank map, a small ladder.
 
 ### Night version, for dark mode
 
 Upload the finished day picture, then send:
 
-> Make this exact scene at night. Keep the same composition, layout, and every object in the same place. Deep blue night outside, warm lamps and lights glowing brighter, soft moonlight, gentle bloom. Still no people, no text, no logos.
+> Make this exact scene at night. Keep the same composition, layout, art style, and every object in the same place. Deep blue night sky with stars and a soft moon, every lantern and window glowing warm, gentle bloom on lights, cool blue shadows. Still no people, no text, no logos.
 
 ## Steps
 
