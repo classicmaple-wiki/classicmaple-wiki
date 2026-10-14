@@ -6,10 +6,10 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 ## Now
 
-- **P2f** Interface that serves the art: art direction pivot. Spec: [0003](specs/0003-art-led-interface.md), decision [0007](docs/decisions/0007-art-led-direction.md). Status: spec drafted, waiting for owner approval and the three open questions. Owner: agent.
+- **P2f** Interface that serves the art. Spec: [0003](specs/0003-art-led-interface.md), decision [0007](docs/decisions/0007-art-led-direction.md). Status: done 2026-10-14, live. Owner: agent.
 - **P2e** Paint the scene pictures with the prompt kit in [docs/art-direction.md](docs/art-direction.md). Done: Henesys day and night, Kerning City at dusk. To do: Kerning City night, Maple Island, Ellinia, Perion, Sleepywood, Default. Status: in progress. Owner: owner.
-- **P2** Design system: the chosen mix of mockups A and B built into the site, scenes now painted per decision 0006. Spec: [0002](specs/0002-design-system.md). Status: in progress on branch `spec/0002-design-system`, pull request 3. Code ready for painted scenes and page sprites. Owner: agent.
-- **P2a** Sprite system: images policy, source list, sprite field, validator checks. Decision [0005](docs/decisions/0005-identification-sprites.md), rules in [docs/policies/images.md](docs/policies/images.md). Status: in progress. Rules and checks done, sprites not yet shown on pages. Owner: agent.
+- **P2** Design system. Spec: [0002](specs/0002-design-system.md). Status: done 2026-10-14, live. Owner: agent.
+- **P2a** Sprite system: images policy, source list, sprite field, validator checks, page sprite layer. Decision [0005](docs/decisions/0005-identification-sprites.md), rules in [docs/policies/images.md](docs/policies/images.md). Status: done, waiting for the first sprites (P2b). Owner: agent.
 - **P1** GitHub repository, labels, branch protection, then Vercel hosting with previews and the real domain. Spec: [0001](specs/0001-github-and-vercel.md). Status: done 2026-10-13. Live at https://classicmaple.wiki with previews on every pull request. Owner: agent, with owner for logins and DNS.
 
 ## Next
@@ -22,6 +22,7 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 - **P4a** Spec only: contribution-scale, from ten contributors to a thousand. Spec: not yet written. Status: todo. Owner: agent.
 - **P4b** Spec only: ai-assist, AI drafts and humans approve, with running cost per option. Spec: not yet written. Status: todo. Owner: agent.
+- **P4d** Idea from the owner, 2026-10-14, not to build yet: player centric contribution. A player finds something, uploads screenshots, and writes a note in a web form, no GitHub needed. An AI pipeline, likely Gemini because the owner has spare credits, reads the screenshots, extracts values against our schemas, and drafts the change for human review. Fold into the P4a and P4b specs, and P4c if accounts are needed. Status: idea. Owner: owner.
 - **P4c** Spec only: community-platform, accounts, submissions, profiles, and the trigger for a database. Spec: not yet written. Status: todo. Owner: agent.
 - **P2d** Fandom and Hidden Street stay `ask-first`. The owner does not contact sites, so use other sources or draw our own. Status: settled. Owner: owner.
 

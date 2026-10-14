@@ -4,25 +4,23 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-Spec 0003, the interface that serves the art, is built on branch `spec/0002-design-system`, pull request 3, and waits for the owner's review on the preview. The home page centers on search over a veiled Henesys picture. Inner pages hang the page name on a wooden sign in the picture and attach a wooden strip under it. Painted scenes exist for Henesys (day and night) and Kerning City (dusk). The live site still runs the old look.
+The new design is live on https://classicmaple.wiki since 2026-10-14: art led interface (spec 0003), home centered on search, map name signs, painted Henesys and Kerning City scenes. Production Lighthouse mobile is 100 for performance and accessibility on home, Thief, and Crimson Balrog. Content is still mostly Unknown.
 
 ## Just done
 
-- Home centered on search, inner page map name sign, attached strip. The owner rejected the floating title panel.
-- Fixes from an independent review: dark mode placeholders, lead window and breadcrumb contrast, focus on wood, stone footer, painted only place shelf, leftover pixel font chrome.
-- Lighthouse mobile on a local build: home 99, Thief 98, Crimson Balrog 98, accessibility 100, layout shift 0.
+- Merged pull request 3. Closed specs 0002 and 0003.
+- Recorded the owner's player centric contribution idea as P4d.
 
 ## In progress
 
-Pull request 3, ready to merge. The old mockups are deleted.
+Nothing open in code. The owner is painting the remaining scenes with `docs/art-direction.md`.
 
 ## Next step
 
-Owner merges pull request 3. Then check production and run Lighthouse there. The owner paints the remaining scenes with `docs/art-direction.md`; the agent installs each one.
+Ask the owner which comes next: the launch content spec (where to level, quests, job advancement), the about page and credits (P3), or first sprites (P2b). Launch is 2026-10-21.
 
 ## Blockers and questions for the owner
 
-- Review of the preview.
 - Remaining pictures: Kerning City night, Maple Island, Ellinia, Perion, Sleepywood, Default.
 
 ## Verify

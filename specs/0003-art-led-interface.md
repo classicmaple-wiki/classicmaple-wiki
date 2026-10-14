@@ -1,6 +1,6 @@
 # 0003: An interface that serves the art
 
-Status: in progress. Approved by the owner 2026-10-13 with the recommended answers.
+Status: done 2026-10-14. Approved with the recommended answers, reviewed on the preview, merged in pull request 3. Production Lighthouse mobile 100 on home, Thief, and Crimson Balrog.
 
 ## Problem
 
@@ -96,7 +96,7 @@ Build it on the spec 0002 branch for the three pages that have art or matter mos
 - [x] Title type as decided.
 - [x] Screenshots of all pages at 360 and 1280, light and dark. Lighthouse mobile on a local build: home 97, Thief 98, Crimson Balrog 99, accessibility 100, layout shift 0.
 - [x] `npm run validate` and `npm run build`.
-- [ ] Update `BACKLOG.md` and rewrite `HANDOFF.md`.
+- [x] Update `BACKLOG.md` and rewrite `HANDOFF.md`.
 
 ## Open questions
 
