@@ -4,26 +4,26 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-The art led design is live. Branch `site/scenes-and-library` adds every remaining painted scene, four special page rooms, and the library (spec 0004): `/library/` lists every entry as an inventory card with search and type filters, and items and maps get their own pages. Crimson Balrog has the first sprite. It waits for the owner's review on the pull request preview.
+The art led design is live on https://classicmaple.wiki. Pull request 4 (`site/scenes-and-library`) adds every painted scene, four special page rooms, the library (spec 0004), item and map pages, the first sprite, and the data research brief. It waits for the owner to merge. Game content is still mostly Unknown, and data research is being handed to Gemini or Antigravity.
 
 ## Just done
 
-- Scenes: Maple Island, Ellinia, Perion, Sleepywood, Default, plus workshop, harbor board, potion shop, and closed shop. What changed and 404 use their rooms. Only home has a night picture.
-- Library page, cards, item and map pages, Library in the sidebar and on the home task grid.
-- Sprite cap raised to 192 pixels for bosses.
-- Lighthouse mobile on a local build: library 99, monster 98, item 98, accessibility 100, layout shift 0.
+- `docs/data-research.md`: what counts as a Classic World source, what never does, the rules, where each fact goes, launch priorities, and how to hand work in.
+- `GEMINI.md` pointer, and AGENTS.md now points data work at the brief.
+- The library, scenes, and sprite work listed in spec 0004.
 
 ## In progress
 
-Pull request for `site/scenes-and-library`.
+Pull request 4. P5 launch content, by a research agent, from the brief.
 
 ## Next step
 
-Owner reviews and merges. Then the launch content spec: where to level, quests, job advancement. Then the about and support pages in their rooms (P3), and more sprites (P2b). Launch is 2026-10-21.
+Owner merges pull request 4. The research agent works through the priorities in `docs/data-research.md`, one pull request per topic, each labeled `ai-drafted`. The owner reviews each on its preview and raises statuses only where sources hold. Then P3 (about and support pages in their rooms) and more sprites (P2b). After launch, stage 1 of P4d. Launch is 2026-10-21.
 
 ## Blockers and questions for the owner
 
-- Review the library on the preview.
+- Merge pull request 4.
+- Review research pull requests as they arrive.
 
 ## Verify
 

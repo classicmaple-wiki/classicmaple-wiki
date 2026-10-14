@@ -26,6 +26,7 @@ BACKLOG.md         Now, Next, Later. Only Now items may be worked on.
 specs/             Numbered specs. No feature code without an approved spec.
 docs/decisions/    Numbered decision records.
 docs/art-direction.md  The look and the prompt kit for every picture. Read before any art work.
+docs/data-research.md  Sources, rules, and priorities for game data. Read before any data work.
 docs/research/     Research notes (UI, assets).
 data/              Game data, one YAML file per entity. builds.yaml lists builds.
 schemas/           Zod schemas. index.ts maps collection to schema.
@@ -41,6 +42,7 @@ site.config.mjs    Site address and repository address. Change them here only.
 
 ## Data rules
 
+- The wiki covers MapleStory Classic World only. Sources and priorities are in `docs/data-research.md`.
 - Every fact needs a source and a build. Valid build ids live in `data/builds.yaml`.
 - Never invent game data. Unknown values are left out. The site shows them as Unknown.
 - Anything an AI drafts enters as `unverified`. AI never raises a verification status.
