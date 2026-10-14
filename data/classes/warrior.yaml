@@ -13,6 +13,11 @@ skills:
     differs_from_original: Reported to be available at 2nd job. In original MapleStory, Rush was a 4th job skill.
     verified:
       status: unverified
+    icon:
+      file: skills/warrior-rush.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/112/skillbook
+      retrieved: 2026-10-14
   - id: improved-hp-recovery
     name: Improved HP Recovery
     job: 1
@@ -38,6 +43,11 @@ skills:
       build: founders-2026-10-06
       source: https://www.nexon.com/maplestory/game/mscw/classes-and-jobs/46083/warrior
       date: 2026-10-14
+    icon:
+      file: skills/warrior-max-hp-increase.png
+      source: maplestory-io
+      source_url: https://maplestory.io/api/GMS/83/job/100/skillbook
+      retrieved: 2026-10-14
   - id: precise-strikes
     name: Precise Strikes
     job: 1

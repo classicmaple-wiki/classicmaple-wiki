@@ -2,8 +2,13 @@
    Fetches skill icons from maplestory.io for every class skill in
    data/classes/ that has none yet (docs/policies/images.md). One request
    per job reads that job's whole skill book, which holds each skill's
-   name and its 32 pixel icon, so a full run is thirteen requests, at
-   least 1.1 seconds apart.
+   name and its 32 pixel icon. It reads the first and second job books,
+   then the third and fourth job books, because Classic World moved some
+   skills earlier, such as Rush. A full run is 29 requests, at least 1.1
+   seconds apart. A few skills were renamed, such as Max HP Increase,
+   which the old books call Improved MaxHP Increase; those are listed in
+   renamedSkills. Skills that are new in Classic World are never given
+   another skill's icon.
 
    A skill matches by its name within its own class's books. Branches are
    not taken from the books, since Classic World moved some skills; they
@@ -52,6 +57,26 @@ const booksByClass: Record<string, { job: number; branch: string }[]> = {
 		{ job: 410, branch: 'Assassin' },
 		{ job: 420, branch: 'Bandit' },
 	],
+};
+
+/*
+   The third and fourth job books of each class, read after the first and
+   second, only to find skills Classic World moved to an earlier job.
+*/
+const laterBooksByClass: Record<string, number[]> = {
+	warrior: [111, 112, 121, 122, 131, 132],
+	magician: [211, 212, 221, 222, 231, 232],
+	bowman: [311, 312, 321, 322],
+	thief: [411, 412, 421, 422],
+};
+
+/*
+   Classic World names that the old skill books spell differently, as
+   folded names: Classic name to old name.
+*/
+const renamedSkills: Record<string, string> = {
+	'max hp increase': 'improved maxhp increase',
+	'max mp increase': 'improved maxmp increase',
 };
 
 let lastRequestTime = 0;
@@ -107,7 +132,8 @@ async function main(): Promise<void> {
 		const books = booksByClass[record.id];
 		if (!books || !record.skills?.length) continue;
 		const found = new Map<string, { icon: string; job: number; branch: string }>();
-		for (const book of books) {
+		const allBooks = [...books, ...(laterBooksByClass[record.id] ?? []).map((job) => ({ job, branch: '' }))];
+		for (const book of allBooks) {
 			for (const skill of await readSkillBook(book.job)) {
 				const key = foldName(skill.name);
 				const entry = { icon: skill.icon, job: book.job, branch: book.branch };
@@ -117,7 +143,8 @@ async function main(): Promise<void> {
 			}
 		}
 		for (const skill of record.skills) {
-			const match = found.get(foldName(String(skill.name)));
+			const name = foldName(String(skill.name));
+			const match = found.get(name) ?? found.get(renamedSkills[name] ?? '');
 			if (!match) {
 				leftForPeople.push(`${record.id}: no icon for "${skill.name}"`);
 				continue;
