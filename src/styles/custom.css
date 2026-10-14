@@ -226,7 +226,7 @@ a {
 	overflow-x: clip;
 }
 
-:is(.page-title__bar, .window__title-bar, .home-hero__wordmark) :focus-visible {
+:is(.page-title__strip, .window__title-bar, .home-hero__wordmark) :focus-visible {
 	outline-color: var(--color-wood-text);
 }
 

@@ -13,24 +13,27 @@
 */
 
 /*
-   Page title band (spec 0003, the art leads). The band takes the shape of
-   its own painted picture through an aspect ratio set by PageTitle, kept
-   between a minimum and a maximum height, so a wide panorama is not
-   cropped like a 16:9 picture. The ground color sits behind it and the
-   size never depends on the picture loading, so nothing shifts. On phones
-   the content column is the whole screen, so the band bleeds past the
-   column padding to both edges and up to the header. From 50em the band
-   becomes a framed window into the place.
+   Page title (spec 0003, option one of the owner's title ideas). The band
+   takes the shape of its own painted picture through an aspect ratio set
+   by PageTitle, kept between a minimum and a maximum height. Its size
+   never waits on the picture, so nothing shifts. On phones it bleeds to
+   both screen edges and up to the header. From 50em it is a framed window
+   into the place.
 
-   The title panel is a signboard: a wooden top plank holding the
-   breadcrumb in cream and the section emblem in sign gold, then a
-   parchment body with the H1 in Nunito 800, the subtitle, and on entity
-   pages a status line under a dotted divider. The panel overlaps only the
-   picture's bottom ledge, about 4 percent of the band's width, which is
-   at most 12 percent of its height for pictures up to 3 to 1. The
-   walkable ground strip and the page's sprite stay in view. Starlight's
-   hairline between the title and the body goes, since the panel already
-   ends the header.
+   The page's name hangs in the scene's top left corner on a wooden sign,
+   like the map name banner in the game, held by two short ropes from the
+   top edge. The art direction keeps the top quarter of every picture free
+   of anything important, so the sign covers sky or ceiling only. The sign
+   is solid wood, so its text never sits on the art: the title in sign
+   gold game text with a dark outline painted under the letters, the
+   subtitle in cream.
+
+   Under the scene, attached with no gap, a wooden strip carries the
+   breadcrumb, the status line on entity pages, and the section emblem,
+   which steps aside on small phones so the strip stays compact. Nothing
+   floats over the picture any more. A page whose scene has no
+   picture yet gets a short strip of its mood gradient that holds the sign
+   in normal flow, so the title still leads until the art arrives.
 */
 .page-title {
 	margin-top: -1.5rem;
@@ -47,30 +50,93 @@
 	background: var(--scene-ground);
 }
 
-.page-title__panel {
-	position: relative;
-	margin: calc(-1 * var(--scene-overlap-ledge)) var(--sl-content-pad-x) 0;
-	background: var(--color-panel);
-	color: var(--color-ink);
-	border: 1px solid var(--color-edge-strong);
-	border-radius: var(--radius-window);
-	box-shadow: var(--shadow-window);
+.page-title__band:has(.scene-art--placeholder) {
+	aspect-ratio: auto;
+	min-height: 0;
+	max-height: none;
+	padding: var(--space-4);
 }
 
-.page-title__bar {
+.page-title__sign {
+	position: absolute;
+	top: var(--space-4);
+	left: var(--space-4);
+	max-width: min(85%, 30rem);
+	padding: var(--space-2) var(--space-4) 10px;
+	background:
+		repeating-linear-gradient(to bottom, transparent 0 12px, rgb(0 0 0 / 0.08) 12px 13px),
+		linear-gradient(to bottom, rgb(255 255 255 / 0.12), transparent 40%, rgb(0 0 0 / 0.18)),
+		var(--color-sign);
+	color: var(--color-wood-text);
+	border: 2px solid color-mix(in srgb, var(--color-sign) 60%, #000);
+	border-radius: 8px;
+	box-shadow:
+		inset 0 1px 0 rgb(255 255 255 / 0.2),
+		0 3px 0 color-mix(in srgb, var(--color-sign) 55%, #000),
+		0 8px 18px rgb(0 0 0 / 0.28);
+}
+
+.page-title__band:has(.scene-art--placeholder) .page-title__sign {
+	position: relative;
+	top: auto;
+	left: auto;
+	display: inline-block;
+}
+
+.page-title__sign::before,
+.page-title__sign::after {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	width: 3px;
+	height: calc(var(--space-4) + 2px);
+	background: color-mix(in srgb, var(--color-sign) 55%, #000);
+}
+
+.page-title__sign::before {
+	left: 20px;
+}
+
+.page-title__sign::after {
+	right: 20px;
+}
+
+.page-title__heading {
+	margin: 0;
+	font-family: var(--font-body);
+	font-weight: 800;
+	font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+	line-height: 1.15;
+	letter-spacing: 0;
+	color: var(--color-sign-text);
+	-webkit-text-stroke: 4px color-mix(in srgb, var(--color-sign) 45%, #000);
+	paint-order: stroke fill;
+	text-shadow: 0 2px 0 rgb(0 0 0 / 0.4);
+	overflow-wrap: break-word;
+	text-wrap: balance;
+}
+
+.page-title__subtitle {
+	margin: 2px 0 0;
+	color: var(--color-wood-text);
+	font-size: var(--text-sm);
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.page-title__strip {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
-	gap: var(--space-3);
-	min-height: 40px;
-	padding: 6px var(--space-3) 6px var(--space-4);
+	gap: var(--space-2) var(--space-5);
+	padding: var(--space-2) var(--space-4);
 	background:
 		repeating-linear-gradient(to bottom, transparent 0 10px, rgb(0 0 0 / 0.07) 10px 11px),
 		linear-gradient(to bottom, rgb(255 255 255 / 0.1), transparent 45%, rgb(0 0 0 / 0.14)),
 		var(--color-wood);
 	color: var(--color-wood-text);
-	border-bottom: 2px solid color-mix(in srgb, var(--color-wood) 70%, #000);
-	border-radius: 3px 3px 0 0;
-	box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18);
+	border-top: 2px solid color-mix(in srgb, var(--color-wood) 60%, #000);
+	box-shadow: 0 2px 0 color-mix(in srgb, var(--color-wood) 55%, #000);
 }
 
 .page-title__emblem {
@@ -79,10 +145,6 @@
 	height: 24px;
 	margin-left: auto;
 	fill: var(--color-sign-text);
-}
-
-.page-title__body {
-	padding: var(--space-4);
 }
 
 .page-title__breadcrumb {
@@ -122,36 +184,14 @@
 	font-weight: 800;
 }
 
-.page-title__heading {
-	margin: 0;
-	font-family: var(--font-body);
-	font-weight: 800;
-	text-shadow: 0 2px 0 color-mix(in srgb, var(--color-accent-fill) 28%, transparent);
-	font-size: clamp(1.875rem, 1.4rem + 1.6vw, 2.75rem);
-	line-height: 1.15;
-	letter-spacing: -0.01em;
-	color: var(--color-ink);
-	overflow-wrap: break-word;
-	text-wrap: balance;
-}
-
-.page-title__subtitle {
-	margin: var(--space-1) 0 0;
-	color: var(--color-ink-muted);
-	font-size: var(--text-md);
-	font-weight: 600;
-}
-
 .page-title__meta {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	gap: var(--space-2) var(--space-5);
-	margin: var(--space-4) 0 0;
-	padding-top: var(--space-4);
-	background: linear-gradient(to right, color-mix(in srgb, var(--color-ink) 32%, transparent) 2px, transparent 2px) 0 0 / 6px 2px repeat-x;
-	color: var(--color-ink-muted);
-	font-size: var(--text-base);
+	gap: var(--space-2) var(--space-4);
+	margin: 0;
+	color: var(--color-wood-text);
+	font-size: var(--text-sm);
 }
 
 .page-title__meta-item {
@@ -165,9 +205,37 @@
 	font-weight: 700;
 }
 
+.page-title__meta code {
+	padding: 1px 6px;
+	background: rgb(0 0 0 / 0.22);
+	color: var(--color-wood-text);
+	border-radius: var(--radius-chrome);
+}
+
 .content-panel:has(.page-title) + .content-panel {
 	border-top: 0;
 	padding-top: var(--space-2);
+}
+
+@media (max-width: 479px) {
+	.page-title__sign {
+		top: var(--space-3);
+		left: var(--space-3);
+		padding: 6px var(--space-3) var(--space-2);
+	}
+
+	.page-title__sign::before,
+	.page-title__sign::after {
+		height: calc(var(--space-3) + 2px);
+	}
+
+	.page-title__heading {
+		-webkit-text-stroke-width: 3px;
+	}
+
+	.page-title__emblem {
+		display: none;
+	}
 }
 
 @media (min-width: 50em) {
@@ -178,20 +246,24 @@
 
 	.page-title__band {
 		border: 1px solid var(--color-edge-strong);
-		border-radius: var(--radius-window);
-		box-shadow: var(--shadow-window);
+		border-bottom: 0;
+		border-radius: var(--radius-window) var(--radius-window) 0 0;
 	}
 
-	.page-title__panel {
-		margin-inline: var(--space-5);
+	.page-title__strip {
+		padding-inline: var(--space-5);
+		border-radius: 0 0 var(--radius-window) var(--radius-window);
 	}
 
-	.page-title__bar {
-		padding-inline: calc(var(--space-5) + 3px) var(--space-4);
+	.page-title__sign {
+		top: var(--space-5);
+		left: var(--space-5);
+		padding: 10px var(--space-5) 12px;
 	}
 
-	.page-title__body {
-		padding: var(--space-5) var(--space-5) var(--space-5) calc(var(--space-5) + 3px);
+	.page-title__sign::before,
+	.page-title__sign::after {
+		height: calc(var(--space-5) + 2px);
 	}
 }
 
@@ -320,24 +392,21 @@ site-search button[data-open-modal]:hover {
 }
 
 /*
-   Home hero (spec 0003, the art leads). The painted picture is the first
-   and largest thing on the site: it runs the full width of the window,
-   edge to edge, up to the header, in its own aspect ratio, at least 320
-   pixels tall on phones and at most 70 percent of the screen height,
-   cropping from the center past that. Its size never waits on the
-   picture, so nothing shifts. The body clips horizontal overflow, so the
-   full width band never causes sideways scroll next to a scrollbar.
+   Home hero, centered on search (the owner's direction, 2026-10-13). The
+   painted picture fills a tall hero edge to edge as a background, under
+   a veil that softens it: parchment by day, night indigo by night, a
+   little clearer at the edges than in the middle, so the scene sets the
+   mood without competing with the words. The hero's height never depends
+   on the picture, so nothing shifts while it loads. Starlight's page
+   wrapper clips sideways overflow, so the full width hero never adds a
+   horizontal scroll next to a desktop scrollbar.
 
-   The panel is direction A's calm centered panel on parchment. It sits
-   on the picture's bottom ledge only, about 4 percent of the screen
-   width. The wordmark hangs from the top of the panel as a wooden sign:
-   plank lines and a soft top light in CSS, sign gold game text in
-   Nunito 800 with a dark edge. Under 560 pixels the leaf sits above the
-   name and the name drops a size, so it stays on one line. The leaf
-   shows at 48 pixels, twice its grid, to stay crisp.
-
-   The search button is drawn as a search field on paper, with a pixel
-   magnifier, so it reads as the place to type.
+   In the middle, the wordmark hangs as a wooden sign: plank lines and a
+   soft top light in CSS, sign gold game text in Nunito 800 with a dark
+   outline. Under it, a solid parchment card in the window frame holds
+   the tagline, the search field, the build line, and the actions. The
+   search field is the largest and clearest thing on the card. Every word
+   sits on the sign or the card, never on the picture.
 */
 .home-hero {
 	margin-top: -1.5rem;
@@ -346,39 +415,48 @@ site-search button[data-open-modal]:hover {
 
 .home-hero__band {
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100vw;
+	min-height: clamp(560px, 82svh, 820px);
 	margin-inline: calc(50% - 50vw);
-	aspect-ratio: var(--scene-aspect, 16 / 9);
-	min-height: max(320px, 46svh);
-	max-height: 70vh;
+	padding: var(--space-7) var(--space-4);
 	overflow: hidden;
 	background: var(--scene-ground);
 	box-shadow: 0 2px 0 color-mix(in srgb, var(--color-ink) 18%, transparent);
 }
 
-.home-hero__panel {
+.home-hero__veil {
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(ellipse 60% 55% at 50% 50%, color-mix(in srgb, var(--color-paper) 55%, transparent), transparent 75%),
+		color-mix(in srgb, var(--color-paper) 45%, transparent);
+	pointer-events: none;
+}
+
+:root[data-theme='dark'] .home-hero__veil {
+	background:
+		radial-gradient(ellipse 60% 55% at 50% 50%, rgb(11 18 48 / 0.45), transparent 75%),
+		rgb(11 18 48 / 0.4);
+}
+
+.home-hero__stage {
 	position: relative;
-	max-width: 47.5rem;
-	margin: calc(-1 * clamp(16px, 4vw, 56px)) var(--sl-content-pad-x) 0;
-	padding: var(--space-6) var(--space-4);
-	background: var(--color-panel);
-	color: var(--color-ink);
-	border: 1px solid var(--color-line);
-	border-radius: var(--radius-panel);
-	box-shadow: var(--shadow-panel);
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--space-4);
+	width: min(100%, 40rem);
 }
 
-.home-hero__panel > * {
-	margin: 0;
-}
-
-.home-hero__panel .home-hero__wordmark {
+.home-hero__wordmark {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	gap: var(--space-3);
-	margin-top: calc(-1 * var(--space-7));
+	margin: 0;
 	padding: var(--space-3) var(--space-5);
 	background:
 		repeating-linear-gradient(to bottom, transparent 0 12px, rgb(0 0 0 / 0.08) 12px 13px),
@@ -390,16 +468,15 @@ site-search button[data-open-modal]:hover {
 	box-shadow:
 		inset 0 1px 0 rgb(255 255 255 / 0.2),
 		0 4px 0 color-mix(in srgb, var(--color-sign) 55%, #000),
-		0 10px 24px rgb(0 0 0 / 0.18);
+		0 12px 28px rgb(0 0 0 / 0.25);
 	font-family: var(--font-body);
 	font-weight: 800;
 	font-size: clamp(1.75rem, 1.25rem + 2.2vw, 2.75rem);
 	line-height: 1.1;
 	letter-spacing: 0;
-	text-shadow:
-		0 2px 0 rgb(0 0 0 / 0.5),
-		1px 0 0 rgb(0 0 0 / 0.3),
-		-1px 0 0 rgb(0 0 0 / 0.3);
+	-webkit-text-stroke: 4px color-mix(in srgb, var(--color-sign) 45%, #000);
+	paint-order: stroke fill;
+	text-shadow: 0 2px 0 rgb(0 0 0 / 0.45);
 	text-wrap: balance;
 }
 
@@ -409,9 +486,26 @@ site-search button[data-open-modal]:hover {
 	height: 48px;
 }
 
-.home-hero__panel .home-hero__tagline {
+.home-hero__card {
+	width: 100%;
+	padding: var(--space-6) var(--space-5);
+	background: var(--color-panel);
+	color: var(--color-ink);
+	border: 1px solid var(--color-edge-strong);
+	border-radius: var(--radius-window);
+	box-shadow:
+		var(--shadow-window),
+		0 16px 40px rgb(0 0 0 / 0.18);
+	text-align: center;
+}
+
+.home-hero__card > * {
+	margin: 0;
+}
+
+.home-hero__card .home-hero__tagline {
 	max-width: 34ch;
-	margin: var(--space-4) auto var(--space-5);
+	margin: 0 auto var(--space-5);
 	font-size: var(--text-lg);
 	line-height: 1.5;
 	color: var(--color-ink);
@@ -421,16 +515,18 @@ site-search button[data-open-modal]:hover {
 	display: flex;
 	align-items: center;
 	gap: var(--space-3);
-	max-width: 32.5rem;
-	min-height: 52px;
+	min-height: 60px;
 	margin-inline: auto;
-	padding: 0 var(--space-4);
+	padding: 0 var(--space-5);
 	background: var(--color-paper);
 	color: var(--color-ink-muted);
-	border: 1px solid var(--color-edge-strong);
+	border: 2px solid var(--color-edge-strong);
 	border-radius: var(--radius-window);
-	box-shadow: inset 0 2px 0 color-mix(in srgb, var(--color-ink) 7%, transparent);
-	font-size: var(--text-md);
+	box-shadow:
+		inset 0 2px 0 color-mix(in srgb, var(--color-ink) 7%, transparent),
+		0 2px 0 color-mix(in srgb, var(--color-ink) 10%, transparent);
+	font-size: var(--text-lg);
+	font-weight: 600;
 	text-align: left;
 	text-decoration: none;
 	cursor: pointer;
@@ -443,20 +539,20 @@ site-search button[data-open-modal]:hover {
 
 .home-hero__search-glyph {
 	flex: none;
-	width: 20px;
-	height: 20px;
+	width: 22px;
+	height: 22px;
 	fill: currentColor;
 }
 
-.home-hero__panel .home-hero__build-line {
+.home-hero__card .home-hero__build-line {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	gap: var(--space-2) var(--space-3);
-	margin-top: var(--space-5);
+	margin-top: var(--space-4);
 	color: var(--color-ink-muted);
-	font-size: var(--text-base);
+	font-size: var(--text-sm);
 }
 
 .home-hero__build-line time {
@@ -464,7 +560,7 @@ site-search button[data-open-modal]:hover {
 	white-space: nowrap;
 }
 
-.home-hero__panel .home-hero__actions {
+.home-hero__card .home-hero__actions {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -490,11 +586,25 @@ site-search button[data-open-modal]:hover {
 }
 
 @media (max-width: 559px) {
-	.home-hero__panel .home-hero__wordmark {
+	.home-hero__band {
+		min-height: clamp(520px, 86svh, 720px);
+		padding: var(--space-6) var(--space-3);
+	}
+
+	.home-hero__wordmark {
 		flex-direction: column;
 		gap: var(--space-1);
 		padding: var(--space-3) var(--space-4);
 		font-size: 1.5rem;
+		-webkit-text-stroke-width: 3px;
+	}
+
+	.home-hero__card {
+		padding: var(--space-5) var(--space-4);
+	}
+
+	.home-hero__card .home-hero__tagline {
+		font-size: var(--text-md);
 	}
 }
 
@@ -503,8 +613,7 @@ site-search button[data-open-modal]:hover {
 		margin-inline: 0;
 	}
 
-	.home-hero__panel {
-		margin-inline: auto;
+	.home-hero__card {
 		padding: var(--space-6) var(--space-7);
 	}
 }

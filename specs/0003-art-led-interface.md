@@ -41,6 +41,13 @@ Non-goals:
 
 ### The stage
 
+Changed 2026-10-13 after the owner reviewed the first build, which had a title panel floating half over the picture:
+
+- Home: centered on search. The picture fills a tall hero as a background under a soft veil, parchment by day and indigo by night. The wordmark hangs as a wooden sign in the middle, and under it a solid parchment card holds the tagline, a large search field, the build line, and the actions.
+- Inner pages: the page name hangs on a wooden sign in the picture's top left corner, like the map name banner in the game. A wooden strip attached under the picture holds the breadcrumb, the status, and the emblem. Nothing floats over the picture. A page with no picture gets a short mood strip that holds the sign.
+
+The first plan, kept for the record:
+
 - Home: a full width hero. The picture keeps its aspect ratio up to a maximum height of 70 percent of the screen, then crops from the center. The wordmark, tagline, search, and build line sit on a panel that starts on the picture's bottom ledge.
 - Inner pages: the band uses `aspect-ratio` from the picture, clamped between 200 and 340 pixels tall on desktop and 180 to 240 on phones. The title panel moves down so it covers only the ledge.
 - The page's sprite stands on the ground strip at 62 percent from the left, as now.

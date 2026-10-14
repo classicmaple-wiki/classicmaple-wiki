@@ -108,7 +108,6 @@
 
 	--scene-band-minimum: 180px;
 	--scene-band-maximum: 240px;
-	--scene-overlap-ledge: clamp(14px, 4%, 36px);
 
 	--scene-sky-top: #bfe3f2;
 	--scene-sky-bottom: #eaf6f4;

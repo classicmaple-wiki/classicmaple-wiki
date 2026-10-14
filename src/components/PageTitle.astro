@@ -1,32 +1,30 @@
 ---
 /*
-   The page title band from spec 0002, overriding Starlight's PageTitle.
-   Every page except the home splash opens with its place: a fixed height
-   scene band at the top of the content column, then a solid title panel
-   that overlaps the band's bottom edge. Text never sits on the scene.
+   The page title, overriding Starlight's PageTitle. Every page except the
+   home splash opens with its place (spec 0003, option one of the owner's
+   title ideas): the painted scene, with the page's name on a wooden sign
+   hanging in the scene's top left corner, the way MapleStory shows a map
+   name when you enter it. The art direction keeps the top quarter of
+   every picture free of anything important, so the sign never hides the
+   scene. The sign is solid wood, so its text never sits on the art.
 
-   The band carries data-mood, so tokens.css can hand the page's mood rule
-   to every window stripe below it without any script. The scene and mood
-   come from the page's own frontmatter first. A class guide with neither
-   takes them from its class data, and anything else falls back to the
-   default scene. Monster pages pass their resolved scene in through the
-   StarlightPage frontmatter, so they arrive here like any other page.
+   Directly under the scene, attached to it rather than floating over it,
+   a wooden strip holds the breadcrumb, the status line on entity pages,
+   and the section's emblem. The breadcrumb is built from the page's path
+   and ends on the page itself. A parent section links only when a page
+   for it exists. On a class or monster page, the status line shows the
+   verification chip and the entity's id, read from its data file, which
+   is found by the page's path.
 
-   The panel is a window like every other box on the site. Its title bar
-   holds the breadcrumb on the left and the page's emblem on the right, a
-   small pixel glyph for the section drawn in the mood rule color. The
-   breadcrumb is built from the page's path and ends on the page itself.
-   A parent section links only when a page for it exists, either a guide
-   or a generated index, and otherwise reads as plain text.
+   The band takes the shape of its own picture through an aspect ratio
+   from src/lib/sceneArt.ts. Its data-mood lets tokens.css set the page's
+   mood colors without any script. The scene and mood come from the page's
+   frontmatter first, a class guide falls back to its class data, and
+   anything else to the default scene. A page's own sprite stands on the
+   picture's ground strip.
 
-   The body holds the H1 in Nunito 800, then the subtitle. On an entity
-   page, a class or a monster, a status line follows under a dotted
-   divider: the verification chip and the entity's id, both read from its
-   data file, which is found by the page's path. No schema field needed.
-
-   The H1 keeps Starlight's id, so the skip link and the Overview entry
-   in the table of contents still land on it. Both fonts are preloaded
-   from the head setting in astro.config.mjs. Styles live in pages.css.
+   The H1 keeps Starlight's id, so the skip link and the Overview entry in
+   the table of contents still land on it. Styles live in pages.css.
 */
 import { existsSync, readFileSync } from 'node:fs';
 import { getCollection, getEntry } from 'astro:content';
@@ -169,55 +167,53 @@ const emblemPath = glyphPath(glyphs[emblemForSection(pathSegments[0])]);
 				/>
 			)
 		}
-	</div>
-	<div class="page-title__panel">
-		<div class="page-title__bar">
-			<nav class="page-title__breadcrumb" aria-label="Breadcrumb">
-				<ol>
-					{
-						breadcrumb.map((step) => (
-							<li>
-								{step.isCurrent ? (
-									<span aria-current="page">{step.label}</span>
-								) : step.href ? (
-									<a href={step.href}>{step.label}</a>
-								) : (
-									<span>{step.label}</span>
-								)}
-							</li>
-						))
-					}
-				</ol>
-			</nav>
-			<svg
-				class="page-title__emblem"
-				width="24"
-				height="24"
-				viewBox="0 0 12 12"
-				shape-rendering="crispEdges"
-				aria-hidden="true"
-				focusable="false"
-			>
-				<path d={emblemPath}></path>
-			</svg>
-		</div>
-		<div class="page-title__body">
+		<div class="page-title__sign">
 			<h1 class="page-title__heading" id={pageTitleIdentifier}>{title}</h1>
 			{subtitle && <p class="page-title__subtitle">{subtitle}</p>}
-			{
-				entityStatus && (
-					<p class="page-title__meta">
-						<span class="page-title__meta-item">
-							<span class="page-title__meta-label">Status</span>
-							<VerifiedBadge verified={entityStatus.verified} />
-						</span>
-						<span class="page-title__meta-item">
-							<span class="page-title__meta-label">{entityStatus.identifierLabel}</span>
-							<code>{entityStatus.identifier}</code>
-						</span>
-					</p>
-				)
-			}
 		</div>
+	</div>
+	<div class="page-title__strip">
+		<nav class="page-title__breadcrumb" aria-label="Breadcrumb">
+			<ol>
+				{
+					breadcrumb.map((step) => (
+						<li>
+							{step.isCurrent ? (
+								<span aria-current="page">{step.label}</span>
+							) : step.href ? (
+								<a href={step.href}>{step.label}</a>
+							) : (
+								<span>{step.label}</span>
+							)}
+						</li>
+					))
+				}
+			</ol>
+		</nav>
+		{
+			entityStatus && (
+				<p class="page-title__meta">
+					<span class="page-title__meta-item">
+						<span class="page-title__meta-label">Status</span>
+						<VerifiedBadge verified={entityStatus.verified} />
+					</span>
+					<span class="page-title__meta-item">
+						<span class="page-title__meta-label">{entityStatus.identifierLabel}</span>
+						<code>{entityStatus.identifier}</code>
+					</span>
+				</p>
+			)
+		}
+		<svg
+			class="page-title__emblem"
+			width="24"
+			height="24"
+			viewBox="0 0 12 12"
+			shape-rendering="crispEdges"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path d={emblemPath}></path>
+		</svg>
 	</div>
 </div>
