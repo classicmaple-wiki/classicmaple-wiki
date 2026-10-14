@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Blue_Doros_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Doros_Robe
+sprite:
+  file: items/blue-doros-robe.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1050023/icon
+  retrieved: 2026-10-14

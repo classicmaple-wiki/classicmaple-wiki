@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Hand_Axe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hand_Axe
+sprite:
+  file: items/hand-axe.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1312004/icon
+  retrieved: 2026-10-14

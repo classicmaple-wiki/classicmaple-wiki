@@ -92,3 +92,8 @@ source_page: https://mapleclassic.wiki/wiki/Green_Mushroom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Mushroom
+sprite:
+  file: monsters/green-mushroom.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/1110100/render/stand/0
+  retrieved: 2026-10-14

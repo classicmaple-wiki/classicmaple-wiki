@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Square_Shovel
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Square_Shovel
+sprite:
+  file: items/square-shovel.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1322010/icon
+  retrieved: 2026-10-14

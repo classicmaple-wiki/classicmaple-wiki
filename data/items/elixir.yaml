@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Elixir
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Elixir
+sprite:
+  file: items/elixir.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2000004/icon
+  retrieved: 2026-10-14

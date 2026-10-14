@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Purple_Shivermail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Purple_Shivermail
+sprite:
+  file: items/purple-shivermail.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041028/icon
+  retrieved: 2026-10-14

@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Bronze_Football_Helmet
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bronze_Football_Helmet
+sprite:
+  file: items/bronze-football-helmet.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002055/icon
+  retrieved: 2026-10-14

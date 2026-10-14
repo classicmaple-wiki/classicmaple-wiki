@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Fat_Sausage
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Fat_Sausage
+sprite:
+  file: items/fat-sausage.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2020008/icon
+  retrieved: 2026-10-14

@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Fusion_Mace
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Fusion_Mace
+sprite:
+  file: items/fusion-mace.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1322004/icon
+  retrieved: 2026-10-14

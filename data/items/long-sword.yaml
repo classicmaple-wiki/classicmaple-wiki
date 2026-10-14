@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Long_Sword
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Long_Sword
+sprite:
+  file: items/long-sword.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1302007/icon
+  retrieved: 2026-10-14

@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Yellow_Arianne
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Yellow_Arianne
+sprite:
+  file: items/yellow-arianne.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041026/icon
+  retrieved: 2026-10-14

@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Emerald_Staff
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Emerald_Staff
+sprite:
+  file: items/emerald-staff.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1382005/icon
+  retrieved: 2026-10-14

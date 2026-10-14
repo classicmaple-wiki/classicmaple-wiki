@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Bronze_Koif
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bronze_Koif
+sprite:
+  file: items/bronze-koif.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002043/icon
+  retrieved: 2026-10-14

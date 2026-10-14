@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Louis
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Louis
+sprite:
+  file: npcs/louis.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1032004/render/stand/0
+  retrieved: 2026-10-14

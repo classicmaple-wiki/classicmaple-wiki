@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Brown_Archer_Top
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Archer_Top
+sprite:
+  file: items/brown-archer-top.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040008/icon
+  retrieved: 2026-10-14

@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Blue_Feather_Hat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Feather_Hat
+sprite:
+  file: items/blue-feather-hat.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002113/icon
+  retrieved: 2026-10-14

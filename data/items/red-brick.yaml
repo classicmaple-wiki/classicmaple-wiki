@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Red_Brick
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Brick
+sprite:
+  file: items/red-brick.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1322012/icon
+  retrieved: 2026-10-14

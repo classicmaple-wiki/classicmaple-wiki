@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Purple_Doroness_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Purple_Doroness_Robe
+sprite:
+  file: items/purple-doroness-robe.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1051004/icon
+  retrieved: 2026-10-14

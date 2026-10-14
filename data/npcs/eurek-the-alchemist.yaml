@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Eurek_the_Alchemist
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Eurek_the_Alchemist
+sprite:
+  file: npcs/eurek-the-alchemist.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/2040050/render/stand/0
+  retrieved: 2026-10-14

@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Chef
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Chef
+sprite:
+  file: npcs/chef.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1002006/render/stand/0
+  retrieved: 2026-10-14

@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Tommy
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tommy
+sprite:
+  file: npcs/tommy.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1012113/render/stand/0
+  retrieved: 2026-10-14

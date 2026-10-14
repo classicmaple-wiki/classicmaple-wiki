@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Hot_Dog
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hot_Dog
+sprite:
+  file: items/hot-dog.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2020005/icon
+  retrieved: 2026-10-14

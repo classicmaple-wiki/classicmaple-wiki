@@ -326,6 +326,10 @@ async function planImport(): Promise<PlannedRecord[]> {
 
 	const isExcluded = (pageName: string | undefined): boolean => {
 		if (!pageName) return true;
+		if (/^(Module|Template|Category|User|File|Help|Special|MapleWiki|MediaWiki)( talk)?:/i.test(pageName)) {
+			countExcluded('technical page, not an article');
+			return true;
+		}
 		if (excludedTitles.has(pageName)) {
 			countExcluded('marked "Not at launch" by the source');
 			return true;

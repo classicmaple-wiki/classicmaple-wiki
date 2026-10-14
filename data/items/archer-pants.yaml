@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Archer_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Archer_Pants
+sprite:
+  file: items/archer-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1062004/icon
+  retrieved: 2026-10-14

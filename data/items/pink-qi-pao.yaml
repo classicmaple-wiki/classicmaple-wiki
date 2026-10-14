@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Pink_Qi_Pao
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Pink_Qi_Pao
+sprite:
+  file: items/pink-qi-pao.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1041039/icon
+  retrieved: 2026-10-14

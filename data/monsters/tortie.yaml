@@ -4,3 +4,8 @@ source_page: https://mapleclassic.wiki/wiki/Tortie
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tortie
+sprite:
+  file: monsters/tortie.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/4130101/render/stand/0
+  retrieved: 2026-10-14

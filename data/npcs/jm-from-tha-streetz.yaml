@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/JM_From_tha_Streetz
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/JM_From_tha_Streetz
+sprite:
+  file: npcs/jm-from-tha-streetz.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1052002/render/stand/0
+  retrieved: 2026-10-14

@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Red_Swimming_Cap
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Swimming_Cap
+sprite:
+  file: items/red-swimming-cap.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1002134/icon
+  retrieved: 2026-10-14

@@ -6,3 +6,8 @@ source_page: https://mapleclassic.wiki/wiki/Crumbling_Statue
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Crumbling_Statue
+sprite:
+  file: npcs/crumbling-statue.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/npc/1061007/render/stand/0
+  retrieved: 2026-10-14

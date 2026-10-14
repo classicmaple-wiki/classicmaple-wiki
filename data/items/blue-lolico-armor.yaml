@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Blue_Lolico_Armor
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Lolico_Armor
+sprite:
+  file: items/blue-lolico-armor.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040038/icon
+  retrieved: 2026-10-14

@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Black_Split_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Split_Pants
+sprite:
+  file: items/black-split-pants.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1060014/icon
+  retrieved: 2026-10-14

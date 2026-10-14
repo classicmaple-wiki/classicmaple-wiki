@@ -29,3 +29,8 @@ source_page: https://mapleclassic.wiki/wiki/Evil_Eye
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Evil_Eye
+sprite:
+  file: monsters/evil-eye.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/2230100/render/stand/0
+  retrieved: 2026-10-14

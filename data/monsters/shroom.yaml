@@ -39,3 +39,8 @@ source_page: https://mapleclassic.wiki/wiki/Shroom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Shroom
+sprite:
+  file: monsters/shroom.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/120100/render/stand/0
+  retrieved: 2026-10-14

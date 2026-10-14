@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Blue_Split_Piece
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Split_Piece
+sprite:
+  file: items/blue-split-piece.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1040020/icon
+  retrieved: 2026-10-14

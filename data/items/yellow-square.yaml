@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Yellow_Square
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Yellow_Square
+sprite:
+  file: items/yellow-square.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/1032009/icon
+  retrieved: 2026-10-14

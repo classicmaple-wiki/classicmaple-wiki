@@ -78,3 +78,8 @@ source_page: https://mapleclassic.wiki/wiki/Slime
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Slime
+sprite:
+  file: monsters/slime.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/mob/210100/render/stand/0
+  retrieved: 2026-10-14

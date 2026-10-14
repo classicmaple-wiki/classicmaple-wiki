@@ -5,3 +5,8 @@ source_page: https://mapleclassic.wiki/wiki/Warrior_Potion
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Warrior_Potion
+sprite:
+  file: items/warrior-potion.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/item/2002004/icon
+  retrieved: 2026-10-14
