@@ -45,7 +45,7 @@ site.config.mjs    Site address and repository address. Change them here only.
 - Anything an AI drafts enters as `unverified`. AI never raises a verification status.
 - Old MapleStory, private servers, and other wikis are not sources.
 - Do not delete history. Changed values get a line in `changes`.
-- Pictures follow `docs/policies/images.md`. In short: small identification sprites only, one at a time, only from a source in `data/sprite-sources.yaml` marked allowed, or drawn by us. No map art, logos, music, or client extraction. Never bulk download. Never copy data or text from other fan sites.
+- Pictures follow `docs/policies/images.md`. In short: small identification sprites only, one at a time, only from a source in `data/sprite-sources.yaml` marked allowed, or drawn by us. Scene pictures follow `docs/policies/scene-art.md`. No Nexon map art, logos, music, or client extraction. Never bulk download. Never copy data or text from other fan sites.
 - Never change a sprite source's status. The owner does.
 - Numbers live in `data/`. Words live in guides.
 

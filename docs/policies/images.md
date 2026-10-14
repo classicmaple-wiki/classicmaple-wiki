@@ -1,16 +1,16 @@
 # Images policy
 
-The rules for every picture on Classic Maple Wiki. Agents and contributors follow this page. `npm run validate` enforces the parts a script can check. Decisions behind it: 0003 (original art) and 0005 (identification sprites).
+The rules for every picture on Classic Maple Wiki. Agents and contributors follow this page. `npm run validate` enforces the parts a script can check. Decisions behind it: 0003 (original art), 0005 (identification sprites), and 0006 (painted scene art).
 
 ## What may appear on the site
 
 | Kind | Allowed | Where it comes from |
 | --- | --- | --- |
-| Small sprite of a monster, NPC, or item | Yes, only next to that entry's name, to identify it | A site on the approved list, our own drawing, or your own screenshot crop |
-| Scenes, page headers, the shelf of places | Yes | Our own art only, drawn by `scripts/draw-scenes.py` |
+| Small sprite of a monster, NPC, or item | Yes, next to that entry's name, and standing in the scene band of that entry's own page | A site on the approved list, our own drawing, or your own screenshot crop |
+| Scenes, page headers, the shelf of places | Yes | Our own painted pictures, made with an image model or by hand, following `docs/policies/scene-art.md` |
 | Wordmark, icons, interface glyphs | Yes | Our own art, or the open icon sets listed in `docs/research/assets.md` |
 | Your own in-game screenshot | Yes, small, in a guide, as evidence | You took it yourself |
-| Map art, key art, wallpapers, backgrounds | No | |
+| Nexon map art, key art, wallpapers, backgrounds | No | Paint our own scene instead |
 | Nexon or MapleStory logos and wordmarks | No | Name the game in plain text instead |
 | Music and sound | No | |
 | Anything a fan site made itself: renders, composites, custom icons, fan art | No | |
@@ -61,7 +61,8 @@ A site goes on the list only after someone reads its terms.
 
 - Every sprite stays Nexon's work. The site footer keeps the not affiliated line.
 - The credits page lists every `allowed-with-credit` site with its credit line.
-- If Nexon or a source site asks us to remove something, remove it the same day. Open a pull request with the `takedown` label that deletes the files and their `sprite` blocks. No argument.
+- We never contact source sites. We use what their terms allow and draw our own otherwise.
+- A takedown request is when Nexon or a site asks us to remove something. Anyone can open a GitHub issue with the `takedown` label. Remove it the same day: a pull request with the `takedown` label that deletes the files and their `sprite` blocks. No argument.
 
 ## Rules for agents
 

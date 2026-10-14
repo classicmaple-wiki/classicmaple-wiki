@@ -1,20 +1,26 @@
 ---
 /*
-   One scene from the library of places (spec 0002), drawn as an inline svg
-   on a pixel grid. The caller picks the place and the variant: band for a
-   page header, home for the taller home header, or card for a shelf card.
+   One scene from the library of places, as a painted picture (decision
+   0006). The picture lives in src/assets/scenes/ under the scene's name,
+   with an optional "-night" twin for dark mode. Dropping a file there is
+   the whole change; this component finds it at build time.
 
-   The scene does not set its mood. The caller puts data-mood on a wrapper
-   and scenes.css fills every color class from that mood's tokens, so the
-   same drawing works in every mood and in dark mode.
+   The build turns each picture into WebP at a small and a large width.
+   Both are set as CSS custom properties and used as a cover background,
+   so only the size and theme the reader actually sees is downloaded.
+   Without a night picture, dark mode dims the day one. Without any
+   picture, the scene is a plain gradient in its mood, so a page never
+   shows a broken or half drawn scene.
 
-   The svg fills its wrapper and crops from the bottom center, so the
-   wrapper's fixed height decides the size and nothing shifts while the
-   page loads. The art is decoration, hidden from assistive technology,
-   since the page title already says where the reader is.
+   The wrapper decides the height, so nothing shifts while the picture
+   loads. The element is a span, so it is valid inside the shelf card
+   links. The art is decoration, hidden from assistive technology, since
+   the page title already says where the reader is.
 */
+import { getImage } from 'astro:assets';
 import type { SceneIdentifier } from '../../../schemas/shared';
-import { sceneArtwork, type SceneVariant } from './artwork';
+
+type SceneVariant = 'band' | 'home' | 'card';
 
 interface Props {
 	scene: SceneIdentifier;
@@ -22,18 +28,64 @@ interface Props {
 }
 
 const { scene, variant } = Astro.props;
-const drawing = sceneArtwork[scene][variant];
-const displayScale = variant === 'card' ? 2 : 4;
+
+const sceneFiles = import.meta.glob<{ default: ImageMetadata }>('../../assets/scenes/*.{png,jpg,jpeg,webp}', {
+	eager: true,
+});
+
+/*
+   Matches a picture by its file name without the extension, so
+   "kerning-city.png" and "kerning-city.webp" both count.
+*/
+function findPicture(name: string): ImageMetadata | undefined {
+	const match = Object.entries(sceneFiles).find(([filePath]) => {
+		const fileName = filePath.split('/').pop() ?? '';
+		return fileName.replace(/\.[a-z]+$/, '') === name;
+	});
+	return match?.[1].default;
+}
+
+const widths = variant === 'card' ? { small: 360, large: 720 } : { small: 900, large: 1800 };
+
+/*
+   Two WebP sizes per picture. A picture smaller than the target width is
+   never scaled up.
+*/
+async function pictureSources(picture: ImageMetadata) {
+	const [small, large] = await Promise.all(
+		[widths.small, widths.large].map((width) =>
+			getImage({ src: picture, width: Math.min(width, picture.width), format: 'webp', quality: 74 })
+		)
+	);
+	return { small: small.src, large: large.src };
+}
+
+const dayPicture = findPicture(scene);
+const nightPicture = findPicture(`${scene}-night`);
+const day = dayPicture && (await pictureSources(dayPicture));
+const night = nightPicture && (await pictureSources(nightPicture));
+
+const style = day
+	? [
+			`--scene-day-small: url('${day.small}')`,
+			`--scene-day-large: url('${day.large}')`,
+			night ? `--scene-night-small: url('${night.small}')` : '',
+			night ? `--scene-night-large: url('${night.large}')` : '',
+		]
+			.filter(Boolean)
+			.join('; ')
+	: undefined;
 ---
 
-<svg
-	class="scene"
-	width={drawing.viewBoxWidth * displayScale}
-	height={drawing.viewBoxHeight * displayScale}
-	viewBox={`0 0 ${drawing.viewBoxWidth} ${drawing.viewBoxHeight}`}
-	preserveAspectRatio="xMidYMax slice"
-	shape-rendering="crispEdges"
-	aria-hidden="true"
-	focusable="false"
-	set:html={drawing.markup}
-></svg>
+{
+	day ? (
+		<span
+			class:list={['scene-art', { 'scene-art--dim-at-night': !night }]}
+			style={style}
+			data-variant={variant}
+			aria-hidden="true"
+		/>
+	) : (
+		<span class="scene-art scene-art--placeholder" data-variant={variant} aria-hidden="true" />
+	)
+}

@@ -28,7 +28,7 @@
    in the table of contents still land on it. Both fonts are preloaded
    from the head setting in astro.config.mjs. Styles live in pages.css.
 */
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { getCollection, getEntry } from 'astro:content';
 import type { Verification } from '../../schemas/shared';
 import { emblemForSection, glyphPath, glyphs } from '../lib/glyphs';
@@ -89,6 +89,7 @@ interface EntityStatus {
 	identifierLabel: string;
 	identifier: string;
 	verified: Verification;
+	spriteFile?: string;
 }
 
 /*
@@ -104,20 +105,63 @@ async function findEntityStatus(): Promise<EntityStatus | undefined> {
 	}
 	if (section === 'monsters') {
 		const monsterEntry = await getEntry('monsters', identifier);
-		return monsterEntry && { identifierLabel: 'Monster id', identifier, verified: monsterEntry.data.verified };
+		return (
+			monsterEntry && {
+				identifierLabel: 'Monster id',
+				identifier,
+				verified: monsterEntry.data.verified,
+				spriteFile: monsterEntry.data.sprite?.file,
+			}
+		);
 	}
 	return undefined;
+}
+
+interface Resident {
+	source: string;
+	width: number;
+	height: number;
+}
+
+/*
+   The page's own sprite stands in its scene (decision 0006). Its size is
+   read from the PNG header so the band never shifts, and it is drawn at a
+   whole number scale, doubled when small, so the pixels stay crisp. The
+   validation script already guarantees the file exists and is small.
+*/
+function findResident(spriteFile: string | undefined): Resident | undefined {
+	if (!spriteFile) return undefined;
+	const filePath = `public/sprites/${spriteFile}`;
+	if (!existsSync(filePath)) return undefined;
+	const header = readFileSync(filePath).subarray(16, 24);
+	const width = header.readUInt32BE(0);
+	const height = header.readUInt32BE(4);
+	const scale = Math.max(width, height) <= 64 ? 2 : 1;
+	return { source: `/sprites/${spriteFile}`, width: width * scale, height: height * scale };
 }
 
 const resolved = await resolvePageScene();
 const breadcrumb = await buildBreadcrumb();
 const entityStatus = await findEntityStatus();
+const resident = findResident(entityStatus?.spriteFile);
 const emblemPath = glyphPath(glyphs[emblemForSection(pathSegments[0])]);
 ---
 
 <div class="page-title">
 	<div class="scene-band page-title__band" data-mood={resolved.mood} data-scene={resolved.scene}>
 		<Scene scene={resolved.scene} variant="band" />
+		{
+			resident && (
+				<img
+					class="scene-resident"
+					src={resident.source}
+					width={resident.width}
+					height={resident.height}
+					alt=""
+					decoding="async"
+				/>
+			)
+		}
 	</div>
 	<div class="page-title__panel">
 		<div class="page-title__bar">

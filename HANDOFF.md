@@ -4,33 +4,31 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-The design system (spec 0002, the mix of mockups A and B) is built on branch `spec/0002-design-system`, pull request 3, and waits for the owner to look at the preview. The live site still runs the old look. The sprite system (decision 0005) is set up as rules, data, and validator checks, but no sprites exist yet.
+Branch `spec/0002-design-system`, pull request 3, holds the new design: windows, page title band, home, sprite rules. The owner rejected the scripted pixel scenes. Decision 0006 replaces them with painted pictures made with an image model. The code is ready: a picture dropped in `src/assets/scenes/` shows up on the next build, and a page's own sprite stands in its scene. Until pictures exist, scenes show a mood gradient. The live site still runs the old look.
 
 ## Just done
 
-- Scenes: seven original pixel scenes from `scripts/draw-scenes.py`, in `src/components/scenes/`.
-- Windows: `Window`, `StatRows`, `Invitation`, and every data component restyled.
-- Page title band and home page as Starlight overrides. Silkscreen and Nunito self hosted and preloaded.
-- Checked: no sideways scroll on 9 pages at 360 and 1280 in both themes. Lighthouse mobile on a local build 98 to 99, accessibility 100, layout shift 0.
-- Sprite rules in `docs/policies/images.md`, sources in `data/sprite-sources.yaml`, evidence in `docs/research/sprite-sources.md`.
+- Decision 0006 and `docs/policies/scene-art.md`: style rules, sizes, safe zones, file names, and a prompt for each of the seven scenes.
+- `Scene.astro` now serves painted pictures as WebP at two sizes, with a night picture or a dimmed day picture in dark mode.
+- Page sprite layer in `PageTitle.astro`. Footer: official game link, disclaimer, AI disclosure when art exists, Sirux link.
+- Tested end to end with temporary pictures and a sprite, then removed them.
 
 ## In progress
 
-Pull request 3. `public/mockups/` stays until the owner has compared, then is deleted before merge.
+Pull request 3. `public/mockups/` is still there and goes before merge.
 
 ## Next step
 
-Owner reviews the preview. Then delete `public/mockups/`, merge, and run Lighthouse on production. Then P2b, the first sprites, and P3.
+Owner paints Kerning City and Henesys first (P2e). Agent checks each picture on phone and desktop and reruns Lighthouse. Then delete `public/mockups/`, merge, and check production.
 
 ## Blockers and questions for the owner
 
-- Q10 takedown contact, Q11 source statuses, Q2 donation platforms, Q3 credit name. See `BACKLOG.md`.
-- Direction C, the storybook look in decision 0005, waits for the owner's reaction to this build.
+- P2e scene pictures.
+- Q12: may the unused scripted scene files be deleted.
 
 ## Verify
 
 ```bash
 npm run validate
 npm run build
-python3 scripts/draw-scenes.py
 ```

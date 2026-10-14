@@ -1,7 +1,7 @@
 /*
    The single source of truth for where the site and its repository live.
    Everything that builds a link (canonical addresses, the sitemap, edit
-   links, robots.txt) reads from here, so moving the domain or the
+   links, robots.txt, the footer credits) reads from here, so moving the domain or the
    repository is a change to this file and nothing else.
 */
 export const siteTitle = 'Classic Maple Wiki';
@@ -16,3 +16,9 @@ export const repositoryUrl = 'https://github.com/classicmaple-wiki/classicmaple-
 export const defaultBranch = 'main';
 
 export const editBaseUrl = `${repositoryUrl}/edit/${defaultBranch}/`;
+
+export const officialGameUrl = 'https://www.nexon.com/maplestory/classic';
+
+export const builderName = 'Sirux';
+
+export const builderUrl = 'https://sirux.io';

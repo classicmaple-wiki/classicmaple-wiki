@@ -1,145 +1,78 @@
 /*
-   Fills for the pixel scenes of the library of places (spec 0002). The
-   drawings in src/components/scenes/artwork.ts carry color classes, never
-   colors, and this file turns each class into a fill. One drawing serves
-   every mood and both themes.
+   Scene pictures (decision 0006). Scene.astro sets the picture's URLs as
+   custom properties; this file decides which one shows. Phones get the
+   small file, wider screens the large one. Dark mode uses the night
+   picture when there is one, and otherwise dims the day picture, so the
+   room reads as the same place at night.
 
-   Sky, ground, and light come straight from the mood tokens, and every
-   tone between them is a color-mix of those tokens. Motifs that no token
-   describes, such as wood, rock, roofs, and water, set one base color in
-   --scene-motif. That color is mixed toward the sky top in the night mood
-   and in dark mode, so dark mode is the same place at night and never an
-   inversion. Lit windows, lanterns, and stars stay warm.
-
-   Stars show only at night and in dark mode. Some windows light up only
-   in dark mode. Cave scenes hide the stars, the sun, and the clouds, and
-   show what only a cave has: a ceiling of roots and fireflies. Mist is a
-   thin veil that thickens in the cave mood and thins in dark mode.
-
-   The mood comes from data-mood on any ancestor, and the theme from
-   data-theme on the html element, which Starlight sets. The scene fills
-   its box and crops from the bottom center, so the box sets the height.
+   A scene with no picture yet is a calm gradient in its mood: sky above,
+   a soft glow from the scene's light, and the ground color along the
+   bottom where the title panel and sprites sit. It is meant to look
+   finished and quiet, not like missing art.
 */
-.scene {
+.scene-art {
 	display: block;
-	width: 100%;
-	height: 100%;
+	position: absolute;
+	inset: 0;
+	background-color: var(--scene-ground);
+	background-image: var(--scene-day-small);
+	background-position: center 55%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	image-rendering: auto;
 }
 
-.scene .sky-1 { fill: var(--scene-sky-top); }
-.scene .sky-2 { fill: color-mix(in srgb, var(--scene-sky-top) 66%, var(--scene-sky-bottom)); }
-.scene .sky-3 { fill: color-mix(in srgb, var(--scene-sky-top) 33%, var(--scene-sky-bottom)); }
-.scene .sky-4 { fill: var(--scene-sky-bottom); }
-
-.scene .ground { fill: var(--scene-ground); }
-.scene .ground-shadow { fill: color-mix(in srgb, var(--scene-ground) 78%, black); }
-.scene .ground-far { fill: color-mix(in srgb, var(--scene-ground) 62%, var(--scene-sky-bottom)); }
-.scene .field { fill: color-mix(in srgb, var(--scene-ground) 34%, var(--color-paper)); }
-
-.scene .building-far { fill: color-mix(in srgb, var(--scene-ground) 55%, var(--scene-sky-bottom)); }
-.scene .building { fill: var(--scene-ground); }
-.scene .building-dark { fill: color-mix(in srgb, var(--scene-ground) 72%, black); }
-.scene .rim-light { fill: color-mix(in srgb, var(--scene-light) 35%, var(--scene-sky-bottom)); }
-
-.scene .light { fill: var(--scene-light); }
-.scene .light-late { fill: var(--scene-light); display: none; }
-.scene .lantern { fill: color-mix(in srgb, var(--scene-light) 55%, var(--color-accent-fill)); }
-.scene .glow { fill: color-mix(in srgb, var(--scene-light) 30%, var(--scene-sky-bottom)); }
-.scene .star { fill: color-mix(in srgb, var(--scene-light) 40%, white); display: none; }
-.scene .cloud { fill: color-mix(in srgb, var(--color-panel) 88%, var(--scene-sky-bottom)); }
-.scene .mist { fill: color-mix(in srgb, var(--scene-sky-bottom) 55%, white); opacity: 0.3; }
-.scene .window-pane { fill: color-mix(in srgb, var(--color-ink) 70%, var(--scene-sky-top)); }
-
-.scene .maple-leaf { fill: var(--color-accent-fill); }
-.scene .maple-leaf-vein { fill: var(--color-accent); }
-
-.scene .trunk-far { fill: color-mix(in srgb, #6b4a33 34%, var(--scene-sky-bottom)); }
-.scene .canopy-far { fill: color-mix(in srgb, #5e8f4f 42%, var(--scene-sky-bottom)); }
-.scene .rock-far { fill: color-mix(in srgb, #b9784c 45%, var(--scene-sky-bottom)); }
-
-.scene .wall { --scene-motif: #f1e2be; }
-.scene .wall-shade { --scene-motif: #e8d6b2; }
-.scene .roof { --scene-motif: #8a5235; }
-.scene .chimney { --scene-motif: #6e3f28; }
-.scene .door { --scene-motif: #5e3b24; }
-.scene .mushroom-cap { --scene-motif: #8f4a68; }
-.scene .mushroom-rim { --scene-motif: #6b344c; }
-.scene .mushroom-spot { --scene-motif: #f7eedc; }
-.scene .fence { --scene-motif: #9a7350; }
-.scene .flower-yellow { --scene-motif: #f2c14e; }
-.scene .flower-pink { --scene-motif: #e46a8c; }
-.scene .water { --scene-motif: #6fafd3; }
-.scene .wave { --scene-motif: #b4ddef; }
-.scene .dock { --scene-motif: #7a5636; }
-.scene .sail { --scene-motif: #fff8ea; }
-.scene .trunk { --scene-motif: #6b4a33; }
-.scene .trunk-shade { --scene-motif: #4e3524; }
-.scene .canopy { --scene-motif: #5e8f4f; }
-.scene .rock { --scene-motif: #b9784c; }
-.scene .rock-shade { --scene-motif: #93593a; }
-.scene .totem { --scene-motif: #7b4a2c; }
-.scene .totem-paint { --scene-motif: #d2a458; }
-.scene .root { --scene-motif: #4a3c2c; }
-.scene .root-light { --scene-motif: #6a563f; }
-
-.scene :where(.wall, .wall-shade, .roof, .chimney, .door, .mushroom-cap, .mushroom-rim, .mushroom-spot, .fence, .flower-yellow, .flower-pink, .water, .wave, .dock, .sail, .trunk, .trunk-shade, .canopy, .rock, .rock-shade, .totem, .totem-paint, .root, .root-light) {
-	fill: var(--scene-motif);
+@media (min-width: 50em) {
+	.scene-art {
+		background-image: var(--scene-day-large);
+	}
 }
 
-[data-mood='night'] .scene :where(.wall, .wall-shade, .roof, .chimney, .door, .mushroom-cap, .mushroom-rim, .mushroom-spot, .fence, .flower-yellow, .flower-pink, .water, .wave, .dock, .sail, .trunk, .trunk-shade, .canopy, .rock, .rock-shade, .totem, .totem-paint) {
-	fill: color-mix(in srgb, var(--scene-motif) 55%, var(--scene-sky-top));
-}
-[data-mood='night'] .scene .cloud {
-	fill: color-mix(in srgb, var(--scene-sky-bottom) 85%, var(--scene-light));
-}
-[data-mood='night'] .scene .star,
-:root[data-theme='dark'] .scene .star {
-	display: inline;
-}
-[data-mood='night'] .scene .window-pane,
-:root[data-theme='dark'] .scene .window-pane {
-	fill: var(--scene-light);
+:root[data-theme='dark'] .scene-art {
+	background-image: var(--scene-night-small, var(--scene-day-small));
 }
 
-:root[data-theme='dark'] .scene :where(.wall, .wall-shade, .roof, .chimney, .door, .mushroom-cap, .mushroom-rim, .mushroom-spot, .fence, .flower-yellow, .flower-pink, .water, .wave, .dock, .sail, .trunk, .trunk-shade, .canopy, .rock, .rock-shade, .totem, .totem-paint) {
-	fill: color-mix(in srgb, var(--scene-motif) 42%, var(--scene-sky-top));
-}
-:root[data-theme='dark'] .scene :where(.root, .root-light) {
-	fill: color-mix(in srgb, var(--scene-motif) 70%, var(--scene-sky-top));
-}
-:root[data-theme='dark'] .scene .cloud {
-	fill: color-mix(in srgb, var(--scene-sky-bottom) 84%, var(--color-ink));
-}
-:root[data-theme='dark'] .scene .field {
-	fill: color-mix(in srgb, var(--scene-ground) 70%, var(--scene-sky-bottom));
-}
-:root[data-theme='dark'] .scene .building-far {
-	fill: color-mix(in srgb, var(--scene-sky-bottom) 75%, var(--mood-rule));
-}
-:root[data-theme='dark'] .scene .trunk-far,
-:root[data-theme='dark'] .scene .canopy-far,
-:root[data-theme='dark'] .scene .rock-far {
-	fill: color-mix(in srgb, var(--scene-ground) 50%, var(--scene-sky-bottom));
-}
-:root[data-theme='dark'] .scene .light-late {
-	display: inline;
+@media (min-width: 50em) {
+	:root[data-theme='dark'] .scene-art {
+		background-image: var(--scene-night-large, var(--scene-day-large));
+	}
 }
 
-.scene .cave-only {
-	display: none;
+:root[data-theme='dark'] .scene-art--dim-at-night {
+	filter: brightness(0.62) saturate(0.88);
 }
-:root [data-mood='cave'] .scene .cave-only {
-	display: inline;
+
+.scene-art--placeholder {
+	background-image:
+		radial-gradient(ellipse 38% 55% at 62% 38%, color-mix(in srgb, var(--scene-light) 55%, transparent), transparent 70%),
+		linear-gradient(
+			to bottom,
+			var(--scene-sky-top) 0%,
+			var(--scene-sky-bottom) 68%,
+			color-mix(in srgb, var(--scene-ground) 70%, var(--scene-sky-bottom)) 72%,
+			var(--scene-ground) 80%
+		);
 }
-:root [data-mood='cave'] .scene :is(.star, .open-sky) {
-	display: none;
+
+@media (min-width: 50em) {
+	.scene-art--placeholder {
+		background-image:
+			radial-gradient(ellipse 30% 60% at 62% 38%, color-mix(in srgb, var(--scene-light) 55%, transparent), transparent 70%),
+			linear-gradient(
+				to bottom,
+				var(--scene-sky-top) 0%,
+				var(--scene-sky-bottom) 68%,
+				color-mix(in srgb, var(--scene-ground) 70%, var(--scene-sky-bottom)) 72%,
+				var(--scene-ground) 80%
+			);
+	}
 }
-:root [data-mood='cave'] .scene .field {
-	fill: color-mix(in srgb, var(--scene-ground) 70%, var(--scene-sky-bottom));
-}
-:root [data-mood='cave'] .scene .mist {
-	opacity: 0.4;
-}
-:root[data-theme='dark'] .scene .mist {
-	opacity: 0.16;
+
+.scene-resident {
+	position: absolute;
+	left: 62%;
+	bottom: calc(var(--scene-overlap) + var(--space-2));
+	transform: translateX(-50%);
+	image-rendering: pixelated;
+	pointer-events: none;
 }

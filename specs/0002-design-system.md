@@ -166,6 +166,10 @@ Thief page. Kerning City scene at night. Title "Thief", subtitle "Kerning City, 
 
 Crimson Balrog page. The monster has no map yet, so it inherits the default scene in the cave mood set on its data. A "Monster" window with level, HP, MP, EXP, weak to, strong to, found in, all Unknown, and the unverified badge. The `differs_from_original` note as a set apart lead. History at the bottom.
 
+### Scene art changed by decision 0006
+
+The owner rejected the scripted pixel scenes on 2026-10-13. Scenes are now painted pictures made with an image model or by hand, following `docs/policies/scene-art.md`. The scene band and shelf cards show the picture when it exists and a plain mood gradient until then. A page's own sprite stands in its scene. Band heights grew to 190 and 260 pixels, and 260 and 380 on the home page, to give painted art room. The rest of the mix below still holds.
+
 ### The pick: a mix
 
 Chosen 2026-10-13. The owner was open to both and asked for a mix. The build takes B's character and A's readability:

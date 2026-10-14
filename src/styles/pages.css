@@ -664,6 +664,7 @@ site-search button[data-open-modal]:hover {
 
 .place-shelf__art {
 	display: block;
+	position: relative;
 	aspect-ratio: 2 / 1;
 	overflow: hidden;
 	background: var(--scene-ground);

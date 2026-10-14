@@ -95,8 +95,8 @@
 	--shadow-panel: 0 1px 0 var(--color-line), 0 8px 24px rgb(42 31 23 / 0.08);
 	--shadow-window: inset 0 1px 0 #ffffff, 0 2px 0 rgb(42 31 23 / 0.18);
 
-	--scene-height: 160px;
-	--scene-height-home: 220px;
+	--scene-height: 190px;
+	--scene-height-home: 260px;
 	--scene-overlap: 48px;
 
 	--scene-sky-top: #bfe3f2;
@@ -108,8 +108,8 @@
 
 @media (min-width: 50em) {
 	:root {
-		--scene-height: 200px;
-		--scene-height-home: 280px;
+		--scene-height: 260px;
+		--scene-height-home: 380px;
 	}
 }
 
