@@ -1,0 +1,11 @@
+id: damp-forest
+name: Damp Forest
+region: Victoria Island
+monsters:
+  - jr-necki
+  - octopus
+  - slime
+source_page: https://mapleclassic.wiki/wiki/Damp_Forest
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Damp_Forest

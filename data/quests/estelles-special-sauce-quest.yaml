@@ -1,0 +1,11 @@
+id: estelles-special-sauce-quest
+name: Estelle's Special Sauce (quest)
+giver: estelle
+turn_in: mrs-ming-ming
+prerequisites:
+  - estelles-request
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Estelle's_Special_Sauce_(quest)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Estelle's_Special_Sauce_(quest)

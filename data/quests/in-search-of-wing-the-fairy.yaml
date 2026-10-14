@@ -1,0 +1,11 @@
+id: in-search-of-wing-the-fairy
+name: In search of Wing the Fairy
+giver: icarus
+turn_in: wing-the-fairy
+prerequisites:
+  - icarus-and-the-balloon
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/In_search_of_Wing_the_Fairy
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/In_search_of_Wing_the_Fairy

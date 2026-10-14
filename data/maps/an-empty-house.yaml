@@ -1,0 +1,9 @@
+id: an-empty-house
+name: An Empty House
+region: Victoria Island
+monsters:
+  - orange-mushroom
+source_page: https://mapleclassic.wiki/wiki/An_Empty_House
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/An_Empty_House

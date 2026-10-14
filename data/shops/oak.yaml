@@ -1,0 +1,11 @@
+id: oak
+name: Oak
+npc: oak
+map: henesys-town-hall
+region: Victoria Island
+items:
+  - henesys-residents-chair
+source_page: https://mapleclassic.wiki/wiki/Oak
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Oak

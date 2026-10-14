@@ -1,0 +1,11 @@
+id: grandfathers-vitamin-gummy
+name: Grandfather's Vitamin Gummy
+giver: mr-goldstein
+turn_in: mong-from-kong
+prerequisites:
+  - the-final-ingredient-for-the-cure
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Grandfather's_Vitamin_Gummy
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Grandfather's_Vitamin_Gummy

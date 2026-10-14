@@ -1,0 +1,11 @@
+id: proof-of-qualification-bowman
+name: Proof of Qualification (Bowman)
+giver: bowman-job-instructor
+turn_in: athena-pierce
+prerequisites:
+  - test-of-qualification-bowman
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Bowman)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Bowman)

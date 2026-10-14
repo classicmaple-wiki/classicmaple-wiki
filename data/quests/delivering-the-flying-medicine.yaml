@@ -1,0 +1,11 @@
+id: delivering-the-flying-medicine
+name: Delivering the Flying Medicine
+giver: wing-the-fairy
+turn_in: icarus
+prerequisites:
+  - the-ingredients-for-the-flying-medicine
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Delivering_the_Flying_Medicine
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Delivering_the_Flying_Medicine

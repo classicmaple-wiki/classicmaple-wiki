@@ -1,0 +1,11 @@
+id: still-hungry-ronnie
+name: Still Hungry Ronnie
+giver: ronnie
+turn_in: rina
+prerequisites:
+  - hungry-ronnie
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Still_Hungry_Ronnie
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Still_Hungry_Ronnie

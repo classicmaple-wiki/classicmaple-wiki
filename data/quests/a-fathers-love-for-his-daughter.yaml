@@ -1,0 +1,11 @@
+id: a-fathers-love-for-his-daughter
+name: A Father's Love for His Daughter
+giver: bruce
+turn_in: ayan
+prerequisites:
+  - bruces-cooking-ingredients
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Father's_Love_for_His_Daughter
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Father's_Love_for_His_Daughter

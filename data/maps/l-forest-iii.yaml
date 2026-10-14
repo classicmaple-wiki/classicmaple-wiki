@@ -1,0 +1,18 @@
+id: l-forest-iii
+name: L Forest III
+region: Victoria Island
+monsters:
+  - blue-mushroom
+  - blue-snail
+  - green-mushroom
+  - pig
+  - red-snail
+  - ribbon-pig
+  - shroom
+  - slime
+  - snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/L_Forest_III
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/L_Forest_III

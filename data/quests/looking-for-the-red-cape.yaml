@@ -1,0 +1,11 @@
+id: looking-for-the-red-cape
+name: Looking for the Red Cape
+giver: pia
+turn_in: rina
+prerequisites:
+  - pias-present-for-a-friend
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Looking_for_the_Red_Cape
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Looking_for_the_Red_Cape

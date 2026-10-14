@@ -1,0 +1,11 @@
+id: the-dark-lords-signature
+name: The Dark Lord's Signature
+giver: dark-lord
+turn_in: alex
+prerequisites:
+  - the-faded-ink
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/The_Dark_Lord's_Signature
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Dark_Lord's_Signature

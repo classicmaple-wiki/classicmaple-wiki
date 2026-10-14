@@ -1,0 +1,11 @@
+id: pias-mischievous-wish
+name: Pia's Mischievous Wish
+giver: pia
+turn_in: camila
+prerequisites:
+  - a-gift-for-pia
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Pia's_Mischievous_Wish
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pia's_Mischievous_Wish

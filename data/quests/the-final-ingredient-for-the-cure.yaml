@@ -1,0 +1,11 @@
+id: the-final-ingredient-for-the-cure
+name: The Final Ingredient for the Cure
+giver: mong-from-kong
+turn_in: mr-goldstein
+prerequisites:
+  - making-the-medicine
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/The_Final_Ingredient_for_the_Cure
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Final_Ingredient_for_the_Cure

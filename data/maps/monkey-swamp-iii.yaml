@@ -1,0 +1,10 @@
+id: monkey-swamp-iii
+name: Monkey Swamp III
+region: Victoria Island
+monsters:
+  - jr-necki
+  - zombie-lupin
+source_page: https://mapleclassic.wiki/wiki/Monkey_Swamp_III
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Monkey_Swamp_III

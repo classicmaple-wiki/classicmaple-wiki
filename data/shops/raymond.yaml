@@ -1,0 +1,26 @@
+id: raymond
+name: Raymond
+npc: raymond
+map: henesys-town-hall
+region: Victoria Island
+items:
+  - bronze-arrows-for-bows
+  - bronze-arrows-for-crossbows
+  - elixir
+  - fat-sausage
+  - fried-chicken
+  - grape-juice
+  - hamburger
+  - hot-dog
+  - mrs-ming-mings-stew
+  - orange-juice
+  - orange-mushroom-daydream
+  - pizza
+  - salad
+  - sharpness-potion
+  - supreme-sniper-potion
+  - unagi
+source_page: https://mapleclassic.wiki/wiki/Raymond
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Raymond

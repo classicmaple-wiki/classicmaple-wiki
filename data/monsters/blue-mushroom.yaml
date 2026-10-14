@@ -1,0 +1,38 @@
+id: blue-mushroom
+name: Blue Mushroom
+drops:
+  - item: arrows-for-crossbows
+    rate_percent: 3.33
+    observed_on: 2026-10-11
+    sample_kills: 30
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Blue_Mushroom
+  - item: blue-mushroom-cap
+    rate_percent: 46.67
+    observed_on: 2026-10-11
+    sample_kills: 30
+    sample_drops: 14
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Blue_Mushroom
+  - item: gold-ore
+    rate_percent: 3.33
+    observed_on: 2026-10-11
+    sample_kills: 30
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Blue_Mushroom
+  - item: meso
+    rate_percent: 73.33
+    quantity:
+      - 37
+      - 46
+    observed_on: 2026-10-11
+    sample_kills: 30
+    sample_drops: 22
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Blue_Mushroom
+source_page: https://mapleclassic.wiki/wiki/Blue_Mushroom
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Blue_Mushroom

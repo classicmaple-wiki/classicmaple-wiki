@@ -1,0 +1,11 @@
+id: the-fourth-mark
+name: The Fourth Mark
+giver: jay
+turn_in: mong-from-kong
+prerequisites:
+  - the-third-mark
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/The_Fourth_Mark
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Fourth_Mark

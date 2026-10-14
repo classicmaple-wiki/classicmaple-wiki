@@ -1,0 +1,11 @@
+id: a-man-atoning
+name: A Man Atoning
+giver: chrishrama
+turn_in: manji
+prerequisites:
+  - a-price-to-pay
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Man_Atoning
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Man_Atoning

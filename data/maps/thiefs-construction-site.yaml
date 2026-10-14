@@ -1,0 +1,10 @@
+id: thiefs-construction-site
+name: Thief's Construction Site
+region: Hidden Street
+monsters:
+  - blue-mushroom
+  - cold-eye
+source_page: https://mapleclassic.wiki/wiki/Thief's_Construction_Site
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Thief's_Construction_Site

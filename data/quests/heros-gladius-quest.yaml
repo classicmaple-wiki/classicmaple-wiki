@@ -1,0 +1,11 @@
+id: heros-gladius-quest
+name: Hero's Gladius (quest)
+giver: chrishrama
+turn_in: manji
+prerequisites:
+  - reawakening-the-gladius
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Hero's_Gladius_(quest)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Hero's_Gladius_(quest)

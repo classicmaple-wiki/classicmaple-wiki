@@ -1,0 +1,11 @@
+id: a-memory-restored
+name: A Memory Restored
+giver: vicious
+turn_in: athena-pierce
+prerequisites:
+  - a-craftsmans-touch
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Memory_Restored
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Memory_Restored

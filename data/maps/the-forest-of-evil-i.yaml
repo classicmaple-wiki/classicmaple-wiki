@@ -1,0 +1,10 @@
+id: the-forest-of-evil-i
+name: The Forest of Evil I
+region: Victoria Island
+monsters:
+  - malady
+  - zombie-lupin
+source_page: https://mapleclassic.wiki/wiki/The_Forest_of_Evil_I
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Forest_of_Evil_I

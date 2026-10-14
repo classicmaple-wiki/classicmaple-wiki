@@ -1,0 +1,15 @@
+id: sleepy-dungeon-ii
+name: Sleepy Dungeon II
+region: Victoria Island
+monsters:
+  - curse-eye
+  - dark-axe-stump
+  - green-mushroom
+  - horny-mushroom
+  - jr-necki
+  - lupin
+  - slime
+source_page: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_II
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_II

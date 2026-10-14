@@ -1,0 +1,12 @@
+id: east-rocky-mountain-iv
+name: East Rocky Mountain IV
+region: Victoria Island
+monsters:
+  - axe-stump
+  - dark-axe-stump
+  - dark-stump
+  - snail
+source_page: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_IV
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_IV

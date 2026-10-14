@@ -1,0 +1,15 @@
+id: henesys-hunting-ground-ii
+name: Henesys Hunting Ground II
+region: Victoria Island
+monsters:
+  - blue-snail
+  - green-mushroom
+  - orange-mushroom
+  - red-snail
+  - shroom
+  - slime
+  - stump
+source_page: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_II
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_II

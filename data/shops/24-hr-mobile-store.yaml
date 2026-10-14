@@ -1,0 +1,23 @@
+id: 24-hr-mobile-store
+name: 24 Hr Mobile Store
+npc: 24-hr-mobile-store
+map: ant-tunnel-park
+region: Victoria Island
+items:
+  - arrows-for-bows
+  - arrows-for-crossbows
+  - cake
+  - fried-chicken
+  - hamburger
+  - hot-dog
+  - hot-dog-supreme
+  - pizza
+  - pure-water
+  - return-scroll-nearest-town
+  - salad
+  - subi-throwing-stars
+  - unagi
+source_page: https://mapleclassic.wiki/wiki/24_Hr_Mobile_Store
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/24_Hr_Mobile_Store

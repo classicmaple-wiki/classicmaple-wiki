@@ -1,0 +1,12 @@
+id: the-field-south-of-ellinia
+name: The Field South of Ellinia
+region: Victoria Island
+monsters:
+  - dark-stump
+  - green-mushroom
+  - slime
+  - stump
+source_page: https://mapleclassic.wiki/wiki/The_Field_South_of_Ellinia
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Field_South_of_Ellinia

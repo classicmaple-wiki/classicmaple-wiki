@@ -1,0 +1,11 @@
+id: repairing-the-book
+name: Repairing the Book
+giver: manji
+turn_in: chrishrama
+prerequisites:
+  - chief-stans-signature
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Repairing_the_Book
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Repairing_the_Book

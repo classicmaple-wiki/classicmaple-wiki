@@ -1,0 +1,14 @@
+id: west-domain-of-perion
+name: West Domain of Perion
+region: Victoria Island
+monsters:
+  - blue-snail
+  - dark-stump
+  - green-mushroom
+  - red-snail
+  - snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/West_Domain_of_Perion
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/West_Domain_of_Perion

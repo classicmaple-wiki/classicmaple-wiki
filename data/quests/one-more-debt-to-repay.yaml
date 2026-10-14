@@ -1,0 +1,11 @@
+id: one-more-debt-to-repay
+name: One More Debt to Repay
+giver: alex
+turn_in: jm-from-tha-streetz
+prerequisites:
+  - nellas-old-memory
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/One_More_Debt_to_Repay
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/One_More_Debt_to_Repay

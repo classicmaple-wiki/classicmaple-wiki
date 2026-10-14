@@ -1,0 +1,11 @@
+id: getting-arcons-blood
+name: Getting Arcon's Blood
+giver: manji
+turn_in: sophia
+prerequisites:
+  - arcons-blood
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Getting_Arcon's_Blood
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Getting_Arcon's_Blood

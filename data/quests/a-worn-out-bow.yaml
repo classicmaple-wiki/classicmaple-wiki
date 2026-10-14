@@ -1,0 +1,11 @@
+id: a-worn-out-bow
+name: A Worn-Out Bow
+giver: athena-pierce
+turn_in: vicious
+prerequisites:
+  - a-box-hidden-long-ago
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Worn-Out_Bow
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Worn-Out_Bow

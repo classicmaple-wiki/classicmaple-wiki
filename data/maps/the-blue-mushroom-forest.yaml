@@ -1,0 +1,12 @@
+id: the-blue-mushroom-forest
+name: The Blue Mushroom Forest
+region: Victoria Island
+monsters:
+  - blue-mushroom
+  - blue-snail
+  - red-snail
+  - slime
+source_page: https://mapleclassic.wiki/wiki/The_Blue_Mushroom_Forest
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Blue_Mushroom_Forest

@@ -1,0 +1,11 @@
+id: the-faded-ink
+name: The Faded Ink
+giver: chrishrama
+turn_in: hotel-receptionist
+prerequisites:
+  - repairing-the-book
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/The_Faded_Ink
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Faded_Ink

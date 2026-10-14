@@ -1,0 +1,11 @@
+id: test-of-qualification-magician
+name: Test of Qualification (Magician)
+giver: magician-job-instructor
+turn_in: magician-job-instructor
+prerequisites:
+  - finding-the-instructor-magician
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Test_of_Qualification_(Magician)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Test_of_Qualification_(Magician)

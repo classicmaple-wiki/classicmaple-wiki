@@ -1,0 +1,11 @@
+id: a-craftsmans-touch
+name: A Craftsman's Touch
+giver: vicious
+turn_in: vicious
+prerequisites:
+  - a-worn-out-bow
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Craftsman's_Touch
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Craftsman's_Touch

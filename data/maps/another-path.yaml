@@ -1,0 +1,9 @@
+id: another-path
+name: Another Path
+region: Victoria Island
+monsters:
+  - cold-eye
+source_page: https://mapleclassic.wiki/wiki/Another_Path
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Another_Path

@@ -1,0 +1,10 @@
+id: b2-subway-depot
+name: B2 (Subway Depot)
+region: Victoria Island
+monsters:
+  - jr-boogie-1
+  - jr-wraith
+source_page: https://mapleclassic.wiki/wiki/B2_(Subway_Depot)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/B2_(Subway_Depot)

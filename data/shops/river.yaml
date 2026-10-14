@@ -1,0 +1,41 @@
+id: river
+name: River
+npc: river
+map: perion-weapon-store
+region: Victoria Island
+items:
+  - battle-axe
+  - broadsword
+  - coconut-knife
+  - eloon
+  - field-dagger
+  - fork-on-a-stick
+  - fusion-mace
+  - heavy-mace
+  - iron-axe
+  - iron-ball
+  - iron-dagger
+  - iron-mace
+  - long-sword
+  - mace
+  - machete
+  - metal-axe
+  - mithril-axe
+  - mithril-buckler
+  - pole-arm
+  - red-triangular-shield
+  - sabre
+  - spear-item
+  - square-hammer
+  - steel-shield
+  - studded-polearm
+  - two-handed-axe
+  - two-handed-sword
+  - viking-sword
+  - wooden-buckler
+  - wooden-mallet
+  - wooden-sword
+source_page: https://mapleclassic.wiki/wiki/River
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/River

@@ -1,0 +1,10 @@
+id: wild-kargos-area
+name: Wild Kargo's Area
+region: Victoria Island
+monsters:
+  - cold-eye
+  - wild-kargo
+source_page: https://mapleclassic.wiki/wiki/Wild_Kargo's_Area
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Wild_Kargo's_Area

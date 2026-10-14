@@ -1,0 +1,11 @@
+id: johns-last-present
+name: John's Last Present
+giver: john
+turn_in: john
+prerequisites:
+  - johns-present
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/John's_Last_Present
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/John's_Last_Present

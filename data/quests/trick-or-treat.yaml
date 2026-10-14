@@ -1,0 +1,9 @@
+id: trick-or-treat
+name: Trick or Treat!
+prerequisites:
+  - halloween-candies-quest
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Trick_or_Treat!
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Trick_or_Treat!

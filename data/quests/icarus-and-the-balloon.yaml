@@ -1,0 +1,11 @@
+id: icarus-and-the-balloon
+name: Icarus and the Balloon
+giver: icarus
+turn_in: icarus
+prerequisites:
+  - icaruss-hang-glider
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Icarus_and_the_Balloon
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Icarus_and_the_Balloon

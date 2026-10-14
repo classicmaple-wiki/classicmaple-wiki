@@ -1,0 +1,14 @@
+id: a-hill-west-of-henesys
+name: A Hill West of Henesys
+region: Victoria Island
+monsters:
+  - blue-snail
+  - pig
+  - red-snail
+  - ribbon-pig
+  - slime
+  - stump
+source_page: https://mapleclassic.wiki/wiki/A_Hill_West_of_Henesys
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Hill_West_of_Henesys

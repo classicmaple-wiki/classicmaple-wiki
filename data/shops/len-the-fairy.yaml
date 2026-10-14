@@ -1,0 +1,32 @@
+id: len-the-fairy
+name: Len the Fairy
+npc: len-the-fairy
+map: ellinia-department-store
+region: Victoria Island
+items:
+  - apple
+  - arrows-for-bows
+  - arrows-for-crossbows
+  - black-dye
+  - blue-dye
+  - blue-potion
+  - egg
+  - lemon
+  - magic-potion
+  - meat
+  - orange
+  - orange-potion
+  - pet-food
+  - red-dye
+  - red-potion
+  - return-scroll-nearest-town
+  - return-scroll-to-ellinia
+  - speed-potion
+  - subi-throwing-stars
+  - white-dye
+  - white-potion
+  - yellow-dye
+source_page: https://mapleclassic.wiki/wiki/Len_the_Fairy
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Len_the_Fairy

@@ -1,0 +1,11 @@
+id: a-name-she-couldnt-say
+name: A Name She Couldn't Say
+giver: roxy
+turn_in: jane-doe
+prerequisites:
+  - another-lead
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Name_She_Couldn't_Say
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Name_She_Couldn't_Say

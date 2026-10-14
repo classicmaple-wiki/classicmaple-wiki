@@ -1,0 +1,16 @@
+id: east-domain-of-perion
+name: East Domain of Perion
+region: Victoria Island
+monsters:
+  - axe-stump
+  - blue-snail
+  - dark-axe-stump
+  - dark-stump
+  - green-mushroom
+  - red-snail
+  - snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/East_Domain_of_Perion
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/East_Domain_of_Perion

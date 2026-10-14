@@ -1,0 +1,11 @@
+id: silas-irons-in-need-of-help
+name: Silas Irons in Need of Help
+giver: silas-irons
+turn_in: silas-irons
+prerequisites:
+  - silas-irons-in-need-of-an-apprentice
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Silas_Irons_in_Need_of_Help
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Silas_Irons_in_Need_of_Help

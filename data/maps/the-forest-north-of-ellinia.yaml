@@ -1,0 +1,12 @@
+id: the-forest-north-of-ellinia
+name: The Forest North of Ellinia
+region: Victoria Island
+monsters:
+  - axe-stump
+  - slime
+  - snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/The_Forest_North_of_Ellinia
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Forest_North_of_Ellinia

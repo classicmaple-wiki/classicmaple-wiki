@@ -1,0 +1,11 @@
+id: weston
+name: Weston
+npc: weston
+map: kerning-city-civic-center
+region: Victoria Island
+items:
+  - kerning-city-residents-chair
+source_page: https://mapleclassic.wiki/wiki/Weston
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Weston

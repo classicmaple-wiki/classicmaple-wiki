@@ -1,0 +1,11 @@
+id: making-a-sparkling-rock
+name: Making a Sparkling Rock
+giver: sophia
+turn_in: manji
+prerequisites:
+  - finding-sophia
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Making_a_Sparkling_Rock
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Making_a_Sparkling_Rock

@@ -1,0 +1,11 @@
+id: mushroom-garden-victoria-island
+name: Mushroom Garden (Victoria Island)
+region: Victoria Island
+monsters:
+  - orange-mushroom
+  - red-snail
+  - shroom
+source_page: https://mapleclassic.wiki/wiki/Mushroom_Garden_(Victoria_Island)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mushroom_Garden_(Victoria_Island)

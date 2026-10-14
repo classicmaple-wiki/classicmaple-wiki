@@ -1,0 +1,11 @@
+id: luke-the-security-guys-wish-to-travel
+name: Luke the Security Guy's Wish to Travel
+giver: luke
+turn_in: luke
+prerequisites:
+  - luke-the-security-guy
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Luke_the_Security_Guy's_Wish_to_Travel
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Luke_the_Security_Guy's_Wish_to_Travel

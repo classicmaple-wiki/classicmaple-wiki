@@ -1,0 +1,11 @@
+id: mrs-ming-mings-second-worry
+name: Mrs. Ming Ming's Second Worry
+giver: mrs-ming-ming
+turn_in: estelle
+prerequisites:
+  - mrs-ming-mings-first-worry
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Mrs._Ming_Ming's_Second_Worry
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mrs._Ming_Ming's_Second_Worry

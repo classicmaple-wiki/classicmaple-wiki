@@ -1,0 +1,11 @@
+id: building-a-new-house-for-blackbull
+name: Building a New House For Blackbull
+giver: blackbull
+turn_in: blackbull
+prerequisites:
+  - fixing-blackbulls-house
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Building_a_New_House_For_Blackbull
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Building_a_New_House_For_Blackbull

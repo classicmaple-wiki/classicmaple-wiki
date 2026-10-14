@@ -1,0 +1,64 @@
+id: snail
+name: Snail
+location: snail-hunting-ground-i
+region: Maple Island
+drops:
+  - item: arrows-for-bows
+    rate_percent: 0.97
+    quantity:
+      - 20
+      - 20
+    observed_on: 2026-10-11
+    sample_kills: 103
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Snail
+  - item: arrows-for-crossbows
+    rate_percent: 0.97
+    observed_on: 2026-10-11
+    sample_kills: 103
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Snail
+  - item: bronze-ore
+    rate_percent: 0.97
+    observed_on: 2026-10-11
+    sample_kills: 103
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Snail
+  - item: garnet-ore
+    rate_percent: 0.97
+    observed_on: 2026-10-11
+    sample_kills: 103
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Snail
+  - item: meso
+    rate_percent: 70.87
+    quantity:
+      - 4
+      - 5
+    observed_on: 2026-10-11
+    sample_kills: 103
+    sample_drops: 73
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Snail
+  - item: red-potion
+    rate_percent: 2.91
+    observed_on: 2026-10-11
+    sample_kills: 103
+    sample_drops: 3
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Snail
+  - item: snail-shell
+    rate_percent: 51.46
+    observed_on: 2026-10-11
+    sample_kills: 103
+    sample_drops: 53
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Snail
+source_page: https://mapleclassic.wiki/wiki/Snail
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Snail

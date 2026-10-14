@@ -1,0 +1,11 @@
+id: making-the-medicine
+name: Making the Medicine
+giver: mong-from-kong
+turn_in: mong-from-kong
+prerequisites:
+  - stirge-phobia
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Making_the_Medicine
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Making_the_Medicine

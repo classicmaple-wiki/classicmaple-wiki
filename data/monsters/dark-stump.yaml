@@ -1,0 +1,55 @@
+id: dark-stump
+name: Dark Stump
+drops:
+  - item: arrows-for-bows
+    rate_percent: 1.69
+    quantity:
+      - 19
+      - 20
+    observed_on: 2026-10-11
+    sample_kills: 118
+    sample_drops: 2
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Dark_Stump
+  - item: iron-ore
+    rate_percent: 1.69
+    observed_on: 2026-10-11
+    sample_kills: 118
+    sample_drops: 2
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Dark_Stump
+  - item: leaf
+    rate_percent: 47.46
+    observed_on: 2026-10-11
+    sample_kills: 118
+    sample_drops: 56
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Dark_Stump
+  - item: meso
+    rate_percent: 64.41
+    quantity:
+      - 23
+      - 28
+    observed_on: 2026-10-11
+    sample_kills: 118
+    sample_drops: 76
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Dark_Stump
+  - item: red-potion
+    rate_percent: 3.39
+    observed_on: 2026-10-11
+    sample_kills: 118
+    sample_drops: 4
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Dark_Stump
+  - item: tree-branch
+    rate_percent: 20.34
+    observed_on: 2026-10-11
+    sample_kills: 118
+    sample_drops: 24
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Dark_Stump
+source_page: https://mapleclassic.wiki/wiki/Dark_Stump
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dark_Stump

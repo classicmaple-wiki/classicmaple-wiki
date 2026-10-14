@@ -1,0 +1,13 @@
+id: rocky-road-iii
+name: Rocky Road III
+region: Victoria Island
+monsters:
+  - axe-stump
+  - dark-axe-stump
+  - red-snail
+  - stump
+  - wild-boar
+source_page: https://mapleclassic.wiki/wiki/Rocky_Road_III
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Rocky_Road_III

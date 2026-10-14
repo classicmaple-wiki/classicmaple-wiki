@@ -1,0 +1,94 @@
+id: green-mushroom
+name: Green Mushroom
+region: Victoria Island
+drops:
+  - item: arrows-for-bows
+    rate_percent: 1.45
+    quantity:
+      - 23
+      - 30
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 9
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  - item: arrows-for-crossbows
+    rate_percent: 0.65
+    quantity:
+      - 21
+      - 27
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 4
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  - item: blue-potion
+    rate_percent: 0.97
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 6
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  - item: blue-qi-pao-pants
+    rate_percent: 0.16
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  - item: emerald-ore
+    rate_percent: 0.16
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  - item: fragment-of-magic
+    rate_percent: 0.81
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 5
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  - item: green-feather-hat
+    rate_percent: 0.16
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  - item: green-mushroom-cap
+    rate_percent: 41.77
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 259
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  - item: meso
+    rate_percent: 68.23
+    quantity:
+      - 28
+      - 35
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 423
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  - item: red-potion
+    rate_percent: 3.55
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 22
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+  - item: silver-ore
+    rate_percent: 0.81
+    observed_on: 2026-10-11
+    sample_kills: 620
+    sample_drops: 5
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Green_Mushroom
+source_page: https://mapleclassic.wiki/wiki/Green_Mushroom
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Green_Mushroom

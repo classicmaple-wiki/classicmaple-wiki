@@ -1,0 +1,11 @@
+id: proof-of-qualification-magician
+name: Proof of Qualification (Magician)
+giver: magician-job-instructor
+turn_in: grendel-the-really-old
+prerequisites:
+  - test-of-qualification-magician
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Magician)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Magician)

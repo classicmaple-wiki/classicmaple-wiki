@@ -1,0 +1,11 @@
+id: the-forest-of-wisdom
+name: The Forest of Wisdom
+region: Victoria Island
+monsters:
+  - green-mushroom
+  - slime
+  - snail
+source_page: https://mapleclassic.wiki/wiki/The_Forest_of_Wisdom
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Forest_of_Wisdom

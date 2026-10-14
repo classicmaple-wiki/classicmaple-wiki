@@ -1,0 +1,12 @@
+id: land-of-wild-boar
+name: Land of Wild Boar
+region: Victoria Island
+monsters:
+  - dark-axe-stump
+  - jr-boogie-1
+  - jr-boogie-2
+  - wild-boar
+source_page: https://mapleclassic.wiki/wiki/Land_of_Wild_Boar
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Land_of_Wild_Boar

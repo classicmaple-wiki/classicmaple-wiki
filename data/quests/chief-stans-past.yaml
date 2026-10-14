@@ -1,0 +1,11 @@
+id: chief-stans-past
+name: Chief Stan's Past
+giver: jay
+turn_in: mrs-ming-ming
+prerequisites:
+  - mrs-ming-mings-concern
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Chief_Stan's_Past
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Chief_Stan's_Past

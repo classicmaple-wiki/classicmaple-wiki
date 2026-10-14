@@ -1,0 +1,11 @@
+id: proof-of-qualification-thief
+name: Proof of Qualification (Thief)
+giver: thief-job-instructor
+turn_in: dark-lord
+prerequisites:
+  - test-of-qualification-thief
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Thief)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Thief)

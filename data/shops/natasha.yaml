@@ -1,0 +1,37 @@
+id: natasha
+name: Natasha
+npc: natasha
+map: lith-harbor-armor-shop
+region: Victoria Island
+items:
+  - black-headband
+  - black-swimming-cap
+  - blue-ankle-strap-sandals
+  - blue-headband
+  - blue-one-lined-t-shirt
+  - blue-rubber-boots
+  - blue-swimming-cap
+  - bronze-aroa-boots
+  - brown-ankle-strap-sandals
+  - brown-aroa-boots
+  - brown-skullcap
+  - green-aroa-boots
+  - green-headband
+  - grey-thick-sweat-pants
+  - jean-capris
+  - leather-sandals
+  - metal-gear
+  - orange-sporty-t-shirt
+  - pink-starry-shirt
+  - red-ankle-strap-sandals
+  - red-headband
+  - red-rubber-boots
+  - red-striped-t-shirt
+  - red-swimming-cap
+  - white-bandana
+  - yellow-headband
+  - yellow-rubber-boots
+source_page: https://mapleclassic.wiki/wiki/Natasha
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Natasha

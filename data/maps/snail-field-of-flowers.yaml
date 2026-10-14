@@ -1,0 +1,12 @@
+id: snail-field-of-flowers
+name: Snail Field of Flowers
+region: Maple Island
+monsters:
+  - blue-snail
+  - orange-mushroom
+  - red-snail
+  - snail
+source_page: https://mapleclassic.wiki/wiki/Snail_Field_of_Flowers
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Snail_Field_of_Flowers

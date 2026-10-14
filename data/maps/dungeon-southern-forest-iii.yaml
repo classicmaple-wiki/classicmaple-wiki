@@ -1,0 +1,10 @@
+id: dungeon-southern-forest-iii
+name: Dungeon, Southern Forest III
+region: Victoria Island
+monsters:
+  - green-mushroom
+  - slime
+source_page: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_III
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_III

@@ -1,0 +1,11 @@
+id: regained-vitality
+name: Regained Vitality
+giver: chief-stan
+turn_in: mrs-ming-ming
+prerequisites:
+  - memories-of-youth
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Regained_Vitality
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Regained_Vitality

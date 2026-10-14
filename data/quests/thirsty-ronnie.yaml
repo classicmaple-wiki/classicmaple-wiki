@@ -1,0 +1,11 @@
+id: thirsty-ronnie
+name: Thirsty Ronnie
+giver: ronnie
+turn_in: rowen-the-fairy
+prerequisites:
+  - rinas-unagi-special-quest
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Thirsty_Ronnie
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Thirsty_Ronnie

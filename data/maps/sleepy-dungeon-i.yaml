@@ -1,0 +1,15 @@
+id: sleepy-dungeon-i
+name: Sleepy Dungeon I
+region: Victoria Island
+monsters:
+  - curse-eye
+  - green-mushroom
+  - horny-mushroom
+  - jr-necki
+  - lupin
+  - octopus
+  - slime
+source_page: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_I
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Sleepy_Dungeon_I

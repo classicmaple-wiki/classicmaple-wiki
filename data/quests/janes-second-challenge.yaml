@@ -1,0 +1,11 @@
+id: janes-second-challenge
+name: Jane's Second Challenge
+giver: jane
+turn_in: jane
+prerequisites:
+  - janes-first-challenge
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Jane's_Second_Challenge
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Jane's_Second_Challenge

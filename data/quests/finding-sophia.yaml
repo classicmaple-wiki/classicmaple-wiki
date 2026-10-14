@@ -1,0 +1,11 @@
+id: finding-sophia
+name: Finding Sophia
+giver: teo
+turn_in: sophia
+prerequisites:
+  - maya-of-henesys
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Finding_Sophia
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Finding_Sophia

@@ -1,0 +1,11 @@
+id: mr-thunder-in-need-of-help
+name: Mr. Thunder in Need of Help
+giver: mr-thunder
+turn_in: mr-thunder
+prerequisites:
+  - mr-thunder-in-need-of-an-apprentice
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Mr._Thunder_in_Need_of_Help
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Mr._Thunder_in_Need_of_Help

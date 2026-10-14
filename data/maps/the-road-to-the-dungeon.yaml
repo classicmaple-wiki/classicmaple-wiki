@@ -1,0 +1,17 @@
+id: the-road-to-the-dungeon
+name: The Road to the Dungeon
+region: Victoria Island
+monsters:
+  - blue-mushroom
+  - blue-snail
+  - iron-hog
+  - orange-mushroom
+  - pig
+  - red-snail
+  - ribbon-pig
+  - shroom
+  - slime
+source_page: https://mapleclassic.wiki/wiki/The_Road_to_the_Dungeon
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Road_to_the_Dungeon

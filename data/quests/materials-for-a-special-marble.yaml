@@ -1,0 +1,11 @@
+id: materials-for-a-special-marble
+name: Materials for a Special Marble
+giver: camila
+turn_in: camila
+prerequisites:
+  - pias-mischievous-wish
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Materials_for_a_Special_Marble
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Materials_for_a_Special_Marble

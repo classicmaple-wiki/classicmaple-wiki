@@ -1,0 +1,14 @@
+id: henesys-dungeon-entrance
+name: Henesys Dungeon Entrance
+region: Victoria Island
+monsters:
+  - blue-mushroom
+  - green-mushroom
+  - iron-hog
+  - lupin
+  - slime
+  - stone-golem
+source_page: https://mapleclassic.wiki/wiki/Henesys_Dungeon_Entrance
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Henesys_Dungeon_Entrance

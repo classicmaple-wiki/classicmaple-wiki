@@ -1,0 +1,15 @@
+id: the-hill-east-of-henesys
+name: The Hill East of Henesys
+region: Victoria Island
+monsters:
+  - blue-snail
+  - orange-mushroom
+  - pig
+  - red-snail
+  - ribbon-pig
+  - shroom
+  - slime
+source_page: https://mapleclassic.wiki/wiki/The_Hill_East_of_Henesys
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Hill_East_of_Henesys

@@ -1,0 +1,11 @@
+id: collecting-200-cursed-dolls
+name: Collecting 200 Cursed Dolls
+giver: rowen-the-fairy
+turn_in: rowen-the-fairy
+prerequisites:
+  - collecting-150-cursed-dolls
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Collecting_200_Cursed_Dolls
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Collecting_200_Cursed_Dolls

@@ -1,0 +1,13 @@
+id: perion-street-corner
+name: Perion Street Corner
+region: Victoria Island
+monsters:
+  - blue-snail
+  - dark-stump
+  - red-snail
+  - snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/Perion_Street_Corner
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Perion_Street_Corner

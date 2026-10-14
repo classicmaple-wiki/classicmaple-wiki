@@ -1,0 +1,11 @@
+id: talking-to-stan
+name: Talking to Stan
+giver: chief-stan
+turn_in: chief-stan
+prerequisites:
+  - alexs-request
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Talking_to_Stan
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Talking_to_Stan

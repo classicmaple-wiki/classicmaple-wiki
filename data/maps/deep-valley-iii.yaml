@@ -1,0 +1,13 @@
+id: deep-valley-iii
+name: Deep Valley III
+region: Victoria Island
+monsters:
+  - axe-stump
+  - dark-axe-stump
+  - dark-stump
+  - fire-boar
+  - wild-boar
+source_page: https://mapleclassic.wiki/wiki/Deep_Valley_III
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Deep_Valley_III

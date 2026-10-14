@@ -1,0 +1,11 @@
+id: caution-falling-down
+name: Caution Falling Down
+region: Victoria Island
+monsters:
+  - blue-mushroom
+  - octopus
+  - orange-mushroom
+source_page: https://mapleclassic.wiki/wiki/Caution_Falling_Down
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Caution_Falling_Down

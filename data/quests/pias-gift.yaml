@@ -1,0 +1,11 @@
+id: pias-gift
+name: Pia's Gift
+giver: rina
+turn_in: pia
+prerequisites:
+  - what-pia-borrowed
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Pia's_Gift
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pia's_Gift

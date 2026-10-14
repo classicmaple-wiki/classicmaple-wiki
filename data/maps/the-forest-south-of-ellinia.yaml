@@ -1,0 +1,13 @@
+id: the-forest-south-of-ellinia
+name: The Forest South of Ellinia
+region: Victoria Island
+monsters:
+  - axe-stump
+  - green-mushroom
+  - slime
+  - snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/The_Forest_South_of_Ellinia
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/The_Forest_South_of_Ellinia

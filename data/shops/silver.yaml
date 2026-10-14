@@ -1,0 +1,19 @@
+id: silver
+name: Silver
+npc: silver
+map: lith-harbor-weapon-shop
+region: Victoria Island
+items:
+  - double-axe
+  - fruit-knife
+  - hand-axe
+  - long-sword
+  - steel-pipe
+  - stolen-fence
+  - sword-item
+  - wooden-buckler
+  - wooden-club
+source_page: https://mapleclassic.wiki/wiki/Silver
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Silver

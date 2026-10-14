@@ -1,0 +1,10 @@
+id: hot-sand
+name: Hot Sand
+region: Victoria Island
+monsters:
+  - clang
+  - tortie
+source_page: https://mapleclassic.wiki/wiki/Hot_Sand
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Hot_Sand

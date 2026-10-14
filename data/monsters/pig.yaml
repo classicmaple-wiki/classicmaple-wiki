@@ -1,0 +1,88 @@
+id: pig
+name: Pig
+location: the-pig-beach
+region: Victoria Island
+drops:
+  - item: animal-fur-bundle
+    rate_percent: 2.41
+    observed_on: 2026-10-11
+    sample_kills: 249
+    sample_drops: 6
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Pig
+  - item: arrows-for-bows
+    rate_percent: 1.2
+    quantity:
+      - 15
+      - 19
+    observed_on: 2026-10-11
+    sample_kills: 249
+    sample_drops: 3
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Pig
+  - item: arrows-for-crossbows
+    rate_percent: 0.8
+    quantity:
+      - 12
+      - 12
+    observed_on: 2026-10-11
+    sample_kills: 249
+    sample_drops: 2
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Pig
+  - item: gold-ore
+    rate_percent: 1.2
+    observed_on: 2026-10-11
+    sample_kills: 249
+    sample_drops: 3
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Pig
+  - item: leather
+    rate_percent: 4.82
+    observed_on: 2026-10-11
+    sample_kills: 249
+    sample_drops: 12
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Pig
+  - item: meso
+    rate_percent: 68.27
+    quantity:
+      - 15
+      - 18
+    observed_on: 2026-10-11
+    sample_kills: 249
+    sample_drops: 170
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Pig
+  - item: pigs-head
+    rate_percent: 6.43
+    observed_on: 2026-10-11
+    sample_kills: 249
+    sample_drops: 16
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Pig
+  - item: red-potion
+    rate_percent: 4.02
+    observed_on: 2026-10-11
+    sample_kills: 249
+    sample_drops: 10
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Pig
+  - item: stiff-feather
+    rate_percent: 5.62
+    observed_on: 2026-10-11
+    sample_kills: 249
+    sample_drops: 14
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Pig
+  - item: topaz-ore
+    rate_percent: 0.4
+    observed_on: 2026-10-11
+    sample_kills: 249
+    sample_drops: 1
+    build: founders-2026-10-06
+    source: https://mapleclassic.wiki/wiki/Pig
+source_page: https://mapleclassic.wiki/wiki/Pig
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Pig

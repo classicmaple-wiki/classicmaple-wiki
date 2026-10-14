@@ -1,0 +1,14 @@
+id: henesys-hunting-ground-iii
+name: Henesys Hunting Ground III
+region: Victoria Island
+monsters:
+  - blue-snail
+  - green-mushroom
+  - orange-mushroom
+  - red-snail
+  - slime
+  - stump
+source_page: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_III
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_III

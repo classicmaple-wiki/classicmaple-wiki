@@ -1,0 +1,11 @@
+id: old-gladius-quest
+name: Old Gladius (quest)
+giver: manji
+turn_in: chrishrama
+prerequisites:
+  - delivering-the-weird-medicine
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Old_Gladius_(quest)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Old_Gladius_(quest)

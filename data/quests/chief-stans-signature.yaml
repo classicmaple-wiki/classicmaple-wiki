@@ -1,0 +1,11 @@
+id: chief-stans-signature
+name: Chief Stan's Signature
+giver: chief-stan
+turn_in: manji
+prerequisites:
+  - the-filing-error
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Chief_Stan's_Signature
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Chief_Stan's_Signature

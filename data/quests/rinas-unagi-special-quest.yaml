@@ -1,0 +1,11 @@
+id: rinas-unagi-special-quest
+name: Rina's Unagi Special (quest)
+giver: rina
+turn_in: ronnie
+prerequisites:
+  - secret-to-unagi-special
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Rina's_Unagi_Special_(quest)
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Rina's_Unagi_Special_(quest)

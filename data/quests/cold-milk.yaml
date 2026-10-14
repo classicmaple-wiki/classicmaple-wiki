@@ -1,0 +1,11 @@
+id: cold-milk
+name: Cold Milk
+giver: rowen-the-fairy
+turn_in: rowen-the-fairy
+prerequisites:
+  - thirsty-ronnie
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Cold_Milk
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Cold_Milk

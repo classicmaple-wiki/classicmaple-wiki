@@ -1,0 +1,11 @@
+id: a-split-road
+name: A Split Road
+region: Maple Island
+monsters:
+  - blue-snail
+  - red-snail
+  - shroom
+source_page: https://mapleclassic.wiki/wiki/A_Split_Road
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Split_Road

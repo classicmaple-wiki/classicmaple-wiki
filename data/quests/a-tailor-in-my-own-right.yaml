@@ -1,0 +1,11 @@
+id: a-tailor-in-my-own-right
+name: A Tailor in My Own Right!
+giver: francois
+turn_in: francois
+prerequisites:
+  - francois-in-need-of-an-apprentice
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/A_Tailor_in_My_Own_Right!
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/A_Tailor_in_My_Own_Right!

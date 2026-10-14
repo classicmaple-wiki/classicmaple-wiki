@@ -1,0 +1,11 @@
+id: special-taste-of-florina-beach-ii
+name: Special Taste of Florina Beach II
+giver: riel
+turn_in: riel
+prerequisites:
+  - special-taste-of-florina-beach-i
+region: Victoria Island
+source_page: https://mapleclassic.wiki/wiki/Special_Taste_of_Florina_Beach_II
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Special_Taste_of_Florina_Beach_II

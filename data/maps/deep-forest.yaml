@@ -1,0 +1,15 @@
+id: deep-forest
+name: Deep Forest
+region: Victoria Island
+monsters:
+  - dark-axe-stump
+  - dark-stump
+  - green-mushroom
+  - horny-mushroom
+  - slime
+  - snail
+  - stump
+source_page: https://mapleclassic.wiki/wiki/Deep_Forest
+verified:
+  status: unverified
+  source: https://mapleclassic.wiki/wiki/Deep_Forest
