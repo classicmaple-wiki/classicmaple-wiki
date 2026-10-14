@@ -8,6 +8,29 @@ sidebar:
 
 import ProfessionTable from '../../../components/ProfessionTable.astro';
 
+Crafting is a new system made for Classic World. Characters at level 10 and up can use it. You turn materials you collect into items for your adventure ([release notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes)). Nexon says you can make items for yourself or to share with friends ([Explore Classic World](https://www.nexon.com/maplestory/game/mscw/explore-maplestory)).
+
+## How it works
+
+- Visit a crafting NPC to see what you can make and which materials you need ([release notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes)).
+- The more you craft, the more your crafting skill grows. A higher skill opens more recipes ([release notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes)).
+- Crafting gives crafting EXP. Nexon's October 15 notice fixes a bug where some Woodcrafting items gave EXP with a Woodcrafting Kit when they should not ([October 15 notice](https://www.nexon.com/maplestory/news/maintenance/46523)).
+
+## Crafting NPCs
+
+Each profession has its own NPC ([release notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes)):
+
+| Profession | NPC |
+| --- | --- |
+| Smithing | [Silas Irons](/npcs/silas-irons/) |
+| Weaponcrafting | [Mr. Thunder](/npcs/mr-thunder/) |
+| Tailoring | [Francois](/npcs/francois/) |
+| Woodcrafting | [Vicious](/npcs/vicious/) |
+| Leatherworking | [JM From tha Streetz](/npcs/jm-from-tha-streetz/) |
+| Arcforge | [Chrishrama](/npcs/chrishrama/) |
+
+The release notes do not say where each NPC stands. If you know, add it with a screenshot.
+
 <ProfessionTable>
 <Fragment slot="title">
 
@@ -16,10 +39,25 @@ import ProfessionTable from '../../../components/ProfessionTable.astro';
 </Fragment>
 </ProfessionTable>
 
-## What we need
+The level 10 in the table is the level for the crafting system as a whole. Nexon has not given a separate level for each profession.
+
+## What official sources do not cover yet
+
+Nexon's posts do not say these things. If you have seen them in game, please add them with a screenshot.
 
 - What each profession makes
 - Which professions supply materials to which
 - Recipes, with materials and results
+- How crafting skill levels work, and how many there are
+- Whether one character can learn every profession
+- Any costs to learn or to craft
 
 Each profession has its own file in `data/professions/`.
+
+## Sources
+
+All official Nexon pages. Read on 2026-10-14.
+
+- [Founder's Access Release Notes](https://www.nexon.com/maplestory/news/general/45621/founder-s-access-release-notes)
+- [Explore MapleStory Classic World](https://www.nexon.com/maplestory/game/mscw/explore-maplestory)
+- [Scheduled Minor Patch Maintenance, October 15, 2026](https://www.nexon.com/maplestory/news/maintenance/46523)
