@@ -25,6 +25,7 @@ HANDOFF.md         The baton between sessions. Read first.
 BACKLOG.md         Now, Next, Later. Only Now items may be worked on.
 specs/             Numbered specs. No feature code without an approved spec.
 docs/decisions/    Numbered decision records.
+docs/art-direction.md  The look and the prompt kit for every picture. Read before any art work.
 docs/research/     Research notes (UI, assets).
 data/              Game data, one YAML file per entity. builds.yaml lists builds.
 schemas/           Zod schemas. index.ts maps collection to schema.
@@ -45,7 +46,7 @@ site.config.mjs    Site address and repository address. Change them here only.
 - Anything an AI drafts enters as `unverified`. AI never raises a verification status.
 - Old MapleStory, private servers, and other wikis are not sources.
 - Do not delete history. Changed values get a line in `changes`.
-- Pictures follow `docs/policies/images.md`. In short: small identification sprites only, one at a time, only from a source in `data/sprite-sources.yaml` marked allowed, or drawn by us. Scene pictures follow `docs/policies/scene-art.md`. No Nexon map art, logos, music, or client extraction. Never bulk download. Never copy data or text from other fan sites.
+- Pictures follow `docs/policies/images.md`. In short: small identification sprites only, one at a time, only from a source in `data/sprite-sources.yaml` marked allowed, or drawn by us. Scene pictures follow `docs/art-direction.md`. No Nexon map art, logos, music, or client extraction. Never bulk download. Never copy data or text from other fan sites.
 - Never change a sprite source's status. The owner does.
 - Numbers live in `data/`. Words live in guides.
 

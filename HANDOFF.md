@@ -4,26 +4,27 @@ Rewritten at the end of every session. Read this, then `AGENTS.md`, then the spe
 
 ## Current state
 
-Branch `spec/0002-design-system`, pull request 3, holds the new design: windows, page title band, home, sprite rules. The owner rejected the scripted pixel scenes. Decision 0006 replaces them with painted pictures made with an image model. The code is ready: a picture dropped in `src/assets/scenes/` shows up on the next build, and a page's own sprite stands in its scene. Until pictures exist, scenes show a mood gradient. The live site still runs the old look.
+The art direction is set (decision 0007, `docs/art-direction.md`): painted HD pixel art, made with ChatGPT, leads the whole site. Three approved reference pictures are live on branch `spec/0002-design-system`, pull request 3: Henesys day and night, Kerning City at dusk. Spec 0003, an interface that serves the art, is drafted and waits for the owner. The live site still runs the old look.
 
 ## Just done
 
-- Decision 0006 and `docs/policies/scene-art.md`: style rules, sizes, safe zones, file names, and a prompt for each of the seven scenes.
-- `Scene.astro` now serves painted pictures as WebP at two sizes, with a night picture or a dimmed day picture in dark mode.
-- Page sprite layer in `PageTitle.astro`. Footer: official game link, disclaimer, AI disclosure when art exists, Sirux link.
-- Tested end to end with temporary pictures and a sprite, then removed them.
+- Installed `henesys-night.webp` and `kerning-city.webp`. Kerning mood is now dusk, and the Thief subtitle says rooftops at dusk.
+- Renamed the scene guide to `docs/art-direction.md` and grew it into the full art direction: references, the look, rules, the prompt kit with layout blocks for scenes, share images, icons, and textures, plus fix-up phrases and file steps.
+- Decision 0007 and draft spec 0003.
+- Lighthouse mobile with the Henesys picture: home 98, crafting 97, layout shift 0.
 
 ## In progress
 
-Pull request 3. `public/mockups/` is still there and goes before merge.
+Pull request 3. `public/mockups/` goes before merge.
 
 ## Next step
 
-Owner paints Kerning City and Henesys first (P2e). Agent checks each picture on phone and desktop and reruns Lighthouse. Then delete `public/mockups/`, merge, and check production.
+Owner approves spec 0003 and answers its three open questions. Then build it on the same branch for home, Thief, and Crimson Balrog.
 
 ## Blockers and questions for the owner
 
-- P2e scene pictures.
+- Spec 0003 approval and its open questions: title font, textures, sidebar.
+- More pictures: P2e in `BACKLOG.md`.
 
 ## Verify
 

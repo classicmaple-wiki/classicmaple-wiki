@@ -1,3 +1,3 @@
 # Scene pictures
 
-Painted scene art goes here, one file per scene, named after the scene, for example `kerning-city.png`, with an optional `kerning-city-night.png` for dark mode. How to make them: `docs/policies/scene-art.md`. Decision 0006.
+Painted scene art, one file per scene, named after the scene, for example `kerning-city.webp`, with an optional `kerning-city-night.webp` for dark mode. The look, the reference pictures, and the prompts are in `docs/art-direction.md`. Decisions 0006 and 0007.

@@ -23,7 +23,7 @@ export const scenes: Record<SceneIdentifier, SceneDefinition> = {
 	henesys: { identifier: 'henesys', label: 'Henesys', defaultMood: 'midday', moment: 'A slow afternoon.' },
 	ellinia: { identifier: 'ellinia', label: 'Ellinia', defaultMood: 'dawn', moment: 'At dawn.' },
 	perion: { identifier: 'perion', label: 'Perion', defaultMood: 'dusk', moment: 'Dusk on the rocks.' },
-	'kerning-city': { identifier: 'kerning-city', label: 'Kerning City', defaultMood: 'night', moment: 'After dark.' },
+	'kerning-city': { identifier: 'kerning-city', label: 'Kerning City', defaultMood: 'dusk', moment: 'Rooftops at dusk.' },
 	sleepywood: { identifier: 'sleepywood', label: 'Sleepywood', defaultMood: 'cave', moment: 'Below the roots.' },
 	default: { identifier: 'default', label: 'Classic Maple Wiki', defaultMood: 'morning', moment: '' },
 };
