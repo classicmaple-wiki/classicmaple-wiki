@@ -19,7 +19,7 @@ All 1,294 entries are `unverified`. Since 2026-10-14 the importer also takes cor
 | --- | --- | --- | --- |
 | Monsters | 62 | Level and HP on 61, EXP on 60 | MP and elements on all. Drops on 43. Sprite on 5. |
 | Items | 451 | Required level on 346, sprite on 406 | Stats on all 350 equipment items. Sprite on 45. |
-| Maps | 279 | Level range on 117, town on 251, exits on 251 | Level range on 162, town on 28. |
+| Maps | 279 | Level range on 117, town on 251, exits on 251, minimap on 185 | Level range on 162, town on 28, minimap on 94. |
 | NPCs | 185 | Map on 182, sprite on 163 | Sprite on 22, mostly Classic only NPCs. Map on 3. |
 | Quests | 276 | Giver on 266 | Rewards and level on all. |
 | Shops | 30 | Stock on 24 | Prices on all. |

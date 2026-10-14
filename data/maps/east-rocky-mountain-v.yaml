@@ -21,3 +21,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/East_Rocky_Mountain_V
   build: cot2
+minimap:
+  file: minimaps/east-rocky-mountain-v.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101030404/minimap
+  retrieved: 2026-10-14

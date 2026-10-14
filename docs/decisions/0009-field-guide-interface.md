@@ -18,3 +18,7 @@ The owner found the interface too pixel heavy: the Silkscreen font on chips, pix
 - Every component kept its markup and props except the page title, which became a rounded scene banner with the name over a soft gradient.
 - New icons are drawn as strokes on a 24 pixel grid in `src/lib/glyphs.ts`, rendered by `Icon.astro`.
 - The interface parts of specs 0002 and 0003 are superseded where spec 0006 changes them.
+
+## Amendment, 2026-10-15
+
+The owner asked to remove the status tags and the Add it links: "Just dedicated contribution is enough." Pages no longer show Official, Confirmed in game, or Unverified chips, and missing values read Unknown with no link. Every page ends with one line that leads to How to contribute. Verification status stays in the data and in the JSON downloads, so reviewers and tools can still use it. Build chips and the closed beta note stay, because they tell readers which version a number is from.

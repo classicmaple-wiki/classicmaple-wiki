@@ -26,3 +26,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Henesys_Dungeon_Entrance
   build: cot2
+minimap:
+  file: minimaps/henesys-dungeon-entrance.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/106010100/minimap
+  retrieved: 2026-10-14

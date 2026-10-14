@@ -18,3 +18,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Caution_Falling_Down
   build: cot2
+minimap:
+  file: minimaps/caution-falling-down.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/103010001/minimap
+  retrieved: 2026-10-14

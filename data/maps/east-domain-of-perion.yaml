@@ -25,3 +25,8 @@ source_page: https://mapleclassic.wiki/wiki/East_Domain_of_Perion
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/East_Domain_of_Perion
+minimap:
+  file: minimaps/east-domain-of-perion.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101030000/minimap
+  retrieved: 2026-10-14

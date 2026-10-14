@@ -23,3 +23,8 @@ source_page: https://mapleclassic.wiki/wiki/Construction_Site_North_of_Kerning_C
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Construction_Site_North_of_Kerning_City
+minimap:
+  file: minimaps/construction-site-north-of-kerning-city.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/102040000/minimap
+  retrieved: 2026-10-14

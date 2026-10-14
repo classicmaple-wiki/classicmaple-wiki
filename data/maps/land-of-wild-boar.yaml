@@ -21,3 +21,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Land_of_Wild_Boar
   build: cot2
+minimap:
+  file: minimaps/land-of-wild-boar.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101040001/minimap
+  retrieved: 2026-10-14

@@ -23,3 +23,8 @@ source_page: https://mapleclassic.wiki/wiki/Forest_West_of_Henesys
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Forest_West_of_Henesys
+minimap:
+  file: minimaps/forest-west-of-henesys.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/104020000/minimap
+  retrieved: 2026-10-14

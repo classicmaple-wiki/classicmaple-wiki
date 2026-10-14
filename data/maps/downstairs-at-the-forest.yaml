@@ -19,3 +19,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Downstairs_at_the_Forest
   build: cot2
+minimap:
+  file: minimaps/downstairs-at-the-forest.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100040110/minimap
+  retrieved: 2026-10-14

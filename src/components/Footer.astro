@@ -1,7 +1,9 @@
 ---
 /*
    Wraps the default Starlight footer and adds the site credits, so they
-   appear on every page without anyone having to remember them. The game
+   appear on every page without anyone having to remember them. First, one
+   line leads to How to contribute, the single place to add or fix data
+   (owner, 2026-10-15). The game
    comes first: a plain text link sends readers to the official MapleStory
    Classic World site (decision 0005). Then the fan site disclaimer, then
    the content license with links to the credits and privacy pages (decision
@@ -23,6 +25,10 @@ const hasPaintedScenes = Object.keys(scenePictures).length > 0;
 ---
 
 <Default><slot /></Default>
+
+<p class="site-contribute">
+	Spotted something missing or wrong? <a href="/contributing/">Here is how to help</a>.
+</p>
 
 <div class="site-credits">
 	<p class="site-credits__line">
@@ -47,6 +53,17 @@ const hasPaintedScenes = Object.keys(scenePictures).length > 0;
 </div>
 
 <style>
+	.site-contribute {
+		margin: var(--space-6) 0 0;
+		padding: var(--space-4);
+		background: var(--color-chip);
+		border: 1px solid var(--color-line);
+		border-radius: var(--radius-window);
+		text-align: center;
+		font-weight: 700;
+		color: var(--color-ink);
+	}
+
 	.site-credits {
 		margin-top: var(--space-6);
 		padding: var(--space-4) var(--space-4) var(--space-5);

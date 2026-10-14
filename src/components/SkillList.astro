@@ -16,7 +16,6 @@
 import { getEntry } from 'astro:content';
 import { editBaseUrl } from '../../site.config.mjs';
 import Invitation from './Invitation.astro';
-import VerifiedBadge from './VerifiedBadge.astro';
 import Window from './Window.astro';
 
 interface Props {
@@ -50,7 +49,6 @@ const classFileUrl = `${editBaseUrl}data/classes/${classId}.yaml`;
 						<th scope="col">Skill</th>
 						<th scope="col">Job</th>
 						<th scope="col">Different in Classic World</th>
-						<th scope="col">Status</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -65,9 +63,6 @@ const classFileUrl = `${editBaseUrl}data/classes/${classId}.yaml`;
 								class:list={{ 'unknown-value': !skill.differs_from_original && !skill.summary }}
 							>
 								{skill.differs_from_original ?? skill.summary ?? 'Unknown'}
-							</td>
-							<td data-label="Status">
-								<VerifiedBadge verified={skill.verified} />
 							</td>
 						</tr>
 					))}

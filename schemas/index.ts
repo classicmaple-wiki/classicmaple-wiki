@@ -82,6 +82,7 @@ export const map = entityBase.extend({
 			})
 		)
 		.default([]),
+	minimap: sprite.optional(),
 	recommended_level: z.tuple([positiveInteger, positiveInteger]).optional(),
 	monsters: z.array(identifier).default([]),
 });

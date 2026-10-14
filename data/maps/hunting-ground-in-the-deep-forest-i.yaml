@@ -26,3 +26,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hunting_Ground_in_the_Deep_Forest_I
   build: cot2
+minimap:
+  file: minimaps/hunting-ground-in-the-deep-forest-i.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/105040100/minimap
+  retrieved: 2026-10-14

@@ -19,3 +19,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Over_the_Wall
   build: cot2
+minimap:
+  file: minimaps/over-the-wall.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101040002/minimap
+  retrieved: 2026-10-14

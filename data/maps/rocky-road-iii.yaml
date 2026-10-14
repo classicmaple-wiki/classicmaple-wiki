@@ -20,3 +20,8 @@ source_page: https://mapleclassic.wiki/wiki/Rocky_Road_III
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Rocky_Road_III
+minimap:
+  file: minimaps/rocky-road-iii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101030100/minimap
+  retrieved: 2026-10-14

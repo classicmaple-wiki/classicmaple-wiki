@@ -5,7 +5,8 @@
    when the region names one, or the scene its data names, or the default
    scene.
 
-   The Map window lists the kind of map, its town, linked to the place
+   The Map window opens with the map's minimap when one exists (decision
+   0010), then lists the kind of map, its town, linked to the place
    page when the town has one, the region, and the recommended levels.
    Then what is there (spec 0007): the monsters and NPCs as inventory
    cards with their sprites, and the shops. Then the way around (spec
@@ -18,6 +19,7 @@
 
    The History window appears only once the entry has a recorded change.
 */
+import { existsSync, readFileSync } from 'node:fs';
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getCollection } from 'astro:content';
 import { editBaseUrl } from '../../../site.config.mjs';
@@ -51,6 +53,19 @@ const shopsHere = (await getCollection('shops'))
 	.map((shopEntry) => shopEntry.data)
 	.filter((shop) => shop.map === map.id || (shop.npc !== undefined && npcIdsHere.has(shop.npc)))
 	.sort((first, second) => first.name.localeCompare(second.name));
+/*
+   The minimap's size, read from the PNG header so the page never shifts
+   while it loads (decision 0010).
+*/
+function readMinimap(file: string | undefined) {
+	if (!file) return undefined;
+	const filePath = `public/${file}`;
+	if (!existsSync(filePath)) return undefined;
+	const header = readFileSync(filePath).subarray(16, 24);
+	return { source: `/${file}`, width: header.readUInt32BE(0), height: header.readUInt32BE(4) };
+}
+
+const minimap = readMinimap(map.minimap?.file);
 const allMaps = (await getCollection('maps')).map((mapEntry) => mapEntry.data);
 const exitTargets = new Set(map.exits.map((exit) => exit.to));
 const hiddenExits = new Set(map.exits.filter((exit) => exit.kind === 'hidden').map((exit) => exit.to));
@@ -101,6 +116,14 @@ const headings = [
 	headings={headings}
 >
 	<Window title="Map" id="stats" build={map.verified.build}>
+		{
+			minimap && (
+				<figure class="map-minimap">
+					<img src={minimap.source} width={minimap.width} height={minimap.height} alt={`Minimap of ${map.name}`} decoding="async" />
+					<figcaption>Minimap</figcaption>
+				</figure>
+			)
+		}
 		<StatRows rows={statisticRows} editUrl={editUrl} subject="this map" />
 		{map.verified.build === 'cot2' && <p class="window__note">These numbers were seen in the closed beta. They may differ at launch.</p>}
 	</Window>

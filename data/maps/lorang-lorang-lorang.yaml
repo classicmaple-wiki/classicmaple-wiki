@@ -17,3 +17,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Lorang_Lorang_Lorang
   build: cot2
+minimap:
+  file: minimaps/lorang-lorang-lorang.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/110020001/minimap
+  retrieved: 2026-10-14

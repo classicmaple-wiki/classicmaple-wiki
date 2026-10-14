@@ -35,8 +35,8 @@
   checked: 2026-10-13
   reason: >-
     Says all media and icons are the property of Nexon and claims no rights of its own. No rule against reuse and no
-    credit asked. Lists only official Nexon regions. Use single mob, NPC, or item frames only, never its character
-    renders or composites. Download and host them yourself.
+    credit asked. Lists only official Nexon regions. Use single mob, NPC, or item frames, and map minimaps (decision
+    0010), never its character renders, full map renders, or composites. Download and host them yourself.
 
 - id: maplestorywiki
   name: MapleStory Wiki (maplestorywiki.net)

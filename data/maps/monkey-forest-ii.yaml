@@ -21,3 +21,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Monkey_Forest_II
   build: cot2
+minimap:
+  file: minimaps/monkey-forest-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100040103/minimap
+  retrieved: 2026-10-14

@@ -14,3 +14,8 @@ source_page: https://mapleclassic.wiki/wiki/Someone_Else's_House
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Someone_Else's_House
+minimap:
+  file: minimaps/someone-elses-house.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100000005/minimap
+  retrieved: 2026-10-14

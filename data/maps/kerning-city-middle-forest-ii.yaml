@@ -21,3 +21,8 @@ source_page: https://mapleclassic.wiki/wiki/Kerning_City_Middle_Forest_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Kerning_City_Middle_Forest_II
+minimap:
+  file: minimaps/kerning-city-middle-forest-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/103030100/minimap
+  retrieved: 2026-10-14

@@ -1,6 +1,7 @@
 /*
    Fetches identification sprites from maplestory.io for every monster,
-   NPC, and item that has none yet (docs/policies/images.md). maplestory.io
+   NPC, and item that has none yet, and the minimap for every map that has
+   none (decision 0010) (docs/policies/images.md). maplestory.io
    is on the allowed list in data/sprite-sources.yaml, and the owner
    approved fetching from it by script on 2026-10-14.
 
@@ -14,8 +15,9 @@
    When the full name has no match, it tries once more without a trailing
    note in brackets, so "Regular Cab (Henesys)" finds the Regular Cab.
 
-   A sprite is kept only if it is a PNG of at most 192 by 192 pixels and
-   40 KB, the limits npm run validate enforces. Anything larger, and any
+   A minimap is kept only if it is a PNG of at most 640 pixels a side and
+   80 KB. A sprite is kept only if it is a PNG of at most 192 by 192
+   pixels and 40 KB, the limits npm run validate enforces. Anything larger, and any
    name with no match, is listed in the summary and left without a sprite
    for a person to handle.
 
@@ -38,16 +40,18 @@ const maximumSpriteSide = 192;
 const maximumSpriteBytes = 40 * 1024;
 const shouldWrite = process.argv.includes('--write');
 const dataDirectory = path.resolve('data');
-const spritesDirectory = path.resolve('public/sprites');
 const today = new Date().toISOString().slice(0, 10);
 
 /*
    Where each collection searches and which still frame it downloads.
 */
+const spritePicture = { field: 'sprite', publicFolder: 'public/sprites', maximumSide: maximumSpriteSide, maximumBytes: maximumSpriteBytes };
+const minimapPicture = { field: 'minimap', publicFolder: 'public', maximumSide: 640, maximumBytes: 80 * 1024 };
 const collections = [
-	{ name: 'monsters', searchPath: 'mob', framePath: (gameId: number) => `mob/${gameId}/render/stand/0` },
-	{ name: 'npcs', searchPath: 'npc', framePath: (gameId: number) => `npc/${gameId}/render/stand/0` },
-	{ name: 'items', searchPath: 'item', framePath: (gameId: number) => `item/${gameId}/icon` },
+	{ name: 'monsters', searchPath: 'mob', framePath: (gameId: number) => `mob/${gameId}/render/stand/0`, picture: spritePicture, folder: 'monsters' },
+	{ name: 'npcs', searchPath: 'npc', framePath: (gameId: number) => `npc/${gameId}/render/stand/0`, picture: spritePicture, folder: 'npcs' },
+	{ name: 'items', searchPath: 'item', framePath: (gameId: number) => `item/${gameId}/icon`, picture: spritePicture, folder: 'items' },
+	{ name: 'maps', searchPath: 'map', framePath: (gameId: number) => `map/${gameId}/minimap`, picture: minimapPicture, folder: 'minimaps' },
 ];
 
 type DataRecord = Record<string, unknown>;
@@ -131,7 +135,7 @@ async function main(): Promise<void> {
 		for (const fileName of readdirSync(directory).filter((name) => name.endsWith('.yaml')).sort()) {
 			const filePath = path.join(directory, fileName);
 			const record = parseYaml(readFileSync(filePath, 'utf-8')) as DataRecord;
-			if (record.sprite) {
+			if (record[collection.picture.field]) {
 				count('already has a sprite');
 				continue;
 			}
@@ -159,16 +163,18 @@ async function main(): Promise<void> {
 				leftForPeople.push(`${collection.name}/${record.id}: download failed`);
 				continue;
 			}
-			if (size.width > maximumSpriteSide || size.height > maximumSpriteSide || bytes.length > maximumSpriteBytes) {
+			const { maximumSide, maximumBytes } = collection.picture;
+			if (size.width > maximumSide || size.height > maximumSide || bytes.length > maximumBytes) {
 				count('too large, needs a person to trim');
 				leftForPeople.push(`${collection.name}/${record.id}: ${size.width} by ${size.height}, ${Math.round(bytes.length / 1024)} KB at ${sourceUrl}`);
 				continue;
 			}
 
-			const spriteFile = `${collection.name}/${record.id}.png`;
-			mkdirSync(path.join(spritesDirectory, collection.name), { recursive: true });
-			writeFileSync(path.join(spritesDirectory, spriteFile), bytes);
-			record.sprite = { file: spriteFile, source: 'maplestory-io', source_url: sourceUrl, retrieved: today };
+			const pictureFile = `${collection.folder}/${record.id}.png`;
+			const publicFolder = path.resolve(collection.picture.publicFolder);
+			mkdirSync(path.join(publicFolder, collection.folder), { recursive: true });
+			writeFileSync(path.join(publicFolder, pictureFile), bytes);
+			record[collection.picture.field] = { file: pictureFile, source: 'maplestory-io', source_url: sourceUrl, retrieved: today };
 			writeFileSync(filePath, stringifyYaml(record, { lineWidth: 0 }));
 			count('sprite added');
 		}

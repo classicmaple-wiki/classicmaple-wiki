@@ -18,3 +18,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dangerous_Valley_II
   build: cot2
+minimap:
+  file: minimaps/dangerous-valley-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/106000002/minimap
+  retrieved: 2026-10-14

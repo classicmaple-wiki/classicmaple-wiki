@@ -19,3 +19,8 @@ source_page: https://mapleclassic.wiki/wiki/West_Street_Corner_of_Perion
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/West_Street_Corner_of_Perion
+minimap:
+  file: minimaps/west-street-corner-of-perion.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/102010000/minimap
+  retrieved: 2026-10-14

@@ -18,3 +18,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Northern_Top_of_Construction_Site
   build: cot2
+minimap:
+  file: minimaps/northern-top-of-construction-site.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/102040001/minimap
+  retrieved: 2026-10-14

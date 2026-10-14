@@ -24,3 +24,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sunset_Sky
   build: cot2
+minimap:
+  file: minimaps/sunset-sky.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/102050000/minimap
+  retrieved: 2026-10-14

@@ -17,3 +17,8 @@ source_page: https://mapleclassic.wiki/wiki/Another_Entrance
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Another_Entrance
+minimap:
+  file: minimaps/another-entrance.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/105090200/minimap
+  retrieved: 2026-10-14

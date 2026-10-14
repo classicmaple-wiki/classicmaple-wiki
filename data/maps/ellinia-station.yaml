@@ -10,3 +10,8 @@ source_page: https://mapleclassic.wiki/wiki/Ellinia_Station
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ellinia_Station
+minimap:
+  file: minimaps/ellinia-station.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101000300/minimap
+  retrieved: 2026-10-14

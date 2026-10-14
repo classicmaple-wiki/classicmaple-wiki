@@ -16,3 +16,8 @@ source_page: https://mapleclassic.wiki/wiki/Southperry
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Southperry
+minimap:
+  file: minimaps/southperry.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/60000/minimap
+  retrieved: 2026-10-14

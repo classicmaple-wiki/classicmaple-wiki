@@ -20,3 +20,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Monkey_Swamp_II
   build: cot2
+minimap:
+  file: minimaps/monkey-swamp-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/107000402/minimap
+  retrieved: 2026-10-14

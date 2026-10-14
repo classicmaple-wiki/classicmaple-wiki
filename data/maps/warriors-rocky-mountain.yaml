@@ -10,3 +10,8 @@ source_page: https://mapleclassic.wiki/wiki/Warrior's_Rocky_Mountain
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Warrior's_Rocky_Mountain
+minimap:
+  file: minimaps/warriors-rocky-mountain.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/108000300/minimap
+  retrieved: 2026-10-14

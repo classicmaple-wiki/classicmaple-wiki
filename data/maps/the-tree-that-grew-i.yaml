@@ -21,3 +21,8 @@ source_page: https://mapleclassic.wiki/wiki/The_Tree_That_Grew_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Tree_That_Grew_I
+minimap:
+  file: minimaps/the-tree-that-grew-i.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101010100/minimap
+  retrieved: 2026-10-14

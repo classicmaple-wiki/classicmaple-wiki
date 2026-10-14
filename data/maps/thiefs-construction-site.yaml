@@ -10,3 +10,8 @@ source_page: https://mapleclassic.wiki/wiki/Thief's_Construction_Site
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Thief's_Construction_Site
+minimap:
+  file: minimaps/thiefs-construction-site.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/108000400/minimap
+  retrieved: 2026-10-14

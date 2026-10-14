@@ -20,3 +20,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/In_a_Small_Forest
   build: cot2
+minimap:
+  file: minimaps/in-a-small-forest.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/40000/minimap
+  retrieved: 2026-10-14

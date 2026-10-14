@@ -10,3 +10,8 @@ source_page: https://mapleclassic.wiki/wiki/Thieves'_Hideout
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Thieves'_Hideout
+minimap:
+  file: minimaps/thieves-hideout.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/103000003/minimap
+  retrieved: 2026-10-14

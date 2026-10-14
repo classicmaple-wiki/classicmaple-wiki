@@ -25,3 +25,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Deep_Valley_II
   build: cot2
+minimap:
+  file: minimaps/deep-valley-ii.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/106000100/minimap
+  retrieved: 2026-10-14

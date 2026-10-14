@@ -19,3 +19,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hunting_Ground_Middle_of_the_Forest_I
   build: cot2
+minimap:
+  file: minimaps/hunting-ground-middle-of-the-forest-i.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/1000005/minimap
+  retrieved: 2026-10-14

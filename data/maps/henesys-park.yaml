@@ -16,3 +16,8 @@ source_page: https://mapleclassic.wiki/wiki/Henesys_Park
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Henesys_Park
+minimap:
+  file: minimaps/henesys-park.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100000200/minimap
+  retrieved: 2026-10-14

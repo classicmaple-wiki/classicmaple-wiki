@@ -22,3 +22,8 @@ source_page: https://mapleclassic.wiki/wiki/Perion_Street_Corner
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Perion_Street_Corner
+minimap:
+  file: minimaps/perion-street-corner.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/101040000/minimap
+  retrieved: 2026-10-14

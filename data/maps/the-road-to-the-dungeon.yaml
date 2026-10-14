@@ -28,3 +28,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Road_to_the_Dungeon
   build: cot2
+minimap:
+  file: minimaps/the-road-to-the-dungeon.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/106010000/minimap
+  retrieved: 2026-10-14

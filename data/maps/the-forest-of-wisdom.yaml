@@ -22,3 +22,8 @@ source_page: https://mapleclassic.wiki/wiki/The_Forest_of_Wisdom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Forest_of_Wisdom
+minimap:
+  file: minimaps/the-forest-of-wisdom.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/100040100/minimap
+  retrieved: 2026-10-14

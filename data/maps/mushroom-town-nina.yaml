@@ -16,3 +16,8 @@ source_page: https://mapleclassic.wiki/wiki/Mushroom_Town_(Nina)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Mushroom_Town_(Nina)
+minimap:
+  file: minimaps/mushroom-town-nina.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/10000/minimap
+  retrieved: 2026-10-14

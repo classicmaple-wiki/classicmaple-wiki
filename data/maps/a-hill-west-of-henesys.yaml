@@ -27,3 +27,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/A_Hill_West_of_Henesys
   build: cot2
+minimap:
+  file: minimaps/a-hill-west-of-henesys.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/104030000/minimap
+  retrieved: 2026-10-14

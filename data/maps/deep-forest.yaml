@@ -24,3 +24,8 @@ source_page: https://mapleclassic.wiki/wiki/Deep_Forest
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Deep_Forest
+minimap:
+  file: minimaps/deep-forest.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/105030000/minimap
+  retrieved: 2026-10-14

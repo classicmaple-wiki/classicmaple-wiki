@@ -23,3 +23,8 @@ verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Beach_Hunting_Ground
   build: cot2
+minimap:
+  file: minimaps/beach-hunting-ground.png
+  source: maplestory-io
+  source_url: https://maplestory.io/api/GMS/83/map/104010002/minimap
+  retrieved: 2026-10-14
