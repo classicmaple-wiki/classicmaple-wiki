@@ -1,7 +1,9 @@
 id: red-cloth-vest-female
 name: Red Cloth Vest (Female)
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Red_Cloth_Vest_(Female)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Cloth_Vest_(Female)
+  build: cot2

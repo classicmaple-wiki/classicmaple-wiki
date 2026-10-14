@@ -1,9 +1,13 @@
 id: fairy-4
 name: Fairy 4
+level: 29
+hp: 593
+exp: 54
 source_page: https://mapleclassic.wiki/wiki/Fairy_4
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Fairy_4
+  build: cot2
 sprite:
   file: monsters/fairy-4.png
   source: maplestory-io

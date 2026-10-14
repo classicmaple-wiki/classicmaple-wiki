@@ -1,5 +1,8 @@
 id: slime
 name: Slime
+level: 6
+hp: 115
+exp: 12
 location: the-tree-that-grew-i
 drops:
   - item: arrows-for-bows
@@ -78,6 +81,7 @@ source_page: https://mapleclassic.wiki/wiki/Slime
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Slime
+  build: cot2
 sprite:
   file: monsters/slime.png
   source: maplestory-io

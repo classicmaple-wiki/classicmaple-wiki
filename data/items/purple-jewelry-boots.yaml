@@ -1,10 +1,12 @@
 id: purple-jewelry-boots
 name: Purple Jewelry Boots
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Purple_Jewelry_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Purple_Jewelry_Boots
+  build: cot2
 sprite:
   file: items/purple-jewelry-boots.png
   source: maplestory-io

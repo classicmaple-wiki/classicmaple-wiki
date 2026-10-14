@@ -1,9 +1,13 @@
 id: ligator
 name: Ligator
+level: 31
+hp: 853
+exp: 58
 source_page: https://mapleclassic.wiki/wiki/Ligator
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ligator
+  build: cot2
 sprite:
   file: monsters/ligator.png
   source: maplestory-io

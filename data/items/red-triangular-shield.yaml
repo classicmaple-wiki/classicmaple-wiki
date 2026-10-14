@@ -1,10 +1,12 @@
 id: red-triangular-shield
 name: Red Triangular Shield
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Red_Triangular_Shield
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Triangular_Shield
+  build: cot2
 sprite:
   file: items/red-triangular-shield.png
   source: maplestory-io

@@ -1,9 +1,13 @@
 id: taurospear
 name: Taurospear
+level: 75
+hp: 12535
+exp: 429
 source_page: https://mapleclassic.wiki/wiki/Taurospear
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Taurospear
+  build: cot2
 sprite:
   file: monsters/taurospear.png
   source: maplestory-io

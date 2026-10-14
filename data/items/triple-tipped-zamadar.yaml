@@ -1,10 +1,12 @@
 id: triple-tipped-zamadar
 name: Triple-Tipped Zamadar
 category: equipment
+required_level: 17
 source_page: https://mapleclassic.wiki/wiki/Triple-Tipped_Zamadar
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Triple-Tipped_Zamadar
+  build: cot2
 sprite:
   file: items/triple-tipped-zamadar.png
   source: maplestory-io

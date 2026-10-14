@@ -1,10 +1,12 @@
 id: steel-pipe
 name: Steel Pipe
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Steel_Pipe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Steel_Pipe
+  build: cot2
 sprite:
   file: items/steel-pipe.png
   source: maplestory-io

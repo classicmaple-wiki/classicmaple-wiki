@@ -3,6 +3,9 @@ name: Land of Wild Boar
 region: Victoria Island
 town: Perion
 kind: field
+recommended_level:
+  - 23
+  - 35
 monsters:
   - dark-axe-stump
   - jr-boogie-1
@@ -12,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/Land_of_Wild_Boar
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Land_of_Wild_Boar
+  build: cot2

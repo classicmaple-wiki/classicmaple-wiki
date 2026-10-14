@@ -1,10 +1,12 @@
 id: mace
 name: Mace
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Mace
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Mace
+  build: cot2
 sprite:
   file: items/mace.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: brown-lolico-pants
 name: Brown Lolico Pants
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Brown_Lolico_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Lolico_Pants
+  build: cot2
 sprite:
   file: items/brown-lolico-pants.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: red-cloth-pants
 name: Red Cloth Pants
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Red_Cloth_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Cloth_Pants
+  build: cot2
 sprite:
   file: items/red-cloth-pants.png
   source: maplestory-io

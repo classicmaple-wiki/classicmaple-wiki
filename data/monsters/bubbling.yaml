@@ -1,5 +1,8 @@
 id: bubbling
 name: Bubbling
+level: 15
+hp: 259
+exp: 28
 drops:
   - item: bubblings-huge-bubble
     rate_percent: 38.89
@@ -22,6 +25,7 @@ source_page: https://mapleclassic.wiki/wiki/Bubbling
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Bubbling
+  build: cot2
 sprite:
   file: monsters/bubbling.png
   source: maplestory-io

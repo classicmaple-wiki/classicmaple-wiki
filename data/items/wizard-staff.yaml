@@ -1,10 +1,12 @@
 id: wizard-staff
 name: Wizard Staff
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Wizard_Staff
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Wizard_Staff
+  build: cot2
 sprite:
   file: items/wizard-staff.png
   source: maplestory-io

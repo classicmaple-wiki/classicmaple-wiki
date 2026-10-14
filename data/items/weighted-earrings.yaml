@@ -1,10 +1,12 @@
 id: weighted-earrings
 name: Weighted Earrings
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Weighted_Earrings
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Weighted_Earrings
+  build: cot2
 sprite:
   file: items/weighted-earrings.png
   source: maplestory-io

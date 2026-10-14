@@ -1,10 +1,12 @@
 id: brown-moon-conehat
 name: Brown Moon Conehat
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Brown_Moon_Conehat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Moon_Conehat
+  build: cot2
 sprite:
   file: items/brown-moon-conehat.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: battle-bow
 name: Battle Bow
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Battle_Bow
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Battle_Bow
+  build: cot2
 sprite:
   file: items/battle-bow.png
   source: maplestory-io

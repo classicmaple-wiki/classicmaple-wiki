@@ -1,5 +1,8 @@
 id: shroom
 name: Shroom
+level: 3
+hp: 62
+exp: 6
 drops:
   - item: arrows-for-bows
     rate_percent: 4.76
@@ -39,6 +42,7 @@ source_page: https://mapleclassic.wiki/wiki/Shroom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Shroom
+  build: cot2
 sprite:
   file: monsters/shroom.png
   source: maplestory-io

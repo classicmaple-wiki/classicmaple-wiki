@@ -1,7 +1,9 @@
 id: blue-cloth-pants-female
 name: Blue Cloth Pants (Female)
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Blue_Cloth_Pants_(Female)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Cloth_Pants_(Female)
+  build: cot2

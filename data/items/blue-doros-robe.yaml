@@ -1,10 +1,12 @@
 id: blue-doros-robe
 name: Blue Doros Robe
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Blue_Doros_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Doros_Robe
+  build: cot2
 sprite:
   file: items/blue-doros-robe.png
   source: maplestory-io

@@ -1,9 +1,13 @@
 id: tortie
 name: Tortie
+level: 46
+hp: 2671
+exp: 111
 source_page: https://mapleclassic.wiki/wiki/Tortie
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tortie
+  build: cot2
 sprite:
   file: monsters/tortie.png
   source: maplestory-io

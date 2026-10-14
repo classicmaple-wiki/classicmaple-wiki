@@ -3,6 +3,9 @@ name: Beach Hunting Ground
 region: Victoria Island
 town: Lith Harbor
 kind: hunting-ground
+recommended_level:
+  - 7
+  - 10
 monsters:
   - blue-snail
   - orange-mushroom
@@ -16,3 +19,4 @@ source_page: https://mapleclassic.wiki/wiki/Beach_Hunting_Ground
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Beach_Hunting_Ground
+  build: cot2

@@ -1,5 +1,8 @@
 id: dark-stump
 name: Dark Stump
+level: 11
+hp: 236
+exp: 21
 drops:
   - item: arrows-for-bows
     rate_percent: 1.69
@@ -53,6 +56,7 @@ source_page: https://mapleclassic.wiki/wiki/Dark_Stump
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Stump
+  build: cot2
 sprite:
   file: monsters/dark-stump.png
   source: maplestory-io

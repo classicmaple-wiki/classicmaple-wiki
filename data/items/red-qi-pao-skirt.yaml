@@ -1,10 +1,12 @@
 id: red-qi-pao-skirt
 name: Red Qi Pao Skirt
 category: equipment
+required_level: 22
 source_page: https://mapleclassic.wiki/wiki/Red_Qi_Pao_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Qi_Pao_Skirt
+  build: cot2
 sprite:
   file: items/red-qi-pao-skirt.png
   source: maplestory-io

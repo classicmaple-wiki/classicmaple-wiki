@@ -1,10 +1,12 @@
 id: sky-shark-skirt
 name: Sky Shark Skirt
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Sky_Shark_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sky_Shark_Skirt
+  build: cot2
 sprite:
   file: items/sky-shark-skirt.png
   source: maplestory-io

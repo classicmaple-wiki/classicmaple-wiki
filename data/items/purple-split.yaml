@@ -1,10 +1,12 @@
 id: purple-split
 name: Purple Split
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Purple_Split
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Purple_Split
+  build: cot2
 sprite:
   file: items/purple-split.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: green-able-armor
 name: Green Able Armor
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Green_Able_Armor
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Able_Armor
+  build: cot2
 sprite:
   file: items/green-able-armor.png
   source: maplestory-io

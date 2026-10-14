@@ -1,10 +1,12 @@
 id: red-hunter
 name: Red Hunter
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Red_Hunter
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Hunter
+  build: cot2
 sprite:
   file: items/red-hunter.png
   source: maplestory-io

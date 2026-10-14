@@ -1,9 +1,13 @@
 id: fairy-3
 name: Fairy 3
+level: 29
+hp: 593
+exp: 54
 source_page: https://mapleclassic.wiki/wiki/Fairy_3
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Fairy_3
+  build: cot2
 sprite:
   file: monsters/fairy-3.png
   source: maplestory-io

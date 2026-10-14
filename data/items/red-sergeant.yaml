@@ -1,10 +1,12 @@
 id: red-sergeant
 name: Red Sergeant
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Red_Sergeant
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Sergeant
+  build: cot2
 sprite:
   file: items/red-sergeant.png
   source: maplestory-io

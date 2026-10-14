@@ -1,10 +1,12 @@
 id: red-shark
 name: Red Shark
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Red_Shark
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Shark
+  build: cot2
 sprite:
   file: items/red-shark.png
   source: maplestory-io

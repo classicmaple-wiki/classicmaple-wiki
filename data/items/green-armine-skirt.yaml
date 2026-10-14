@@ -1,10 +1,12 @@
 id: green-armine-skirt
 name: Green Armine Skirt
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Green_Armine_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Armine_Skirt
+  build: cot2
 sprite:
   file: items/green-armine-skirt.png
   source: maplestory-io

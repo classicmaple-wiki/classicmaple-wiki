@@ -1,7 +1,9 @@
 id: blue-pao-bottoms
 name: Blue Pao Bottoms
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Blue_Pao_Bottoms
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Pao_Bottoms
+  build: cot2

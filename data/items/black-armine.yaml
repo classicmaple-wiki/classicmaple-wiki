@@ -1,10 +1,12 @@
 id: black-armine
 name: Black Armine
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Black_Armine
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Armine
+  build: cot2
 sprite:
   file: items/black-armine.png
   source: maplestory-io

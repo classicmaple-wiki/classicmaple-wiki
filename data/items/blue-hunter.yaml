@@ -1,10 +1,12 @@
 id: blue-hunter
 name: Blue Hunter
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Blue_Hunter
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Hunter
+  build: cot2
 sprite:
   file: items/blue-hunter.png
   source: maplestory-io

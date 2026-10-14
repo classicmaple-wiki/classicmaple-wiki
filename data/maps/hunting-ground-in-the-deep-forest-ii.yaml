@@ -3,6 +3,9 @@ name: Hunting Ground in the Deep Forest II
 region: Victoria Island
 town: Sleepywood
 kind: hunting-ground
+recommended_level:
+  - 33
+  - 33
 monsters:
   - curse-eye
   - horny-mushroom
@@ -13,3 +16,4 @@ source_page: https://mapleclassic.wiki/wiki/Hunting_Ground_in_the_Deep_Forest_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hunting_Ground_in_the_Deep_Forest_II
+  build: cot2

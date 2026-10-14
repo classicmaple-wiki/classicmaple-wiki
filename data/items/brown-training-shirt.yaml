@@ -1,7 +1,9 @@
 id: brown-training-shirt
 name: Brown Training Shirt
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Brown_Training_Shirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Training_Shirt
+  build: cot2

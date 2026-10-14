@@ -3,6 +3,9 @@ name: Downstairs at the Forest
 region: Victoria Island
 town: Ellinia
 kind: field
+recommended_level:
+  - 37
+  - 37
 monsters:
   - green-mushroom
   - horny-mushroom
@@ -12,3 +15,4 @@ source_page: https://mapleclassic.wiki/wiki/Downstairs_at_the_Forest
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Downstairs_at_the_Forest
+  build: cot2

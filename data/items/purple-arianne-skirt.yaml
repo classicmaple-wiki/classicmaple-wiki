@@ -1,10 +1,12 @@
 id: purple-arianne-skirt
 name: Purple Arianne Skirt
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Purple_Arianne_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Purple_Arianne_Skirt
+  build: cot2
 sprite:
   file: items/purple-arianne-skirt.png
   source: maplestory-io

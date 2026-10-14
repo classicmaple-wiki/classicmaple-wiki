@@ -1,10 +1,12 @@
 id: black-ghetto-beanie
 name: Black Ghetto Beanie
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Black_Ghetto_Beanie
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Ghetto_Beanie
+  build: cot2
 sprite:
   file: items/black-ghetto-beanie.png
   source: maplestory-io

@@ -3,6 +3,9 @@ name: Ant Tunnel For Bowman
 region: Hidden Street
 town: Henesys
 kind: dungeon
+recommended_level:
+  - 35
+  - 35
 monsters:
   - evil-eye
   - zombie-mushroom
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Ant_Tunnel_For_Bowman
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Ant_Tunnel_For_Bowman
+  build: cot2

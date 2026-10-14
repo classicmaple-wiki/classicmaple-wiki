@@ -1,10 +1,12 @@
 id: black-loosecap
 name: Black Loosecap
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Black_Loosecap
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Loosecap
+  build: cot2
 sprite:
   file: items/black-loosecap.png
   source: maplestory-io

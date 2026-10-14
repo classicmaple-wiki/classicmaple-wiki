@@ -3,6 +3,9 @@ name: Dangerous Valley
 region: Victoria Island
 town: Perion
 kind: field
+recommended_level:
+  - 25
+  - 32
 monsters:
   - copper-drake
   - fire-boar
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Dangerous_Valley
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dangerous_Valley
+  build: cot2

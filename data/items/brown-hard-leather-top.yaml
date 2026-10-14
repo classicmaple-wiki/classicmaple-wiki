@@ -1,10 +1,12 @@
 id: brown-hard-leather-top
 name: Brown Hard Leather Top
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Top
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Top
+  build: cot2
 sprite:
   file: items/brown-hard-leather-top.png
   source: maplestory-io

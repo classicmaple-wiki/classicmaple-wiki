@@ -1,7 +1,9 @@
 id: black-cloth-vest-female
 name: Black Cloth Vest (Female)
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Black_Cloth_Vest_(Female)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Cloth_Vest_(Female)
+  build: cot2

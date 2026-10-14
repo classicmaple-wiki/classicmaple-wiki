@@ -1,10 +1,12 @@
 id: brown-lamelle
 name: Brown Lamelle
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Brown_Lamelle
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Lamelle
+  build: cot2
 sprite:
   file: items/brown-lamelle.png
   source: maplestory-io

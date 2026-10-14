@@ -1,10 +1,12 @@
 id: red-apprentice-hat
 name: Red Apprentice Hat
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Red_Apprentice_Hat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Apprentice_Hat
+  build: cot2
 sprite:
   file: items/red-apprentice-hat.png
   source: maplestory-io

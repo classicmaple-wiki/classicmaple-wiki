@@ -1,5 +1,8 @@
 id: stump
 name: Stump
+level: 5
+hp: 133
+exp: 10
 location: the-tree-that-grew-ii
 drops:
   - item: arrows-for-bows
@@ -71,6 +74,7 @@ source_page: https://mapleclassic.wiki/wiki/Stump
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Stump
+  build: cot2
 sprite:
   file: monsters/stump.png
   source: maplestory-io

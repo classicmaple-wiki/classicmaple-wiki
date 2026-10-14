@@ -1,10 +1,12 @@
 id: meba
 name: Meba
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Meba
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Meba
+  build: cot2
 sprite:
   file: items/meba.png
   source: maplestory-io

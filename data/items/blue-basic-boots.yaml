@@ -1,10 +1,12 @@
 id: blue-basic-boots
 name: Blue Basic Boots
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Blue_Basic_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Basic_Boots
+  build: cot2
 sprite:
   file: items/blue-basic-boots.png
   source: maplestory-io

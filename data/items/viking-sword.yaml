@@ -1,10 +1,12 @@
 id: viking-sword
 name: Viking Sword
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Viking_Sword
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Viking_Sword
+  build: cot2
 sprite:
   file: items/viking-sword.png
   source: maplestory-io

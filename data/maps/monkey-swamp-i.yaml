@@ -3,6 +3,9 @@ name: Monkey Swamp I
 region: Victoria Island
 town: Kerning City
 kind: field
+recommended_level:
+  - 21
+  - 37
 monsters:
   - jr-necki
   - lupin
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Monkey_Swamp_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Monkey_Swamp_I
+  build: cot2

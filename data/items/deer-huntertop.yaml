@@ -1,10 +1,12 @@
 id: deer-huntertop
 name: Deer Huntertop
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Deer_Huntertop
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Deer_Huntertop
+  build: cot2
 sprite:
   file: items/deer-huntertop.png
   source: maplestory-io

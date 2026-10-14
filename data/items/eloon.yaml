@@ -1,10 +1,12 @@
 id: eloon
 name: Eloon
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Eloon
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Eloon
+  build: cot2
 sprite:
   file: items/eloon.png
   source: maplestory-io

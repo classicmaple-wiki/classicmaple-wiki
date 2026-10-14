@@ -1,5 +1,8 @@
 id: evil-eye
 name: Evil Eye
+level: 27
+hp: 606
+exp: 50
 drops:
   - item: evil-eye-tail
     rate_percent: 47.54
@@ -29,6 +32,7 @@ source_page: https://mapleclassic.wiki/wiki/Evil_Eye
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Evil_Eye
+  build: cot2
 sprite:
   file: monsters/evil-eye.png
   source: maplestory-io

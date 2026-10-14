@@ -1,9 +1,13 @@
 id: iron-hog
 name: Iron Hog
+level: 28
+hp: 572
+exp: 52
 source_page: https://mapleclassic.wiki/wiki/Iron_Hog
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Iron_Hog
+  build: cot2
 sprite:
   file: monsters/iron-hog.png
   source: maplestory-io

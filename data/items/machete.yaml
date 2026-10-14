@@ -1,10 +1,12 @@
 id: machete
 name: Machete
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Machete
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Machete
+  build: cot2
 sprite:
   file: items/machete.png
   source: maplestory-io

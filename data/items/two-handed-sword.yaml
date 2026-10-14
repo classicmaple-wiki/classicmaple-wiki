@@ -1,10 +1,12 @@
 id: two-handed-sword
 name: Two-Handed Sword
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Two-Handed_Sword
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Two-Handed_Sword
+  build: cot2
 sprite:
   file: items/two-handed-sword.png
   source: maplestory-io

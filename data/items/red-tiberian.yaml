@@ -1,10 +1,12 @@
 id: red-tiberian
 name: Red Tiberian
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Red_Tiberian
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Tiberian
+  build: cot2
 sprite:
   file: items/red-tiberian.png
   source: maplestory-io

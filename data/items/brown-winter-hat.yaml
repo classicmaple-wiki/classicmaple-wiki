@@ -1,10 +1,12 @@
 id: brown-winter-hat
 name: Brown Winter Hat
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Brown_Winter_Hat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Winter_Hat
+  build: cot2
 sprite:
   file: items/brown-winter-hat.png
   source: maplestory-io

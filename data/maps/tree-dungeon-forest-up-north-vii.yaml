@@ -3,6 +3,9 @@ name: Tree Dungeon, Forest Up North VII
 region: Victoria Island
 town: Ellinia
 kind: dungeon
+recommended_level:
+  - 22
+  - 22
 monsters:
   - cold-eye
   - curse-eye
@@ -11,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Forest_Up_North_VII
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Forest_Up_North_VII
+  build: cot2

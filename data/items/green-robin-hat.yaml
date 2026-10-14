@@ -1,10 +1,12 @@
 id: green-robin-hat
 name: Green Robin Hat
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Green_Robin_Hat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Robin_Hat
+  build: cot2
 sprite:
   file: items/green-robin-hat.png
   source: maplestory-io

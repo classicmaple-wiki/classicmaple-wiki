@@ -1,10 +1,12 @@
 id: blue-tiberian
 name: Blue Tiberian
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Blue_Tiberian
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Tiberian
+  build: cot2
 sprite:
   file: items/blue-tiberian.png
   source: maplestory-io

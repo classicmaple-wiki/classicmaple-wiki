@@ -1,10 +1,12 @@
 id: brown-doroness-robe
 name: Brown Doroness Robe
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Brown_Doroness_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Doroness_Robe
+  build: cot2
 sprite:
   file: items/brown-doroness-robe.png
   source: maplestory-io

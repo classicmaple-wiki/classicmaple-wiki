@@ -1,10 +1,12 @@
 id: archer-pants
 name: Archer Pants
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Archer_Pants
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Archer_Pants
+  build: cot2
 sprite:
   file: items/archer-pants.png
   source: maplestory-io

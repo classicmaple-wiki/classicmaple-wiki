@@ -3,9 +3,13 @@ name: Tree Dungeon, Forest Up North IX
 region: Victoria Island
 town: Ellinia
 kind: dungeon
+recommended_level:
+  - 33
+  - 33
 monsters:
   - curse-eye
 source_page: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Forest_Up_North_IX
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tree_Dungeon%2C_Forest_Up_North_IX
+  build: cot2

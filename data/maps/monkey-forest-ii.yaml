@@ -3,6 +3,9 @@ name: Monkey Forest II
 region: Victoria Island
 town: Ellinia
 kind: field
+recommended_level:
+  - 37
+  - 41
 monsters:
   - lupin
   - zombie-lupin
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Monkey_Forest_II
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Monkey_Forest_II
+  build: cot2

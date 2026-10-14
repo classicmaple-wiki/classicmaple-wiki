@@ -1,10 +1,12 @@
 id: metal-wand
 name: Metal Wand
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Metal_Wand
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Metal_Wand
+  build: cot2
 sprite:
   file: items/metal-wand.png
   source: maplestory-io

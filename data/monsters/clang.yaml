@@ -1,9 +1,13 @@
 id: clang
 name: Clang
+level: 49
+hp: 2899
+exp: 127
 source_page: https://mapleclassic.wiki/wiki/Clang
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Clang
+  build: cot2
 sprite:
   file: monsters/clang.png
   source: maplestory-io

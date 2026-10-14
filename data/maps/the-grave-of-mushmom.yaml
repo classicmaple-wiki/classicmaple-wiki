@@ -2,6 +2,9 @@ id: the-grave-of-mushmom
 name: The Grave of Mushmom
 region: Victoria Island
 kind: dungeon
+recommended_level:
+  - 24
+  - 50
 monsters:
   - jr-boogie-2
   - zombie-mushmom
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Grave_of_Mushmom
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Grave_of_Mushmom
+  build: cot2

@@ -1,10 +1,12 @@
 id: steel-sharp-helm
 name: Steel Sharp Helm
 category: equipment
+required_level: 22
 source_page: https://mapleclassic.wiki/wiki/Steel_Sharp_Helm
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Steel_Sharp_Helm
+  build: cot2
 sprite:
   file: items/steel-sharp-helm.png
   source: maplestory-io

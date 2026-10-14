@@ -29,6 +29,8 @@ Recommendation: option 2 if the datamining ban is meant strictly, option 1 if it
 
 **Answer, 2026-10-13: option 2**, "and just make sure that it's safe to import without any law issues."
 
+**Widened 2026-10-14: option 2 plus core numbers.** For launch the owner chose to import monster level, HP, and EXP, item required level, and map recommended levels, as `unverified`. Item stats, prices, and rewards stay out. Assumption: the source's game version 0.9.0 is the closed beta, Closed Online Test 2 (`cot2`). Their About page says the wiki documents the game "as seen in its closed beta testing", and their one dated update, 2026-08-11, falls inside that test. See decision 0008, amendment.
+
 Option 2 narrows what comes from client data but cannot remove it. Names, locations, quest links, and shop lists were probably read from the closed beta client too. Only the drop rates are certainly player observed. Facts are not Nexon's copyright, and we never datamine ourselves, so the risk is low, but it is not zero.
 
 ## Legal review

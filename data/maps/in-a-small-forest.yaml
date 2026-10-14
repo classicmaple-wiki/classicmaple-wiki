@@ -3,6 +3,9 @@ name: In a Small Forest
 region: Maple Island
 town: Amherst
 kind: hunting-ground
+recommended_level:
+  - 1
+  - 8
 monsters:
   - blue-snail
   - orange-mushroom
@@ -13,3 +16,4 @@ source_page: https://mapleclassic.wiki/wiki/In_a_Small_Forest
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/In_a_Small_Forest
+  build: cot2

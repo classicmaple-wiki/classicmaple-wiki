@@ -1,5 +1,8 @@
 id: pig
 name: Pig
+level: 7
+hp: 128
+exp: 13
 location: the-pig-beach
 region: Victoria Island
 drops:
@@ -86,6 +89,7 @@ source_page: https://mapleclassic.wiki/wiki/Pig
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Pig
+  build: cot2
 sprite:
   file: monsters/pig.png
   source: maplestory-io

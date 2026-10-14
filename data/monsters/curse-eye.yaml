@@ -1,9 +1,13 @@
 id: curse-eye
 name: Curse Eye
+level: 33
+hp: 1001
+exp: 63
 source_page: https://mapleclassic.wiki/wiki/Curse_Eye
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Curse_Eye
+  build: cot2
 sprite:
   file: monsters/curse-eye.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: black-split-skirt
 name: Black Split Skirt
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Black_Split_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Black_Split_Skirt
+  build: cot2
 sprite:
   file: items/black-split-skirt.png
   source: maplestory-io

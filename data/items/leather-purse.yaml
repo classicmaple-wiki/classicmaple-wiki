@@ -1,10 +1,12 @@
 id: leather-purse
 name: Leather Purse
 category: equipment
+required_level: 12
 source_page: https://mapleclassic.wiki/wiki/Leather_Purse
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Leather_Purse
+  build: cot2
 sprite:
   file: items/leather-purse.png
   source: maplestory-io

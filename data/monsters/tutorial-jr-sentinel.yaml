@@ -1,9 +1,13 @@
 id: tutorial-jr-sentinel
 name: Tutorial Jr. Sentinel
+level: 1
+hp: 30
+exp: 1
 source_page: https://mapleclassic.wiki/wiki/Tutorial_Jr._Sentinel
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Tutorial_Jr._Sentinel
+  build: cot2
 sprite:
   file: monsters/tutorial-jr-sentinel.png
   source: maplestory-io

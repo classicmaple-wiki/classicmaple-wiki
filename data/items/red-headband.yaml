@@ -1,10 +1,12 @@
 id: red-headband
 name: Red Headband
 category: equipment
+required_level: 5
 source_page: https://mapleclassic.wiki/wiki/Red_Headband
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Headband
+  build: cot2
 sprite:
   file: items/red-headband.png
   source: maplestory-io

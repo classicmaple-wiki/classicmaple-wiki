@@ -1,10 +1,12 @@
 id: green-avelin
 name: Green Avelin
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Green_Avelin
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Avelin
+  build: cot2
 sprite:
   file: items/green-avelin.png
   source: maplestory-io

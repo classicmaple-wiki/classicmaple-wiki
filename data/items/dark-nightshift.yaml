@@ -1,10 +1,12 @@
 id: dark-nightshift
 name: Dark Nightshift
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Dark_Nightshift
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Nightshift
+  build: cot2
 sprite:
   file: items/dark-nightshift.png
   source: maplestory-io

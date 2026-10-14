@@ -8,7 +8,8 @@
    The Item window lists every field as a labeled row. Stats are listed
    one per row under their own names. Missing values read Unknown, and
    when every value is Unknown one invitation replaces the per row links.
-   The crafting profession links to the crafting guide. Then where to get
+   The crafting profession, shown only for crafted items, links to the
+   crafting guide. Then where to get
    it: the monsters players saw drop it, with the chance and the kills
    behind it, and the shops that sell it (spec 0007). Notes and the
    history follow, then the source credit when the data came from
@@ -56,7 +57,7 @@ const statisticRows = [
 	{ label: 'Category', value: category },
 	{ label: 'Required level', value: item.required_level === undefined ? undefined : formatStatistic(item.required_level) },
 	...Object.entries(item.stats).map(([name, value]) => ({ label: name, value: formatStatistic(value) })),
-	{ label: 'Crafted by', value: profession?.data.name, href: profession ? '/economy/crafting/' : undefined },
+	...(profession ? [{ label: 'Crafted by', value: profession.data.name, href: '/economy/crafting/' }] : []),
 ];
 
 const headings = [
@@ -81,6 +82,7 @@ const headings = [
 >
 	<Window title="Item" id="stats" build={item.verified.build}>
 		<StatRows rows={statisticRows} editUrl={editUrl} subject="this item" />
+		{item.verified.build === 'cot2' && <p class="window__note">These numbers were seen in the closed beta. They may differ at launch.</p>}
 	</Window>
 
 	{

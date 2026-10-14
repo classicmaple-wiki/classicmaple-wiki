@@ -3,6 +3,9 @@ name: The Field West of Amherst
 region: Maple Island
 town: Amherst
 kind: hunting-ground
+recommended_level:
+  - 1
+  - 8
 monsters:
   - blue-snail
   - orange-mushroom
@@ -13,3 +16,4 @@ source_page: https://mapleclassic.wiki/wiki/The_Field_West_of_Amherst
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/The_Field_West_of_Amherst
+  build: cot2

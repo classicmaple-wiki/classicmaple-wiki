@@ -1,10 +1,12 @@
 id: green-avelin-skirt
 name: Green Avelin Skirt
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Green_Avelin_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Avelin_Skirt
+  build: cot2
 sprite:
   file: items/green-avelin-skirt.png
   source: maplestory-io

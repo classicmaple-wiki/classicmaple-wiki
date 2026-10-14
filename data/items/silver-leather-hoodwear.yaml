@@ -1,10 +1,12 @@
 id: silver-leather-hoodwear
 name: Silver Leather Hoodwear
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Silver_Leather_Hoodwear
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Silver_Leather_Hoodwear
+  build: cot2
 sprite:
   file: items/silver-leather-hoodwear.png
   source: maplestory-io

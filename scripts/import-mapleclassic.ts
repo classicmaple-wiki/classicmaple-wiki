@@ -1,14 +1,18 @@
 /*
-   Seeds data/ from MapleClassic Wiki (spec 0005, option 2), a Classic
-   World wiki licensed CC BY-NC-SA 4.0.
+   Seeds data/ from MapleClassic Wiki (spec 0005, option 2 plus core
+   numbers), a Classic World wiki licensed CC BY-NC-SA 4.0.
 
    What it takes is deliberately narrow. Names, where things are, who gives
    a quest and which quests come first, what a shop sells, and monster
    drops that players observed, with the date and the number of kills
-   behind each rate. It never takes stats, prices, rewards, or other values
-   that come from the game's files, never takes description or dialogue
-   text, never takes images, and never stores the names of the players who
-   observed a drop.
+   behind each rate. Since 2026-10-14 the owner also allows the core
+   numbers players look up most: a monster's level, HP, and EXP, an item's
+   required level, and a map's recommended levels. They come from the
+   source's closed beta data, so a record that has any of them names the
+   Closed Online Test 2 build. It never takes item stats, prices, rewards,
+   or any other number, never takes description or dialogue text, never
+   takes images, and never stores the names of the players who observed a
+   drop.
 
    It is polite to the source. It reads only api.php with action=cargoquery
    and one category listing, never index.php or Special pages, waits at
@@ -58,6 +62,7 @@ const minimumGapMilliseconds = 1100;
 const rowsPerRequest = 500;
 const shouldWrite = process.argv.includes('--write');
 const dropBuild = 'founders-2026-10-06';
+const closedBetaBuild = 'cot2';
 const foundersAccessStart = '2026-10-06';
 const dataDirectory = path.resolve('data');
 const expectedLicenseUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
@@ -232,11 +237,23 @@ function sourcePageUrl(pageName: string): string {
 
 /*
    The verification block every imported record starts with: unverified,
-   pointing at its source page. No build is named, because the source's
-   game version does not map cleanly onto one of our builds.
+   pointing at its source page. A record that carries core numbers names
+   the build they were seen in, the closed beta (spec 0005). A record with
+   no numbers names no build.
 */
-function importedVerification(pageName: string): DataRecord {
-	return { status: 'unverified', source: sourcePageUrl(pageName) };
+function importedVerification(pageName: string, hasNumbers = false): DataRecord {
+	return compact({ status: 'unverified', source: sourcePageUrl(pageName), build: hasNumbers ? closedBetaBuild : undefined });
+}
+
+/*
+   A positive whole number from a Cargo value, or undefined when the value
+   is empty, zero where zero means unknown, or not a number.
+*/
+function positiveNumber(value: string | null | undefined, allowZero = false): number | undefined {
+	if (value === null || value === undefined || value.trim() === '') return undefined;
+	const parsed = Number(value);
+	if (!Number.isInteger(parsed) || parsed < 0 || (!allowZero && parsed === 0)) return undefined;
+	return parsed;
 }
 
 /*
@@ -309,9 +326,9 @@ function makeIdentifierAllocator(collection: string) {
 async function planImport(): Promise<PlannedRecord[]> {
 	const excludedTitles = await notAtLaunchTitles();
 	const [maps, spawns, monsters, drops, npcs, quests, prerequisiteRows, shops, shopItems, items] = [
-		await cargoQuery('maps', '_pageName=page,region,nearest_town=town,map_type=kind'),
+		await cargoQuery('maps', '_pageName=page,region,nearest_town=town,map_type=kind,recommended_level_min=levelmin,recommended_level_max=levelmax'),
 		await cargoQuery('monster_spawns', 'monster_id=monster,map_id=map'),
-		await cargoQuery('monsters', '_pageName=page,primary_location=location,region,boss,released,variant'),
+		await cargoQuery('monsters', '_pageName=page,primary_location=location,region,boss,released,variant,level,hp,exp'),
 		await cargoQuery(
 			'monster_drops',
 			'monster_id=monster,item_id=item,drop_rate=rate,min_quantity=minimum,max_quantity=maximum,observed_on=observed,sample_kills=kills,sample_drops=dropped'
@@ -321,7 +338,7 @@ async function planImport(): Promise<PlannedRecord[]> {
 		await cargoQuery('quests', '_pageName=page,prerequisite__full=prerequisites'),
 		await cargoQuery('shops', '_pageName=page,npc,map,region'),
 		await cargoQuery('shop_items', 'shop_id=shop,item_id=item'),
-		await cargoQuery('items', '_pageName=page,category'),
+		await cargoQuery('items', '_pageName=page,category,required_level=requiredlevel'),
 	];
 
 	const isExcluded = (pageName: string | undefined): boolean => {
@@ -405,11 +422,19 @@ async function planImport(): Promise<PlannedRecord[]> {
 		const identifier = itemIdentifier(page);
 		if (!identifier) continue;
 		const category = categoryNames[itemPages.get(page)!.category ?? ''] ?? 'other';
+		const requiredLevel = positiveNumber(itemPages.get(page)!.requiredlevel);
 		planned.push({
 			pageName: page,
 			collection: 'items',
 			identifier,
-			record: compact({ id: identifier, name: page, category, source_page: sourcePageUrl(page), verified: importedVerification(page) }),
+			record: compact({
+				id: identifier,
+				name: page,
+				category,
+				required_level: requiredLevel,
+				source_page: sourcePageUrl(page),
+				verified: importedVerification(page, requiredLevel !== undefined),
+			}),
 		});
 	}
 	const importedItems = new Set(planned.filter((entry) => entry.collection === 'items').map((entry) => entry.identifier));
@@ -438,6 +463,12 @@ async function planImport(): Promise<PlannedRecord[]> {
 
 	for (const [page, row] of [...mapPages.entries()].sort(([first], [second]) => first.localeCompare(second))) {
 		const identifier = mapIdentifier(page)!;
+		const levelMinimum = positiveNumber(row.levelmin);
+		const levelMaximum = positiveNumber(row.levelmax);
+		const recommendedLevel =
+			levelMinimum !== undefined && levelMaximum !== undefined && levelMinimum <= levelMaximum
+				? [levelMinimum, levelMaximum]
+				: undefined;
 		planned.push({
 			pageName: page,
 			collection: 'maps',
@@ -448,9 +479,10 @@ async function planImport(): Promise<PlannedRecord[]> {
 				region: decodeEntities(row.region),
 				town: decodeEntities(row.town),
 				kind: toIdentifier(decodeEntities(row.kind)),
+				recommended_level: recommendedLevel,
 				monsters: [...(monstersOnMap.get(page) ?? [])].sort(),
 				source_page: sourcePageUrl(page),
-				verified: importedVerification(page),
+				verified: importedVerification(page, recommendedLevel !== undefined),
 			}),
 		});
 	}
@@ -485,6 +517,9 @@ async function planImport(): Promise<PlannedRecord[]> {
 
 	for (const [page, row] of [...monsterPages.entries()].sort(([first], [second]) => first.localeCompare(second))) {
 		const identifier = monsterIdentifier(page)!;
+		const level = positiveNumber(row.level);
+		const hp = positiveNumber(row.hp);
+		const exp = positiveNumber(row.exp, true);
 		planned.push({
 			pageName: page,
 			collection: 'monsters',
@@ -492,12 +527,15 @@ async function planImport(): Promise<PlannedRecord[]> {
 			record: compact({
 				id: identifier,
 				name: page,
+				level,
+				hp,
+				exp,
 				boss: row.boss === '1' ? true : undefined,
 				location: resolveMap(row.location ?? undefined),
 				region: decodeEntities(row.region),
 				drops: dropsByMonster.get(page),
 				source_page: sourcePageUrl(page),
-				verified: importedVerification(page),
+				verified: importedVerification(page, level !== undefined || hp !== undefined || exp !== undefined),
 			}),
 		});
 	}
@@ -665,7 +703,7 @@ function writeManifest(planned: PlannedRecord[], revisions: Map<string, number>,
 		site: 'https://mapleclassic.wiki/',
 		license: licenseUrl,
 		imported_on: new Date().toISOString().slice(0, 10),
-		policy: 'spec 0005, option 2: names, locations, links between entities, and player observed drops only',
+		policy: 'spec 0005, option 2 plus core numbers: names, locations, links between entities, player observed drops, monster level, HP, and EXP, item required level, and map recommended levels',
 		pages,
 	};
 	writeFileSync(manifestPath, stringifyYaml(manifest, { lineWidth: 0 }));

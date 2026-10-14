@@ -1,5 +1,8 @@
 id: red-snail
 name: Red Snail
+level: 4
+hp: 68
+exp: 8
 location: snail-hunting-ground-iii
 region: Maple Island
 drops:
@@ -72,6 +75,7 @@ source_page: https://mapleclassic.wiki/wiki/Red_Snail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Snail
+  build: cot2
 sprite:
   file: monsters/red-snail.png
   source: maplestory-io

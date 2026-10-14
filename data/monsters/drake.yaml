@@ -1,9 +1,13 @@
 id: drake
 name: Drake
+level: 50
+hp: 3218
+exp: 133
 source_page: https://mapleclassic.wiki/wiki/Drake
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Drake
+  build: cot2
 sprite:
   file: monsters/drake.png
   source: maplestory-io

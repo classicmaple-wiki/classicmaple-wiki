@@ -1,10 +1,12 @@
 id: brown-ramel-skirt
 name: Brown Ramel Skirt
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Brown_Ramel_Skirt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Ramel_Skirt
+  build: cot2
 sprite:
   file: items/brown-ramel-skirt.png
   source: maplestory-io

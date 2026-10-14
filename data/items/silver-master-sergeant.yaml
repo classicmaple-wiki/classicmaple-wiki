@@ -1,10 +1,12 @@
 id: silver-master-sergeant
 name: Silver Master Sergeant
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Silver_Master_Sergeant
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Silver_Master_Sergeant
+  build: cot2
 sprite:
   file: items/silver-master-sergeant.png
   source: maplestory-io

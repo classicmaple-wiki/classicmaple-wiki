@@ -1,9 +1,13 @@
 id: fairy-2
 name: Fairy 2
+level: 29
+hp: 593
+exp: 54
 source_page: https://mapleclassic.wiki/wiki/Fairy_2
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Fairy_2
+  build: cot2
 sprite:
   file: monsters/fairy-2.png
   source: maplestory-io

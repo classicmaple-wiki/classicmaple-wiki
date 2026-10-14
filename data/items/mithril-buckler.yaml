@@ -1,10 +1,12 @@
 id: mithril-buckler
 name: Mithril Buckler
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Mithril_Buckler
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Mithril_Buckler
+  build: cot2
 sprite:
   file: items/mithril-buckler.png
   source: maplestory-io

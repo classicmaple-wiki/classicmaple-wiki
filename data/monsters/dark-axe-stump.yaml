@@ -1,5 +1,8 @@
 id: dark-axe-stump
 name: Dark Axe Stump
+level: 23
+hp: 547
+exp: 43
 drops:
   - item: firewood
     rate_percent: 30
@@ -22,6 +25,7 @@ source_page: https://mapleclassic.wiki/wiki/Dark_Axe_Stump
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Axe_Stump
+  build: cot2
 sprite:
   file: monsters/dark-axe-stump.png
   source: maplestory-io

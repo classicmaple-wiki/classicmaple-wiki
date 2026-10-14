@@ -1,7 +1,9 @@
 id: henesys-residents-chair
 name: Henesys Resident's Chair
 category: other
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Henesys_Resident's_Chair
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Henesys_Resident's_Chair
+  build: cot2

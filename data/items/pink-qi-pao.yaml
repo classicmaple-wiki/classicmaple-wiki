@@ -1,10 +1,12 @@
 id: pink-qi-pao
 name: Pink Qi Pao
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Pink_Qi_Pao
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Pink_Qi_Pao
+  build: cot2
 sprite:
   file: items/pink-qi-pao.png
   source: maplestory-io

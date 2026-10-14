@@ -1,5 +1,8 @@
 id: snail
 name: Snail
+level: 1
+hp: 45
+exp: 2
 location: snail-hunting-ground-i
 region: Maple Island
 drops:
@@ -62,6 +65,7 @@ source_page: https://mapleclassic.wiki/wiki/Snail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Snail
+  build: cot2
 sprite:
   file: monsters/snail.png
   source: maplestory-io

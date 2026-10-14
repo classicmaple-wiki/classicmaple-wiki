@@ -3,6 +3,9 @@ name: Snail Garden
 region: Maple Island
 town: Amherst
 kind: hunting-ground
+recommended_level:
+  - 1
+  - 4
 monsters:
   - blue-snail
   - red-snail
@@ -11,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Snail_Garden
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Snail_Garden
+  build: cot2

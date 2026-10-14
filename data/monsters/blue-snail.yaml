@@ -1,5 +1,8 @@
 id: blue-snail
 name: Blue Snail
+level: 2
+hp: 51
+exp: 4
 location: snail-hunting-ground-ii
 region: Maple Island
 drops:
@@ -48,6 +51,7 @@ source_page: https://mapleclassic.wiki/wiki/Blue_Snail
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Snail
+  build: cot2
 sprite:
   file: monsters/blue-snail.png
   source: maplestory-io

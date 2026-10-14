@@ -1,7 +1,9 @@
 id: red-cloth-pants-female
 name: Red Cloth Pants (Female)
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Red_Cloth_Pants_(Female)
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Cloth_Pants_(Female)
+  build: cot2

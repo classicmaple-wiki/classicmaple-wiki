@@ -1,10 +1,12 @@
 id: iron-mace
 name: Iron Mace
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Iron_Mace
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Iron_Mace
+  build: cot2
 sprite:
   file: items/iron-mace.png
   source: maplestory-io

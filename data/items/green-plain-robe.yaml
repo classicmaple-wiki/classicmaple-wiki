@@ -1,10 +1,12 @@
 id: green-plain-robe
 name: Green Plain Robe
 category: equipment
+required_level: 15
 source_page: https://mapleclassic.wiki/wiki/Green_Plain_Robe
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Green_Plain_Robe
+  build: cot2
 sprite:
   file: items/green-plain-robe.png
   source: maplestory-io

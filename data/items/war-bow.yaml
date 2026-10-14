@@ -1,10 +1,12 @@
 id: war-bow
 name: War Bow
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/War_Bow
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/War_Bow
+  build: cot2
 sprite:
   file: items/war-bow.png
   source: maplestory-io

@@ -1,10 +1,12 @@
 id: red-split
 name: Red Split
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Red_Split
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Red_Split
+  build: cot2
 sprite:
   file: items/red-split.png
   source: maplestory-io

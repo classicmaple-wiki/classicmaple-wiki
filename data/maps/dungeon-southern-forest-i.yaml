@@ -3,9 +3,13 @@ name: Dungeon, Southern Forest I
 region: Victoria Island
 town: Ellinia
 kind: dungeon
+recommended_level:
+  - 6
+  - 6
 monsters:
   - slime
 source_page: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_I
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dungeon%2C_Southern_Forest_I
+  build: cot2

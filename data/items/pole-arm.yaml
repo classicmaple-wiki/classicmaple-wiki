@@ -1,10 +1,12 @@
 id: pole-arm
 name: Pole Arm
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Pole_Arm
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Pole_Arm
+  build: cot2
 sprite:
   file: items/pole-arm.png
   source: maplestory-io

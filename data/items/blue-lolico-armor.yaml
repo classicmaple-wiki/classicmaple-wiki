@@ -1,10 +1,12 @@
 id: blue-lolico-armor
 name: Blue Lolico Armor
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Blue_Lolico_Armor
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Lolico_Armor
+  build: cot2
 sprite:
   file: items/blue-lolico-armor.png
   source: maplestory-io

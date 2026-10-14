@@ -1,10 +1,12 @@
 id: blue-robin-hat
 name: Blue Robin Hat
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Blue_Robin_Hat
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Blue_Robin_Hat
+  build: cot2
 sprite:
   file: items/blue-robin-hat.png
   source: maplestory-io

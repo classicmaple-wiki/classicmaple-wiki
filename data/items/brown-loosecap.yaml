@@ -1,10 +1,12 @@
 id: brown-loosecap
 name: Brown Loosecap
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Brown_Loosecap
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Brown_Loosecap
+  build: cot2
 sprite:
   file: items/brown-loosecap.png
   source: maplestory-io

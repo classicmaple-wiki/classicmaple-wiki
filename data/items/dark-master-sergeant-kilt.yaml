@@ -1,10 +1,12 @@
 id: dark-master-sergeant-kilt
 name: Dark Master Sergeant Kilt
 category: equipment
+required_level: 25
 source_page: https://mapleclassic.wiki/wiki/Dark_Master_Sergeant_Kilt
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Dark_Master_Sergeant_Kilt
+  build: cot2
 sprite:
   file: items/dark-master-sergeant-kilt.png
   source: maplestory-io

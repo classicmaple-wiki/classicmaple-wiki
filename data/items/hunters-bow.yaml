@@ -1,10 +1,12 @@
 id: hunters-bow
 name: Hunter's Bow
 category: equipment
+required_level: 20
 source_page: https://mapleclassic.wiki/wiki/Hunter's_Bow
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hunter's_Bow
+  build: cot2
 sprite:
   file: items/hunters-bow.png
   source: maplestory-io

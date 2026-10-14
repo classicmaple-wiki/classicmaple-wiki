@@ -1,10 +1,12 @@
 id: stinger
 name: Stinger
 category: equipment
+required_level: 22
 source_page: https://mapleclassic.wiki/wiki/Stinger
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Stinger
+  build: cot2
 sprite:
   file: items/stinger.png
   source: maplestory-io

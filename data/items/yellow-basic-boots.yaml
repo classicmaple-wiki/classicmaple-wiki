@@ -1,10 +1,12 @@
 id: yellow-basic-boots
 name: Yellow Basic Boots
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Yellow_Basic_Boots
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Yellow_Basic_Boots
+  build: cot2
 sprite:
   file: items/yellow-basic-boots.png
   source: maplestory-io

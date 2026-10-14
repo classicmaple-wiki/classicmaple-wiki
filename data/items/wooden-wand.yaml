@@ -1,10 +1,12 @@
 id: wooden-wand
 name: Wooden Wand
 category: equipment
+required_level: 10
 source_page: https://mapleclassic.wiki/wiki/Wooden_Wand
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Wooden_Wand
+  build: cot2
 sprite:
   file: items/wooden-wand.png
   source: maplestory-io

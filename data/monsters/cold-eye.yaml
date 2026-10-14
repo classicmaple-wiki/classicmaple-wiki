@@ -1,9 +1,13 @@
 id: cold-eye
 name: Cold Eye
+level: 40
+hp: 1894
+exp: 85
 source_page: https://mapleclassic.wiki/wiki/Cold_Eye
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Cold_Eye
+  build: cot2
 sprite:
   file: monsters/cold-eye.png
   source: maplestory-io

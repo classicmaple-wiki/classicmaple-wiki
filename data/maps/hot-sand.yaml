@@ -3,6 +3,9 @@ name: Hot Sand
 region: Victoria Island
 town: Florina Beach
 kind: field
+recommended_level:
+  - 46
+  - 49
 monsters:
   - clang
   - tortie
@@ -10,3 +13,4 @@ source_page: https://mapleclassic.wiki/wiki/Hot_Sand
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Hot_Sand
+  build: cot2

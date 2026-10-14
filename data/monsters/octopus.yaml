@@ -1,5 +1,8 @@
 id: octopus
 name: Octopus
+level: 12
+hp: 191
+exp: 23
 region: Victoria Island
 drops:
   - item: aquamarine-ore
@@ -54,6 +57,7 @@ source_page: https://mapleclassic.wiki/wiki/Octopus
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Octopus
+  build: cot2
 sprite:
   file: monsters/octopus.png
   source: maplestory-io

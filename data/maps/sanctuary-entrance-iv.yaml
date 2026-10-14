@@ -3,6 +3,9 @@ name: Sanctuary Entrance IV
 region: Victoria Island
 town: Sleepywood
 kind: field
+recommended_level:
+  - 40
+  - 75
 monsters:
   - cold-eye
   - tauromacis
@@ -11,3 +14,4 @@ source_page: https://mapleclassic.wiki/wiki/Sanctuary_Entrance_IV
 verified:
   status: unverified
   source: https://mapleclassic.wiki/wiki/Sanctuary_Entrance_IV
+  build: cot2
