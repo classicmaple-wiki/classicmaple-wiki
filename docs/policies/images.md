@@ -21,7 +21,7 @@ The rules for every picture on Classic Maple Wiki. Agents and contributors follo
 
 1. Look up the entry's id. The sprite file is named after it: `public/sprites/<collection>/<id>.png`. Example: `public/sprites/monsters/orange-mushroom.png`.
 2. Find a source site in `data/sprite-sources.yaml` with status `allowed` or `allowed-with-credit`. Never use a site that is missing from the list, marked `ask-first`, or marked `blocked`.
-3. Download that one sprite. One file per entry, fetched one page at a time. Never scrape or bulk download.
+3. Download that one sprite. One file per entry, fetched one page at a time. Never scrape or bulk download. The one exception is `scripts/fetch-sprites.ts`, approved by the owner on 2026-10-14. It fetches from maplestory.io only, one still frame per entry, one request a second, and skips anything too large.
 4. Check it is a plain sprite: the game's own picture, nothing added. No background scene, no edits, no watermark, no composite.
 5. Save it as PNG, at the game's own size or smaller. At most 192 by 192 pixels and 40 KB. Large bosses may be trimmed and scaled down by a whole number, with nearest neighbour scaling so pixels stay crisp. Keep transparency.
 6. Add a `sprite` block to the entry's YAML file:

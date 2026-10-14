@@ -100,9 +100,10 @@ interface EntityStatus {
 }
 
 /*
-   A class guide, or a monster, item, or map page, is about one entry in
-   data/. Its file holds the verification record that the status line
-   shows, and for monsters and items the sprite that stands in the scene.
+   A class guide, or a monster, item, map, NPC, quest, or shop page, is
+   about one entry in data/. Its file holds the verification record that
+   the status line shows, and for monsters, items, and NPCs the sprite
+   that stands in the scene.
 */
 async function findEntityStatus(): Promise<EntityStatus | undefined> {
 	if (pathSegments.length !== 2) return undefined;
@@ -136,6 +137,25 @@ async function findEntityStatus(): Promise<EntityStatus | undefined> {
 	if (section === 'maps') {
 		const mapEntry = await getEntry('maps', identifier);
 		return mapEntry && { identifierLabel: 'Map id', identifier, verified: mapEntry.data.verified };
+	}
+	if (section === 'npcs') {
+		const npcEntry = await getEntry('npcs', identifier);
+		return (
+			npcEntry && {
+				identifierLabel: 'NPC id',
+				identifier,
+				verified: npcEntry.data.verified,
+				spriteFile: npcEntry.data.sprite?.file,
+			}
+		);
+	}
+	if (section === 'quests') {
+		const questEntry = await getEntry('quests', identifier);
+		return questEntry && { identifierLabel: 'Quest id', identifier, verified: questEntry.data.verified };
+	}
+	if (section === 'shops') {
+		const shopEntry = await getEntry('shops', identifier);
+		return shopEntry && { identifierLabel: 'Shop id', identifier, verified: shopEntry.data.verified };
 	}
 	return undefined;
 }

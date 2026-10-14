@@ -117,6 +117,7 @@ export const system = entityBase.extend({
 */
 export const npc = entityBase.extend({
 	role: z.string().optional(),
+	sprite: sprite.optional(),
 	map: identifier.optional(),
 	region: z.string().optional(),
 });

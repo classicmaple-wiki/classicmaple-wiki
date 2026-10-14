@@ -121,6 +121,7 @@ export async function libraryCards(): Promise<LibraryCard[]> {
 			name: data.name,
 			fact: data.region ?? 'Region unknown',
 			href: `/npcs/${data.id}/`,
+			spriteFile: (data.sprite as Sprite | undefined)?.file,
 			verified: data.verified,
 		});
 	}
