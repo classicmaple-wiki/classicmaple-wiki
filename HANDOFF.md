@@ -18,7 +18,7 @@ Live on classicmaple.wiki as of 2026-10-15, ready for Grand Launch on 2026-10-21
 1. **Corrections:** turn incoming ones into data pull requests with the right build.
 2. **Sprites:** add sprites for the 19 Classic-only NPCs from owner or player screenshots (source `own-screenshot`), and skill icons for Precise Strikes, Amazon's Judgement, Critical Recovery, and Nimble Recovery.
 3. **Class characters:** paint them (prompts in `docs/art-direction.md`) and drop them into `src/assets/characters/`.
-4. **Library speed:** page the library. Local Lighthouse mobile 2026-10-19: library 59, home 85, place 92. Measure on production, which scores higher.
+4. **Library speed:** page the library. Local Lighthouse mobile 2026-10-19: library 59. Measure on production.
 5. **Remaining gaps:** fill those in `docs/launch-readiness.md` after launch.
 6. **Branches:** delete the old merged branches when the owner says so.
 
@@ -26,7 +26,7 @@ Open every pull request against `main`.
 
 ## Blockers and questions for the owner
 
-None.
+Spec 0013, Player guides, waits for approval.
 
 ## Verify
 
