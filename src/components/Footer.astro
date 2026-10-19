@@ -2,7 +2,7 @@
 /*
    Wraps the default Starlight footer (spec 0010). It stays short: one
    box asking readers to send a correction, then three items in one row:
-   a link to play MapleStory Classic World on the official site, the Legal
+   a link to play MapleStory Classic World on the official site, the Credits and privacy
    page with every disclaimer, license, and credit, and the builder
    credit. The full fine print lives on /legal/, one click away on every
    page.
@@ -28,7 +28,7 @@ const correctionUrl = correctionFormUrl
 
 <nav class="site-credits" aria-label="Site">
 	<a href={officialGameUrl} rel="noopener">Play MapleStory Classic World</a>
-	<a href="/legal/">Legal and credits</a>
+	<a href="/legal/">Credits and privacy</a>
 	<span>Built with love and care by <a href={builderUrl} rel="noopener">{builderName}</a></span>
 </nav>
 

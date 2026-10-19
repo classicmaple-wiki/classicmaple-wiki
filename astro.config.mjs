@@ -13,7 +13,10 @@ import { createEntityLinksPlugin } from './src/lib/entityLinks.mjs';
 
 /*
    The brand icon from scripts/make-icons.ts, once the owner's logo is in.
-   Until then the site uses the leaf in public/favicon.svg.
+   Until then the site uses the leaf in public/favicon.svg. The social
+   card in public/social-card.jpg is a 1200 by 630 crop of the Henesys
+   painting, so a shared link shows a picture. Replace it with a painted
+   social share image from docs/art-direction.md when one exists.
 */
 const hasBrandIcon = existsSync('public/favicon-32.png');
 
@@ -42,6 +45,10 @@ export default defineConfig({
 				'./src/styles/pages.css',
 			],
 			head: [
+				{ tag: 'meta', attrs: { property: 'og:image', content: `${siteUrl}/social-card.jpg` } },
+				{ tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
+				{ tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
+				{ tag: 'meta', attrs: { name: 'twitter:image', content: `${siteUrl}/social-card.jpg` } },
 				...(hasBrandIcon
 					? [
 							{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' } },
@@ -80,7 +87,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Welcome', link: '/' },
 						{ label: 'How to contribute', slug: 'contributing' },
-						{ label: 'Legal and credits', slug: 'legal' },
+						{ label: 'Credits and privacy', slug: 'legal' },
 					],
 				},
 				{
