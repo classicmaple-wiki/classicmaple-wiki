@@ -87,7 +87,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Welcome', link: '/' },
 						{ label: 'How to contribute', slug: 'contributing' },
-						{ label: 'Legal and credits', slug: 'legal' },
+						{ label: 'Credits and privacy', slug: 'legal' },
 					],
 				},
 				{
