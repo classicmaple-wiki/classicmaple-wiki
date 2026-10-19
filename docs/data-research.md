@@ -12,7 +12,7 @@ Ranked from strongest to weakest. Every fact needs one, plus the build it applie
 | --- | --- | --- | --- |
 | 1 | Nexon's official Classic World patch notes, news posts, and FAQ on nexon.com | Anything they state directly | `official` |
 | 2 | A screenshot taken in the live Classic World game, by a player, showing the value | Stats, drops, quest steps, NPC locations | `in-game` |
-| 3 | A player's written report without a screenshot | Leads only | `unverified` |
+| 3 | A player's written report without a screenshot, or a player's video or written guide | Leads only, and Player guides pages (spec 0013) that summarize the guide in our words and credit the creator | `unverified` |
 
 Not sources, never cite them, never copy from them:
 

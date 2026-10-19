@@ -1,6 +1,6 @@
 # 0013: Player guides
 
-Status: draft, waiting for owner approval
+Status: built 2026-10-19, waiting for owner review on the preview. Approved 2026-10-19 in chat with the recommended answers.
 
 ## Problem
 
@@ -25,15 +25,15 @@ Non-goals:
 
 ## Requirements
 
-- [ ] `/player-guides/` lists every player guide as a card with title, creator, platform, level range when known, and build.
-- [ ] Each guide page shows a credit box at the top: "A guide by {creator} on {platform}", a link to the original, the date we watched or read it, and a note that the wiki summarized it and that values are unverified.
-- [ ] The guide body links to at least one wiki page for every quest, monster, map, or item it names.
-- [ ] The sidebar shows Player guides after Economy and systems.
-- [ ] How to contribute has a short "Suggest a player guide" paragraph that points at the correction form.
-- [ ] A GitHub issue form, Player guide, for people who use GitHub.
-- [ ] The first guide, Making your first million mesos, is live, credited to ProfessorX Maple, and links to the Cursed Doll, Jane, and Icarus quest pages.
-- [ ] Every value from a video is written as the creator's report, never as a wiki fact, and the page's status reads unverified.
-- [ ] `npm run validate` and `npm run build` pass with no broken internal links.
+- [x] `/player-guides/` lists every player guide as a card with title, creator, platform, level range when known, and build.
+- [x] Each guide page shows a credit box at the top: "A guide by {creator} on {platform}", a link to the original, the date we watched or read it, and a note that the wiki summarized it and that values are unverified.
+- [x] The guide body links to at least one wiki page for every quest, monster, map, or item it names.
+- [x] The sidebar shows Player guides after Economy and systems.
+- [x] How to contribute has a short "Suggest a player guide" paragraph that points at the correction form.
+- [x] A GitHub issue form, Player guide, for people who use GitHub.
+- [x] The first guide, Making your first million mesos, is live, credited to ProfessorX Maple, and links to the Cursed Doll, Jane, and Icarus quest pages.
+- [x] Every value from a video is written as the creator's report, never as a wiki fact, and the page's status reads unverified.
+- [x] `npm run validate` and `npm run build` pass with no broken internal links.
 
 ## Design
 
@@ -78,17 +78,17 @@ Rules for every player guide, written on the overview page:
 
 ## Tasks
 
-- [ ] Add the frontmatter fields to `schemas/index.ts`.
-- [ ] Build `PlayerGuideCredit.astro` and `PlayerGuideList.astro`.
-- [ ] Write the overview page and the sidebar group.
-- [ ] Write Making your first million mesos from the video, with footnotes and timestamps.
-- [ ] Add the contributing paragraph and the issue form.
-- [ ] Add the rank 3 line to `docs/data-research.md`.
-- [ ] Run `npm run validate` and `npm run build`.
-- [ ] Update `BACKLOG.md` and rewrite `HANDOFF.md`.
+- [x] Add the frontmatter fields to `schemas/index.ts`.
+- [x] Build `PlayerGuideCredit.astro` and `PlayerGuideList.astro`.
+- [x] Write the overview page and the sidebar group.
+- [x] Write Making your first million mesos from the video, with footnotes and timestamps.
+- [x] Add the contributing paragraph and the issue form.
+- [x] Add the rank 3 line to `docs/data-research.md`.
+- [x] Run `npm run validate` and `npm run build`.
+- [x] Update `BACKLOG.md` and rewrite `HANDOFF.md`.
 
 ## Open questions
 
-- Section name: "Player guides" or "From the community"? The spec uses Player guides.
-- Should the first guide go live before Grand Launch on 2026-10-21, or wait until the owner has watched the video? Recommended: before launch, marked unverified like everything else.
-- The creator's channel link: confirm the handle before publishing. The spec guesses `@ProfessorXMaple`.
+- Section name: Player guides, by the owner's approval of the recommended answers, 2026-10-19.
+- The first guide goes live before launch, marked unverified. The summary was written from the owner's shared summary of the video with its timestamps, not from a full viewing, so the owner should watch it once before merging.
+- The creator's channel link: YouTube is not reachable from the build agent, so the page links only the video. Add `creator_url` once the owner confirms the channel.

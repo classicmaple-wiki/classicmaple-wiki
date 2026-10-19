@@ -19,6 +19,7 @@ import { build, dataSchemas, pageFrontmatter, spriteSource, type DataCollectionN
 */
 const dataDirectory = path.resolve('data');
 const routesDirectory = path.resolve('src/content/docs/leveling');
+const playerGuidesDirectory = path.resolve('src/content/docs/player-guides');
 const spritesDirectory = path.resolve('public/sprites');
 const maximumSpriteSide = 192;
 const maximumSpriteBytes = 40 * 1024;
@@ -210,6 +211,34 @@ function validateLevelingRoutes(buildIdentifiers: Set<string>) {
 }
 
 /*
+   Player guides (spec 0013) credit a creator and link the original, so a
+   page without those fields cannot ship. The build it names must exist.
+*/
+function validatePlayerGuides(buildIdentifiers: Set<string>) {
+	if (!existsSync(playerGuidesDirectory)) return 0;
+	const guideFilePaths = readdirSync(playerGuidesDirectory)
+		.filter((fileName) => /\.mdx?$/.test(fileName) && !fileName.startsWith('index.'))
+		.map((fileName) => path.join(playerGuidesDirectory, fileName));
+
+	for (const filePath of guideFilePaths) {
+		const frontmatterMatch = readFileSync(filePath, 'utf-8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
+		if (!frontmatterMatch) {
+			report(filePath, 'Missing frontmatter block');
+			continue;
+		}
+		const frontmatter = checkAgainstSchema(filePath, pageFrontmatter, parseYaml(frontmatterMatch[1]));
+		if (!frontmatter) continue;
+		for (const requiredField of ['creator', 'guide_url', 'guide_platform', 'watched_on'] as const) {
+			if (frontmatter[requiredField] === undefined) report(filePath, `Player guides need "${requiredField}"`);
+		}
+		if (frontmatter.build !== undefined && !buildIdentifiers.has(frontmatter.build)) {
+			report(filePath, `build: unknown build "${frontmatter.build}"`);
+		}
+	}
+	return guideFilePaths.length;
+}
+
+/*
    Sprite sources are loaded once. Only allowed sources may back a sprite;
    the statuses and the reasons behind them live in docs/policies/images.md.
 */
@@ -362,6 +391,7 @@ validatePictures(parsedEntities, spriteSourceStatuses, {
 	maximumBytes: maximumMinimapBytes,
 });
 const routeCount = validateLevelingRoutes(buildIdentifiers);
+const playerGuideCount = validatePlayerGuides(buildIdentifiers);
 
 if (problems.length > 0) {
 	console.error(`\nFound ${problems.length} problem${problems.length === 1 ? '' : 's'}:\n`);
@@ -370,4 +400,4 @@ if (problems.length > 0) {
 	process.exit(1);
 }
 
-console.log(`Data is valid. Builds: ${buildIdentifiers.size}. Entities: ${entityCount}. Leveling routes: ${routeCount}.`);
+console.log(`Data is valid. Builds: ${buildIdentifiers.size}. Entities: ${entityCount}. Leveling routes: ${routeCount}. Player guides: ${playerGuideCount}.`);

@@ -105,6 +105,7 @@ export default defineConfig({
 				{ label: 'Classes', items: [{ autogenerate: { directory: 'classes' } }] },
 				{ label: 'Leveling', items: [{ autogenerate: { directory: 'leveling' } }] },
 				{ label: 'Economy and systems', items: [{ autogenerate: { directory: 'economy' } }] },
+				{ label: 'Player guides', items: [{ autogenerate: { directory: 'player-guides' } }] },
 				{
 					label: 'Database',
 					items: [

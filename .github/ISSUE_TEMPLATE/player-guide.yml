@@ -1,0 +1,43 @@
+name: Player guide
+description: Suggest a player's video or written guide for the Player guides section.
+title: "guide: "
+labels: [guide]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: Link to the guide
+      placeholder: https://youtu.be/...
+    validations:
+      required: true
+  - type: input
+    id: creator
+    attributes:
+      label: Who made it
+      placeholder: Channel or author name
+    validations:
+      required: true
+  - type: textarea
+    id: covers
+    attributes:
+      label: What it covers
+      description: A few lines. Which quests, maps, classes, or systems, and for which levels.
+    validations:
+      required: true
+  - type: dropdown
+    id: build
+    attributes:
+      label: Build it was made in
+      options:
+        - Grand Launch (launch-2026-10-21)
+        - Founder's Access (founders-2026-10-06)
+        - Not sure
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Check these
+      options:
+        - label: It is about MapleStory Classic World, not old Global MapleStory or a private server.
+          required: true

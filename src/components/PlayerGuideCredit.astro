@@ -1,0 +1,48 @@
+---
+/*
+   The credit box at the top of a player guide (spec 0013). It reads the
+   page frontmatter, so the author fills in the creator, the original's
+   address and platform, the day we watched or read it, and the build
+   once. It renders as a window of stat rows, like the route summary, with
+   the creator linked to their channel when we know it and the original
+   linked with a plain "Watch on YouTube" row. The footer chip says the
+   page is the creator's report, unverified, because a video is a rank 3
+   source in docs/data-research.md. The page passes a markdown heading in
+   the title slot so the box lands in the table of contents.
+*/
+import StatRows from './StatRows.astro';
+import Icon from './Icon.astro';
+import Window from './Window.astro';
+
+const { creator, creator_url, guide_url, guide_platform, watched_on, level_range, build } =
+	Astro.locals.starlightRoute.entry.data;
+
+const originalVerb = guide_platform && /youtube|twitch|video/i.test(guide_platform) ? 'Watch' : 'Read';
+const watchedOnText = watched_on
+	? watched_on.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
+	: undefined;
+---
+
+<Window title="About this guide" id="about-this-guide" build={build}>
+	{Astro.slots.has('title') && <slot name="title" slot="title" />}
+	<StatRows
+		rows={[
+			{ label: 'Creator', value: creator, href: creator_url },
+			{ label: 'Original', value: guide_url ? `${originalVerb} on ${guide_platform ?? 'the web'}` : undefined, href: guide_url },
+			{ label: `${originalVerb === 'Watch' ? 'Watched' : 'Read'} on`, value: watchedOnText },
+			{ label: 'Levels', value: level_range ? `Level ${level_range[0]} to ${level_range[1]}` : undefined },
+		]}
+		subject="this guide"
+	/>
+	<p class="window__status" slot="footer">
+		<span class="chip chip--unverified">
+			<Icon name="question" size={12} strokeWidth={2.6} class="chip__glyph" />
+			<span class="chip__text">The creator's report, unverified</span>
+		</span>
+	</p>
+</Window>
+
+<p class="window__note">
+	This page is Classic Maple Wiki's summary of {creator}'s guide, written in our own words. The guide itself is theirs.
+	Values here are what they report. Seen one in game? <a href="/contributing/">Send a screenshot</a>.
+</p>
