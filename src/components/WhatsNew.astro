@@ -1,0 +1,46 @@
+---
+/*
+   The What's new window at the top of the home page (spec 0014): the six
+   newest entries from src/lib/whatsNew.ts, newest first. Each row is the
+   date in muted small text, then the type chip, the title as the link,
+   and one line. On a phone the date stacks above the rest. The footer
+   links to What changed. The list opts out of Starlight's markdown
+   styles. Row styles live in pages.css.
+*/
+import Window from './Window.astro';
+import { whatsNewEntries } from '../lib/whatsNew';
+
+const entries = await whatsNewEntries(6);
+const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+---
+
+<Window title="What's new" id="whats-new">
+	{
+		entries.length > 0 ? (
+			<ol class="whats-new not-content">
+				{entries.map((entry) => (
+					<li class="whats-new__row">
+						<time class="whats-new__date" datetime={entry.date.toISOString().slice(0, 10)}>
+							{dateFormatter.format(entry.date)}
+						</time>
+						<span class="whats-new__body">
+							<span class="chip whats-new__type">{entry.type}</span>
+							<a class="whats-new__title" href={entry.href}>
+								{entry.title}
+							</a>
+							{entry.line && <span class="whats-new__line">{entry.line}</span>}
+						</span>
+					</li>
+				))}
+			</ol>
+		) : (
+			<p class="window__note">Nothing new yet.</p>
+		)
+	}
+	<p class="window__status" slot="footer">
+		<a href="/changes/">Everything that changed, build by build</a>
+		<span class="whats-new__feed">
+			<a href="/feed.xml">RSS</a>
+		</span>
+	</p>
+</Window>

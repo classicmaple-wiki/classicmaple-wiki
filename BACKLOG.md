@@ -6,7 +6,7 @@ Each line: id, one line, spec, status, owner. Status is one of `todo`, `in progr
 
 ## Now
 
-- **P9** What's new on the home page: the newest player guides, guides, patch notes, and builds at the top, Places below. Spec: [0014](specs/0014-home-whats-new.md). Status: spec drafted 2026-10-19, waiting for owner approval. Moved into Now by the owner on 2026-10-19. Owner: agent.
+- **P9** What's new on the home page: the newest player guides, guides, patch notes, and builds at the top, Places below. Spec: [0014](specs/0014-home-whats-new.md). Status: built 2026-10-19 on branch `claude/wonderful-tesla-udv719`, waiting for owner review. Owner: agent.
 - **P8** Player guides: a section of community guides, each summarized in our words and credited to its creator, starting with ProfessorX Maple's meso guide. Spec: [0013](specs/0013-player-guides.md). Status: built 2026-10-19 on branch `claude/wonderful-tesla-udv719`, waiting for owner review. Owner: agent.
 - **P2f** Interface that serves the art. Spec: [0003](specs/0003-art-led-interface.md), decision [0007](docs/decisions/0007-art-led-direction.md). Status: done 2026-10-14, live. Owner: agent.
 - **P2g** The library: an inventory style page of every entry, plus item and map pages. Spec: [0004](specs/0004-library.md). Status: built on branch `site/scenes-and-library`, waiting for owner review. Owner: agent.
