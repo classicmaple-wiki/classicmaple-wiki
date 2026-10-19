@@ -186,7 +186,8 @@ export const routeFrontmatter = z.object({
    that pairs the place with a moment, such as "Kerning City, after dark."
    The H1, URL, and search keep the factual title. A player guide (spec
    0013) also names its creator, the original's address and platform, the
-   day we watched or read it, and the build it was made in.
+   day we watched or read it, and the build it was made in. A page with a
+   published date shows in What's new on the home page (spec 0014).
 */
 export const pageFrontmatter = routeFrontmatter.extend({
 	scene: sceneIdentifier.optional(),
@@ -198,6 +199,7 @@ export const pageFrontmatter = routeFrontmatter.extend({
 	guide_platform: z.string().min(1).optional(),
 	watched_on: z.coerce.date().optional(),
 	build: identifier.optional(),
+	published: z.coerce.date().optional(),
 });
 
 export const dataSchemas = {

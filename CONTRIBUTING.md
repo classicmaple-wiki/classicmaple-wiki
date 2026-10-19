@@ -145,6 +145,10 @@ Leave `tested_in` out if you have not run the route. The page then shows an **Un
 
 Put `<RouteSummary />` at the top of the page (copy the import from an existing route). For each step, give the map, the level to move on, and the reason. Say clearly what you tested yourself and what is theory.
 
+## Guides on the home page
+
+A guide shows in What's new on the home page and in the RSS feed when its frontmatter carries a `published` date. Set it the day the guide first merges. Move it only when the guide is substantially rewritten, not for a typo or a new footnote.
+
 ## Pull request checklist
 
 - [ ] One topic per pull request

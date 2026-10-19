@@ -1289,3 +1289,73 @@ site-search button[data-open-modal]:hover {
 .window .quest-steps li + li {
 	margin-top: var(--space-2);
 }
+
+/*
+   The What's new rows on the home page (spec 0014). Each row is a date
+   beside a chip, a title, and one line, divided by the same dotted line
+   as the stat rows. On a phone the date sits above the rest.
+*/
+.whats-new {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.whats-new__row {
+	display: grid;
+	gap: var(--space-1);
+	margin: 0;
+	padding: var(--space-3) 0;
+	background: var(--window-divider);
+}
+
+.whats-new__row:first-child {
+	padding-top: 0;
+	background: none;
+}
+
+.whats-new__row:last-child {
+	padding-bottom: 0;
+}
+
+.whats-new__date {
+	color: var(--color-ink-muted);
+	font-size: var(--text-sm);
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.whats-new__body {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: var(--space-1) var(--space-2);
+	min-width: 0;
+}
+
+.whats-new__title {
+	font-family: var(--font-display);
+	font-weight: 600;
+	font-size: var(--text-md);
+	color: var(--color-accent);
+}
+
+.whats-new__line {
+	flex-basis: 100%;
+	color: var(--color-ink-muted);
+	font-size: var(--text-sm);
+	line-height: 1.35;
+}
+
+.whats-new__feed {
+	margin-left: auto;
+	font-size: var(--text-sm);
+}
+
+@media (min-width: 40em) {
+	.whats-new__row {
+		grid-template-columns: 8rem minmax(0, 1fr);
+		align-items: baseline;
+		gap: var(--space-4);
+	}
+}

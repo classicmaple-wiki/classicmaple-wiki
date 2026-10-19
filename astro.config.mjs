@@ -45,6 +45,7 @@ export default defineConfig({
 				'./src/styles/pages.css',
 			],
 			head: [
+				{ tag: 'link', attrs: { rel: 'alternate', type: 'application/rss+xml', title: `${siteTitle} feed`, href: '/feed.xml' } },
 				{ tag: 'meta', attrs: { property: 'og:image', content: `${siteUrl}/social-card.jpg` } },
 				{ tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
 				{ tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
