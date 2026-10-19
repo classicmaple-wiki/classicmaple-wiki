@@ -184,12 +184,20 @@ export const routeFrontmatter = z.object({
 /*
    Every guide page can also name its scene, mood, and a one line subtitle
    that pairs the place with a moment, such as "Kerning City, after dark."
-   The H1, URL, and search keep the factual title.
+   The H1, URL, and search keep the factual title. A player guide (spec
+   0013) also names its creator, the original's address and platform, the
+   day we watched or read it, and the build it was made in.
 */
 export const pageFrontmatter = routeFrontmatter.extend({
 	scene: sceneIdentifier.optional(),
 	mood: mood.optional(),
 	subtitle: z.string().optional(),
+	creator: z.string().min(1).optional(),
+	creator_url: z.url().optional(),
+	guide_url: z.url().optional(),
+	guide_platform: z.string().min(1).optional(),
+	watched_on: z.coerce.date().optional(),
+	build: identifier.optional(),
 });
 
 export const dataSchemas = {

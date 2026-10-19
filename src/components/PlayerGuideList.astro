@@ -1,0 +1,41 @@
+---
+/*
+   The cards on the Player guides overview (spec 0013). It reads the docs
+   collection, keeps every page under player-guides/ that names an
+   original, and draws them as library cards, newest watched first. Each
+   card shows the creator and platform as its fact. No new styles: the
+   cards reuse the library's, with the eye glyph in the slot. The list
+   opts out of Starlight's markdown styles.
+*/
+import { getCollection } from 'astro:content';
+import Icon from './Icon.astro';
+
+const guides = (await getCollection('docs'))
+	.filter((entry) => entry.id.startsWith('player-guides/') && entry.data.guide_url)
+	.sort((first, second) => (second.data.watched_on?.getTime() ?? 0) - (first.data.watched_on?.getTime() ?? 0));
+---
+
+{
+	guides.length > 0 ? (
+		<ol class="library-grid not-content">
+			{guides.map((guide) => (
+				<li class="library-card" data-type="player-guide">
+					<a class="library-card__link" href={`/${guide.id}/`}>
+						<span class="chip library-card__type">Player guide</span>
+						<span class="library-card__slot">
+							<Icon name="eye" size={36} strokeWidth={1.6} class="library-card__glyph" />
+						</span>
+						<span class="library-card__name">{guide.data.title}</span>
+						<span class="library-card__fact">
+							By {guide.data.creator}
+							{guide.data.guide_platform && ` on ${guide.data.guide_platform}`}
+							{guide.data.level_range && `. Level ${guide.data.level_range[0]} to ${guide.data.level_range[1]}`}
+						</span>
+					</a>
+				</li>
+			))}
+		</ol>
+	) : (
+		<p class="window__note">No player guides yet.</p>
+	)
+}
